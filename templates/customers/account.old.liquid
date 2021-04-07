@@ -1,0 +1,115 @@
+{% layout settings.customer_layout %}
+
+<style>
+  
+  @media screen and (max-width: 768px){
+  .push{
+    width:inherit;
+  }
+  
+  .push .flex-container{
+    padding: 0px;
+  }
+  }
+  
+  .push{background: transparent;}
+  .push .flex-container{padding: 0px;}
+  .rewardify-info span.rw-menu-label {
+    font-size: 21px !important;
+}
+</style>
+
+<div id="cancel" style="background:#fff" class="lity-hide">
+<script type="text/javascript" src="https://form.jotform.us/jsform/72474381784163"></script>
+</div>
+
+  <div class="header-cover"></div>
+<section id="blacktop">
+  <div class="push" data-aos="fade-up">
+    
+    <div class="accn-info">
+        <h2 class="title" style="color: white;">Your Account</h2>
+      
+      <div class="acc-bar">
+        <a target="_blank" class="tab1" href="/a/returns">Returns</a>
+      </div>
+
+      <div class="cancel-bar">
+        <a class="tab1" data-lity href="#cancel">Cancel Orders</a>
+      </div>
+  
+    </div>
+    
+  <div class="flex-container">
+
+
+<div id="customer_orders">
+  {% if customer.orders.size != 0 %}
+  
+  <div class="c_order">
+    <ul class="descript">
+      <li>Order</li>
+      <li>Date</li>
+       <li>Payment Status</li>
+       <li>Fulfillment Status</li>
+       <li>Total</li>
+      
+    </ul>
+  
+      <hr>
+    
+   
+    
+          {% for order in customer.orders %}
+ <ul class="file_order {% cycle 'odd', 'even' %} {% if order.cancelled %}cancelled_order{% endif %}">
+      <li>{{ order.name | link_to: order.customer_url }}</li>
+   <li><span class="note">{{ order.created_at | date: "%b %d, %Y" }}</span></li>
+   <li><span class="status_{{ order.financial_status }}">{{ order.financial_status }}</span></li>
+      <li><span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status }}</span></li>
+      <li><span class="total money">{{ order.total_price | money }}</span></li>
+    </ul>
+          {% endfor %}
+  </div>
+
+    {% else %}
+    <p style="padding: 25px;">You haven't placed any orders yet.</p>
+  {% endif %}
+ 
+    
+    
+  </div>
+    
+        <div id="customer_sidebar">
+  <div id="customer_detail" class="group">
+    <h5 class="name">{{ customer.name }}</h5>
+    <p class="email note">{{ customer.email }}</p>
+    <div class="address note">
+      {% if customer.default_address != nil %}
+        <p>{{ customer.default_address.address1 }}</p>
+        {% if customer.default_address.address2 != "" %}
+          <p>{{ customer.default_address.address2 }}</p>
+        {% endif %}
+        <p>{{ customer.default_address.city}}, {% if address.province_code %}{{customer.default_address.province_code}}, {% endif %}{{customer.default_address.country}}</p>
+        <p>{{ customer.default_address.zip}}</p>
+        <p>{{ customer.default_address.phone }}</p>
+      {% endif %}
+      <a id="view_address" href="/account/addresses">View Addresses ({{ customer.addresses_count }})</a>
+    </div>
+
+  </div>
+</div>
+    
+        
+        <div class="rewardify-info">
+      <h4>Illuminati Balance</h4>
+              <div class="rewardify"></div>
+
+    </div>
+    
+    
+  </div>
+    
+        
+
+
+</section>

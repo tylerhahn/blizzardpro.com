@@ -1,0 +1,160 @@
+<a name="bl-lg-form"></a>
+<div id="bl-lg-form" style="background-image: url({{section.settings.background_image | img_url: 'master'}}); background-color: {{section.settings.background_color}}">
+
+    <div class="row py-5" style="max-width: 1200px; margin: 0 auto;">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6">
+            <h2>{{section.settings.form_title}}</h2>
+            <div id="hs-target"></div>
+        </div>
+    </div>
+    <!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+    <script charset="utf-8" src="//js.hsforms.net/forms/v2.js" type="text/javascript"></script>
+    <script>
+        hbspt.forms.create({
+            portalId: "4135982",
+            formId: "{{ section.settings.form_id }}",
+            target: "#hs-target",
+            onFormSubmit: () => formSubmitGA("IRiS Hubspot Form Submission")
+        });
+    </script>
+</div>
+
+{% schema %}
+
+{
+    "name": "Hubspot Form Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "form_id",
+            "label": "Form ID"
+        }, {
+            "type": "text",
+            "id": "form_title",
+            "label": "Form Title"
+        }, {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#000000"
+        }, {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        }, {
+            "type": "color",
+            "id": "input_background",
+            "label": "Input Background",
+            "default": "#000000"
+        }, {
+            "type": "color",
+            "id": "input_border",
+            "label": "Input border color",
+            "default": "#000000"
+        }, {
+            "type": "color",
+            "id": "label_color",
+            "label": "Label",
+            "default": "#000000"
+        }, {
+            "type": "color",
+            "id": "btn_color",
+            "label": "Button color",
+            "default": "#000000"
+        }, {
+            "type": "color",
+            "id": "btn_background",
+            "label": "Button background",
+            "default": "#ffffff"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hubspot Form Section",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}
+
+<style>
+    #bl-lg-form {
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 678px;
+    }
+
+    #bl-lg-form h2 {
+        color: white;
+        font-weight: 600;
+
+    }
+    fieldset {
+        max-width: 100% !important;
+    }
+    div#hs-target input {
+        background: {{section.settings.input_background}};
+        border: 1px solid{{section.settings.input_border}};
+        margin-bottom: 9px;
+        font-family: "Source Sans Pro";
+        border-radius: 100px;
+        color: {{section.settings.label_color}};
+    }
+
+    div#hs-target label {
+        color: {{section.settings.label_color}};
+        font-family: "Source Sans Pro";
+    }
+
+    div#hs-target select {
+        background: {{section.settings.input_background}};
+        color: {{section.settings.label_color}};
+        font-family: "Source Sans Pro";
+        margin-bottom: 20px;
+        border: 1px solid{{section.settings.input_border}};
+
+    }
+
+    div#hs-target textarea {
+        background: {{section.settings.input_background}};
+        font-family: "Source Sans Pro";
+        margin-bottom: 20px;
+        color: {{section.settings.label_color}};
+        border: 1px solid{{section.settings.input_border}};
+
+    }
+
+    ul.inputs-list.multi-container {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    ul.inputs-list.multi-container li {
+        margin-right: 20px;
+    }
+
+    ul.inputs-list.multi-container input {
+        margin-right: 10px;
+    }
+
+    input.hs-button.primary.large {
+        width: 100%;
+        background-color: {{section.settings.btn_background}}!important;
+        color: {{section.settings.btn_color}};
+    }
+
+    #hs-target .hs-input {
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    @media screen and(max-width: 1024px) {
+        #bl-lg-form {
+            background: {{section.settings.background_color}}!important;
+        }
+    }
+</style>

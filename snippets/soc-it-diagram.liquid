@@ -1,0 +1,135 @@
+<div class="si-d">
+  <div class="container">
+    <div class="si-head">
+      <h2>At Full + SoC-It</h2>
+      <p>
+        For ultimate functionality pair At Full with our homegrown, wireless DMX
+        control solution SoC-It
+      </p>
+    </div>
+    <div class="flex-container">
+      <div class="si-a">
+        <div class="si-item">
+          <i aria-hidden="true" class="fas fa-cogs"></i>
+          <h3>Configure</h3>
+          <p>
+            Set up your lights quickly & easily by choosing from our built-in
+            library of fixtures.
+          </p>
+        </div>
+        <div class="si-item">
+          <i aria-hidden="true" class="far fa-hand-pointer"></i>
+          <h3>Control</h3>
+          <p>
+            At Full makes it super simple to control your lights! Our unique
+            sliders provide easy-to-read visual feedback.
+          </p>
+        </div>
+        <div class="si-item">
+          <i aria-hidden="true" class="fas fa-angle-double-right"></i>
+          <h3>Animate</h3>
+          <p>
+            From a ballyhoo to a simple blinking lamp, At Full’s
+            Build-A-Namation engine makes it a breeze to create amazing eye
+            candy.
+          </p>
+        </div>
+      </div>
+      <div class="si-b">
+        <img src="{{ 'soc-it-outline.png' | asset_url }}" alt="SoC-It" />
+      </div>
+      <div class="si-c">
+        <div class="si-item">
+          <i class="fas fa-compact-disc"></i>
+          <h3>Record (with At Full)</h3>
+          <p>
+            At Full can record your DMX streams live, and save them to the cloud
+            where you’ll be able to access them anywhere!
+          </p>
+        </div>
+        <div class="si-item">
+          <i aria-hidden="true" class="fas fa-play-circle"></i>
+          <h3>Playback (with At Full)</h3>
+          <p>
+            Easily mix & match your recordings to quickly create new lighting
+            combinations.
+          </p>
+        </div>
+        <div class="si-item">
+          <i class="fas fa-stream"></i>
+          <h3>Time-coded Shows</h3>
+          <p>
+            At Full's Show Creator allows you to custom build out a timecode
+            show. Create fades and custom animations or use presets to bring
+            your rig together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media screen and (max-width: 768px) {
+    .si-d .flex-container {
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+    .si-a,
+    .si-c {
+      text-align: left;
+      width: 100%;
+    }
+    .si-b {
+      display: none;
+    }
+  }
+
+  .si-d i {
+    color: #f15a29;
+    font-size: 40px;
+    padding-bottom: 20px;
+    left: -30px;
+    position: relative;
+  }
+
+  .si-item {
+    padding-bottom: 30px;
+  }
+
+  .si-b img {
+    width: 500px;
+    display: block;
+  }
+
+  .si-d .flex-container {
+    justify-content: space-between;
+  }
+
+  .si-b {
+    padding: 0 70px;
+  }
+
+  .si-d {
+    padding: 50px 0;
+  }
+
+  .si-b {
+    text-align: right;
+  }
+
+  .si-head {
+    text-align: center;
+    padding: 0 0 60px 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .si-head h2 {
+    font-size: 33px;
+  }
+
+  .si-head p {
+    font-size: 21px;
+  }
+</style>

@@ -1,0 +1,76 @@
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-16655377-1");
+
+    function addToCartGA(title) {
+        gtag("event", "Add To Cart", {
+            event_category: "Collection",
+            event_label: "Collections Add to Cart",
+            value: title
+        });
+    }
+    function formSubmitGA(label) {
+        gtag("event", "form_submission", {
+            event_category: "form",
+            event_label: label
+        });
+    }
+</script>
+
+<!--BEGIN: Microsoft Advertising UET Javascript tag.-->
+<script>
+    (function (w, d, t, r, u) {
+        var f,
+            n,
+            i;
+        (w[u] = w[u] || []),
+        (f = function () {
+            var o = {
+                ti: "17363773"
+            };
+            (o.q = w[u]),
+            (w[u] = new UET(o)),
+            w[u].push("pageLoad");
+        }),
+        (n = d.createElement(t)),
+        (n.src = r),
+        (n.async = 1),
+        (n.onload = n.onreadystatechange = function () {
+            var s = this.readyState;
+            (s && s !== "loaded" && s !== "complete") || (f(), (n.onload = n.onreadystatechange = null));
+        }),
+        (i = d.getElementsByTagName(t)[0]),
+        i.parentNode.insertBefore(n, i);
+    })(window, document, "script", "//bat.bing.com/bat.js", "uetq");
+</script>
+
+<!-- Begin Inspectlet Asynchronous Code -->
+<script type="text/javascript">
+    (function () {
+        window.__insp = window.__insp || [];
+        __insp.push(["wid", 1133458423]);
+        var ldinsp = function () {
+            if (typeof window.__inspld != "undefined") 
+                return;
+            
+            window.__inspld = 1;
+            var insp = document.createElement("script");
+            insp.type = "text/javascript";
+            insp.async = true;
+            insp.id = "inspsync";
+            insp.src = (
+                "https:" == document.location.protocol
+                    ? "https"
+                    : "http"
+            ) + "://cdn.inspectlet.com/inspectlet.js?wid=1133458423&r=" + Math.floor(new Date().getTime() / 3600000);
+            var x = document.getElementsByTagName("script")[0];
+            x.parentNode.insertBefore(insp, x);
+        };
+        setTimeout(ldinsp, 0);
+    })();
+</script>
+<!-- End Inspectlet Asynchronous Code -->

@@ -1,0 +1,31 @@
+{% unless product.available %}
+        {% else %}
+            <input id="{{variant.title}}" " type=" number" name=" quantity" class=" hide" value=" 1" min=" 1" />
+            <!-- <input type=" hidden" name=" id" value=" {{ product.selected_or_first_available_variant.id }} "> -->
+
+            <!-- This handles discontinued for sale items -->
+            {% if product.tags contains 'dc-for-sale' %}
+
+                <a class="btn btn-blue main-cta" >
+                   {{ 'products.product.add_to_cart' | t }}
+                </a>
+
+                <!-- This handles discontinued not for sale -->
+            {% elsif product.tags contains 'discontinued' %}
+                <div class="discontinued">
+                    <h4>Discontinued</h4>
+                </div>
+            {% else%}
+
+                <a class="btn btn-blue main-cta" >
+                    <!-- Show preorder info -->
+                    {% if product.metafields.c_f.Preorder_Date %}
+                       Preorder Now ›
+                    {% else %}
+                        <!-- Basic a -->
+                        {{ 'products.product.add_to_cart' | t }}
+                    {% endif %}
+                </a>
+
+            {% endif %}
+    {% endunless %}

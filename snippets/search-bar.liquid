@@ -1,0 +1,16 @@
+ <div class="nav-search on">
+
+<a class="mk-search-trigger mk-fullscreen-trigger" href="javascript:void(0)" style="display: table-cell; padding: 0 30px 0 20px; vertical-align: middle;" id="search-button-listener">
+    <div id="search-button"><i class="fa fa-search"></i><div class="sr">Search</div></div>
+  </a>
+  <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
+    <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button">×</a>
+    <div id="mk-fullscreen-search-wrapper">
+      <form action="/search" method="get" id="mk-fullscreen-searchform" role="search" class="input-group search-bar">
+        <input type="hidden" name="type" value="product">
+        <input title="Begin typing to search" type="text" name="q" value="" placeholder="Begin typing to search" id="mk-fullscreen-search-input">
+        <i class="fa fa-search fullscreen-search-icon"><input value="Submit" title="Submit" type="submit"></i>
+      </form>
+    </div>
+  </div>
+</div>

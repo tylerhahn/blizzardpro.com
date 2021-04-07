@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!-- The icon set is based on Material Design icons by Google (https://github.com/google/material-design-icons) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 48 48" style="background-color:#ffffff00" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+>
+  
+
+	<svg>
+  <g id="icon1">
+   <rect x="13.8" y="14.7" class="st0" width="505.2" height="505.2"/>
+  </g>
+  <g id="icon2">
+ <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="12.8508" y1="283.2676" x2="520.0508" y2="283.2676">
+	<stop  offset="0.2201" style="stop-color:#516CB3"/>
+	<stop  offset="1" style="stop-color:#5A8CC9"/>
+</linearGradient>
+<polygon class="st0" points="235.6,519.9 266,551.4 296.4,519.9 519.1,519.9 519.1,14.7 13.9,14.7 13.9,519.9 "/>
+  </g>
+</svg>
+	
+	
+</svg>

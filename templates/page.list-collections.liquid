@@ -1,0 +1,118 @@
+{% comment %}
+Re-use the 'rte' class wherever you output content that was added by a merchant using
+the Rich Text Editor ( 'rte' stands for rich text editor ).
+Style all HTML elements in that content the same way across the board.
+Use the 'rte' class in your CSS to help maintain that consistency.
+Example: the h2 element should have the same size and color in:
+- product descriptions
+- collection descriptions
+- 'page' pages' content
+- blog post
+{% endcomment %}
+
+<h1>{{ page.title }}</h1>
+<div class="rte">
+  {{ page.content }}
+</div>
+
+
+
+
+<ul class="subcategories clearfix clear">
+  <li class="{% unless current_tags %} active{% endunless %}">
+    {{ 'All' | link_to_remove_tag: current_tags.first }}
+  </li>
+  {% for tag in collection.all_tags %}
+  {% if current_tags contains tag %}
+  <li class="active">
+    {{ tag | link_to_remove_tag: tag }}
+  </li>
+  {% else %}
+  <li>
+    {{ tag | link_to_tag: tag }}
+  </li>
+  {% endif %}
+  {% endfor %}  
+</ul>
+
+
+
+
+{% capture uses_minimal_framework %}{% include 'product-loop' %}{% endcapture %}
+
+{% if uses_minimal_framework contains 'Liquid error' %}
+  {% assign uses_minimal_framework = false %}
+  {% assign grid_item_width = 'large--one-quarter large-up--one-quarter medium--one-third medium-up--one-third small--one-half large--col-3 medium--col-4 small--col-6' %}
+{% else %}
+  {% assign uses_minimal_framework = true %}
+  {% assign grid_item_width = 'span3' %}
+{% endif %}
+
+{% assign image_size = 'medium' %}
+
+{% if linklists[page.handle].links.size > 0 %}
+    
+  {% assign number_of_links = 0 %}
+    
+  <div class="grid-uniform{% if uses_minimal_framework %} row{% endif %} clearfix">
+
+    {% for link in linklists[page.handle].links %}
+
+      {% if link.type == 'collection_link' %}
+
+        {% comment %}
+        If we have a collection link.
+        {% endcomment %}   
+
+        {% assign collection = link.object %}
+        {% assign number_of_links = number_of_links | plus: 1 %}
+
+        <div class="grid__item grid-item product-grid-item {{ grid_item_width }} text-center">
+          <div class="grid__image product-grid-image">
+            <a href="{{ link.url }}" class="grid-image--centered">
+            {% comment %}
+              Bring in the featured image of the first product in the collection if no collection
+              image has been uploaded for it.
+            {% endcomment %}
+            {% if collection.image %}
+              <img src="{{ collection | img_url: image_size }}" alt="{{ link.title | escape }}">
+            {% else %}
+              {% assign product = collection.products.first %}
+              <img src="{{ product | img_url: image_size }}" alt="{{ link.title | escape }}">
+            {% endif %}
+            </a>
+          </div>
+          <p class="collection-grid__item-title">
+            <a href="{{ link.url }}" class="collection-item__title">{{ link.title }}</a>
+          </p>
+        </div>
+    
+        {% if uses_minimal_framework %}
+          {% cycle 'clear-item': '', '', '', '<div style="clear:both"></div>' %}
+        {% endif %}
+
+
+
+       
+    
+        {% if uses_minimal_framework %}
+          {% cycle 'clear-item': '', '', '', '<div style="clear:both"></div>' %}
+        {% endif %}
+
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+
+  {% if number_of_links == 0 %}
+
+
+
+  {% endif %}
+
+{% else %}
+
+
+{% endif %}
+

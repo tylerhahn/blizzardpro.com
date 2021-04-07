@@ -1,0 +1,113 @@
+
+
+  <div class="loading-overlay"></div>
+
+<div class="hm-slider">
+  
+    
+  <!-- Video 1 -->
+  {% if settings.home-banner-youtube-idzzzzzzzzzzzzzzzz %}
+  <div class="hm-slide image video-slide" onclick="javascript:location.href='{{settings.home-banner-youtube-url}}'">
+    
+    <div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/{{ settings.home-banner-youtube-id }}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist={{ settings.home-banner-youtube-id }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  </div>
+  {% endif %}
+  
+
+
+  
+  
+  
+<!-- Slide 1 -->
+  {% if settings.home-banner-image-1 %}
+  <div class="hm-slide" onclick="javascript:location.href='{{settings.home-banner-url-1}}'">
+      <div class="top-banner" style="background-image: url({{settings.home-banner-image-1 | img_url: 'master'}})">
+    {% if settings.home-banner-text-1 %}
+    <img alt="Enigma M4" style="position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: auto;  margin: 0 auto; margin-top: {{settings.home-banner-text-1-margin-top}}px; padding-bottom: 40px; max-width: {{settings.home-banner-text-1-max-width}}px;" src="{{settings.home-banner-text-1 | img_url: 'master'}}">
+    {% endif %}
+    <hr style="width: 100%; visibility: hidden">
+    {% if settings.home-banner-cta-1 != "" %}
+        <a style="display: table; margin: 0 auto;" class="btn btn-blue full-link" href="{{settings.home-banner-url-1}}">{{settings.home-banner-cta-1}}</a>
+    {% endif %}
+  </div>
+</div>
+  {% endif %}
+
+<!-- Slide 2 -->
+    {% if settings.home-banner-image-2 %}
+  <div class="hm-slide" onclick="javascript:location.href='{{settings.home-banner-url-2}}'" >
+      <div class="top-banner" style="background-image: url({{settings.home-banner-image-2 | img_url: 'master'}})">
+    {% if settings.home-banner-text-2 %}
+    <img  alt="KN95 Masks" style="position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  height: auto; margin: 0 auto; margin-top: {{settings.home-banner-text-2-margin-top}}px; padding-bottom: 40px; max-width: {{settings.home-banner-text-2-max-width}}px;" src="{{settings.home-banner-text-2 | img_url: 'master'}}">
+    {% endif %}
+    <hr style="width: 100%; visibility: hidden">
+    {% if settings.home-banner-cta-2 != "" %}
+        <a style="display: table; margin: 0 auto;" class="btn btn-blue full-link" href="{{settings.home-banner-url-2}}">{{settings.home-banner-cta-2}}</a>
+    {% endif %}
+  </div>
+  </div>
+  {% endif %}
+
+  
+  <!-- Slide 3 -->
+    {% if settings.home-banner-image-3 %}
+  <div class="hm-slide" onclick="javascript:location.href='{{settings.home-banner-url-3}}'">
+      <div class="top-banner" style="background-image: url({{settings.home-banner-image-3 | img_url: 'master'}})">
+    {% if settings.home-banner-text-3 %}
+    <img alt="@Full and Soc-It" style="position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  height: auto; margin: 0 auto; margin-top: {{settings.home-banner-text-3-margin-top}}px; padding-bottom: 40px; max-width: {{settings.home-banner-text-3-max-width}}px;" src="{{settings.home-banner-text-3 | img_url: 'master'}}">
+    {% endif %}
+    <hr style="width: 100%; visibility: hidden">
+    {% if settings.home-banner-cta-3 != "" %}
+        <a style="display: table; margin: 0 auto;" class="btn btn-blue full-link" href="{{settings.home-banner-url-3}}">{{settings.home-banner-cta-3}}</a>
+    {% endif %}
+  </div>
+  </div>
+	{% endif %}
+  
+ 
+</div>
+
+
+<style>
+.video-background {
+  background: #000;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+</style>

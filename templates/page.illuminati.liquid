@@ -1,0 +1,66 @@
+{% include 'sticky-contact' %}
+
+<section id="illuminati" style="background-image: url('{{ settings.hero_ill | img_url: 'master'}}')">
+  <div class="overlay"></div>
+
+  <div class="flex-container">
+
+    <div class="ill-logo">
+      <img src="{{ 'illuminati-logo.png' | asset_url }}">
+    </div>
+
+    <div class="signup">
+      <div class="container">
+        <h2>{{ settings.headline_ill }}</h2>
+        <p>{{ settings.subheadline_ill}}</p>
+
+
+      </div>
+
+        {% if customer  %}
+        <li> <a class="btn btn-ill" href="/account" class="account">Your Account</a></li>
+        {% else %}
+        <a href="/account/register" style="margin-top: 10px" class="btn btn-ill">Sign Up Today »</a>
+        {% endif %}
+
+
+
+    </div>
+  </div>
+
+</section>
+
+
+<div id="howwework"></div>
+<img class="infinite" src="{{ 'illfinite.png' | asset_url }}">
+<div class="three-col">
+  <h2>How it works <span class="redacted1">in the shadows</span></h2>
+  <div class="flex-container">
+    <div class="step">
+      <div class="grx"><img src="{{ 'illcon01.png' | asset_url }}"></div>
+      <h3>{{ settings.info_box_1 }}</h3>
+      <p>{{ settings.info_box_1_c }}</p>
+    </div>
+
+    <div class="step">
+      <div class="grx"><img src="{{ 'illcon02.png' | asset_url }}"></div>
+      <h3>{{ settings.info_box_2 }}</h3>
+      <p>{{ settings.info_box_2_c }}</p>
+    </div>
+
+    <div class="step">
+      <div class="grx"><img src="{{ 'freeship-icon.png' | asset_url }}"></div>
+      <h3>{{ settings.info_box_3 }}</h3>
+      <p>{{ settings.info_box_3_c }}</p>
+    </div>
+
+  </div>
+
+
+  <a href="/account/register" class="ill-sign">Sign Up Today »</a>
+
+</div>
+
+<div class="disclaimer">* {{ settings.fine_print_ill }}</div>
+
+{% include 'cfhs-main' %}

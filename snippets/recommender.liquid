@@ -1,0 +1,34 @@
+<div class="cyo">
+  <div class="blurred" style="top: -45px;"></div>
+  <p>Select the category that most represents your needs.</p>
+<div>
+  <ul class="tabs">
+    <li class="icon"><a href="#tab-1" class="current active"><img src="{{ 'icon-01.svg' | asset_url }}">DJ</a></li>
+    <li class="icon"><a href="#tab-2"><img src="{{ 'icon-02.svg' | asset_url }}">Theater</a></li>
+    <li class="icon"><a href="#tab-3"><img src="{{ 'icon-03.svg' | asset_url }}">Concert</a></li>
+    <li class="icon"><a href="#tab-4"><img src="{{ 'icon-05.svg' | asset_url }}">Worship</a></li>
+    <li class="icon"><a href="#tab-5"><img src="{{ 'icon-04.svg' | asset_url }}">Pro</a></li>
+
+  </ul>
+  </div>
+
+  <div id="viewport">
+  <div id="tab-1">
+  {% include 'dj' %}
+  </div>
+  <div id="tab-2">
+  {% include 'theater' %}
+  </div>
+  <div id="tab-3">
+  {% include 'concert' %}
+  </div>
+    
+      <div id="tab-4">
+{% include 'worship' %}
+  </div>
+    
+      <div id="tab-5">
+{% include 'pro' %}
+  </div>
+  </div>
+</div>

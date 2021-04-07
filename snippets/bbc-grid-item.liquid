@@ -1,0 +1,61 @@
+{% assign variant = product.selected_or_first_available_variant %}
+{% assign quality = collection.title %}
+{% assign product_upc = variant.barcode %}
+{% assign locationId = 4 %}
+
+
+
+
+<style>
+
+  .limoniapps-discountninja-discountedprice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+</style>
+
+<div class="collections-item bbc-item-{{product_upc}}">
+  <img class="lazy" data-original="{{ product | img_url: 'medium' }}" alt="{{ product.featured_image.alt | escape }}" />
+  <div class="collection-content">
+    <div class="sales-banner">{{quality}}</div>
+    <h2>{{ product.title }}</h2>
+    <h3 class="product-subtext"> {{ product.metafields.c_f.Category_Subtitle }}</h3>
+    <h4>
+      <span class="limoniapps-discountninja-productprice" data-limoniapps-discountninja-product-handle="{{ product.handle }}">{{product.price | money }}</span>
+    </h4>
+
+    <div class="bbc-alert"><span class="blizz-notice-{{product_upc}}"></span></div>
+
+    <form method="post" action="/cart/add">
+      <input id="quality" type="hidden" name="properties[Quality]" value="{{quality}}">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+      <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+      <input type="submit" value="Add to cart" class="btn btn-blue blizz-inv-{{product_upc}}" style="margin-bottom: 20px" />
+    </form> 
+  </div>
+</div>
+
+
+<script>
+  var baseUrl = 'https://api.blizzardpro.com/',
+      upc =  '{{variant.barcode}}',
+      locationType = '{{collection.title}}',
+      url = baseUrl + 'bstock-item?locationType=' + locationType + '&locationId={{locationId%}}' + '&upc=' + upc;
+
+
+      fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if(parseFloat(data.QTYONHAND) > 0) {
+          $('.blizz-notice-{{product_upc}}').text('Only ' + parseFloat(data.QTYONHAND) + ' left!')
+            } 
+            })
+          .catch((err) => {
+            $('.blizz-notice-{{product_upc}}').text('Limited Availability')
+
+              });
+
+
+
+</script>

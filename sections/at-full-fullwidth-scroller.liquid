@@ -1,0 +1,131 @@
+<div id="{{section.id}}" class="bl-{{section.id}} bl-scroll-fw"
+{% if section.settings.video_url == blank%} style="background-image: url({{section.settings.image | img_url: 'master'}})" {% else %} style="background-color: black" {% endif %}
+>
+
+{% if section.settings.video_url != blank %}
+  {% if section.settings.video_url.type == 'youtube' %}
+    <div class="video-background">
+      <div class="video-foreground">
+        <iframe src="https://www.youtube.com/embed/{{section.settings.video_url.id}}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  {% elsif section.settings.video_url.type == 'vimeo' %}
+    <div class="vimeo-wrapper">
+    <iframe src="https://player.vimeo.com/video/{{section.settings.video_url.id}}?background=1&autoplay=1&loop=1&byline=0&title=0"
+    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  {% endif %}
+{% endif %}
+<div class="bl-{{section.id}} bl-scroll-border"></div>
+
+
+</div>
+
+
+<script>
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.set(".bl-{{section.id}}.bl-scroll-border", {
+  css: {
+    borderWidth: '10em'
+  }
+});
+
+gsap.to(".bl-{{section.id}}.bl-scroll-border", {
+  css: {
+    borderWidth: 0
+  },
+
+  scrollTrigger: {
+    trigger: ".bl-{{section.id}}.bl-scroll-fw",
+    start: "top 500px",
+    end: "+=50",
+    // pin: "#{{section.id}}",
+    scrub: 2,
+    duration: 2.5, ease: "power3.out"
+  }
+});
+
+</script>
+
+
+{% schema %}
+{
+  "name": "Full Width Hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Full Width Hero"
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "id": "video_url",
+        "type": "video_url",
+        "label": "Video URL",
+        "accept": ["youtube", "vimeo"]
+      },
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      },
+      {
+        "type": "textarea",
+        "id": "subheadline",
+        "label": "Subheadline"
+      },
+      {
+        "type": "text",
+        "id": "cta_title",
+        "label": "CTA Title"
+      },
+      {
+        "type": "text",
+        "id": "cta_url",
+        "label": "CTA Url"
+      }
+  ],
+  "presets": [
+  {
+    "name": "Full Width Hero",
+    "category": "Image"
+  }
+]
+}
+{% endschema %}
+
+<style>
+
+
+  .bl-scroll-border {
+    top: 0;
+    left: 0;
+    display: block;
+    border: 5em solid #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+    .bl-scroll-fw {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.bl-scroll-caption .btn {
+    background: white;
+    max-width: 200px;
+    color: black;
+}
+
+</style>

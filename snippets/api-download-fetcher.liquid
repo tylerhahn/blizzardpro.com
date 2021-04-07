@@ -1,0 +1,48 @@
+<script>
+    function handleDownload(photo) {
+        const xhr = new XMLHttpRequest();
+        var filename = /[^/]*$/.exec(photo)[0];
+        xhr.responseType = "blob";
+        xhr.onload = function () {
+            const a = document.createElement("a");
+            a.href = window.URL.createObjectURL(xhr.response);
+            a.download = filename; // Name the file anything you'd like.
+            a.style.display = "none";
+            document.body.appendChild(a);
+            a.click();
+        };
+        xhr.open("GET", photo);
+        xhr.send();
+    }
+
+    const url = "https://api.blizzard.lighting/products/media";
+    const data = {
+        name: "{{ product.metafields.f_b.Fishbowl_Num | downcase }}",
+        type: "downloads"
+    }
+
+    let fetchData = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    }
+    fetch(url, fetchData).then(async res => {
+        let data = await res.text();
+        const json = JSON.parse(data);
+        const filePaths = json.paths;
+        if(json.length < 1) {
+            const errMsg = `This product currently has no downloads`;
+            $('#downloads-list').append(errMsg);
+        }
+        $('#support-resources .loading').fadeOut('fast');
+        filePaths.map(path => {
+            const fileName = /[^/]*$/.exec(path)[0];
+            const el = `<div  class="downloadable-item"><p onclick="handleDownload('${path}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
+            const item = `<div class="line-item">${el} <div class="" style="margin: 0"><div style="margin-top: 0" class="btn btn-blue" onclick="handleDownload('${path}')"><i class="far fa-file-pdf" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
+            $("#downloads-list").append(item);
+        })
+    })
+</script>

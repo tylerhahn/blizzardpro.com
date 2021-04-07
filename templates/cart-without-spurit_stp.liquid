@@ -1,0 +1,220 @@
+<style>
+  #blacktop {
+    min-height: 768px;
+  }
+
+  .push {
+    min-height: inherit;
+  }
+
+  #blacktop input.btn {
+    margin: inherit;
+  }
+
+  .push .container {
+    width: 100%;
+  }
+</style>
+
+<section id="blacktop">
+  <div class="push">
+    <div class="container">
+      <h1>Shopping Cart</h1>
+
+      {% if cart.item_count > 0 %}
+
+      <form action="/cart" method="post">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th class="hide-on-small">&nbsp;</th>
+              <th class="hide-on-small">Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th class="hide-on-small">&nbsp;</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% for item in cart.items %} {% if item.product.type ==
+            'mw_hidden_cart_fee' %}{% continue %}{% endif %} {% comment %}
+            Determining the handle of the collection that was last seen for the
+            'continue shopping' link. {% endcomment %} {% assign collection_url
+            = item.product.collections.last.url %} {% if collection_url ==
+            '/collections/frontpage' or collection_url == blank %} {% assign
+            collection_url = '/collections/all' %} {% endif %} {% if
+            forloop.first %} {% assign continue_shopping_url = collection_url %}
+            {% endif %}
+
+            <tr>
+              <td class="hide-on-small">
+                <a href="{{ collection_url }}{{ item.url }}">
+                  <img
+                    src="{{ item | img_url: 'compact' }}"
+                    alt="{{ item.title | escape }}"
+                  />
+                </a>
+              </td>
+              <td>
+                {% capture dashvariant %} - {{ item.variant.title }}{%
+                endcapture %}
+                <h2 class="epsilon">
+                  <a href="{{ collection_url }}{{ item.url }}">
+                    {{ item.title | remove: dashvariant }}
+                  </a>
+                </h2>
+
+                {% comment %} Line Item Properties {% endcomment %} {% assign
+                properties_amount = item.properties | size %} {% if
+                properties_amount > 0 %}
+                <p>
+                  {% for p in item.properties %} {% unless p.last == blank or
+                  p.first == '_customer' %}
+                  {{ p.first }}: {% if p.last contains '/uploads/' %}
+                  <a href="{{ p.last }}">{{ p.last | split: "/" | last }}</a>
+                  {% else %}
+                  {{ p.last }}
+                  {% endif %}
+                  <br />
+                  {% endunless %} {% endfor %}
+                </p>
+                {% endif %} {% if item.product.type != 'Product Fee' %}
+                <span class="mw-product-fees" data-id="{{ item.id }}"></span> {%
+                endif %}
+              </td>
+              <td class="hide-on-small">{{ item.price | money }}</td>
+              <td>
+                <input
+                  type="number"
+                  name="updates[]"
+                  id="updates_{{ item.id }}"
+                  class="quantity"
+                  value="{{ item.quantity }}"
+                />
+              </td>
+              <td>{{ item.line_price | money }}</td>
+              <td class="hide-on-small">
+                <a href="/cart/change?line={{ forloop.index }}&quantity=0"
+                  >Remove</a
+                >
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        {% comment %} For the checkout and update buttons to work, they need to
+        use a name attribute set to 'checkout' and 'update', respectively.
+        That's case-sensitive. {% endcomment %}
+        <span class="mw-hidden-fees"></span>
+        <div class="column two-thirds flow-opposite right-aligned">
+          <a
+            class="btn btn-alt checkout-button"
+            style="color:#fff"
+            href="/checkout"
+            >Checkout</a
+          >
+        </div>
+
+        {% comment %} For the special instructions to be submitted with order,
+        we need to use a name attribute set to 'note'. {% endcomment %}
+        <div class="column third flow-opposite left-aligned">
+          <p>Additional Notes</p>
+          <textarea name="note">{{ cart.note }}</textarea>
+          <!-- <input type="submit" name="update" value="Update cart" class="btn btn-outline gray" /> -->
+        </div>
+        <span class="mw-cart-fees"></span>
+      </form>
+
+      {% unless customer %} {% endunless %} {% else %}
+
+      <div>
+        <h2 class="gamma" style="text-align: center;">
+          It appears that your cart is currently empty!
+        </h2>
+        <h3 class="delta" style="text-align: center;">
+          You can continue browsing <a href="/pages/products">here</a>.
+        </h3>
+      </div>
+
+      {% endif %}
+    </div>
+  </div>
+</section>
+<div id="cbb-also-bought-box"></div>
+
+<!-- bespoke -->
+{% assign isLoggedIn = 'no' %} {% if customer %} {% assign isLoggedIn = 'yes' %}
+{% endif %}
+
+<script type="text/javascript">
+  var bespokeCartData = {
+    {% for item in cart.items %}
+    {% if forloop.first %}
+      id: {{ item.variant.id | json }},
+      properties: { '_customer':'{{ isLoggedIn }}'{% for p in item.properties %}{% if p.first != '_customer' %}, '{{p.first}}':{{ p.last | json }}{% endif %}{% endfor %} },
+      quantity: {{ item.quantity | json }}
+      {% endif %}
+    {% endfor %}
+  };
+  $(document).ready(function() {
+    //check inputs on submit
+    $(document).on('click',".checkout-button", function() {
+      var myCart = $(this).closest('form');
+      /* append line item property */
+      $(this).attr('disabled',true).html('Please Wait...');
+      //get cart data if necessary
+      if ($.isEmptyObject(bespokeCartData)) {
+        $.ajax({
+          url: '/cart.js',
+          type: 'GET',
+          dataType: 'json',
+          async: false,
+          success: function (cart, textStatus) {
+            if (cart.items.length > 0) {
+              var i = cart.items[0];
+              bespokeCartData.id = i.variant_id;
+              bespokeCartData.quantity = i.quantity;
+              bespokeCartData.properties = i.properties;
+              if (bespokeCartData.properties === null) {
+                //no existing properties
+                bespokeCartData.properties = {'_customer':'{{ isLoggedIn }}'};
+              } else {
+                bespokeCartData.properties['_customer'] = '{{ isLoggedIn }}';
+              }
+            }
+          }
+        });
+      }
+      if ($.isEmptyObject(bespokeCartData)) {
+        //if still nothing then submit the cart right now
+        $(myCart).submit();
+        return false;
+      }
+      //remove from cart
+      $.ajax({
+        url: '/cart/change.js',
+        type: 'POST',
+        dataType: 'json',
+        data: {line:1, quantity:0},
+        success: function() {
+          //now add it back in
+          $.ajax({
+            url: '/cart/add.js',
+            type: 'POST',
+            dataType: 'json',
+            data: bespokeCartData,
+            success: function() {
+              $('<input />').attr('type','hidden').attr('name',"checkout").attr('value',"Checkout").appendTo(myCart);
+              $(myCart).submit();
+            }
+          });
+        }
+      });
+      return false;
+    });
+  });
+</script>
+
+<!-- end bespoke -->

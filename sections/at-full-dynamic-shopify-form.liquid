@@ -1,0 +1,118 @@
+<div class="bl-dynamic-form" style="background-color: {{section.settings.background_color}}">
+    <div class="row mx-5 my-0 py-5 mx-80">
+        <div class="row">
+            <h3 style="color: {{section.settings.text_color}}">{{section.settings.form_text}}</h3>
+        </div>
+        <div class="row bl-{{section.id}}"></div>
+    </div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Hubspot Form (Dynamic)",
+    "settings": [
+        {
+            "type": "text",
+            "id": "form_text",
+            "label": "Form Text"
+        }, {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#000000"
+        }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#ffffff"
+        }, {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Color",
+            "default": "#282bf6"
+        }, {
+            "type": "text",
+            "id": "hs_value",
+            "label": "Hubspot Form Value"
+        }
+    ]
+}
+
+{% endschema %}
+
+
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" src="//js.hsforms.net/forms/v2.js" type="text/javascript"></script>
+<script>
+hbspt.forms.create({
+	portalId: "4135982",
+	formId: "2d69787c-6bed-419b-8678-86c51dd1e234",
+    target: ".bl-{{section.id}}",
+    onFormSubmit:  () => formSubmitGA('dynamic_hubspot_form'),
+    onFormReady: setPageSlugToForm
+});
+
+function setPageSlugToForm() {
+    $('input[name="dynamic_shopify_form_referrer"]').val('{{section.settings.hs_value}}').change();
+}
+
+</script>
+
+<style>
+
+.submitted-message {
+    font-size: 1.7em;
+    border-radius: 100px;
+    border: 4px solid {{section.settings.button_color}};
+    text-align: center;
+    display: table;
+    padding: 6px 20px 0 20px;
+    color: white;
+}
+    .bl-dynamic-form h3 span{
+    border-bottom: 5px solid {{section.settings.button_color}};
+    }
+    .bl-dynamic-form input.hs-button.primary.large{
+        background: {{section.settings.button_color}};
+    }
+    label#label-email-2d69787c-6bed-419b-8678-86c51dd1e234{
+        color: {{section.settings.text_color}};
+    }
+    .bl-dynamic-form h3{
+        font-size: 2em;
+    font-family: 'Source Sans Pro';
+    text-transform: none;
+    letter-spacing: 0;
+    }
+    form#hsForm_2d69787c-6bed-419b-8678-86c51dd1e234 {
+    display: flex;
+    align-items: flex-end;
+}
+
+label.hs-error-msg {
+    display: none;
+}
+
+.hs_submit.hs-submit {
+    margin: 0;
+}
+
+input.hs-button.primary.large {
+    margin: 0;
+    border: none;
+}
+
+.hs_email.hs-email.hs-fieldtype-text.field.hs-form-field {
+    margin: 0;
+}
+
+input#email-2d69787c-6bed-419b-8678-86c51dd1e234 {
+    border-radius: 0px;
+    background: white;
+    border: none;
+    margin-right: 10px;
+}
+</style>

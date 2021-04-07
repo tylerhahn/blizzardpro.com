@@ -1,0 +1,107 @@
+
+<div id="bl-pl" style="overflow-x: hidden;" class="bl-pl-{{section.id}} container-fluid">
+    <h2 class="bl-h2 text-center p-5 max">{{section.settings.header_title}}</h2>
+    <div class="row">
+        {% for product in collections[section.settings.collection].products limit: 5 %}
+        <div class="bl-{{section.id}} bl-pl-box col-sm mx-{{section.settings.h_gutter}}" style="background-color:{{section.settings.box_color}}"
+        onclick="javascript:location.href='{{product.url}}'"
+        >
+            <div class="bl-img-container">
+                <img class="p-3" src="{{product.featured_image | img_url: 'master' }}" alt="{{product.title}}">
+            </div>
+            <h4 class="text-center pb-1"><a href="{{product.url}}">{{product.title}} ›</a></h4>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+  {% schema %}
+  {
+    "name": "Collection Lineup",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Collection Lineup"
+      },
+      {
+        "type": "text",
+        "id": "header_title",
+        "label": "Section Title"
+      },  
+      {
+        "type": "range",
+        "id": "h_gutter",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "label": "Horizontal Gutter",
+        "default": 3
+    },
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+    {
+        "type": "color",
+        "id": "box_color",
+        "label": "Box Color",
+        "default": "#ffffff"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Collection Lineup",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+
+
+    .bl-pl-box a{
+        color: black;
+    }
+
+    .bl-pl-box h4{
+        font-weight: 500;
+        font-family: "Source Sans Pro", sans-serif';
+    }
+    .bl-img-container {
+    height: 190px;
+    display: flex;
+    align-items: center;
+}
+
+    .bl-pl-box img {max-height: 183px;display: flex;margin: 0 auto;}
+</style>
+
+<script>
+
+
+
+
+    gsap.set(".bl-{{section.id}}", {
+    y: 100,
+    opacity: 0
+    })
+    gsap.to(".bl-{{section.id}}", {
+    y: 0,
+    opacity: 1,
+    stagger: {
+    amount: 1.5,
+    ease: "power3.out"
+  },
+  scrollTrigger: {
+    trigger: ".bl-pl-{{section.id}}",
+    start: "top 100%",
+    end: "+=300",
+    scrub: 1,
+    duration: 2.5, ease: "power3.out",
+  }
+});
+</script>

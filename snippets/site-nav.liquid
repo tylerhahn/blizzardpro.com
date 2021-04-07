@@ -1,0 +1,94 @@
+<div style="clear: both">
+  <div class="modal-overlay"></div>
+
+  <div id="herder" class="darken">
+    {% if settings.top_banner %}
+    <div id="free-shipping">
+      <h4>
+        {{ settings.top_banner }}
+      </h4>
+
+      <span class="accept-button"><a href="#" class="fa">&#xf00d;</a></span>
+    </div>
+    {% endif %}
+    <div id="dl-menu" class="dl-menuwrapper">
+      <button class="dl-trigger"><i class="fad fa-bars"></i></button>
+      <ul class="dl-menu">
+        <li>
+          <a href="#">Products</a>
+          <ul class="dl-submenu">
+            <li><a href="/pages/super-g-150">New Products</a></li>
+            {% for link in linklists.products.links %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li><a href="/a/wheretobuy">Where to Buy</a></li>
+        <li><a href="/pages/support">Support</a></li>
+        <li><a href="/pages/illuminati">Illuminati</a></li>
+        <li><a href="https://www.blog.blizzardpro.com/">Blog</a></li>
+        <!--       <li><a href="/pages/about/#modal-one">About</a></li> -->
+        <li><a href="/pages/news">News</a></li>
+        <li><a href="/pages/contact-us">Contact</a></li>
+        <li><a href="/pages/us-representatives">US Representatives</a></li>
+
+        {% if customer %}
+        <li><a href="/account" class="account">Your Account</a></li>
+        <li>{{ "Log out" | customer_logout_link }}</li>
+        {% else %}
+        <li>{{ "Log in" | customer_login_link }}</li>
+        {% if shop.customer_accounts_optional %}
+        <li>{{ "Create an account" | customer_register_link }}</li>
+        {% endif %} {% endif %}
+      </ul>
+    </div>
+
+    <div class="main-menu">
+      <div class="logo">
+        <a href="/">
+          {{ "blizzard-dark-normal.png" | asset_url | img_tag: shop.name }}
+        </a>
+        <form
+          action="/search"
+          method="get"
+          id="mk-fullscreen-searchform"
+          role="search"
+          class="input-group search-bar"
+        >
+          <input type="hidden" name="type" value="product" />
+          <input
+            class="algolia-shopify-autocomplete"
+            title="Search Blizzard Lighting"
+            type="text"
+            name="q"
+            value=""
+            placeholder="Begin typing to search"
+            id="mk-fullscreen-search-input"
+          />
+        </form>
+      </div>
+
+      <div class="cart">
+        <div class="account-link">
+          <i class="fas fa-user-alt"></i> {% if shop.customer_accounts_enabled
+          %} {% if customer %}
+          <a href="/account" class="account">Your Account</a>
+          {{ "Log out" | customer_logout_link }} {% else %}
+          {{ "Log In / Create Account" | customer_login_link }}{% endif%} {%
+          endif %}
+        </div>
+
+        <div class="cart-link">
+          <a href="/cart"><i class="far fa-shopping-cart"></i> Cart</a>
+        </div>
+        <!--
+        <a href="#swym-wishlist" class="swym-wishlist">
+  <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-heart"></i> Your List
+</a> -->
+      </div>
+    </div>
+{% include 'main-nav' %}
+  </div>
+</div>

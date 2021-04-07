@@ -1,0 +1,984 @@
+/*============================*/
+/* Update main product image. */
+/*============================*/
+
+$(document).ready(function () {
+  if ($("#WbzFIAODYQum").height() > 1) {
+    console.log("No Adblocker!!");
+  } else {
+    console.log("An adblocker was detected!!");
+  }
+
+  $("select.cbb-recommendations-variant-select").val("1");
+  $(".product-name:contains('- Dealer')").html(function (_, html) {
+    return html.replace(/(- Dealer)/g, '<span class="hide"></span>');
+  });
+
+  //prod page back to top button
+  $(".to-top").on("click", function () {
+    window.scrollTo(0, 0);
+  });
+  //condensed nav
+  const cHeader = $("#condensed-header"),
+    $window = $(window);
+
+  $window.scroll(function () {
+    if ($window.scrollTop() >= 700) {
+      $(".to-top").fadeIn("fast");
+      $("#sticky-prod-nav .main-cta").fadeIn("fast");
+      cHeader.addClass("nav-is-active");
+    } else {
+      $(".to-top").fadeOut("fast");
+      $("#sticky-prod-nav .main-cta").fadeOut("fast");
+
+      cHeader.removeClass("nav-is-active");
+    }
+  });
+
+  var phrases = [
+    "FRANK THE TANKE APPROVED",
+    "VERY NEAT 10/10",
+    "TOTALLY RAD LITE",
+    "UP YR LITE GAME TODAY",
+  ];
+
+  $("textPath").each(function () {
+    $(this).text(phrases[Math.floor(Math.random() * 3)]);
+  });
+
+  jQuery(".advanced-filter").each(function () {
+    var el = jQuery(this),
+      group = el.data("group");
+
+    if (el.hasClass("active-filter")) {
+      //Remove class hidden
+      el.parents(".sb-filter").find("a.clear-filter").removeClass("hidden");
+    }
+  });
+
+  jQuery(".advanced-filter").on("click", function (e) {
+    var el = $(this),
+      group = el.data("group"),
+      url = el.find("a").attr("href");
+
+    // Continue as normal if we're clicking on the active link
+    if (el.hasClass("active-filter")) {
+      return;
+    }
+    var _logic = jQuery(".filters-sidebar").data("logic");
+    if (_logic) {
+      // Get active group link (unidentified if there isn't one)
+      activeTag = $('.active-filter[data-group="' + group + '"]');
+
+      // If a tag from this group is already selected, remove it from the new tag's URL and continue
+      if (activeTag && activeTag.data("group") === group) {
+        e.preventDefault();
+        activeHandle = activeTag.data("handle") + "+";
+
+        // Create new URL without the currently active handle
+        url = url.replace(activeHandle, "");
+
+        window.location = url;
+      }
+    }
+  });
+});
+
+var switchImage = function (newImageSrc, newImage, mainImageDomEl) {
+  // newImageSrc is the path of the new image in the same size as originalImage is sized.
+  // newImage is Shopify's object representation of the new image, with various attributes, such as scr, id, position.
+  // mainImageDomEl is the passed domElement, which has not yet been manipulated. Let's manipulate it now.
+  jQuery(mainImageDomEl)
+    .parents("a")
+    .attr("href", newImageSrc.replace("_grande", "_1024x1024"));
+  jQuery(mainImageDomEl).attr("src", newImageSrc);
+};
+
+$(".slide-title").each(function () {
+  var $slide = $(this).parent();
+  if ($slide.attr("aria-describedby") != undefined) {
+    // ignore extra/cloned slides
+    $(this).attr("id", $slide.attr("aria-describedby"));
+  }
+});
+
+$(".buy-alt").click(function () {
+  var variantId = $(this).siblings(".varId").text(),
+    qty = $(this).siblings(".rounded-qty").find(".in-num").val();
+
+  CartJS.addItem(
+    variantId,
+    qty,
+    {},
+    {
+      // Define a success callback to display a success message.
+      success: function (data, textStatus, jqXHR) {
+        document.location.href = "/cart";
+      },
+
+      // Define an error callback to display an error message.
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(errorThrown);
+      },
+    }
+  );
+});
+
+var getFoo = function () {
+  if (window.location.hash) {
+    var h = decodeURIComponent(window.location.hash.substring(1));
+    $("#select-variant-option-0").val(h);
+  }
+};
+
+/* run this once all the other scripts on your page have loaded. name it something better! */
+getFoo();
+
+$(".bagit").click(function () {
+  var prodId = $(".varId").text(),
+    qty = 1;
+
+  // Call the addItem() method.
+  // Note the empty object as the third argument, representing no line item properties.
+  CartJS.addItem(
+    prodId,
+    1,
+    {},
+    {
+      // Define a success callback to display a success message.
+      success: function (data, textStatus, jqXHR) {
+        document.location.href = "/cart";
+      },
+
+      // Define an error callback to display an error message.
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(errorThrown);
+      },
+    }
+  );
+});
+
+$(".v-option").click(function () {
+  var variantId = $(this).attr("data-v-id");
+  var url = "http://" + window.location.hostname + window.location.pathname;
+  window.location.href = url + "?variant=" + variantId;
+});
+
+jQuery(function ($) {
+  /////////////////// product +/-
+  $(document).ready(function () {});
+  // product +/-
+
+  //Prod page tab
+
+  $(".prod-tab").click(function (e) {
+    $(".prod-tab").removeClass("active");
+    $(this).addClass("active");
+    const tab = e.currentTarget.dataset.tag;
+    const elements = [
+      ".overview-section",
+      ".spec-section",
+      ".download-section",
+      "#photometric",
+      "#how-to",
+    ];
+
+    const hideElements = elements.map((el) => {
+      if (el !== tab) {
+        $(el).fadeOut("fast");
+      } else {
+        $(el).fadeIn("fast");
+      }
+    });
+  });
+
+  function dotReplace(str) {
+    var result = str.replace(/\*/g, "•");
+    var result2 = result.replace(/\•/g, "<br/>•");
+
+    return result2;
+  }
+
+  $.each($(".features-short"), function () {
+    var bulletedList = $(this).text();
+
+    var line1 = bulletedList.split(/[•*]+/)[1];
+    var line2 = bulletedList.split(/[•*]+/)[2];
+    var line3 = bulletedList.split(/[•*]+/)[3];
+    var bullets = [line1, line2, line3];
+    var bulletList = bullets.map(
+      (x) =>
+        "<li><span class='fa-li'><i class='fas fa-check'></i></span>" +
+        x +
+        "</li>"
+    );
+
+    $(this).html(bulletList);
+  });
+
+  //2021-image slider
+
+  $("#side-drawer-images").slick({
+    arrows: false,
+    centerMode: false,
+    slidesToScroll: 2,
+    adaptiveHeight: true,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 2,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerMode: false,
+          vertical: false,
+          slidesToShow: 2,
+          verticalSwiping: false,
+        },
+      },
+    ],
+  });
+
+  //homepage slider
+
+  $(".hm-slider").slick({
+    centerMode: true,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 30000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  });
+
+  $(".product-cat-slider").slick({
+    centerMode: false,
+    centerPadding: "60px",
+    infinite: true,
+    speed: 500,
+    draggable: true,
+    slidesToShow: 7,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  //modal
+  $(".hero-mosaic-slider").slick();
+  $(".product-block-slider").slick({
+    centerMode: true,
+    centerPadding: "60px",
+    infinite: true,
+    speed: 500,
+    draggable: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  //Dealer Register
+
+  $("#passw").hide();
+  $("#styled-checkbox-1").click(function () {
+    if ($(this).is(":checked")) {
+      $("#passw").show(200);
+      $(".action_bottom").hide(200);
+    } else {
+      $("#passw").hide(200);
+      $(".action_bottom").show(200);
+    }
+  });
+
+  //DL-Menu
+
+  $(function () {
+    $("#dl-menu").dlmenu({
+      animationClasses: {
+        classin: "dl-animate-in-1",
+        classout: "dl-animate-out-1",
+      },
+    });
+  });
+
+  //Lightslider
+
+  $(document).ready(function () {
+    $("#prodSlider").lightSlider({
+      item: 3,
+      loop: false,
+      slideMove: 1,
+      easing: "cubic-bezier(0.25, 0, 0.25, 1)",
+      speed: 600,
+      controls: true,
+      responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            item: 3,
+            slideMove: 1,
+            slideMargin: 0,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            item: 2,
+            slideMove: 1,
+          },
+        },
+      ],
+    });
+  });
+
+  //   Cookie for Free-Shipping
+
+  function FreeShipping() {
+    days = 30;
+    myDate = new Date();
+    myDate.setTime(myDate.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = "FreeShipping=Accepted; expires=" + myDate.toGMTString();
+  }
+
+  var cookie = document.cookie
+    .split(";")
+    .map(function (x) {
+      return x.trim().split("=");
+    })
+    .filter(function (x) {
+      return x[0] === "FreeShipping";
+    })
+    .pop();
+
+  if (cookie && cookie[1] === "Accepted") {
+    $("#free-shipping").hide();
+  } else {
+    $("#free-shipping").addClass("visible");
+  }
+
+  $(".accept-button a").on("click", function () {
+    FreeShipping();
+    return false;
+    $(".buybar").removeClass("adjust");
+  });
+
+  //   if ($( "#free-shipping" ).hasClass( "visible" ) ) {
+  //     $('#main' ).addClass('pad-adjust');
+  //   }
+
+  //   if ($( "#free-shipping" ).hasClass( "visible" ) ) {
+  //     $('.buybar' ).addClass('adjust');
+  //     $('.state-selector-attached').addClass('adjust');
+  //     $('.product-carousel2-attached').addClass('adjust');
+  //   }
+
+  $(".accept-button a").on("click", function () {
+    $("#free-shipping").fadeOut("fast");
+    $(".buybar").removeClass("adjust");
+  });
+
+  if ($("#free-shipping").hasClass("visible")) {
+    $(".product-carousel2-attached.fix").addClass("adjust");
+  }
+
+  $(".accept-button a").on("click", function () {
+    $(".product-carousel2-attached.fix").removeClass("adjust");
+  });
+
+  $(".alt-menu").click(function () {
+    $("header").addClass("show");
+    $(".alt-menu").addClass("hide");
+    $(".home-ico").addClass("hide");
+  });
+
+  //Select MAP
+
+  $("select.cbb-recommendations-variant-select").val("1");
+
+  //Add 360 Jazz
+
+  if ($(window).width() > 600) {
+    $(".welp").wrap("<div class='product-photo-container'></div>");
+  }
+
+  //Lazy Load
+
+  $("img.lazy").lazyload({
+    effect: "fadeIn",
+  });
+
+  //Fade Rotator
+
+  setTimeout(function () {
+    $(".loading-overlay").fadeOut("fast");
+  }, 500);
+
+  //Trademark
+
+  $("body :not(script)")
+    .contents()
+    .filter(function () {
+      return this.nodeType === 3;
+    })
+    .replaceWith(function () {
+      return this.nodeValue.replace(/[™®©]/g, "<sup>$&</sup>");
+    });
+
+  //Bullet
+
+  var test = $(".features").text();
+  var result = test.replace(/\*/g, "•");
+
+  $(".features").html(result);
+
+  $(".features").each(function () {
+    $(this).wrap("<li></li>");
+  });
+
+  var test2 = $(".features").text();
+  var result2 = test2.replace(/\•/g, "<br/>•");
+
+  $(".features").html(result2);
+
+  $(".product-name:contains('Dealer')").html(function (_, html) {
+    return html.replace(/(Dealer)/g, '<span class="smallcaps">$1</span>');
+  });
+
+  $("a:contains('- Dealer')").html(function (_, html) {
+    return html.replace(/(cow)/g, '<span class="hide"></span>');
+  });
+
+  $('.photom p:contains("Red")').addClass("red");
+  $('.photom p:contains("Blue")').addClass("blue");
+  $('.photom p:contains("Amber")').addClass("amber");
+  $('.photom p:contains("White")').addClass("white");
+  $('.photom p:contains("Green")').addClass("green");
+  $('.photom p:contains("UV")').addClass("purple");
+  $('.photom p:contains("Cool")').addClass("cool");
+  $('.photom p:contains("Warm")').addClass("warm");
+  $('span.status_authorized:contains("authorized")').addClass("green");
+  $('span.status_fulfilled:contains("fulfilled")').addClass("green");
+
+  $(".my-slider").unslider({
+    autoplay: true,
+    infinite: true,
+    arrows: {
+      prev: '<a class="unslider-arrow prev">&#xf104;</a>',
+      next: '<a class="unslider-arrow next">&#xf105;</a>',
+    },
+  });
+
+  //Smooth Scroll
+
+  smoothScroll.init();
+  ({
+    easing: "easeOutQuart",
+    offset: 500,
+    speed: 100,
+  });
+
+  //Slider
+
+  $("#checkbox").change(function () {
+    setInterval(function () {
+      moveRight();
+    }, 3000);
+  });
+
+  var slideCount = $("#slider ul li").length;
+  var slideWidth = $("#slider ul li").width();
+  var slideHeight = $("#slider ul li").height();
+  var sliderUlWidth = slideCount * slideWidth;
+
+  $("#slider").css({ width: slideWidth, height: slideHeight });
+
+  $("#slider ul").css({ width: sliderUlWidth, marginLeft: -slideWidth });
+
+  $("#slider ul li:last-child").prependTo("#slider ul");
+
+  function moveLeft() {
+    $("#slider ul").animate(
+      {
+        left: +slideWidth,
+      },
+      200,
+      function () {
+        $("#slider ul li:last-child").prependTo("#slider ul");
+        $("#slider ul").css("left", "");
+      }
+    );
+  }
+
+  function moveRight() {
+    $("#slider ul").animate(
+      {
+        left: -slideWidth,
+      },
+      200,
+      function () {
+        $("#slider ul li:first-child").appendTo("#slider ul");
+        $("#slider ul").css("left", "");
+      }
+    );
+  }
+
+  $("a.control_prev").click(function () {
+    moveLeft();
+  });
+
+  $("a.control_next").click(function () {
+    moveRight();
+  });
+
+  //Support Tabs
+
+  $(document).ready(function () {
+    $(".support-tabs").each(function () {
+      var active,
+        content,
+        links = $(this).find("a");
+      active = links.first().addClass("active");
+      content = $(active.attr("href"));
+      links.not(":first").each(function () {
+        $($(this).attr("href")).hide();
+      });
+      $(this)
+        .find("a")
+        .click(function (e) {
+          active.removeClass("active");
+          content.hide();
+          active = $(this);
+          content = $($(this).attr("href"));
+          active.addClass("active");
+          content.show();
+          return false;
+        });
+    });
+  });
+
+  $(".support-tabs .icon-support a").on("click", function () {
+    $(".icon-support").removeClass("current");
+    $(this).addClass("current");
+  });
+
+  //     Product Registration
+
+  $(document).ready(function () {
+    var max_fields = 100; //maximum input boxes allowed
+    var wrapper = $(".input_fields_wrap"); //Fields wrapper
+    var add_button = $(".add_field_button"); //Add button ID
+
+    var x = 1; //initlal text box count
+    $(add_button).click(function (e) {
+      //on add input button click
+      e.preventDefault();
+      if (x < max_fields) {
+        //max input box allowed
+        x++; //text box increment
+        $(wrapper).append(
+          '<div><div class="pr"><label>Product Name</label><input type="text" name="mytext[]"><label>Serial Number</label><input type="text" name="mytext[]"><label>Purchase Date</label><input type="text" name="mytext[]"><label>Purchase Location</label><input type="text" name="mytext[]"><a href="#" class="remove_field"><span class="fa">&#xf00d;</span>Remove</a></div></div>'
+        ); //add input box
+      }
+    });
+
+    $(wrapper).on("click", ".remove_field", function (e) {
+      //user click on remove text
+      e.preventDefault();
+      $(this).parent("div").remove();
+      x--;
+    });
+  });
+
+  $(document).ready(function () {
+    $(".main div").hide();
+    // Cache tout les textes et les sous-menu
+
+    $(".slidebar li:first").attr("id", "active");
+    // Ajoute la class active au premier menu
+
+    $(".main div:first").fadeIn();
+    // Montre le premier texte à l'apparition de la page
+
+    $(".slidebar a").click(function (e) {
+      e.preventDefault();
+      if ($(this).closest("li").attr("id") == "active") {
+        //si le menu cliquer est déjà ouvert.
+        return;
+      } else {
+        $(".main div").hide();
+        // Cache tous les éléments
+
+        $(".slidebar li").attr("id", "");
+        // Rénitialise tout les menu active
+
+        $(this).parent().attr("id", "active");
+        // active le parent du li selectionner
+
+        $("#" + $(this).attr("name")).fadeIn();
+        // Montre le texte
+      }
+    });
+  });
+
+  // Placeholder JS
+
+  var test = document.createElement("input");
+  if (!("placeholder" in test)) {
+    $("[placeholder]").each(function () {
+      if ($(this).val() === "") {
+        var hint = $(this).attr("placeholder");
+        $(this).val(hint).addClass("hint");
+      }
+    });
+    $("[placeholder]")
+      .focus(function () {
+        if ($(this).val() === $(this).attr("placeholder")) {
+          $(this).val("").removeClass("hint");
+        }
+      })
+      .blur(function () {
+        if ($(this).val() === "") {
+          $(this).val($(this).attr("placeholder")).addClass("hint");
+        }
+      });
+  }
+
+  /* Form validation JS */
+  /*==========================*/
+
+  $("input.error, textarea.error").focus(function () {
+    $(this).removeClass("error");
+  });
+
+  $("form :submit").click(function () {
+    $(this)
+      .parents("form")
+      .find("input.hint, textarea.hint")
+      .each(function () {
+        $(this).val("").removeClass("hint");
+      });
+    return true;
+  });
+
+  /* Remove SVG images to avoid broken images in all browsers that don't support SVG. */
+  /*==========================*/
+
+  var supportsSVG = function () {
+    return document.implementation.hasFeature(
+      "http://www.w3.org/TR/SVG11/feature#Image",
+      "1.1"
+    );
+  };
+  if (!supportsSVG()) {
+    $('img[src*=".svg"]').remove();
+  }
+
+  /* Prepare to have floated images fill the width of the design on blog pages on small devices. */
+  /*==========================*/
+
+  // 	var images = $('.article img').load(function () {
+  // 		var src = $(this).attr('src').replace(/_grande\.|_large\.|_medium\.|_small\./, '.');
+  // 		var width = $(this).width();
+  // 		$(this).attr('src', src).attr('width', width).removeAttr('height');
+  // 	});
+
+  /* Update main product image when a thumbnail is clicked. */
+  /*==========================*/
+  $(".product-photo-thumb a").on("click", function (e) {
+    e.preventDefault();
+    switchImage(
+      $(this).attr("href"),
+      null,
+      $(".product-photo-container img")[0]
+    );
+  });
+});
+
+// Auto Dropdown
+
+(function ($, window, document, undefined) {
+  "use strict";
+
+  var $html = $("html");
+
+  $html.on("click.ui.dropdown", ".js-dropdown", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("is-open");
+  });
+
+  $html.on(
+    "click.ui.dropdown",
+    ".js-dropdown [data-dropdown-value]",
+    function (e) {
+      e.preventDefault();
+      var $item = $(this);
+      var $dropdown = $item.parents(".js-dropdown");
+      $dropdown.find(".js-dropdown__input").val($item.data("dropdown-value"));
+      $dropdown.find(".js-dropdown__current").text($item.text());
+    }
+  );
+
+  $html.on("click.ui.dropdown", function (e) {
+    var $target = $(e.target);
+    if (!$target.parents().hasClass("js-dropdown")) {
+      $(".js-dropdown").removeClass("is-open");
+    }
+  });
+})(jQuery, window, document);
+
+// Carousel
+
+$(".center").slick({
+  centerMode: true,
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1030,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1029,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        slidesToShow: 1,
+      },
+    },
+
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: false,
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
+
+$(".responsive").slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ],
+});
+
+$(".multiple-items").slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 1,
+      },
+    },
+
+    {
+      breakpoint: 603,
+      settings: {
+        arrows: false,
+        centerMode: true,
+      },
+    },
+
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+      },
+    },
+  ],
+});
+
+//Expand Product Page
+
+$(".more").click(function () {
+  $("ul.nobar").toggleClass("showbar");
+});
+
+//.US REP
+
+$("#dropdown").on("click", function (e) {
+  if ($(this).hasClass("open")) {
+    $(this).removeClass("open");
+    $(this).children("ul").slideUp("fast");
+  } else {
+    $(this).addClass("open");
+    $(this).children("ul").slideDown("fast");
+  }
+});
+
+//Tabs
+
+$(document).ready(function () {
+  $("ul.tabs").each(function () {
+    var active,
+      content,
+      links = $(this).find("a");
+    active = links.first().addClass("active");
+    content = $(active.attr("href"));
+    links.not(":first").each(function () {
+      $($(this).attr("href")).hide();
+    });
+    $(this)
+      .find("a")
+      .click(function (e) {
+        active.removeClass("active");
+        content.hide();
+        active = $(this);
+        content = $($(this).attr("href"));
+        active.addClass("active");
+        content.show();
+        return false;
+      });
+  });
+});
+
+$(".tabs li a").on("click", function () {
+  $("li a.current").removeClass("current");
+  $(this).addClass("current");
+});
+
+//AOS
+AOS.init({
+  duration: 1200,
+  disable: "mobile",
+});
+
+//Mega Menu
+
+/*global $ */
+$(document).ready(function () {
+  "use strict";
+
+  $(".menu > ul > li:has( > ul)").addClass("menu-dropdown-icon");
+  //Checks if li has sub (ul) and adds class for toggle icon - just an UI
+
+  $(".menu > ul > li > ul:not(:has(ul))").addClass("normal-sub");
+  //Checks if drodown menu's li elements have anothere level (ul), if not the dropdown is shown as regular dropdown, not a mega menu (thanks Luka Kladaric)
+
+  $(".menu > ul").before('<a href="#" class="menu-mobile">Navigation</a>');
+
+  //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
+
+  $(".menu-mobile").click(function (e) {
+    $(".menu > ul").toggleClass("show-on-mobile");
+    e.preventDefault();
+  });
+  //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
+});
+
+//Image Hover
+
+$(".caption").hover(
+  function () {
+    $(this).addClass("visible");
+  },
+  function () {
+    $(this).removeClass("visible");
+  }
+);
+
+//Modal
+
+$(document).on("ready", function () {
+  $modal = $(".modal-frame");
+  $overlay = $(".modal-overlay");
+
+  /* Need this to clear out the keyframe classes so they dont clash with each other between ener/leave. Cheers. */
+  $modal.bind(
+    "webkitAnimationEnd oanimationend msAnimationEnd animationend",
+    function (e) {
+      if ($modal.hasClass("state-leave")) {
+        $modal.removeClass("state-leave");
+      }
+    }
+  );
+
+  $(".close").on("click", function () {
+    $overlay.removeClass("state-show");
+    $modal.removeClass("state-appear").addClass("state-leave");
+  });
+
+  $(".open").on("click", function () {
+    $overlay.addClass("state-show");
+    $modal.removeClass("state-leave").addClass("state-appear");
+  });
+});

@@ -1,0 +1,58 @@
+<section id="blacktop">
+    <div id="template">
+        <div id="customer">
+            <!-- Create Customer -->
+            <div id="create-customer">
+                <div class="reg-head">
+                    <h1>Create an Account</h1>
+                    <p>Members Get 5% Back & Free Shipping</p>
+                </div>
+                <div class="template_header"></div>
+                {% form 'create_customer', action:
+        "https://vital-forms-api.c1.humanpresence.app/api/form/vfob/a5e4f6ea-3dfc-4bff-9776-12a24cd993d4$5f986b1a4c5a0700b1d3a7a0",
+        data-vfib: "0" %}
+                    {{ form.errors | default_errors }}
+                    <input id="fname" name="confirm" type="text" value=""/>
+                    <div class="clearfix large_form">
+                        <label class="login" for="first_name">First Name</label>
+                        <input class="large fnamer" id="first_name" name="customer[first_name]" size="30" type="text" value=""/>
+                    </div>
+                    <div class="clearfix large_form">
+                        <label class="login" for="last_name" id="lname-reg">Last Name</label>
+                        <input class="large" id="last_name" name="customer[last_name]" size="30" type="text" value=""/>
+                    </div>
+                    <div class="clearfix large_form">
+                        <label class="login" for="email">Email Address</label>
+                        <input class="large" id="email" name="customer[email]" size="30" type="email" value=""/>
+                    </div>
+                    <div class="clearfix large_form">
+                        <label class="login" for="password">Password</label>
+                        <input class="large password" id="password" name="customer[password]" size="30" type="password" value=""/>
+                    </div>
+                    <input id="customer_tags" name="customer[tags]" type="hidden" value="Illuminati"/>
+                    <div class="action_bottom">
+                        <input class="btn btn-blue" data-callback="onSubmit" id="create-btn" type="submit" value="Create New Account"/>
+                        <a class="btn btn-white" href="/account/login">or Log into Existing Account</a>
+                    </div>
+                    <input name="return_to" type="hidden" value="/search?q=like%20new%20refurb&created-account"/>
+                {% endform %}
+                {% assign protected_action = '/account' %}
+                {% include
+        'sp_vf_check' %}
+            </div>
+            <!-- /#create-customer -->
+        </div>
+    </div>
+</section>
+<script>
+    var checker = document.getElementById("fname");
+    var sendbtn = document.getElementById("create-btn");
+    checker.onchange = function () {
+        sendbtn.disabled = !this.checked;
+    };
+</script>
+<style type="text/css">
+    input[name="confirm"] {
+        display: none;
+    }
+</style>

@@ -1,0 +1,88 @@
+{% unless product.available %}
+    {% else %}
+
+        {% if product.variants.size > 1 %}
+
+            <p class="prod-select-title">
+                {% if product.options.size == 1 %}
+                    {% if product.options != 'Default' %}
+                        <label>Other buying options</label>
+                    {% else %}
+                        <label>Select
+                            {{ product.options }}</label>
+                    {% endif %}
+                {% endif %}
+            </p>
+
+            <select class="product-single__variants" id="productSelect" name="id">
+
+                {% for variant in product.variants %}
+                    {% if variant.available %}
+                        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+                    {% else %}
+                        <option disabled="disabled">
+                            {{ variant.title }}
+                            - Not Available
+                        </option>
+                    {% endif %}
+                {% endfor %}
+
+            </select>
+        {% endif %}
+
+
+        <!-- This handles discontinued for sale items -->
+        {% if product.tags contains 'dc-for-sale' %}
+
+            <div class="cart-group">
+                {% include 'qty-select' %}
+                <a class="btn btn-blue main-cta" name="add" type="submit">
+                    <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}
+                        -
+                        {% include 'get-product-price' %}</span>
+                </a>
+            </div>
+
+            <div class="discontinued">
+                <h4>Discontinued</h4>We've discontinued this product but still have stock remaining for sale.
+            </div>
+
+            <!-- This handles discontinued not for sale -->
+        {% elsif product.tags contains 'discontinued' %}
+            <div class="discontinued">
+                <h4>Discontinued</h4>
+            </div>
+            {% else%}
+
+            <div class="cart-group">
+                {% include 'qty-select' %}
+                <a class="btn btn-blue main-cta">
+                    <!-- Show preorder info -->
+                    {% if product.metafields.c_f.Preorder_Date %}
+                        Preorder Now ›
+                    {% else %}
+                        <!-- Basic a -->
+                        {{ 'products.product.add_to_cart' | t }}
+                    {% endif %}
+                </a>
+            </div>
+
+        {% endif %}
+{% endunless %}
+
+
+<script type="text/javascript">
+
+    $(".main-cta").on("click", function () {
+        const qty = $("input.in-num").val();
+        console.log(qty)
+        CartJS.addItem({{ product.selected_or_first_available_variant.id }}, qty, {}, {
+            "success": function (data, textStatus, jqXHR) {
+                window.location.href = "/cart";
+            },
+            "error": function (jqXHR, textStatus, errorThrown) {
+                console.log("err")
+            }
+        });
+    });
+</script>

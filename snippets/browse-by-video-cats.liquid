@@ -1,0 +1,37 @@
+<div class="product-carousel2">
+  
+  <div class="flex-container" data-aos="fade-left">
+    <h4 class="cables">Product Type</h4>
+    <div class="flex-item" >
+      
+      <select id="my_selection">
+        <option>Select an LED Video Product Type</option>
+{% for link in linklists.iris-categories.links %}
+     <option value="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</option>
+{% endfor %}
+</select>
+
+      
+    </div>
+    
+  </div>
+
+      
+      
+  </div>
+
+
+<script>
+  
+  // Select 
+
+document.getElementById('my_selection').onchange = function () {
+	window.location.href = this.children[this.selectedIndex].getAttribute('href');
+}
+
+
+document.getElementById('my_selection2').onchange = function () {
+	window.location.href = this.children[this.selectedIndex].getAttribute('href');
+}
+
+</script>

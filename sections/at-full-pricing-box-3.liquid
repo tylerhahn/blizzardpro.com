@@ -1,0 +1,89 @@
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-uppercase text-center" style="background-color: {{section.settings.bg}} ">{{section.settings.tier_title}}</h5>
+        <h6 class="card-price text-center">{% if section.settings.tier_price != 'Free' %}<span class="dollar">$</span>{% endif %}{{section.settings.tier_price}}<span class="period">{{section.settings.tier_suffix}}</span></h6>
+        <hr>
+        <ul class="fa-ul">
+            {% for block in section.blocks %}
+            <li><span class="fa-li">
+              <i class="fas fa-{% if block.settings.feature_enabled == true %}check{% else %}times{% endif %}"></i>
+              </span>{{block.settings.feature_title}}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{{section.settings.tier_url}}" style="background-color: {{section.settings.bg}}" class="btn btn-blue">{{section.settings.tier_cta}}</a>
+      </div>
+    </div>
+  
+  
+    
+  {% schema %}
+  {
+    "name": "Pricing Box",
+    "class": "col-lg-4",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Pricing Table"
+      },
+      {
+        "id": "tier_title",
+        "type": "text",
+        "label": "Tier Title"
+      },
+      {
+        "id": "bg",
+        "type": "color",
+        "label": "Tier Color"
+      },
+      {
+        "id": "tier_price",
+        "type": "text",
+        "label": "Tier Price"
+      },
+      {
+        "id": "tier_suffix",
+        "type": "text",
+        "label": "Tier Suffix"
+      },
+      {
+        "id": "tier_url",
+        "type": "url",
+        "label": "Tier Url"
+      },
+      {
+        "id": "tier_cta",
+        "type": "text",
+        "label": "Tier CTA"
+      }
+    ],
+  
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Feature",
+        "settings": [
+          {
+              "id": "feature_title",
+              "type": "textarea",
+              "label": "Feature Title"
+            },
+            {
+              "type": "checkbox",
+              "id": "feature_enabled",
+              "label": "Make this an active feature",
+              "default": true
+            }
+        ]
+      }
+    ],
+  
+    "presets": [
+      {
+        "name": "Pricing Table",
+        "category": "Image"
+      }
+    ]
+  }
+  {% endschema %}
+  

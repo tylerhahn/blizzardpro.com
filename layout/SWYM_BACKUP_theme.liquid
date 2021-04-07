@@ -1,0 +1,388 @@
+
+{% unless request.path contains '/account' %} {% assign restrict_page = true %} {% endunless %} 
+{% if shop.metafields.adv_reg.noFraming == 'on' %} {% assign restrict_page = true %}{% endif %}
+{% if shop.metafields.adv_reg.useBlacklist == 'on' %}
+{% assign restrict_page = false %} 
+{% assign blockPages = shop.metafields.adv_reg.blockPageUrls | split: "|" %}
+{% for url in blockPages %}
+{% if request.path == url %}{% assign restrict_page = true %} {% endif %}
+{% endfor %}   
+{% else %}
+{% assign exceptionUrls = shop.metafields.adv_reg.lockShopExceptionUrls | split: "|" %}
+{% for url in exceptionUrls %}
+{% if request.path == url %}{% assign restrict_page = false %} {% endif %}
+{% endfor %}            
+{% endif %}    
+<!-- using block list: {{shop.metafields.adv_reg.useBlacklist}} -->
+<!-- current request path:{{request.path}} -->
+<!-- shop lock exceptions:{{shop.metafields.adv_reg.lockShopExceptionUrls }} -->
+<!--restricting page: {{restrict_page}} -->
+{% if request.path == '/challenge' %} {% assign restrict_page = false %} {% endif %}
+{% if request.path == '/password' %} {% assign restrict_page = false %} {% endif %}
+{% if request.path == '/account/recover' %} {% assign restrict_page = false %} {% endif %}
+
+
+{% if request.path contains '/account/reset' %} {% assign restrict_page = false %} {% endif %}
+{% if request.path contains '/account/activate' %} {% assign restrict_page = false %} {% endif %}
+
+{% if request.path contains '/reset-password' %} {% assign restrict_page = false %} {% endif %}
+{% if request.path contains '/customer-account-password-reset' %} {% assign restrict_page = false %} {% endif %}
+
+{% if shop.metafields.adv_reg.lockShop == 'on' and  customer == nil and restrict_page  %}
+
+{% if shop.metafields.adv_reg.noFraming == 'on' %}
+{% include 'advanced_registration_locked_page' %}
+{% else %}
+<script>window.location='/account/login'</script>
+{% endif %}
+{% else %}<!doctype html lang="en">
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+{% if collection.url == '/collections/b-stock-inventory' %}
+<meta name="robots" content="noindex">
+{% endif %}
+
+<head>
+
+    <!-- Algolia head -->
+    {{ 'algolia_config.js' | asset_url | script_tag }}
+
+
+
+
+
+
+<script type="text/template" id="template_algolia_money_format">{% include 'algolia_money_format' %}</script>
+<script type="text/template" id="template_algolia_current_collection_id">{% include 'algolia_current_collection_id' %}</script>
+<script type="text/template" id="template_algolia_autocomplete">{% include 'algolia_autocomplete.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete.css">{% include 'algolia_autocomplete.css.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_pages_empty">{% include 'algolia_autocomplete_pages_empty.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_page">{% include 'algolia_autocomplete_page.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_collection">{% include 'algolia_autocomplete_collection.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_collections_empty">{% include 'algolia_autocomplete_collections_empty.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_article">{% include 'algolia_autocomplete_article.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_articles_empty">{% include 'algolia_autocomplete_articles_empty.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_product">{% include 'algolia_autocomplete_product.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_products_empty">{% include 'algolia_autocomplete_products_empty.hogan' %}</script>
+<script type="text/template" id="template_algolia_autocomplete_footer">{% include 'algolia_autocomplete_footer.hogan' %}</script>
+<script type="text/template" id="template_algolia_instant_search">{% include 'algolia_instant_search.hogan' %}</script>
+<script type="text/template" id="template_algolia_instant_search.css">{% include 'algolia_instant_search.css.hogan' %}</script>
+<script type="text/template" id="template_algolia_instant_search_stats">{% include 'algolia_instant_search_stats.hogan' %}</script>
+<script type="text/template" id="template_algolia_instant_search_facet_item">{% include 'algolia_instant_search_facet_item.hogan' %}</script>
+<script type="text/template" id="template_algolia_instant_search_current_refined_values_item">{% include 'algolia_instant_search_current_refined_values_item.hogan' %}</script>
+<script type="text/template" id="template_algolia_instant_search_product">{% include 'algolia_instant_search_product.hogan' %}</script>
+<script type="text/template" id="template_algolia_instant_search_no_result">{% include 'algolia_instant_search_no_result.hogan' %}</script>
+{{ 'algolia_dependency_font-awesome-4-4-0.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'algolia_externals.js' | asset_url }}" defer></script>
+{{ 'algolia_init.js' | asset_url | script_tag }}
+<script src="{{ 'algolia_analytics.js' | asset_url }}" defer></script>
+<script src="{{ 'algolia_translations.js' | asset_url }}" defer></script>
+<script src="{{ 'algolia_helpers.js' | asset_url }}" defer></script>
+<script src="{{ 'algolia_autocomplete.js' | asset_url }}" defer></script>
+<script src="{{ 'algolia_facets.js' | asset_url }}" defer></script>
+<script src="{{ 'algolia_sort_orders.js' | asset_url }}" defer></script>
+<script src="{{ 'algolia_instant_search.js' | asset_url }}" defer></script>
+  <!-- /Algolia head -->
+  
+  
+
+  <!-- Global site tag (gtag.js) - Google Ads: 758900967 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-758900967"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-16655377-1', { 'send_page_view': false });
+
+    gtag('config', 'AW-758900967');
+  </script>
+
+  <!--BEGIN: Microsoft Advertising UET Javascript tag.-->
+  <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"17363773"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+
+  </script>
+  <!--END: Microsoft Advertising UET Javascript tag-->
+
+
+
+  <style type="text/css">
+    #iubenda-cs-banner {
+      bottom: 0px !important;
+      left: 0px !important;
+      position: fixed !important;
+      width: 100% !important;
+      z-index: 99999998 !important;
+      background-color: black;
+    }
+    .iubenda-cs-content {
+      display: block;
+      margin: 0 auto;
+      padding: 20px;
+      width: auto;
+      font-family: Helvetica,Arial,FreeSans,sans-serif;
+      font-size: 14px;
+      background: rgb(37, 37, 37);
+      color: #fff;}
+    .iubenda-cs-rationale {
+      max-width: 900px;
+      position: relative;
+      margin: 0 auto;
+    }
+    .iubenda-banner-content > p {
+      font-family: Helvetica,Arial,FreeSans,sans-serif;
+      line-height: 1.5;
+    }
+    .iubenda-cs-close-btn {
+      margin:0;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+    }
+    .iubenda-cs-cookie-policy-lnk {
+      text-decoration: underline;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 900;
+    }
+  </style>
+  <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"lang":"en","siteId":1469457,"cookiePolicyId":12428706,"consentOnButton":false,"consentOnScroll":false, "banner":{ "slideDown":false,"applyStyles":false,"textColor":"black","backgroundColor":"white" } };
+  </script><script type="text/javascript" src="//cdn.iubenda.com/cookie_solution/safemode/iubenda_cs.js" charset="UTF-8" async></script>
+
+
+
+  <script src="//d1liekpayvooaz.cloudfront.net/apps/customizery/customizery.js?shop={{shop.permanent_domain}}"></script>
+
+  <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
+
+
+  <meta charset="utf-8" />
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+
+  <title>
+    {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+  <meta name="description" content="{{ page_description | escape }}" />
+  {% endif %}
+
+  <link rel="canonical" href="{{ canonical_url }}" />
+  <link rel="icon" 
+        type="image/png" 
+        href="{{ 'favicon.png' | asset_url }}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {% include 'open-graph-tags' %}
+  {% include 'twitter-card' %}
+
+  {{ content_for_header }}
+
+  <!--[if IE]>
+{{ 'ie.scss.css' | asset_url | stylesheet_tag }}
+<![endif]-->
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.typekit.net/mac8tqd.css">
+
+
+  {{ 'style.scss.css' | asset_url | stylesheet_tag }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
+  {{ 'storelocator.scss' | asset_url | stylesheet_tag }}
+  {{ 'base.scss.css' | asset_url | stylesheet_tag }}
+  {{ '768.scss.css' | asset_url | stylesheet_tag }}
+  {{ '1030.scss.css' | asset_url | stylesheet_tag }}
+  {{ "lightbox.css" | asset_url | stylesheet_tag}}
+  {{ '1240.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'lightslider.min.css' | asset_url | stylesheet_tag }}
+  <!-- {{ 'social/social-icons.css' | global_asset_url | stylesheet_tag }} -->
+  {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+  {{ 'slick.css' | asset_url | stylesheet_tag }}
+  {{ 'image-map-pro.min.css' | asset_url | stylesheet_tag }}
+  <!-- {{ 'squares.min.css' | asset_url | stylesheet_tag }} -->
+  {{ 'component.css' | asset_url | stylesheet_tag }}
+  {{ 'lity.css' | asset_url | stylesheet_tag }}
+  {{ 'unslider.css' | asset_url | stylesheet_tag }}
+  {{'//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css' | stylesheet_tag }}
+  {{'//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' | stylesheet_tag }}
+  <!--  'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css' | stylesheet_tag }}  -->
+  {{ 'https://unpkg.com/aos@2.3.1/dist/aos.css' | stylesheet_tag }}
+  {{ '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' | stylesheet_tag }}
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--[if lt IE 9]>
+{{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}
+<![endif]-->
+
+  {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+  {{ "lightbox.js" | asset_url | script_tag }}
+  {{ "jquery.magnify.js" | asset_url | script_tag }}
+
+  {% if template contains 'customers' %}
+  {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+  {% endif %}
+
+  {{ 'cart.min.js' | asset_url | script_tag }}
+
+
+
+  <!-- Additional Shopify helpers that will likely be added to the global shopify_common.js some day soon. -->
+  {{ 'shopify_common.js'  | asset_url | script_tag }}
+
+
+
+  <!-- <link href='https://cdn.webrotate360.com/lib/imagerotator/3.6.1/css/basic.css' rel='stylesheet'/> -->
+  {% if temmplate contains 'b-stock' %}
+  <meta name="robots" content="noindex">
+  {% endif %}
+
+
+  {% if template contains 'cart' %}{% include 'hulkcode_common' %}<script src='https://volumediscount.hulkapps.com/hulkcode.js' defer='defer'></script>{% endif %}{% render 'limoniapps-discountninja-header' %}
+</head>
+
+<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+  <div id="limoniapps-discountninja-stickybar-pusher" class="limoniapps-sticky-bar-pusher"></div>
+
+  <header>
+    {% include 'site-nav' %}
+  </header>
+
+  <div id="main" role="main">
+
+    {{ content_for_layout }}
+  </div>
+
+  {% if product.title contains 'LightShark' %}
+  <!-- Begin MailChimp Signup Form -->
+  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    #mc_embed_signup{background:#666; color: #fff; clear:left; font:10px Helvetica,Arial,sans-serif; width:100%;}
+    #mc_embed_signup label {display:block;font-size:16px;padding-bottom:10px;font-weight:normal;}
+    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  <div id="mc_embed_signup">
+    <form action="https://blizzardlighting.us14.list-manage.com/subscribe/post?u=f2f0065007046cef56cc9beaa&amp;id=91bfa1aef9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <label for="mce-EMAIL">Want to receive LightShark firmware update notifications via email?</label>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f2f0065007046cef56cc9beaa_91bfa1aef9" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+    </form>
+  </div>
+
+  <!--End mc_embed_signup-->
+
+  {% endif %}
+  <footer>
+
+    {{ 'slick.js'  | asset_url | script_tag }}
+    {{ 'jquery.easytabs.js'  | asset_url | script_tag }}
+
+    <div class="flex-container">
+
+      <div class="logo-footer"><img src="{{ 'blizzard-mark-light-transparent.png' | asset_url }}" alt="Blizzard Pro"></div>
+      <div class="menu-item">
+        {% for link in linklists.footer.links %}
+        <li> {{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+      </div>
+      <div class="menu-item">
+        {% for link in linklists.footer-2.links %}
+        <li>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}</div>
+
+      <div class="menu-item"> {% for link in linklists.footer-3.links %}
+        <li> {{ link.title | link_to: link.url }} </li>
+        {% endfor %}</div>
+      <div class="social">
+        <a target="_blank" href="https://instagram.com/blizzardlites/"><i class="fab fa-instagram" aria-hidden="true"></i><div class="sr">Instagram</div></a>
+        <a target="_blank" href="http://www.youtube.com/user/blizzardlighting"><i class="fab fa-youtube" aria-hidden="true"></i><div class="sr">YouTube</div></a>
+        <a target="_blank" href="https://www.facebook.com/blizzardlighting/"><i class="fab fa-facebook"></i><div class="sr">Facebook</div></a>
+      </div>
+    </div>
+    <p role="contentinfo" class="small-print">Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}.</p>
+
+    <!-- {{'//cdn.webrotate360.com/lib/imagerotator/3.6.1/js/imagerotator.js' | script_tag}} -->
+    <!-- {{'//apps.storeimaging.com/shopify/store/wr360hook-7a23d79d-671d-4012-990a-6ecd1d9f81f8-header.js' | script_tag}} -->
+    {{ 'https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js' | script_tag }}
+
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyC3-WWtj8AD_2iHFd3t7WEjxnte3_Jmqe0"></script>
+
+    {{ 'handlebars.min.js' | asset_url | script_tag }}
+    {{ 'jquery.storelocator.js' | asset_url | script_tag }}
+
+    {% if page.title != 'Challenge' %}
+
+    {{ 'shop.js'  | asset_url | script_tag }}
+    {{ 'modernizr.custom.js' | asset_url | script_tag }}
+    {{ 'jquery.dlmenu.js' | asset_url | script_tag }}
+    {{ 'demoUtils.js' | asset_url | script_tag }}
+    {{ 'lity.js' | asset_url | script_tag }}
+    {{ 'unslider-min.js' | asset_url | script_tag }}
+    {{ 'dragscroll.js' | asset_url | script_tag }}
+    {{ 'smooth-scroll.min.js' | asset_url | script_tag }}
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    {{ 'image-map-pro.min.js' | asset_url | script_tag }}
+    {{ 'lightslider.min.js' | asset_url | script_tag }}
+    {{ 'OptionsCtrl.js' | asset_url | script_tag }}
+    {{ 'pathformer.js' | asset_url | script_tag }}
+    {{ 'stylesheet.js' | asset_url | script_tag }}
+    {{ 'utils-viv.js' | asset_url | script_tag }}
+    {{ 'ViewerCtrl.js' | asset_url | script_tag }}
+    {{ 'vivus.js' | asset_url | script_tag }}
+    {{ 'jquery.lazyload.min.js' | asset_url | script_tag }}
+
+    {% endif %}
+
+    {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+
+
+  </footer>
+
+
+
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4135982.js"></script>
+  <!-- End of HubSpot Embed Code -->
+
+  <script src="//cdn.codeblackbelt.com/js/modules/also-bought/main.min.js?shop=blizzard-lighting.myshopify.com"></script>
+  {% include 'mw_fees_objects' %}
+  <!-- spurit_stp-added -->
+  {% render 'spurit_stp-theme-snippet' %}
+  <!-- /spurit_stp-added -->
+
+  {% render 'linked-options' %}
+{% include 'limoniapps-discountninja-body' %}
+</body>
+
+<script>  jQuery("select.cbb-recommendations-variant-select").val('1');
+
+  jQuery(".product-name:contains('- Dealer')").html(function(_, html) {
+    return html.replace(/(- Dealer)/g, '<span class="hide"></span>');
+  });
+</script>
+</html>
+{% endif %}

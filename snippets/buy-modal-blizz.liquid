@@ -1,0 +1,99 @@
+<div class="modal" id="modal-one" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-header">
+			<a href="#" class="btn-close" aria-hidden="true">×</a>
+		</div>
+
+		<div class="modal-body">
+
+			<div class="buy-blizz">
+
+				<div class="buy-info">
+					<h2>Buy from<br/>Blizzard Lighting</h2>
+					<h3> {% assign variant = product.selected_or_first_available_variant %} {% if product.compare_at_price > product.price %}
+						<span class="product-price on-sale" itemprop="price">{{ product.price_max | money }}</span>
+						<s class="product-compare-price">{{ product.price_max | money }}</s> {% else %}
+						<span class="product-price" itemprop="price">{{ product.price_max | money }}</span> {% endif %}</h3>
+
+                                  {% if product.tags contains 'preorder' %}
+                  <h4>Preorder</h4>
+                  <p class="preorder">Expected Shipping Date: {{ product.metafields.c_f.Preorder_Date }}</p>
+                  {% endif %}
+                  
+            <form action="/cart/add" method="post">
+
+  <select id="var-select" class="hide" name="id">
+    {% for variant in product.variants %}
+    <option value="{{ variant.id }}">{{ variant.title }}</option>
+    {% endfor %}
+  </select>
+
+
+{% unless product.available %}
+  <p>Sold Out</p>
+{% else %}
+  <input type="number" name="quantity" value="1" min="1" />
+
+  <input type="submit" value="Add to Cart" />
+    
+{% endunless %}
+              
+</form>
+				</div>
+
+			</div>
+          
+          
+         
+          
+		</div>
+	</div>
+</div>
+
+<style>
+  
+  .buy-blizz {
+    background: transparent;
+}
+  
+  .modal:target .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    background: #4194fa;
+    background: -moz-linear-gradient(top, #4194fa 0%, #426ef8 100%);
+    background: -webkit-linear-gradient(top, #4194fa 0%, #426ef8 100%);
+    background: linear-gradient(to bottom, #4194fa 0%, #426ef8 100%);
+    height: 502px;
+}
+  
+  .buy-blizz {
+    background: transparent;
+    margin: auto;
+    width: 100%;
+    display: flex;
+  	align-items: center;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+  
+  @media screen and (max-width: 600px){
+  .buy-blizz{
+    height: 70%;
+  }
+  
+  }
+  
+  
+</style>
+
+
+<!-- <script>
+  jQuery('#var-select>option:eq(1)').attr('selected', true);
+</script> -->

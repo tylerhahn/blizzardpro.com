@@ -1,0 +1,176 @@
+<style>
+  div#main {
+    background: #ffece1;
+  }
+
+  .collections-item.aos-init.aos-animate {
+    background: #fffcf9;
+  }
+
+  .collections-item {
+    border: none;
+    box-shadow: 0px 0px 0px 4px #b38182, 0px 0px 0px 7px #EF9C76;
+  }
+
+  ul.new-grid {
+    max-width: 1407px;
+    margin: 0 auto;
+  }
+
+  s {
+    font-size: 15px;
+    display: block;
+    opacity: .6;
+    color: black;
+  }
+
+  .sales-banner {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 13px;
+  }
+  .sales-banner {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  span.product-price {
+    color: #282bf6;
+    font-size: 23px;
+  }
+  
+  img.hero-banner {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+  
+  .quality-select {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.quality-select h4 {
+    color: #361f07;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.quality-select select {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #cdbcb2;
+}
+  
+</style>
+
+
+{% assign products_per_page = settings.products_per_row | times: settings.number_of_rows %}
+{% assign numbers = 'zero, one, two, three, four, five, six' | split: ',' %}
+{% assign products_per_row = settings.products_per_row | times: 1 %}
+{% assign products_per_row = numbers[products_per_row] | strip | append: '-per-row' %}
+
+{% paginate collection.products by 50 %}
+
+
+<section data-aos="fade-up" id="collector">
+
+
+  {% if collection.image %}
+  	<img class="hero-banner" src="{{ collection.image | img_url: 'master' }}" alt="{{collection.title}}" />
+  {% endif %}
+  
+<div class="quality-select">
+  <h4>Browse by Quality</h4>
+  <select id="dynamic_select">
+  <option value="">Select Quality</option>
+  <option value="/like-new" {% if collection.title == 'Like New' %}selected{% endif %}>Like New (30% off)</option>
+  <option value="/factory-refurbished" {% if collection.title == 'Refurbished' %}selected{% endif %}>Refurbished (40% off)</option>
+  <option value="/discontinued-2020" {% if collection.title == 'Discontinued' %}selected{% endif %}>Discontinued (30% off)</option>
+</select>
+  </div>
+
+<script>
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val();
+          if (url) { // require a URL
+              window.location = 'https://www.blizzardpro.com/collections' + url;
+          }
+          return false;
+      });
+    });
+</script>
+
+  <div class="rte clearfix">
+    <div style="text-align: center;">
+
+
+      {% if collection.all_tags.size > 0 %}
+      <ul class="subcategories clearfix clear">
+        <li class="{% unless current_tags %} active{% endunless %}">
+          {{ 'All' | link_to_remove_tag: current_tags.first }}
+        </li>
+        {% for tag in collection.all_tags %}
+        {% if current_tags contains tag %}
+        <li class="active">
+          {{ tag | link_to_remove_tag: tag }}
+        </li>
+        {% else %}
+        <li>
+          {{ tag | link_to_tag: tag }}
+        </li>
+        {% endif %}
+        {% endfor %}  
+      </ul>
+      {% endif %}
+
+      {% if collection.description.size > 0 %}
+      <div class="rte clearfix">
+        {{ collection.description }}
+      </div>
+      {% endif %}
+
+
+
+      <ul class="new-grid">
+        {% for product in collection.products %}
+        {% include 'bbc-grid-item' with products_per_row %}
+        {% else %}
+        <p>There are no products in this view.</p>
+        {% endfor %}
+      </ul>
+
+      {% if paginate.pages > 1 %}
+      <div class="pagination centered">
+        {{ paginate | default_pagination }}
+      </div>
+      {% endif %}
+
+      {% endpaginate %}
+
+      {% comment %}
+      JavaScript for collection sorting.
+      {% endcomment %}
+      </section>
+
+
+    <script>
+      jQuery('.sort-by')
+      .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+           .on('change', function() {
+        Shopify.queryParams.sort_by = jQuery(this).val();
+        location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+      });
+    </script>
+
+
+

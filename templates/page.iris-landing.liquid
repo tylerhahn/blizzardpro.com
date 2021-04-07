@@ -1,0 +1,265 @@
+{% include 'sticky-contact' %}
+
+{% assign currentProd = page.handle | remove: '/pages/' %}
+
+{% for product in collections['iris-landing-page'].products limit: 4 %}
+  {% if product.handle == page.handle %}
+  {% if
+  product.metafields.c_f.YouTube_IdNumber %}
+        <h1>{{ product.title }}</h1>
+        <!-- <h2>{{product.metafields.c_f.Product_Subtitle}}</h2> -->
+        <div class="pros-cons">
+
+          <div>
+            <h4>Practical Application</h4>
+            <p>{{ product.metafields.c_f.Pros }}</p>
+          </div>
+
+          <div>
+            <h4>Impractical Application</h4>
+            <p>{{ product.metafields.c_f.Cons }}</p>
+          </div>
+
+        </div>
+        <a href="{{ product.url }}" class="btn btn-blue full-link">Learn More</a>
+      </div>
+    </div>
+    {% include 'cutaway' %}
+  </div> -->
+  div class="hero-mosaic how-mosaic np-mosaic prod-mosaic">
+    <div  class="mosaic-container">
+
+      <a
+        class="a box"
+          data-fancybox="gallery"
+            {% if product.images[3].alt contains 'https://www.youtube.com' %}
+            href="{{ product.images[3].alt }}" style="background-image: url( {{ product.images[3].src | img_url: 'master' }} )"
+          >
+            {% else %}
+            href="{{ product.images[4].src | img_url: 'master' }}"
+            style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"
+          >
+            {% endif %}
+
+  {% if product.images[3].alt contains 'https://www.youtube.com' %}
+  <i class="fas fa-play"></i>
+  {% endif %}
+
+        </a>
+      <a
+        class="b box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[4].src | img_url: 'master' }}" style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[5].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+      <a
+        class="c box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[5].src | img_url: 'master' }}" style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[6].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+      <a
+        class="d box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[6].src | img_url: 'master' }}" style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[7].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+      <a
+        class="e box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[7].src | img_url: 'master' }}" style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[8].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+    </div>
+
+  <div class="hero-mosaic-slider">
+      <a data-fancybox="gallery" href="{{ product.images[4].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[5].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[6].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[7].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[8].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"></a>
+  </div>
+
+  {% else %}
+  <div
+    id="hero-how"
+    class="hero-np"
+    style="background-image: url({{ product.images[3].src | img_url: 'master' }})"
+  >
+  <div class="side-overlay"></div>
+  <div class="flex-container">
+    <div class="np-featured">
+      <img
+        src="{{ product.featured_image | img_url: 'master'}}"
+        alt="{{product.title}}"
+      />
+    </div>
+    <div class="np-text-container">
+      <h1>{{ product.title }}</h1>
+      <!-- <h2>{{product.metafields.c_f.Product_Subtitle}}</h2> -->
+      <div class="pros-cons">
+
+        <div>
+          <h4>Practical Application</h4>
+          <p>{{ product.metafields.c_f.Pros }}</p>
+        </div>
+
+        <div>
+          <h4>Impractical Application</h4>
+          <p>{{ product.metafields.c_f.Cons }}</p>
+        </div>
+
+      </div>
+      <a href="{{ product.url }}" class="btn btn-blue full-link">Learn More</a>
+    </div>
+  </div>
+  {% include 'cutaway' %}
+  </div>
+
+  <div class="hero-mosaic how-mosaic np-mosaic prod-mosaic">
+    <div  class="mosaic-container">
+
+      <a
+        class="a box"
+          data-fancybox="gallery"
+            {% if product.images[3].alt contains 'https://www.youtube.com' %}
+            href="{{ product.images[4].alt }}" style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"
+          >
+            {% else %}
+            href="{{ product.images[4].src | img_url: 'master' }}"
+            style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"
+          >
+            {% endif %}
+
+  {% if product.images[3].alt contains 'https://www.youtube.com' %}
+  <i class="fas fa-play"></i>
+  {% endif %}
+
+        </a>
+      <a
+        class="b box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[5].src | img_url: 'master' }}" style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[5].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+      <a
+        class="c box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[6].src | img_url: 'master' }}" style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[6].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+      <a
+        class="d box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[7].src | img_url: 'master' }}" style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[7].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+      <a
+        class="e box"
+          data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[8].src | img_url: 'master' }}" style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[8].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"
+        >
+          {% endif %}</a>
+    </div>
+  </div>
+
+  <div class="hero-mosaic-slider">
+
+      <a data-fancybox="gallery" href="{{ product.images[4].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[5].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[6].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[7].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"></a>
+      <a data-fancybox="gallery" href="{{ product.images[8].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"></a>
+
+  </div>
+
+  {% endif %}
+
+
+
+  <div class="three-points">
+    <div class="point-container np-three-points">
+      <div class="point">
+        {{ product.metafields.c_f.Selling_Point_1 }}
+      </div>
+      <div class="point">
+        {{ product.metafields.c_f.Selling_Point_2 }}
+      </div>
+      <div class="point">
+        {{ product.metafields.c_f.Selling_Point_3 }}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-lineup">
+
+
+   {% if
+    collections['iris-landing-page'].products_count > 1 %}
+      <h2>More IRiS Products</h2>
+    <div class="prod-container">
+      {% for product in collections['iris-landing-page'].products limit: 4
+      %}
+      {% if product.handle != currentProd %}
+      <div class="how-prod">
+        <img
+          src="{{ product.featured_image | img_url: 'master' }}"
+          alt="{{ product.title }}"
+        />
+
+        <div class="grid-link">
+          <a href="{{ product.url }}">{{product.title}}</a>
+          <a href="https://blizzardpro.com/pages/{{product.handle}}">Learn More</a>
+        </div>
+      </div>
+      {% endif %}
+
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endfor %}
+
+{% include 'cfhs-newproducts' %}

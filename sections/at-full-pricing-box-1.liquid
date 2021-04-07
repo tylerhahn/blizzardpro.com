@@ -1,0 +1,199 @@
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title text-uppercase text-center" style="background-color: {{section.settings.bg}} ">{{section.settings.tier_title}}</h5>
+      <h6 class="card-price text-center">{% if section.settings.tier_price != 'Free' %}<span class="dollar">$</span>{% endif %}{{section.settings.tier_price}}<span class="period">{{section.settings.tier_suffix}}</span></h6>
+      <hr>
+      <ul class="fa-ul">
+          {% for block in section.blocks %}
+          <li><span class="fa-li">
+            <i class="fas fa-{% if block.settings.feature_enabled == true %}check{% else %}times{% endif %}"></i>
+            </span>{{block.settings.feature_title}}
+          </li>
+          {% endfor %}
+      </ul>
+      <a href="{{section.settings.tier_url}}" style="background-color: {{section.settings.bg}}" style="background-color: {{section.settings.bg}}" class="btn btn-blue">{{section.settings.tier_cta}}</a>
+    </div>
+  </div>
+
+
+  
+{% schema %}
+{
+  "name": "Pricing Box",
+  "class": "col-lg-4",
+  "settings": [
+  {
+    "id": "background_color",
+    "type": "color",
+    "label": "Section Background Color"
+  },
+    {
+      "type": "header",
+      "content": "Pricing Table"
+    },
+    {
+      "id": "tier_title",
+      "type": "text",
+      "label": "Tier Title"
+    },
+    {
+      "id": "bg",
+      "type": "color",
+      "label": "Tier Color"
+    },
+    {
+      "id": "tier_price",
+      "type": "text",
+      "label": "Tier Price"
+    },
+    {
+      "id": "tier_suffix",
+      "type": "text",
+      "label": "Tier Suffix"
+    },
+    {
+      "id": "tier_url",
+      "type": "url",
+      "label": "Tier Url"
+    },
+    {
+      "id": "tier_cta",
+      "type": "text",
+      "label": "Tier CTA"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Feature",
+      "settings": [
+        {
+            "id": "feature_title",
+            "type": "textarea",
+            "label": "Feature Title"
+          },
+          {
+            "type": "checkbox",
+            "id": "feature_enabled",
+            "label": "Make this an active feature",
+            "default": true
+          }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Pricing Table",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
+
+
+<style>
+
+h5.card-title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    font-size: 1.5em;
+    padding: 10px 0;
+    opacity: 1;
+}
+
+
+section.pricing {
+  background: #007bff;
+  background: {{section.settings.background_color}};
+}
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing i.fas.fa-check {
+    color: #30aafe;
+}
+
+.pricing i.fas.fa-times {
+    color: #ff6868;
+}
+
+.pricing hr {
+  margin: 0 0 1.5em 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.pricing .btn{
+  width: 100%;
+  border: none;
+  color: white;
+}
+
+.pricing .card-price {
+  font-size: 4rem;
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  margin-top: 0.7em;
+  letter-spacing: -4px;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.pricing ul li {
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+    color: #333;
+    text-align: left;
+    font-family: 'Source Sans Pro';
+}
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing {
+  margin: 0;
+}
+
+
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+}
+span.dollar {
+    font-size: .5em;
+    top: -.75em;
+    position: relative;
+}
+
+</style>

@@ -1,0 +1,40 @@
+{% paginate collection.products by 20 %}
+
+<section id="collector">
+  {% include 'collections-banner' %}
+  <div id="search-resultz">
+    <div class="ais-col-new">
+      <div class="filter">
+        {% include 'filters-code' %}
+      </div>
+      <div class="ais-Hits-list">
+        {% for product in collection.products %}
+          {% for variant in product.variants %}
+            {% if variant.title == 'Like New' or variant.title == 'Refurbished' %}
+              {% if variant.inventory_quantity > 0 %}
+                {% include 'new-grid-item' %}
+              {% endif %}
+            {% else %}
+             {% include 'new-grid-item' %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="pagination-wrapper">
+    {%- if paginate.next -%}
+    <span class="next-page-wrapper">
+      <a href="{{ paginate.next.url }}" id="paginatie-next">More posts</a>
+    </span>
+    {%- endif -%} {%- if paginate.previous -%}
+    <span>
+      <a href="{{ paginate.previous.url }}" id="paginatie-previous"
+        >Previous posts</a
+      >
+    </span>
+    {%- endif -%}
+  </div>
+</section>
+
+{% endpaginate %}

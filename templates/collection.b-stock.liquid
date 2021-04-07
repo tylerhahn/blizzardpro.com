@@ -1,0 +1,254 @@
+<style>
+section#main-hero {
+    margin-top: 90px;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: black;
+  	position: relative;
+  text-shadow: 2px 2px 13px black;
+  margin-bottom: 0px !important;
+}
+  
+  .infocomm2019-text .flex-container{
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .infocomm2019-text h4{
+    color: white;
+  }
+  
+  .infocomm2019-text p{
+    color: gray;
+  }
+   
+    .infocomm2019-text .flex-container div{
+      flex-grow: 1;
+    margin-right: 30px;
+  }
+  
+  .infocomm2019-text {
+    background: black;
+    padding: 70px 0px;
+    margin-bottom: 30px;
+}
+  
+  
+</style>
+
+<section id="main-hero" style="background: url('{{"grace-city.jpg" | asset_url }}'); background-size: cover; background-position: center center;">
+  <div class="overlay"></div>
+  <div class="container">
+    <h1 style="color: white">{{collection.title}}</h1>
+    <h2 style="color: white">Last updated: April 2020</h2>
+  </div>
+</section>
+
+
+
+{% assign products_per_page = settings.products_per_row | times: settings.number_of_rows %}
+{% assign numbers = 'zero, one, two, three, four, five, six' | split: ',' %}
+{% assign products_per_row = settings.products_per_row | times: 1 %}
+{% assign products_per_row = numbers[products_per_row] | strip | append: '-per-row' %}
+
+{% paginate collection.products by 50 %}
+
+
+               
+  <div class="infocomm2019-text">
+    <div class="flex-container">
+      <div>
+        <h4>Like New</h4>
+        <p>All fixtures are fully functional and have
+gone through our rigorous quality control testing process. These fixtures work and look like new, potentially having minor cosmetic damage. Packaging may
+          be generic; fixtures are backed by Blizzard’s 2-year warranty.</p>
+      </div>
+            <div>
+        <h4>Factory Refurbished</h4>
+        <p>All fixtures are fully functional and have gone through our rigorous quality control testing process. These fixtures work like new with potential signs of
+wear and tear caused by use in demonstrations, promotional content, or a prior sale. Packaging may be generic; fixtures are backed by Blizzard’s 90-day warranty.</p>
+      </div>
+    </div>
+    
+    </div>
+
+<section id="studio-b-collector">
+
+  
+  
+  
+  
+        
+    <div class="infocomm2019-subtitle"><h3>Current List of B-stock Inventory + Quantity:</h3></div>
+  
+  
+      <div class="inv-header">
+      <div class="inv-name">Product</div>
+      <div class="inv-cond">Condition</div>
+      <div class="inv-qty">Quantity</div>
+    </div>
+  
+  <div id="inventory-grid">
+  </div>
+      
+  
+{% comment %}
+  Listing all tags within the current collection.
+  Shopify uses product tags to manage subcategories inside collections.
+  See 'How do I create subcategories of products?' at 
+  http://bit.ly/1j1Dti4 for details.
+{% endcomment %}
+
+{% if collection.all_tags.size > 0 %}
+<ul class="subcategories clearfix clear">
+  <li class="{% unless current_tags %} active{% endunless %}">
+    {{ 'All' | link_to_remove_tag: current_tags.first }}
+  </li>
+  {% for tag in collection.all_tags %}
+  {% if current_tags contains tag %}
+  <li class="active">
+    {{ tag | link_to_remove_tag: tag }}
+  </li>
+  {% else %}
+  <li>
+    {{ tag | link_to_tag: tag }}
+  </li>
+  {% endif %}
+  {% endfor %}  
+</ul>
+{% endif %}
+
+{% if collection.description.size > 0 %}
+<div class="rte clearfix">
+  {{ collection.description }}
+</div>
+{% endif %}
+  
+  
+
+<ul class="grid clearfix">
+{% for product in collection.products %}
+  {% include 'product-grid-item' with products_per_row %}
+{% else %}
+  <p>There are no products in this view.</p>
+{% endfor %}
+</ul>
+   
+
+
+{% if paginate.pages > 1 %}
+<div class="pagination centered">
+  {{ paginate | default_pagination }}
+</div>
+{% endif %}
+
+{% endpaginate %}
+
+{% comment %}
+  JavaScript for collection sorting.
+{% endcomment %}
+</section>
+
+
+
+<script>
+jQuery('.sort-by')
+  .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+  .on('change', function() {
+    Shopify.queryParams.sort_by = jQuery(this).val();
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+  });
+</script>
+
+
+
+
+
+
+
+</section>
+  
+  	</div>
+
+
+
+{% assign products_per_page = settings.products_per_row | times: settings.number_of_rows %}
+{% assign numbers = 'zero, one, two, three, four, five, six' | split: ',' %}
+{% assign products_per_row = settings.products_per_row | times: 1 %}
+{% assign products_per_row = numbers[products_per_row] | strip | append: '-per-row' %}
+
+
+
+{% comment %}
+  Re-use the .rte class wherever you output content that was added by a merchant using
+  the Rich Text Editor ( 'rte' stands for rich text editor ).
+  Style all HTML elements in that content the same way across the board.
+  Use the .rte class in your CSS to help maintain consistency.
+  Example: the h2 element should have the same size and color in:
+  - product descriptions
+  - collection descriptions
+  - page content
+  - blog post
+{% endcomment %}
+
+	<script>
+		jQuery(window).scroll(function() {
+			var scroll = jQuery(window).scrollTop();
+
+			if (scroll >= 200) {
+				jQuery(".product-carousel2-attached").addClass("fix");
+			} else {
+				jQuery(".product-carousel2-attached").removeClass("fix");
+			}
+
+		});
+
+	</script>
+
+
+
+
+<script>
+  
+  function greet(data) {
+$table = "<table id = 'resultTable' border=1>";
+$table += "<tr>";
+
+for (var i = 0; i < data.length; i++) {
+
+    $table += "<div class='inv-item'>";
+
+    $table += "<div class='inv-name'>" + data[i].gsx$product.$t + "</div>";
+
+    $table += "<div class='inv-cond'>" + data[i].gsx$condition.$t + "</div>";
+
+    $table += "<div class='inv-qty'>" + data[i].gsx$qty.$t + "</div>";
+
+    $table += "</div>";
+
+}
+
+$table += "</table>";
+
+$('#inventory-grid').append($table);
+}
+
+
+  fetch('https://spreadsheets.google.com/feeds/list/1gLdP_CiVfgJMCdFUyeRPSzQ0sWcANmlUIs0LZHF5lBY/od6/public/values?alt=json')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+        greet(data.feed.entry)
+
+    console.log(data);
+  });
+
+
+
+</script>

@@ -1,0 +1,13 @@
+{% for variant in product.variants %}
+    {% if variant.title == 'New' and variant.available %}
+        {% elsif variant.title == 'New' %}
+            {% assign add_to_cart = 'Out of Stock' %}
+    {% endif %}
+    {% if variant.title == 'Like New' or variant.title == 'Refurbished' %}
+        {% if variant.available %}
+            {% assign secondaryInventory = secondaryInventory | plus: 1 %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{{ product.selected_or_first_available_variant.price | money }}

@@ -1,0 +1,34 @@
+<div class="hero-banner-mt">
+    <img src="https://cdn.shopify.com/s/files/1/1741/5055/files/mk.jpg?v=1608130109" />
+</div>
+
+{% for product in collection.products %}
+
+<div class="two-col-product">
+    <div class="left-col">
+    {% if product.title == 'minisystem™' %}
+    <img class="mt-logo" src="{{ 'minisystem-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+    {% elsif product.title == 'SPOTMAN™' %}
+    <img class="mt-logo" src="{{ 'spotman-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+    {% elsif product.title == 'MAX L™' %}
+    <img class="mt-logo" src="{{ 'maxl-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+    {% elsif product.title == 'mikrokassette™' %}
+    <img class="mt-logo" src="{{ 'mikrokassette-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+    {% endif  %}
+    <h2>{{product.title}}</h2>
+    <h3>{{ product.metafields.c_f.Product_Subtitle }}</h3>
+    <ul>
+    <li>Moving Head</li>
+    </ul>
+        <form method="post" action="/cart/add">
+            <input type="hidden" name="id" value="{{ prodId }}" />
+            <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+            <input type="submit" class="btn btn-blue" value="Add to Cart" />
+        </form> 
+    </div>
+
+    <div class="right-col">
+        <img class="mt-prod" src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
+    </div>
+</div>
+{% endfor %}

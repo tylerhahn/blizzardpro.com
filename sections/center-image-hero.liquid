@@ -1,0 +1,87 @@
+<div class="bl-hero-c">
+    <div class="bl-hero-c-caption">
+        <div class="px-5">
+            <h2>{{section.settings.title}}</h2>
+        <p>{{section.settings.paragraph}}</p>
+        </div>
+    </div>
+    <img class="w-100" src="{{ section.settings.image | img_url: 'master'}}" alt="{{section.settings.title}}">
+</div>
+  
+    {% schema %}
+    {
+      "name": "Center Image Hero",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Center Image Hero"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },  
+        {
+            "type": "textarea",
+            "id": "paragraph",
+            "label": "Paragraph"
+          },  
+        {
+            "type": "text",
+            "id": "cta_title",
+            "label": "CTA Title"
+          }, 
+          {
+            "type": "url",
+            "id": "cta_url",
+            "label": "CTA Url"
+          }  
+      ],
+      "presets": [
+        {
+          "name": "Center Image Hero",
+          "category": "Image"
+        }
+      ]
+    }
+  {% endschema %}
+  
+  <style>
+.bl-hero-c img{
+position: relative;
+}
+
+.bl-hero-c {
+    position: relative;
+}
+
+.bl-hero-c-caption{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bl-hero-c-caption h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 1;
+    text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.5);
+}
+.bl-hero-c-caption p {
+    width: 100%;
+    color: white;
+    font-size: 2em;
+    line-height: 1.2;
+    text-shadow: 0px 0px 14px rgba(0, 0, 0, 0.5);
+}
+  </style>
