@@ -1,6 +1,6 @@
 {% comment %}
 It may be a good idea to provide a theme setting that lets a merchant decide how many products to show per row
-on collection pages. Or, it may be a good idea to provide a control on the store front which lets a shopper decide 
+on collection pages. Or, it may be a good idea to provide a control on the store front which lets a shopper decide
 whether items be presented in a grid or in a list.
 That information about the presentation can be passed on to the product-grid-item.liquid snippet via the 'with' argument.
 Use of the 'with' argument is explained here: http://docs.shopify.com/themes/theme-templates/snippets.
@@ -20,13 +20,13 @@ Here, for the sake of teaching, we will use 2 presentation options:
   {% assign on_sale = true %}
 {% endif %}
 
-<li data-aos="fade-up" class="{{ product-grid-item }}{% unless product.available %} sold-out{% endunless %}{% if on_sale %} on-sale{% endif %}{% if product-grid-item == 'four-per-row' %}{% cycle 'last': '', '', '', ' last-in-row' %}{% elsif product-grid-item == 'three-per-row' %}{% cycle 'last': '', '', ' last-in-row' %}{% endif %} centered">
+<li  class="{{ product-grid-item }}{% unless product.available %} sold-out{% endunless %}{% if on_sale %} on-sale{% endif %}{% if product-grid-item == 'four-per-row' %}{% cycle 'last': '', '', '', ' last-in-row' %}{% elsif product-grid-item == 'three-per-row' %}{% cycle 'last': '', '', ' last-in-row' %}{% endif %} centered">
 
-  <div class="prod-image-wrap"> 
+  <div class="prod-image-wrap">
   {% if on_sale %}
   <div class="sales-banner"><i class="far fa-tags"></i>On Sale</div>
   {% endif %}
-    
+
     <div class="preview"><h4><a href="{{ product.url | within: collection }}"><span class="fa">&#xf002</span>View</a></h4>    </div>
     <div class="thumbnail-img">
     <a>
@@ -34,7 +34,7 @@ Here, for the sake of teaching, we will use 2 presentation options:
     </a>
     </div>
   </div><!-- .prod-image-wrap -->
-  
+
   <div class="prod-caption">
       <a href="{{ product.url | within: collection }}">
         {{ product.title }}
@@ -52,7 +52,7 @@ Here, for the sake of teaching, we will use 2 presentation options:
       {% endcomment %}
       <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
   </div><!-- .prod-caption -->
-  
+
 </li>
 
 {% comment %}

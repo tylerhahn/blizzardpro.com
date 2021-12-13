@@ -5,7 +5,7 @@
                 <a href="#">Products
                     <i class="fas fa-caret-down"></i>
                 </a>
-                <ul>
+                <ul class="product-link-list">
                     {% for link in linklists.products.links %}
                         <li>
                             <a href="{{ link.url }}">{{ link.title }}</a>
@@ -19,7 +19,7 @@
                     <i class="fas fa-caret-down"></i>
                 </a>
 
-                <ul>
+                <ul class="product-link-list">
                     {% for link in linklists.video-walls.links %}
                         <li>
                             {% if link.title == 'Quote Builder Tool' or link.title == 'IRiS LED Video Walls' %}
@@ -38,7 +38,7 @@
                     <i class="fas fa-caret-down"></i>
                 </a>
 
-                <ul>
+                <ul class="product-link-list">
                     {% for link in linklists.where-to-buy.links %}
                         <li>
                             <a href="{{ link.url }}">{{ link.title }}</a>
@@ -51,7 +51,7 @@
                     <i class="fas fa-caret-down"></i>
                 </a>
 
-                <ul>
+                <ul class="product-link-list">
                     {% for link in linklists.warehouse-deals.links %}
                         <li>
                             <a href="{{ link.url }}">{{ link.title }}</a>
@@ -63,7 +63,7 @@
                 <a href="#">Support
                     <i class="fas fa-caret-down"></i>
                 </a>
-                <ul>
+                <ul class="product-link-list">
                     {% for link in linklists.support.links %}
                         <li>
                             <a href="{{ link.url }}">{{ link.title }}</a>
@@ -78,7 +78,7 @@
                 <a href="#">Explore
                     <i class="fas fa-caret-down"></i>
                 </a>
-                <ul>
+                <ul class="product-link-list">
                     {% for link in linklists.explore.links %}
                         <li>
                             <a href="{{ link.url }}">{{ link.title }}</a>

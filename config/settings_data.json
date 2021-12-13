@@ -1,11 +1,11 @@
 {
   "current": {
-    "enable_popup": true,
-    "popup_h3": "Free Shipping on Masks + Orders Over $99",
-    "popup_p": "Plus get 5% back for all Illuminati members",
+    "enable_popup": false,
+    "popup_h3": "Fast, Free Shipping on Orders Over $99",
+    "popup_p": "Plus, earn 5% rewards cash instantly when you sign up",
     "popup_title": "Shop Now ››",
-    "popup_url": "\/collections\/black-friday-19",
-    "popup_image": "shopify:\/\/shop_images\/mask-xmas.png",
+    "popup_url": "\/collections\/washlights",
+    "popup_image": "shopify:\/\/shop_images\/APPROVED-MVIMG_20190705_223506_1-3-768x486.png",
     "home-banner-youtube-id": "",
     "home-banner-youtube-url": "",
     "home-banner-image-1": "shopify:\/\/shop_images\/mixtape-allboxes-light.jpg",
@@ -42,7 +42,7 @@
     "news-headline": "News from Blizzard Lighting",
     "news-newsletterheadline": "News Straight to Your Inbox",
     "news-newslettersubheadline": "See what our products are doing out in the wild:",
-    "top_banner": "Free Shipping on KN95 Masks + All Orders $99+",
+    "top_banner": "Free Shipping on Orders $99+",
     "top_banner_title": "",
     "top_banner_link": "",
     "pp-slider-title1": "3.9mm LED Video Panel",
@@ -198,10 +198,12 @@
               "paragraph": "LED lighting + video systems tailored to your needs.",
               "headline_color": "#ffffff",
               "main_cta_title": "",
+              "main_cta_url": "",
               "main_cta_background_color": "#282bf6",
               "main_cta_text_color": "#ffffff",
               "sec_cta_title": "Learn More",
-              "sec_cta_text_color": "#ffffff"
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
             }
           }
         },
@@ -213,30 +215,11 @@
       "161280708581d6b51f": {
         "type": "slider",
         "blocks": {
-          "84184c44-caff-4484-8e40-6d5a1ae3c4e1": {
+          "04c03c26-ab8d-4dc7-95b6-9f0ff128e567": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/slider-supercell.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/Untitled-1_15d6ba59-b257-4491-bfc9-5d9aeea19b69.jpg",
-              "video_url": "",
-              "subheadline": "StormChaser™ Supercell",
-              "subheadline_color": "#ffffff",
-              "headline": "Super Fresh, LED Pixel FX",
-              "paragraph": "",
-              "headline_color": "#ffffff",
-              "main_cta_title": "Shop Now ›",
-              "main_cta_url": "shopify:\/\/products\/supercell",
-              "main_cta_background_color": "#ffffff",
-              "main_cta_text_color": "#000000",
-              "sec_cta_title": "Watch Video",
-              "sec_cta_text_color": "#ffffff"
-            }
-          },
-          "62646a72-820e-4d1c-9e48-2270a5fa9b51": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Untitled-1_a7ff227e-1f0a-4900-b84b-e1f03636fd31.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/mask-bg-1.jpg",
+              "image": "shopify:\/\/shop_images\/how-slider-desktop-100_a578c76a-c8b4-4a52-a443-3ec14df1bb32.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/how-slider-mobile-100.jpg",
               "video_url": "",
               "subheadline": "",
               "subheadline_color": "#ffffff",
@@ -244,17 +227,59 @@
               "paragraph": "",
               "headline_color": "#ffffff",
               "main_cta_title": "",
-              "main_cta_url": "shopify:\/\/products\/kn95-masks",
+              "main_cta_url": "shopify:\/\/pages\/worship",
               "main_cta_background_color": "#282bf6",
               "main_cta_text_color": "#ffffff",
               "sec_cta_title": "Learn More",
-              "sec_cta_text_color": "#ffffff"
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
+            }
+          },
+          "b0489af9-4025-41f7-8171-81e86337adf8": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon-v2-desktop.png",
+              "image_mobile": "shopify:\/\/shop_images\/icon-v2-mobile.png",
+              "video_url": "",
+              "subheadline": "",
+              "subheadline_color": "#ffffff",
+              "headline": "",
+              "paragraph": "",
+              "headline_color": "rgba(0,0,0,0)",
+              "main_cta_title": "",
+              "main_cta_url": "shopify:\/\/pages\/iris",
+              "main_cta_background_color": "rgba(0,0,0,0)",
+              "main_cta_text_color": "rgba(0,0,0,0)",
+              "sec_cta_title": "Learn More",
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
+            }
+          },
+          "84184c44-caff-4484-8e40-6d5a1ae3c4e1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/nova-desktop.png",
+              "image_mobile": "shopify:\/\/shop_images\/nova-mobile.png",
+              "video_url": "",
+              "subheadline": "",
+              "subheadline_color": "#ffffff",
+              "headline": "",
+              "paragraph": "",
+              "headline_color": "#ffffff",
+              "main_cta_title": "",
+              "main_cta_url": "shopify:\/\/pages\/novastar",
+              "main_cta_background_color": "#282bf6",
+              "main_cta_text_color": "#ffffff",
+              "sec_cta_title": "",
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
             }
           }
         },
         "block_order": [
-          "84184c44-caff-4484-8e40-6d5a1ae3c4e1",
-          "62646a72-820e-4d1c-9e48-2270a5fa9b51"
+          "04c03c26-ab8d-4dc7-95b6-9f0ff128e567",
+          "b0489af9-4025-41f7-8171-81e86337adf8",
+          "84184c44-caff-4484-8e40-6d5a1ae3c4e1"
         ],
         "settings": {}
       },
@@ -310,7 +335,7 @@
             "type": "image",
             "settings": {
               "video_url": "https:\/\/vimeo.com\/510779622\/1d2f1fde04",
-              "headline": "IRiS™ LED Video Walls",
+              "headline": "IRiS® LED Video Walls",
               "cta_title": "Learn More ›",
               "cta_url": "\/pages\/iris"
             }
@@ -419,7 +444,8 @@
           "image": "shopify:\/\/shop_images\/APPROVED-MVIMG_20190705_223506_1.jpg",
           "title": "Believe<br>in Color",
           "paragraph": "",
-          "cta_title": "Learn More"
+          "cta_title": "Learn More",
+          "cta_url": ""
         }
       },
       "1612981117a4b6770a": {
@@ -567,22 +593,22 @@
         "type": "product-hero-grid",
         "settings": {
           "height": 65,
-          "product_image": "shopify:\/\/shop_images\/G-Max-200-P1-Right---Blue.png",
+          "product_image": "shopify:\/\/shop_images\/G-Mix---Main.png",
           "product_color": "#171428",
-          "product_title": "G-Max™ 200",
-          "product_paragraph": "LED Spot Moving Head",
+          "product_title": "G-Mix™ 200",
+          "product_paragraph": "CMY LED Spot Moving Head",
           "product_url_title": "Shop Now ›",
-          "product_url": "https:\/\/www.blizzardpro.com\/products\/g-max-200",
+          "product_url": "https:\/\/www.blizzardpro.com\/products\/g-mix-200",
           "box_1_image": "shopify:\/\/shop_images\/G-Max_200_-_Action01.jpg",
-          "box_1_paragraph": "200W white LED",
+          "box_1_paragraph": "200W OSRAM® White LED",
           "box_2_image": "shopify:\/\/shop_images\/G-Max_200_-_Action02.jpg",
-          "box_2_paragraph": "60,000 hour light engine",
+          "box_2_paragraph": "20,000+ Hours of Operation",
           "box_2_color": "",
           "box_3_image": "shopify:\/\/shop_images\/G-Max_200_-_Action05.jpg",
-          "box_3_paragraph": "7 gobos + open with color wheel",
+          "box_3_paragraph": "CMY Color Mixing, <br> 14 Gobos + Open, 9 Colors + Open",
           "box_3_color": "",
           "box_4_image": "shopify:\/\/shop_images\/G-Max_200_-_Action04.jpg",
-          "box_4_paragraph": "Fast & precise, zoomable 13°- 27° beam",
+          "box_4_paragraph": "Fast & Precise, <br>13°- 27° Zoomable Beam",
           "box_4_color": ""
         }
       },
@@ -592,7 +618,8 @@
           "image": "shopify:\/\/shop_images\/DSC9218.jpg",
           "title": "Partner with the Best",
           "paragraph": "“Our biggest deciding factor on a LED wall is the manufacturer’s support. \"<br>- Jimi Zink, Church Technical Director",
-          "cta_title": ""
+          "cta_title": "",
+          "cta_url": ""
         }
       },
       "dynamic-shopify-form": {
@@ -653,11 +680,11 @@
           "a35bb5f3-c44d-4463-8d52-7981ef71c90b": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/amz-scene1.jpg",
+              "image": "shopify:\/\/shop_images\/Artboard_16.png",
               "video_url": "",
-              "headline": "Pixel Control Powered by At Full™",
+              "headline": "Direct Connection to Hemisphere™ LED Par",
               "cta_title": "Learn More ›",
-              "cta_url": "\/products\/supercell"
+              "cta_url": "\/products\/hemisphere"
             }
           },
           "3da6b8a3-3d6a-48e5-9daf-6ca127e1833d": {
@@ -736,35 +763,40 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/fx_panel.png",
-              "title": "FX Panel"
+              "title": "FX Panel",
+              "url": ""
             }
           },
           "abfe111b-720a-4cc1-8a80-a8f35740d824": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/timecoded.png",
-              "title": "Time-coded Shows"
+              "title": "Time-coded Shows",
+              "url": ""
             }
           },
           "e4078128-9027-4b27-9a47-1d3606c6ab2c": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/patches.png",
-              "title": "Patching with Fixture Library"
+              "title": "Patching with Fixture Library",
+              "url": ""
             }
           },
           "0a962ebd-2ba6-499b-a2e7-0e232cd9bae8": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/tempo.png",
-              "title": "Tap Tempo"
+              "title": "Tap Tempo",
+              "url": ""
             }
           },
           "304a6888-f619-4cb2-8944-1f810216a03d": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/artnet.png",
-              "title": "Wireless DMX"
+              "title": "Wireless DMX",
+              "url": ""
             }
           }
         },
@@ -788,14 +820,14 @@
             "type": "text",
             "settings": {
               "question": "What is At Full?",
-              "answer": "At Full is an application developed by Blizzard Lighting, LLC that allows you to set up and control lighting fixtures with Art-Net or sACN via WiFi. With the app, you can create dynamic light shows using an array of tools that can help bring your fixtures to life. These tools range from a basic, virtual console to complex fades and animations. It’s compatible with tablets and mobile phones, and is available to download at the Google Play Store and the Apple App Store."
+              "answer": "At Full is an application developed by Blizzard Lighting, LLC that allows you to set up and control lighting fixtures with Art-Net or sACN via WiFi. With the app, you can create dynamic light shows using an array of tools that can help bring your fixtures to life. These tools range from a basic, virtual console to complex fades and animations. It’s compatible with tablets and mobile phones, and is available to download at the <a href=\"https:\/\/play.google.com\/store\/apps\/details?id=com.blizzardpro.atfull\">Google Play Store<\/a> and the <a href=\"https:\/\/apps.apple.com\/us\/app\/full\/id1483078784\">Apple App Store<\/a>."
             }
           },
           "739f97d3-3f71-4d4c-99e7-118cc85af7a6": {
             "type": "text",
             "settings": {
               "question": "What are the minimum requirements to use At Full?",
-              "answer": "At Full requires a mobile device or tablet on Android or iOS, and a controllable device. All devices will require either a wireless Art-Net or sACN converter (like SoC-It) that re-transmits the signal to a wired DMX cable, or a fixture with compatible wireless capabilities already built in (like Hemisphere)."
+              "answer": "At Full requires a mobile device or tablet on Android or iOS, and a controllable device. All devices will require either a wireless Art-Net or sACN converter (like <a href=\"https:\/\/www.blizzardpro.com\/products\/soc-it\">SoC-It<\/a>) that re-transmits the signal to a wired DMX cable, or a fixture with compatible wireless capabilities already built in (like <a href=\"https:\/\/www.blizzardpro.com\/products\/hemisphere\">Hemisphere<\/a>)."
             }
           },
           "57dd9180-9827-4b88-91c2-303dc91fe49d": {
@@ -879,23 +911,23 @@
           "b10cc420-10c1-4bd5-9ac6-d23cbfbf6232": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/amz-scene1_22f43aaf-95bc-47f7-8957-6b372a1e16a8.jpg",
-              "seo_description": "",
-              "video_url": "",
-              "headline": "New! Pixel FX with StormChaser™ Supercell",
-              "cta_title": "Shop Now ›",
-              "cta_url": "\/products\/supercell"
-            }
-          },
-          "a923f6a7-5e63-4d9c-8ead-aefa59bf23e6": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/20210119_165152.jpg",
+              "image": "shopify:\/\/shop_images\/hemisphere-joel.jpg",
               "seo_description": "",
               "video_url": "",
               "headline": "",
               "cta_title": "",
               "cta_url": ""
+            }
+          },
+          "a923f6a7-5e63-4d9c-8ead-aefa59bf23e6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/at-full-bottom.png",
+              "seo_description": "",
+              "video_url": "",
+              "headline": "NEW! Hemisphere 15W Wireless Battery Par",
+              "cta_title": "Shop Now ›",
+              "cta_url": "\/products\/hemisphere"
             }
           }
         },
@@ -984,6 +1016,13 @@
               "feature_enabled": true
             }
           },
+          "a99c728b-880d-4dfc-bf46-d02760f9d1b8": {
+            "type": "image",
+            "settings": {
+              "feature_title": "Download and share your shows, fixture profiles, and presets",
+              "feature_enabled": true
+            }
+          },
           "0ce1299f-214a-40ee-980a-0f98e039fb5f": {
             "type": "image",
             "settings": {
@@ -1010,6 +1049,7 @@
           "cdfaabcd-a1cb-45d1-943d-19429a049512",
           "9058b5df-4554-449e-bb11-37b6d952f71b",
           "5c6d0756-d117-4695-ac77-d7cf92696cbe",
+          "a99c728b-880d-4dfc-bf46-d02760f9d1b8",
           "0ce1299f-214a-40ee-980a-0f98e039fb5f",
           "7a8af4b4-713e-448b-8236-d8a2823c0cb0",
           "aea52cf9-ee3a-4a25-a0be-8f3950540205"
@@ -1048,6 +1088,13 @@
               "feature_enabled": true
             }
           },
+          "2af6c27c-d964-4718-ad5b-34bb01968b89": {
+            "type": "image",
+            "settings": {
+              "feature_title": "Download and share your shows, fixture profiles, and presets.",
+              "feature_enabled": true
+            }
+          },
           "6ede865f-1591-4004-a380-13593f0c0327": {
             "type": "image",
             "settings": {
@@ -1081,6 +1128,7 @@
           "7f8afffd-9b39-4df8-8470-56b1ebfbbf5b",
           "8815ca6b-a19e-43ee-ac40-968f607c8225",
           "8f4b814d-b9ed-4f59-a42f-66cc3ea2b947",
+          "2af6c27c-d964-4718-ad5b-34bb01968b89",
           "6ede865f-1591-4004-a380-13593f0c0327",
           "34c5cd99-918b-4daa-acfd-fd84c9f7e2b7",
           "b0b7d53b-8087-4060-827c-b4cfef24d5d7",
@@ -1119,6 +1167,13 @@
               "feature_enabled": true
             }
           },
+          "6dd4631c-e7a7-4d20-a90b-c20755b75aac": {
+            "type": "image",
+            "settings": {
+              "feature_title": "Download and share your shows, fixture profiles, and presets.",
+              "feature_enabled": true
+            }
+          },
           "418fbf50-fe4e-4451-a354-c5c29a5708a8": {
             "type": "image",
             "settings": {
@@ -1152,6 +1207,7 @@
           "7cd49a25-5bcd-4c92-a028-f3103dcbb6b8",
           "6f8cc23b-2e49-4977-add8-582ec289eb7b",
           "333a28c1-2166-46f7-8bcc-4772063c40c8",
+          "6dd4631c-e7a7-4d20-a90b-c20755b75aac",
           "418fbf50-fe4e-4451-a354-c5c29a5708a8",
           "8de43004-7cc3-43c3-a41d-6141e4d3c85e",
           "62d0cb52-ffda-49db-aef3-2e032209c5a7",
@@ -1179,6 +1235,7 @@
               "headline": "Dream it. <br>Build it. <br>Control It.",
               "paragraph": "The At Full lighting app from Blizzard Lighting allows you to bring fixtures and ideas to life with its intuitive show editor, real-time miniconsole controls, and an extensive library of fixture profiles — all from the palm of your hand.",
               "cta": "",
+              "cta_url": "",
               "cta_background_color": "",
               "cta_text_color": "",
               "image": "shopify:\/\/shop_images\/app-spread-768x1129.png",
@@ -1224,22 +1281,23 @@
           "bd96f581-6032-449a-86fc-4d8027151d8a": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/iris-sl-01.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/iris-bg_d8f8144c-5839-445c-b760-c9b2fd99497d.jpg",
+              "image": "shopify:\/\/shop_images\/icon-homepage-slider-desktop.png",
+              "image_mobile": "shopify:\/\/shop_images\/icon-homepage-slider-mobile.png",
               "video_url": "",
-              "logo": "shopify:\/\/shop_images\/iris-full-white.png",
               "img_width": 40,
               "subheadline": "",
               "subheadline_color": "#ffffff",
-              "headline": "LED Video Panels",
+              "headline": "",
               "paragraph": "",
               "headline_color": "#ffffff",
               "main_cta_title": "",
+              "main_cta_url": "shopify:\/\/collections\/icon-series",
               "main_cta_background_color": "#282bf6",
               "main_cta_text_color": "#ffffff",
               "sec_cta_title": "Learn More",
               "sec_cta_background_color": "#282bf6",
-              "sec_cta_text_color": "#ffffff"
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
             }
           }
         },
@@ -1265,29 +1323,29 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/APPROVED-MVIMG_20190705_223506_1-3-768x486.png",
               "video_url": "",
-              "headline": "Tested in Wisconsin",
-              "cta_title": "",
-              "cta_url": ""
+              "headline": "No Fears for 7 Years™",
+              "cta_title": "Learn More ›",
+              "cta_url": "\/blogs\/news\/introducing-iris-icon-led-video-wall-products"
             }
           },
           "37b6dcbb-6600-4545-94ab-7a6c11a97d11": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/3_dfcff353-9ea4-45aa-bb5a-7805bbaae5bc.jpg",
+              "image": "shopify:\/\/shop_images\/quotebuilder_4ff25479-8cf5-4a7d-95f4-f92209122dcb.jpg",
               "video_url": "",
-              "headline": "Great for any space",
-              "cta_title": "",
-              "cta_url": ""
+              "headline": "Online Quote Tool",
+              "cta_title": "Build Quote ›",
+              "cta_url": "\/pages\/iris-quote-builder"
             }
           },
           "5c3c53e3-7122-4446-9658-3c8d0d476481": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/IMG_2630_e15901b7-d15d-4019-a7ca-1e295bd532d9.jpg",
+              "image": "shopify:\/\/shop_images\/worship.jpg",
               "video_url": "",
-              "headline": "Perfect for worship",
-              "cta_title": "",
-              "cta_url": "\/pages\/worship"
+              "headline": "NovaStar™ Compatible",
+              "cta_title": "Shop NovaStar ›",
+              "cta_url": "\/novastar"
             }
           }
         },
@@ -1307,7 +1365,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/Blizzard_at_Summerfest_IRiS_IP3_LED_video_panels_D1-M2684.jpg",
           "video_url": "",
-          "headline": "IRiS™ Video at the World's Largest Music Festival®",
+          "headline": "IRiS® Video at the World's Largest Music Festival®",
           "subheadline": "Nearly 900 outdoor-rated, ETL-listed IRiS IP3 video panels were used to upgrade the grounds.",
           "cta_title": "Read More ›",
           "cta_url": "\/blogs\/news\/plsn-blizzard-at-summerfest-irisvideo"
@@ -1326,110 +1384,6 @@
       "iris-col-text": {
         "type": "iris-col-text",
         "blocks": {
-          "1349e039-4d14-40fe-aa27-309868b4bc8d": {
-            "type": "image",
-            "settings": {
-              "padding": 1,
-              "bg_color": "",
-              "text_color": "",
-              "flip": true,
-              "headline": "IRiS™ R3G2",
-              "paragraph": "Reliable and affordable, IRiS R3G2 is a workhorse in production and install environments. IRiS R3G2 is ETL listed and manufactured with precisely matched SMD2020 blackbody LEDs for exceptional color reproduction and gamut. \n<br><br>\n<strong>Tech Specs<\/strong>\n<br>Panel Dimensions: 500×500×100mm\n<br>For Indoor Use\n<br>Pixel Pitch (mm): 3.9\n<br>LED Type: Black SMD 2020\n<br>\n<br>\n<h4>$999.99 MSRP\n<\/h4>",
-              "cta": "Learn More ›",
-              "cta_url": "shopify:\/\/products\/iris-r3g2",
-              "cta_background_color": "#282bf6",
-              "cta_text_color": "#ffffff",
-              "cta_2": "Request Quote ›",
-              "cta_background_color_2": "#000000",
-              "cta_text_color_2": "#ffffff",
-              "image": "shopify:\/\/shop_images\/IRiS-IP3-Angled-Left-Cutout-top-_1.jpg",
-              "video": "",
-              "seo_description": ""
-            }
-          },
-          "0cb019cb-7772-43bf-adef-f476dcaca186": {
-            "type": "image",
-            "settings": {
-              "padding": 1,
-              "bg_color": "",
-              "text_color": "",
-              "flip": false,
-              "headline": "IRiS™ InSite 3.8",
-              "paragraph": "IRiS™ InSite 3-Eight (3.8mm) LED video panels deliver true 16:9 aspect ratio HD video quality. They are ETL listed and manufactured with precisely matched SMD2121 blackbody LEDs for exceptional color reproduction and gamut.\n\n<br><br>\n<strong>Tech Specs<\/strong>\n<br>Panel Dimensions: 610×343×61mm\n<br>For Indoor Use\n<br>Pixel Pitch (mm): 3.8\n<br>True 16:9 HD Video Quality\n<br>\n<br>\n<h4>$999.99 MSRP\n<\/h4>",
-              "cta": "Learn More ›",
-              "cta_background_color": "#282bf6",
-              "cta_text_color": "#ffffff",
-              "cta_2": "Request Quote ›",
-              "cta_background_color_2": "#000000",
-              "cta_text_color_2": "",
-              "image": "shopify:\/\/shop_images\/Insite-Front_6ef85e88-f376-4fb1-8959-a62f329bf9fc.jpg",
-              "video": "",
-              "seo_description": ""
-            }
-          },
-          "eafdd3be-88dc-45f7-934a-380d6d55de55": {
-            "type": "image",
-            "settings": {
-              "padding": 1,
-              "bg_color": "",
-              "text_color": "",
-              "flip": true,
-              "headline": "IRiS™ IP3",
-              "paragraph": "IRiS™ IP3 is an ETL-listed, IP65-rated, professional video panel with brilliant SMD 1921 LEDs, 3840Hz refresh rate, and a 3.9mm pixel pitch. It also has impressively high 4,500 nit brightness that can create perfect video images even in direct sunlight. They are designed for easy one man handling, and their sophisticated quick lock system makes setup a breeze. \n\n<br><br>\n<strong>Tech Specs<\/strong>\n<br>Panel Dimensions: 500×500x100mm\n<br>For Indoor\/Outdoor Use\n<br>Pixel Pitch (mm): 3.9\n<br>LED Type: SMD 1921\n<br>\n<br>\n<h4>$1499.99 MSRP\n<\/h4>",
-              "cta": "Learn More ›",
-              "cta_url": "shopify:\/\/products\/iris-ip3",
-              "cta_background_color": "#282bf6",
-              "cta_text_color": "#ffffff",
-              "cta_2": "Request Quote ›",
-              "cta_background_color_2": "#000000",
-              "cta_text_color_2": "",
-              "image": "shopify:\/\/shop_images\/IRiS-IP3-Angled-Left-Cutout-top.jpg",
-              "video": "",
-              "seo_description": ""
-            }
-          },
-          "992ddb6b-ca2f-4faf-ad54-e54324c9141e": {
-            "type": "image",
-            "settings": {
-              "padding": 1,
-              "bg_color": "",
-              "text_color": "",
-              "flip": false,
-              "headline": "IRiS™ R2",
-              "paragraph": "IRiS™ R2 is a professional, ETL-listed, indoor-rated LED video panel with a 2.9mm pixel pitch for high resolution at both short and far viewing distances, and has an exceptional 1200nit brightness with a 3840Hz refresh rate. They are designed for easy, one man handling, and their sophisticated quick lock system makes setup a breeze.\n\n<br><br>\n<strong>Tech Specs<\/strong>\n<br>Panel Dimensions: 500×500x100mm\n<br>For Indoor Use\n<br>Pixel Pitch (mm): 2.9\n<br>LED Type: Black SMD 2020\n<br>\n<br>\n<h4>$1499.99 MSRP\n<\/h4>",
-              "cta": "Learn More ›",
-              "cta_url": "shopify:\/\/products\/iris-r2",
-              "cta_background_color": "#282bf6",
-              "cta_text_color": "#ffffff",
-              "cta_2": "Request Quote ›",
-              "cta_background_color_2": "#000000",
-              "cta_text_color_2": "",
-              "image": "shopify:\/\/shop_images\/IRiS-R2-Angled-Left-Cutout-300w.jpg",
-              "video": "",
-              "seo_description": ""
-            }
-          },
-          "6d11f1e3-8fd0-4182-b7d8-fc7ffcb7b77d": {
-            "type": "image",
-            "settings": {
-              "padding": 1,
-              "bg_color": "#f2f2f2",
-              "text_color": "",
-              "flip": true,
-              "headline": "Start Your<br>Project Today",
-              "paragraph": "Use our free, online quote builder to start your project today. Instantly receive a cost estimate, plus a breakdown of the video wall specifications and accessories you would need.",
-              "cta": "Start Your Project ›",
-              "cta_url": "shopify:\/\/pages\/iris-quote-builder",
-              "cta_background_color": "#282bf6",
-              "cta_text_color": "#ffffff",
-              "cta_2": "",
-              "cta_background_color_2": "",
-              "cta_text_color_2": "",
-              "image": "shopify:\/\/shop_images\/iris-test.png",
-              "video": "",
-              "seo_description": ""
-            }
-          },
           "4b7dacdc-ed66-4c90-b1a0-7d38a463fd88": {
             "type": "image",
             "settings": {
@@ -1440,9 +1394,11 @@
               "headline": "Easy Installation, Indoor & Outdoor",
               "paragraph": "IRiS LED video panels can be used in both indoor & outdoor settings, for either permanent installation or mobile use.\n\nFeaturing IRiS InSite panels which deliver true 16:9 HD quality, watch how easy an indoor install can be via permanent flush wall-mounting (other options include floor stacking & rigging).",
               "cta": "",
+              "cta_url": "",
               "cta_background_color": "",
               "cta_text_color": "",
               "cta_2": "",
+              "cta_url_2": "",
               "cta_background_color_2": "",
               "cta_text_color_2": "",
               "video": "https:\/\/www.youtube.com\/watch?v=5dNYwu2Rtvo&t=2s",
@@ -1451,11 +1407,6 @@
           }
         },
         "block_order": [
-          "1349e039-4d14-40fe-aa27-309868b4bc8d",
-          "0cb019cb-7772-43bf-adef-f476dcaca186",
-          "eafdd3be-88dc-45f7-934a-380d6d55de55",
-          "992ddb6b-ca2f-4faf-ad54-e54324c9141e",
-          "6d11f1e3-8fd0-4182-b7d8-fc7ffcb7b77d",
           "4b7dacdc-ed66-4c90-b1a0-7d38a463fd88"
         ],
         "settings": {}
@@ -1468,7 +1419,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/support.png",
               "title": "U.S. Based Support",
-              "paragraph": ""
+              "paragraph": "",
+              "url": ""
             }
           },
           "9f7ca599-30e1-4cd2-8266-0d06b3433dd7": {
@@ -1476,7 +1428,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/tested.png",
               "title": "100% In-House Quality Tested",
-              "paragraph": ""
+              "paragraph": "",
+              "url": ""
             }
           },
           "d80f4518-36c8-4def-a0a4-05e1eeb3cd70": {
@@ -1484,7 +1437,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/indooroutdoor.png",
               "title": "Indoor \/ Outdoor Options Available",
-              "paragraph": ""
+              "paragraph": "",
+              "url": ""
             }
           },
           "caa5938c-3848-409a-a80a-1f8324506982": {
@@ -1492,7 +1446,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/ready2ship.png",
               "title": "In Stock & Ready to Ship",
-              "paragraph": ""
+              "paragraph": "",
+              "url": ""
             }
           }
         },
@@ -1545,6 +1500,7 @@
           "bg": "#0c0d68",
           "tier_price": "",
           "tier_suffix": "",
+          "tier_url": "",
           "tier_cta": ""
         }
       },
@@ -1584,6 +1540,7 @@
           "bg": "#a1a1ba",
           "tier_price": "",
           "tier_suffix": "",
+          "tier_url": "",
           "tier_cta": ""
         }
       },
@@ -1599,6 +1556,315 @@
           "label_color": "#c0c0c0",
           "btn_color": "#ffffff",
           "btn_background": "#282bf6"
+        }
+      },
+      "iris-calc-dynamic-form": {
+        "type": "iris-calc-dynamic-form",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/iris-full-white.png",
+          "form_text": "IRiS LED Video Wall Builder",
+          "form_copy": "Please enter your email to start designing.",
+          "background_image": "shopify:\/\/shop_images\/APPROVED-MVIMG_20190705_223506_1-3-768x486.png",
+          "text_color": "#ffffff",
+          "button_color": "#282bf6",
+          "hs_value": "IRiS Calc"
+        }
+      },
+      "nova-slider": {
+        "type": "nova-slider",
+        "blocks": {
+          "0dc879af-e95a-42db-8e53-b5aa42aaaf5f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/nova-desktop.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/Untitled-1_c921ceb5-b9f1-4b63-bd80-a7c05d1b65f1.jpg",
+              "video_url": "",
+              "logo": "shopify:\/\/shop_images\/novastar-white.png",
+              "img_width": 45,
+              "subheadline": "",
+              "subheadline_color": "#ffffff",
+              "headline": "NEW! H Series",
+              "paragraph": "Flagship Video Splicing Processors",
+              "headline_color": "#ffffff",
+              "main_cta_title": "Learn More ›",
+              "main_cta_url": "https:\/\/www.blizzardpro.com\/collections\/novastar-led-control-products?pf_t_type=Splicing+Processors",
+              "main_cta_background_color": "#282bf6",
+              "main_cta_text_color": "#ffffff",
+              "sec_cta_title": "",
+              "sec_cta_background_color": "#282bf6",
+              "sec_cta_text_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "0dc879af-e95a-42db-8e53-b5aa42aaaf5f"
+        ],
+        "settings": {}
+      },
+      "nova-col": {
+        "type": "nova-col",
+        "blocks": {
+          "459d21ea-aea2-4fba-bbdc-9ddfc5a2ba21": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/allin1_cc70de9c-d869-4a5a-85cd-37d93945a370.png",
+              "video_url": "",
+              "headline": "All-in-1 Controllers",
+              "cta_title": "Shop ›",
+              "cta_url": "\/collections\/novastar-led-control-products?pf_t_type=All-In-1+Controllers"
+            }
+          },
+          "49a053e6-1916-4351-a3c7-bfb47a86fed6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/controllers_86f2e2e8-1b62-496d-8438-2869addbff52.png",
+              "video_url": "",
+              "headline": "Standard Controllers",
+              "cta_title": "Shop ›",
+              "cta_url": "\/collections\/novastar-led-control-products?pf_t_type=Standard+Controllers"
+            }
+          },
+          "ed4b1489-4f56-4cf9-9da8-c72ccccf0a3c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/processors_9e84460b-52be-4b04-92f8-eb995bcdf451.png",
+              "video_url": "",
+              "headline": "Splicing Processors",
+              "cta_title": "Shop ›",
+              "cta_url": "\/collections\/novastar-led-control-products?pf_t_type=Splicing+Processors"
+            }
+          },
+          "377e4661-e8c2-418c-a5d5-a98fb0b4bf1e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/accessories-1.png",
+              "video_url": "",
+              "headline": "Accessories",
+              "cta_title": "Shop ›",
+              "cta_url": "\/collections\/novastar-led-control-products?pf_t_type=NovaStar™+Accessories"
+            }
+          },
+          "ccbd3fc2-ec80-4248-8c90-95f4736b645e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/multimedia.png",
+              "video_url": "",
+              "headline": "Multimedia Players",
+              "cta_title": "Shop ›",
+              "cta_url": "\/collections\/novastar-led-control-products?pf_t_type=Multimedia+Players"
+            }
+          },
+          "30d97b7d-d012-472d-83bf-18f2704c8568": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/fibers.png",
+              "video_url": "",
+              "headline": "Fiber Converters",
+              "cta_title": "Shop ›",
+              "cta_url": "\/collections\/novastar-led-control-products?pf_t_type=Fiber+Converters"
+            }
+          }
+        },
+        "block_order": [
+          "459d21ea-aea2-4fba-bbdc-9ddfc5a2ba21",
+          "49a053e6-1916-4351-a3c7-bfb47a86fed6",
+          "ed4b1489-4f56-4cf9-9da8-c72ccccf0a3c",
+          "377e4661-e8c2-418c-a5d5-a98fb0b4bf1e",
+          "ccbd3fc2-ec80-4248-8c90-95f4736b645e",
+          "30d97b7d-d012-472d-83bf-18f2704c8568"
+        ],
+        "settings": {
+          "header_title": "",
+          "h_gutter": 3,
+          "box_height": 26
+        }
+      },
+      "nova-lineup": {
+        "type": "nova-lineup",
+        "blocks": {
+          "b7a92a07-fe4b-4338-ab24-53f49f47e1c6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/shipping.png",
+              "title": "Local Inventory",
+              "paragraph": ""
+            }
+          },
+          "653a088e-83ee-4e9d-98af-af590175882c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/us.png",
+              "title": "U.S. Based Support",
+              "paragraph": ""
+            }
+          },
+          "e087c8fa-837a-4a6e-a209-be04a795eae9": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3yr.png",
+              "title": "3-Year Warranty",
+              "paragraph": ""
+            }
+          }
+        },
+        "block_order": [
+          "b7a92a07-fe4b-4338-ab24-53f49f47e1c6",
+          "653a088e-83ee-4e9d-98af-af590175882c",
+          "e087c8fa-837a-4a6e-a209-be04a795eae9"
+        ],
+        "settings": {
+          "header_title": "",
+          "h_gutter": 0,
+          "max_width": "500",
+          "box_color": "#ffffff"
+        }
+      },
+      "nova-fullwidth-scroller": {
+        "type": "nova-fullwidth-scroller",
+        "settings": {
+          "video_url": "https:\/\/vimeo.com\/566263863\/bff666a5d3",
+          "headline": "All-in-One Integration",
+          "subheadline": "The industry's first ever, all-in-one splicing processors are here.",
+          "cta_title": "Watch Now ›",
+          "cta_url": "https:\/\/www.youtube.com\/watch?v=LHBh-nxPeI8"
+        }
+      },
+      "nova-dynamic-shopify-form": {
+        "type": "nova-dynamic-shopify-form",
+        "settings": {
+          "form_text": "Sign up to receive the latest Blizzard Lighting + NovaStar™ Video news",
+          "background_color": "#040430",
+          "text_color": "#ffffff",
+          "button_color": "#282bf6",
+          "hs_value": "Novastar"
+        }
+      },
+      "nova-col-text": {
+        "type": "nova-col-text",
+        "blocks": {
+          "1f9d961b-0f3b-4e75-8dce-9dce2d55de3c": {
+            "type": "image",
+            "settings": {
+              "padding": 1,
+              "bg_color": "",
+              "text_color": "",
+              "flip": true,
+              "headline": "Why NovaStar™",
+              "paragraph": "<ul>\n<li>#1 LED display solution provider in the world<\/li>\n<li>Designed for entertainment, production, signage & rental applications<\/li>\n<li> Products developed per country to meet power requirements & warranty application?<\/li>\n<li>Used at 2008 Beijing Olympics & 2016 Rio Olympics<\/li>\n<\/ul>",
+              "cta": "",
+              "cta_background_color": "",
+              "cta_text_color": "",
+              "cta_2": "",
+              "cta_background_color_2": "#000000",
+              "cta_text_color_2": "#ffffff",
+              "image": "shopify:\/\/shop_images\/controllers.png",
+              "video": "",
+              "seo_description": ""
+            }
+          }
+        },
+        "block_order": [
+          "1f9d961b-0f3b-4e75-8dce-9dce2d55de3c"
+        ],
+        "settings": {}
+      },
+      "nova-product-lineup-auto": {
+        "type": "nova-product-lineup-auto",
+        "settings": {
+          "header_title": "",
+          "h_gutter": 3,
+          "collection": "",
+          "box_color": "#ffffff"
+        }
+      },
+      "nova-compare": {
+        "type": "nova-compare",
+        "settings": {}
+      },
+      "nova-lineup-2": {
+        "type": "nova-lineup-2",
+        "settings": {
+          "header_title": "",
+          "h_gutter": 3,
+          "max_width": "",
+          "box_color": "#ffffff"
+        }
+      },
+      "iris-fullwidth-scroller-2": {
+        "type": "iris-fullwidth-scroller-2",
+        "settings": {
+          "video_url": "https:\/\/vimeo.com\/566216645\/0507c77aea",
+          "headline": "All-in-One Integration",
+          "subheadline": "The industry's first ever, all-in-one video splicing processors are here.",
+          "cta_title": "Watch Now ›",
+          "cta_url": "https:\/\/www.youtube.com\/watch?v=LHBh-nxPeI8"
+        }
+      },
+      "iris-icon": {
+        "type": "iris-icon",
+        "settings": {
+          "section_image": "shopify:\/\/shop_images\/section_image.png",
+          "header_title": "The All-Weather ICON",
+          "header_sub": "IP65-Rated, Outdoor LED Panels",
+          "background_color": "#121212",
+          "limit": 2,
+          "h_gutter": 3,
+          "collection": "icon-series"
+        }
+      },
+      "iris-icon-series-specs": {
+        "type": "iris-icon-series-specs",
+        "blocks": {
+          "75292788-d80b-4ed8-95cf-45a95e010cc3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/chip.png",
+              "title": "ADAPTIVE ADVANCED TECHNOLOGY",
+              "paragraph": "Blizzard Lighting's  IRiS® ICON™ panels are built with NovaStar’s™ A8s receiving cards, which feature HDR10 & HLG support, automatic module calibration, image rotation & more. This innovative technology is coupled with NationStar® RGB 1921 LEDs, offering an agile product , ready to adapt to any application use & customer needs."
+            }
+          },
+          "92b6fb1d-8a89-48a2-93d4-d8a9a92941cd": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/design.png",
+              "title": "FASTER, LIGHTER, STRONGER",
+              "paragraph": "Designed to be more efficient & user-friendly, ICON panels are in perfect locking position out of the case, and lock together with a single flick of the thumb. They include one-touch retractable metal corner protectors, blackout gaskets & ground support locks all within a frame that’s nearly 20% lighter than our IRiS® IP3 panel."
+            }
+          },
+          "5c15e5d8-8abf-438c-b77a-b7bf2dc8d0fb": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/truck.png",
+              "title": "READY TO HIT THE ROAD",
+              "paragraph": "On the road or parked in a studio, ICON's ATA-spec roto-molded cases are better than ever. Self-aligning magnetic casters make stacking cases for transport a breeze (and saves your fingers!), while available ground-stack and flush-mount hardware build immersive experiences to keep your audience coming back for more!"
+            }
+          },
+          "0a192d00-9e05-4e91-a3ea-cb578c17ee8e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/warranty.png",
+              "title": "NO FEARS FOR 7 YEARS™",
+              "paragraph": "ICON LED video products are backed by the industry’s only seven-year limited warranty, with coverage designed to keep panels in the field, not in a repair shop. Plus, as NovaStar's #1 U.S. distributor, Blizzard Lighting provides local service & support for processors & controllers under NovaStar's three-year warranty."
+            }
+          }
+        },
+        "block_order": [
+          "75292788-d80b-4ed8-95cf-45a95e010cc3",
+          "92b6fb1d-8a89-48a2-93d4-d8a9a92941cd",
+          "5c15e5d8-8abf-438c-b77a-b7bf2dc8d0fb",
+          "0a192d00-9e05-4e91-a3ea-cb578c17ee8e"
+        ],
+        "settings": {}
+      },
+      "iris-simple-collection": {
+        "type": "iris-simple-collection",
+        "settings": {
+          "header_title": "More IRiS LED Video Panels",
+          "header_sub": "In Stock & Ready to Ship!",
+          "background_color": "#fcfcfc",
+          "limit": 3,
+          "h_gutter": 3,
+          "collection": "iris-video-wall-series"
         }
       }
     },

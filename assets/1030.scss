@@ -451,6 +451,15 @@
     }
   }
 
+  .cart-link {
+    i {
+      position: relative;
+      margin-top: 0;
+      right: 0;
+      font-size: inherit;
+    }
+  }
+
   //Products (single)
 
   button.cbb-also-bought-add-to-cart-button {
@@ -861,6 +870,40 @@
     h2 {
       text-align: left;
     }
+  }
+
+  .start-modal {
+    .bl-dynamic-form {
+      padding: 3rem;
+    }
+    .hs_submit.hs-submit {
+      width: 200px;
+    }
+    form {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    input#email-2d69787c-6bed-419b-8678-86c51dd1e234 {
+      margin-bottom: 0;
+      padding: 8px 14px;
+      font-size: 16px;
+      width: 98%;
+    }
+  }
+
+  .slide-img-mobile {
+    display: none !important;
+  }
+
+  #col-2021 {
+    .col-grid-layout {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .row-flex {
+    justify-content: center;
   }
 } //End bracket
 

@@ -1,51 +1,53 @@
 <div class="hero-banner-mt">
-    <img src="{{'mixtape-series-banner.jpg' | asset_url}}" />
+    <img src="{{'mixtape-series-banner.jpg' | asset_url}}"/>
 </div>
 
 <div class="mt-header">
-    <h1>Introducing Mixtape™ — Fixtures Designed For <em>Your</em> Stage</h1>
+    <h1>Introducing Mixtape™ — Fixtures Designed For
+        <em>Your</em>
+        Stage</h1>
     <p>Hit play on Mixtape – LED lighting FX made to put the Hi-Speed Dubbing into your rig! Blizzard Lighting’s Mixtape Series fixtures are designed for your stage, whether that's a bedroom, a private party, club life, or live performance. If you're a pro looking for that special little something extra, or just starting out, Mixtape offers something for everyone!</p>
 </div>
 
 <div class="product-container">
-    
+
     {% for product in collection.products %}
-    {% assign prodId = product.variants.first.id %}
+        {% assign prodId = product.variants.first.id %}
 
-    <div class="two-col-product {% cycle 'align-left', 'align-right' %}">
-    <div class="left-col">
-    {% if product.title == 'minisystem™' %}
-    <img class="mt-logo" src="{{ 'minisystem-dark-logo.svg' | asset_url }}" alt="{{ product.title }} " />
-    {% elsif product.title == 'SPOTMAN™' %}
-    <img class="mt-logo" src="{{ 'spotman-dark-logo.svg' | asset_url }}" alt="{{ product.title }} " />
-    {% elsif product.title == 'MAX L™' %}
-    <img class="mt-logo" src="{{ 'maxl-logo.svg' | asset_url }}" alt="{{ product.title }} " />
-    {% elsif product.title == 'mikrokassette™' %}
-    <img class="mt-logo" src="{{ 'mikrokassette-logo.svg' | asset_url }}" alt="{{ product.title }} " />
-    {% endif  %}
-    <h3>{{ product.metafields.c_f.Product_Subtitle }}</h3>
-    <ul class="fa-ul features-short">
-        {{ product.metafields.c_f.Main_Features }}
-      </ul>
-      <div class="mt-price">
-        {{ product.selected_or_first_available_variant.price | money }}
-      </div>
-<div class="btn-group">
-    <form method="post" action="/cart/add">
-        <input type="hidden" name="id" value="{{ prodId }}" />
-        <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
-        <input type="submit" class="btn btn-blue" value="Add to Cart" />
-    </form> 
-    <a href="{{product.url}}" class="btn undl">Learn More</a>
-</div>
-    </div>
-    <div class="right-col {{product.title}}-gradient">
-        {% include 'spinning-text' %}
-        <img class="mt-prod" src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
-    </div>
-</div>
+        <div class="two-col-product {% cycle 'align-left', 'align-right' %}">
+            <div class="left-col">
+                {% if product.title == 'minisystem™' %}
+                    <img class="mt-logo" src="{{ 'minisystem-dark-logo.svg' | asset_url }}" alt="{{ product.title }} "/>
+                {% elsif product.title == 'SPOTMAN™' %}
+                    <img class="mt-logo" src="{{ 'spotman-dark-logo.svg' | asset_url }}" alt="{{ product.title }} "/>
+                {% elsif product.title == 'MAX L™' %}
+                    <img class="mt-logo" src="{{ 'maxl-logo.svg' | asset_url }}" alt="{{ product.title }} "/>
+                {% elsif product.title == 'mikrokassette™' %}
+                    <img class="mt-logo" src="{{ 'mikrokassette-logo.svg' | asset_url }}" alt="{{ product.title }} "/>
+                {% endif  %}
+                <h3>{{ product.metafields.c_f.Product_Subtitle }}</h3>
+                <ul class="fa-ul features-short">
+                    {{ product.metafields.c_f.Main_Features }}
+                </ul>
+                <div class="mt-price">
+                    {{ product.selected_or_first_available_variant.price | money }}
+                </div>
+                <div class="btn-group">
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="id" value="{{ prodId }}"/>
+                        <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
+                        <input class="btn btn-blue" type="submit" value="Add to Cart"/>
+                    </form>
+                    <a href="{{product.url}}" class="btn undl">Learn More</a>
+                </div>
+            </div>
+            <div class="right-col {{product.title}}-gradient">
+                {% include 'spinning-text' %}
+                <img class="mt-prod" src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}"/>
+            </div>
+        </div>
 
-{% endfor %}
+    {% endfor %}
 </div>
 
 
@@ -55,12 +57,13 @@
             <div class="box-content">
                 <img src="{{ 'soc-it-transparent.png' | asset_url }}" alt="SoC-It">
                 <div class="box-text">
-                    <h3>Add wireless DMX to these fixtures<sub>*</sub> with SoC-It™</h3>
+                    <h3>Add wireless DMX to these fixtures<sub>*</sub>
+                        with SoC-It™</h3>
                     <p>Just plug a SoC-It™ into a DMX input and transmit DMX wirelessly over WiFi, Art-Net, and sACN.</p>
-                    <form method="post" action="/cart/add">
-                        <input type="hidden" name="id" value="31190135570515" />
-                        <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
-                        <input type="submit" class="btn btn-blue" value="Add to Cart" />
+                    <form action="/cart/add" method="post">
+                        <input name="id" type="hidden" value="31190135570515"/>
+                        <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
+                        <input class="btn btn-blue" type="submit" value="Add to Cart"/>
                     </form>
                     <div class="fine">*Excludes minisystem™</div>
                 </div>
@@ -70,12 +73,13 @@
             <div class="box-content">
                 <img src="{{ 'atfull-screen.png' | asset_url }}" alt="AtFull">
                 <div class="box-text">
-                    <h3>Control Mixtape fixtures<sub>‡</sub> with your smart phone or tablet</h3>
+                    <h3>Control Mixtape fixtures<sub>‡</sub>
+                        with your smart phone or tablet</h3>
                     <p>Create custom shows, add limitless patches and fixtures, and explore and control thousands of fixture profiles all from your phone or tablet.</p>
-                    <form method="post" action="/cart/add">
-                        <input type="hidden" name="id" value="32186307772499" />
-                        <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
-                        <input type="submit" class="btn btn-blue" value="{% if product.metafields.c_f.Preorder_Date %}Preorder{% else %}Add to Cart {% endif %}" />
+                    <form action="/cart/add" method="post">
+                        <input name="id" type="hidden" value="32186307772499"/>
+                        <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
+                        <input type="submit" class="btn btn-blue" value="{% if product.metafields.c_f.Preorder_Date %}Preorder{% else %}Add to Cart {% endif %}"/>
                     </form>
                     <div class="fine">‡Requires SoC-It or Art-Net/sACN compatible device</div>
 
@@ -88,66 +92,67 @@
 
 
 <div class="mt-optin">
-<div class="mt-wrap">
-    <div class="flex-container">
-        <div class="mt-opt-head"><h2>Wanna See More?!</h2><p>Enter your email & let us know which product(s) you want to get exclusive video demos & promo updates on!</p></div>
-        <div class="container">
-            <!--[if lte IE 8]>
+    <div class="mt-wrap">
+        <div class="flex-container">
+            <div class="mt-opt-head">
+                <h2>Wanna See More?!</h2>
+                <p>Enter your email & let us know which product(s) you want to get exclusive video demos & promo updates on!</p>
+            </div>
+            <div class="container">
+                <!--[if lte IE 8]>
         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
         <![endif]-->
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-        <script>
+                <script charset="utf-8" src="//js.hsforms.net/forms/v2.js" type="text/javascript"></script>
+                <script>
         hbspt.forms.create({
         portalId: "4135982",
         formId: "d8e4e837-79f3-4e00-b37c-a8108ce19d45"
         });
         </script>
-    </div>
+            </div>
+        </div>
     </div>
 </div>
-</div>
-
 
 
 {% assign current_product = product.title  %}
 
 
-<div id="mt-two" class="mixtape-wrapper">
-<div class="mt-header" style="padding-top: 30px; ">
-    <h2>Collect the Series</h2>
-    <p>with Fast & Free Shipping!</p>
-</div>
-  <div class="vignette-fill"></div>
-  <div class="mt-container">
-
-    <div class="mt-col">
-      {% for product in collections.mixtape-series.products %}
-      {% if product.title != current_product %}
-        <div class="mt-item">
-          <img class="mt-prod" src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
-          <div class="mt-caption">
-           <h3>{{product.title}}</h3>
-            <p class="mt-sub">{{ product.metafields.c_f.Product_Subtitle }}</p>
-            <form action="/cart/add" method="post">
-              {% unless product.available %}
-              {% else %}
-                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                <input  type="number" name="quantity" class="hide" value="1" min="1" />
-                <input type="submit"  class="btn mt" value="Add to Cart" />
-              {% endunless %}
-              </form>
-         </div>
-        </div>
-      {% endif %}
-    {% endfor %}
+<div class="mixtape-wrapper" id="mt-two">
+    <div class="mt-header" style="padding-top: 30px; ">
+        <h2>Collect the Series</h2>
+        <p>with Fast & Free Shipping!</p>
     </div>
-  </div>
+    <div class="vignette-fill"></div>
+    <div class="mt-container">
+
+        <div class="mt-col">
+            {% for product in collections.mixtape-series.products %}
+                {% if product.title != current_product %}
+                    <div class="mt-item">
+                        <img class="mt-prod" src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}"/>
+                        <div class="mt-caption">
+                            <h3>{{product.title}}</h3>
+                            <p class="mt-sub">{{ product.metafields.c_f.Product_Subtitle }}</p>
+                            <form action="/cart/add" method="post">
+                                {% unless product.available %}
+                                    {% else %}
+                                        <input type="hidden" name="id" value="{{ product.variants.first.id }}"/>
+                                        <input class="hide" min="1" name="quantity" type="number" value="1"/>
+                                        <input class="btn mt" type="submit" value="Add to Cart"/>
+                                {% endunless %}
+                            </form>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 
 =
 <img style="width: 100%" src="{{ 'mixtape-allboxes-side.jpg' | asset_url }}" alt="Special Edition Boxes" class="box-side">
-
 
 
 <style>
@@ -156,4 +161,9 @@
     font-size: 10px;
     color: gray;
 }
+
+.boost-pfs-filter-loading {
+    display: none !important;
+}
+
 </style>

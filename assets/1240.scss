@@ -1,5 +1,4 @@
 @media only screen and (min-width: 1240px) {
-
   #product-2021 {
     h1 {
       font-size: 60px;
@@ -14,9 +13,9 @@
     }
   }
 
-.new-grid{
-  grid-template-columns: repeat(4, 25%);
-}
+  .new-grid {
+    grid-template-columns: repeat(4, 25%);
+  }
   .hero-mosaic {
     .mosaic-container {
       height: 400px;
@@ -51,38 +50,42 @@
     }
   }
 
-  .hm-col{
+  .hm-col {
     max-height: 600px;
   }
 
-    .hm-col {
-	margin: 2em 0 8em 0;
-}
+  .hm-col {
+    margin: 2em 0 8em 0;
+  }
 
-  .hm-top h2{
+  .hm-top h2 {
     font-size: 13em;
   }
 
-
   .ais-hits-container.ais-results-as-block {
-    ol.ais-Hits-list{
+    ol.ais-Hits-list {
       li {
         width: 25%;
       }
     }
   }
 
-  .bl-scroll-caption{
+  .bl-scroll-caption {
     left: 5em !important;
   }
 
-  .bl-hero-c-caption h2{
+  .bl-hero-c-caption h2 {
     font-size: 7em !important;
   }
 
   .hero-s-caption {
-    font-size: 22px
+    font-size: 22px;
     max-width: 450px;
   }
 
+  .bl-pl-icon-box {
+    img {
+      max-height: 550px !important;
+    }
+  }
 } // end

@@ -22,15 +22,6 @@
     properties_amount = item.properties | size %}
         {% if properties_amount > 0 %}
             <p>
-                {%- comment -%}{% for p in item.properties %} {% unless p.last == blank or
-                                                                                                                              p.first == '_customer' %}
-                                                                                                                              {{ p.first }}: {% if p.last contains '/uploads/' %}
-                                                                                                                              <a href="{{ p.last }}">{{ p.last | split: "/" | last }}</a>
-                                                                                                                              {% else %}
-                                                                                                                              {{ p.last }}
-                                                                                                                              {% endif %}
-                                                                                                                              <br />
-                                                                                                                              {% endunless %} {% endfor %}{%- endcomment -%}
                 {%- for p in item.properties
       -%}
                     {% if p.first contains '_io_' %}
@@ -38,6 +29,7 @@
                     {% endif %}
                     {%- unless
       p.last == blank -%}
+
                         <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
                             <span data-cart-item-property-value>
                                 {%- if p.last contains "uploads" -%}
@@ -64,7 +56,7 @@
         <input type="number" name="updates[]" {% if item.product.metafields.c_f.Preorder_Date %} {% else %} max="{{ item.variant.inventory_quantity }}" {% endif %} id="updates_{{ item.id }}" class="quantity bstock-{{ item.variant.barcode }}" value="{{ item.quantity }}"/>
     </td>
     <td>
-        <span class="hulkapps-cart-item-line-price limoniapps-discountninja-cart-item-product-price" data-limoniapps-discountninja-cart-key="{{ item.key }}" data-key="{{ item.key }}">{{ item.line_price | money }}</span>
+        <span class="hulkapps-cart-item-line-price limoniapps-discountninja-cart-item-product-price" data-limoniapps-discountninja-cart-key="{{ item.key }}" data-key="{{ item.key }}"></span>
     </td>
     <td class="hide-on-small">
         <a href="/cart/change?line={{ forloop.index }}&quantity=0">

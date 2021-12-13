@@ -1,0 +1,156 @@
+<!-- Determine which pages the chart should show on -->
+{% assign pageType = 'none' %}
+
+{% if product.tags contains 'Multimedia Players' %}
+        {% assign pageType = 'Multimedia Players' %}
+    {% elsif product.tags contains 'All-In-1 Controllers' %}
+        {% assign pageType = 'All-In-1 Controllers' %}
+    {% elsif product.tags contains 'Splicing Processors' %}
+        {% assign pageType = 'Splicing Processors' %}
+    {% elsif product.tags contains 'Standard Controllers' %}
+        {% assign pageType = 'Standard Controllers' %}
+    {% elsif page.template_suffix == 'novastar-landing' %}
+        {% assign pageType = 'all' %}
+{% endif %}
+
+<div class="compare-grid">
+
+    <div class="compare-header">
+        <h3>Compare NovaStar™ Products</h3>
+
+        {% if pageType == 'Splicing Processors' or pageType == 'all' %}
+            <h2 class="compare-title splicing-processors">
+                Designed for XL Video Walls, Like Virtual Production Studios
+            </h2>
+        {% endif %}
+
+        {% if pageType == 'Multimedia Players' or pageType == 'all'  %}
+            <h2 class="compare-title {% if pageType == 'Multimedia Players' %}{% else %}hidden{% endif %} multimedia-players">
+                Great for Digital Signage & Small Format Screens
+            </h2>
+        {% endif %}
+
+        {% if pageType == 'Standard Controllers' or pageType == 'all' %}
+            <h2 class="compare-title {% if pageType == 'Standard Controllers' %}{% else %}hidden{% endif %}  standard-controllers">
+                Reliable, Performance-based Control Up to 4K Resolution
+            </h2>
+        {% endif %}
+
+        {% if pageType == 'All-In-1 Controllers' or pageType == 'all' %}
+            <h2 class="compare-title {% if pageType == 'All-In-1 Controllers' %}{% else %}hidden{% endif %}  all-in-1-controllers">
+                Adaptable to Multiple Application Settings, with Built-in Scaling
+            </h2>
+        {% endif %}
+
+    </div>
+
+    {% if pageType == 'all' %}
+        <div class="compare-nav">
+
+            <div class="compare-item active" id="splicing-processors">
+                Splicing Processors
+            </div>
+
+            <div class="compare-item" id="multimedia-players">
+                Multimedia Players
+            </div>
+
+            <div class="compare-item" id="standard-controllers">
+                Standard Controllers
+            </div>
+
+            <div class="compare-item" id="all-in-1-controllers">
+                All-In-1 Controllers
+            </div>
+
+        </div>
+    {% endif %}
+
+    <div class="compare-images">
+
+    {% if pageType == 'Splicing Processors' or pageType == 'all' %}
+        <img alt="Splicers" style="max-width: 970px;" class="chart splicing-processors" src="{{ 'h-series.svg' | asset_url }}">
+    {% endif %}
+
+    {% if pageType == 'Multimedia Players' or pageType == 'all'  %}
+        <img alt="Multimedia Players" style="max-width: 740px;" class="chart {% if pageType == 'Multimedia Players' %}{% else %}hidden{% endif %} multimedia-players" src="{{ 'multimedia-players.svg' | asset_url }}">
+    {% endif %}
+
+    {% if pageType == 'Standard Controllers' or pageType == 'all' %}
+        <img alt="Standard Controllers" class="chart {% if pageType == 'Standard Controllers' %}{% else %}hidden{% endif %} standard-controllers" src="{{ 'standard-controllers.svg' | asset_url }}">
+    {% endif %}
+
+    {% if pageType == 'All-In-1 Controllers' or pageType == 'all' %}
+        <img alt="All in 1 Controllers"  class="chart {% if pageType == 'All-In-1 Controllers' %}{% else %}hidden{% endif %} all-in-1-controllers" src="{{ 'all-in-1.svg' | asset_url }}">
+    {% endif %}
+
+    </div>
+    {% if pageType == 'all' %}
+            <a id="compare-link" href="/collections/novastar-led-control-products?pf_t_type=Splicing+Processors" class="btn btn-blue">Shop <span>Splicing Processors</span> ›</a>
+        {% else %}
+            <a id="compare-link" href="/collections/novastar-led-control-products?pf_t_type={{ pageType | replace: ' ', '+' }}" class="btn btn-blue">Shop <span>{{ pageType | capitalize }}</span> ›</a>
+    {% endif %}
+</div>
+
+<style>
+    #compare-link {
+        text-transform: capitalize;
+    }
+    .btn-blue {
+        display: table;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-bottom: 7em;
+    }
+    .compare-header{
+        text-align: center;
+    }
+    .compare-header h3 {
+        letter-spacing: 2px;
+    }
+    .compare-title {
+        padding-bottom: 1em;
+        text-align: center;
+        text-transform: inherit;
+        font-size: 3em;
+        font-weight: normal;
+        font-family: 'Source Sans Pro';
+        max-width: 680px;
+        margin: 0 auto;
+        color: #333;
+    }
+</style>
+
+<script>
+
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+function showChart(el) {
+    let filter = el.replace("-", " ");
+    let url;
+
+    if(el !== 'all-in-1-controllers') {
+        url = `/collections/novastar-led-control-products?pf_t_type=${toTitleCase(filter)}`;
+    } else {
+        url = "/collections/novastar-led-control-products?pf_t_type=All-In-1+Controllers";
+    }
+
+    $('#compare-link').attr("href", url);
+    $('#compare-link span').text(filter);
+    $('.compare-item').removeClass('active');
+    $(`#${el}`).addClass('active');
+    $(`h3.${el}`).addClass('active');
+    $('.chart').addClass('hidden');
+    $('.compare-title').addClass('hidden');
+    $(`.${el}`).removeClass('hidden');
+}
+
+$('.compare-item').on('click', function()  {
+    const type = this.id;
+    showChart(type)
+})
+
+</script>

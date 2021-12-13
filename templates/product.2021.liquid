@@ -1,6 +1,9 @@
 {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
 {% assign default_variant = product.selected_or_first_available_variant %}
 {% assign metafield = product.metafields.f_b %}
+{% assign isArchi = product.metafields.f_b.Architectural === 'true' %}
+{% assign productTitleSize = product.title | size %}
+{% assign productImagesCount = product.images | size  %}
 
 <!-- STICKY NAV -->
 <div id="sticky-prod-nav">
@@ -13,13 +16,20 @@
                         <span>{{ metafield.Product_Subtitle | strip_html }}</span>
                     </h2>
                 </div>
-                <div class="item" style="min-width: 118px;">
-                    {% include 'add-to-cart-button' %}
-                </div>
+
+                <!-- Display Learn More › if IRiS -->
+                {% if product.type == 'LED Video' %}
+                 <a href="#contact-iris" class="m-0 btn btn-blue">Learn More ›</a>
+                {% else %}
+                    <div class="item" style="min-width: 118px;">
+                        {% include 'add-to-cart-button' %}
+                    </div>
+                {% endif %}
+
             </div>
         </div>
 
-        <!-- Page nav -->
+        <!-- PAGE NAV -->
         <div class="product-nav">
             <a class="to-top" href="#">Back to Top</a>
             <a href="#in-action">In Action</a>
@@ -27,7 +37,6 @@
             <a href="#downloads">Downloads</a>
         </div>
     </div>
-
 
 </div>
 
@@ -38,21 +47,34 @@
     <div class="container-fluid">
 
         <div class="row">
+
             <div class="col-lg-8" id="product-showcase-images">
                 <div class="row">
                     <!-- IMAGE CAROUSEL -->
-                    <div class="col-lg-3 order-5 order-lg-1" id="side-drawer-images">
-                        {% for image in product.images %}
-                            {% if image.src != product.featured_image %}
-                                <a data-lightbox="product-images" href="{{ image.src | product_img_url: 'master' }}">
-                                    <img src="{{ image.src | product_img_url: 'large' }}">
-                                </a>
+                    {% if isArchi %}
+                    {% include 'archi-spec-box' %}
+                        {% else %}
+                        <div class="col-lg-3 order-5 order-lg-1" id="side-drawer-images">
+                            {% if productImagesCount > 3 %}
+                                {% for image in product.images %}
+                                    {% if image.src != product.featured_image and image.alt != 'hidden' %}
+                                        <a data-lightbox="product-images" href="{{ image.src | product_img_url: 'master' }}">
+                                            <img src="{{ image.src | product_img_url: 'large' }}" alt="{{ image.alt }}">
+                                        </a>
+                                    {% endif %}
+                                {% endfor %}
                             {% endif %}
-                        {% endfor %}
-                    </div>
+                        </div>
+                    {% endif %}
+
                     <!-- FEATURED IMAGE -->
                     <div class="col-lg-9 order-lg-2 order-1 d-flex align-items-center justify-content-center position-relative">
                         <div class="center-image d-flex align-items-center">
+                            {% if isArchi %}
+                                <div class="3d-box">
+                                    <a href="" class="btn btn-blue">View in 3D ›</a>
+                                </div>
+                            {% endif %}
                             <img id="ProductPhotoImg" src="{{ featured_image | img_url: '2048x' }}" alt="{{ featured_image.alt | escape }}"/>
                             <div class="prod-blob">
                                 <svg version="1.1" viewbox="0 0 310 350" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -66,47 +88,74 @@
 
             <!-- BUY BOX -->
             <div class="col-lg-3 pb-5" id="buy-box">
+                {% if product.title contains 'Cool Cable™' %}
+                    <h4 class="vendor">Cool Cable™</h4>
+                {% endif %}
+                <h1 class="fw-bold" {% if productTitleSize > 28 %}style="font-size: 40px"{% endif %}>{{product.title | remove: "Cool Cable™"}}</h1>
+                <h3 id="ProductPrice" class="d-inline">{% include 'get-product-price' %} {% if product.tags contains 'on sale' %}
+                    <span class="sale-box">SALE!</span>
+                {% endif %}</h3>
 
-                <h1 class="pt-lg-5 fw-bold">{{product.title}}</h1>
-                <h3 id="price">{% include 'get-product-price' %}</h3>
+                    {% if product.type == 'LED Video' %}
+                        {% if product.tags contains 'accessories' %}
+                        {% else %}
+                            <span class="fw-bold">MSRP</span>
+                        {% endif %}
+                    {% endif %}
 
                 <p class="sku">SKU:
-                    {{ default_variant.sku }}</p>
+                    {{ default_variant.sku }}
+                </p>
 
                 <div class="prod-features">
                     {{ metafield.Main_Features }}
                 </div>
 
-                <div class="shipping-info">
-                    <i class="fas fa-shipping-fast"></i>
-                    {% if metafield.Est_Ship_Date %}
-                        {{ metafield.Est_Ship_Date }}
-                    {% elsif product.tags contains 'en route' %}
-                        Ships in 2-3 Weeks
-                    {% else %}
-                        Fast, Free Shipping on Orders $99+
-                        {% unless product.title | downcase contains 'case' %}{% endunless %}
-                    {% endif %}
-                </div>
+                  <!-- If product tags include en route display email reminders -->
+                {% include 'notify-me' %}
 
-                <div class="pricing-box mt-3">
-                    {% include 'add-to-cart-dropdown' %}
-                </div>
+                <!-- Display add to cart or IRiS CTA -->
+                {% if product.type == 'LED Video' %}
+                    {% if product.tags contains 'accessories' %}
+                        <div class="pricing-box mt-3">
+                            {% include 'add-to-cart-dropdown' %}
+                        </div>
+                    {% else %}
+                        <div class="learn-more-cta mb-3 d-flex">
+                            <a href="/pages/iris-quote-builder" style="margin-right: 3px" class="flex-grow-1 btn btn-otl">Build Quote</a>
+                            <a href="#contact-iris" class=" flex-grow-1 btn btn-blue">Expert Connect ›</a>
+                        </div>
+                    {% endif %}
+
+
+                {% else %}
+                    <div class="pricing-box mt-3">
+                        {% include 'add-to-cart-dropdown' %}
+                    </div>
+                {% endif %}
+
+
                 <a class="where-to-buy" href="/a/wheretobuy">
                     <i class="fal fa-map-marked-alt mx-1"></i>
                     Where Else to Buy
                 </i>
             </a>
 
-            <div class="tag-box d-flex flex-wrap align-items-center">
-                {% for tag in product.tags %}
-                    {% unless tag == 'en-route' %}
-                        {% endunless%}
-                        <div class="tag-bubble p-2 m-2">
-                            <a href="/collections/{{tag | handleize}}">{{tag}}</a>
-                        </div>
-                    {% endfor %}
+            {% if isArchi %}
+                <div class="case-box">
+                    {% include 'product-case-box' %}
                 </div>
+            {% else %}
+                <div class="tag-box d-flex flex-wrap align-items-center">
+                    {% for tag in product.tags %}
+                        {% unless tag == 'en route' %}
+                            <div class="tag-bubble p-2 m-2">
+                                <a href="/collections/{{tag | handleize}}">{{tag}}</a>
+                            </div>
+                            {% endunless%}
+                        {% endfor %}
+                </div>
+            {% endif %}
 
             </div>
 
@@ -136,7 +185,6 @@
             {% assign urlType = 'youtube' %}
         {% endif %}
 
-        <script>console.log({{ vimeoId[0] }})</script>
         <section id="hero-video">
             <div class="videoWrapper">
                 {% if metafield.Video_Hero_Copy %}
@@ -145,7 +193,7 @@
                     </div>
                 {% endif %}
                 {% if urlType == 'youtube' %}
-                    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" src="https://www.youtube.com/embed/{{ youtubeId }}?autoplay=1&mute=1" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" src="https://www.youtube.com/embed/{{ youtubeId }}?autoplay=1&mute=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                 {% elsif urlType == 'vimeo' %}
                     <iframe allowfullscreen frameborder="0" mozallowfullscreen src="https://player.vimeo.com/video/{{ vimeoId[0] }}?background=1&autoplay=1&loop=1&byline=0&title=0" webkitallowfullscreen></iframe>
                 {% endif %}
@@ -153,72 +201,120 @@
         </section>
     {% endif %}
 
-    <!-- HERO SECTION 1 -->
-    {% if metafield.Hero_Section_1_Image != blank %}
+    <!-- WRAPPER FOR HERO SECTIONS -->
+    <section style="background: #f1f2f3">
 
-        <section class="position-relative my-0" id="hero-s">
-            <img class="w-100" src="{{ metafield.Hero_Section_1_Image }}"/>
+        <!-- HERO SECTION 1 -->
+        {% if metafield.Hero_Section_1_Image != blank %}
 
-            {% if metafield.Hero_Section_1_Copy %}
-                <div class="bl-scroll-caption">
-                    {{ metafield.Hero_Section_1_Copy }}
+            {% if metafield.Basic_Product != 'true' %}
+      <section id="tester"></section>
+                <section class="position-relative my-0" id="hero-s">
+                    <img class="w-100" src="{{ metafield.Hero_Section_1_Image }}"/>
+
+                    {% if metafield.Hero_Section_1_Copy %}
+                        <div class="bl-scroll-caption">
+                            {{ metafield.Hero_Section_1_Copy }}
+                        </div>
+                    {% endif %}
+                    <div class="right-overlay"></div>
+                </section>
+
+            {% elsif metafield.Basic_Product == 'true' %}
+
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-6 p-5">
+                            {{ metafield.Hero_Section_1_Copy }}
+                        </div>
+                        <div class="col-12 col-lg-6 position-relative">
+                            <img class="w-100" src="{{ metafield.Hero_Section_1_Image }}"/>
+                        </div>
+                    </div>
                 </div>
+
             {% endif %}
-            <div class="right-overlay"></div>
-        </section>
 
-    {% endif %}
+        {% endif %}
 
+      {% if metafield.Basic_Product != 'true' %}
+        <!-- PRODUCT SPECIFIC OVERRIDES -->
+        {% include '2021-product-specific-overrides' %}
+      {% endif %}
 
-    <!-- IF TAGGED WICICLE ENABLED, SHOW AT FULL / SOCIT SECTION -->
-    {% if product.tags contains 'wiCICLE Enabled' %}
-        {% include 'at-full-product-section' %}
-    {% endif %}
+        <!-- HERO SECTION 2 -->
+        {% if metafield.Hero_Section_2_Image != blank %}
 
-    <!-- SOC-IT SPECIFIC SECTION -->
-    {% if product.title contains 'SoC-It' %}
-        {% include 'soc-it-diagram' %}
-        {% include 'at-full-home' %}
-    {% endif %}
+            {% if metafield.Basic_Product != 'true' %}
 
-    <!-- IF HOW TO EXISTS -->
-    {% if product.metafields.c_f.How_To %}
-        {% include 'how-to-section' %}
-    {% endif %}
+                <section class="position-relative my-0" id="hero-s">
+                    <img class="w-100" src="{{ metafield.Hero_Section_2_Image }}"/>
 
-    <!-- HERO SECTION 2 -->
-    {% if metafield.Hero_Section_2_Image != blank %}
+                    {% if metafield.Hero_Section_2_Copy %}
+                        <div class="bl-scroll-caption">
+                            {{ metafield.Hero_Section_2_Copy }}
+                        </div>
+                    {% endif %}
+                    <div class="right-overlay"></div>
+                </section>
 
-        <section class="position-relative my-0" id="hero-s">
-            <img class="w-100" src="{{ metafield.Hero_Section_2_Image }}"/>
+            {% elsif metafield.Basic_Product == 'true' %}
 
-            {% if metafield.Hero_Section_2_Copy %}
-                <div class="bl-scroll-caption">
-                    {{ metafield.Hero_Section_2_Copy }}
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-6">
+                            <img class="w-100" src="{{ metafield.Hero_Section_2_Image }}"/>
+                        </div>
+                        <div class="col-12 col-lg-6 p-5">
+                            {{ metafield.Hero_Section_2_Copy }}
+                        </div>
+                    </div>
                 </div>
-            {% endif %}
-            <div class="right-overlay"></div>
-        </section>
 
+            {% endif %}
+
+        {% endif %}
+
+{% if metafield.Basic_Product == 'true' %}
+        <!-- PRODUCT SPECIFIC OVERRIDES -->
+        {% include '2021-product-specific-overrides' %}
+{% endif %}
+
+</section>
+
+    <!-- COMPARE PRODUCTS  -->
+    {% include '2021-compare-products' %}
+
+
+    {% if product.tags contains 'panels' %}
+        {% include 'iris-viewing-chart' %}
     {% endif %}
 
     <!-- Anchor: Specs -->
     <a class="anchor-offset" id="specs" style="margin-top: 100px"></a>
+
 
     <!-- PRODUCT SUMMARY + SPECS -->
     <div id="summary-2021">
         <section class="container py-5" id="spec-summary">
             <div class="row">
                 {% if metafield.Product_Summary != blank %}
-                    <div class="col-lg-4">
-                        <h2 class="fw-bold border-styled">Product Summary</h2>
-                        {{ metafield.Product_Summary }}
-                    </div>
+                    {% if metafield.Basic_Product != 'true' or 'false' %}
+
+                        <div class="col-lg-4">
+                            <h2 class="fw-bold border-styled">Product Summary</h2>
+                            {{ metafield.Product_Summary }}
+                        </div>
+
+                    {% endif %}
                 {% endif %}
 
-                <div class="col-lg-8" id="specs-2021">
+                {% if metafield.Basic_Product != 'true' or 'false' %}
+                    <div class="col-lg-8" id="specs-2021">
+                {% else %}
+                    <div class="col-lg-12" id="specs-2021">
+                {% endif %}
                     <h2 class="pt-5 pt-lg-0 afw-bold border-styled">Specs</h2>
-
                     {% include 'product-specs-2021' %}
                 </div>
             </div>
@@ -226,8 +322,8 @@
     </div>
 
     <!-- Q&A -->
-    
-                                    <!-- Anchor: Specs -->
+
+                                                                                                                                                                                <!-- Anchor: Specs -->
     <a class="anchor-offset" id="downloads" style="margin-top: 100px"></a>
 
     <section id="support-resources">
@@ -240,12 +336,18 @@
             </div>
         </div>
         <!-- <div class="sr-bg" style="background-image: url('{{ product.images.last | img_url: 'master' }}');"> -->
-        
-                                                                            <!-- </div>
+
+                                                                                                                                                                                                                                                                                                                                                                    <!-- </div>
         </div> -->
     </section>
 
+
 </div>
+
+<!-- IRiS Large form -->
+{% if product.type == 'LED Video' %}
+    {% section 'iris-lg-form' %}
+{% endif %}
 
 <script>
     lightbox.option({"resizeDuration": 200, "fadeDuration": 200})

@@ -1,9 +1,9 @@
 <style>
-  
+
   .product-carousel2
  {margin-top: 89px;
  }
-  
+
 </style>
 
 {% assign products_per_page = settings.products_per_row | times: settings.number_of_rows %}
@@ -70,7 +70,7 @@
 
 
 
-<section data-aos="fade-up" id="collector">
+<section  id="collector">
 
 <h1 class="left">{{ collection.title }}</h1>
 
@@ -93,7 +93,7 @@
 {% comment %}
   Listing all tags within the current collection.
   Shopify uses product tags to manage subcategories inside collections.
-  See 'How do I create subcategories of products?' at 
+  See 'How do I create subcategories of products?' at
   http://bit.ly/1j1Dti4 for details.
 {% endcomment %}
 
@@ -112,7 +112,7 @@
     {{ tag | link_to_tag: tag }}
   </li>
   {% endif %}
-  {% endfor %}  
+  {% endfor %}
 </ul>
 {% endif %}
 
@@ -121,8 +121,8 @@
   {{ collection.description }}
 </div>
 {% endif %}
-  
-  
+
+
 
 <ul class="grid clearfix">
 {% for product in collection.products %}
@@ -154,4 +154,3 @@ jQuery('.sort-by')
     location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
   });
 </script>
-

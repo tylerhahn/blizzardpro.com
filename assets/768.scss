@@ -694,7 +694,11 @@
   .upsell-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
+  #col-2021 {
+    .col-grid-layout {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   #product-2021 {
     .bl-scroll-caption {
       h2 {

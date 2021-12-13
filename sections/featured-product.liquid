@@ -63,7 +63,7 @@
                 <option
                   value="{{ value | escape }}"
                   {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }}
+                  {{ value }}
                 </option>
               {% endfor %}
             </select>
@@ -77,7 +77,13 @@
             {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
             {% unless variant.available %}disabled="disabled"{% endunless %}
             value="{{ variant.id }}">
-              {{ variant.title }}
+
+              {% if variant.title == 'Default Title' %}
+                New
+                {% else %}
+                 {{ variant.title }}
+              {% endif %}
+
           </option>
         {% endfor %}
       </select>

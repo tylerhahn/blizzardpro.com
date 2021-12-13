@@ -1,21 +1,21 @@
 <style>
-  
+
   .product-carousel2
  {margin-top: 89px;
  }
-  
+
   ul.grid.clearfix {
     margin-top: 35px;
-  
+
 </style>
 
 
 <div id="quarter-screen-b">
   <div class="studio-b-overlay"></div>
-  
+
 <section id="studio-b-gallery">
 
-	<div class="flex-container" data-aos="fade-up">
+	<div class="flex-container" >
 
 		<div class="studio-b-logo">
 <img src="{{ 'Studio-B-with-glow-1600w.png' | file_url }}">
@@ -26,7 +26,7 @@
 
 
 </section>
-  
+
   	</div>
 
 
@@ -67,44 +67,44 @@
 
 
 <section id="studio-b-collector">
-  
+
   <div class="gallery-container">
-  
+
     {% comment %} <div class="gallery-title"><h1><center>Studio B</center></h1>{% endcomment %}
     <div class="gallery-featuring">Now Featuring:</div>
     <div class="gallery-subtitle"><h3>Super-G™ 150 <span style="color:#555">•</span> TOURnado™ WiMAX <span style="color:#555">•</span> Motif™ Atelier 16FX</h3> </div>
-  
+
 </div>
-  
+
 
   <div class="gallery-header">Photo Gallery 1</div>
 
 
-  
+
 
   <div class="gallery-pic-group-container"><div id="enap-gallery-41805"></div><div id="enap-gallery-popup-41805"></div><script src="https://enormapps.com/gallery/embed.js" data-id="41805"></script></div>
 
-  
+
   <div class="gallery-header">Watch Them Live in Action:</div>
-  
+
   <div class="video-responsive-container">
-  <div class="video-responsive">  
+  <div class="video-responsive">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AQsWJWcD_d0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   </div>
-  
+
     <div class="gallery-header">Photo Gallery 2</div>
-  
+
   <div class="gallery-pic-group-container"><div id="enap-gallery-41806"></div><div id="enap-gallery-popup-41806"></div><script src="https://enormapps.com/gallery/embed.js" data-id="41806"></script>
   </div>
-    
+
     <div class="gallery-closure-header">Click to learn more about these products.</div>
-  
-  
+
+
 {% comment %}
   Listing all tags within the current collection.
   Shopify uses product tags to manage subcategories inside collections.
-  See 'How do I create subcategories of products?' at 
+  See 'How do I create subcategories of products?' at
   http://bit.ly/1j1Dti4 for details.
 {% endcomment %}
 
@@ -123,7 +123,7 @@
     {{ tag | link_to_tag: tag }}
   </li>
   {% endif %}
-  {% endfor %}  
+  {% endfor %}
 </ul>
 {% endif %}
 
@@ -132,8 +132,8 @@
   {{ collection.description }}
 </div>
 {% endif %}
-  
-  
+
+
 
 <ul class="grid clearfix">
 {% for product in collection.products %}
@@ -142,7 +142,7 @@
   <p>There are no products in this view.</p>
 {% endfor %}
 </ul>
-   
+
 
 
 {% if paginate.pages > 1 %}
@@ -167,4 +167,3 @@ jQuery('.sort-by')
     location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
   });
 </script>
-

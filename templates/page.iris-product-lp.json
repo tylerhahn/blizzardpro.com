@@ -1,0 +1,236 @@
+{
+  "sections": {
+    "slider": {
+      "type": "landing-slider",
+      "blocks": {
+        "37be38c6-4078-4b66-8a84-8bf8d0285db1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tempslider-gt.jpg",
+            "video_url": "",
+            "img_width": 100,
+            "subheadline": "",
+            "subheadline_color": "#ffffff",
+            "headline": "",
+            "paragraph": "",
+            "headline_color": "#ffffff",
+            "main_cta_title": "",
+            "main_cta_url": "",
+            "main_cta_background_color": "#282bf6",
+            "main_cta_text_color": "#ffffff",
+            "sec_cta_title": "Learn More",
+            "sec_cta_background_color": "#282bf6",
+            "sec_cta_text_color": "#ffffff",
+            "sec_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "37be38c6-4078-4b66-8a84-8bf8d0285db1"
+      ],
+      "settings": {}
+    },
+    "lineup": {
+      "type": "iris-icon-block",
+      "blocks": {
+        "9a9a31f4-42b0-40ab-9644-a1b62487a333": {
+          "type": "image",
+          "settings": {
+            "icon_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "9a9a31f4-42b0-40ab-9644-a1b62487a333"
+      ],
+      "settings": {
+        "title": "Perfect for",
+        "background_color": "#000000",
+        "text_color": ""
+      }
+    },
+    "spec-viewer": {
+      "type": "iris-spec-viewer",
+      "blocks": {
+        "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iris-gt3-xl-right.png",
+            "image_featured": "shopify:\/\/shop_images\/gt3-xl.png",
+            "panel_name": "IRiS® GT3 XL",
+            "pixel_pitch": "3.9",
+            "module_resolution": "64x128",
+            "module_pixel_quantiy": "8192",
+            "module_dimensions": "250x500",
+            "module_pixel_config": "SMD 1921 3-in-1",
+            "application": "Outdoor",
+            "module_weight": "1.2",
+            "dimensions": "500x1000x80",
+            "resolution": "128x256",
+            "pixel_quantity": "32768",
+            "module_quantity": "2x2",
+            "material": "Aluminum Die Cast",
+            "weight": "13.8",
+            "maitenance_type": "Both front and rear",
+            "pixel_density": "65536",
+            "average_power_consumption": "267",
+            "max_power_consumption": "800",
+            "input_power": "1000",
+            "brightness": "4500",
+            "contrast": "5000:1",
+            "color_depth": "14",
+            "refresh_rate": "≥3840",
+            "frame_frequency": "50\/60",
+            "input_voltage": "110~220V AC",
+            "working_temp": "'-20℃~+50℃",
+            "working_humidity": "10%-90%RH",
+            "optimal_viewing_distance": "3.9-39",
+            "viewing_angle": "140°\/140°",
+            "ip_rating": "IP65\/IP54",
+            "curvature": "missing",
+            "lifespan": "100000",
+            "receiving_card": "A",
+            "grayscale": "missing",
+            "hdr": "missing",
+            "scan_mode": "missing",
+            "special_features": "missing",
+            "warranty": "7 Years*",
+            "FCC_Certification": true,
+            "ETL_Certification": true,
+            "CE_Certification": true,
+            "RoHS_Certification": false
+          }
+        },
+        "ea4181b2-aedd-4532-a918-d31c9a1be135": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iris-gt3-right.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-gt3.png",
+            "panel_name": "IRiS® GT3",
+            "pixel_pitch": "3.9",
+            "module_resolution": "64x128",
+            "module_pixel_quantiy": "8192",
+            "module_dimensions": "250x500",
+            "module_pixel_config": "SMD 921 3-in-1",
+            "application": "Outdoor",
+            "module_weight": "1.2",
+            "dimensions": "500x500x80",
+            "resolution": "128x256",
+            "pixel_quantity": "32768",
+            "module_quantity": "2x2",
+            "material": "Aluminum Die Cast",
+            "weight": "8.5",
+            "maitenance_type": "Both front and rear",
+            "pixel_density": "65536",
+            "average_power_consumption": "267",
+            "max_power_consumption": "800",
+            "input_power": "1000",
+            "brightness": "4500",
+            "contrast": "5000:1",
+            "color_depth": "14",
+            "refresh_rate": "≥3840",
+            "frame_frequency": "50\/60",
+            "input_voltage": "110~220V AC",
+            "working_temp": "-20℃~+50℃",
+            "working_humidity": "10%-90%RH",
+            "optimal_viewing_distance": "3.9-39",
+            "viewing_angle": "140°\/140°",
+            "ip_rating": "IP65\/IP54",
+            "curvature": "missing",
+            "lifespan": "100000",
+            "receiving_card": "missing",
+            "grayscale": "missing",
+            "hdr": "missing",
+            "scan_mode": "missing",
+            "special_features": "missing",
+            "warranty": "7 Years*",
+            "FCC_Certification": true,
+            "ETL_Certification": true,
+            "CE_Certification": true,
+            "RoHS_Certification": false
+          }
+        }
+      },
+      "block_order": [
+        "5cc96fa1-445d-466d-9665-73c8d674d9ee",
+        "ea4181b2-aedd-4532-a918-d31c9a1be135"
+      ],
+      "settings": {
+        "background_color_1": "#000000",
+        "background_color_2": "#303030",
+        "spec_color_1": "#131313",
+        "spec_color_2": "#181818",
+        "text_color": "#b3b3b3",
+        "large_text_color": "#11c685"
+      }
+    },
+    "col": {
+      "type": "three-col",
+      "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 1
+      }
+    },
+    "grid": {
+      "type": "product-hero-grid",
+      "settings": {
+        "height": 50,
+        "product_color": "",
+        "product_title": "",
+        "product_paragraph": "",
+        "product_url_title": "Shop ›",
+        "product_url": "",
+        "box_1_paragraph": "",
+        "box_2_paragraph": "",
+        "box_2_color": "",
+        "box_3_paragraph": "",
+        "box_3_color": "",
+        "box_4_paragraph": "",
+        "box_4_color": ""
+      }
+    },
+    "scroller": {
+      "type": "fullwidth-scroller",
+      "settings": {
+        "video_url": "",
+        "headline": "",
+        "subheadline": "",
+        "cta_title": "",
+        "cta_url": ""
+      }
+    },
+    "form": {
+      "type": "iris-lg-form",
+      "settings": {
+        "form_id": "",
+        "form_title": "",
+        "background_color": "#000000",
+        "input_background": "#000000",
+        "input_border": "#000000",
+        "label_color": "#000000",
+        "btn_color": "#000000",
+        "btn_background": "#ffffff"
+      }
+    },
+    "image": {
+      "type": "center-image-hero",
+      "settings": {
+        "title": "",
+        "paragraph": "",
+        "cta_title": "",
+        "cta_url": ""
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "lineup",
+    "spec-viewer",
+    "col",
+    "grid",
+    "scroller",
+    "form",
+    "image"
+  ]
+}

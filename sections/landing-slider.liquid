@@ -1,0 +1,218 @@
+<div class="bl-slider">
+    {% for block in section.blocks %}
+    <div class="bl-slide" onclick="javascript:location.href='{{block.settings.main_cta_url}}'">
+      <div class="bl-caption">
+        {% if block.settings.logo != blank %}
+          <img class="bl-slider-logo" style="width: {{block.settings.img_width}}%" src={{block.settings.logo | img_url: 'master'}} />
+        {% endif %}
+       <div class="bl-text-caption">
+        <h3 style="color: {{block.settings.subheadline_color}}">{{block.settings.subheadline}}</h3>
+        <h2 style="color: {{block.settings.headline_color}}">{{block.settings.headline}}</h2>
+        {% if block.settings.paragraph != blank %}
+          <p>{{block.settings.paragraph}}</p>
+        {% endif %}
+       </div>
+        {% if block.settings.main_cta_url != blank %}
+          <div class="bl-btn-group">
+            {% if block.settings.main_cta_title != blank%}
+            <a class="btn btn-simple" style="color: {{block.settings.main_cta_text_color}} !important; background-color: {{block.settings.main_cta_background_color}} !important" href="{{block.settings.main_cta_url}}">{{block.settings.main_cta_title}}</a>
+            {% endif %}
+          {% if block.settings.sec_cta_url != blank %}
+            <a class="btn btn-simple" style="color: {{block.settings.sec_cta_text_color}}; background-color: {{block.settings.sec_cta_background_color}} !important" href="{{block.settings.sec_cta_url}}">{{block.settings.sec_cta_title}}</a>
+          {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if block.settings.video_url != blank %}
+      {% if block.settings.video_url.type == 'youtube' %}
+        <div class="video-background">
+          <div class="video-foreground">
+            <iframe src="https://www.youtube.com/embed/{{block.settings.video_url.id}}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      {% elsif block.settings.video_url.type == 'vimeo' %}
+        <div class="vimeo-wrapper">
+        <iframe src="https://player.vimeo.com/video/{{block.settings.video_url.id}}?background=1&autoplay=1&loop=1&byline=0&title=0"
+        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      {% endif %}
+      {% endif %}
+      <img class="slide-img" src="{{block.settings.image | img_url: 'master'}}">
+      {% if block.settings.image_mobile %}
+      <img class="slide-img-mobile" src="{{block.settings.image_mobile | img_url: 'master'}}">
+    {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Image Slider",
+    "max_blocks": 10,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image Slider"
+      }
+    ],
+
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Slider",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (smaller devices)"
+          },
+          {
+            "id": "video_url",
+            "type": "video_url",
+            "label": "Video URL",
+            "accept": ["youtube", "vimeo"]
+          },
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Image/Logo"
+          },
+          {
+            "type": "range",
+            "id": "img_width",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "label": "Image Width",
+            "default": 100
+        },
+          {
+            "type": "text",
+            "id": "subheadline",
+            "label": "Sub Headline"
+          },
+          {
+            "type": "color",
+            "id": "subheadline_color",
+            "label": "Sub Headline type color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "text",
+            "id": "headline",
+            "label": "Headline"
+          },
+          {
+            "type": "textarea",
+            "id": "paragraph",
+            "label": "Paragraph Text"
+          },
+          {
+            "type": "color",
+            "id": "headline_color",
+            "label": "Headline type color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "text",
+            "id": "main_cta_title",
+            "label": "Main CTA Title"
+          },
+          {
+            "type": "url",
+            "id": "main_cta_url",
+            "label": "Main CTA URL"
+          },
+          {
+            "type": "color",
+            "id": "main_cta_background_color",
+            "label": "Main CTA Background color",
+            "default": "#282bf6"
+          },
+          {
+            "type": "color",
+            "id": "main_cta_text_color",
+            "label": "Main CTA Text color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "text",
+            "id": "sec_cta_title",
+            "label": "Secondary CTA Title",
+            "default": "Learn More"
+          },
+          {
+            "type": "color",
+            "id": "sec_cta_background_color",
+            "label": "Secondary CTA Background color",
+            "default": "#282bf6"
+          },
+          {
+            "type": "color",
+            "id": "sec_cta_text_color",
+            "label": "Secondary CTA Text color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "url",
+            "id": "sec_cta_url",
+            "label": "Secondary CTA URL"
+          }
+        ]
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Image Slider",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
+
+
+{% if section.blocks[0].settings.image_mobile != blank %}
+  <style>
+  .slide-img-mobile{
+    display: none !important;
+  }
+
+      @media screen and (max-width: 768px) {
+        .slide-img-mobile{
+    display: inherit !important;
+  }
+
+
+    .bl-slider .slick-slide img.slide-img{
+      display: none !important;
+    }
+      }
+  </style>
+{% endif %}
+
+<script>
+
+
+$(".bl-slider").slick({
+    centerMode: true,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+  });
+
+</script>

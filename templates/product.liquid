@@ -1,8 +1,10 @@
 {% assign current_variant = product.selected_variant %}
-{% assign add_to_cart = 'Add to Cart' %} {% assign sold_out = 'Out of Stock' %} {% assign unavailable = 'Unavailable' %}
+{% assign add_to_cart = 'Add to Cart' %}
+{% assign sold_out = 'Out of Stock' %}
+{% assign unavailable = 'Unavailable' %}
 
 {% if product.metafields.c_f.Preorder_Date %}
-{% assign add_to_cart = 'Pre-order Now' %}
+    {% assign add_to_cart = 'Pre-order Now' %}
 {% endif %}
 {% include 'sticky-contact' %}
 <style>
@@ -21,36 +23,7 @@
 </style>
 
 
-<script>
-  function adjustQty(qty,) {
-    $('.num-in span').click(function () {
-      var $input = $(this).parents('.rounded-qty').find('input.in-num');
-      var count = parseFloat($input.val()) - 1;
 
-      if($(this).hasClass('minus')) {
-        count = count < 1 ? 1 : count;
-        if (count < 2) {
-          $(this).addClass('dis');
-        }
-        else {
-          $(this).removeClass('dis');
-        }
-        $input.val(count);
-      }
-      else if (count < qty - 1) {
-        var count = parseFloat($input.val()) + 1;
-
-        $input.val(count);
-        if (count > 1) {
-          $(this).parents('.num-block').find(('.minus')).removeClass('dis');
-        }
-      }
-
-      $input.change();
-      return false;
-    });
-  }
-</script>
 
 
 <div id="alt-inventory">
@@ -184,28 +157,9 @@
           {{ product.metafields.c_f.Main_Features }}
         </ul>
         {% endif %}
-        {% if product.tags contains 'en route' %}
-        <div class="notify-me">
-                  <div class="notify-me-email">
-          <div class="notify-me-container">
-            <p class="info-box">
-            	This product is temporarily unavailable. Place your order with the shipping date below; get notified when it's back in stock; or buy from an authorized reseller.
-            </p>
-            <!--[if lte IE 8]>
-            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-            <![endif]-->
-            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-            <script>
-              hbspt.forms.create({
-                portalId: "4135982",
-                formId: "7ec1b63b-8d6a-450d-92b9-f65fd32f6e4e"
-              });
-            </script>
-          </div>
-        </div>
-        </div>
 
-        {% endif %}
+        {% include 'notify-me' %}
+
         {% if product.metafields.c_f.Preorder_Date %}
         <p class="shipbydate">Expected Shipping Date: {{ product.metafields.c_f.Preorder_Date }}</p>
         {% endif %}
@@ -224,13 +178,6 @@
         {% else %}
         {% endunless %}
 
-        {% if product.metafields.c_f.Preorder_Date %}
-        {% elsif product.available %}
-        {% if product.tags contains 'en route' %}
-        {% else %}
-        <div class="shipping-info"><i class="fas fa-shipping-fast"></i> {% if product.metafields.c_f.Ship_Date_Estimate %}{{product.metafields.c_f.Ship_Date_Estimate}}{% elsif product.tags contains 'en route' %}Ships in 2-3 Weeks {% else %} Usually Ships Same Day{% endif %}</div>
-        {% endif %}
-		{% endif %}
         <div class="shipping-info"><i class="fas fa-check"></i> Tested for Quality</div>
 
       </div>
@@ -563,53 +510,3 @@ product.selected_or_first_available_variant.featured_image | default:
 
 
       </script>
-
-
-
-{{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
-<script>
-
-$('.num-in span').click(function () {
-      var $input = $(this).parents('.rounded-qty').find('input.in-num');
-      var count = $input.val();
-      var newVal = 0;
-
-      if($(this).hasClass('minus')) {
-        console.log(count);
-        if(count > 0) {
-          newVal = parseFloat(count) - 1;
-        }
-      }
-      else  {
-        newVal = parseFloat(count) + 1;
-      }
-      $input.val(parseFloat(newVal));
-    });
-
-  var selectCallback = function(variant, selector) {
-    timber.productPage({
-      money_format: "{{ shop.money_format }}",
-      variant: variant,
-      selector: selector
-    });
-
-    {% for variant in product.variants %}
-    {% unless variant.available %}
-
-    jQuery('.single-option-selector option[value={{variant.title | json}}]').hide();
-    {% endunless %}
-  {% endfor %}
-
-  };
-  jQuery(function($) {
-    new Shopify.OptionSelectors('productSelect', {
-      product: {{ product | json }},
-      onVariantSelected: selectCallback,
-      enableHistoryState: true
-    });
-  });
-
-
-
-</script>

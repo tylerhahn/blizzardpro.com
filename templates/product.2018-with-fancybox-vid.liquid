@@ -24,7 +24,7 @@
   div#inline {
     padding: 10px;
 }
-  
+
 
 	.features {
 		text-align: left;
@@ -148,7 +148,7 @@
 
 		<h5 class="bts"><a href="{{ collection.url }}">Back</a></h5>
 
-		<div data-aos="fade-up" class="flex-container">
+		<div  class="flex-container">
 
 			<ul class="tagger">
 				{% for tag in product.tags %}
@@ -873,7 +873,7 @@ Download</a>
               <p>{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' }}</p>
              </li></a>
          {% endif %}
-             
+
          {% if product.tags contains 'testing results' %}
             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_testing_results.pdf' | file_url }}"><li>
               <img class="lazy" data-original="{{ 'manual.png' | asset_url }}">

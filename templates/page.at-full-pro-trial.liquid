@@ -1,0 +1,31 @@
+<div id="at-full-dl">
+
+    <div class="container">
+        <img class="full-logo" src="{{ "at-full-logo-pro-horizontal-for-dark-background.png" | asset_img_url: 'master'}}"/>
+        <h2 id="main-offer">Redeem your FREE 30-day trial of At Full™ Pro!<br/>Select your OS:</h2>
+        <div class="btn-group">
+            <div class="bl-btn-group">
+                <a class="btn btn-simple" href="https://api.blizzard.lighting/at-full/redeem?code=blizz21&type=android" style="color: #000000 !important; background-color: rgba(0,0,0,0) !important" tabindex="0" target="_blank">
+                    <img class="app-icon" src="//cdn.shopify.com/s/files/1/1741/5055/files/android.png?v=1613746047">
+                </a>
+
+                <a class="btn btn-simple" href="https://api.blizzard.lighting/at-full/redeem?code=blizz21&type=ios" style="color: #000000; background-color: rgba(0,0,0,0) !important" tabindex="0" target="_blank">
+                    <img class="app-icon" src="//cdn.shopify.com/s/files/1/1741/5055/files/ios.png?v=1613746046">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const jko290aTTkKL = urlParams.get("jko290aTTkKL");
+    if (jko290aTTkKL === "jko290aTTkKL") {
+        $("#at-full-dl").fadeIn("fast");
+    } else {
+        $("#at-full-dl .btn-group").hide()
+        $("#main-offer").text("Sorry this offer is currently unavailable.")
+
+    }
+</script>

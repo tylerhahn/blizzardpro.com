@@ -5,7 +5,7 @@
   <div id="customer">
 
 	  <!-- Create Customer -->
-	  <div id="create-customer" data-aos="flip-right">
+	  <div id="create-customer" >
            <h1>Create an Account</h1>
 	    <div class="template_header">
 	    </div>
@@ -67,33 +67,33 @@
   checker.onchange = function() {
 
     sendbtn.disabled = !this.checked;
-    
-    
+
+
   };
 
-  
+
      function check_same(){
-	
+
 	 var sendbtn = document.getElementById('create-btn');
 	 var first_name = document.getElementById('first_name').value;
 	 var last_name = document.getElementById('last_name').value;
-	 
+
 	 // alert('The name is: '+first_name+' '+last_name);
-	 
+
 	 if(first_name == last_name){
 	 sendbtn.disabled = true;
-     // alert('The first and last names are the same!'); 
+     // alert('The first and last names are the same!');
      return false;
 	 }
-	 
+
 	 else{
-     // alert('The names are the different so we now we submit!'); 
+     // alert('The names are the different so we now we submit!');
      sendbtn.disabled = false;}
 	 }
-  
-    
+
+
   </script>
-  
+
 
   <style type="text/css">
 input[name="confirm"]{

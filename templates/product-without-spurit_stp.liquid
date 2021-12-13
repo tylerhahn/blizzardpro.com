@@ -27,7 +27,7 @@
   div#inline {
     padding: 10px;
   }
-  
+
   @media only screen and (max-width: 1000px) {
     .phone-video video, .phone-video{
       height: 600px;
@@ -164,7 +164,7 @@
 
 		<h5 class="bts"><a href="{{ collection.url }}">Back</a></h5>
 
-		<div data-aos="fade-up" class="flex-container">
+		<div  class="flex-container">
 
 			<ul class="tagger">
 				{% for tag in product.tags %}
@@ -230,13 +230,13 @@
           {% else %}
 
 			<a class="btn btn-outline gray" href="#modal-one">Buy</a>
-          
+
                                             {% if product.metafields.c_f.Preorder_Date %}
-               
+
                   <p class="shipbydate">Expected Shipping Date: {{ product.metafields.c_f.Preorder_Date }}</p>
                   {% endif %}
-          
-                             
+
+
           {% endif %}
 
 
@@ -904,7 +904,7 @@ Download</a>
               <p>{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' }}</p>
              </li></a>
          {% endif %}
-             
+
          {% if product.tags contains 'testing results' %}
             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_testing_results.pdf' | file_url }}"><li>
               <img class="lazy" data-original="{{ 'manual.png' | asset_url }}">
@@ -930,7 +930,7 @@ Download</a>
               <p>{{ product.url | remove: "/products/" | append: '_cheat_sheet.pdf' }}</p>
              </li></a>
          {% endif %}
-             
+
            </div>
       	  </div>
   </section>
@@ -951,4 +951,3 @@ $('.welp' ).wrap ("<a id='fix'></a>");
   }
 
 </script>
-

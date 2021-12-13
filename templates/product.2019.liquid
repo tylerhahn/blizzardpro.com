@@ -108,7 +108,7 @@
 <a data-scroll href="#specifications">Product Specs</a>
 </div>
 </ul> -->
-  <!--   
+  <!--
 <div class="buybar">
 <div class="flex-container">
 
@@ -217,7 +217,7 @@
       }}</del
             >{% endif %}</h3>
       </div>
-      
+
       {% assign showInventory == false %}
       {% for variant in product.variants %}
       {% if variant.title == 'Refurbished' or variant.title == 'Like New' %}
@@ -226,7 +226,7 @@
       {% endif %}
       {% endif %}
       {% endfor %}
-      
+
                        {% for variant in product.variants %}
           	         {% if variant.title == 'Like New' or variant.title == 'Refurbished' %}
               {% if variant.available %}
@@ -234,14 +234,14 @@
           {% endif %}
           {% endif %}
           {% endfor %}
-   
-      
+
+
 
       {% if secondaryInventory > 0 %}
       {% assign secondaryInventory = 0 %}
       <div class="other-inventory">
         <h5>
-   
+
           Other buying options
           <span class="reset">from </span> <span>{{product.price_min | money}}</span>
         </h5>
@@ -286,7 +286,7 @@
       {% unless product.available %}
       {% else %}
       {% endunless %}
-      
+
       {% if product.metafields.c_f.Preorder_Date %}
       {% elsif product.available %}
       <div class="shipping-info"><i class="fas fa-shipping-fast"></i> Usually Ships Same Day</div>
@@ -598,9 +598,9 @@ product.selected_or_first_available_variant.featured_image | default:
       {% endif %}
 
 
-    </div> 
+    </div>
 
-    <div class="flex-container" data-aos="fade-down">
+    <div class="flex-container" >
 
       {% if product.metafields.c_f.General_Specs %}
       <div class="spec-item">
@@ -821,7 +821,7 @@ product.selected_or_first_available_variant.featured_image | default:
       </div>
       {% endif %}
 
-    </div> 
+    </div>
 
   </section>
 
@@ -840,7 +840,7 @@ product.selected_or_first_available_variant.featured_image | default:
   <div class="download-tab">
 
     <div class="flex-container">
-      
+
             {% if product.title contains 'Eclipse' %}
       <a target="_blank" href="https://firebasestorage.googleapis.com/v0/b/dealerportal-2fb18.appspot.com/o/EclipseDMX%20Setup-62020.exe?alt=media&token=055007e8-cd32-42fa-8e5f-9d76d98ccdea">
         <li>
@@ -1042,7 +1042,7 @@ http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-prod
 
 <script>
   jQuery(document).ready(function($) {
-    
+
     $(document).keyup(function(e) {
 
       if (e.keyCode === 27) {
@@ -1063,7 +1063,7 @@ http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-prod
       $('.inventory-sidebar').removeClass('active');
 
     });
-    
+
     var variantCallback = function(variant, selector) {
       // The variant selected by customer, you can do what you wish with the object
       // Update the price, change the images, etc
@@ -1115,5 +1115,3 @@ http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-prod
   }
 
 </script>
-
-

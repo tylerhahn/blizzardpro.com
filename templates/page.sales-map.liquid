@@ -1,55 +1,34 @@
-<!-- /templates/page.liquid -->
-<style>
-.loc-web {
-    pointer-events: none;
-}
-</style>
-<div class="bh-sl-container">
-  <div class="bh-sl-form-container">
+<div class="storelocator">
+  <div class="storelocator-loader"></div>
+  <div class="storelocator-sidebar">
+      <nav class="storelocator-nav">
+          <ul class="storelocator-navList">
+              <li class="storelocator-navListItem active">
+                  <button class="storelocator-navButton" data-switch-view data-target="map">
+                      Map
+                  </button>
+              </li>
+              <li class="storelocator-navListItem">
+                  <button class="storelocator-navButton" data-switch-view data-target="list">
+                      List
+                  </button>
+              </li>
+          </ul>
+      </nav>
+      <div class="storelocator-sidebarResults"></div>
   </div>
-
-  <div id="bh-sl-map-container" class="bh-sl-map-container">
-
-    <div id="bh-sl-map" class="bh-sl-map"></div>
-    <div class="bh-sl-loc-list">
-<!--       <div class="mapSelect">
-        <a href="{{ 'location-list-description.html' | asset_url }}">test</a>
-        <a class="mapBtn active">Retailers</a>
-        <a href="/pages/tin-lineup" class="mapBtn">Resellers</a>
-      </div> -->
-      <form id="bh-sl-user-location" method="post" action="#">
-                    <label for="bh-sl-address">Enter Address or Zip Code:</label>
-
-          <div class="flex-container">
-            <div class="form-input">
-            <input type="text" id="bh-sl-address" name="bh-sl-address" />
-          </div>
-
-            <button class="btn-blue" type="submit">Search</button></div>
-      </form>
-      <ul class="list"></ul>
-    </div>
+  <div class="storelocator-googleMaps active">
+      <div id="storelocator-googleMapsCanvas"></div>
+      <button class="storelocator-geolocButton"></button>
   </div>
 </div>
 
-<style>
-.main-content{
-  padding-top: 72px;
-  width: 100%;
-  max-width: none;
-}
-</style>
+<link rel="stylesheet" href="storelocator.css" />
+<script src="storelocator.js"></script>
 
-
-		<script>
-          
-          jQuery(function($){
-				    $('#bh-sl-map-container').storeLocator({
-      dataType: 'json',
-      maxDistance: false,
-      slideMap : false,
-      autoGeocode: true,
-      dataLocation: 'https://script.google.com/macros/s/AKfycbwEblTR-nX3lUSxSVjpcKlmmBy8R-pgRkbfYkVVwXNzcai1P1hY/exec',
-        });});
-          
-		</script>
+<script>
+    new storelocatorjs({
+        apiKey: ''
+        webSerciceUrl: ''
+    });
+</script>

@@ -1,0 +1,72 @@
+{% assign metafield = product.metafields.f_b %}
+
+<div class="archi-spec-box">
+
+
+
+    {% if metafield.LED_Type != blank %}
+        <div class="archi-item">
+            <h3 class="prod-header">LED Type</h3>
+            <div class="led-colors">
+                {{ ledType }}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if metafield.Certifications != blank %}
+        <div class="archi-item">
+            <h3 class="prod-header">Certifications</h3>
+            <div class="certifications">
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="arch-warranty"></div>
+
+    {% if product.metafields.f_b.Optical %}
+        <div class="archi-item">
+            <h3 class="prod-header">Optical</h3>
+            <p>{{ product.metafields.f_b.Optical }}</p>
+        </div>
+    {% endif %}
+
+</div>
+
+<script>
+
+$('#warranty-info p').each(function() {
+        const paragraph = $(this).text();
+        if(paragraph.includes("2-year")) {
+            console.log('yo')
+            {% assign has2YearWarranty = true %}
+        }
+})
+
+    let ledColors = {{ metafield.LED_Type }};
+
+    ledColors.map(color => {
+        const el =  `<span class="led ledcolor-${color}"></span>`;
+        $('.led-colors').append(el)
+    });
+
+    let certs = {{ metafield.Certifications }};
+
+    function getCertImage(cert) {
+        if(cert === 'ETL') {
+            return "{{ 'etl.png' | asset_url }}"
+        } else if (cert === 'CE') {
+            return "{{ 'ce.png' | asset_url }}"
+        } else if (cert === 'RoHS') {
+            return "{{ 'rohs.png' | asset_url }}"
+        } else if (cert === 'IP65') {
+            return "{{ 'ip65.png' | asset_url }}"
+        }
+    }
+
+    certs.map(o => {
+        const el =  `<span class="cert"><img src="${getCertImage(o)}" /></span>`;
+        $('.certifications').append(el)
+    });
+
+
+</script>

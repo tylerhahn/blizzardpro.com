@@ -1,0 +1,67 @@
+<div id="icon-block">
+    <div class="flex-container">
+        <div class="icon-title">{{ section.settings.title }}</div>
+        <div class="block-list">
+            {% for block in section.blocks %}
+                <h4>{{ block.settings.icon_title }}</h4>
+                <img src="{{ block.settings.icon }}" />
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+    #icon-block {
+        background-color: {{ section.settings.background_color }};
+    }
+    .icon-title {
+        color: {{ section.settings.text_color }};
+    }
+</style>
+
+{% schema %}
+{
+    "name":  "Icons",
+    "max_blocks": 4,
+    "settings": [
+    {
+        "type":"header",
+        "content":"Boxes"
+     },
+        {
+        "type": "text",
+        "id": "title" ,
+        "label": "Title"
+        },
+        {
+            "type":"color",
+            "id":"background_color",
+            "label":"Background Color"
+        },
+        {
+         "type": "color",
+         "id": "text_color" ,
+         "label": "Text color"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Icons",
+            "settings": [
+            {
+                "type": "textarea",
+                "id": "icon_title" ,
+                "label": "Icon title"
+                },
+                {
+                 "type": "image_picker",
+                 "id": "icon" ,
+                 "label": "Icon"
+                }
+            ]
+        }
+
+    ]
+}
+{% endschema %}

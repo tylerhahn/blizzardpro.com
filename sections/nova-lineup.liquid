@@ -1,0 +1,130 @@
+<div class="bl-pl-{{ section.id }} container-fluid max" id="bl-pl" style="overflow-x: hidden;">
+    <h2 class="bl-h2 text-center">{{ section.settings.header_title }}</h2>
+    <div class="row">
+        {% for block in section.blocks %}
+            <div class="bl-{{ section.id }} bl-pl-box col-sm mx-{{
+                          section.settings.h_gutter
+                        }}" onclick="javascript:location.href='{{ block.settings.url }}'" style="background-color:{{ section.settings.box_color }}">
+                <div class="bl-img-container">
+                    <img {% if section.settings.max_width != blank %} style="max-width: {{section.settings.max_width}}px" {% endif %} class="p-3" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}"/>
+                </div>
+                {% if block.settings.title != blank %}
+                    <h4 class="text-center pb-1">{{ block.settings.title }}</h4>
+                {% endif %}
+                {% if block.settings.paragraph != blank %}
+                    <p class="text-center pb-1">{{ block.settings.paragraph }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Product Lineup",
+    "max_blocks": 10,
+    "settings": [
+        {
+            "type": "header",
+            "content": "Product Lineup"
+        }, {
+            "type": "text",
+            "id": "header_title",
+            "label": "Section Title"
+        }, {
+            "type": "range",
+            "id": "h_gutter",
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "label": "Horizontal Gutter",
+            "default": 3
+        }, {
+            "type": "text",
+            "id": "max_width",
+            "label": "Images Max Width"
+        }, {
+            "type": "color",
+            "id": "box_color",
+            "label": "Box Color",
+            "default": "#ffffff"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Product",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }, {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }, {
+                    "type": "textarea",
+                    "id": "paragraph",
+                    "label": "Paragraph"
+                }, {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Lineup",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}
+
+<style>
+
+
+        .bl-pl-box a{
+            color: black;
+        }
+
+        .bl-pl-box h4{
+            font-weight: 500;
+            font-family: "Source Sans Pro", sans-serif';
+        }
+        .bl-img-container {
+        height: 190px;
+        display: flex;
+        align-items: center;
+    }
+
+        .bl-pl-box img {max-height: 183px;display: flex;margin: 0 auto;}
+  </style>
+
+  <script>
+    gsap.set(".bl-{{section.id}}", {
+      y: 100,
+      opacity: 0,
+    });
+    gsap.to(".bl-{{section.id}}", {
+      y: 0,
+      opacity: 1,
+      stagger: {
+        amount: 1.5,
+        ease: "power3.out",
+      },
+      scrollTrigger: {
+        trigger: ".bl-pl-{{section.id}}",
+        start: "top 100%",
+        end: "+=300",
+        scrub: 1,
+        duration: 2.5,
+        ease: "power3.out",
+      },
+    });
+  </script>

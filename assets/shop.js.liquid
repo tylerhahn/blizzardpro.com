@@ -3,11 +3,22 @@
 /*============================*/
 
 $(document).ready(function () {
-  if ($("#WbzFIAODYQum").height() > 1) {
-    console.log("No Adblocker!!");
-  } else {
-    console.log("An adblocker was detected!!");
-  }
+  bodymovin.loadAnimation({
+    container: document.getElementById("lottie"), // Required
+    path: "https://assets2.lottiefiles.com/packages/lf20_OT15QW.json", // Required
+    renderer: "svg/canvas/html", // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+  });
+
+  $(document).on("click", (e) => {
+    if (!$(e.target).is(".dropdown-toggle")) {
+      $(".dropdown-menu").fadeOut("fast");
+    }
+  });
+  $(".dropdown-toggle").on("click", function (e) {
+    $(".dropdown-menu").fadeIn("fast");
+  });
 
   $("select.cbb-recommendations-variant-select").val("1");
   $(".product-name:contains('- Dealer')").html(function (_, html) {
@@ -100,6 +111,30 @@ $(".slide-title").each(function () {
     // ignore extra/cloned slides
     $(this).attr("id", $slide.attr("aria-describedby"));
   }
+});
+
+function addItemToCart(id, qty, redirect) {
+  CartJS.addItem(
+    id,
+    qty,
+    {},
+    {
+      success: function (data, textStatus, jqXHR) {
+        if (redirect) {
+          window.location.href = "/cart";
+        } else {
+          console.log("added: " + id);
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("err");
+      },
+    }
+  );
+}
+
+$(".main-cta-col").on("click", function () {
+  addItemToCart($(this).attr("data-variantId"), 1, false);
 });
 
 $(".buy-alt").click(function () {
@@ -917,10 +952,10 @@ $(".tabs li a").on("click", function () {
 });
 
 //AOS
-AOS.init({
-  duration: 1200,
-  disable: "mobile",
-});
+// AOS.init({
+//   duration: 1200,
+//   disable: "mobile",
+// });
 
 //Mega Menu
 

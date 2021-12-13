@@ -1,4 +1,4 @@
- {%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
 
 
 {% assign add_to_cart = 'Add to Cart' %} {% assign sold_out = 'Sold Out' %} {% assign unavailable = 'Unavailable' %}
@@ -108,7 +108,7 @@
 <a data-scroll href="#specifications">Product Specs</a>
 </div>
 </ul> -->
-  <!--   
+  <!--
 <div class="buybar">
 <div class="flex-container">
 
@@ -217,7 +217,7 @@
       }}</del
             >{% endif %}</h3>
       </div>
-      
+
       {% assign showInventory == false %}
       {% for variant in product.variants %}
       {% if variant.title == 'Refurbished' or variant.title == 'Like New' %}
@@ -226,7 +226,7 @@
       {% endif %}
       {% endif %}
       {% endfor %}
-      
+
                        {% for variant in product.variants %}
           	         {% if variant.title == 'Like New' or variant.title == 'Refurbished' %}
               {% if variant.available %}
@@ -234,14 +234,14 @@
           {% endif %}
           {% endif %}
           {% endfor %}
-   
-      
+
+
 
       {% if secondaryInventory > 0 %}
       {% assign secondaryInventory = 0 %}
       <div class="other-inventory">
         <h5>
-   
+
           Other buying options
           <span class="reset">from </span> <span>{{product.price_min | money}}</span>
         </h5>
@@ -254,9 +254,7 @@
       </ul>
       {% endif %}
 
-      {% if product.metafields.c_f.Preorder_Date %}
-      <p class="shipbydate">Expected Shipping Date: {{ product.metafields.c_f.Preorder_Date }}</p>
-      {% endif %}
+
       <form action="/cart/add" method="post">
 
         <select id="product-select" name="id">
@@ -286,7 +284,7 @@
       {% unless product.available %}
       {% else %}
       {% endunless %}
-      
+
       {% if product.metafields.c_f.Preorder_Date %}
       {% elsif product.available %}
       <div class="shipping-info"><i class="fas fa-shipping-fast"></i> Usually Ships Same Day</div>
@@ -598,9 +596,9 @@ product.selected_or_first_available_variant.featured_image | default:
       {% endif %}
 
 
-    </div> 
+    </div>
 
-    <div class="flex-container" data-aos="fade-down">
+    <div class="flex-container" >
 
       {% if product.metafields.c_f.General_Specs %}
       <div class="spec-item">
@@ -821,7 +819,7 @@ product.selected_or_first_available_variant.featured_image | default:
       </div>
       {% endif %}
 
-    </div> 
+    </div>
 
   </section>
 
@@ -1032,7 +1030,7 @@ http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-prod
 
 <script>
   jQuery(document).ready(function($) {
-    
+
     $(document).keyup(function(e) {
 
       if (e.keyCode === 27) {
@@ -1053,7 +1051,7 @@ http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-prod
       $('.inventory-sidebar').removeClass('active');
 
     });
-    
+
     var variantCallback = function(variant, selector) {
       // The variant selected by customer, you can do what you wish with the object
       // Update the price, change the images, etc
@@ -1105,5 +1103,3 @@ http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-prod
   }
 
 </script>
-
-

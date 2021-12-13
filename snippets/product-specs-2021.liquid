@@ -1,152 +1,250 @@
 {% assign firstVariant = product.variants.first %}
-<section id="specifications" >
+{% assign ignoredVariants = "Refurbished Like New" %}
 
-  {% include 'steam-specs' %}
+<section id="specifications">
+
+    {% include 'steam-specs' %}
 
     <div class="row">
 
-      {% if product.metafields.f_b.General_Specs %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon-15.svg' | asset_url }}">
-        <h4>Overview</h4>
+        {% if product.tags contains 'cables' and product.metafields.f_b.Tech_Specs != blank  %}
+
+        <div class="col-12 mb-5 spec-item">
+            <div class="d-flex">
+                <img src="{{ 'user-robot-regular.svg' | asset_url }}">
+                <h4>Tech Specs</h4>
+            </div>
+            <p>{{ product.metafields.f_b.Tech_Specs }}</p>
+            <p></p>
         </div>
-        <p>{{ product.metafields.f_b.General_Specs | newline_to_br }}<p>
-      </div>
-      {% endif %}
 
-      {% if product.metafields.f_b.Tech_Specs %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'user-robot-regular.svg' | asset_url }}">
-        <h4>Tech Specs</h4>
+        {% endif %}
+
+        {% if product.metafields.f_b.General_Specs %}
+            {% if product.metafields.f_b.Basic_Product != 1 %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                {% else %}
+                    <div class="col-12 mb-5 spec-item spec-full-width">
+                    {% endif %}
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon-15.svg' | asset_url }}">
+                        <h4>Overview</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.General_Specs }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+            {% if product.metafields.f_b.Tech_Specs %}
+                {% if product.tags contains 'cables' %}
+                {% else %}
+                    <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                        <div class="d-flex">
+                            <img src="{{ 'user-robot-regular.svg' | asset_url }}">
+                            <h4>Tech Specs</h4>
+                        </div>
+                        <p>{{ product.metafields.f_b.Tech_Specs }}</p>
+                        <p></p>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+
+            {% if product.metafields.f_b.Optical %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon-05.svg' | asset_url }}">
+                        <h4>Optical</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.Optical }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+
+            {% if product.metafields.f_b.In_the_Box %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon--09.svg' | asset_url }}">
+                        <h4>In the Box</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.In_the_Box }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+
+            {% if product.metafields.f_b.Movement %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon--01.svg' | asset_url }}">
+                        <h4>Movement</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.Movement }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+
+            {% if product.metafields.f_b.Wireless_Receiver %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon--03.svg' | asset_url }}">
+                        <h4>Wireless Receiver</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.Wireless_Receiver }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+            {% if product.metafields.f_b.Connectors %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon--07.svg' | asset_url }}">
+                        <h4>Connectors</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.Connectors }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+
+            {% if product.metafields.f_b.System_Requirements %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon--08.svg' | asset_url }}">
+                        <h4>System Reqs</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.System_Requirements }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+            {% if product.metafields.f_b.Rigging_&_Application %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon-22.svg ' | asset_url }}">
+                    </div>
+                    <h4>Rigging</h4>
+                    <p>{{ product.metafields.f_b.Rigging_&_Application }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+
+            {% if product.metafields.f_b.Control %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon-01.svg' | asset_url }}">
+                        <h4>Control</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.Control }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+            {% if product.metafields.f_b.Power_and_Current %}
+                <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon-02.svg' | asset_url }}">
+                        <h4>Power</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.Power_and_Current }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+
+            {% if product.metafields.f_b.Warranty %}
+                <div id="warranty-info" class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                    <div class="d-flex">
+                        <img src="{{ 'spec-icon--02.svg' | asset_url }}">
+                        <h4>Warranty</h4>
+                    </div>
+                    <p>{{ product.metafields.f_b.Warranty }}</p>
+                    <p></p>
+                </div>
+            {% endif %}
+
+            {% if firstVariant.metafields.shipping.width != blank or firstVariant.metafields.f_b.width != blank %}
+            <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
+                <div class="d-flex">
+                    <img src="{{ 'spec-icon-04.svg' | asset_url }}">
+                    <h4>Dims & Weight
+                    </h4>
+                </div>
+
+                <!-- SHOW VARIANT WEIGHTS AND DIMS -->
+                {% for variant in product.variants %}
+
+                {% assign currentVariantDimensions = variant.metafields.shipping.length | plus: variant.metafields.shipping.width | plus: variant.metafields.shipping.height %}
+
+
+                {% unless variant.title contains 'Refurbished' or variant.title contains 'Like New' %}
+
+                    {% if variant.title contains 'Black' %}
+
+                        {% assign firstColorDimensions = variant.metafields.shipping.length | plus: variant.metafields.shipping.width | plus: variant.metafields.shipping.height  %}
+
+                        <p></p>
+                        {% unless variant.title contains 'Black' or vairant.title contains 'White' %}
+                            <p class="variant-title">{{variant.title}}</p>
+                        {% endunless %}
+                        <p>{{variant.metafields.shipping.length}}" L x
+                            {{variant.metafields.shipping.width}}" W x
+                            {{variant.metafields.shipping.height}}" H
+                        </p>
+                        <p></p>
+
+
+                    {% endif %}
+
+                    {% if forloop.first and variant.title == 'Default Title' or variant.title == 'New' and currentVariantDimensions != firstColorDimensions  %}
+
+
+                        <p></p>
+                        <p>{{variant.metafields.shipping.length}}" L x
+                            {{variant.metafields.shipping.width}}" W x
+                            {{variant.metafields.shipping.height}}" H
+                        </p>
+                        <p></p>
+                        <p>{{ variant.weight | weight_with_unit | append: 's' }}</p>
+
+                        <!-- EXCLUDE B-STOCK -->
+                        {% elsif variant.metafields.shipping.width != blank and currentVariantDimensions != firstColorDimensions   %}
+
+                        <p></p>
+                        <p class="variant-title">{{variant.title}}</p>
+                        <p>{{variant.metafields.shipping.length}}" L x
+                            {{variant.metafields.shipping.width}}" W x
+                            {{variant.metafields.shipping.height}}" H
+                        </p>
+                        <p></p>
+
+                        <p>{{ variant.weight | weight_with_unit | append: 's' }}</p>
+
+                        {% elsif variant.metafields.f_b.width != blank currentVariantDimensions != firstColorDimensions %}
+
+                        <p></p>
+                        <p class="variant-title">{{variant.title}}</p>
+                        <p>{{variant.metafields.f_b.length}}" L x
+                            {{variant.metafields.f_b.width}}" W x
+                            {{variant.metafields.f_b.height}}" H
+                        </p>
+                        <p></p>
+                        <p>{{ variant.weight | weight_with_unit | append: 's' }}</p>
+
+                    {% endif %}
+
+                    {% endunless %}
+
+
+                {% endfor %}
+            </div>
+            {% endif %}
+
         </div>
-        <p>{{ product.metafields.f_b.Tech_Specs | newline_to_br }}<p>
-      </div>
-      {% endif %}
 
-
-      {% if product.metafields.f_b.Optical %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon-05.svg' | asset_url }}">
-        <h4>Optical</h4>
-        </div>
-        <p>{{ product.metafields.f_b.Optical | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-
-      {% if product.metafields.f_b.In_the_Box %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon--09.svg' | asset_url }}">
-        <h4>In the Box</h4>
-        </div>
-        <p>{{ product.metafields.f_b.In_the_Box | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-
-      {% if product.metafields.f_b.Movement %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon--01.svg' | asset_url }}">
-        <h4>Movement</h4>
-        </div>
-        <p>{{ product.metafields.f_b.Movement | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-
-      {% if product.metafields.f_b.Wireless_Receiver %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon--03.svg' | asset_url }}">
-        <h4>Wireless Receiver</h4>
-        </div>
-        <p>{{ product.metafields.f_b.Wireless_Receiver | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-      {% if product.metafields.f_b.Connectors %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon--07.svg' | asset_url }}">
-        <h4>Connectors</h4>
-        </div>
-        <p>{{ product.metafields.f_b.Connectors | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-
-      {% if product.metafields.f_b.System_Requirements %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon--08.svg' | asset_url }}">
-        <h4>System Reqs</h4>
-        </div>
-        <p>{{ product.metafields.f_b.System_Requirements | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-      {% if product.metafields.f_b.Rigging_&_Application %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon-22.svg
-        ' | asset_url }}">
-        </div>
-        <h4>Rigging</h4>
-        <p>{{ product.metafields.f_b.Rigging_&_Application | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-
-      {% if product.metafields.f_b.Control %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon-01.svg' | asset_url }}">
-        <h4>Control</h4>
-        </div>
-        <p>{{ product.metafields.f_b.Control | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-      {% if product.metafields.f_b.Power_and_Current %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon-02.svg' | asset_url }}">
-        <h4>Power</h4>
-        </div>
-        <p>{{ product.metafields.f_b.Power_and_Current | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-
-      {% if product.metafields.f_b.Warranty %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon--02.svg' | asset_url }}">
-        <h4>Warranty</h4>
-        </div>
-        <p>{{ product.metafields.f_b.Warranty | newline_to_br }}<p>
-      </div>
-      {% endif %}
-
-      {% if firstVariant.metafields.shipping.width %}
-      <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
-        <div class="d-flex">
-        <img src="{{ 'spec-icon-04.svg' | asset_url }}">
-        <h4>Dims & Weight </h4>
-        </div>
-        <br/>
-        <p>{{firstVariant.metafields.shipping.length}}" x {{firstVariant.metafields.shipping.width}}" x {{firstVariant.metafields.shipping.height}}"<p>
-        <p>{{ firstVariant.weight | weight_with_unit }}</p>
-      </div>
-      {% endif %}
-
-    </div>
-
-  </section>
+    </section>
 
 </div>

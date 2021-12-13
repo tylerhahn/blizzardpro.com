@@ -24,7 +24,7 @@
 
     {% unless blogs[blog_handle].empty? or blogs[blog_handle].articles.size == 0 %}
 
-        <div class="flex-container" data-aos="fade-up">
+        <div class="flex-container" >
 
             {% for article in blogs[blog_handle].articles limit: 1000 %}
                 <div class="news-item">
@@ -105,4 +105,4 @@
         <img class="stick-to-bottom" src="{{ 'footer-cta-fixtures.png' | asset_url }}">
     </section>
 
-{% endunless %}</div> 
+{% endunless %}</div>

@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import Test from "./Components/Test";
+import App from "../blizz-app/src/App.js";
 
 const rootEl = document.getElementById("iris-calc");
 
-rootEl && ReactDOM.render(<Test />, rootEl);
+rootEl && ReactDOM.render(<App />, rootEl);

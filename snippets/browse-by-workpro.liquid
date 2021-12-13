@@ -1,9 +1,9 @@
 <div class="product-carousel2">
-  
-  <div class="flex-container" data-aos="fade-left">
+
+  <div class="flex-container" >
     <h4 class="cables">Product Type</h4>
     <div class="flex-item" >
-      
+
       <select id="my_selection">
         <option>Select a WorkPro™ Product Type</option>
 {% for link in linklists.workpro-categories.links %}
@@ -11,19 +11,19 @@
 {% endfor %}
 </select>
 
-      
+
     </div>
-    
+
   </div>
 
-      
-      
+
+
   </div>
 
 
 <script>
-  
-  // Select 
+
+  // Select
 
 document.getElementById('my_selection').onchange = function () {
 	window.location.href = this.children[this.selectedIndex].getAttribute('href');

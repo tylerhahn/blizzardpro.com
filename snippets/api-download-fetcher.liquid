@@ -15,9 +15,9 @@
         xhr.send();
     }
 
-    const url = "https://api.blizzard.lighting/products/media";
+    const apiUrl = "https://api.blizzard.lighting/products/media";
     const data = {
-        name: "{{ product.metafields.f_b.Fishbowl_Num | downcase }}",
+        name: "{{ product.metafields.f_b.Fishbowl_Num | downcase | replace: "-", " " | replace: '(black)', " " | replace: 'white', " "  }}",
         type: "downloads"
     }
 
@@ -29,7 +29,7 @@
             "Content-Type": "application/json"
         }
     }
-    fetch(url, fetchData).then(async res => {
+    fetch(apiUrl, fetchData).then(async res => {
         let data = await res.text();
         const json = JSON.parse(data);
         const filePaths = json.paths;

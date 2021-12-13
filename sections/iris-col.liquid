@@ -1,12 +1,12 @@
 
 <div id="bl-hm-b1" class="container-fluid py-1 max">
     <h2 class="bl-h2 text-left pb-3 max">{{section.settings.header_title}}</h2>
-  
+
     <div class="row">
           {% for block in section.blocks %}
               <div class="col-sm mx-{{section.settings.h_gutter}}" style="height: {{section.settings.box_height}}rem;background-size: cover; background-position:center;
               {% if block.settings.video_url == blank %} background-image: url('{{ block.settings.image | img_url: 'master'}}'){% else %}background-color: black{% endif %}">
-  
+
                 {% if block.settings.video_url != blank %}
                 {% if block.settings.video_url.type == 'youtube' %}
                   <div class="video-background">
@@ -21,15 +21,18 @@
                   </div>
                   {% endif %}
                 {% endif %}
-  
+
                   <div class="box-caption">
                       <h3>{{block.settings.headline}}</h3>
+                      {% if block.settings.cta_url != blank %}
+                        <a href={{block.settings.cta_url }} class="btn btn-white">{{ block.settings.cta_title }}</a>
+                      {% endif %}
                   </div>
               </div>
           {% endfor %}
       </div>
     </div>
-  
+
     {% schema %}
     {
       "name": "Boxes",
@@ -43,7 +46,7 @@
           "type": "text",
           "id": "header_title",
           "label": "Section Title"
-        },  
+        },
         {
           "type": "range",
           "id": "h_gutter",
@@ -64,7 +67,7 @@
           "default": 1
       }
       ],
-  
+
       "blocks": [
         {
           "type": "image",
@@ -91,7 +94,7 @@
               "id": "cta_title",
               "label": "Main CTA Title",
               "default": "Shop ›"
-            },   
+            },
             {
               "type": "text",
               "id": "cta_url",
@@ -100,7 +103,7 @@
           ]
         }
       ],
-  
+
       "presets": [
         {
           "name": "Col Blocks",
@@ -109,7 +112,7 @@
       ]
     }
   {% endschema %}
-  
+
   <style>
       .col-sm {
           position: relative;
@@ -123,19 +126,22 @@
       width: 80%;
 
   }
-  
+
   .box-caption h3 {
     text-shadow: 1px 0px 7px black;
       margin: 0;
       padding: 0;
-      font-size: 1.9em;
+      font-size: 1.8em;
+      margin-bottom: 10px;
       font-family: 'Source Sans Pro';
       letter-spacing: 0;
       text-transform: inherit;
       font-weight: 600;
   }
-  
+
   .box-caption .btn {
+    margin: 0;
+
       background: white;
       color: black;
   }

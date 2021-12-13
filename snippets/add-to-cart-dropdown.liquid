@@ -1,88 +1,213 @@
-{% unless product.available %}
-    {% else %}
+{% assign bundle = product.metafields.f_b.Bundled_Products %}
+{% assign dropdownTitle = product.metafields.f_b.Dropdown_Title %}
+{% assign originalPrice = product.selected_or_first_available_variant.price | money_without_currency | remove: ',' %}
 
-        {% if product.variants.size > 1 %}
-
-            <p class="prod-select-title">
-                {% if product.options.size == 1 %}
-                    {% if product.options != 'Default' %}
-                        <label>Other buying options</label>
-                    {% else %}
-                        <label>Select
-                            {{ product.options }}</label>
-                    {% endif %}
-                {% endif %}
+{% if bundle != blank %}
+    <div class="bundle-container">
+        <div class="bundle-price"></div>
+        <div><input value="{{ originalPrice }}" class="hidden" id="total-bundle-price"/><p class="hidden">
+                Bundle Price
             </p>
+        </div>
 
-            <select class="product-single__variants" id="productSelect" name="id">
-
-                {% for variant in product.variants %}
-                    {% if variant.available %}
-                        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
-                    {% else %}
-                        <option disabled="disabled">
-                            {{ variant.title }}
-                            - Not Available
-                        </option>
-                    {% endif %}
-                {% endfor %}
-
-            </select>
+        {% if dropdownTitle != blank %}
+            <div class="fw-bold">{{dropdownTitle}}</div>
         {% endif %}
 
 
-        <!-- This handles discontinued for sale items -->
-        {% if product.tags contains 'dc-for-sale' %}
+    </div>
+{% endif %}
 
-            <div class="cart-group">
-                {% include 'qty-select' %}
-                <a class="btn btn-blue main-cta" name="add" type="submit">
-                    <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}
-                        -
-                        {% include 'get-product-price' %}</span>
-                </a>
-            </div>
+  {% if bundle != blank %}
+        <select class="product-single__variants bundle-select"  multiple="multiple" name="id">
+            {% for b in bundle %}
+                {% assign lowercaseTitle = b | downcase | handleize %}
+                {% assign prod = all_products[ b.handle ] %}
+                <option data-id="{{prod.selected_or_first_available_variant.id}}" data-price={{prod.price_max | money_without_currency | remove: ',' |}} value="{{b.handle}}">
+                    {{ prod.metafields.f_b.Product_Subtitle }}
+                    (+{{ prod.price_max | money | remove: '.00' }})
+                </option>
+            {% endfor %}
+        </select>
+    {% endif %}
 
-            <div class="discontinued">
-                <h4>Discontinued</h4>We've discontinued this product but still have stock remaining for sale.
-            </div>
+{% unless product.available  %}
+    {% if product.tags contains 'discontinued' %}
+        <div class="discontinued">
+            <h4>Discontinued</h4>
+        </div>
+    {% else %}
+        <a class="btn btn-blue" href="/pages/contact-us" style="margin-top: 0px; width: 100%">Contact Us</a>
+    {% endif %}
 
-            <!-- This handles discontinued not for sale -->
-        {% elsif product.tags contains 'discontinued' %}
-            <div class="discontinued">
-                <h4>Discontinued</h4>
-            </div>
-            {% else%}
+{% else %}
+    {% if product.variants.size > 1 %}
+        <p class="prod-select-title">
+            {% if product.options.size == 1 %}
+                {% if product.options != 'New' and product.options != 'Refurbished' and product.options != 'Like New' and product.options != 'Default'%}
+                    {% for option in product.options %}
+                        <label for="{{ option }}">Select {{ option }}</label>
+                    {% endfor %}
+                {% else %}
+                    <label>Select
+                        {{ product.options }} </label>
+                {% endif %}
+            {% endif %}
+        </p>
 
-            <div class="cart-group">
-                {% include 'qty-select' %}
-                <a class="btn btn-blue main-cta">
-                    <!-- Show preorder info -->
-                    {% if product.metafields.c_f.Preorder_Date %}
-                        Preorder Now ›
-                    {% else %}
-                        <!-- Basic a -->
-                        {{ 'products.product.add_to_cart' | t }}
-                    {% endif %}
-                </a>
-            </div>
+        <select class="product-single__variants" id="productSelect" name="id">
+            {% for variant in product.variants %}
+                {% if variant.available %}
+                    <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}"> {% if variant.title == 'Default Title' %}
+                        New
+                        {% else %}
 
-        {% endif %}
+                      {% endif %} - {{variant.price | money }}</option>
+                {% else %}
+                    <option disabled="disabled">
+                        {{ variant.title }}
+                        - Not Available
+                    </option>
+                {% endif %}
+            {% endfor %}
+        </select>
+    {% endif %}
+
+
+
+
+
+    <!-- This handles discontinued for sale items -->
+    {% if product.tags contains 'dc-for-sale' %}
+
+        <div class="cart-group">
+            {% include 'qty-select' %}
+            <a class="btn btn-blue main-cta" name="add" type="submit">
+                <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}
+                    -
+                    {% include 'get-product-price' %}</span>
+            </a>
+        </div>
+
+        <div class="discontinued">
+            <h4>Discontinued</h4>We've discontinued this product but still have stock remaining for sale.
+        </div>
+
+        <!-- This handles discontinued not for sale -->
+    {% elsif product.tags contains 'discontinued' %}
+        <div class="discontinued">
+            <h4>Discontinued</h4>
+        </div>
+        {% else%}
+
+        <div class="cart-group">
+            {% include 'qty-select' %}
+            <a class="btn btn-blue main-cta">
+                {{ 'products.product.add_to_cart' | t }}
+            </a>
+        </div>
+
+    {% endif %}
 {% endunless %}
 
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
 
 <script type="text/javascript">
 
-    $(".main-cta").on("click", function () {
-        const qty = $("input.in-num").val();
-        console.log(qty)
-        CartJS.addItem({{ product.selected_or_first_available_variant.id }}, qty, {}, {
+var selectCallback = function(variant, selector) {
+    timber.productPage({
+      money_format: "{{ shop.money_format }}",
+      variant: variant,
+      selector: selector
+    });
+
+    {% for variant in product.variants %}
+        {% if variant.available %}
+        {% else %}
+        jQuery('.single-option-selector option[value={{variant.title | json}}]').text('{{ variant.title }} - Out of Stock');
+        {% endif %}
+  {% endfor %}
+
+  };
+  jQuery(function($) {
+    try {
+        new Shopify.OptionSelectors('productSelect', {
+      product: {{ product | json }},
+      onVariantSelected: selectCallback,
+      enableHistoryState: true
+    })
+    jQuery('.single-option-selector option').filter(function() { return jQuery(this).html() === 'Default Title'; }).text('New');
+
+    } catch(err) {
+        console.log(err)
+    }
+  });
+
+
+
+
+
+
+    let selected = [];
+    let currentTotal = 0;
+    function changeMultiSelect(option, checked) {
+        const bundlePrice = $("#total-bundle-price");
+        const visiblePrice = $(".bundle-price")
+        const addonPrice = Number(option.attr("data-price"));
+
+        if (checked) {
+            selected.push(option);
+            $(".bundle-container p").removeClass("hidden")
+            currentTotal = Number(bundlePrice.val()) + addonPrice;
+            bundlePrice.val(currentTotal);
+            visiblePrice.text(`$${
+                new Intl.NumberFormat().format(currentTotal.toFixed(2))
+            }`);
+        } else {
+            currentTotal = Number(bundlePrice.val()) - addonPrice;
+            visiblePrice.text(`$${
+                new Intl.NumberFormat().format(currentTotal.toFixed(2))
+            }`);
+            bundlePrice.val(currentTotal);
+            const removedItemArr = selected.filter(e => e !== option.val());
+            selected = removedItemArr;
+        }
+    }
+
+    function addItemToCart(id, qty, redirect) {
+        CartJS.addItem(id, qty, {}, {
             "success": function (data, textStatus, jqXHR) {
-                window.location.href = "/cart";
+                if (redirect) {
+                    window.location.href = "/cart";
+                } else {
+                    console.log("added: " + id)
+                }
             },
             "error": function (jqXHR, textStatus, errorThrown) {
                 console.log("err")
             }
         });
+    }
+    $(".main-cta").on("click", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const variantId = urlParams.get('variant');
+        console.log(variantId)
+
+        if (selected.length > 0) {
+            selected.map((product, i) => {
+                addItemToCart(product.attr("data-id"), 1, false);
+                if (i === selected.length - 1) {
+                    addItemToCart({{ product.selected_or_first_available_variant.id }}, 1, true)
+                }
+            })
+        } else if(variantId) {
+            console.log('ho')
+            const qty = $("input.in-num").val();
+            addItemToCart(variantId, qty, true)
+        } else {
+            console.log('yo')
+            const qty = $("input.in-num").val();
+            addItemToCart({{ product.selected_or_first_available_variant.id }}, qty, true)
+        }
     });
 </script>

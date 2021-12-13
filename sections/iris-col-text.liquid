@@ -1,48 +1,35 @@
 <div id="bl-col-text">
-  {% for block in section.blocks %}
+    {% for block in section.blocks %}
 
-  <div id="bl-text-image-{{ forloop.index }}">
-    <div class="row bl-row-{{ forloop.index }} max py-5">
-      <div
-        class="col-lg-5"
-        data-aos="fade-{% if block.settings.flip %}right{% else %}left{% endif %}"
-      >
-        <h2>{{ block.settings.headline }}</h2>
-        <p>{{ block.settings.paragraph }}</p>
-        {% if block.settings.cta != blank %}
-        <a {% if block.settings.cta_url != blank %}href="{{ block.settings.cta_url }}"{% endif %} class="btn btn-main">{{
+        <div id="bl-text-image-{{ forloop.index }}">
+            <div class="row bl-row-{{ forloop.index }} max py-5">
+                <div class="col-lg-5">
+                    <h2>{{ block.settings.headline }}</h2>
+                    <p>{{ block.settings.paragraph }}</p>
+                    {% if block.settings.cta != blank %}
+                        <a {% if block.settings.cta_url != blank %} href="{{ block.settings.cta_url }}" {% endif %} class="btn btn-main">{{
           block.settings.cta
         }}</a>
-        {% endif %}
-        {% if block.settings.cta_2 != blank %}
-        <a id="btn-{{ forloop.index }}" {% if block.settings.cta_url_2 != blank %}href="{{ block.settings.cta_url_2 }}"{% endif %} class="btn btn-secondary">{{
+                    {% endif %}
+                    {% if block.settings.cta_2 != blank %}
+                        <a id="btn-{{ forloop.index }}" {% if block.settings.cta_url_2 != blank %} href="{{ block.settings.cta_url_2 }}" {% endif %} class="btn btn-secondary">{{
           block.settings.cta_2
         }}</a>
-        {% endif %}
-      </div>
-      <div class="col-lg-7">
-        {% if block.settings.image != blank %}
-        <img
-          style="display: block; margin: 0 auto"
-          data-aos
-          style="margin: 0 auto; display: block"
-          ="fade-{% if block.settings.flip %}right{% else %}left{% endif %}"
-          src="{{ block.settings.image | img_url: 'master' }}"
-          alt="{{ block.settings.seo_description }}"
-        />
-        {% endif %} {% if block.settings.video != blank %}
-        <div class="bl-video-block embed-container">
-          <iframe
-            src="https://www.youtube.com/embed/{{ block.settings.video.id }}"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+                    {% endif %}
+                </div>
+                <div class="col-lg-7">
+                    {% if block.settings.image != blank %}
+                        <img style="display: block; margin: 0 auto" style="margin: 0 auto; display: block" ="fade-{% if block.settings.flip %}right{% else %}left{% endif %}" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.seo_description }}"/>
+                    {% endif %}
+                    {% if block.settings.video != blank %}
+                        <div class="bl-video-block embed-container">
+                            <iframe allowfullscreen frameborder="0" src="https://www.youtube.com/embed/{{ block.settings.video.id }}"></iframe>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-  <style>
+        <style>
         .embed-container {
         position: relative;
         padding-bottom: 56.25%;
@@ -89,151 +76,137 @@
         }
   </style>
 
-  {% endfor %}
+    {% endfor %}
 </div>
 
 {% schema %}
+
 {
-   "name":"Two Column (Image + Text)",
-   "settings":[
-      {
-         "type":"header",
-         "content":"Two Column (Image + Text)"
-      }
-   ],
-   "blocks":[
-      {
-         "type":"image",
-         "name":"Row",
-         "settings":[
-            {
-               "type":"range",
-               "id":"padding",
-               "label":"Padding",
-               "min":1,
-               "max":10,
-               "step":1,
-               "default":1
-            },
-            {
-               "type":"color",
-               "id":"bg_color",
-               "label":"Background Color"
-            },
-            {
-               "type":"color",
-               "id":"text_color",
-               "label":"Text Color"
-            },
-            {
-               "type":"checkbox",
-               "id":"flip",
-               "label":"Flip Columns",
-               "default":false
-            },
-            {
-               "type":"textarea",
-               "id":"headline",
-               "label":"Headline"
-            },
-            {
-               "type":"textarea",
-               "id":"paragraph",
-               "label":"Paragraph"
-            },
-            {
-               "type":"text",
-               "id":"cta",
-               "label":"CTA Title"
-            },
-            {
-               "type":"url",
-               "id":"cta_url",
-               "label":"CTA Url"
-            },
-            {
-               "type":"color",
-               "id":"cta_background_color",
-               "label":"CTA Background Color"
-            },
-            {
-               "type":"color",
-               "id":"cta_text_color",
-               "label":"CTA Text color"
-            },
-            {
-               "type":"text",
-               "id":"cta_2",
-               "label":"CTA 2 Title"
-            },
-            {
-               "type":"url",
-               "id":"cta_url_2",
-               "label":"CTA 2 Url"
-            },
-            {
-               "type":"color",
-               "id":"cta_background_color_2",
-               "label":"CTA 2 Background Color",
-               "default": "#000000"
-            },
-            {
-               "type":"color",
-               "id":"cta_text_color_2",
-               "label":"CTA 2 Text color",
-               "default": "#FFFFFF"
-            },
-            {
-               "type":"image_picker",
-               "id":"image",
-               "label":"Image"
-            },
-            {
-               "type":"video_url",
-               "id":"video",
-               "label":"Video",
-               "accept":[
-                  "youtube",
-                  "vimeo"
-               ]
-            },
-            {
-               "type":"textarea",
-               "id":"seo_description",
-               "label":"SEO Description"
-            }
-         ]
-      }
-   ],
-   "presets":[
-      {
-         "name":"Two Column (Image + Text)",
-         "category":"Image"
-      }
-   ]
+    "name": "Two Column (Image + Text)",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Two Column (Image + Text)"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Row",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "padding",
+                    "label": "Padding",
+                    "min": 1,
+                    "max": 10,
+                    "step": 1,
+                    "default": 1
+                }, {
+                    "type": "color",
+                    "id": "bg_color",
+                    "label": "Background Color"
+                }, {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Text Color"
+                }, {
+                    "type": "checkbox",
+                    "id": "flip",
+                    "label": "Flip Columns",
+                    "default": false
+                }, {
+                    "type": "textarea",
+                    "id": "headline",
+                    "label": "Headline"
+                }, {
+                    "type": "textarea",
+                    "id": "paragraph",
+                    "label": "Paragraph"
+                }, {
+                    "type": "text",
+                    "id": "cta",
+                    "label": "CTA Title"
+                }, {
+                    "type": "url",
+                    "id": "cta_url",
+                    "label": "CTA Url"
+                }, {
+                    "type": "color",
+                    "id": "cta_background_color",
+                    "label": "CTA Background Color"
+                }, {
+                    "type": "color",
+                    "id": "cta_text_color",
+                    "label": "CTA Text color"
+                }, {
+                    "type": "text",
+                    "id": "cta_2",
+                    "label": "CTA 2 Title"
+                }, {
+                    "type": "url",
+                    "id": "cta_url_2",
+                    "label": "CTA 2 Url"
+                }, {
+                    "type": "color",
+                    "id": "cta_background_color_2",
+                    "label": "CTA 2 Background Color",
+                    "default": "#000000"
+                }, {
+                    "type": "color",
+                    "id": "cta_text_color_2",
+                    "label": "CTA 2 Text color",
+                    "default": "#FFFFFF"
+                }, {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }, {
+                    "type": "video_url",
+                    "id": "video",
+                    "label": "Video",
+                    "accept": [
+                        "youtube",
+                        "vimeo"
+                    ]
+                }, {
+                    "type": "textarea",
+                    "id": "seo_description",
+                    "label": "SEO Description"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Two Column (Image + Text)",
+            "category": "Image"
+        }
+    ]
 }
- {% endschema %}
+
+{% endschema %}
 
 
 <script>
-  function scrollToAnchor(aid){
-    var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
-}
-
-  {% for block in section.blocks %}
-
-    $("#btn-{{ forloop.index }}").on('click', function() {
-      if (history.pushState) {
-      var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?prod={{block.settings.headline | handleize }}';
-      window.history.pushState({path:newurl},'',newurl);
-      scrollToAnchor('bl-lg-form');
-
+    function scrollToAnchor(aid) {
+        var aTag = $("a[name='" + aid + "']");
+        $("html,body").animate({
+            scrollTop: aTag.offset().top
+        }, "slow");
     }
 
-    });
+    {% for block in section.blocks %}
 
+        $("#btn-{{ forloop.index }}").on("click", function () {
+            if (history.pushState) {
+                var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + "?prod=";
+                window.history.pushState({
+                    path: newurl
+                }, "", newurl);
+                scrollToAnchor("bl-lg-form");
 
-  {% endfor %}
+            }
 
+        });{% endfor %}
 </script>

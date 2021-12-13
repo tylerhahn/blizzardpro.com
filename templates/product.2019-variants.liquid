@@ -2,7 +2,7 @@
 {% include 'sticky-contact' %}
 <!-- {{ 'imagerotator.js'  | asset_url | script_tag }} -->
 <style>
-  
+
 
 select {
 
@@ -12,7 +12,7 @@ select {
 
 }
 
-  
+
 	input[type="submit"] {
 		background: white;
 		color: #4187f9;
@@ -58,7 +58,7 @@ input[type="submit"] {
 
 	<!-- <ul class="nobar">
 		{% if product.tags contains 'photometric' or product.tags contains 'novastar cat' or product.tags contains 'cutting' or product.tags contains 'remote' or product.tags contains 'colors and gobos' or product.tags contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains 'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'rev a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags contains 'rev d' or product.tags contains 'rev e' %}
-  
+
     <div>
       <a data-scroll href="#downloader">Free Downloads</a>
     </div>
@@ -75,7 +75,7 @@ input[type="submit"] {
       <a data-scroll href="#specifications">Product Specs</a>
     </div>
   </ul> -->
-<!--   
+<!--
 	<div class="buybar">
 		<div class="flex-container">
 
@@ -139,7 +139,7 @@ input[type="submit"] {
 
         </div>
         <img
-     
+
         class="featured"
         src="{{ product.featured_image | img_url: 'large'}}"
         alt="{{product.title}}"
@@ -152,16 +152,16 @@ input[type="submit"] {
           <div class="product-single__thumbnails{% unless product.images.size > 2 %} product-single__thumbnails--static{% endunless %}" id="ProductThumbs-{{ section.id }}">
             {% for image in product.images reversed %}
               {% if forloop.index > prodLength and forloop.index != viewMore %}
-      
+
                 <a class="product-single__thumbnail-item {% if image == featured_image %} is-active {% endif %}" href="{{ image.src | img_url: 'master' }}" data-lightbox="product-images" style="background-image: url({{ image.src | img_url: '160x160' }})"></a>
-           
+
           {% elsif forloop.index == viewMore %}
 
-            
+
             <a style="background-image: url({{ image.src | img_url: '160x160' }})" class="product-single__thumbnail-item {% if image == featured_image %} is-active {% endif %} view-more-image" href="{{ image.src | img_url: 'master' }}" data-lightbox="product-images">
 <!--               <div class="more-image-amount">+7</div> -->
             </a>
-       
+
               {% endif %}
             {% endfor %}
           </div>
@@ -191,17 +191,17 @@ input[type="submit"] {
             <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
             {% endfor %}
           </select>
-        
-        
+
+
         {% unless product.available %}
 <!--           <p class="btn otl">Sold Out</p> -->
         {% else %}
           <input  type="number" name="quantity" class="hide" value="1" min="1" />
-        
+
           <input type="submit" class="btn blue" value="Add to Cart" />
-            
+
         {% endunless %}
-                      
+
         </form>
         <!-- <a href="/a/wheretobuy"><div class="btn otl">Where to Buy</div></a> -->
         {% unless product.available %}
@@ -233,7 +233,7 @@ input[type="submit"] {
 					{% endif %} {% if product.metafields.c_f.Section_1_Description %}
 					<p>{{ product.metafields.c_f.Section_1_Description }}</p>
 					{% endif %}
-                  
+
 				</div>
 			</div>
 
@@ -273,7 +273,7 @@ input[type="submit"] {
           </div>
 
           {% endif %}
-          
+
           {% if product.metafields.c_f.Youtube_URL %}
                     <div class="v-container">
             <div class="vimeo">
@@ -282,10 +282,10 @@ input[type="submit"] {
             </div>
           </div>
           {% endif %}
-          
+
       </div>
-         
-          
+
+
 		<ul id="prodSlider">
 
 			{% for image in product.images %} {% unless forloop.index < 4 %} <a data-lity href="{{ image | product_img_url: 'master' }}" title="{{ product.title }}">
@@ -299,7 +299,7 @@ input[type="submit"] {
 				{% endunless %} {% endfor %}
 
 		</ul>
-	
+
   </div>
 
   {% assign aImg = product.images.size | minus: 1 %}
@@ -312,7 +312,7 @@ input[type="submit"] {
 
 
 	<div id="specifications" class="spec-section hidden">
-      
+
       	<section id="main_features">
 
 		<h3>Main Features</h3>
@@ -468,9 +468,9 @@ input[type="submit"] {
       {% endif %}
 
 
-    </div> 
+    </div>
 
-    <div class="flex-container" data-aos="fade-down">
+    <div class="flex-container" >
 
             {% if product.metafields.c_f.General_Specs %}
       <div class="spec-item">
@@ -691,7 +691,7 @@ input[type="submit"] {
         </div>
       {% endif %}
 
-    </div> 
+    </div>
 
   </section>
 

@@ -1,4 +1,8 @@
-{% assign productsArr = product.metafields.f_b.Upsell_Products %}
+{% assign productsArr = product.metafields.f_b.Upsell_Products  %}
+
+<script>
+    console.log('{{ productsArr }}')
+</script>
 
 
 <div class="container-fluid p-5" id="upsell-grid">
@@ -50,14 +54,14 @@
                                 <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
                                 <input class="btn btn-otl" value="Add to Cart {{prod.variants.first.price | money }}"/>
                             </form>
+                        {% else %}
+                            <div class="btn btn-otl ajax-add" data-id="{{prod.variants.first.id}}">Add to Cart -
+                                {{prod.variants.first.price | money }}
+                            </div>
                         {% endif %}
 
                         {% if prod.tags contains 'discontinued' %}
                             <a href="{{prod.url}}?variant={{prod.variants.first.id}}" class="btn">Learn More</a>
-                        {% elsif prod.variants.first.available %}
-
-                            <div class="btn btn-otl ajax-add" data-id="{{prod.variants.first.id}}">Add to Cart -
-                                {{prod.variants.first.price | money }}</div>
                         {% endif %}
                     </div>
 

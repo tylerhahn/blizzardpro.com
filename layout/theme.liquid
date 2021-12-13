@@ -11,14 +11,19 @@
     <!--<![endif]-->
 
     <head>
-        <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        {% include 'algolia' %}
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         {% include 'analytics' %}
         {% include 'metadata' %}
         {% include 'third_party_css' %}
         {% include 'third_party_js' %}
 
         {{ content_for_header }}
+
+        <!--begin-boost-pfs-filter-css-->
+        {% render 'boost-pfs-style' %}
+        <!--end-boost-pfs-filter-css-->
+
+
     </head>
 
     {%- comment -%}Advanced Registration{%- endcomment -%}
@@ -48,7 +53,14 @@
 
             {% include 'site_footer' %}
 
-        </body>
+
+            <!--begin-boost-pfs-js-->
+            {% render 'boost-pfs' %}
+            <!--end-boost-pfs-js-->
+        
+{% include 'swymSnippet' %}
+
+</body>
 
     </html>
 {% endif %}

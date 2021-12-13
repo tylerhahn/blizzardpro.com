@@ -10,4 +10,10 @@
     {% endif %}
 {% endfor %}
 
+{% if product.tags contains 'on sale' %}
+    <div class="compare-span">
+        <div class="strike-through"></div>
+        {{ product.selected_or_first_available_variant.compare_at_price | money }}
+    </div>
+{% endif %}
 {{ product.selected_or_first_available_variant.price | money }}

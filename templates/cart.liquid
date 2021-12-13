@@ -84,9 +84,10 @@
                                                                                                                                                   use a name attribute set to 'checkout' and 'update', respectively. That's
                                                                                                                                                   case-sensitive.
                 {% endcomment %}
-                <span class="mw-hidden-fees"></span>
+                
 
                 <div class="column two-thirds flow-opposite right-aligned">
+                    <span class="mw-hidden-fees"></span>
                     <div class="discount_code_box">
                         <h4>Enter discount code</h4>
                         <div class="hulkapps_discount_hide">
@@ -100,7 +101,7 @@
                     <div class="other classes limoniapps-discountninja-cart-subtotal-price">
                         <h4>Subtotal</h4>
                         <div style="margin-bottom: 40px">
-                            <span class="hulkapps-cart-original-total">{{
+                            <span id="subtotalBlock" class="hulkapps-cart-original-total">{{
               cart.total_price | money
             }}</span>
                         </div>
@@ -130,7 +131,7 @@
                 <h2 >
                     It appears that your cart is currently empty!
                 </h2>
-                <p style="font-size: 6px" >
+                <p style="font-size: 16px" >
                     You can continue browsing
                     <a href="/pages/products">here</a>.
                 </p>
@@ -144,18 +145,14 @@
 {% include "upsell" %}
 
 <!-- bespoke -->
+
 {% assign isLoggedIn = 'no' %}
 {% if customer %}
     {% assign isLoggedIn = 'yes' %}
 {% endif %}
 
 <script type="text/javascript">
-    var isAdblocker;
-    if (document.getElementById("WbzFIAODYQum")) {
-        isAdblocker = false;
-    } else {
-        isAdblocker = true;
-    }
+    
 
     var bespokeCartData = {
         {% for item in cart.items %}

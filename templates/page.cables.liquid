@@ -1,9 +1,9 @@
 <style>
-  
+
   .product-carousel2
  {margin-top: 89px;
  }
-  
+
 </style>
 
 
@@ -26,40 +26,40 @@
 
 
 <div class="product-carousel2">
-  
-  <div class="flex-container" data-aos="fade-left">
+
+  <div class="flex-container" >
     <h4>Cable Type</h4>
     <div class="flex-item" >
-      
+
       <select id="my_selection">
 {% for link in linklists.cable-types.links %}
      <option value="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</option>
 {% endfor %}
 </select>
 
-      
+
     </div>
      <h4>Cable Length</h4>
       <div class="flex-item">
-      				              
+
                             <select id="my_selection2">
           {% for link in linklists.sub-categories.links %}
      <option value="{{ link.title }}"><a href="{{ link.url }}">{{ link.title }}</a></option>
 {% endfor %}
 </select>
-                      
-        
+
+
     </div>
-    
+
   </div>
 
-      
-      
+
+
   </div>
 
 <script>
-  
-  // Select 
+
+  // Select
 
 document.getElementById('my_selection').onchange = function () {
 	window.location.href = this.children[this.selectedIndex].getAttribute('href');
@@ -80,10 +80,10 @@ document.getElementById('my_selection2').onchange = function () {
       {% assign collection = collections.cables %}
   {% assign products = collections.cables.products %}
   {% capture new_row %}
- 
+
     {% endcapture %}
-    
-    
+
+
     {% for product in products %}
 <ul class="grid clearfix">
 {% for product in collection.cables %}
@@ -93,12 +93,12 @@ document.getElementById('my_selection2').onchange = function () {
 {% endfor %}
 </ul>
     {% endfor %}
-    
-    
+
+
 {% assign collection = collections.illuminati %}
   {% assign products = collections.illuminati.products %}
   {% capture new_row %}
- 
+
     {% endcapture %}
 
 </section>

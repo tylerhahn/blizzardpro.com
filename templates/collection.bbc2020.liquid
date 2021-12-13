@@ -39,7 +39,7 @@
     color: #282bf6;
     font-size: 23px;
   }
-  
+
   img.hero-banner {
     max-width: 1800px;
     margin: 0 auto;
@@ -47,7 +47,7 @@
     margin-bottom: 6px;
     margin-top: 6px;
 }
-  
+
   .quality-select {
     width: 90%;
     max-width: 1400px;
@@ -68,7 +68,7 @@
     letter-spacing: 1px;
     border: 1px solid #cdbcb2;
 }
-  
+
 </style>
 
 
@@ -80,13 +80,13 @@
 {% paginate collection.products by 50 %}
 
 
-<section data-aos="fade-up" id="collector">
+<section  id="collector">
 
 
   {% if collection.image %}
   	<img class="hero-banner" src="{{ collection.image | img_url: 'master' }}" alt="{{collection.title}}" />
   {% endif %}
-  
+
 <div class="quality-select">
   <h4>Browse by Quality</h4>
   <select id="dynamic_select">
@@ -129,7 +129,7 @@
           {{ tag | link_to_tag: tag }}
         </li>
         {% endif %}
-        {% endfor %}  
+        {% endfor %}
       </ul>
       {% endif %}
 
@@ -171,6 +171,3 @@
         location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
       });
     </script>
-
-
-

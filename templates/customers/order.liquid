@@ -1,12 +1,12 @@
 {% layout settings.customer_layout %}
 
 <style>
-  
+
   @media screen and (max-width: 768px){
   .push{
     width:inherit;
   }
-  
+
   .push .flex-container{
     padding: 0px;
   }
@@ -15,26 +15,26 @@
 }
 
 
-    
+
     p {
     font-size: 12px;
     line-height: 1.2;
 }
-    
+
   }
-  
+
   th.center.slick-initialized.slick-slider {
     margin: 0;
 }
-  
-  
+
+
 </style>
 
   <div class="header-cover"></div>
 <section id="blacktop">
-  <div class="push" data-aos="fade-up">
+  <div class="push" >
     <div class="ordercontainer">
-    
+
 <div id="admin_header">
   <div class="action_link action_return note" id='return_to_store'><a href="/account">Return to Account page</a></div>
 
@@ -53,7 +53,7 @@
       <div class="cancel">
         <a target="_blank" href="https://shopify-order-edit.herokuapp.com/order-editor/{{shop.permanent_domain}}/{{order.id}}">Cancel Or Edit</a>
       </div>
-      
+
       <table id="order_details">
   <thead>
     <tr>
@@ -68,7 +68,7 @@
     {% for line_item in order.line_items %}
     <tr id="{{ line_item.id }}" class="{% cycle 'odd', 'even' %}">
       <td class="product">
-        {{ line_item.title | link_to: line_item.product.url }} 
+        {{ line_item.title | link_to: line_item.product.url }}
         {% if line_item.fulfillment %}
           <div class="note">
             Fulfilled {{ line_item.fulfillment.created_at | date: "%b %d" }}
@@ -118,7 +118,7 @@
     </tr>
   </tfoot>
 </table>
-      
+
 <div id="order_address" class="group">
   <div id="order_payment">
     <h5 class="order_section_title">Billing Address</h5>

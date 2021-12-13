@@ -1,9 +1,9 @@
 <div class="product-carousel2">
-  
-  <div class="flex-container" data-aos="fade-left">
+
+  <div class="flex-container" >
     <h4>Browse by product type:</h4>
     <div class="flex-item" >
-      
+
       <select id="my_selection">
         <option value"Select Product Type">Select Product Type</option>
 {% for link in linklists.products.links %}
@@ -11,29 +11,29 @@
 {% endfor %}
 </select>
 
-      
+
     </div>
      <h4>Browse by application:</h4>
       <div class="flex-item">
-      				              
+
                             <select id="my_selection2">
 {% for link in linklists.sub-categories.links %}
      <option value="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</option>
 {% endfor %}
 </select>
-                      
-        
+
+
     </div>
-    
+
   </div>
 
-      
-      
+
+
   </div>
 
 <script>
-  
-  // Select 
+
+  // Select
 
 document.getElementById('my_selection').onchange = function () {
 	window.location.href = this.children[this.selectedIndex].getAttribute('href');

@@ -1,6 +1,6 @@
 <div id="quarter-screen">
   <div class="overlay"></div>
-  
+
   <div class="intro">
 
 	<h3>Get Inspired</h3>
@@ -10,19 +10,19 @@
 </div>
 
 <div id="inspo">
-  
+
   <div class="flex-container">
-    
+
     <h2>The Blizzard-o-matic '95</h2>
     Equipped with the latest version of Windows ‘95 , the Blizzard-o-matic was created to help you find inspiration from others who trust in our products.
   </div>
-    
+
   </div>
 
 <div class="inspo-grid">
-  
- 
-  
+
+
+
   {% assign blog_handle = 'inspiration' %}
 
 {% unless blogs[blog_handle].empty? or blogs[blog_handle].articles.size == 0 %}
@@ -38,9 +38,9 @@
   {% assign article_width = 'one-whole' %}
 {% endif %}
 
- <div class="flex-container" data-aos="fade-up">
+ <div class="flex-container" >
 
-  
+
       {% for article in blogs[blog_handle].articles limit: 1000 %}
         <div class="image" style="background: url('{{ article.image | img_url: '1024x1024' }}')">
 
@@ -51,17 +51,17 @@
           <div class="caption">
             <div class="overlay"></div>
             <div class="container">
-          
+
             <h3>{{ article.title | link_to: article.url }}</h3>
               <p>{{article.excerpt}}</p>
-			  
+
 			   <p><a href="{{ article.url }}" class="btn btn-alt wide">VIEW</a></p>
               </div>
           </div>
 
-       
-          
-          
+
+
+
 
         </div>
       {% endfor %}
@@ -73,7 +73,7 @@
   <div class="container">
     <h3>Inspiration straight to your inbox</h3>
 			<h2>See what our fixtures are doing out in the wild.</h2>
-    
+
 <div id="hs-inspo-form">
 <!--[if lte IE 8]>
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
@@ -87,11 +87,9 @@ formId: "8ca9a0dc-bbb2-4bfe-a0c6-6b578a89f17a"
 </script>
 </div>
 
-    
+
   </div>
   <img class="stick-to-bottom" src="{{ 'footer-cta-fixtures.png' | asset_url }}">
 </section>
 
   {% endunless %}</div>
-
-
