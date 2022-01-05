@@ -14,7 +14,9 @@
   "h": 420,
   "nm": "@full Logos -ani",
   "ddd": 1,
-  "assets": [],
+  "assets": [
+
+  ],
   "layers": [
     {
       "ddd": 0,
@@ -6541,5 +6543,7 @@
       "bm": 0
     }
   ],
-  "markers": []
+  "markers": [
+
+  ]
 }

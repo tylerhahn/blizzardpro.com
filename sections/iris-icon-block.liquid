@@ -1,10 +1,11 @@
 <div id="icon-block">
     <div class="flex-container">
-        <div class="icon-title">{{ section.settings.title }}</div>
         <div class="block-list">
             {% for block in section.blocks %}
-                <h4>{{ block.settings.icon_title }}</h4>
-                <img src="{{ block.settings.icon }}" />
+                <div class="block-item">
+                    <img src="{{ block.settings.icon | img_url: 'master' }}"/>
+                    <h4>{{ block.settings.icon_title }}</h4>
+                </div>
             {% endfor %}
         </div>
     </div>
@@ -13,9 +14,44 @@
 <style>
     #icon-block {
         background-color: {{ section.settings.background_color }};
+        padding: 2em 0;
+    }
+
+    #icon-block .block-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        margin: 0 auto;
+        max-width: 1920px;
+    }
+
+    .block-item h4 {
+        font-size: 1em;
+        padding-top: .75em;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: normal;
+        color: #999999;
+    }
+    .block-item {
+        border-right: 1px solid #b3b3b338;
+        padding: 0 3em;
+    }
+    .block-item:last-child {
+        border-right: none;
+    }
+    .block-list img {
+        max-height: 125px;
     }
     .icon-title {
         color: {{ section.settings.text_color }};
+        font-size: 3em;
+        font-family: 'Source Sans Pro';
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 4px;
     }
 </style>
 
@@ -28,21 +64,17 @@
         "type":"header",
         "content":"Boxes"
      },
-        {
-        "type": "text",
-        "id": "title" ,
-        "label": "Title"
-        },
-        {
-            "type":"color",
-            "id":"background_color",
-            "label":"Background Color"
-        },
-        {
-         "type": "color",
-         "id": "text_color" ,
-         "label": "Text color"
-        }
+    {
+        "type":"color",
+        "id":"background_color",
+        "label":"Background Color"
+    },
+    {
+        "type": "color",
+        "id": "text_color" ,
+        "label": "Text color",
+        "default": "#dedede"
+    }
     ],
     "blocks": [
         {

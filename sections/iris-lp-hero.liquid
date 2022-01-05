@@ -1,0 +1,61 @@
+<div class="iris-lp-hero">
+    <div class="iris-series-logo">
+        <img src="{{ section.settings.series_image | img_url: 'master' }}" alt="">
+    </div>
+    <div class="iris-lp-bg">
+        <img src="{{ section.settings.hero_image | img_url: 'master' }}" alt="">
+    </div>
+</div>
+
+<style>
+    .iris-lp-hero{
+        position: relative;
+    }
+    .iris-lp-hero .flex-container {
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 4em 0;
+    }
+
+    .iris-series-logo {
+        position: absolute;
+        left: 7em;
+        top: 7em;
+        width: 40%;
+    }
+
+    .iris-series-logo img{
+        max-width: 100%;
+    }
+
+    .image-container-right img {
+        max-height: 980px;
+    }
+
+</style>
+
+{% schema %}
+{
+    "name": "Hero Section",
+    "settings": [
+        {
+        "type": "image_picker",
+        "id": "hero_image" ,
+        "label": "Hero image"
+        },
+        {
+        "type": "image_picker",
+        "id": "series_image" ,
+        "label": "Left image"
+        },
+        {
+        "type": "image_picker",
+        "id": "right_image" ,
+        "label": "Right image"
+        }
+    ]
+
+}
+{% endschema %}

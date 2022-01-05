@@ -1,53 +1,12 @@
 {
   "sections": {
     "slider": {
-      "type": "landing-slider",
-      "blocks": {
-        "37be38c6-4078-4b66-8a84-8bf8d0285db1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/tempslider-gt.jpg",
-            "video_url": "",
-            "img_width": 100,
-            "subheadline": "",
-            "subheadline_color": "#ffffff",
-            "headline": "",
-            "paragraph": "",
-            "headline_color": "#ffffff",
-            "main_cta_title": "",
-            "main_cta_url": "",
-            "main_cta_background_color": "#282bf6",
-            "main_cta_text_color": "#ffffff",
-            "sec_cta_title": "Learn More",
-            "sec_cta_background_color": "#282bf6",
-            "sec_cta_text_color": "#ffffff",
-            "sec_cta_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "37be38c6-4078-4b66-8a84-8bf8d0285db1"
-      ],
+      "type": "iris-lp-hero",
       "settings": {}
     },
-    "lineup": {
-      "type": "iris-icon-block",
-      "blocks": {
-        "9a9a31f4-42b0-40ab-9644-a1b62487a333": {
-          "type": "image",
-          "settings": {
-            "icon_title": ""
-          }
-        }
-      },
-      "block_order": [
-        "9a9a31f4-42b0-40ab-9644-a1b62487a333"
-      ],
-      "settings": {
-        "title": "Perfect for",
-        "background_color": "#000000",
-        "text_color": ""
-      }
+    "icons": {
+      "type": "iris-icons",
+      "settings": {}
     },
     "spec-viewer": {
       "type": "iris-spec-viewer",
@@ -55,8 +14,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-gt3-xl-right.png",
-            "image_featured": "shopify:\/\/shop_images\/gt3-xl.png",
+            "image": "shopify://shop_images/iris-gt3-xl-right.png",
+            "image_featured": "shopify://shop_images/gt3-xl.png",
             "panel_name": "IRiS® GT3 XL",
             "pixel_pitch": "3.9",
             "module_resolution": "64x128",
@@ -80,13 +39,13 @@
             "contrast": "5000:1",
             "color_depth": "14",
             "refresh_rate": "≥3840",
-            "frame_frequency": "50\/60",
+            "frame_frequency": "50/60",
             "input_voltage": "110~220V AC",
             "working_temp": "'-20℃~+50℃",
             "working_humidity": "10%-90%RH",
             "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°\/140°",
-            "ip_rating": "IP65\/IP54",
+            "viewing_angle": "140°/140°",
+            "ip_rating": "IP65/IP54",
             "curvature": "missing",
             "lifespan": "100000",
             "receiving_card": "A",
@@ -104,8 +63,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-gt3-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-gt3.png",
+            "image": "shopify://shop_images/iris-gt3-right.png",
+            "image_featured": "shopify://shop_images/iris-gt3.png",
             "panel_name": "IRiS® GT3",
             "pixel_pitch": "3.9",
             "module_resolution": "64x128",
@@ -129,13 +88,13 @@
             "contrast": "5000:1",
             "color_depth": "14",
             "refresh_rate": "≥3840",
-            "frame_frequency": "50\/60",
+            "frame_frequency": "50/60",
             "input_voltage": "110~220V AC",
             "working_temp": "-20℃~+50℃",
             "working_humidity": "10%-90%RH",
             "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°\/140°",
-            "ip_rating": "IP65\/IP54",
+            "viewing_angle": "140°/140°",
+            "ip_rating": "IP65/IP54",
             "curvature": "missing",
             "lifespan": "100000",
             "receiving_card": "missing",
@@ -164,31 +123,9 @@
         "large_text_color": "#11c685"
       }
     },
-    "col": {
-      "type": "three-col",
-      "settings": {
-        "header_title": "",
-        "h_gutter": 3,
-        "box_height": 1
-      }
-    },
-    "grid": {
-      "type": "product-hero-grid",
-      "settings": {
-        "height": 50,
-        "product_color": "",
-        "product_title": "",
-        "product_paragraph": "",
-        "product_url_title": "Shop ›",
-        "product_url": "",
-        "box_1_paragraph": "",
-        "box_2_paragraph": "",
-        "box_2_color": "",
-        "box_3_paragraph": "",
-        "box_3_color": "",
-        "box_4_paragraph": "",
-        "box_4_color": ""
-      }
+    "banner-1": {
+      "type": "lp-banner",
+      "settings": {}
     },
     "scroller": {
       "type": "fullwidth-scroller",
@@ -199,6 +136,10 @@
         "cta_title": "",
         "cta_url": ""
       }
+    },
+    "banner-2": {
+      "type": "lp-banner",
+      "settings": {}
     },
     "form": {
       "type": "iris-lg-form",
@@ -212,25 +153,15 @@
         "btn_color": "#000000",
         "btn_background": "#ffffff"
       }
-    },
-    "image": {
-      "type": "center-image-hero",
-      "settings": {
-        "title": "",
-        "paragraph": "",
-        "cta_title": "",
-        "cta_url": ""
-      }
     }
   },
   "order": [
     "slider",
-    "lineup",
+    "icons",
     "spec-viewer",
-    "col",
-    "grid",
+    "banner-1",
+    "banner-2",
     "scroller",
-    "form",
-    "image"
+    "form"
   ]
 }

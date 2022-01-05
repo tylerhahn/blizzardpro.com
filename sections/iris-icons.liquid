@@ -1,0 +1,88 @@
+<div class="iris-icons">
+    <div class="flex-container">
+        {% for block in section.blocks %}
+            <div class="iris-icon-item">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+                <h3>{{ block.settings.title }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .iris-icons .flex-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 0px;
+    max-width: 1240px;
+    flex-wrap: wrap;
+}
+
+.iris-icons {
+    background: {{ section.settings.section_color }};
+}
+
+.iris-icon-item {
+    width: 20%;
+    text-align: center;
+}
+
+.iris-icon-item img {
+    max-height: 80px;
+}
+
+.iris-icons h3 {
+    font-size: 1em;
+    font-family: 'din-condensed';
+    font-weight: normal;
+    color: {{ section.settings.text_color }};
+}
+</style>
+
+{% schema %}
+
+{
+    "name": "Product Icons",
+    "max_blocks": 10,
+    "settings": [
+        {
+            "type": "header",
+            "content": "Icons"
+        }, {
+            "type": "color",
+            "id": "section_color",
+            "label": "Section Color",
+            "default": "#010101"
+        }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#ffffff"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Icon",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }, {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Icons",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}

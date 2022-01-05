@@ -1,0 +1,112 @@
+<section class="image-banner-container">
+    {% for block in section.blocks %}
+        <div class="image-banner-lp">
+            <div class="grid-container" style="flex-direction: {% if block.settings.right_aligned %}inherit{% else %}row-reverse{% endif %}">
+                <div class="image-banner-textblock"></div>
+                <div class="image-banner-textblock">
+                    <h2 style="color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
+                    <p style="color: {{ block.settings.copy_color }}">{{ block.settings.copy }}</p>
+                </div>
+            </div>
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
+        </div>
+    {% endfor %}
+</section>
+
+<style>
+    .image-banner-lp{
+        position: relative;
+        max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 2em;
+    }
+
+    .image-banner-lp .grid-container {
+        display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    }
+
+    .image-banner-textblock {
+    max-width: 400px;
+    flex: 1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image-banner-textblock h2 {
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: -.003em;
+}
+
+.image-banner-textblock P {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+}
+
+</style>
+
+{% schema %}
+
+{
+    "name": "Banner",
+    "max_blocks": 10,
+    "settings": [
+        {
+            "type": "header",
+            "content": "banners"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Banner",
+            "settings": [
+            {
+             "type": "checkbox",
+             "id": "right_aligned" ,
+             "label": "Align Right",
+             "default": false
+            },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }, {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }, {
+                 "type": "textarea",
+                 "id": "copy" ,
+                 "label": "copy"
+                },
+                {
+                    "type": "color",
+                    "id": "title_color",
+                    "label": "Title Color",
+                    "default": "#010101"
+                }, {
+                    "type": "color",
+                    "id": "copy_color",
+                    "label": "Copy Color",
+                    "default": "#ffffff"
+                }
+
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Icons",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}

@@ -210,7 +210,8 @@
         "block_order": [
           "f6dae2b9-4765-45b4-a476-ea7e89aefd1c"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "161280708581d6b51f": {
         "type": "slider",
@@ -281,7 +282,8 @@
           "b0489af9-4025-41f7-8171-81e86337adf8",
           "84184c44-caff-4484-8e40-6d5a1ae3c4e1"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "16128184326a58b7f0": {
         "type": "three-col",
@@ -662,7 +664,8 @@
         "block_order": [
           "a024cff5-4809-423c-8f55-22f8b2c2f189"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "at-full-col": {
         "type": "at-full-col",
@@ -1264,7 +1267,8 @@
           "03281e95-4027-434a-b6ff-9eb4ab79be7a",
           "fb762577-3670-470b-86a1-06881b2139cc"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "at-full-prod-lineup": {
         "type": "at-full-prod-lineup",
@@ -1304,7 +1308,8 @@
         "block_order": [
           "bd96f581-6032-449a-86fc-4d8027151d8a"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "iris-product-lineup-auto": {
         "type": "iris-product-lineup-auto",
@@ -1409,7 +1414,8 @@
         "block_order": [
           "4b7dacdc-ed66-4c90-b1a0-7d38a463fd88"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "iris-lineup": {
         "type": "iris-lineup",
@@ -1599,7 +1605,8 @@
         "block_order": [
           "0dc879af-e95a-42db-8e53-b5aa42aaaf5f"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "nova-col": {
         "type": "nova-col",
@@ -1766,7 +1773,8 @@
         "block_order": [
           "1f9d961b-0f3b-4e75-8dce-9dce2d55de3c"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "nova-product-lineup-auto": {
         "type": "nova-product-lineup-auto",
@@ -1779,7 +1787,8 @@
       },
       "nova-compare": {
         "type": "nova-compare",
-        "settings": {}
+        "settings": {
+        }
       },
       "nova-lineup-2": {
         "type": "nova-lineup-2",
@@ -1854,7 +1863,8 @@
           "5c15e5d8-8abf-438c-b77a-b7bf2dc8d0fb",
           "0a192d00-9e05-4e91-a3ea-cb578c17ee8e"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "iris-simple-collection": {
         "type": "iris-simple-collection",
