@@ -252,8 +252,8 @@
         "form_title": "Test Drive Today",
         "background_color": "#c83923",
         "input_background": "#fdf8f7",
-        "input_border": "#ffb4b4",
-        "label_color": "#ffffff",
+        "input_border": "#f28c7d",
+        "label_color": "#fdbbb2",
         "btn_color": "#ffffff",
         "btn_background": "#d17a1a"
       }
