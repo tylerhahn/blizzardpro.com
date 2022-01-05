@@ -9,6 +9,50 @@
     },
     "icons": {
       "type": "iris-icons",
+      "blocks": {
+        "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/event.png",
+            "title": "Event Production"
+          }
+        },
+        "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/touring_3db985f4-3796-4ac5-a6d0-7f38dbe0ecda.png",
+            "title": "Pro Touring"
+          }
+        },
+        "d1587056-26fd-4120-af3c-9c437a7a50dd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/refresh.png",
+            "title": "High Refresh Rate"
+          }
+        },
+        "07571cc8-53ed-4241-922a-653cfe605f2a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/outdoor_2c119980-4662-471e-8f0f-3c026cc32653.png",
+            "title": "Indoor \/ Outdoor"
+          }
+        },
+        "73854793-8bdc-422e-990f-b48b95a65734": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rental.png",
+            "title": "Stage \/ Rental"
+          }
+        }
+      },
+      "block_order": [
+        "0416040e-48b8-45c4-aec1-80af1b3aebd5",
+        "42ab91ad-d4b9-4a90-95e1-31661cf684a2",
+        "d1587056-26fd-4120-af3c-9c437a7a50dd",
+        "07571cc8-53ed-4241-922a-653cfe605f2a",
+        "73854793-8bdc-422e-990f-b48b95a65734"
+      ],
       "settings": {
         "section_color": "#010101",
         "text_color": "#ffffff"
