@@ -176,6 +176,17 @@
     "banner-1": {
       "type": "lp-banner",
       "blocks": {
+        "40fca236-2e4c-40ab-8be7-a45fe2afc80e": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "image": "shopify:\/\/shop_images\/web-image-1.jpg",
+            "title": "",
+            "copy": "",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        },
         "546058db-7408-404f-8bfe-221e431c5a41": {
           "type": "image",
           "settings": {
@@ -211,6 +222,7 @@
         }
       },
       "block_order": [
+        "40fca236-2e4c-40ab-8be7-a45fe2afc80e",
         "546058db-7408-404f-8bfe-221e431c5a41",
         "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632",
         "576c38dc-a1ec-4c67-8713-40c22cf7119b"
