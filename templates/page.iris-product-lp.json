@@ -155,12 +155,12 @@
         "576c38dc-a1ec-4c67-8713-40c22cf7119b": {
           "type": "image",
           "settings": {
-            "right_aligned": false,
+            "right_aligned": true,
             "image": "shopify:\/\/shop_images\/web-image-4.jpg",
-            "title": "",
-            "copy": "",
-            "title_color": "#010101",
-            "copy_color": "#ffffff"
+            "title": "Lock Em' Up",
+            "copy": "Ingenious one-arm locking paddle makes setup a snap--even while you're driving solo.",
+            "title_color": "#ffffff",
+            "copy_color": "#00503a"
           }
         }
       },
