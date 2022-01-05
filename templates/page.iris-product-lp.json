@@ -2,11 +2,15 @@
   "sections": {
     "slider": {
       "type": "iris-lp-hero",
-      "settings": {}
+      "settings": {
+      }
     },
     "icons": {
       "type": "iris-icons",
-      "settings": {}
+      "settings": {
+        "section_color": "#010101",
+        "text_color": "#ffffff"
+      }
     },
     "spec-viewer": {
       "type": "iris-spec-viewer",
@@ -14,8 +18,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/iris-gt3-xl-right.png",
-            "image_featured": "shopify://shop_images/gt3-xl.png",
+            "image": "shopify:\/\/shop_images\/iris-gt3-xl-right.png",
+            "image_featured": "shopify:\/\/shop_images\/gt3-xl.png",
             "panel_name": "IRiS® GT3 XL",
             "pixel_pitch": "3.9",
             "module_resolution": "64x128",
@@ -39,13 +43,13 @@
             "contrast": "5000:1",
             "color_depth": "14",
             "refresh_rate": "≥3840",
-            "frame_frequency": "50/60",
+            "frame_frequency": "50\/60",
             "input_voltage": "110~220V AC",
             "working_temp": "'-20℃~+50℃",
             "working_humidity": "10%-90%RH",
             "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°/140°",
-            "ip_rating": "IP65/IP54",
+            "viewing_angle": "140°\/140°",
+            "ip_rating": "IP65\/IP54",
             "curvature": "missing",
             "lifespan": "100000",
             "receiving_card": "A",
@@ -63,8 +67,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/iris-gt3-right.png",
-            "image_featured": "shopify://shop_images/iris-gt3.png",
+            "image": "shopify:\/\/shop_images\/iris-gt3-right.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-gt3.png",
             "panel_name": "IRiS® GT3",
             "pixel_pitch": "3.9",
             "module_resolution": "64x128",
@@ -88,13 +92,13 @@
             "contrast": "5000:1",
             "color_depth": "14",
             "refresh_rate": "≥3840",
-            "frame_frequency": "50/60",
+            "frame_frequency": "50\/60",
             "input_voltage": "110~220V AC",
             "working_temp": "-20℃~+50℃",
             "working_humidity": "10%-90%RH",
             "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°/140°",
-            "ip_rating": "IP65/IP54",
+            "viewing_angle": "140°\/140°",
+            "ip_rating": "IP65\/IP54",
             "curvature": "missing",
             "lifespan": "100000",
             "receiving_card": "missing",
@@ -125,7 +129,53 @@
     },
     "banner-1": {
       "type": "lp-banner",
-      "settings": {}
+      "blocks": {
+        "546058db-7408-404f-8bfe-221e431c5a41": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "image": "shopify:\/\/shop_images\/web-image-2.jpg",
+            "title": "Sedan or Coupé",
+            "copy": "Combine 500mm GT3™ & 1m GT3™ XL in the same display for ultimate flexibility.",
+            "title_color": "#ffffff",
+            "copy_color": "#ffd8d8"
+          }
+        },
+        "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "image": "shopify:\/\/shop_images\/web-image-3.jpg",
+            "title": "",
+            "copy": "",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        },
+        "576c38dc-a1ec-4c67-8713-40c22cf7119b": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "image": "shopify:\/\/shop_images\/web-image-4.jpg",
+            "title": "",
+            "copy": "",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "546058db-7408-404f-8bfe-221e431c5a41",
+        "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632",
+        "576c38dc-a1ec-4c67-8713-40c22cf7119b"
+      ],
+      "settings": {
+      }
+    },
+    "banner-2": {
+      "type": "lp-banner",
+      "settings": {
+      }
     },
     "scroller": {
       "type": "fullwidth-scroller",
@@ -136,10 +186,6 @@
         "cta_title": "",
         "cta_url": ""
       }
-    },
-    "banner-2": {
-      "type": "lp-banner",
-      "settings": {}
     },
     "form": {
       "type": "iris-lg-form",
