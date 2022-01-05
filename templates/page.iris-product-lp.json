@@ -3,6 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
+        "hero_image": "shopify:\/\/shop_images\/gtseries-fullspread_c133cc90-26fd-450a-bf49-ded330970f86.jpg",
+        "series_image": "shopify:\/\/shop_images\/gtseries-header.png"
       }
     },
     "icons": {
