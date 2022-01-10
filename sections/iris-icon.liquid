@@ -1,4 +1,3 @@
-
 <div id="bl-pl-icon" style="overflow-x: hidden; background-color: black; background-image: url({{'classy-fabric.png' | asset_url }});" class="bl-pl-icon-{{section.id}} container-fluid">
 <div class="bl-pl-icon-header">
   <img src="{{section.settings.section_image | img_url: 'master'}}" alt="IRiS ICON" />
@@ -36,65 +35,79 @@
 </div>
 
   {% schema %}
-  {
+
+{
     "name": "Collection Lineup",
     "settings": [
-      {
-        "type": "header",
-        "content": "Collection Lineup"
-      },
-      {
-        "type": "image_picker",
-        "id": "section_image",
-        "label": "Image Header"
-      },
-      {
-        "type": "text",
-        "id": "header_title",
-        "label": "Section Title"
-      },
-      {
-        "type": "text",
-        "id": "header_sub",
-        "label": "Section Subheadline"
-      },
-      {
-        "type": "color",
-        "id": "background_color",
-        "label": "Background Color"
-      },
-      {
-        "type": "number",
-        "id": "limit",
-        "label": "Product Limit"
-      },
-      {
-        "type": "range",
-        "id": "h_gutter",
-        "min": 0,
-        "max": 5,
-        "step": 1,
-        "label": "Horizontal Gutter",
-        "default": 3
-    },
-    {
-        "type": "collection",
-        "id": "collection",
-        "label": "Collection"
-      }
-
+        {
+            "type": "header",
+            "content": "Collection Lineup"
+        }, {
+            "type": "image_picker",
+            "id": "section_image",
+            "label": "Image Header"
+        }, {
+            "type": "text",
+            "id": "header_title",
+            "label": "Section Title"
+        }, {
+            "type": "text",
+            "id": "header_sub",
+            "label": "Section Subheadline"
+        }, {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color"
+        }, {
+            "type": "number",
+            "id": "limit",
+            "label": "Product Limit"
+        }, {
+            "type": "range",
+            "id": "h_gutter",
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "label": "Horizontal Gutter",
+            "default": 3
+        }, {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+        }
     ],
-
     "presets": [
-      {
-        "name": "Collection Lineup",
-        "category": "Image"
-      }
+        {
+            "name": "Collection Lineup",
+            "category": "Image"
+        }
     ]
-  }
+}
+
 {% endschema %}
 
 <style>
+
+  @media screen and (max-width: 768px) {
+    .iris-icon-item img {
+      max-height: 48px;
+    }
+
+    .iris-icon-item {
+      width: 33%;
+    }
+
+    .iris-icons .flex-container {
+      justify-content: center;
+    }
+
+    .iris-icons h3 {
+    font-size: 17px;
+    padding-top: 14px;
+    }
+
+  }
+
 .radiant-circle {
     width: 360px;
     position: absolute;

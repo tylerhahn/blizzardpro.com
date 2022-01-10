@@ -1,44 +1,76 @@
 <div class="mw-1920" id="iris-spec">
-    <div class="flex-container">
-        <div class="panel-viewer">
+
+   <div class="panel-viewer">
+      <div class="panel-headline">
+         Explore the Series
+      </div>
+
             <!-- Sidebar -->
             <div class="side-bar-panels">
-                {% for block in section.blocks %}
-                    {% if block.settings.image != blank %}
-                        <div class="side-bar-item">
-                            <img onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}')" class="panel-image" src="{{block.settings.image | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
-                            <h4>{{ block.settings.panel_name }}
-                            </h4>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-            <!-- Featured/3D Container -->
-            <div id="active-panel">
-                {% for block in section.blocks %}
-                    {% if block.settings.image_featured != blank %}
-                        <img data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="featured-panel panel-attr {% if forloop.first %}visible{% endif %}" src="{{block.settings.image_featured | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
-                    {% endif %}
-                {% endfor %}
+               {% for block in section.blocks %}
+                   {% if block.settings.image != blank %}
+                       <div class="side-bar-item panel-attr {% if forloop.first %}active{% endif %}" data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}">
+                           <img onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}')" class="panel-image" src="{{block.settings.image | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
+                           <h4>{{ block.settings.panel_name }}</h4>
+                       </div>
+                   {% endif %}
+               {% endfor %}
+           </div>
+
+
+
+  </div>
+
+    <div class="flex-container">
+
+      <div id="active-panel">
+         {% for block in section.blocks %}
+             {% if block.settings.image_featured != blank %}
+                 <img data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="featured-panel panel-attr {% if forloop.first %}visible{% endif %}" src="{{block.settings.image_featured | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
+             {% endif %}
+         {% endfor %}
+     </div>
+
+        <div class="spec-sheet">
+
+            {% for block in section.blocks %}
+
+                <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
+
+                  {% for setting in block.settings %}
+                        {% capture thecycle %}
+                            {% cycle 'odd', 'even' %}
+                        {% endcapture %}
+                        {% assign id = block.settings[setting] %}
+                        {% assign ignoredFields = "image, FCC Certification, ETL Certification, CE Certification, image featured" | split:", " %}
+                        {% assign title = setting | replace: '_', ' '  %}
+                        {% unless ignoredFields contains title %}
+                            {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
+                        {% endunless %}
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+
+            <div class="iris-certifications">
+                <h4>Certifications</h4>
+                <div class="cert-flex">
+                    {% for block in section.blocks %}
+                    <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}>
+                        {% for setting in block.settings %}
+                            {% assign certSettings = "FCC Certification, ETL Certification, CE Certification" | split: ", " %}
+                            {% assign title = setting | replace: '_', ' ' %}
+
+                            {% if certSettings contains title %}
+                                {% assign imgName = title | replace: ' Certification', '' %}
+                                {% assign imgUrl = imgName | downcase | append: '.svg' %}
+                                <img src="{{imgUrl | asset_url }} '" alt="">
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-
-
-        {% for block in section.blocks %}
-            <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
-                {% for setting in block.settings %}
-                    {% capture thecycle %}
-                        {% cycle 'odd', 'even' %}
-                    {% endcapture %}
-                    {% assign id = block.settings[setting] %}
-                    {% assign title = setting | replace: '_', ' '  %}
-                    {% if title != 'image' %}
-                        {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        {% endfor %}
-
 
     </div>
 </div>
@@ -46,23 +78,88 @@
 <script>
     function showHideSpecs(id) {
 
+
       const specBlocks = document.querySelectorAll('.panel-attr');
       Array.from(specBlocks).forEach((element, index) => {
          $(element).removeClass('visible');
+         $(element).removeClass("active");
       });
+
+   $(`.side-bar-item[data-panel=${id}]`).addClass('active');
 
     $(`ul[data-panel=${id}]`).addClass('visible');
     $(`img[data-panel=${id}]`).addClass('visible');
+
     $(`div[data-panel=${id}]`).addClass('visible');
     }
 </script>
 
 <style>
+
+@media screen and (max-width: 1500px) {
+
+   .side-bar-panels {
+      margin-bottom: 2em;
+      margin-top: 2em;
+   }
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+   .side-bar-panels {
+   grid-template-columns: repeat(2, 1fr);
+   }
+
+   #active-panel img {
+   width: 100%;
+   }
+
+   ul.block-specs.visible {column-count: 1;width: 100%;}
+
+}
+.block-specs h2 {
+   width: 100%;
+    font-weight: 600;
+    font-size: 2.6em;
+    padding-bottom: 20px;
+}
+
+.iris-certifications img {
+   width: 40px;
+   margin-right: 2em;
+}
+
+.iris-certifications h4{
+   margin-top: 20px;
+   text-transform:  uppercase;
+   letter-spacing: 1.2px;
+}
+
+
 .side-bar-item {
     text-align: center;
     cursor: zoom-in;
-    padding: 2em 0;
-        transition: 0.2s ease-in-out;
+   transition: 0.2s ease-in-out;
+   margin-left: 1em;
+}
+
+.side-bar-item:first-child {
+   margin-left: 0px;
+}
+
+.side-bar-item.active{
+   border-color: {{ section.settings.accent_color }};
+   color: white;
+   border-bottom: 1px solid;
+}
+.side-bar-item img {
+   opacity: 0.6;
+}
+
+.side-bar-item.active img{
+   opacity: 1;
 }
 
 .side-bar-item:hover{
@@ -81,21 +178,45 @@
 }
 
 
-    #iris-spec {
-        background: linear-gradient(90deg, {{ section.settings.background_color_1 }}, {{ section.settings.background_color_2 }});
-        padding: 2em;
-    }
-
-    .panel-viewer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+#iris-spec {
+   background: linear-gradient(90deg, {{ section.settings.background_color_1 }}, {{ section.settings.background_color_2 }});
+   padding: 2em 2em 7em 2em;
 }
+
+.spec-sheet {
+   flex: 2;
+}
+
+.panel-viewer {
+   text-align: center;
+   margin: 0 auto;
+   margin-bottom: 1em;
+   max-width: 1200px;
+   width: 95%;
+   padding: 4em 0;
+}
+
+.panel-headline {
+   font-size: 4em;
+   line-height: 1.2;
+   color: gainsboro;
+}
+
+.panel-headline::before {
+    content: "";
+    height: 2px;
+    background: gray;
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+
 #active-panel {
    flex: 1;
    position: relative;
 }
+
 #active-panel img {
    max-width: 60vh;
    margin: 0 auto;
@@ -111,7 +232,6 @@
     display: flex;
     align-items: center;
     height: 100%;
-
 }
     .featured-panel, .block-specs{
       height: 0;
@@ -147,12 +267,11 @@
     }
 
     .side-bar-panels {
-    display: grid;
-    border-radius: 8px;
-    align-items: center;
-    background: {{ section.settings.spec_color_2}};
-
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2em;
+   }
 
 .side-bar-panels img {
     margin: 0 auto;
@@ -179,6 +298,8 @@
    max-width: 1790px;
     margin: 0 auto;
     justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
 
@@ -228,8 +349,8 @@
 },
 {
  "type": "color",
- "id": "large_text_color" ,
- "label": "Large text color"
+ "id": "accent_color" ,
+ "label": "Accent color"
 }
     ],
     "blocks":[

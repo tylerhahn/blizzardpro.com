@@ -10,17 +10,25 @@
                     <h5>{{ product.metafields.f_b.Category_Subtitle | strip_html }}</h5>
                     <a href="{{ product.url }}">View ></a>
                 </div>
-
             </div>
-
         {% endfor %}
     </div>
 </div>
 
 <style>
-    .iris-lp-collection .grid-container {
-    grid-template-columns: repeat({{section.settings.products_shown}}, 1fr);
-}
+    @media screen and (max-width: 768px) {
+        .iris-lp-collection .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .lp-collection-product {
+            padding: 31px;
+        }
+    }
+
+        .iris-lp-collection .grid-container {
+            grid-template-columns: repeat({{section.settings.products_shown}}, 1fr);
+        }
 
 .lp-collection-product img {
     max-height: 175;
