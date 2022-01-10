@@ -1,0 +1,125 @@
+{% assign isBstock = false %}
+{% assign likeNewPrice = 0 %}
+{% assign refurbPrice = 0 %}
+{% assign isBstockCollection = false %}
+{% assign newprice = 0 %}
+{% assign newprice_compare = 0 %}
+{% assign prodId = product.variants.first.id %}
+
+{% assign showInventory == false %}
+{% for variant in product.variants %}
+{% if variant.title == 'Refurbished' or variant.title == 'Like New' %}
+{% if variant.inventory_quantity > 0 %}
+{% assign showInventory = true %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% assign add_to_cart = 'Add to Cart' %} {% assign sold_out = 'Out of Stock' %} {% assign unavailable = 'Unavailable' %}
+
+          {% for variant in product.variants %}
+          {% if variant.title == 'New' and variant.available %}
+          {% elsif variant.title == 'New' %}
+          {% assign add_to_cart = 'Out of Stock' %}
+          {% endif %}
+          {% if variant.title == 'Like New' or variant.title == 'Refurbished' %}
+          {% if variant.available %}
+          {% assign secondaryInventory = secondaryInventory | plus: 1 %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+
+{% if product.metafields.c_f.Preorder_Date %}
+{% assign add_to_cart = 'Pre-order Now' %}
+{% endif %}
+
+{% for variant in product.variants %}
+    {% if variant.title == 'New' %}
+      {% assign newprice = variant.price | money_without_currency %}
+      {% assign newprice_compare = variant.compare_at_price | money_without_currency %}
+    {% endif %}
+
+  {% if variant.title == 'Like New' or variant.title == 'Refurbished' %}
+    {% if variant.available %}
+      {% assign isBstock = true %}
+
+      {% if variant.title == 'Like New' %}
+        {% assign likeNewPrice = variant.price %}
+          {% if collection.title == 'Like New' %}
+          {% assign prodId = variant.id %}
+          {% endif %}
+          {% elsif variant.title == 'Refurbished' %}
+            {% assign refurbPrice = variant.price %}
+          {% if collection.title == 'Refurbished' %}
+          {% assign prodId = variant.id %}
+          {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if collection.title == 'Like New' or collection.title == 'Refurbished' %}
+{% assign isBstockCollection = true %}
+{% endif %}
+
+<div class="collections-item"  onclick="location.href='{{product.url}}'">
+
+{% assign comparing = false %}
+{% assign bubbleDiscount = 0 %}
+{% if newprice_compare > newprice %}
+  {% assign comparing = true %}
+  {% assign newprice_ratio = newprice | divided_by: newprice_compare %}
+  {% assign bubbleDiscount = 1.0 | minus: newprice_ratio | times: 100  %}
+{% endif %}
+
+
+{% if comparing %}
+<span class="discount-bub">{{bubbleDiscount | round}}% </br>OFF</span>
+{% endif %}
+
+<img class="lazy" data-original="{{ product | img_url: 'grande' }}" alt="{{ product.featured_image.alt | escape }}" />
+  <div class="collection-content">
+    {% if on_sale %}
+    <div class="sales-banner"><i class="far fa-tags"></i>On Sale</div>
+    {% endif %}
+    {% if collection.title == 'Like New' %}
+    <h5 class="alt-banner">Like New</h5>
+    {% elsif collection.title == 'Refurbished' %}
+    <h5 class="alt-banner">Refurbished</h5>
+    {% endif %}
+    <h2>{{ product.title }}</h2>
+
+    <!--   <h3>{{ product.metafields.c_f.Section_1_Header }}</h3> -->
+    <h3 class="product-subtext"> {{ product.metafields.c_f.Category_Subtitle }}</h>
+    {% if product.tags contains 'discontinued' %}
+    <h4>Discontinued</h4>
+    {% else %}
+    <h4>
+      {% if collection.title == 'Like New' and likeNewPrice > 0 %}
+      {{likeNewPrice | money}}
+      {% elsif collection.title == 'Refurbished' and refurbPrice > 0 %}
+      {{ refurbPrice | money }}
+      {% else %}
+      {{product.price_max | money}}
+      {% endif %}
+    </h4>
+    {% endif %}
+
+    <form method="post" action="/cart/add">
+      <input type="hidden" name="id" value="{{ prodId }}" />
+      <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+      {% if isBstock == false or isBstockCollection == false %}
+      {% if showInventory == true and add_to_cart == 'Out of Stock' %}<a class="btn btn-blue" href="{{product.url}}">Other Buying Options</a>{% elsif product.available %}
+      <input type="submit" class="btn btn-blue" value="Add to Cart" />
+      {% endif %}
+      
+   
+      {% elsif isBstockCollection == true %}
+      <input type="submit" value="Add to cart" class="btn btn-blue alt-stock-buy-{{product.title}}" style="margin-bottom: 20px" />
+      
+      {% endif %}
+    </form> 
+
+  </div>
+
+</div>

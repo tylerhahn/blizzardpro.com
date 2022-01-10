@@ -1,0 +1,63 @@
+{% include 'restrict_page' %}
+<!DOCTYPE html lang="en">
+
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+
+<html class="no-js">
+    <!--<![endif]-->
+
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        {% include 'analytics' %}
+        {% include 'metadata' %}
+        {% include 'third_party_css' %}
+        {% include 'third_party_js' %}
+
+        {{ content_for_header }}
+
+        <!--begin-boost-pfs-filter-css-->
+        {% render 'boost-pfs-style' %}
+        <!--end-boost-pfs-filter-css-->
+
+
+    </head>
+
+    {%- comment -%}Advanced Registration{%- endcomment -%}
+
+    {% if shop.metafields.adv_reg.lockShop == 'on' and customer == nil and restrict_page %}
+        {% if shop.metafields.adv_reg.noFraming == 'on' %}
+            {% include 'advanced_registration_locked_page' %}
+        {% else %}
+            <script>
+                window.location = "/account/login";
+            </script>
+        {% endif %}
+    {% else %}
+
+        {%- comment -%}End Advanced Registration{%- endcomment -%}
+
+        <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
+
+            <header>
+                {% include 'site-nav' %}
+                {% include 'condensed-header' %}
+            </header>
+
+            <div id="main" role="main">
+                {{ content_for_layout }}
+            </div>
+
+            {% include 'site_footer' %}
+
+
+            <!--begin-boost-pfs-js-->
+            {% render 'boost-pfs' %}
+            <!--end-boost-pfs-js-->
+        </body>
+
+    </html>
+{% endif %}

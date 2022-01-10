@@ -1,0 +1,493 @@
+<div class="mw-1920" id="iris-spec">
+    <div class="flex-container">
+        <div class="panel-viewer">
+            <!-- Sidebar -->
+            <div class="side-bar-panels">
+                {% for block in section.blocks %}
+                    {% if block.settings.image != blank %}
+                        <div class="side-bar-item">
+                            <img onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}')" class="panel-image" src="{{block.settings.image | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
+                            <h4>{{ block.settings.panel_name }}
+                            </h4>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!-- Featured/3D Container -->
+            <div id="active-panel">
+                {% for block in section.blocks %}
+                    {% if block.settings.image_featured != blank %}
+                        <img data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="featured-panel panel-attr {% if forloop.first %}visible{% endif %}" src="{{block.settings.image_featured | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+
+        {% for block in section.blocks %}
+            <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
+                {% for setting in block.settings %}
+                    {% capture thecycle %}
+                        {% cycle 'odd', 'even' %}
+                    {% endcapture %}
+                    {% assign id = block.settings[setting] %}
+                    {% assign title = setting | replace: '_', ' '  %}
+                    {% if title != 'image' %}
+                        {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endfor %}
+
+
+    </div>
+</div>
+
+<script>
+    function showHideSpecs(id) {
+
+      const specBlocks = document.querySelectorAll('.panel-attr');
+      Array.from(specBlocks).forEach((element, index) => {
+         $(element).removeClass('visible');
+      });
+
+    $(`ul[data-panel=${id}]`).addClass('visible');
+    $(`img[data-panel=${id}]`).addClass('visible');
+    $(`div[data-panel=${id}]`).addClass('visible');
+    }
+</script>
+
+<style>
+.side-bar-item {
+    text-align: center;
+    cursor: zoom-in;
+    padding: 2em 0;
+        transition: 0.2s ease-in-out;
+}
+
+.side-bar-item:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+.bg-text {
+    color: {{ section.settings.large_text_color }};
+    font-size: 17em;
+    position: absolute;
+    z-index: 0;
+    line-height: 0.8;
+    font-weight: bold;
+    font-family: 'din-condensed';
+}
+
+
+    #iris-spec {
+        background: linear-gradient(90deg, {{ section.settings.background_color_1 }}, {{ section.settings.background_color_2 }});
+        padding: 2em;
+    }
+
+    .panel-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+#active-panel {
+   flex: 1;
+   position: relative;
+}
+#active-panel img {
+   max-width: 60vh;
+   margin: 0 auto;
+    position: relative;
+}
+
+.bg-text {
+   transition: .5s ease-in-out;
+   opacity: 0;
+   width: 60%;
+    right: 0;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+    .featured-panel, .block-specs{
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: .5s ease-in-out;
+    }
+
+
+    .featured-panel.visible, ul.block-specs.visible {
+       height: auto;
+       width: auto;
+      animation: fadeIn 0.5s ease-in-out;
+       display: block;
+       transition: .5s ease-in-out;
+      opacity: 1;
+    }
+
+    .bg-text.visible {
+
+    opacity: 1;
+}
+
+
+    ul.block-specs.visible {
+      column-count: 2;
+
+    }
+
+    .panel-image {
+        height: 200px;
+    }
+
+    .side-bar-panels {
+    display: grid;
+    border-radius: 8px;
+    align-items: center;
+    background: {{ section.settings.spec_color_2}};
+
+}
+
+.side-bar-panels img {
+    margin: 0 auto;
+}
+
+    .spec {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    padding: .5em;
+    text-transform: uppercase;
+    font-family: din-condensed, sans-serif;
+}
+
+.spec.odd {
+    background: {{ section.settings.spec_color_1}};
+}
+
+.spec.even {
+    background: {{ section.settings.spec_color_2}};
+}
+
+#iris-spec .flex-container {
+   max-width: 1790px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+</style>
+
+{% schema %}
+{
+    "name":"Panels",
+    "max_blocks":10,
+    "settings":[
+       {
+          "type":"header",
+          "content":"Boxes"
+       },
+       {
+        "type":"color",
+        "id":"background_color_1",
+        "label":"Background Color 1",
+        "default": "#000000"
+     },
+       {
+        "type":"color",
+        "id":"background_color_2",
+        "label":"Background Color 2",
+        "default": "#2c2c2c"
+     },
+{
+ "type": "color",
+ "id": "spec_color_1" ,
+ "label": "Spec Background color 1"
+},
+{
+ "type": "color",
+ "id": "spec_color_2" ,
+ "label": "Spec Background color 2"
+},
+
+{
+ "type": "color",
+ "id": "spec_color_data" ,
+ "label": "Spec color"
+},
+{
+ "type": "color",
+ "id": "spec_title_color" ,
+ "label": "Spec title color"
+},
+{
+ "type": "color",
+ "id": "large_text_color" ,
+ "label": "Large text color"
+}
+    ],
+    "blocks":[
+       {
+          "type":"image",
+          "name":"Panel",
+          "settings":[
+             {
+                "type":"image_picker",
+                "id":"image",
+                "label":"Panel Image"
+             },
+             {
+               "type":"image_picker",
+               "id":"image_featured",
+               "label":"Featured Image"
+            },
+             {
+                "id":"panel_name",
+                "type":"text",
+                "label":"Panel Name"
+             },
+             {
+                "type":"header",
+                "content":"Module Parameters"
+             },
+             {
+                "type":"text",
+                "id":"pixel_pitch",
+                "label":"Pixel pitch (mm)"
+             },
+             {
+                "type":"text",
+                "id":"module_resolution",
+                "label":"Module resolution"
+             },
+             {
+                "type":"text",
+                "id":"module_pixel_quantiy",
+                "label":"Module pixel quantiy"
+             },
+             {
+                "type":"text",
+                "id":"module_dimensions",
+                "label":"Module dimensions (mm)"
+             },
+             {
+                "type":"text",
+                "id":"module_pixel_config",
+                "label":"Module pixel config"
+             },
+             {
+                "type":"text",
+                "id":"application",
+                "label":"Application"
+             },
+             {
+                "type":"text",
+                "id":"module_weight",
+                "label":"Module Weight (kg)"
+             },
+             {
+                "type":"header",
+                "content":"Cabinet Parameters"
+             },
+             {
+                "type":"text",
+                "id":"dimensions",
+                "label":"Dimensions"
+             },
+             {
+                "type":"text",
+                "id":"resolution",
+                "label":"Resolution"
+             },
+             {
+                "type":"text",
+                "id":"pixel_quantity",
+                "label":"Pixel quantity"
+             },
+             {
+                "type":"text",
+                "id":"module_quantity",
+                "label":"Module quantity"
+             },
+             {
+                "type":"text",
+                "id":"material",
+                "label":"Material",
+                "default":"Aluminum Die Cast"
+             },
+             {
+                "type":"text",
+                "id":"weight",
+                "label":"Weight (kg)"
+             },
+             {
+                "type":"text",
+                "id":"maitenance_type",
+                "label":"Maitenance type",
+                "default":"Both front and rear"
+             },
+             {
+                "type":"header",
+                "content":"Screen Parameters"
+             },
+             {
+                "type":"text",
+                "id":"pixel_density",
+                "label":"Pixel density (Dots/m2)"
+             },
+             {
+                "type":"text",
+                "id":"average_power_consumption",
+                "label":"Average power consumption (w/m2)"
+             },
+             {
+                "type":"text",
+                "id":"max_power_consumption",
+                "label":"Max power consumption (w/m2)"
+             },
+             {
+                "type":"text",
+                "id":"input_power",
+                "label":"Input power (w/m2)"
+             },
+             {
+                "type":"text",
+                "id":"brightness",
+                "label":"Brightness (nit)"
+             },
+             {
+                "type":"text",
+                "id":"contrast",
+                "label":"Contrast"
+             },
+             {
+                "type":"text",
+                "id":"color_depth",
+                "label":"Color depth (bit)"
+             },
+             {
+                "type":"text",
+                "id":"refresh_rate",
+                "label":"Refresh rate (hz)"
+             },
+             {
+                "type":"text",
+                "id":"frame_frequency",
+                "label":"Frame frequency (hz)"
+             },
+             {
+                "type":"text",
+                "id":"input_voltage",
+                "label":"Input voltage"
+             },
+             {
+                "type":"text",
+                "id":"working_temp",
+                "label":"Working temp (℃)"
+             },
+             {
+                "type":"text",
+                "id":"working_humidity",
+                "label":"Working humidity"
+             },
+             {
+                "type":"text",
+                "id":"optimal_viewing_distance",
+                "label":"Optimal viewing distance (m)"
+             },
+             {
+                "type":"text",
+                "id":"viewing_angle",
+                "label":"Viewing angle (H/V)"
+             },
+             {
+                "type":"text",
+                "id":"ip_rating",
+                "label":"Ip rating"
+             },
+             {
+                "type":"text",
+                "id":"curvature",
+                "label":"Curvature"
+             },
+             {
+                "type":"text",
+                "id":"lifespan",
+                "label":"Lifespan (H)"
+             },
+             {
+                "type":"text",
+                "id":"receiving_card",
+                "label":"Receiving card"
+             },
+             {
+                "type":"text",
+                "id":"grayscale",
+                "label":"Grayscale"
+             },
+             {
+                "type":"text",
+                "id":"hdr",
+                "label":"Hdr"
+             },
+             {
+                "type":"text",
+                "id":"scan_mode",
+                "label":"Scan mode"
+             },
+             {
+                "type":"text",
+                "id":"special_features",
+                "label":"Special features"
+             },
+             {
+                "type":"text",
+                "id":"warranty",
+                "label":"Warranty",
+                "default":"7 Years*"
+             },
+             {
+                "type":"header",
+                "content":"Certifications"
+             },
+             {
+                "type":"checkbox",
+                "id":"FCC_Certification",
+                "label":"FCC Certification",
+                "default":false
+             },
+             {
+                "type":"checkbox",
+                "id":"ETL_Certification",
+                "label":"ETL Certification",
+                "default":false
+             },
+             {
+                "type":"checkbox",
+                "id":"CE_Certification",
+                "label":"CE Certification",
+                "default":false
+             },
+             {
+                "type":"checkbox",
+                "id":"RoHS_Certification",
+                "label":"RoHS Certification",
+                "default":false
+             }
+          ]
+       }
+    ],
+    "presets":[
+       {
+          "name":"Col Blocks",
+          "category":"Image"
+       }
+    ]
+ }
+{% endschema %}

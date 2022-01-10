@@ -1,0 +1,13 @@
+{% comment %}
+  DO NOT MODIFY THIS FILE DIRECTLY. THIS FILE WILL BE OVERWRITTEN.
+  YOU CAN MODIFY THE LIQUID CODE FOR THIS CUSTOM FIELD HERE:
+  https://customfields.bonify.io/dashboard/blizzard-lighting.myshopify.com/collections/edit-field/55753
+{% endcomment %}
+{% if collection.metafields.custom_fields["tech_specz"] != blank %}
+  <div class="custom-field custom-field__tech-specz custom-field__type--text">
+    <h3 class="custom-field--title">Tech Specz</h3>
+    <div class="custom-field--value">
+      {{ collection.metafields.custom_fields["tech_specz"] }}
+    </div>
+  </div>
+{% endif %}

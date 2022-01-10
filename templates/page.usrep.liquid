@@ -1,0 +1,50 @@
+
+<div class="bump">
+<section id="blacktop-2">
+  
+  <div class="selectyrstate">
+  
+  <h1>{{ page.title }}</h1>
+    
+    <div class="container">
+      Select your state to see your sales representative.
+    </div>
+  
+  {% include 'us-states' %}
+    
+  </div>
+  
+  {% assign articles = blogs.us-representatives.articles | sort: 'title' %}
+{% for article in articles %}
+  <div class="container">
+    <div id="{{ article.title | camelcase | downcase }}" class="scrollfix"></div>
+      <div class="state-head">
+        
+        <h2>{{ article.title }}</h2>
+
+{{ article.content }}
+       
+    </div>
+  
+  </div>
+{% endfor %}
+
+  
+</section>
+</div>
+
+
+
+	<script>
+		jQuery(window).scroll(function() {
+			var scroll = jQuery(window).scrollTop();
+
+			if (scroll >= 200) {
+				jQuery(".state-selector-attached").addClass("fix");
+			} else {
+				jQuery(".state-selector-attached").removeClass("fix");
+			}
+
+		});
+
+	</script>

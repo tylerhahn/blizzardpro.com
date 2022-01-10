@@ -1,0 +1,42 @@
+@media only screen and (min-width: 1240px) {
+  .new-grid {
+    -ms-grid-columns: (25%)[4];
+        grid-template-columns: repeat(4, 25%);
+  }
+  .hero-mosaic .mosaic-container {
+    height: 400px;
+    max-width: 1100px;
+  }
+  .unslider .flex-container {
+    height: 840px;
+  }
+  .unslider-arrow.next {
+    top: 360px;
+  }
+  .unslider-arrow.prev {
+    top: 360px;
+  }
+  .my-slider.unslider-horizontal {
+    height: 700px;
+  }
+  .my-slider.unslider-horizontal li {
+    height: 700px;
+  }
+  .p-mosaic .mosaic-container {
+    height: 600px !important;
+  }
+  .hm-col {
+    max-height: 600px;
+  }
+  .hm-col {
+    margin: 2em 0 8em 0;
+  }
+  .hm-top h2 {
+    font-size: 13em;
+  }
+  ol.ais-Hits-list {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*# sourceMappingURL=1240.css.map */

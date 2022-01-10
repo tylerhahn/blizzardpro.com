@@ -1,0 +1,39 @@
+{% assign current_product = product.title  %}
+
+
+<div class="mixtape-wrapper">
+  <div class="vignette-fill"></div>
+  <div class="mt-container">
+    <div class="mt-title">
+      <img src="{{ 'mt-logo-pink.svg' | asset_url }}" alt="Mixtape Series">
+      <h2 class="mt">Collect<br>The Whole<br>Series</h2>
+      <a href="/collections/mixtape-series" class="btn mt-alt">Learn More</a>
+    </div>
+
+    <div class="mt-col">
+      {% for product in collections.mixtape-series.products %}
+      {% if product.title != current_product %}
+        <div class="mt-item">
+          <img class="mt-prod" src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
+          <div class="mt-caption">
+            {% if product.title == 'minisystem™' %}
+            <img class="mt-logo" src="{{ 'minisystem-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+            {% elsif product.title == 'SPOTMAN™' %}
+            <img class="mt-logo" src="{{ 'spotman-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+            {% elsif product.title == 'MAX L™' %}
+            <img class="mt-logo" src="{{ 'maxl-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+            {% elsif product.title == 'mikrokassette™' %}
+            <img class="mt-logo" src="{{ 'mikrokassette-logo.svg' | asset_url }}" alt="{{ product.title }} " />
+            {% endif  %}
+            <p class="mt-sub">{{ product.metafields.c_f.Product_Subtitle }}</p>
+          <a href="{{product.url}}" class="btn mt">Learn More</a>
+        </div>
+
+        </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+
+
+</div>

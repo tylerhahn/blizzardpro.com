@@ -1,0 +1,214 @@
+<div id="bl-{{section.id}}" style="height: {{section.settings.height}}vh">
+
+    <div class="row h-100">
+        <div class="col-sm h-100" style="background-color: {{section.settings.product_color}}">
+            <img class="bl-h-g-product" src="{{section.settings.product_image | img_url: 'master'}}" alt="{{section.settings.product_title}}">
+            <div class="bl-h-g">
+                <h2>{{section.settings.product_title}}</h2>
+                <h3>{{section.settings.product_paragraph}}</h2>
+                <a href="{{section.settings.product_url}}">{{section.settings.product_url_title}}</a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="row h-50">
+                <div class="col-sm h-100" style="background-image: url({{section.settings.box_1_image | img_url: 'master'}});">
+                    <div class="bl-{{section.id}} bl-h-g">
+                        <h2>{{section.settings.box_1_paragraph}}</h2>
+                    </div>
+                </div>
+                <div class="col-sm h-100" style="background-image: url({{section.settings.box_2_image | img_url: 'master'}});">
+                    <div class="bl-{{section.id}} bl-h-g">
+                        <h2>{{section.settings.box_2_paragraph}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row h-50">
+                <div class="col-sm h-100" style="background-image: url({{section.settings.box_3_image | img_url: 'master'}});">
+                    <div class="bl-{{section.id}} bl-h-g">
+                        <h2>{{section.settings.box_3_paragraph}}</h2>
+                    </div>
+                </div>
+                <div class="col-sm h-100" style="background-image: url({{section.settings.box_4_image | img_url: 'master'}});">
+                    <div class="bl-{{section.id}} bl-h-g">
+                        <h2>{{section.settings.box_4_paragraph}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Product Hero Grid",
+  "settings": [
+  {
+    "type": "range",
+    "id": "height",
+    "min": 0,
+    "max": 100,
+    "step": 5,
+    "label": "Box Height",
+    "default": 50
+},
+    {
+      "type": "header",
+      "content": "Product"
+    },
+    {
+        "type": "image_picker",
+        "id": "product_image",
+        "label": "Product Image"
+      },
+      {
+        "type": "color",
+        "id": "product_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "text",
+        "id": "product_title",
+        "label": "Product Title"
+      },
+      {
+        "type": "textarea",
+        "id": "product_paragraph",
+        "label": "Product Paragraph"
+      },
+      {
+        "type": "text",
+        "id": "product_url_title",
+        "label": "CTA Title",
+        "default": "Shop ›"
+      },
+      {
+        "type": "url",
+        "id": "product_url",
+        "label": "CTA Url"
+      },
+      {
+        "type": "header",
+        "content": "Box 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "box_1_image",
+        "label": "Box Image"
+      },
+      {
+        "type": "textarea",
+        "id": "box_1_paragraph",
+        "label": "Box Text"
+      },
+
+      {
+        "type": "header",
+        "content": "Box 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "box_2_image",
+        "label": "Box Image"
+      },
+      {
+        "type": "textarea",
+        "id": "box_2_paragraph",
+        "label": "Box Text"
+      },
+      {
+        "type": "color",
+        "id": "box_2_color",
+        "label": "Box Color"
+      },
+      {
+        "type": "header",
+        "content": "Box 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "box_3_image",
+        "label": "Box Image"
+      },
+      {
+        "type": "textarea",
+        "id": "box_3_paragraph",
+        "label": "Box Text"
+      },
+      {
+        "type": "color",
+        "id": "box_3_color",
+        "label": "Box Color"
+      },
+      {
+        "type": "header",
+        "content": "Box 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "box_4_image",
+        "label": "Box Image"
+      },
+      {
+        "type": "textarea",
+        "id": "box_4_paragraph",
+        "label": "Box Text"
+      },
+      {
+        "type": "color",
+        "id": "box_4_color",
+        "label": "Box Color"
+      }
+  ],
+  "presets": [
+  {
+    "name": "Product Hero Grid",
+    "category": "Image"
+  }
+]
+}
+{% endschema %}
+
+<style>
+.bl-h-g-product{
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    display: block;
+}
+#bl-{{section.id}} .col-sm {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    border-radius: 0px;
+    background-position: center;
+}
+
+#bl-{{section.id}} .row {
+    margin: 0;
+    padding: 0;
+}
+
+
+.bl-h-g {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.bl-h-g h2 {
+    color: white;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.bl-h-g h3 {
+    color: white;
+    font-family: 'Source Sans Pro'
+}
+</style>

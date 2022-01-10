@@ -1,0 +1,859 @@
+[
+  {
+    "name": "Popup",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_popup",
+        "label": "Show popup on homepage",
+        "default": false
+      },
+      {
+        "type": "textarea",
+        "id": "popup_h3",
+        "label": "Headline"
+      },
+      {
+        "type": "textarea",
+        "id": "popup_p",
+        "label": "Subheadline"
+      },
+      {
+        "type": "textarea",
+        "id": "popup_title",
+        "label": "Button Title"
+      },
+      {
+        "type": "textarea",
+        "id": "popup_url",
+        "label": "Button Url"
+      },
+      {
+        "type": "image_picker",
+        "id": "popup_image",
+        "label": "Background Image"
+      }
+    ]
+  },
+  {
+    "name": "Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "home-banner-youtube-id",
+        "label": "Banner YouTube Id"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-youtube-url",
+        "label": "Banner YouTube Slide Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-banner-image-1",
+        "label": "Banner Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-banner-text-1",
+        "label": "Banner Image 1 Text Overlay"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-text-1-max-width",
+        "label": "Text Ovleray 1 Max Width"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-text-1-margin-top",
+        "label": "Text Ovleray 1 Margin Top"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-cta-1",
+        "label": "CTA Title"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-url-1",
+        "label": "CTA URL"
+      },
+      {
+        "type": "collection",
+        "id": "home-banner-collection-1",
+        "label": "Product Collection 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-banner-image-2",
+        "label": "Banner Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-banner-text-2",
+        "label": "Banner Image 2 Text Overlay"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-text-2-max-width",
+        "label": "Text Ovleray 2 Max Width"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-text-2-margin-top",
+        "label": "Text Ovleray 2 Margin Top"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-cta-2",
+        "label": "CTA Title"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-url-2",
+        "label": "CTA URL"
+      },
+      {
+        "type": "collection",
+        "id": "home-banner-collection-2",
+        "label": "Product Collection 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-banner-image-3",
+        "label": "Banner Image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-banner-text-3",
+        "label": "Banner Image 3 Text Overlay"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-text-3-max-width",
+        "label": "Text Ovleray 3 Max Width"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-text-3-margin-top",
+        "label": "Text Ovleray 3 Margin Top"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-cta-3",
+        "label": "CTA Title"
+      },
+      {
+        "type": "text",
+        "id": "home-banner-url-3",
+        "label": "CTA URL"
+      },
+      {
+        "type": "collection",
+        "id": "home-banner-collection-3",
+        "label": "Product Collection 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "image-mode",
+        "label": "Use Image Banner instead of Video"
+      }
+    ]
+  },
+  {
+    "name": "Home Collection",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "home-collection",
+        "label": "Feature collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-collection-text",
+        "label": "Home Collection Text Overlay"
+      },
+      {
+        "type": "text",
+        "id": "home-collection-url",
+        "label": "CTA URL"
+      },
+      {
+        "type": "text",
+        "id": "home-collection-width",
+        "label": "Overlay Width"
+      },
+      {
+        "type": "image_picker",
+        "id": "home-collection-background",
+        "label": "Home Collection Background Image"
+      },
+      {
+        "type": "color",
+        "id": "home-collection-color",
+        "label": "Background Color"
+      }
+    ]
+  },
+  {
+    "name": "News Page",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "news-hero-desktop",
+        "label": "News Hero Image (Desktop 1286x500px)"
+      },
+      {
+        "type": "image_picker",
+        "id": "news-hero-mobile",
+        "label": "News Hero Image (Mobile 350x768px)"
+      },
+      {
+        "type": "text",
+        "id": "news-subheadline",
+        "label": "Main Subheadline"
+      },
+      {
+        "type": "text",
+        "id": "news-headline",
+        "label": "Main Headline"
+      },
+      {
+        "type": "text",
+        "id": "news-newsletterheadline",
+        "label": "Newsletter Headline"
+      },
+      {
+        "type": "text",
+        "id": "news-newslettersubheadline",
+        "label": "Newsletter Subheadline"
+      }
+    ]
+  },
+  {
+    "name": "Top Banner",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "top_banner",
+        "label": "Top Banner Text"
+      },
+      {
+        "type": "textarea",
+        "id": "top_banner_title",
+        "label": "Top Banner Link Title"
+      },
+      {
+        "type": "textarea",
+        "id": "top_banner_link",
+        "label": "Top Banner Link URL"
+      }
+    ]
+  },
+  {
+    "name": "Product Page",
+    "settings": [
+      {
+        "type": "image",
+        "id": "pp-slider-img1.jpg",
+        "label": "Slider 1: Image"
+      },
+      {
+        "type": "image",
+        "id": "productfixture01.png",
+        "label": "Slider 1: Fixture"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-slider-title1",
+        "label": "Slider 1: Title",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-slider-subtext1",
+        "label": "Slider 1: Subtext",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "product",
+        "id": "pp-slider-link1",
+        "label": "Product Link"
+      },
+      {
+        "type": "image",
+        "id": "pp-slider-img2.jpg",
+        "label": "Slider 2: Image"
+      },
+      {
+        "type": "image",
+        "id": "productfixture02.png",
+        "label": "Slider 2: Fixture"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-slider-title2",
+        "label": "Slider 2: Title",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-slider-subtext2",
+        "label": "Slider 2: Subtext",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "product",
+        "id": "pp-slider-link2",
+        "label": "Product Link"
+      },
+      {
+        "type": "image",
+        "id": "pp-slider-img3.jpg",
+        "label": "Slider 3: Image"
+      },
+      {
+        "type": "image",
+        "id": "productfixture03.png",
+        "label": "Slider 3: Fixture"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-slider-title3",
+        "label": "Slider 3: Title",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-slider-subtext3",
+        "label": "Slider 3: Subtext",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "product",
+        "id": "pp-slider-link3",
+        "label": "Product Link"
+      },
+      {
+        "type": "image",
+        "id": "pp-s1-img.jpg",
+        "label": "Section 1 Image"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-s1-sh",
+        "label": "Section 1 Sub-Headline",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-s1-h",
+        "label": "Section 1 Headline",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-s1-p",
+        "label": "Section 1 Paragraph Copy",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "collection",
+        "id": "s1_col_link",
+        "label": "Section 1 Collection Link"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-s2-h",
+        "label": "Featured Collection Headline",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "collection",
+        "id": "feature_product-link",
+        "label": "Collection Link Selector"
+      },
+      {
+        "type": "textarea",
+        "id": "featured-link",
+        "label": "Featured Collection Link Text",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "image",
+        "id": "pp-s3-img.png",
+        "label": "Section 3 Image"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-s3-sh",
+        "label": "Section 3 Sub-Headline",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-s3-h",
+        "label": "Section 3 Headline",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "pp-s3-p",
+        "label": "Section 3 Paragraph Copy",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "collection",
+        "id": "s3_col_link",
+        "label": "Section 3 Collection Link"
+      }
+    ]
+  },
+  {
+    "name": "H.O.W Landing Page",
+    "settings": [
+      {
+        "type": "select",
+        "id": "hero-how-chooser",
+        "label": "Hero Background Type",
+        "options": [
+          {
+            "value": "video",
+            "label": "Video"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "hero-how-background",
+        "label": "Hero Background"
+      },
+      {
+        "type": "text",
+        "id": "hero-how-video-id",
+        "label": "Hero Video Vimeo ID"
+      },
+      {
+        "type": "textarea",
+        "id": "hero-how-h1",
+        "label": "Hero Headline",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "hero-how-p",
+        "label": "Hero Subheadline",
+        "default": "value",
+        "info": "Text",
+        "placeholder": "Text"
+      },
+      {
+        "type": "text",
+        "id": "hero-how-cta-title",
+        "label": "Button Text"
+      },
+      {
+        "type": "text",
+        "id": "hero-how-cta-url",
+        "label": "Button Url"
+      },
+      {
+        "type": "image_picker",
+        "id": "mosaic-box-1",
+        "label": "Mosaic Box 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "mosaic-box-2",
+        "label": "Mosaic Box 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "mosaic-box-3",
+        "label": "Mosaic Box 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "mosaic-box-4",
+        "label": "Mosaic Box 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "mosaic-box-5",
+        "label": "Mosaic Box 5"
+      },
+      {
+        "type": "text",
+        "id": "how-blog-title",
+        "label": "Blog Title"
+      },
+      {
+        "type": "textarea",
+        "id": "how-blog-excerpt",
+        "label": "Blog Content (excerpt)"
+      },
+      {
+        "type": "text",
+        "id": "how-blog-button-title",
+        "label": "Blog Button Title"
+      },
+      {
+        "type": "text",
+        "id": "how-blog-button-url",
+        "label": "Blog Button Url"
+      },
+      {
+        "type": "textarea",
+        "id": "how-blog-pullquote",
+        "label": "Blog Pull Quote"
+      },
+      {
+        "type": "image_picker",
+        "id": "how-blog-image",
+        "label": "Blog Image"
+      },
+      {
+        "type": "text",
+        "id": "how-cs-title",
+        "label": "Case Study Title"
+      },
+      {
+        "type": "textarea",
+        "id": "how-cs-excerpt",
+        "label": "Case Study Content (excerpt)"
+      },
+      {
+        "type": "text",
+        "id": "how-cs-button-title",
+        "label": "Case Study Button Title"
+      },
+      {
+        "type": "text",
+        "id": "how-cs-button-url",
+        "label": "Case Study Button Url"
+      },
+      {
+        "type": "textarea",
+        "id": "how-cs-pullquote",
+        "label": "Case Study Pull Quote"
+      },
+      {
+        "type": "image_picker",
+        "id": "how-cs-image",
+        "label": "Case Study Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "how-tf-image",
+        "label": "Hero 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "how-tf-title",
+        "label": "Hero 2 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "how-tf-subtitle",
+        "label": "Hero 2 Subtitle"
+      },
+      {
+        "type": "textarea",
+        "id": "how-tf-p",
+        "label": "Hero 2 Paragraph"
+      },
+      {
+        "type": "collection",
+        "id": "how-product-lineup",
+        "label": "Product Lineup Collection"
+      },
+      {
+        "type": "product",
+        "id": "how-prod-1",
+        "label": "Product Block 1"
+      },
+      {
+        "type": "product",
+        "id": "how-prod-2",
+        "label": "Product Block 2"
+      },
+      {
+        "type": "product",
+        "id": "how-prod-3",
+        "label": "Product Block 3"
+      },
+      {
+        "type": "product",
+        "id": "how-prod-4",
+        "label": "Product Block 4"
+      },
+      {
+        "type": "product",
+        "id": "how-prod-5",
+        "label": "Product Block 5"
+      },
+      {
+        "type": "product",
+        "id": "how-prod-6",
+        "label": "Product Block 6"
+      },
+      {
+        "type": "textarea",
+        "id": "how-hs-title",
+        "label": "Hero 3 Title"
+      },
+      {
+        "type": "textarea",
+        "id": "how-hs-subtitle",
+        "label": "Hero 3 Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "how-hs-button-title",
+        "label": "Hero 3 Button Title"
+      },
+      {
+        "type": "text",
+        "id": "how-hs-button-url",
+        "label": "Hero 3 Button Url"
+      },
+      {
+        "type": "collection",
+        "id": "how-recommended",
+        "label": "Recommended Products Collection"
+      }
+    ]
+  },
+  {
+    "name": "Blizzard Watch",
+    "settings": [
+      {
+        "type": "image",
+        "id": "featured_1.jpg",
+        "label": "Featured Image",
+        "max-width": 2048
+      },
+      {
+        "type": "text",
+        "id": "featured_1_text",
+        "label": "Video Title"
+      },
+      {
+        "type": "text",
+        "id": "featured_1_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "image",
+        "id": "featured_2.jpg",
+        "label": "Secondary Image 1",
+        "max-width": 2048
+      },
+      {
+        "type": "text",
+        "id": "featured_2_subtext",
+        "label": "Subtext"
+      },
+      {
+        "type": "text",
+        "id": "featured_2_text",
+        "label": "Title"
+      },
+      {
+        "type": "image",
+        "id": "featured_3.jpg",
+        "label": "Secondary Image 2",
+        "max-width": 2048
+      },
+      {
+        "type": "text",
+        "id": "featured_3_subtext",
+        "label": "Subtext"
+      },
+      {
+        "type": "text",
+        "id": "featured_3_text",
+        "label": "Title"
+      }
+    ]
+  },
+  {
+    "name": "Illuminati",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_ill",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "headline_subtext",
+        "label": "Headline Subtext"
+      },
+      {
+        "type": "text",
+        "id": "headline_ill",
+        "label": "Headline"
+      },
+      {
+        "type": "text",
+        "id": "subheadline_ill",
+        "label": "Sub Headline"
+      },
+      {
+        "type": "text",
+        "id": "subheadline_col_headline",
+        "label": "Subheadline #2"
+      },
+      {
+        "type": "text",
+        "id": "info_box_1",
+        "label": "Info Box 1 Title"
+      },
+      {
+        "type": "text",
+        "id": "info_box_1_c",
+        "label": "Info Box 1 Content"
+      },
+      {
+        "type": "text",
+        "id": "info_box_2",
+        "label": "Info Box 2 Title"
+      },
+      {
+        "type": "text",
+        "id": "info_box_2_c",
+        "label": "Info Box 2 Content"
+      },
+      {
+        "type": "text",
+        "id": "info_box_3",
+        "label": "Info Box 3 Title"
+      },
+      {
+        "type": "text",
+        "id": "info_box_3_c",
+        "label": "Info Box 3 Content"
+      },
+      {
+        "type": "text",
+        "id": "fine_print_ill",
+        "label": "Fine Print"
+      }
+    ]
+  },
+  {
+    "name": "Auth",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "login-bg",
+        "label": "Login Background"
+      },
+      {
+        "type": "image_picker",
+        "id": "register-bg",
+        "label": "Register Background"
+      }
+    ]
+  },
+  {
+    "name": "IRiS Landing",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "iris-background",
+        "label": "Hero Background"
+      },
+      {
+        "type": "text",
+        "id": "iris-background-video",
+        "label": "Vimeo Id"
+      },
+      {
+        "type": "image_picker",
+        "id": "iris-logo",
+        "label": "Logo"
+      },
+      {
+        "type": "text",
+        "id": "iris-subheadline",
+        "label": "Subheadline"
+      },
+      {
+        "type": "image_picker",
+        "id": "iris-gallery-1",
+        "label": "Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "iris-gallery-2",
+        "label": "Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "iris-gallery-3",
+        "label": "Image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "iris-gallery-4",
+        "label": "Image 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "iris-gallery-5",
+        "label": "Image 5"
+      },
+      {
+        "type": "textarea",
+        "id": "selling-point-1",
+        "label": "Selling Point 1"
+      },
+      {
+        "type": "textarea",
+        "id": "selling-point-2",
+        "label": "Selling Point 2"
+      },
+      {
+        "type": "textarea",
+        "id": "selling-point-3",
+        "label": "Selling Point 3"
+      }
+    ]
+  }
+]

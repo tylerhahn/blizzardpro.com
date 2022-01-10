@@ -1,0 +1,356 @@
+<section id="specs" >
+
+    <div class="spec-top">
+      <img src="{{ 'spec-icon-og.svg' | asset_url }}">
+      <h3>Product Specifications</h3>
+    </div>
+
+
+    <div class="steam-container">
+
+      {% if product.metafields.c_f.Density == '1' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill one"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '2' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill two"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '3' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill three"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '4' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill four"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '5' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill five"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '6' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill six"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '7' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill seven"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '8' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill eight"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '9' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill nine"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Density == '10' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill ten"></div> </div>
+      </div>
+
+      {% endif %}
+
+
+      <!--       Hang time Stats         -->
+
+      {% if product.metafields.c_f.Hang_Time == '1' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill one"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '2' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill two"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '3' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill three"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '4' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill four"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '5' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill five"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '6' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill six"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '7' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill seven"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '8' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill eight"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '9' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill nine"></div> </div>
+      </div>
+
+      {% elsif product.metafields.c_f.Hang_Time == '10' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill ten"></div> </div>
+      </div>
+
+      {% endif %}
+
+    </div>
+
+    <div class="flex-container" >
+      {% if product.metafields.c_f.General_Specs %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-15.svg' | asset_url }}">
+        <h4>Overview</h4>
+        <p>{{ product.metafields.c_f.General_Specs | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Optical %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-05.svg' | asset_url }}">
+        <h4>Optical</h4>
+        <p>{{ product.metafields.c_f.Optical | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.In_the_Box %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--09.svg' | asset_url }}">
+        <h4>In the Box</h4>
+        <p>{{ product.metafields.c_f.In_the_Box | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Movement %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--01.svg' | asset_url }}">
+        <h4>Movement</h4>
+        <p>{{ product.metafields.c_f.Movement | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Wireless_Receiver %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--03.svg' | asset_url }}">
+        <h4>Wireless Receiver</h4>
+        <p>{{ product.metafields.c_f.Wireless_Receiver | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Optional_Accessories %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--04.svg' | asset_url }}">
+        <h4>Optional Accessories</h4>
+        <p>{{ product.metafields.c_f.Optional_Accessories | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Wireless_Footswitch %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--05.svg' | asset_url }}">
+        <h4>Wireless Footswitch</h4>
+        <p>{{ product.metafields.c_f.Wireless_Footswitch | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Radio_Parameters %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--06.svg' | asset_url }}">
+        <h4>Radio Parameters</h4>
+        <p>{{ product.metafields.c_f.Radio_Parameters | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Connectors %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--07.svg' | asset_url }}">
+        <h4>Connectors</h4>
+        <p>{{ product.metafields.c_f.Connectors | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.System_Requirements %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--08.svg' | asset_url }}">
+        <h4>System Requirements</h4>
+        <p>{{ product.metafields.c_f.System_Requirements | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+      {% if product.metafields.c_f.USB_Data_Format %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--10.svg
+        ' | asset_url }}">
+        <h4>USB Data Format</h4>
+        <p>{{ product.metafields.c_f.USB_Data_Format | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+      {% if product.metafields.c_f.Rigging_&_Application %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-22.svg
+        ' | asset_url }}">
+        <h4>Rigging & Application</h4>
+        <p>{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Weight_and_Dimensions %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-04.svg' | asset_url }}">
+        <h4>Weight & Dims</h4>
+        <p>{{ product.metafields.c_f.Weight_and_Dimensions | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Battery_Info %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--11.svg' | asset_url }}">
+        <h4>Battery Info</h4>
+        <p>{{ product.metafields.c_f.Battery_Info | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Control %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-01.svg' | asset_url }}">
+        <h4>Control</h4>
+        <p>{{ product.metafields.c_f.Control | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+      {% if product.metafields.c_f.Power_and_Current %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-02.svg' | asset_url }}">
+        <h4>Power & Current</h4>
+        <p>{{ product.metafields.c_f.Power_and_Current | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+
+
+
+      {% if product.metafields.c_f.Thermal %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-03.svg' | asset_url }}">
+        <h4>Thermal</h4>
+        <p>{{ product.metafields.c_f.Thermal | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Warranty %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--02.svg' | asset_url }}">
+        <h4>Warranty</h4>
+        <p>{{ product.metafields.c_f.Warranty | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+
+      {% if product.metafields.c_f.DMX_Decoder %}
+      <div class="spec-item">
+        <h4>DMX Decoder</h4>
+        <p>{{ product.metafields.c_f.DMX_Decoder | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.RGB_Dimmer %}
+      <div class="spec-item">
+        <h4>RGB Dimmer</h4>
+        <p>{{ product.metafields.c_f.RGB_Dimmer | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Remote_Control %}
+      <div class="spec-item">
+        <h4>Remote Control</h4>
+        <p>{{ product.metafields.c_f.Remote_Control | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Power_Supply %}
+      <div class="spec-item">
+        <h4>Power Supply</h4>
+        <p>{{ product.metafields.c_f.Power_Supply | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Amplifier %}
+      <div class="spec-item">
+        <h4>Amplifier</h4>
+        <p>{{ product.metafields.c_f.Amplifier | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+      {% if product.metafields.c_f.Apps %}
+      <div class="spec-item">
+        <h4>Apps</h4>
+        <p>{{ product.metafields.c_f.Apps | newline_to_br }}<p>
+      </div>
+      {% endif %}
+
+    </div>
+
+  </section>
+
+</div>

@@ -1,0 +1,66 @@
+<div class="shipping-info">
+  <i class="fas fa-shipping-fast"> </i> 
+  {% if product.metafields.c_f.Ship_Date_Estimate %}
+    {{product.metafields.c_f.Ship_Date_Estimate}}
+  {% elsif product.tags contains 'en route' %}
+    {% if product.type == 'LED Video' %}
+       Ready to Ship
+      {% unless product.tags contains 'accessories' %}{% endunless %}
+    {% elsif product.type == 'NovaStar' %}
+      Ships in 2-3 Weeks
+    {% elsif product.metafields.f_b.High_End == 'true' %}
+       Special Order
+    {% endif %}
+  {% else %}
+       Fast, Free Shipping on Orders $99+
+  {% unless product.title | downcase contains 'case' %}{% endunless %}
+  {% endif %}
+</div>
+
+{% if product.tags contains 'en route'%}
+    <div class="notify-me">
+        <div class="notify-me-email">
+            <div class="notify-me-container">
+                <div class="info-box">
+                  {% if product.type == 'LED Video' %}
+                  <p>LED video panels & accessories are typically built into a custom order. Enter your email to learn more or click <em>Expert Connect</em> for immediate assistance.</p>
+                    {% unless product.tags contains 'accessories' %}{% endunless %}
+                    {% elsif product.type == 'NovaStar' %}
+                    <p>H Series processors are custom built. To get started, complete your checkout today or enter your email for more information / to request a demo.</p>
+                  {% elsif product.metafields.f_b.High_End == 'true' %}
+                    <p>This product is available per special order. To get started, enter your email below for more information & to request a demo.</p>
+                  {% else %}
+                    <p>This product is on backorder. You can place an order now to reserve it, enter an email to be notified when it's available, or buy from an authorized reseller.</p>
+                  {% endif %}
+
+                </div>
+                <div id="hs-product-forms"></div>
+
+
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" src="//js.hsforms.net/forms/v2.js" type="text/javascript"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "4135982",
+    formId: "2d69787c-6bed-419b-8678-86c51dd1e234",
+      target: "#hs-product-forms",
+      onFormSubmit:  () => {
+          formSubmitGA('dynamic_hubspot_form');
+        },
+      onFormReady: setFieldToProduct
+  });
+
+  function setFieldToProduct() {
+    $('input.hs-button.primary.large').val("Notify Me When In Stock ›").change();
+    $('input[name="dynamic_shopify_form_referrer"]').val('{{product.title}}').change();
+
+  }
+  </script>
+
+            </div>
+        </div>
+    </div>
+
+{% endif %}

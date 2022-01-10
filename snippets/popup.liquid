@@ -1,0 +1,46 @@
+<div class="popup-wrapper">
+    <div class="popup">
+        <div id="close-popup" class="close"><a href="#"><i class="fal fa-times"></i></a></div>
+        <div class="pu-image" style="background-image:url({{ settings.popup_image | img_url: 'master'}})"></div>
+        <div class="pu-content">
+            <h3>{{ settings.popup_h3 }}</h3>
+            <p>{{settings.popup_p }}</p>
+            <a href="{{ settings.popup_url }}" class="btn btn-blue">{{ settings.popup_title }}</a>
+            <a href="#" id="close-popup" class="btn undl">No Thanks</a>
+        </div>
+    </div>
+</div>
+
+<script>
+  //Cookies for Popup
+
+  function popUpCookie() {
+    days = 30;
+    myDate = new Date();
+    myDate.setTime(myDate.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = "showPopup=false; expires=" + myDate.toGMTString();
+  }
+
+  var cookie = document.cookie
+    .split(";")
+    .map(function (x) {
+      return x.trim().split("=");
+    })
+    .filter(function (x) {
+      return x[0] === "showPopup";
+    })
+    .pop();
+
+  if (cookie && cookie[1] === "false") {
+    $(".popup-wrapper").hide();
+  } else {
+    $(".popup-wrapper").addClass("visible");
+  }
+
+  $(".popup a").on("click", function () {
+    popUpCookie();
+    $('.popup-wrapper').hide();
+    return false;
+  });
+
+</script>

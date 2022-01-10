@@ -1,0 +1,95 @@
+{% assign productsArr = product.metafields.f_b.Upsell_Products  %}
+
+<script>
+    console.log('{{ productsArr }}')
+</script>
+
+
+<div class="container-fluid p-5" id="upsell-grid">
+    <h2 class="border-styled fw-bold">Suggested Products</h2>
+    <div class="row gx-3 ">
+
+        {{ handles }}
+
+        {% for p in productsArr %}
+
+            {% assign lowercaseTitle = p | downcase | handleize %}
+            {% assign prod = all_products[ p.handle ] %}
+            {% if prod.title %}
+
+                {% assign add_to_cart = 'Add to Cart' %}
+                {% assign sold_out = 'Out of Stock' %}
+                {% assign unavailable = 'Unavailable' %}
+
+                {% if prod.metafields.c_f.Preorder_Date %}
+                    {% assign add_to_cart = 'Pre-order Now' %}
+                {% endif %}
+
+                <div class="upsell-item m-sm-2 m-lg-0 mb-xs-2 p-3 col-sm-5 col-lg-3">
+                    <div class="ais-image-container">
+                        <a href="{{prod.url}}?variant={{prod.variants.first.id}}">
+                            <img itemprop="image" src="{{ prod.featured_image | product_img_url: 'large' }}" alt="{{ prod.featured_image.alt }}"/>
+                        </a>
+                    </div>
+                    <div class="ais-hit--details">
+
+                        <div class="ais-hit--title">
+                            <div class="ais-top-hit">
+
+                                <div class="ais-title-overflow">
+                                    <a class="ais-title-link" href="{{prod.url}}?variant={{prod.variants.first.id}}">
+                                        {{prod.title}}
+                                    </a>
+                                </div>
+
+                                <p class="product-descript">
+                                    {{ prod.metafields.c_f.Category_Subtitle }}
+                                </p>
+                            </div>
+                        </div>
+                        {% if prod.tags contains 'dc-for-sale' and prod.variants.first.inventory_quantity > 0 %}
+                            <form action="/cart/add" method="post">
+                                <input name="return_to" type="hidden" value="back"/>
+                                <input type="hidden" name="id" value="{{ prod.variants.first.id }}"/>
+                                <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
+                                <input class="btn btn-otl" value="Add to Cart {{prod.variants.first.price | money }}"/>
+                            </form>
+                        {% else %}
+                            <div class="btn btn-otl ajax-add" data-id="{{prod.variants.first.id}}">Add to Cart -
+                                {{prod.variants.first.price | money }}
+                            </div>
+                        {% endif %}
+
+                        {% if prod.tags contains 'discontinued' %}
+                            <a href="{{prod.url}}?variant={{prod.variants.first.id}}" class="btn">Learn More</a>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    $(".ajax-add").on("click", function () {
+        const variant_id = $(this).attr("data-id");
+        console.log(variant_id);
+        let data = {
+            "id": variant_id,
+            "quantity": 1
+        }
+        const input = $(this);
+
+        jQuery.ajax({
+            type: "POST",
+            url: "/cart/add.js",
+            data: data,
+            dataType: "json",
+            success: function () {
+                input.html("<i class='fas fa-check'></i> Added!")
+            }
+        });;
+    })
+</script>

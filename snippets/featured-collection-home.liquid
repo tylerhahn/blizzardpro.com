@@ -1,0 +1,24 @@
+<div id="home-wrapper-collection">
+  <!-- <div class="home-collection-banner" onclick="javascript:location.href='{{settings.home-collection-url}}'" style="background-image: url({{settings.home-collection-background | img_url: 'master'}})">
+  <img src="{{settings.home-collection-text | img_url: 'master'}}" alt="Banner Image">
+  </div> -->
+  <div class="home-collection">
+    {% assign collection = settings.home-collection %} {% for product in
+    collections[settings.home-collection].products %} {% include 'new-grid-item'
+    %} {% endfor %}
+  </div>
+</div>
+
+<style>
+    .home-collection-banner {
+      background-size: cover;
+      background-position: center;
+  }
+
+  .home-collection-banner img {
+    max-width: {{settings.home-collection-width}};
+      margin: 0 auto;
+      display: block;
+    width: 95%;
+  }
+</style>

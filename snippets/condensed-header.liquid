@@ -1,0 +1,19 @@
+<nav id="condensed-header">
+    <div class="d-flex justify-content-between align-items-center" style="max-width: 1920px; margin: 0">
+        <a href="/">
+            <img style="width: 45px; padding: 5px;" src="{{ 'mark-colormark-full-color.svg' | asset_url}}" alt="Blizzard Lighting"/>
+        </a>
+        {% include 'main-nav' %}
+        <div class="row m-0" id="side-c-nav">
+            <div class="col">
+                <a href="/support">Support</a>
+            </div>
+            <a class="col" href="/cart">
+                <i class="far fa-shopping-cart"></i>
+            </a>
+            <a class="col" href="/account/login">
+                <i class="far fa-user"></i>
+            </a>
+        </div>
+    </div>
+</nav>

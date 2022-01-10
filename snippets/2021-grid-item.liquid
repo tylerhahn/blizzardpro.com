@@ -1,0 +1,60 @@
+{% assign add_to_cart = 'Add to Cart' %}
+{% assign sold_out = 'Out of Stock' %}
+{% assign unavailable = 'Unavailable' %}
+
+{% if product.metafields.c_f.Preorder_Date %}
+    {% assign add_to_cart = 'Pre-order Now' %}
+{% endif %}
+
+<div class="position-relative" id="updated-grid-item" onclick="location.href='{{product.url}}'">
+
+    <div class="ais-image-container">
+        <img itemprop="image" src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.featured_image.alt }}"/>
+    </div>
+
+    <div class="ais-hit--details">
+        {% if variant.title == 'Like New' or variant.title == 'Refurbished' %}
+            <p class="product-subtext ais-refurbished">{{variant.title}}</p>
+        {% endif %}
+        <div class="ais-hit--title">
+            <div class="ais-top-hit">
+                <div class="ais-title-overflow">
+                    <a class="ais-title-link" href="{{product.url}}?variant={{variant.id}}">
+                        {{product.title}}
+                    </a>
+                </div>
+                <p class="product-descript">
+                    {{ product.metafields.c_f.Category_Subtitle }}
+                </p>
+            </div>
+        </div>
+
+        <div class="ais-hit--price">
+            {% assign removeDecimal = variant.price | money_without_currency | split: '.' %}
+            <span class="dollar">$</span>
+            <div class="price-whole">{{removeDecimal[0]}}</div>
+            <div class="price-decimal">.{{removeDecimal[1]}}</div>
+        </div>
+
+        {% if product.tags contains 'dc-for-sale' and variant.inventory_quantity > 0 %}
+            <form action="/cart/add" method="post">
+                <input type="hidden" name="id" value="{{ prodId }}"/>
+                <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
+                <input class="btn btn-blue" type="submit" value="Add to Cart"/>
+            </form>
+        {% endif %}
+
+        {% if product.tags contains 'discontinued' %}
+            <a href="{{product.url}}?variant={{variant.id}}" class="btn">Learn More</a>
+        {% elsif variant.available %}
+            <form action="/cart/add" method="post">
+                <input type="hidden" name="id" value="{{ prodId }}"/>
+                <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
+                <input class="btn btn-blue" type="submit" value="Add to Cart"/>
+            </form>
+        {% else %}
+            <a href="{{product.url}}?variant={{variant.id}}" class="btn">Learn More</a>
+        {% endif %}
+    </div>
+
+</div>

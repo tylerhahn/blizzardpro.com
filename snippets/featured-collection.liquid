@@ -1,0 +1,46 @@
+<div class="hm-col">
+  <div class="hm-el-wrap">
+    <div class="hm-el-1"></div>
+    <div class="hm-el-2"></div>
+    <div class="hm-el-3"></div>
+    <div class="hm-el-4"></div>
+  </div>
+
+  <div class="hm-con">
+    <div class="hm-img">
+      <img src="{{ 'hm-1-2.png' | asset_url }}" alt="IRiS Video Walls" />
+    </div>
+    <div class="hm-content">
+      <div class="hm-top">
+        <div class="hm-title">
+          <h2>IRIS</h2>
+          <h3>LED Video</h3>
+          <a href="https://iris.video" class="btn btn-black">Learn More</a>
+        </div>
+        <div class="hm-title-2">
+          <img src="{{ 'hm-1-1.png' | asset_url }}" alt="IRiS In Action" />
+        </div>
+      </div>
+      <div class="hm-col-prod">
+        {% for product in collections.iris-home.products %}
+        <div
+          class="hm-prod"
+          onclick="javascript:location.href='/products/{{ product.handle }}'"
+        >
+          <div class="hm-prod-container">
+            <img
+              style="mix-blend-mode: multiply"
+              src="{{ product | img_url: 'large' }}"
+              alt="{{ product.featured_image.alt | escape }}"
+            />
+            <div class="bot-caption">
+              <h3>{{ product.title | remove: "IRiS" | remove: "™" }}</h3>
+              <p>{{ product.metafields.c_f.Category_Subtitle }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

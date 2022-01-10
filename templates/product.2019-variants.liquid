@@ -1,0 +1,913 @@
+{% assign add_to_cart = 'Add to Cart' %} {% assign sold_out = 'Sold Out' %} {% assign unavailable = 'Unavailable' %}
+{% include 'sticky-contact' %}
+<!-- {{ 'imagerotator.js'  | asset_url | script_tag }} -->
+<style>
+
+
+select {
+
+    background: url(//cdn.shopify.com/s/files/1/1741/5055/t/4/assets/arrow-down.svg?v=13638043350347177746) right 0.4em center no-repeat;
+
+
+
+}
+
+
+	input[type="submit"] {
+		background: white;
+		color: #4187f9;
+		border: 1px solid;
+		padding: 10px;
+		border-radius: 25px;
+		font-size: 12px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		margin-top: 30px;
+		transition: .5s;
+		font-family: "AvantGarde Bold";
+		width: 210px;
+	}
+
+	#navigate {
+		background: black;
+	}
+
+  div#inline {
+    padding: 10px;
+}
+
+  .otl{margin-top: 0px !important}
+
+li.item-a img {mix-blend-mode: normal !important;}
+input[type="submit"] {
+  all: unset;
+  padding: 13px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #4187f9;
+  color: white;
+  cursor: pointer;
+}
+
+
+</style>
+
+<div class="product new-2019" itemscope itemtype="http://schema.org/Product">
+	<meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
+	<meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
+
+	<!-- <ul class="nobar">
+		{% if product.tags contains 'photometric' or product.tags contains 'novastar cat' or product.tags contains 'cutting' or product.tags contains 'remote' or product.tags contains 'colors and gobos' or product.tags contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains 'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'rev a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags contains 'rev d' or product.tags contains 'rev e' %}
+
+    <div>
+      <a data-scroll href="#downloader">Free Downloads</a>
+    </div>
+
+		{% endif %}
+
+		{% if product.metafields.c_f.Photometric %}
+
+		<div><a href="#inline" data-lity>Photometric Data</a></div>
+
+		{% endif %}
+
+		<div>
+      <a data-scroll href="#specifications">Product Specs</a>
+    </div>
+  </ul> -->
+<!--
+	<div class="buybar">
+		<div class="flex-container">
+
+      <div class="back"><a href="{{ collection.url }}">← Back</a></div>
+
+			<div class="prod-info-attached">
+				<div class="more">&#xf055;</div>
+				<div class="less">&#xf056;</div>
+			</div>
+
+      <div class="rightbar">
+        {% if product.tags contains 'photometric' or product.tags contains 'cutting' or product.tags contains 'remote' or product.tags contains 'colors and gobos' or product.tags contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains 'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'novastar cat' or product.tags contains 'rev a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags contains 'rev d' or product.tags contains 'rev e' %}
+          <div><a class="prod-info" data-scroll href="#downloader">Downloads</a></div>
+        {% endif %}
+
+        {% if product.metafields.c_f.Photometric %}
+          <div>
+           <a class="prod-info" href="#inline" data-lity>Photometric Data</a>
+          </div>
+        {% endif %}
+
+        {% if product.metafields.c_f.Tech_Specs %}
+          <div>
+            <a class="prod-info" href="#inline" data-lity>Technical Data</a></div>
+            <div id="inline" style="background:#fff" class="lity-hide">
+              <div class="techspecs"> {{ product.metafields.c_f.Tech_Specs }}</div>
+          </div>
+        {% endif %}
+
+        <div><a class="prod-info" data-scroll href="#specifications">Product Specs</a></div>
+
+        {% if product.title contains 'Eclipse' %}
+          <div class="btn blue"><a  href="#modal-one">Add to Cart</a></div> {% elsif product.title contains 'Lucid' %}
+          <div class="btn blue"><a href="#modal-one">Add to Cart</a></div>{% elsif product.tags contains 'discontinued'%}
+          <a class="prod-info" style="color: #e43232;font-weight: 900;text-transform: uppercase;letter-spacing: 1px;">Discontinued</a>
+        {% else %}
+
+      <a class="btn blue" href="#modal-one">Add to Cart</a> {% endif %}
+      </div>
+
+		</div>
+	</div> -->
+
+	<!-- Modal -->
+
+	<div id="inline" style="background:#fff" class="lity-hide">
+		<div class="photom">
+      {{ product.metafields.c_f.Photometric }}
+		</div>
+	</div>
+
+	<div class="header-cover"></div>
+
+  <div id="product--page">
+    <div class="flex-container">
+      <div class="image-column">
+        <div class="mobile">
+          <h1>{{ product.title }}</h1>
+                  <h2 class="product-subtext"> {{ product.metafields.c_f.Product_Subtitle }}</h2>
+
+
+        </div>
+        <img
+
+        class="featured"
+        src="{{ product.featured_image | img_url: 'large'}}"
+        alt="{{product.title}}"
+        />
+
+{% assign prodLength = product.images.size | minus: 4 %}
+{% assign viewMore  = product.images.size %}
+        {% if product.images.size > 1 %}
+        <div class="photos__item photos__item--thumbs">
+          <div class="product-single__thumbnails{% unless product.images.size > 2 %} product-single__thumbnails--static{% endunless %}" id="ProductThumbs-{{ section.id }}">
+            {% for image in product.images reversed %}
+              {% if forloop.index > prodLength and forloop.index != viewMore %}
+
+                <a class="product-single__thumbnail-item {% if image == featured_image %} is-active {% endif %}" href="{{ image.src | img_url: 'master' }}" data-lightbox="product-images" style="background-image: url({{ image.src | img_url: '160x160' }})"></a>
+
+          {% elsif forloop.index == viewMore %}
+
+
+            <a style="background-image: url({{ image.src | img_url: '160x160' }})" class="product-single__thumbnail-item {% if image == featured_image %} is-active {% endif %} view-more-image" href="{{ image.src | img_url: 'master' }}" data-lightbox="product-images">
+<!--               <div class="more-image-amount">+7</div> -->
+            </a>
+
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+
+
+      <div class="prod-info--">
+        {% if product.compare_at_price > product.price %}
+              <div class="onsale"><i class="far fa-tags"></i>On Sale</div>
+            {% endif %}
+        <h1 class="desktop">{{ product.title }}</h1>
+        <h2 class="product-subtext desktop"> {{ product.metafields.c_f.Product_Subtitle }}</h2>
+
+        <ul class="fa-ul features-short">
+          {{ product.metafields.c_f.Main_Features }}
+        </ul>
+          <div class="variant" id="price">
+             <h3 class="price"> {{ product.variant | money }}</h3>
+          </div>
+        <form action="/cart/add" method="post">
+          <label for="novastar-select"><em>Select one:</em></label>
+          <select id="var-select" name="id" class="novastar-selector">
+            {% for variant in product.variants %}
+            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+            {% endfor %}
+          </select>
+
+
+        {% unless product.available %}
+<!--           <p class="btn otl">Sold Out</p> -->
+        {% else %}
+          <input  type="number" name="quantity" class="hide" value="1" min="1" />
+
+          <input type="submit" class="btn blue" value="Add to Cart" />
+
+        {% endunless %}
+
+        </form>
+        <!-- <a href="/a/wheretobuy"><div class="btn otl">Where to Buy</div></a> -->
+        {% unless product.available %}
+        {% else %}
+                <div class="shipping-info"><i class="fas fa-shipping-fast"></i> Usually Ships Same Day</div>
+        {% endunless %}
+                <div class="shipping-info"><i class="fas fa-check"></i> Tested for Quality</div>
+
+      </div>
+  </div>
+  </div>
+
+<div class="product-control">
+  <h4 class="overview-tab">Overview</h4>
+  <h4 class="spec-tab">Specs</h4>
+  <h4 class="dl-tab">Downloads</h4>
+</div>
+
+
+  	<div id="section-1" class="overview-section">
+		<div class="container" style="padding-bottom: 100px">
+			<div class="flex-container">
+				<div class="featuredimg">
+					<img src="{{ product.images[1].src | img_url: 'master' }}">
+				</div>
+				<div class="featuredr">
+					{% if product.metafields.c_f.Section_1_Header %}
+					<h2>{{ product.metafields.c_f.Section_1_Header }}</h2>
+					{% endif %} {% if product.metafields.c_f.Section_1_Description %}
+					<p>{{ product.metafields.c_f.Section_1_Description }}</p>
+					{% endif %}
+
+				</div>
+			</div>
+
+			{% if product.metafields.c_f.Section_2_Header %}
+			<div class="flex-container">
+				<div class="featuredimg leftimg">
+					<img src="{{ product.images[2].src | img_url: 'master' }}">
+				</div>
+				<div class="featuredr rightdr">
+					<h2>{{ product.metafields.c_f.Section_2_Header }}</h2>
+					{% endif %} {% if product.metafields.c_f.Section_2_Description %}
+					<p>{{ product.metafields.c_f.Section_2_Description }}</p>
+					{% endif %}
+				</div>
+			</div>
+
+			{% if product.title contains 'Eclipse' %} {% if product.metafields.c_f.Section_3_Header %}
+			<div class="flex-container">
+				<div class="featuredimg">
+					<img class="lazy" data-original="{{ product.images[3].src | img_url: 'master' }}">
+				</div>
+				<div class="featuredr">
+					<h2>{{ product.metafields.c_f.Section_3_Header }}</h2>
+					{% endif %} {% if product.metafields.c_f.Section_3_Description %}
+					<p>{{ product.metafields.c_f.Section_3_Description }}</p>
+					{% endif %}
+				</div>
+			</div>
+			{% endif %}
+                     {% if product.metafields.global.vimeo_url%}
+          <div class="v-container">
+            <div class="vimeo">
+              <div  style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://player.vimeo.com/video/{{product.metafields.global.vimeo_url}}?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          {% endif %}
+
+          {% if product.metafields.c_f.Youtube_URL %}
+                    <div class="v-container">
+            <div class="vimeo">
+              <div  style="padding:56.25% 0 0 0;position:relative;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/{{product.metafields.c_f.Youtube_URL}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              </div>
+            </div>
+          </div>
+          {% endif %}
+
+      </div>
+
+
+		<ul id="prodSlider">
+
+			{% for image in product.images %} {% unless forloop.index < 4 %} <a data-lity href="{{ image | product_img_url: 'master' }}" title="{{ product.title }}">
+				<li class="item-a" class="{% if forloop.index < 4 %}mobile-only{% endif %}">
+					<div class="overflow-overlay"></div>
+
+					<img src="{{ image.src | img_url: 'master' }}">
+
+				</li>
+				</a>
+				{% endunless %} {% endfor %}
+
+		</ul>
+
+  </div>
+
+  {% assign aImg = product.images.size | minus: 1 %}
+  {% assign bImg = product.images.size | minus: 2 %}
+  {% assign cImg = product.images.size | minus: 3 %}
+  {% assign dImg = product.images.size | minus: 4 %}
+  {% assign eImg = product.images.size | minus: 5 %}
+
+
+
+
+	<div id="specifications" class="spec-section hidden">
+
+      	<section id="main_features">
+
+		<h3>Main Features</h3>
+
+		<div class="features">
+
+			<p>
+
+				{{ product.metafields.c_f.Main_Features }}
+
+			</p>
+
+
+		</div>
+
+	</section>
+
+  <section id="specs" >
+
+    <div class="spec-top">
+          <img src="{{ 'spec-icon-og.svg' | asset_url }}">
+      <h3>Product Specifications</h3>
+    </div>
+
+
+    <div class="steam-container">
+
+            {% if product.metafields.c_f.Density == '1' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill one"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Density == '2' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill two"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Density == '3' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill three"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Density == '4' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill four"></div> </div>
+        </div>
+
+      	{% elsif product.metafields.c_f.Density == '5' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill five"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Density == '6' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill six"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Density == '7' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill seven"></div> </div>
+        </div>
+
+        {% elsif product.metafields.c_f.Density == '8' %}
+      <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill eight"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Density == '9' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill nine"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Density == '10' %}
+            <div class="steam-item">
+        <h4>Density</h4>
+        <div class="meter"><div class="fill ten"></div> </div>
+        </div>
+
+      {% endif %}
+
+
+<!--       Hang time Stats         -->
+
+            {% if product.metafields.c_f.Hang_Time == '1' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill one"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Hang_Time == '2' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill two"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Hang_Time == '3' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill three"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Hang_Time == '4' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill four"></div> </div>
+        </div>
+
+      	{% elsif product.metafields.c_f.Hang_Time == '5' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill five"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Hang_Time == '6' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill six"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Hang_Time == '7' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill seven"></div> </div>
+        </div>
+
+        {% elsif product.metafields.c_f.Hang_Time == '8' %}
+      <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill eight"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Hang_Time == '9' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill nine"></div> </div>
+        </div>
+
+            	{% elsif product.metafields.c_f.Hang_Time == '10' %}
+            <div class="steam-item">
+        <h4>Hang Time</h4>
+        <div class="meter"><div class="fill ten"></div> </div>
+        </div>
+
+      {% endif %}
+
+
+    </div>
+
+    <div class="flex-container" >
+
+            {% if product.metafields.c_f.General_Specs %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-15.svg' | asset_url }}">
+        <h4>Overview</h4>
+        <p>{{ product.metafields.c_f.General_Specs | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Optical %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-05.svg' | asset_url }}">
+        <h4>Optical</h4>
+        <p>{{ product.metafields.c_f.Optical | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+            {% if product.metafields.c_f.In_the_Box %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--09.svg' | asset_url }}">
+        <h4>In the Box</h4>
+        <p>{{ product.metafields.c_f.In_the_Box | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+            {% if product.metafields.c_f.Movement %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--01.svg' | asset_url }}">
+        <h4>Movement</h4>
+        <p>{{ product.metafields.c_f.Movement | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                  {% if product.metafields.c_f.Wireless_Receiver %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--03.svg' | asset_url }}">
+        <h4>Wireless Receiver</h4>
+        <p>{{ product.metafields.c_f.Wireless_Receiver | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                  {% if product.metafields.c_f.Optional_Accessories %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--04.svg' | asset_url }}">
+        <h4>Optional Accessories</h4>
+        <p>{{ product.metafields.c_f.Optional_Accessories | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                  {% if product.metafields.c_f.Wireless_Footswitch %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--05.svg' | asset_url }}">
+        <h4>Wireless Footswitch</h4>
+        <p>{{ product.metafields.c_f.Wireless_Footswitch | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                  {% if product.metafields.c_f.Radio_Parameters %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--06.svg' | asset_url }}">
+        <h4>Radio Parameters</h4>
+        <p>{{ product.metafields.c_f.Radio_Parameters | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                  {% if product.metafields.c_f.Connectors %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--07.svg' | asset_url }}">
+        <h4>Connectors</h4>
+        <p>{{ product.metafields.c_f.Connectors | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                  {% if product.metafields.c_f.System_Requirements %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--08.svg' | asset_url }}">
+        <h4>System Requirements</h4>
+        <p>{{ product.metafields.c_f.System_Requirements | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+                        {% if product.metafields.c_f.USB_Data_Format %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--10.svg
+        ' | asset_url }}">
+        <h4>USB Data Format</h4>
+        <p>{{ product.metafields.c_f.USB_Data_Format | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+                              {% if product.metafields.c_f.Rigging_&_Application %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-22.svg
+        ' | asset_url }}">
+        <h4>Rigging & Application</h4>
+        <p>{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Weight_and_Dimensions %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-04.svg' | asset_url }}">
+        <h4>Weight & Dims</h4>
+        <p>{{ product.metafields.c_f.Weight_and_Dimensions | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+            {% if product.metafields.c_f.Battery_Info %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--11.svg' | asset_url }}">
+        <h4>Battery Info</h4>
+        <p>{{ product.metafields.c_f.Battery_Info | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+      {% if product.metafields.c_f.Control %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-01.svg' | asset_url }}">
+        <h4>Control</h4>
+        <p>{{ product.metafields.c_f.Control | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+
+
+
+      {% if product.metafields.c_f.Power_and_Current %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-02.svg' | asset_url }}">
+        <h4>Power & Current</h4>
+        <p>{{ product.metafields.c_f.Power_and_Current | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+
+
+
+      {% if product.metafields.c_f.Thermal %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon-03.svg' | asset_url }}">
+        <h4>Thermal</h4>
+        <p>{{ product.metafields.c_f.Thermal | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                      {% if product.metafields.c_f.Warranty %}
+      <div class="spec-item">
+        <img class="lazy" data-original="{{ 'spec-icon--02.svg' | asset_url }}">
+        <h4>Warranty</h4>
+        <p>{{ product.metafields.c_f.Warranty | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+
+                        {% if product.metafields.c_f.DMX_Decoder %}
+      <div class="spec-item">
+        <h4>DMX Decoder</h4>
+        <p>{{ product.metafields.c_f.DMX_Decoder | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                            {% if product.metafields.c_f.RGB_Dimmer %}
+      <div class="spec-item">
+        <h4>RGB Dimmer</h4>
+        <p>{{ product.metafields.c_f.RGB_Dimmer | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                            {% if product.metafields.c_f.Remote_Control %}
+      <div class="spec-item">
+        <h4>Remote Control</h4>
+        <p>{{ product.metafields.c_f.Remote_Control | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                            {% if product.metafields.c_f.Power_Supply %}
+      <div class="spec-item">
+        <h4>Power Supply</h4>
+        <p>{{ product.metafields.c_f.Power_Supply | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+                            {% if product.metafields.c_f.Amplifier %}
+      <div class="spec-item">
+        <h4>Amplifier</h4>
+        <p>{{ product.metafields.c_f.Amplifier | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+
+
+
+
+                                  {% if product.metafields.c_f.Apps %}
+      <div class="spec-item">
+        <h4>Apps</h4>
+        <p>{{ product.metafields.c_f.Apps | newline_to_br }}<p>
+        </div>
+      {% endif %}
+
+    </div>
+
+  </section>
+
+  </div>
+
+
+
+  <div id="downloader" class="download-section hidden">
+
+      <img class="woops" src="{{ 's-icon02.svg' | asset_url }}">
+      <h3>Downloads</h3>
+
+        {% if product.tags contains 'photometric' or product.tags contains 'cutting' or product.tags contains 'remote' or product.tags contains 'colors and gobos' or product.tags contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains 'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'novastar cat' or product.tags contains 'rev a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags contains 'rev d' or product.tags contains 'rev e' %}
+
+
+        <div class="download-tab">
+
+           <div class="flex-container">
+
+         {% if product.tags contains 'photometric' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_photometric-cutsheet.pdf' | file_url }}">
+            <li>
+              <img src="{{ 'cutsheet.png' | asset_url }}">
+              <h3>Photometric Cutsheet</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_photometric-cutsheet.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_photometric-cutsheet.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+                          {% if product.tags contains 'cutting' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_ribboncutting.pdf' | file_url }}">
+            <li>
+              <img src="{{ 'cutting.svg' | asset_url }}">
+              <h3>Ribbon Cutting Instructions</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_ribboncutting.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_ribboncutting.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+                          {% if product.tags contains 'remote' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_remote.pdf' | file_url }}">
+            <li>
+              <img src="{{ 'remote.svg' | asset_url }}">
+              <h3>Remote</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_remote.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_remote.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+             {% if product.tags contains 'colors and gobos' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_colors_gobos.pdf' | file_url }}">
+            <li>
+              <img src="{{ 'colorsandgobos.svg' | asset_url }}">
+              <h3>Colors & Gobos</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_colors_gobos.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_colors_gobos.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+             {% if product.tags contains 'acc_info' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_accessories.pdf' | file_url }}">
+            <li>
+              <img src="{{ 'accessories.svg' | asset_url }}">
+              <h3>Accessories</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_accessories.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_accessories.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+                                   {% if product.tags contains 'datasheet' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_safety_datasheet.pdf' | file_url }}">
+            <li>
+              <img class="lazy" data-original="{{ 'cutsheet.png' | asset_url }}">
+              <h3>Datasheet</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_safety_datasheet.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_safety_datasheet.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+                                   {% if product.tags contains 'firmware' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_firmware.zip' | file_url }}">
+            <li>
+              <img src="{{ 'cutsheet.png' | asset_url }}">
+              <h3>Firmware</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_firmware.zip' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_firmware.zip' }}</p>
+             </li></a>
+         {% endif %}
+
+
+                                   {% if product.tags contains 'amp-cutsheet' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_amp-cutsheet.pdf' | file_url }}">
+            <li>
+              <img src="{{ 'cutsheet.png' | asset_url }}">
+              <h3>Amp Cutsheet</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_amp-cutsheet.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_amp-cutsheet.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+                      {% if product.tags contains 'cutsheet' %}
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_cutsheet.pdf' | file_url }}">
+            <li>
+              <img src="{{ 'cutsheet.png' | asset_url }}">
+              <h3>Cutsheet</h3>
+                           <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_cutsheet.pdf' | file_url }}">
+Download</a>
+   			  <p>{{ product.url | remove: "/products/" | append: '_cutsheet.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+          {% if product.tags contains 'rev a' %}
+            <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_a.pdf' | file_url }}"><li>
+              <img class="lazy" data-original="{{ 'manual.png' | asset_url }}">
+              <h3>Manual<br>Rev A</h3>
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_a.pdf' | file_url }}">Download</a>
+              <p>{{ product.url | remove: "/products/" | append: '_manual_rev_a.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+                       {% if product.tags contains 'rev b' %}
+            <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_b.pdf' | file_url }}"><li>
+              <img src="{{ 'manual.png' | asset_url }}">
+              <h3>Manual<br>Rev B</h3>
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_b.pdf' | file_url }}">Download</a>
+              <p>{{ product.url | remove: "/products/" | append: '_manual_rev_b.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+
+         {% if product.tags contains 'rev c' %}
+            <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_c.pdf' | file_url }}"><li>
+              <img src="{{ 'manual.png' | asset_url }}">
+              <h3>Manual<br>Rev C</h3>
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_c.pdf' | file_url }}">Download</a>
+              <p>{{ product.url | remove: "/products/" | append: '_manual_rev_c.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+                                    {% if product.tags contains 'rev d' %}
+            <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_d.pdf' | file_url }}"><li>
+              <img src="{{ 'manual.png' | asset_url }}">
+              <h3>Manual<br>Rev D</h3>
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_d.pdf' | file_url }}">Download</a>
+              <p>{{ product.url | remove: "/products/" | append: '_manual_rev_d.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+         {% if product.tags contains 'rev e' %}
+            <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' | file_url }}"><li>
+              <img src="{{ 'manual.png' | asset_url }}">
+              <h3>Manual<br>Rev E</h3>
+             <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' | file_url }}">Download</a>
+              <p>{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' }}</p>
+             </li></a>
+         {% endif %}
+
+                      {% if product.tags contains 'novastar cat' %}
+            <a target="_blank" href="https://drive.google.com/uc?export=download&id=1gekq7-eyBsNDFcorzRSaA78eqoUtmKIn"><li>
+              <h3>2018 NovaStar<br>Catalog</h3>
+             <a target="_blank" href="https://drive.google.com/uc?export=download&id=1gekq7-eyBsNDFcorzRSaA78eqoUtmKIn">Download</a>
+              <p>2018 NovaStar™ Catalog (PowerPoint)</p>
+             </li></a>
+         {% endif %}
+           </div>
+      	  </div>
+        </div>
+
+    {% else %}
+
+    <p style="text-align: center;">There are no downloads for this product at this time.</p>
+
+
+{% endif %}
+
+
+
+
+{% include 'cfhs-product' %}
+
+
+
+
+
+{% comment %}
+  Adding support for product options. See here for details:
+  http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-products-with-multiple-options
+{% endcomment %}
+
+
+
+
+
+<script>
+
+    if ($(window).width() > 600) {
+  $('.welp' ).wrap ("<div class='product-photo-container'></div>");
+}
+
+  else {
+$('.welp' ).wrap ("<a id='fix'></a>");
+  }
+
+</script>

@@ -1,0 +1,153 @@
+{% include 'sticky-contact' %}
+<style>
+
+
+</style>
+
+<script>
+  jQuery(window).scroll(function() {
+    var scroll = jQuery(window).scrollTop();
+
+    if (scroll >= 1000) {
+      jQuery(".product-carousel2-attached").addClass("fix");
+    } else {
+      jQuery(".product-carousel2-attached").removeClass("fix");
+    }
+
+  });
+  
+
+</script>
+
+
+
+<style>.unslider-fade .unslider-active { position: static!important; }</style>
+<section id="hero">
+
+  <div class="overlay"></div>
+
+  <video autoplay loop muted>
+    <source src="{{ 'bg-video-eddy-sound.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'bg-video-eddy-sound.mp4' | asset_url }}" type="video/ogg">
+    <source src="{{ 'bg-video-eddy-sound.mp4' | asset_url }}" type="video/webm">
+    Your browser does not support the <code>video</code> element.
+  </video>
+
+  <div class="intro">
+    <img style="
+                width: 90%;
+                max-width: 580px;
+                padding-bottom: 20px;
+                " src="{{ 'Believe-in-Color.png' | asset_url }}" alt="Believe in Color" />
+    <h2>Pro + Entertainment LED Lighting & Video</h2>
+  </div>
+
+
+</section>
+
+<div class="product-cat-slider">
+  {% for product in collections.category-list.products %}
+  <div class="cat-slide">
+     <a style="color: black" href="https://www.blizzardpro.com/collections/{{product.metafields.c_f.Category_Label | handleize }}">
+    <img src={{product.featured_image | img_url: 'master'}} alt="{{product.title}}" />
+    <h3>{{ product.metafields.c_f.Category_Label }}</h3>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="cat-section-banner" style="background-image: url({{ 'iris-section.png' | asset_url }})">
+  <div class="cat-caption">
+    <div>
+      <h3>Believe in Color</h3>
+      <h2>Ready to Ship</br>LED Video Panels</h2>
+    <a class="btn btn-alt" href="/collections/led-video">Browse IRiS Video</a>
+  </div>
+</div>
+<div class="overlay"></div>
+</div>
+
+<div class="two-column-image"  >
+  <div class="column-bg-image" style="background-image: url(https://cdn.shopify.com/s/files/1/1741/5055/products/IMG_0483_40478746-ad34-481c-bb42-ed78b8d310d0.jpg?v=1501016333)">
+    <div style="position: relative; z-index: 1; text-align: center;">
+      <h2>Explore Wash Lights</h2>
+      <p>Unleash your creativity</p>
+      <a class="btn btn-alt" href="/collections/washlights">Shop Wash Lights</a>
+    </div>
+    <div class="overlay"></div>
+  </div>
+  <div class="column-bg-image" style="background-image: url(https://cdn.shopify.com/s/files/1/1741/5055/products/Annotation_2020-02-21_094834_1ae16f80-8fb8-4804-9148-723e6cfb1e49.png?v=1582301776)">
+    <div style="position: relative; z-index: 1; text-align: center;">
+      <h2>Wireless Solutions</h2>
+      <p>Configure & control with SoC-It + @Full app</p>
+      <a class="btn btn-alt" href="https://www.blizzardpro.com/products/soc-it">Learn More</a>
+    </div>
+    <div class="overlay"></div>
+  </div>
+</div>
+
+<div class="modal" id="welcome" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <a href="#" class="btn-close" aria-hidden="true">×</a>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="next-steps">
+
+        <img src="https://cdn.shopify.com/s/files/1/1741/5055/files/blizzilluminati_ece1d69e-bb1a-4258-a2ea-99e31fa347f6.png?18024738818802966957" alt="Blizzard Lighting" width="180">
+        <h2>Thank you for signing up for an Illuminati account!</h2>
+        <h3>What's Next?</h3>
+        <ul>
+          <li>1. Check your email for account creation confirmation.</li>
+          <li>2. Confirm your Blizzard email subscription via email.</li>
+          <li>3. Enjoy free ground shipping on all your future purchases.</li>
+        </ul>
+        <a href="#" class="btn-close" id="btn-special" aria-hidden="true">Start Shopping</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<section id="productgrid">
+  <div class="flex-container">
+
+    <div class="column40">
+
+      <h3>Featured Collection</h3>
+      <h2>{{ settings.pp-s2-h }}</h2></div>
+
+
+
+    {% assign collection = collections.featured-products %}
+    {% assign products = collections.featured-products.products %}
+    {% capture new_row %}
+
+    {% endcapture %}
+    {% for product in products limit: limit %}
+    <div class="flex-item"><div class="search"><i class="fa fa-search" aria-hidden="true"></i></div><a href="{{ product.url | within: collection }}" title="{{ product.featured_image.alt | escape }}">
+      <img {% if settings.align_height %}style="height:{{ settings.collection_height }}px"{% endif %} src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
+      </a>
+      <div class="nfo">
+        <h3>{{ product.title }}</h3>
+      </div>
+    </div>
+    {% endfor %}
+
+    <a href="/collections/{{ settings.feature_product-link }}" class="btn btn-alt wide">{{ settings.featured-link }}</a>
+
+  </div>
+</section>
+
+
+
+
+

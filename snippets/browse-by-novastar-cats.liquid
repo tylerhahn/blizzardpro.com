@@ -1,0 +1,21 @@
+<div class="product-carousel2-attached">
+
+  <div class="flex-container" >
+    <h4 class="cables">Product Type</h4>
+    <div class="flex-item" >
+
+      <select id="my_selection">
+        <option>Select Product Type</option>
+{% for link in linklists.novastar-categories.links %}
+     <option value="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</option>
+{% endfor %}
+</select>
+
+
+    </div>
+
+  </div>
+
+
+
+  </div>

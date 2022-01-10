@@ -1,0 +1,82 @@
+<div class="modal" id="modal-one" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-header">
+			<a href="#" class="btn-close" aria-hidden="true">×</a>
+		</div>
+
+		<div class="modal-body">
+
+		<div class="flex-container">
+          			<div class="buy-third">
+				<div class="authorized-info">
+				<h2>Buy from<br/>Authorized Retailers</h2>
+					<p>You can search for authorized Blizzard retailers by using our store locator.</p>
+					<div id="omacro-buy-online-button" class="buy-from-partner" data-product="{{ product.metafields.c_f.Omacro_ID }}"><a href="https://www.blizzardpro.com/a/wheretobuy">Where to Buy</a></div>
+<!-- <script id="omacro-buy" src="https://www.omacro.com/JQuery/buy.js?id={{ product.metafields.c_f.Omacro_ID }}&amp;cid=3d49a296-5e84-40ed-b0f8-9082792f88d6&amp;i=https%3a%2f%2fwww.omacro.com%2fimages%2fbuy-now-btn1.png&amp;m=3&amp;cc=US" type="text/javascript"></script> -->
+
+				</div>
+			</div>
+          
+                    <div class="or"><span class="alter">OR</span></div>
+          
+			<div class="buy-blizz">
+
+				<div class="buy-info">
+					<h2>Buy from<br/>Blizzard Lighting</h2>
+					<h3>{% assign variant = v %} {% if product.compare_at_price > product.price %}
+						<span class="product-price on-sale" itemprop="price">{{ product.price_max | money }}</span>
+						<s class="product-compare-price">{{ product.price_max | money }}</s> {% else %}
+						<span class="product-price" itemprop="price">{{ product.price_max | money }}</span> {% endif %}</h3>
+
+                  {% if product.tags contains 'preorder' %}
+                  <h4>Preorder</h4>
+                  <p class="preorder">Expected Shipping Date: {{ product.metafields.c_f.Preorder_Date }}</p>
+                  {% endif %}
+                  
+            <form action="/cart/add" method="post">
+
+  <select id="var-select" class="hide" name="id">
+    {% for variant in product.variants %}
+    <option value="{{ variant.id }}">{{ variant.title }}</option>
+    {% endfor %}
+  </select>
+
+
+{% unless product.available %}
+  <p>Sold Out</p>
+{% else %}
+  <input type="number" name="quantity" value="1" min="1" />
+              
+
+  <input type="submit" value="Add to Cart" />
+    
+{% endunless %}
+              
+</form>
+				</div>
+
+			</div>
+          
+          {% if product.metafields.c_f.Omacro_ID %} 
+          
+
+
+          
+          {% endif %}
+          
+		</div>
+		</div>
+	</div>
+</div>
+
+<!-- <script>
+  jQuery('#var-select>option:eq(1)').attr('selected', true);
+</script> -->
+
+<style>
+  
+  .modal-dialog {
+    height: 599px;
+}
+  
+</style>

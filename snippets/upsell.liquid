@@ -1,0 +1,26 @@
+
+{% assign total = cart.items_subtotal_price | money_without_currency  %}
+{% assign cartTotal = total | plus: 0 %}
+{% assign relatedCollection = collections['cart-upsell'] %}
+{% assign index = 'now' | date: '%S' %}
+{% assign index = index | times: relatedCollection.products.size %}
+{% assign index = index | divided_by: 60 %}
+{% assign totalForFreeShipping = 99 | minus: cartTotal  %}
+<div class="upsell">
+    {% if cartTotal >= 50 and cartTotal < 99 %}
+    <h3 class="upsell-headline">Get Free Shipping by adding ${{totalForFreeShipping}} more to your order</h3>
+    {% else %}
+    <h3 class="upsell-headline">Don't forget these other popular products</h3>
+    {% endif %}
+    <div class="upsell-grid">
+        {% for product in collections.cart-upsell.products | limit: 5 %}
+{% if product.available %}
+      {% include 'new-cart-item' %}
+      {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+console.log({{totalForFreeShipping}})
+</script>

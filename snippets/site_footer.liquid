@@ -1,0 +1,50 @@
+
+<footer>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_OT15QW.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player> -->
+
+    <div class="flex-container">
+        <div class="logo-footer">
+            <img src="{{ 'blizzard-mark-light-transparent.png' | asset_url }}" alt="Blizzard Pro"/>
+        </div>
+        <div class="menu-item">
+            {% for link in linklists.footer.links %}
+                <li>{{ link.title | link_to: link.url }}</li>
+            {% endfor %}
+        </div>
+        <div class="menu-item">
+            {% for link in linklists.footer-2.links %}
+                <li>{{ link.title | link_to: link.url }}</li>
+            {% endfor %}
+        </div>
+
+        <div class="menu-item">
+            {% for link in linklists.footer-3.links %}
+                <li>{{ link.title | link_to: link.url }}</li>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class="social m-auto">
+        <a href="https://instagram.com/blizzardlites/" target="_blank">
+            <i aria-hidden="true" class="fab fa-instagram"></i>
+            <div class="sr">Instagram</div>
+        </a>
+        <a href="http://www.youtube.com/user/blizzardlighting" target="_blank">
+            <i aria-hidden="true" class="fab fa-youtube"></i>
+            <div class="sr">YouTube</div>
+        </a>
+        <a href="https://www.facebook.com/blizzardlighting/" target="_blank">
+            <i class="fab fa-facebook"></i>
+            <div class="sr">Facebook</div>
+        </a>
+    </div>
+    <p class="small-print pt-5" role="contentinfo">
+        Copyright &copy;
+        {{ "now" | date: "%Y" }}
+        {{ shop.name }}.
+    </p>
+
+
+</footer>

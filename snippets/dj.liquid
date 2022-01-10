@@ -1,0 +1,43 @@
+<div class="flex-container">
+  
+  <div class="column60">
+    <img src="{{ 'pro-feature.png' | asset_url }}">
+  </div>
+  
+    <div class="column40">
+      <img src="{{ 'icon-01b.svg' | asset_url }}">
+    <h3>DJ</h3>
+    <h2>DJ Headline</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id auctor orci. Nam a nisl vitae nibh iaculis consectetur. </p>
+  </div>
+  
+</div>
+
+<section id="recommended">
+  
+  
+  <h2>Recommended for <span class="underline">Pros</span></h2>
+  
+  <div class="flex-container">
+
+{% assign collection = collections.moving-heads %}
+  {% assign products = collections.moving-heads.products %}
+  {% capture new_row %}
+ 
+    {% endcapture %}
+    {% for product in products limit: limit %}
+    <div class="flex-item"><div class="rec">Recommended for You</div> <div class="search"><i class="fa fa-search" aria-hidden="true"></i></div><a href="{{ product.url | within: collection }}" title="{{ product.featured_image.alt | escape }}">
+       <img {% if settings.align_height %}style="height:{{ settings.collection_height }}px"{% endif %} src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
+         </a>
+     <div class="nfo">
+       <h3>{{ product.title }}</h3>
+       <h4>{{ product.type }}</h4>
+     
+     </div>
+           </div>
+    {% endfor %}
+
+
+  </div>
+</section>
+

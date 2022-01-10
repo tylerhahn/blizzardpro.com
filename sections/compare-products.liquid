@@ -1,0 +1,49 @@
+<div id="product-compare">
+    <div class="compare-container">
+
+    </div>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryProds = urlParams.get('prods');
+    const products = queryProds.split(',');
+    let productData = [];
+    let promises = [];
+
+    function renderProduct(item) {
+        return `
+            <div class="col">
+                <h2>
+                    ${item.product.title}
+                </h2>
+                ${renderMetafields(item)}
+            </div>
+        `
+    }
+
+    function renderMetafields(metafields) {
+        let fields = [];
+        console.log(metafields)
+        _.map(metafields, (metafield) => {
+            fields.push(`<div class="compare-item-row"><h3>${meatfield.key}: </h3>${metafield.value}</div>`)
+        })
+        return fields;
+    }
+    products.map((o, i) => {
+        promises.push(`https://api.blizzard.lighting/shopify/product?productId=${o}`);
+        if(i === products.length - 1) {
+
+            Promise.all(promises.map(u=>fetch(u))).then(responses =>
+                Promise.all(responses.map(res => res.json()))).then(json => {
+
+                    json.map(item => {
+                        $('.compare-container').append(renderProduct(item))
+                    })
+
+            })
+        }
+    })
+
+
+</script>

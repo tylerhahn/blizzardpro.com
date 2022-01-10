@@ -1,0 +1,33 @@
+{% if collection.image %} <img style="width: 100%" src="{{
+  collection.image | img_url: "master"
+}}" alt="{{ collection.title }}" /> {% else %}
+<div
+  class="collection-banner"
+  style="background-image: url({{ 'col-bg.gif' | asset_url }})"
+>
+  <div class="caption-collection">
+    <div>
+      <h2>{{ collection.title }}</h2>
+      <p class="warranty">{{ collection.description }}</p>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<style>
+  p.warranty {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 870px;
+    color: #a7a7a7;
+  }
+</style>
+
+{% if collection.image %} {% else %}
+<script>
+  var hues = [275, 305, 0, 355],
+    random = Math.floor(Math.random() * Math.floor(4));
+  $(".collection-banner").css("filter", `hue-rotate(${hues[random]}deg)`);
+</script>
+{% endif %}

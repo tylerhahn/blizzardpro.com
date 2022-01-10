@@ -1,0 +1,113 @@
+<style>
+
+  .product-carousel2
+ {margin-top: 89px;
+ }
+
+</style>
+
+
+	<script>
+		jQuery(window).scroll(function() {
+			var scroll = jQuery(window).scrollTop();
+
+			if (scroll >= 200) {
+				jQuery(".product-carousel2-attached").addClass("fix");
+			} else {
+				jQuery(".product-carousel2-attached").removeClass("fix");
+			}
+
+		});
+
+	</script>
+
+{% include 'browse-by-attached' %}
+
+
+
+<div class="product-carousel2">
+
+  <div class="flex-container" >
+    <h4>Cable Type</h4>
+    <div class="flex-item" >
+
+      <select id="my_selection">
+{% for link in linklists.cable-types.links %}
+     <option value="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</option>
+{% endfor %}
+</select>
+
+
+    </div>
+     <h4>Cable Length</h4>
+      <div class="flex-item">
+
+                            <select id="my_selection2">
+          {% for link in linklists.sub-categories.links %}
+     <option value="{{ link.title }}"><a href="{{ link.url }}">{{ link.title }}</a></option>
+{% endfor %}
+</select>
+
+
+    </div>
+
+  </div>
+
+
+
+  </div>
+
+<script>
+
+  // Select
+
+document.getElementById('my_selection').onchange = function () {
+	window.location.href = this.children[this.selectedIndex].getAttribute('href');
+}
+
+
+document.getElementById('my_selection2').onchange = function () {
+	window.location.href = this.children[this.selectedIndex].getAttribute('href');
+}
+
+</script>
+
+
+<section id="collector">
+
+<h1 class="left">{{ collection.title }}</h1>
+
+      {% assign collection = collections.cables %}
+  {% assign products = collections.cables.products %}
+  {% capture new_row %}
+
+    {% endcapture %}
+
+
+    {% for product in products %}
+<ul class="grid clearfix">
+{% for product in collection.cables %}
+  {% include 'product-grid-item' with products_per_row %}
+{% else %}
+  <p>There are no products in this view.</p>
+{% endfor %}
+</ul>
+    {% endfor %}
+
+
+{% assign collection = collections.illuminati %}
+  {% assign products = collections.illuminati.products %}
+  {% capture new_row %}
+
+    {% endcapture %}
+
+</section>
+
+<script>
+jQuery('.sort-by')
+  .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+  .on('change', function() {
+    Shopify.queryParams.sort_by = jQuery(this).val();
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+  });
+</script>

@@ -1,0 +1,189 @@
+<section id="blacktop">
+  <div class="container">
+    <div class="prod-reg-header">
+      <img
+        width="300px"
+        src="{{ 'mt-logo-pink.svg' | asset_url }}"
+        alt="Mixtape Series"
+      />
+
+      <h1>Register Your Mixtape</h1>
+      <p>
+        Take advantage of your warranty – and other exclusive offers – by
+        filling out the form below to register your Blizzard Lighting Product.
+      </p>
+    </div>
+    <div id="product-reg">
+      {% form 'create_customer' %}
+      {{ form.errors | default_errors }}
+      <div class="form-row">
+        <div id="first_name" class="clearfix large_form">
+          <label for="first_name" class="login">{{
+            "customer.register.first_name" | t
+          }}</label>
+          <input
+            type="text"
+            value=""
+            name="customer[first_name]"
+            id="first_name"
+            class="large"
+            size="30"
+          />
+        </div>
+
+        <div id="last_name" class="clearfix large_form">
+          <label for="last_name" class="login">{{
+            "customer.register.last_name" | t
+          }}</label>
+          <input
+            type="text"
+            value=""
+            name="customer[last_name]"
+            id="last_name"
+            class="large"
+            size="30"
+          />
+        </div>
+      </div>
+      <div id="serial_number" class="clearfix large_form">
+        <label for="serial_number" class="login">Serial Number</label>
+        <input
+          type="serial_number"
+          value=""
+          name="customer[serial_number]"
+          id="serial_number"
+          class="large"
+          size="30"
+        />
+        <div class="serial-sample">
+          <img src="{{ 'sample-serial.svg' | asset_url }}" />
+        </div>
+      </div>
+
+      <div id="pur_loc">
+        <label for="pur_loc">Purchase Location</label>
+        <select name="pur_loc" id="pur_select">
+          <option value="In-Store / Retail">In-Store / Retail</option>
+          <option value="3rd Party Online Store">3rd Party Online Store</option>
+          <option value="BlizzardPro.com">BlizzardPro.com</option>
+          <option value="Amazon.com">Amazon.com</option>
+          <option value="eBay.com">eBay.com</option>
+        </select>
+      </div>
+
+      <div id="email" class="clearfix large_form">
+        <label for="email" class="login">{{
+          "customer.register.email" | t
+        }}</label>
+        <input
+          type="email"
+          value=""
+          name="customer[email]"
+          id="email"
+          class="large"
+          size="30"
+        />
+      </div>
+
+      <div id="is-account">
+        <input type="checkbox" />
+        <label for="create-account"
+          >Save 5% + Free Shipping on all purchases by creating an
+          account</label
+        >
+      </div>
+
+      <div id="password" class="clearfix large_form hidden">
+        <label for="password" class="login">{{
+          "customer.register.password" | t
+        }}</label>
+        <input
+          type="password"
+          value=""
+          name="customer[password]"
+          id="password"
+          class="large password"
+          size="30"
+        />
+      </div>
+
+      <p class="action_bottom">
+        <input class="btn action_button" type="submit" value="Register" />
+      </p>
+
+      {% endform %}
+    </div>
+    <!-- /#create-customer -->
+  </div>
+</section>
+
+<script>
+  $(function () {
+    var checkBoxes = $("#is-account input");
+
+    function sendToHubspot() {
+      const email = $("input#email").val(),
+        firstName = $("input#first_name").val(),
+        lastName = $("input#last_name").val(),
+        purchase_location = $("#pur_select").val(),
+        serial_number = $("input#serial_number").val();
+
+      const data = {
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        purchase_location: purchase_location,
+        serial_number: serial_number,
+      };
+      (async () => {
+        const rawResponse = await fetch(
+          "https://api.blizzard.lighting/update-contact",
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        );
+        window.location.href = "/pages/product-register-thank-you";
+      })();
+    }
+
+    $("#is-account input").click(function () {
+      $("#password").toggleClass("hidden");
+    });
+
+    $("#is-account label").click(function () {
+      $("#password").toggleClass("hidden");
+      var checkBoxes = $("#is-account input");
+      checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+    });
+    $("#create_customer").submit(function (event) {
+      event.preventDefault();
+      var data = $(this).serialize();
+
+      if (checkBoxes.prop("checked")) {
+        $.post("/account", data)
+          .done(function (data) {
+            var logErrors = $(data).find(".errors").text();
+
+            //if there are errors show them in the html form
+            if (logErrors != "" && logErrors != "undefined") {
+              $("#create_customer .errors").html(logErrors);
+              $("#create_customer .errors").show();
+            } else {
+              sendToHubspot();
+            }
+          })
+          .fail(function () {
+            console.log("error");
+          });
+      } else {
+        sendToHubspot();
+      }
+      return false;
+    });
+  });
+</script>

@@ -1,0 +1,57 @@
+{% include 'sticky-contact' %}
+
+<div id="underdog">
+
+    <div class="intro">
+
+        <h1>Support Center</h1>
+        <h2>Search below for quick answers + additional help</h2>
+    </div>
+
+</div>
+
+<section id="discover">
+
+    <div class="container">
+        <div class="shorten">
+            <h2>Discover More</h2>
+            <h3>Everything you’ll need to care for and repair your lights, video & accessories</h3>
+        </div>
+        <ul class="support-tabs">
+            <li class="icon-support">
+                <a class="current active" href="#tab-1"><img src="{{ 's-icon01.svg' | asset_url }}">
+                    <h4>Support Tickets</h4>
+                    <p>Submit a support ticket or check the the status of your current ticket
+                    </p>
+                    <span class="bluebold">See More</span>
+                </a>
+            </li>
+
+            <li class="icon-support">
+                <a href="/pages/downloads"><img src="{{ 's-icon02.svg' | asset_url }}">
+                    <h4>Downloads</h4>
+                    <p>Download product manuals, cut sheets, software profiles + more</p>
+                    <span class="bluebold">Search Downloads</span>
+                </a>
+            </li>
+
+            <li class="icon-support">
+                <a href="/pages/warranty"><img src="{{ 's-icon03.svg' | asset_url }}">
+                    <h4>Warranty</h4>
+                    <p>Learn more about our industry-leading warranty program</p>
+                    <a href="/pages/warranty">
+                        <span class="bluebold">Learn More</span>
+                    </a>
+                </a>
+            </li>
+
+        </ul>
+
+        <div id="viewport">
+            <div id="tab-1">
+                {% include 'support' %}
+            </div>
+
+        </div>
+    </div>
+</section>

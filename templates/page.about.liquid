@@ -1,0 +1,134 @@
+<style>
+
+@media screen and (min-width: 2000px){
+  div#modal-one {
+    display: none !important;
+  }
+}
+  #wrapper {
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0;
+	width: 100%;
+    height: 120vh;
+	overflow: hidden;
+            cursor: url({{ 'drag.svg' | asset_url }}), auto;
+}
+
+  .imp-shape{
+    cursor: url({{ 'select.svg' | asset_url }}), auto;
+
+  }
+  
+  #image-map-pro-container {
+    margin: -17px -74px;
+}
+  
+  
+  .blocker {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    z-index: 1;
+    position: absolute;
+}
+
+.dragging{
+  z-index: -1 !important
+}
+  
+  @media (max-width: 500px){
+    
+      .modal-dialog {
+    width: 314px !important;
+}
+    
+    #wrapper{
+      overflow: auto;
+    }
+    
+  }
+
+  .modal-dialog {
+    background: transparent;
+    color: white;
+    text-align: center;
+    height: 190px;
+    width: 454px;
+}
+
+.modal-dialog h3 {
+    color: #b7b7b7;
+    font-size: 18px;
+}
+
+.modal-dialog h2 {
+    color: white;
+    font-size: 39px;
+    padding-bottom: 12px;
+}
+  
+  .modal-dialog p{
+    padding-bottom: 32px;}
+
+.modal:before {
+    background: rgba(0, 0, 0, 0.8);
+}
+  
+  
+  
+  
+  a.btn-close{
+    position: relative;
+   	color: white;
+	background: #0075a8 !important;
+	border-color: #0075a8;
+	padding: 10px 45px;
+	border-radius: 25px;
+	font-size: 12px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	transition: .5s;
+  }
+
+    
+	  a.btn-close:hover {
+		background: #00a3ea !important;
+	} 
+  
+</style>
+
+
+<div id="toobig">
+<div class="message">
+  <h2>View this page on a smaller screen for the best experience.</h2>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal-one" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-body">
+      <h3>Explore Blizzard Lighting</h3>
+      <h2>See what makes us tick.</h2>
+      <p>Drag to explore and click on items to learn more</p>
+            <a href="#" class="btn-close" aria-hidden="true">Begin</a>
+
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
+
+<div id="wrapper" class="dragscroll">
+	
+      
+      <div id="image-map-pro-container"></div>
+
+</div>
+
+<div class="blocker"></div>
+
+
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">

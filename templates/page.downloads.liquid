@@ -1,0 +1,22 @@
+<style>
+  .search-results .title {
+    padding-top: 10px !important;
+}
+</style>
+
+<div class="header-cover"></div>
+<section id="blacktop">
+<div class="searchbox">
+  <h1>Downloads</h1>
+  <p>Begining typing to find product downloads</p>
+      <form action="/search" method="get" id="mk-fullscreen-searchform" role="search" class="input-group search-bar">
+        <input type="hidden" name="type" value="product">
+        <input type="text" name="q" value="" placeholder="Begin typing to search" id="mk-fullscreen-search-input">
+        <i class="fa fa-search fullscreen-search-icon"><input value="" type="submit"></i>
+      </form>
+  
+  <h3>Looking for Fixture Profiles? <a href="/pages/fixture-profiles">Click here.</a></h3>
+	</div>
+</section>
+
+	{% include 'search-downloader' %}

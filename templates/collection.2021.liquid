@@ -1,0 +1,62 @@
+<div id="col-2021">
+    {% paginate collection.products by 12 %}
+
+        {% if collection.description != blank %}
+            {% include 'collections-banner' %}
+
+            <div class="section-header">
+                <div class="section-header__right">
+                    {% include 'collection-sorting' %}
+                </div>
+            </div>
+
+        {% else %}
+
+            <header class="section-header">
+                <h1 class="section-header__title section-header__left">{{ collection.title }}</h1>
+                <div class="section-header__right">
+                    {% include 'collection-sorting' %}
+                </div>
+            </header>
+
+        {% endif %}
+
+        {% include 'breadcrumb' %}
+
+        <div class="grid--rev row">
+            <!-- Sidebar -->
+            <div class="col-3 col-sidebar">
+                {% include 'collection-sidebar' %}
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-9" style="background: #ebebeb;">
+
+                <div class="container">
+                    <div class="col-grid-layout">
+                        {% for product in collection.products %}
+                            {% for variant in product.variants %}
+                                {% if variant.available %}
+                                    {% include '2021-grid-item' %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+                {% if paginate.pages > 1 %}
+
+                    <hr>
+                    <div class="pagination">
+                        {{ paginate | default_pagination | replace: '&laquo; Previous', '&larr;' | replace: 'Next &raquo;', '&rarr;' }}
+                    </div>
+
+                {% endif %}
+
+            </div>
+        </div>
+
+    {% endpaginate %}
+</div>

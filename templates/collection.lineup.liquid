@@ -1,0 +1,132 @@
+{% include 'sticky-contact' %}
+
+
+<div class="hero-crop">
+    <div class="hero-np" id="hero-how" style="background-image: url({{ settings.iris-background | img_url: 'master' }})">
+        <div class="iris-landing-overlay"></div>
+        <div class="flex-container">
+            <div class="np-text-container col-container">
+
+                <div class="col-content">
+                    <img src="{{ settings.iris-logo | img_url: 'master' }}" alt="{{collection.title}}"/>
+                    <h1>{{collection.title}}</h1>
+                    <h2>
+                        <span>{{settings.iris-subheadline}}</span>
+                    </h2>
+                    <a class="btn btn-blue full-link" href="#section-1">Explore the Line</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product-carousel">
+
+    <div class="blurred"></div>
+
+    <div class="center" >
+
+        {% for product in collections.iris.products %}
+
+
+            <div class="item-c">
+                <div class="container">
+                    <img style="mix-blend-mode: multiply" src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}"/>
+                    <h3>{{ product.title }}</h3>
+                    <p>{{ product.metafields.c_f.Product_Subtitle }}</p>
+                    <div class="carousel-button">
+                        <a class="btn btn-blue" href="{{ product.url }}">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+
+        {% endfor %}
+
+
+    </div>
+    <!-- 	<a class="btn btn-blue cnt" href="/">All Product</a> -->
+
+</div>
+
+
+<div class="hero-mosaic-slider">
+
+    <a data-fancybox="gallery" href="{{ product.images[4].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[5].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[6].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[7].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[8].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"></a>
+</div>
+
+
+<div class="three-points">
+    <div class="point-container np-three-points">
+        <div class="point">
+            {{ settings.selling-point-1 }}
+        </div>
+        <div class="point">
+            {{ settings.selling-point-2 }}
+        </div>
+        <div class="point">
+            {{ settings.selling-point-3 }}
+        </div>
+    </div>
+</div>
+
+<div class="nova">
+    <img alt="Novastar" src="https://iris.video/wp-content/uploads/2020/03/Artboard-3-768x143.png"/>
+
+    <strong>
+        <p>#1 Distributor of NovaStar in the U.S.</p>
+    </strong>
+    <p>All IRiS Panels are Fully-Compatible with NovaStar</p>
+    <img alt="Novastar Cred" src="https://iris.video/wp-content/uploads/2020/03/credentials-768x131.png"/>
+</div>
+
+<div id="section-1">
+    <div class="col-container-alt-2">
+        {% for product in collections['iris-landing-page'].products limit: 100 %}
+            <div class="flex-container flex-container-alt">
+                <div class="{% cycle 'featuredimg img-sm', 'featuredimg leftimg img-hor img-sm' %}">
+                    <img src="{{ product.images[0].src | img_url: 'master' }}">
+                </div>
+                <div class="{% cycle 'featuredr', 'featuredr rightdr' %}">
+
+                    <h2>{{ product.title }}</h2>
+                    {% if product.metafields.c_f.Section_1_Description %}
+                        <p>{{ product.metafields.c_f.Section_1_Description }}</p>
+                    {% endif %}
+                    <a class="btn btn-blue full-link" href="{{product.url}}">Learn More</a>
+                    {% if product.title contains 'InSite' %}
+                        {% else %}
+                            <a class="btn btn-otl" href="https://builder.iris.video">Build a Quote</a>
+                    {% endif %}
+
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+<div class="nova" style="text-align: left">
+
+    <div class="two-col-iris">
+        <img src="https://iris.video/wp-content/uploads/2020/03/Annotation-2020-03-20-135724-1-1024x706.png"/>
+        <div class="calc-info">
+            <h2>Start Your Project Today</h2>
+            <p>Use our free, online quote builder to start your project today. Instantly receive a cost estimate, plus a breakdown of the video wall specifications and accessories you’d need.
+            </p>
+            <a class="btn btn-blue" href="https://builder.iris.video/">Start a Quote Today</a>
+        </div>
+    </div>
+
+    <div class="cs-banner">
+        <h2>See how it all comes together</h2>
+        <a class="btn btn-black" href="https://www.blizzardpro.com/pages/news">Read IRiS Case Studies</a>
+    </div>
+</div>
+
+
+{% include 'cfhs-main' %}

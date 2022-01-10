@@ -1,0 +1,276 @@
+<!-- Hero How -->
+
+
+<section id="hero">
+
+{% include 'rotator-how' %}
+
+
+</section>
+
+
+<div class="product-carousel">
+
+	<div class="blurred"></div>
+
+	<div class="center" >
+
+      {% for product in collections.how-landing-page-lineup.products %}
+
+
+
+
+		<div class="item-c">
+			<div class="container">
+                <img src="{{ product | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
+				<h3>{{ product.title }}</h3>
+				<p>{{ product.metafields.c_f.Product_Subtitle }}</p>
+				<div class="carousel-button"><a class="btn btn-blue" href="{{ product.url }}">Learn More</a>
+              </div>
+			</div>
+		</div>
+
+
+
+      {% endfor %}
+
+
+	</div>
+<!-- 	<a class="btn btn-blue cnt" href="/">All Product</a> -->
+
+</div></section>
+
+
+
+<!-- {% if settings.hero-how-chooser == 'image' %}
+<div
+  id="hero-how"
+  style="background-image: url({{ settings.hero-how-background | img_url: 'master' }})"
+>
+<div class="overlay"></div>
+  <div class="text-container">
+    <h1>{{ settings.hero-how-h1 }}</h1>
+    <p>{{ settings.hero-how-p }}</p>
+    <a href="{{ settings.hero-how-cta-url }}" class="btn btn-blue full-link"
+      >{{ settings.hero-how-cta-title }}</a
+    >
+  </div>
+   {% include 'cutaway' %}
+</div>
+{% endif %} {% if settings.hero-how-chooser == 'video' %}
+<div id="hero-how">
+  <div class="yt-wrapper">
+    <div class="overlay"></div>
+    <div class="yt-render">
+      <div class="videoWrapper">
+        <iframe
+          title="Blizzard Preview"
+          src="https://youtube.com/embed/{{settings.hero-how-video-id}}?autoplay=1&mute=1&controls=0&showinfo=0&autohide=1"
+          width="640"
+          height="360"
+          frameborder="0"
+          webkitallowfullscreen
+          mozallowfullscreen
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="text-container">
+    <h1>{{ settings.hero-how-h1 }}</h1>
+    <p>{{ settings.hero-how-p }}</p>
+    <a href="{{ settings.hero-how-cta-url }}" class="btn btn-blue full-link"
+      >{{ settings.hero-how-cta-title }}</a
+    >
+  </div>
+</div>
+{% endif %} -->
+<!-- Mosaic -->
+
+<!-- <div class="hero-mosaic-slider">
+
+    <div data-fancy="gallery" href="{{ settings.mosaic-box-1 | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ settings.mosaic-box-1 | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ settings.mosaic-box-2 | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ settings.mosaic-box-2 | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ settings.mosaic-box-3 | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ settings.mosaic-box-3 | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ settings.mosaic-box-4 | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ settings.mosaic-box-4 | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ settings.mosaic-box-5 | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ settings.mosaic-box-5 | img_url: 'master' }} )"></div>
+
+</div> -->
+
+<!--
+<div class="hero-mosaic how-mosaic">
+  <!-- {% include 'flake' %} -->
+
+<!--   <div class="mosaic-container">
+    <div
+      class="a box"
+      style="background-image: url( {{ settings.mosaic-box-1 | img_url: 'master' }} )"
+    ></div>
+    <div
+      class="b box"
+      style="background-image: url( {{ settings.mosaic-box-2 | img_url: 'master' }} )"
+    ></div>
+    <div
+      class="c box"
+      style="background-image: url( {{ settings.mosaic-box-3 | img_url: 'master' }} )"
+    ></div>
+    <div
+      class="d box"
+      style="background-image: url( {{ settings.mosaic-box-4 | img_url: 'master' }} )"
+    ></div>
+    <div
+      class="e box"
+      style="background-image: url( {{ settings.mosaic-box-5 | img_url: 'master' }} )"
+    ></div>
+  </div>
+</div> --> -->
+
+<!-- Two Col Blog Right -->
+<div id="{{setting}}" class="two-col-blog">
+  <div class="flex-container right-text">
+    <div class="left">
+      <h2>{{ settings.how-blog-title }}</h2>
+      <p>{{ settings.how-blog-excerpt }}</p>
+      <a href="{{ settings.how-blog-button-url }}" class="btn btn-blue"
+        >{{ settings.how-blog-button-title }}</a
+      >
+    </div>
+    <div class="right">
+      <img
+        src="{{ settings.how-blog-image | img_url: 'master' }}"
+        alt="Case Study"
+      />
+      <div class="caption">{{ settings.how-blog-pullquote }}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Hero Text Feature -->
+<div
+  class="hero-text-feature"
+  style="background-image: url({{ settings.how-tf-image | img_url: 'master' }})"
+>
+  <div class="caption-container">
+    <h3>{{ settings.how-tf-subtitle }}</h3>
+    <h2>{{ settings.how-tf-title }}</h2>
+    <p>{{ settings.how-tf-p }}</p>
+  </div>
+</div>
+
+<!-- Hero Simple Right Image -->
+
+{% assign product1 = all_products[settings.how-prod-1] %}
+
+<div class="hero-simple">
+  <div class="flex-container reverse">
+    <div class="left">
+      <h3>{{ product1.title }}</h3>
+      <h2>{{ product1.metafields.c_f.Landing_Page_Copy }}</h2>
+      <a href="{{ product1.url }}" class="btn btn-blue"
+        >Learn More</a
+      >
+    </div>
+    <div class="right">
+      <img
+        src="{{ product1.images[0].src | img_url: 'master' }}"
+        alt="{{ product1.title }}"
+      />
+
+    </div>
+  </div>
+</div>
+
+<div class="product-block-slider">
+
+    <div data-fancy="gallery" href="{{ product1.images[3].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product1.images[3].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product1.images[4].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product1.images[4].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product1.images[5].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product1.images[5].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product1.images[6].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product1.images[6].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product1.images[7].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product1.images[7].src | img_url: 'master' }} )"></div>
+
+</div>
+
+
+
+<!-- Two Col Case Studies Left -->
+<div  class="two-col-blog">
+
+  <div class="flex-container left-text">
+    <div class="left">
+      <h2>{{ settings.how-cs-title }}</h2>
+      <p>{{ settings.how-cs-excerpt }}</p>
+      <a style="margin-bottom: 20px" href="{{ settings.how-cs-button-url }}" class="btn btn-blue"
+        >{{ settings.how-cs-button-title }}</a
+      >
+    </div>
+    <div class="right">
+      <img
+        src="{{ settings.how-cs-image | img_url: 'master' }}"
+        alt="Case Study"
+      />
+      <div class="caption">{{ settings.how-cs-pullquote }}</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Hero Simple Right Image -->
+
+{% assign product3 = all_products[settings.how-prod-3] %}
+
+<div class="hero-simple">
+  <div class="flex-container reverse">
+    <div class="left">
+      <h3>{{ product3.title }}</h3>
+      <h2>{{ product3.metafields.c_f.Landing_Page_Copy }}</h2>
+      <a href="{{ product3.url }}" class="btn btn-blue"
+        >Learn More</a
+      >
+    </div>
+    <div class="right">
+      <img
+        src="{{ product3.images[0].src | img_url: 'master' }}"
+        alt="{{ product3.title }}"
+      />
+
+    </div>
+  </div>
+</div>
+
+<div class="product-block-slider">
+
+    <div data-fancy="gallery" href="{{ product3.images[3].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product3.images[3].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product3.images[4].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product3.images[4].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product3.images[5].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product3.images[5].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product3.images[6].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product3.images[6].src | img_url: 'master' }} )"></div>
+    <div data-fancy="gallery" href="{{ product3.images[7].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product3.images[7].src | img_url: 'master' }} )"></div>
+
+</div>
+
+
+
+
+
+
+<!-- Recommend Collection -->
+<div class="recommended">
+  <h2>You May Also Like</h2>
+  {% if settings.how-recommended != blank %} {% if
+  collections[settings.how-recommended].products_count != 0 %}
+  <div class="grid-container">
+    {% for product in collections[settings.how-recommended].products limit: 8 %}
+    <div class="recommended-item">
+      <img
+        src="{{ product.featured_image | img_url: 'master' }}"
+        alt="{{ product.title }}"
+      />
+      <div class="info">
+        <h3>{{ product.title }}</h3>
+        <a href="{{ product.url }}" class="btn btn-blue">View</a>
+      </div>
+    </div>
+    {% endfor %} {% endif %} {% endif %}
+  </div>
+</div>
+
+{% include 'cfhs-how' %}

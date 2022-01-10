@@ -1,0 +1,201 @@
+<div class="download-tab">
+
+  <div class="flex-container">
+    {% if product.title == 'Eclipse DMX™' %}
+    <a target="_blank" href="https://firebasestorage.googleapis.com/v0/b/dealerportal-2fb18.appspot.com/o/EclipseDMX%20Setup-62020.exe?alt=media&token=055007e8-cd32-42fa-8e5f-9d76d98ccdea">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>EclipseDMX-Setup-62020.exe</h3>
+        <a  class="btn btn-blue" target="_blank" href="https://firebasestorage.googleapis.com/v0/b/dealerportal-2fb18.appspot.com/o/EclipseDMX%20Setup-62020.exe?alt=media&token=055007e8-cd32-42fa-8e5f-9d76d98ccdea">
+          Download</a>
+
+      </li></a>
+    {% endif %}
+
+    {% if product.title contains 'Lucid' %}
+    <a target="_blank" href="https://firebasestorage.googleapis.com/v0/b/dealerportal-2fb18.appspot.com/o/Lucid%202021.zip?alt=media&token=a3c0b350-bb24-42b2-9935-66cacad02961">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>Lucid.zip</h3>
+        <a  class="btn btn-blue" target="_blank" href="https://firebasestorage.googleapis.com/v0/b/dealerportal-2fb18.appspot.com/o/Lucid%202021.zip?alt=media&token=a3c0b350-bb24-42b2-9935-66cacad02961">
+          Download</a>
+
+      </li></a>
+    {% endif %}
+
+    {% if product.tags contains 'photometric' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_photometric-cutsheet.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>Photometric Cutsheet</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_photometric-cutsheet.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_photometric-cutsheet.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'cutting' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_ribboncutting.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'cutting.svg' | asset_url }}">
+        <h3>Ribbon Cutting Instructions</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_ribboncutting.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_ribboncutting.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'remote' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_remote.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'remote.svg' | asset_url }}">
+        <h3>Remote</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_remote.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_remote.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'colors and gobos' %}
+    <a  target="_blank" href="{{ product.url | remove: "/products/" | append: '_colors_gobos.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'colorsandgobos.svg' | asset_url }}">
+        <h3>Colors & Gobos</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_colors_gobos.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_colors_gobos.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+    {% if product.tags contains 'acc_info' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_accessories.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'accessories.svg' | asset_url }}">
+        <h3>Accessories</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_accessories.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_accessories.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'datasheet' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_safety_datasheet.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>Datasheet</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_safety_datasheet.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_safety_datasheet.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'fixturelibrary' %}
+    <a  target="_blank" href="{{ product.url | remove: "/products/" | append: '_fixturelibrary.zip' | file_url }}">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>Fixture Library</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_fixturelibrary.zip' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_fixturelibrary.zip' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'firmware' %}
+    <a  target="_blank" href="{{ product.url | remove: "/products/" | append: '_firmware.zip' | file_url }}">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>Firmware</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_firmware.zip' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_firmware.zip' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'amp-cutsheet' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_amp-cutsheet.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>Amp Cutsheet</h3>
+        <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_amp-cutsheet.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_amp-cutsheet.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'cutsheet' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_cutsheet.pdf' | file_url }}">
+      <li>
+        <img src="{{ 'cutsheet.png' | asset_url }}">
+        <h3>Cutsheet</h3>
+        <a class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_cutsheet.pdf' | file_url }}">
+          Download</a>
+        <p>{{ product.url | remove: "/products/" | append: '_cutsheet.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'rev a' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_a.pdf' | file_url }}"><li>
+      <img src="{{ 'manual.png' | asset_url }}">
+      <h3>Manual Rev A</h3>
+      <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_a.pdf' | file_url }}">Download</a>
+      <p>{{ product.url | remove: "/products/" | append: '_manual_rev_a.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'rev b' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_b.pdf' | file_url }}"><li>
+      <img src="{{ 'manual.png' | asset_url }}">
+      <h3>Manual Rev B</h3>
+      <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_b.pdf' | file_url }}">Download</a>
+      <p>{{ product.url | remove: "/products/" | append: '_manual_rev_b.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+
+    {% if product.tags contains 'rev c' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_c.pdf' | file_url }}"><li>
+      <img src="{{ 'manual.png' | asset_url }}">
+      <h3>Manual Rev C</h3>
+      <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_c.pdf' | file_url }}">Download</a>
+      <p>{{ product.url | remove: "/products/" | append: '_manual_rev_c.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+    {% if product.tags contains 'rev d' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_d.pdf' | file_url }}"><li>
+      <img src="{{ 'manual.png' | asset_url }}">
+      <h3>Manual Rev D</h3>
+      <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_d.pdf' | file_url }}">Download</a>
+      <p>{{ product.url | remove: "/products/" | append: '_manual_rev_d.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+    {% if product.tags contains 'rev e' %}
+    <a target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' | file_url }}"><li>
+      <img src="{{ 'manual.png' | asset_url }}">
+      <h3>Manual Rev E</h3>
+      <a  class="btn btn-blue" target="_blank" href="{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' | file_url }}">Download</a>
+      <p>{{ product.url | remove: "/products/" | append: '_manual_rev_e.pdf' }}</p>
+      </li></a>
+    {% endif %}
+
+    {% if product.tags contains 'novastar cat' %}
+    <a target="_blank" href="https://drive.google.com/uc?export=download&id=1gekq7-eyBsNDFcorzRSaA78eqoUtmKIn"><li>
+      <h3>2018 NovaStar<br>Catalog</h3>
+      <a  class="btn btn-blue" target="_blank" href="https://drive.google.com/uc?export=download&id=1gekq7-eyBsNDFcorzRSaA78eqoUtmKIn">Download</a>
+      <p>2018 NovaStar™ Catalog (PowerPoint)</p>
+      </li></a>
+    {% endif %}
+  </div>
+</div>
+</div>

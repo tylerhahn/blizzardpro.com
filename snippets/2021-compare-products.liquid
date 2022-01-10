@@ -1,0 +1,91 @@
+{% if product.title == 'Aria™ Profile WW' %}
+<div class="row-flex">
+    <div class="col-key" id="compare-spec-key">
+    </div>
+    <div id="compare-products" class="col-value">
+    </div>
+  </div>
+{% endif %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+let compareKeys = [];
+let productMetafields = [];
+
+axios.post('https://api.blizzard.lighting/shopify-get-product-by-tag', {tag: '{{product.metafields.f_b.Compared_Tag | strip }}'}).then(res => {
+
+  const products =res.data.products.edges
+  const currentProduct = '{{product.title}}';
+
+
+  //loop through products in the collection
+  _.map(products, (fixture, index) => {
+
+    const metafields = fixture.node.metafields.edges;
+    const maxPrice = fixture.node.priceRangeV2.maxVariantPrice.amount;
+    let metafieldData = []
+    //organize metafields into arrays
+    _.map(metafields, (field)  => {
+
+      if(field.node.key === 'Compared_Values') {
+          console.log(field)
+
+        const comparedObj = JSON.parse(field.node.value);
+
+        _.map(comparedObj, (o, i) => {
+
+          metafieldData.push({key: o.key, value: o.value});
+
+          if(!compareKeys.includes(o.key)) {
+            compareKeys.push(o.key);
+          }
+
+          if(i == comparedObj.length - 1) {
+            productMetafields.push({price: maxPrice, url: fixture.node.onlineStoreUrl, title: fixture.node.title, image: fixture.node.featuredImage.originalSrc, metafields: metafieldData})
+          }
+
+        })
+      }
+
+    });
+
+    //Create HMTL
+    if(index === products.length - 1){
+
+      //Metafield values column
+      _.map(productMetafields, mf => {
+
+        const productName = mf.title.replace("™", "").toLowerCase();
+        const imageBox = `<div class="compare-image"><img src="${mf.image}"/></div>`
+        const priceFormat = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(mf.price)
+        const buttonBox = `<a class="btn btn-blue" href="${mf.url}">Learn More ›</a>`;
+        const infoBox = `<div class="compare-info"><div class="compare-price"><h3>${mf.title}</h3><h4>${priceFormat}<h4>${buttonBox}</div></div>`;
+        const titleBox = `<div class="compare-box white-box">${imageBox}${infoBox}</div>`;
+
+
+        $('#compare-products').append(`<div class="product ${currentProduct === mf.title ? 'active' : ""}" data-name='${productName}'>${titleBox}</div>`);
+
+        const productCol = $('#compare-products').find(`[data-name='${productName}']`);
+
+        _.map(mf.metafields, field => {
+          $(productCol.append(`<div class="compare-box compare-value">${field.value}</div>`))
+        })
+
+      })
+
+      //Label column
+      compareKeys.map((key, i) => {
+
+        if(i === 0) {
+          $('#compare-spec-key').append(`<div class="compare-box blank"></div>`);
+        }
+
+        $('#compare-spec-key').append(`<div class="compare-box">${key}</div>`);
+      })
+    }
+
+  });
+}).catch(err => console.log(err.message))
+
+</script>

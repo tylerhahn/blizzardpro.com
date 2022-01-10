@@ -1,0 +1,21 @@
+<div class="product-carousel2-attached">
+
+  <div class="flex-container" >
+    <h4 class="cables">Cable Type</h4>
+    <div class="flex-item" >
+
+      <select id="my_selection">
+        <option>Select Cable Type</option>
+{% for link in linklists.cable-types.links %}
+     <option value="{{ link.title }}" href="{{ link.url }}">{{ link.title }}</option>
+{% endfor %}
+</select>
+
+
+    </div>
+
+  </div>
+
+
+
+  </div>

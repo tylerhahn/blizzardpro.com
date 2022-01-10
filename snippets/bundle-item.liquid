@@ -1,0 +1,12 @@
+<div class="collections-item" onclick="location.href='{{ product.url }}'">
+  <img
+    class="lazy"
+    data-original="{{ product | img_url: 'grande' }}"
+    alt="{{ product.featured_image.alt | escape }}"
+  />
+  <div class="collection-content">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.metafields.c_f.Category_Subtitle }}</p>
+    <a href="{{ product.url }}" class="btn">Learn More</a>
+  </div>
+</div>

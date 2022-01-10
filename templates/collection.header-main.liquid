@@ -1,0 +1,146 @@
+<style>
+  
+  .product-carousel2
+ {margin-top: 89px;
+ }
+  
+  ul.grid.clearfix {
+    margin-top: 35px;
+  }
+  
+
+#collection-banner-container {
+    background-size: cover;
+    background-position: center;
+}
+
+div#collection-banner-container img {
+    max-width: 500px;
+    padding: 130px 0 60px 0;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+}
+
+</style>
+
+<!--- Select section and ctrl forward space -->
+
+<img src="{{collection.image.src | img_url: 'master'}}" style="
+    width: 100%;
+    padding-top: 88px;
+" alt="{{collection.title}}" />
+
+{% assign products_per_page = settings.products_per_row | times: settings.number_of_rows %}
+{% assign numbers = 'zero, one, two, three, four, five, six' | split: ',' %}
+{% assign products_per_row = settings.products_per_row | times: 1 %}
+{% assign products_per_row = numbers[products_per_row] | strip | append: '-per-row' %}
+
+{% paginate collection.products by 50 %}
+
+{% comment %}
+  Re-use the .rte class wherever you output content that was added by a merchant using
+  the Rich Text Editor ( 'rte' stands for rich text editor ).
+  Style all HTML elements in that content the same way across the board.
+  Use the .rte class in your CSS to help maintain consistency.
+  Example: the h2 element should have the same size and color in:
+  - product descriptions
+  - collection descriptions
+  - page content
+  - blog post
+{% endcomment %}
+
+	<script>
+		jQuery(window).scroll(function() {
+			var scroll = jQuery(window).scrollTop();
+
+			if (scroll >= 200) {
+				jQuery(".product-carousel2-attached").addClass("fix");
+			} else {
+				jQuery(".product-carousel2-attached").removeClass("fix");
+			}
+
+		});
+
+	</script>
+
+
+
+ <section id="studio-b-collector">
+  
+{% comment %}     <div class="infocomm2019-heading">Heading</div>
+        
+    <div class="infocomm2019-subtitle"><h3>Subheading</h3></div>
+      
+  
+<div class="infocomm2019-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    </div> {% endcomment %}
+
+  
+  
+{% comment %}
+  Listing all tags within the current collection.
+  Shopify uses product tags to manage subcategories inside collections.
+  See 'How do I create subcategories of products?' at 
+  http://bit.ly/1j1Dti4 for details.
+{% endcomment %}
+
+{% if collection.all_tags.size > 0 %}
+<ul class="subcategories clearfix clear">
+  <li class="{% unless current_tags %} active{% endunless %}">
+    {{ 'All' | link_to_remove_tag: current_tags.first }}
+  </li>
+  {% for tag in collection.all_tags %}
+  {% if current_tags contains tag %}
+  <li class="active">
+    {{ tag | link_to_remove_tag: tag }}
+  </li>
+  {% else %}
+  <li>
+    {{ tag | link_to_tag: tag }}
+  </li>
+  {% endif %}
+  {% endfor %}  
+</ul>
+{% endif %}
+
+{% if collection.description.size > 0 %}
+<div class="rte clearfix">
+  {{ collection.description }}
+</div>
+{% endif %}
+  
+
+<ul class="grid clearfix">
+{% for product in collection.products %}
+  {% include 'product-grid-item' with products_per_row %}
+{% else %}
+  <p>There are no products in this view.</p>
+{% endfor %}
+</ul>
+   
+
+
+{% if paginate.pages > 1 %}
+<div class="pagination centered">
+  {{ paginate | default_pagination }}
+</div>
+{% endif %}
+
+{% endpaginate %}
+
+{% comment %}
+  JavaScript for collection sorting.
+{% endcomment %}
+</section>
+
+
+<script>
+jQuery('.sort-by')
+  .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+  .on('change', function() {
+    Shopify.queryParams.sort_by = jQuery(this).val();
+    location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+  });
+</script>

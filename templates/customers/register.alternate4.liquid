@@ -1,0 +1,81 @@
+{% layout settings.customer_layout %}
+<div class="bump">
+<section id="blacktop">
+<div id="template">
+  <div id="customer">
+
+	  <!-- Create Customer -->
+	  <div id="create-customer" >
+           <h1>Create an Account</h1>
+	    <div class="template_header">
+	    </div>
+
+	    {% form 'create_customer' %}
+	      {{ form.errors | default_errors }}
+
+        <input id="fname" type="text" name="confirm" value="" />
+
+
+	      <div class="clearfix large_form">
+	        <label for="first_name" class="login">First Name</label>
+	        <input type="text" value="" name="customer[first_name]" id="first_name" class="large fnamer" size="30" />
+	      </div>
+
+	      <div class="clearfix large_form">
+	        <label for="last_name" id="lname-reg" class="login">Last Name</label>
+	        <input type="text" value="" name="customer[last_name]" id="last_name" class="large" size="30" />
+	      </div>
+
+	      <div class="clearfix large_form">
+	        <label for="email" class="login">Email Address</label>
+	        <input type="email" value="" name="customer[email]" id="email" class="large" size="30" />
+	      </div>
+
+	      <div class="clearfix large_form">
+	        <label for="password" class="login">Password</label>
+	        <input type="password" value="" name="customer[password]" id="password" class="large password" size="30" />
+	      </div>
+
+
+
+<input type="hidden" id="customer_tags" name="customer[tags]" value="Illuminati"/>
+
+	      <div class="action_bottom">
+
+          <!-- <div class="g-recaptcha" data-sitekey="6Lf_ZisUAAAAAH_IxGQnfhpTnAhoz3hGQQBuVjMN"></div> -->
+
+	        <input id="create-btn" data-callback="onSubmit" class="btn" type="submit"  value="Create" />
+
+	        <span class="note"><a href="/account/login">or Login</a></span>
+	      </div>
+
+        <input type="hidden" name="return_to" value="/pages/products/#welcome"/>
+
+	    {% endform %}
+	  </div><!-- /#create-customer -->
+  </div>
+  </div>
+
+
+
+
+</section>
+
+
+  <script>
+
+  var checker = document.getElementById('fname');
+  var sendbtn = document.getElementById('create-btn');
+  checker.onchange = function() {
+
+    sendbtn.disabled = !this.checked;
+  };
+
+  </script>
+
+  <style type="text/css">
+input[name="confirm"]{
+    display: none;
+}
+</style>
+</div>

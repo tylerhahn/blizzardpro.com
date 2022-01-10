@@ -1,0 +1,103 @@
+{% layout settings.customer_layout %}
+<div class="bump">
+<section id="blacktop">
+<div id="template">
+  <div id="customer">
+
+	  <!-- Create Customer -->
+	  <div id="create-customer" >
+           <h1>Create an Account</h1>
+	    <div class="template_header">
+	    </div>
+
+	    {% form 'create_customer' %}
+	      {{ form.errors | default_errors }}
+
+        <input id="fname" type="text" name="confirm" onsubmit="return validateForm()" method="post" />
+
+
+	      <div class="clearfix large_form">
+	        <label for="first_name" class="login">First Name</label>
+	        <input onchange="check_same();" type="text" value="" name="customer[first_name]" id="first_name" class="large fnamer" size="30" />
+	      </div>
+
+	      <div class="clearfix large_form">
+	        <label for="last_name" id="lname-reg" class="login">Last Name</label>
+	        <input onchange="check_same();" type="text" value="" name="customer[last_name]" id="last_name" class="large" size="30" />
+	      </div>
+
+	      <div class="clearfix large_form">
+	        <label for="email" class="login">Email Address</label>
+	        <input type="email" value="" name="customer[email]" id="email" class="large" size="30" />
+	      </div>
+
+	      <div class="clearfix large_form">
+	        <label for="password" class="login">Password</label>
+	        <input type="password" value="" name="customer[password]" id="password" class="large password" size="30" />
+	      </div>
+
+
+
+<input type="hidden" id="customer_tags" name="customer[tags]" value="Illuminati"/>
+
+	      <div class="action_bottom">
+
+	        <input id="create-btn" data-callback="onSubmit" class="btn" type="submit"  value="Create" />
+
+	        <span class="note"><a href="/account/login">or Login</a></span>
+	      </div>
+
+        <input type="hidden" name="return_to" value="/pages/products/#welcome"/>
+
+	    {% endform %}
+	  </div><!-- /#create-customer -->
+  </div>
+  </div>
+
+
+
+
+</section>
+
+
+  <script>
+
+  var checker = document.getElementById('fname');
+  var sendbtn = document.getElementById('create-btn');
+  checker.onchange = function() {
+
+    sendbtn.disabled = !this.checked;
+
+
+  };
+
+
+     function check_same(){
+
+	 var sendbtn = document.getElementById('create-btn');
+	 var first_name = document.getElementById('first_name').value;
+	 var last_name = document.getElementById('last_name').value;
+
+	 // alert('The name is: '+first_name+' '+last_name);
+
+	 if(first_name == last_name){
+	 sendbtn.disabled = true;
+     // alert('The first and last names are the same!');
+     return false;
+	 }
+
+	 else{
+     // alert('The names are the different so we now we submit!');
+     sendbtn.disabled = false;}
+	 }
+
+
+  </script>
+
+
+  <style type="text/css">
+input[name="confirm"]{
+    display: none;
+}
+</style>
+</div>

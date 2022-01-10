@@ -1,0 +1,25 @@
+<div class="rounded-qty">
+    <div class="num-in">
+        <span class="minus dis">-</span>
+        <input readonly class="in-num" value="1" min="1" max="{{variant.inventory_quantity}}" type="number" name="quantity" style="color: black"/>
+        <span class="plus dis">+</span>
+    </div>
+</div>
+
+<script>
+
+    $(".num-in span").click(function () {
+        var $input = $(this).parents(".rounded-qty").find("input.in-num");
+        var count = $input.val();
+        var newVal = 0;
+
+        if ($(this).hasClass("minus")) {
+            if (count > 1) {
+                newVal = parseFloat(count) - 1;
+            }
+        } else {
+            newVal = parseFloat(count) + 1;
+        }
+        $input.val(parseFloat(newVal));
+    });
+</script>

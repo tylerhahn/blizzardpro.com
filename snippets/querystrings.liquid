@@ -1,0 +1,206 @@
+{% if
+product.metafields.c_f.YouTube_IdNumber %}
+
+<div id="hero-how" class="hero-np">
+  <div class="yt-wrapper">
+    <div class="fade-left"></div>
+    <div class="overlay"></div>
+    <div class="yt-render">
+      <div class="videoWrapper">
+        <iframe
+          title="Blizzard Preview"
+          src="https://player.vimeo.com/video/{{product.metafields.c_f.YouTube_IdNumber}}?background=1&autoplay=1&loop=1&byline=0&title=0"
+          width="640"
+          height="360"
+          frameborder="0"
+          webkitallowfullscreen
+          mozallowfullscreen
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div class="np-featured">
+      <img
+        src="{{ product.featured_image | img_url: 'master'}}"
+        alt="{{product.title}}"
+      />
+    </div>
+    <div class="np-text-container">
+      <h1>{{ product.title }}</h1>
+      <!-- <h2>{{product.metafields.c_f.Product_Subtitle}}</h2> -->
+      <div class="pros-cons">
+
+        <div>
+          <h4>Practical Application</h4>
+          <p>{{ product.metafields.c_f.Pros }}</p>
+        </div>
+
+        <div>
+          <h4>Impractical Application</h4>
+          <p>{{ product.metafields.c_f.Cons }}</p>
+        </div>
+
+      </div>
+      <a href="{{ product.url }}" class="btn btn-blue full-link">Learn More</a>
+    </div>
+  </div>
+  {% include 'cutaway' %}
+</div>
+{% else %}
+<div
+  id="hero-how"
+  class="hero-np"
+  style="background-image: url({{ product.images[3].src | img_url: 'master' }})"
+>
+<div class="side-overlay"></div>
+<div class="flex-container">
+  <div class="np-featured">
+    <img
+      src="{{ product.featured_image | img_url: 'master'}}"
+      alt="{{product.title}}"
+    />
+  </div>
+  <div class="np-text-container">
+    <h1>{{ product.title }}</h1>
+    <!-- <h2>{{product.metafields.c_f.Product_Subtitle}}</h2> -->
+    <div class="pros-cons">
+
+      <div>
+        <h4>Practical Application</h4>
+        <p>{{ product.metafields.c_f.Pros }}</p>
+      </div>
+
+      <div>
+        <h4>Impractical Application</h4>
+        <p>{{ product.metafields.c_f.Cons }}</p>
+      </div>
+
+    </div>
+    <a href="{{ product.url }}" class="btn btn-blue full-link">Learn More</a>
+  </div>
+</div>
+{% include 'cutaway' %}
+</div>
+{% endif %}
+
+<div class="hero-mosaic how-mosaic np-mosaic">
+  <div class="mosaic-container">
+
+    <a
+      class="a box"
+        data-fancybox="gallery"
+          {% if product.images[3].alt contains 'https://www.youtube.com' %}
+          href="{{ product.images[3].alt }}" style="background-image: url( {{ product.images[3].src | img_url: 'master' }} )"
+        >
+          {% else %}
+          href="{{ product.images[4].src | img_url: 'master' }}"
+          style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"
+        >
+          {% endif %}
+
+{% if product.images[3].alt contains 'https://www.youtube.com' %}
+<i class="fas fa-play"></i>
+{% endif %}
+
+      </a>
+    <a
+      class="b box"
+        data-fancybox="gallery"
+        {% if product.images[3].alt contains 'https://www.youtube.com' %}
+        href="{{ product.images[4].src | img_url: 'master' }}" style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"
+      >
+        {% else %}
+        href="{{ product.images[5].src | img_url: 'master' }}"
+        style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"
+      >
+        {% endif %}</a>
+    <a
+      class="c box"
+        data-fancybox="gallery"
+        {% if product.images[3].alt contains 'https://www.youtube.com' %}
+        href="{{ product.images[5].src | img_url: 'master' }}" style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"
+      >
+        {% else %}
+        href="{{ product.images[6].src | img_url: 'master' }}"
+        style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"
+      >
+        {% endif %}</a>
+    <a
+      class="d box"
+        data-fancybox="gallery"
+        {% if product.images[3].alt contains 'https://www.youtube.com' %}
+        href="{{ product.images[6].src | img_url: 'master' }}" style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"
+      >
+        {% else %}
+        href="{{ product.images[7].src | img_url: 'master' }}"
+        style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"
+      >
+        {% endif %}</a>
+    <a
+      class="e box"
+        data-fancybox="gallery"
+        {% if product.images[3].alt contains 'https://www.youtube.com' %}
+        href="{{ product.images[7].src | img_url: 'master' }}" style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"
+      >
+        {% else %}
+        href="{{ product.images[8].src | img_url: 'master' }}"
+        style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"
+      >
+        {% endif %}</a>
+  </div>
+</div>
+
+<div class="hero-mosaic-slider">
+
+    <a data-fancybox="gallery" href="{{ product.images[4].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[4].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[5].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[5].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[6].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[6].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[7].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[7].src | img_url: 'master' }} )"></a>
+    <a data-fancybox="gallery" href="{{ product.images[8].src | img_url: 'master' }}" class="hero-slider-item" style="background-image: url( {{ product.images[8].src | img_url: 'master' }} )"></a>
+
+</div>
+
+<div class="three-points">
+  <div class="point-container np-three-points">
+    <div class="point">
+      {{ product.metafields.c_f.Selling_Point_1 }}
+    </div>
+    <div class="point">
+      {{ product.metafields.c_f.Selling_Point_2 }}
+    </div>
+    <div class="point">
+      {{ product.metafields.c_f.Selling_Point_3 }}
+    </div>
+  </div>
+</div>
+
+
+<div class="product-lineup">
+  {% assign currentProd = product.title %}
+
+ {% if
+  collections['new-products'].products_count > 1 %}
+    <h2>You May Also Like</h2>
+  <div class="prod-container">
+    {% for product in collections['new-products'].products limit: 4
+    %}
+    {% if product.title != currentProd %}
+    <div class="how-prod">
+      <img
+        src="{{ product.featured_image | img_url: 'master' }}"
+        alt="{{ product.title }}"
+      />
+
+      <div class="grid-link">
+        <a href="{{ product.url }}">{{product.title}}</a>
+        <a href="https://blizzardpro.com/pages/new-products?cache=false&prod={{product.handle}}">Learn More</a>
+      </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

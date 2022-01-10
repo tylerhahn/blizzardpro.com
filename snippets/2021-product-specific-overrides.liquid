@@ -1,0 +1,27 @@
+
+
+<!-- IF TAGGED WICICLE ENABLED, SHOW AT FULL / SOCIT SECTION -->
+{% if product.tags contains 'wiCICLE Enabled' or product.tags contains 'built for At Full' %}
+    {% include 'at-full-product-section' %}
+{% endif %}
+
+<!-- SOC-IT SPECIFIC SECTION -->
+{% if product.title contains 'SoC-It' %}
+    {% include 'soc-it-diagram' %}
+    {% include 'at-full-home' %}
+{% endif %}
+
+<!-- HEMISPHERE SECTION -->
+{% if product.title contains 'Hemisphere' %}
+    {% include 'at-full-home' %}
+{% endif %}
+
+<!-- IF HOW TO EXISTS -->
+{% if product.metafields.c_f.How_To %}
+    {% include 'how-to-section' %}
+{% endif %}
+
+<!-- IF TAGGED H Series, SHOW H Series Video Hero -->
+{% if product.tags contains 'H Series' %}
+    {% section 'nova-fullwidth-scroller' %}
+{% endif %}

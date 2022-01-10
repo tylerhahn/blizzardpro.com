@@ -1,0 +1,32 @@
+<meta charset="utf-8"/>
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
+
+<title>
+    {{ page_title }}
+    {% if current_tags %}
+        &ndash; tagged "{{ current_tags | join: ", " }}"
+    {% endif %}
+    {% if current_page != 1 %}
+        &ndash; Page
+        {{ current_page }}
+    {% endif %}
+    {% unless page_title contains shop.name %}
+        &ndash;
+        {{ shop.name }}
+    {% endunless %}
+</title>
+
+{% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}"/>
+{% endif %}
+
+<link rel="canonical" href="{{ canonical_url }}"/>
+<link rel="icon" type="image/png" href="{{ 'favicon.png' | asset_url }}"/>
+
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+{% include 'open-graph-tags' %}
+{% include 'twitter-card' %}
+{% if temmplate contains 'b-stock' %}
+    <meta content="noindex" name="robots"/>
+{% endif %}

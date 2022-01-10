@@ -1,0 +1,52 @@
+{% unless request.path contains '/account' %}
+    {% assign restrict_page = true %}
+{% endunless %}
+
+{% if shop.metafields.adv_reg.noFraming == 'on' %}
+    {% assign restrict_page = true %}
+{% endif %}
+
+{% if shop.metafields.adv_reg.useBlacklist == 'on' %}
+    {% assign restrict_page = false %}
+    {% assign blockPages = shop.metafields.adv_reg.blockPageUrls | split: "|" %}
+    {% for url in blockPages %}
+        {% if request.path == url %}
+            {% assign restrict_page = true %}
+        {% endif %}
+    {% endfor %}
+{% else %}
+    {% assign exceptionUrls = shop.metafields.adv_reg.lockShopExceptionUrls | split: "|" %}
+    {% for url in exceptionUrls %}
+        {% if request.path == url %}
+            {% assign restrict_page = false %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if request.path == '/challenge' %}
+    {% assign restrict_page = false %}
+{% endif %}
+
+{% if request.path == '/password' %}
+    {% assign restrict_page = false %}
+{% endif %}
+
+{% if request.path == '/account/recover' %}
+    {% assign restrict_page = false %}
+{% endif %}
+
+{% if request.path contains '/account/reset' %}
+    {% assign restrict_page = false %}
+{% endif %}
+
+{% if request.path contains '/account/activate' %}
+    {% assign restrict_page = false %}
+{% endif %}
+
+{% if request.path contains '/reset-password' %}
+    {% assign restrict_page = false %}
+{% endif %}
+
+{% if request.path contains '/customer-account-password-reset' %}
+    {% assign restrict_page = false %}
+{% endif %}

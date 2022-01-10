@@ -1,0 +1,66 @@
+<tr>
+    <td class="hide-on-small">
+        <a href="{{ collection_url }}{{ item.url }}">
+            <img src="{{ item | img_url: 'compact' }}" alt="{{ item.title | escape }}"/>
+        </a>
+    </td>
+    <td>
+        {% capture dashvariant %}
+            -
+            {{ item.variant.title }}
+        {% endcapture %}
+        <h2 class="epsilon">
+            <a href="{{ collection_url }}{{ item.url }}">
+                {{ item.title }}
+            </a>
+        </h2>
+
+        {% comment %}
+            Line Item Properties
+        {% endcomment %}
+        {% assign
+    properties_amount = item.properties | size %}
+        {% if properties_amount > 0 %}
+            <p>
+                {%- for p in item.properties
+      -%}
+                    {% if p.first contains '_io_' %}
+                        {% continue %}
+                    {% endif %}
+                    {%- unless
+      p.last == blank -%}
+
+                        <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
+                            <span data-cart-item-property-value>
+                                {%- if p.last contains "uploads" -%}
+                                    <a href="{{ p.last }}">Uploaded File</a>
+                                    {%- else -%}
+                                {%- endif -%}
+                            </span>
+                        </li>
+                    {%- endunless -%}
+                {%- endfor -%}
+                <button type="button" class="edit_cart_option btn btn--primary button" data-product_id="{{ item.product_id }}" data-key="{{ item.key }}" data-variant_id="{{ item.variant_id }}" data-quantity="{{ item.quantity }}">
+                    Edit Options
+                </button>
+            </p>
+        {% endif %}
+        {% if item.product.type != 'Product Fee' %}
+            <span class="mw-product-fees" data-id="{{ item.id }}"></span>
+        {% endif %}
+    </td>
+    <td class="hide-on-small">
+        <span class="hulkapps-cart-item-price limoniapps-discountninja-cart-item-product-price" data-limoniapps-discountninja-cart-key="{{ item.key }}" data-key="{{ item.key }}">{{ item.price | money }}</span>
+    </td>
+    <td>
+        <input type="number" name="updates[]" {% if item.product.metafields.c_f.Preorder_Date %} {% else %} max="{{ item.variant.inventory_quantity }}" {% endif %} id="updates_{{ item.id }}" class="quantity bstock-{{ item.variant.barcode }}" value="{{ item.quantity }}"/>
+    </td>
+    <td>
+        <span class="hulkapps-cart-item-line-price limoniapps-discountninja-cart-item-product-price" data-limoniapps-discountninja-cart-key="{{ item.key }}" data-key="{{ item.key }}"></span>
+    </td>
+    <td class="hide-on-small">
+        <a href="/cart/change?line={{ forloop.index }}&quantity=0">
+            <i class="far fa-trash-alt" style="color: #e47c7c"></i>
+        </a>
+    </td>
+</tr>

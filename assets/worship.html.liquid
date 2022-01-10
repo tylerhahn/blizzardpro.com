@@ -1,0 +1,23 @@
+<div class="flex-container">
+  
+  <div class="column60">
+    <img src="{{ 'pro-feature.png' | asset_url }}">
+  </div>
+  
+    <div class="column40">
+      <img src="{{ 'icon-05b.svg' | asset_url }}">
+    <h3>Worship</h3>
+    <h2>Worship Headline</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id auctor orci. Nam a nisl vitae nibh iaculis consectetur. </p>
+  </div>
+  
+</div>
+
+<section id="recommended">
+  
+  <h2>Recommended for <span class="underline">Pros</span></h2>
+  
+    {% include 'collection.liquid' with products_per_row %}
+
+  
+</section>
