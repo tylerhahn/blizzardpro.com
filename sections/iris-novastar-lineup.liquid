@@ -1,0 +1,137 @@
+<div class="iris-lp-collection">
+    <div class="grid-container">
+        {% for product in collections[section.settings.collection].products limit: section.settings.products_shown  %}
+            <div class="lp-collection-product">
+                <img src="{{ product.featured_image | img_url: 'master' }}" alt="  {{ product.title }}">
+                <div class="lp-collection-textbox">
+                    <h3>
+                        {{ product.title }}
+                    </h3>
+                    <h5>{{ product.metafields.f_b.Category_Subtitle | strip_html }}</h5>
+                    <a href="{{ product.url }}">View ></a>
+                </div>
+
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .iris-lp-collection .grid-container {
+    grid-template-columns: repeat({{section.settings.products_shown}}, 1fr);
+}
+
+.lp-collection-product img {
+    max-height: 175;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.lp-collection-product {
+    display: flex;
+    flex-wrap: wrap;
+    background: {{ section.settings.background_color }};
+    padding: 70px;
+    align-items: center;
+}
+
+.lp-collection-textbox {
+    margin: 0 auto;
+    min-height: 120px;
+    text-align: center;
+}
+
+.lp-collection-textbox h3 {
+    color: {{ section.settings.product_title_color }};
+    margin: 0;
+    padding-bottom: 0.4em;
+}
+
+.lp-collection-textbox h5 {
+    color: {{ section.settings.subtitle_color }};
+    margin: 0;
+}
+
+.lp-collection-textbox a {
+    color: {{ section.settings.cta_color }};
+    border-bottom: 1px solid;
+    font-family: 'din-condensed';
+    text-transform: uppercase;
+}
+
+    .lp-collection-product:nth-child(2) {
+  filter: brightness(0.9);
+}
+.lp-collection-product:nth-child(3) {
+  filter: brightness(0.8);
+}
+.lp-collection-product:nth-child(4) {
+  filter: brightness(0.7);
+}
+.lp-collection-product:nth-child(5) {
+  filter: brightness(0.6);
+}
+.lp-collection-product:nth-child(6) {
+  filter: brightness(0.5);
+}
+
+
+
+</style>
+
+
+{% schema %}
+
+{
+    "name": "Product Grid",
+    "settings": [
+        {
+            "type": "header",
+            "content": "grids"
+        },
+        {
+         "type": "collection",
+         "id": "collection" ,
+         "label": "Collection"
+        },
+        {
+         "type": "number",
+         "id": "products_shown" ,
+         "label": "Products shown"
+        },
+        {
+         "type": "color",
+         "id": "background_color" ,
+         "label": "Background color"
+        },
+        {
+         "type": "color",
+         "id": "product_title_color" ,
+         "label": "Product title color"
+        },
+        {
+         "type": "color",
+         "id": "subtitle_color" ,
+         "label": "Subtitle color"
+        },
+        {
+         "type": "color",
+         "id": "cta_color" ,
+         "label": "Cta color"
+        },
+        {
+         "type": "text",
+         "id": "cta_title" ,
+         "label": "Cta title"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Grid",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}

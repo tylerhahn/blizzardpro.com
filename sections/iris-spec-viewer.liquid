@@ -1,12 +1,11 @@
 <div class="mw-1920" id="iris-spec">
-
     <div class="flex-container">
         <div class="panel-viewer">
             <!-- Sidebar -->
             <div class="side-bar-panels">
                 {% for block in section.blocks %}
                     {% if block.settings.image != blank %}
-                        <div data-panel-icon="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="side-bar-item panel-attr {% if forloop.first %}active{% endif %}">
+                        <div class="side-bar-item">
                             <img onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}')" class="panel-image" src="{{block.settings.image | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
                             <h4>{{ block.settings.panel_name }}
                             </h4>
@@ -34,11 +33,12 @@
                     {% assign id = block.settings[setting] %}
                     {% assign title = setting | replace: '_', ' '  %}
                     {% if title != 'image' %}
-                        {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id %}
+                        {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
                     {% endif %}
                 {% endfor %}
             </ul>
         {% endfor %}
+
 
     </div>
 </div>
@@ -49,20 +49,15 @@
       const specBlocks = document.querySelectorAll('.panel-attr');
       Array.from(specBlocks).forEach((element, index) => {
          $(element).removeClass('visible');
-         $(element).removeClass('active');
       });
 
     $(`ul[data-panel=${id}]`).addClass('visible');
     $(`img[data-panel=${id}]`).addClass('visible');
     $(`div[data-panel=${id}]`).addClass('visible');
-    $(`div[data-panel-icon=${id}]`).addClass('active');
     }
 </script>
 
 <style>
-.side-bar-item.active{
-   background-color: {{ section.settings.large_text_color }};
-}
 .side-bar-item {
     text-align: center;
     cursor: zoom-in;
@@ -103,7 +98,6 @@
 }
 #active-panel img {
    max-width: 60vh;
-   margin-left: 2em;
    margin: 0 auto;
     position: relative;
 }
@@ -165,7 +159,6 @@
 }
 
     .spec {
-    color: {{ section.settings.text_color }};
     display: flex;
     justify-content: space-between;
     min-width: 300px;
@@ -184,9 +177,8 @@
 
 #iris-spec .flex-container {
    max-width: 1790px;
-   margin: 0 auto;
-   justify-content: space-between;
-   align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 
@@ -197,12 +189,10 @@
     "name":"Panels",
     "max_blocks":10,
     "settings":[
-
        {
           "type":"header",
           "content":"Boxes"
        },
-
        {
         "type":"color",
         "id":"background_color_1",
@@ -218,27 +208,31 @@
 {
  "type": "color",
  "id": "spec_color_1" ,
- "label": "Spec color 1"
+ "label": "Spec Background color 1"
 },
 {
  "type": "color",
  "id": "spec_color_2" ,
- "label": "Spec color 2"
+ "label": "Spec Background color 2"
+},
+
+{
+ "type": "color",
+ "id": "spec_color_data" ,
+ "label": "Spec color"
 },
 {
  "type": "color",
- "id": "text_color" ,
- "label": "Text color"
+ "id": "spec_title_color" ,
+ "label": "Spec title color"
 },
 {
  "type": "color",
  "id": "large_text_color" ,
  "label": "Large text color"
-},
-
+}
     ],
     "blocks":[
-
        {
           "type":"image",
           "name":"Panel",

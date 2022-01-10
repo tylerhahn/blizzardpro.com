@@ -7,6 +7,11 @@
         "series_image": "shopify:\/\/shop_images\/gtseries-header.png"
       }
     },
+    "otherProds": {
+      "type": "iris-novastar-lineup",
+      "settings": {
+      }
+    },
     "icons": {
       "type": "iris-icons",
       "blocks": {
@@ -169,7 +174,6 @@
         "background_color_2": "#303030",
         "spec_color_1": "#131313",
         "spec_color_2": "#181818",
-        "text_color": "#b3b3b3",
         "large_text_color": "#11c685"
       }
     },
@@ -235,16 +239,6 @@
       "settings": {
       }
     },
-    "scroller": {
-      "type": "fullwidth-scroller",
-      "settings": {
-        "video_url": "",
-        "headline": "",
-        "subheadline": "",
-        "cta_title": "",
-        "cta_url": ""
-      }
-    },
     "form": {
       "type": "iris-lg-form",
       "settings": {
@@ -265,7 +259,7 @@
     "spec-viewer",
     "banner-1",
     "banner-2",
-    "scroller",
+    "otherProds",
     "form"
   ]
 }
