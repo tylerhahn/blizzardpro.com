@@ -105,18 +105,13 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 
+   ul.block-specs.visible {column-count: 2; width: 100%;}
 
-   .side-bar-panels {
-   grid-template-columns: repeat(2, 1fr);
+   #active-panel {
+      flex: 1;
    }
-
-   #active-panel img {
-   width: 100%;
-   }
-
-   ul.block-specs.visible {column-count: 1;width: 100%;}
 
 }
 .block-specs h2 {
@@ -154,6 +149,7 @@
    color: white;
    border-bottom: 1px solid;
 }
+
 .side-bar-item img {
    opacity: 0.6;
 }
@@ -213,12 +209,12 @@
 
 
 #active-panel {
-   flex: 1;
    position: relative;
 }
 
 #active-panel img {
    max-width: 60vh;
+   width: 100%;
    margin: 0 auto;
     position: relative;
 }
@@ -258,7 +254,7 @@
 
 
     ul.block-specs.visible {
-      column-count: 2;
+      column-count: 1;
 
     }
 

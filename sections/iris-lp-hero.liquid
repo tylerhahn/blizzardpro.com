@@ -1,4 +1,4 @@
-<div class="iris-lp-hero">
+<div class="iris-lp-hero mw-1920">
     <div class="iris-series-logo">
         <img src="{{ section.settings.series_image | img_url: 'master' }}" alt="">
     </div>
@@ -9,37 +9,42 @@
 
 <style>
 
-    @media screen and (max-width: 768px) {
-        .iris-series-logo {
-            left: 1em;
-            top: 1em;
-        }
-    }
-    .iris-lp-hero{
-        position: relative;
-    }
-    .iris-lp-hero .flex-container {
-        align-items: center;
-        width: 95%;
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 4em 0;
-    }
+.iris-series-logo {
+  left: 1em;
+  top: 1em;
+}
 
-    .iris-series-logo {
-        position: absolute;
-        left: 7em;
-        top: 7em;
-        width: 40%;
-    }
+.iris-series-logo {
+  position: absolute;
+  width: 40%;
+}
 
-    .iris-series-logo img{
-        max-width: 100%;
-    }
+.iris-series-logo img {
+  max-width: 100%;
+}
 
-    .image-container-right img {
-        max-height: 980px;
-    }
+.image-container-right img {
+  max-height: 980px;
+}
+
+.iris-lp-hero {
+  position: relative;
+}
+.iris-lp-hero .flex-container {
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 4em 0;
+}
+
+@media screen and (min-width: 768px) {
+  .iris-series-logo {
+    left: 7em;
+    top: 7em;
+  }
+}
+
 
 </style>
 
