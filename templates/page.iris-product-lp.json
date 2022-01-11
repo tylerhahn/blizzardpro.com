@@ -185,6 +185,10 @@
             "zoom_image": "",
             "title": "",
             "copy": "",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
             "title_color": "#010101",
             "copy_color": "#ffffff"
           }
@@ -197,6 +201,10 @@
             "zoom_image": "",
             "title": "Sedan or Coupé",
             "copy": "Combine 500mm GT3™ & 1m GT3™ XL in the same display for ultimate flexibility.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
             "title_color": "#ffffff",
             "copy_color": "#ffd8d8"
           }
@@ -209,6 +217,10 @@
             "zoom_image": "",
             "title": "...Like It's on Rails",
             "copy": "Form perfectly linear or curved displays (±10°) with the GT  Series' two-step locking system.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
             "title_color": "#ffffff",
             "copy_color": "#201201"
           }
@@ -221,6 +233,10 @@
             "zoom_image": "",
             "title": "Lock Em' Up",
             "copy": "Ingenious one-arm locking paddle makes setup a snap--even while you're driving solo.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
             "title_color": "#ffffff",
             "copy_color": "#004250"
           }
@@ -242,7 +258,13 @@
     },
     "small-form": {
       "type": "dynamic-shopify-form",
-      "settings": {}
+      "settings": {
+        "form_text": "Download the <br>GT™ Series Cutsheet",
+        "background_color": "#000000",
+        "text_color": "#a9dddd",
+        "button_color": "#000000",
+        "hs_value": "GT Series"
+      }
     },
     "otherProds": {
       "type": "iris-novastar-lineup",
@@ -262,6 +284,7 @@
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
         "form_title": "Test Drive Today",
         "background_color": "#c83923",
+        "background_image": "shopify:\/\/shop_images\/contact-form.jpg",
         "input_background": "#fdf8f7",
         "input_border": "#f28c7d",
         "label_color": "#fdbbb2",
