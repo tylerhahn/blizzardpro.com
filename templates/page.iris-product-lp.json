@@ -114,7 +114,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/iris-gt3-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-gt3.png",
+            "image_featured": "shopify:\/\/shop_images\/gt3-rear.png",
             "panel_name": "IRiS® GT3",
             "pixel_pitch": "3.9",
             "module_resolution": "64x128",
