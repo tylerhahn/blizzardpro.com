@@ -204,7 +204,7 @@
             "cta": "",
             "cta_url": "",
             "cta_color": "",
-            "text_alignment": "center",
+            "text_alignment": "left",
             "title_color": "#ffffff",
             "copy_color": "#ffd8d8"
           }
@@ -213,6 +213,7 @@
           "type": "image",
           "settings": {
             "right_aligned": false,
+            "margin": 30,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-2.jpg",
             "zoom_image": "",
             "title": "...Like It's on Rails",
@@ -220,7 +221,7 @@
             "cta": "",
             "cta_url": "",
             "cta_color": "",
-            "text_alignment": "center",
+            "text_alignment": "left",
             "title_color": "#ffffff",
             "copy_color": "#201201"
           }
@@ -229,6 +230,7 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
+            "margin": 30,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-3.jpg",
             "zoom_image": "",
             "title": "Lock Em' Up",
@@ -236,7 +238,7 @@
             "cta": "",
             "cta_url": "",
             "cta_color": "",
-            "text_alignment": "center",
+            "text_alignment": "left",
             "title_color": "#ffffff",
             "copy_color": "#004250"
           }
@@ -251,11 +253,6 @@
       "settings": {
       }
     },
-    "banner-2": {
-      "type": "lp-banner",
-      "settings": {
-      }
-    },
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
@@ -264,6 +261,32 @@
         "text_color": "#a9dddd",
         "button_color": "#000000",
         "hs_value": "GT Series"
+      }
+    },
+    "banner-2": {
+      "type": "lp-banner",
+      "blocks": {
+        "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "image": "shopify:\/\/shop_images\/warranty-case.jpg",
+            "zoom_image": "",
+            "title": "No Fears for 7 Years",
+            "copy": "7 years or 2,500 shows, whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya.",
+            "cta": "Learn More ›",
+            "cta_url": "\/pages\/icon-warranty",
+            "cta_color": "#00d8ff",
+            "text_alignment": "left",
+            "title_color": "#a9dddd",
+            "copy_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6"
+      ],
+      "settings": {
       }
     },
     "otherProds": {
@@ -298,8 +321,8 @@
     "icons",
     "spec-viewer",
     "banner-1",
-    "banner-2",
     "small-form",
+    "banner-2",
     "otherProds",
     "form"
   ]
