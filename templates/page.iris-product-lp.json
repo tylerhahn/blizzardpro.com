@@ -281,10 +281,27 @@
             "title_color": "#a9dddd",
             "copy_color": "#ffffff"
           }
+        },
+        "34d51cb8-20d7-4650-8ea8-c2406d031382": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "image": "shopify:\/\/shop_images\/gt-calc.jpg",
+            "zoom_image": "",
+            "title": "Big Screens<br> Big Dreams",
+            "copy": "Start planning your next video wall project today.",
+            "cta": "Get Started ›",
+            "cta_url": "\/pages\/iris-quote-builder",
+            "cta_color": "#ffffff",
+            "text_alignment": "left",
+            "title_color": "#ffffff",
+            "copy_color": "#ffeeee"
+          }
         }
       },
       "block_order": [
-        "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6"
+        "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6",
+        "34d51cb8-20d7-4650-8ea8-c2406d031382"
       ],
       "settings": {
       }
