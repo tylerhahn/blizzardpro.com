@@ -3,13 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/gtseries-fullspread_c133cc90-26fd-450a-bf49-ded330970f86.jpg",
-        "series_image": "shopify:\/\/shop_images\/gtseries-header.png"
-      }
-    },
-    "otherProds": {
-      "type": "iris-novastar-lineup",
-      "settings": {
+        "hero_image": "shopify://shop_images/gt-series-a.png",
+        "series_image": "shopify://shop_images/gtseries-header.png"
       }
     },
     "icons": {
@@ -18,36 +13,36 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/event.png",
+            "image": "shopify://shop_images/event.png",
             "title": "Event Production"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/touring_3db985f4-3796-4ac5-a6d0-7f38dbe0ecda.png",
+            "image": "shopify://shop_images/touring_3db985f4-3796-4ac5-a6d0-7f38dbe0ecda.png",
             "title": "Pro Touring"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/refresh.png",
+            "image": "shopify://shop_images/refresh.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_2c119980-4662-471e-8f0f-3c026cc32653.png",
-            "title": "Indoor \/ Outdoor"
+            "image": "shopify://shop_images/outdoor_2c119980-4662-471e-8f0f-3c026cc32653.png",
+            "title": "Indoor / Outdoor"
           }
         },
         "73854793-8bdc-422e-990f-b48b95a65734": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rental.png",
-            "title": "Stage \/ Rental"
+            "image": "shopify://shop_images/rental.png",
+            "title": "Stage / Rental"
           }
         }
       },
@@ -69,99 +64,99 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-gt3-xl-right.png",
-            "image_featured": "shopify:\/\/shop_images\/gt3-xl.png",
+            "image": "shopify://shop_images/iris-gt3-xl-right.png",
+            "image_featured": "shopify://shop_images/gt3-xl.png",
             "panel_name": "IRiS® GT3 XL",
-            "pixel_pitch": "3.9",
-            "module_resolution": "64x128",
-            "module_pixel_quantiy": "8192",
-            "module_dimensions": "250x500",
+            "pixel_pitch": "3.9 MM",
+            "module_resolution": "64 x 128",
+            "module_pixel_quantiy": "8,192",
+            "module_dimensions": "250 x 500 mm",
             "module_pixel_config": "SMD 1921 3-in-1",
             "application": "Outdoor",
-            "module_weight": "1.2",
-            "dimensions": "500x1000x80",
-            "resolution": "128x256",
-            "pixel_quantity": "32768",
-            "module_quantity": "2x2",
+            "module_weight": "1.2 KG",
+            "dimensions": "500 x 1000 x 80 MM",
+            "resolution": "128 x 256",
+            "pixel_quantity": "32,768",
+            "module_quantity": "2 x 4",
             "material": "Aluminum Die Cast",
-            "weight": "13.8",
+            "weight": "14.9 kg",
             "maitenance_type": "Both front and rear",
-            "pixel_density": "65536",
-            "average_power_consumption": "267",
-            "max_power_consumption": "800",
-            "input_power": "1000",
-            "brightness": "4500",
+            "pixel_density": "65,536 Dots/m2",
+            "average_power_consumption": "245 w/m2",
+            "max_power_consumption": "735 w/m2",
+            "input_power": "1,000 w/m2",
+            "brightness": "4,500 NIT",
             "contrast": "5000:1",
-            "color_depth": "14",
-            "refresh_rate": "≥3840",
-            "frame_frequency": "50\/60",
+            "color_depth": "14 BIT",
+            "refresh_rate": "≥3840 hz",
+            "frame_frequency": "50/60 hz",
             "input_voltage": "110~220V AC",
-            "working_temp": "'-20℃~+50℃",
+            "working_temp": "-20℃~+50℃",
             "working_humidity": "10%-90%RH",
-            "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°\/140°",
-            "ip_rating": "IP65\/IP54",
-            "curvature": "missing",
-            "lifespan": "100000",
-            "receiving_card": "A",
-            "grayscale": "missing",
-            "hdr": "missing",
-            "scan_mode": "missing",
-            "special_features": "missing",
+            "optimal_viewing_distance": "3.9 - 39 m",
+            "viewing_angle": "140°/140° h/v",
+            "ip_rating": "IP65 (front) IP54 (rear)",
+            "curvature": "±10°",
+            "lifespan": "100,000 Hours",
+            "receiving_card": "Novastar® A8S",
+            "grayscale": "14 bit+ / Clearview",
+            "hdr": "HDR10 / HLG",
+            "scan_mode": "1/16",
+            "special_features": "Two-Step Locking, Tour Cart",
             "warranty": "7 Years*",
             "FCC_Certification": true,
             "ETL_Certification": true,
             "CE_Certification": true,
-            "RoHS_Certification": false
+            "RoHS_Certification": true
           }
         },
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-gt3-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-gt3.png",
+            "image": "shopify://shop_images/iris-gt3-right.png",
+            "image_featured": "shopify://shop_images/gt3-rear.png",
             "panel_name": "IRiS® GT3",
-            "pixel_pitch": "3.9",
-            "module_resolution": "64x128",
-            "module_pixel_quantiy": "8192",
-            "module_dimensions": "250x500",
+            "pixel_pitch": "3.9 mm",
+            "module_resolution": "64 x 64",
+            "module_pixel_quantiy": "4,096",
+            "module_dimensions": "250 x 250 mm",
             "module_pixel_config": "SMD 921 3-in-1",
             "application": "Outdoor",
-            "module_weight": "1.2",
-            "dimensions": "500x500x80",
-            "resolution": "128x256",
-            "pixel_quantity": "32768",
-            "module_quantity": "2x2",
+            "module_weight": "1.2 kg",
+            "dimensions": "500 x 500 x 80 mm",
+            "resolution": "128 x 128",
+            "pixel_quantity": "16,384",
+            "module_quantity": "2 x 2",
             "material": "Aluminum Die Cast",
-            "weight": "8.5",
+            "weight": "9.4 kg",
             "maitenance_type": "Both front and rear",
-            "pixel_density": "65536",
-            "average_power_consumption": "267",
-            "max_power_consumption": "800",
-            "input_power": "1000",
-            "brightness": "4500",
+            "pixel_density": "65,536",
+            "average_power_consumption": "245 w/m2",
+            "max_power_consumption": "735 w/m2",
+            "input_power": "1,000 w/m2",
+            "brightness": "4,500 nit",
             "contrast": "5000:1",
-            "color_depth": "14",
-            "refresh_rate": "≥3840",
-            "frame_frequency": "50\/60",
+            "color_depth": "14 bit",
+            "refresh_rate": "≥3840 hz",
+            "frame_frequency": "50/60 hz",
             "input_voltage": "110~220V AC",
             "working_temp": "-20℃~+50℃",
             "working_humidity": "10%-90%RH",
-            "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°\/140°",
-            "ip_rating": "IP65\/IP54",
-            "curvature": "missing",
-            "lifespan": "100000",
-            "receiving_card": "missing",
-            "grayscale": "missing",
-            "hdr": "missing",
-            "scan_mode": "missing",
-            "special_features": "missing",
+            "optimal_viewing_distance": "3.9 - 39 m",
+            "viewing_angle": "140°/140° h/v",
+            "ip_rating": "IP65 (front) IP54 (rear)",
+            "curvature": "±10°",
+            "lifespan": "100,000 hours",
+            "receiving_card": "Novastar® A8S",
+            "grayscale": "14 bit+ / Clearview",
+            "hdr": "HDR10 / HLG",
+            "scan_mode": "1/16",
+            "special_features": "Two-Step Locking, Tour Cart",
             "warranty": "7 Years*",
             "FCC_Certification": true,
             "ETL_Certification": true,
             "CE_Certification": true,
-            "RoHS_Certification": false
+            "RoHS_Certification": true
           }
         }
       },
@@ -173,17 +168,21 @@
         "background_color_1": "#000000",
         "background_color_2": "#303030",
         "spec_color_1": "#131313",
-        "spec_color_2": "#181818"
+        "spec_color_2": "#181818",
+        "spec_color_data": "",
+        "spec_title_color": "",
+        "accent_color": ""
       }
     },
     "banner-1": {
       "type": "lp-banner",
       "blocks": {
-        "40fca236-2e4c-40ab-8be7-a45fe2afc80e": {
+        "b2a05672-cea0-4e29-abf0-aa1efec19b96": {
           "type": "image",
           "settings": {
             "right_aligned": false,
-            "image": "shopify:\/\/shop_images\/web-image-1.jpg",
+            "image": "shopify://shop_images/tour-in-style-1.jpg",
+            "zoom_image": "",
             "title": "",
             "copy": "",
             "title_color": "#010101",
@@ -194,7 +193,8 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
-            "image": "shopify:\/\/shop_images\/web-image-2.jpg",
+            "image": "shopify://shop_images/tour-in-style-2.jpg",
+            "zoom_image": "",
             "title": "Sedan or Coupé",
             "copy": "Combine 500mm GT3™ & 1m GT3™ XL in the same display for ultimate flexibility.",
             "title_color": "#ffffff",
@@ -205,7 +205,8 @@
           "type": "image",
           "settings": {
             "right_aligned": false,
-            "image": "shopify:\/\/shop_images\/web-image-3.jpg",
+            "image": "shopify://shop_images/gtseries-web-banner-2.jpg",
+            "zoom_image": "",
             "title": "...Like It's on Rails",
             "copy": "Form perfectly linear or curved displays (±10°) with the GT  Series' two-step locking system.",
             "title_color": "#ffffff",
@@ -216,26 +217,36 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
-            "image": "shopify:\/\/shop_images\/web-image-4.jpg",
+            "image": "shopify://shop_images/gtseries-web-banner-3.jpg",
+            "zoom_image": "",
             "title": "Lock Em' Up",
             "copy": "Ingenious one-arm locking paddle makes setup a snap--even while you're driving solo.",
             "title_color": "#ffffff",
-            "copy_color": "#00503a"
+            "copy_color": "#004250"
           }
         }
       },
       "block_order": [
-        "40fca236-2e4c-40ab-8be7-a45fe2afc80e",
+        "b2a05672-cea0-4e29-abf0-aa1efec19b96",
         "546058db-7408-404f-8bfe-221e431c5a41",
         "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632",
         "576c38dc-a1ec-4c67-8713-40c22cf7119b"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "banner-2": {
       "type": "lp-banner",
+      "settings": {}
+    },
+    "otherProds": {
+      "type": "iris-novastar-lineup",
       "settings": {
+        "collection": "",
+        "background_color": "",
+        "product_title_color": "",
+        "subtitle_color": "",
+        "cta_color": "",
+        "cta_title": ""
       }
     },
     "form": {
