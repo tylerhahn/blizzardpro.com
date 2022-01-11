@@ -3,13 +3,9 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify://shop_images/gtseries-fullspread_c133cc90-26fd-450a-bf49-ded330970f86.jpg",
-        "series_image": "shopify://shop_images/gtseries-header.png"
+        "hero_image": "shopify:\/\/shop_images\/gtseries-fullspread_c133cc90-26fd-450a-bf49-ded330970f86.jpg",
+        "series_image": "shopify:\/\/shop_images\/gtseries-header.png"
       }
-    },
-    "otherProds": {
-      "type": "iris-novastar-lineup",
-      "settings": {}
     },
     "icons": {
       "type": "iris-icons",
@@ -17,36 +13,36 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/event.png",
+            "image": "shopify:\/\/shop_images\/event.png",
             "title": "Event Production"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/touring_3db985f4-3796-4ac5-a6d0-7f38dbe0ecda.png",
+            "image": "shopify:\/\/shop_images\/touring_3db985f4-3796-4ac5-a6d0-7f38dbe0ecda.png",
             "title": "Pro Touring"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/refresh.png",
+            "image": "shopify:\/\/shop_images\/refresh.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/outdoor_2c119980-4662-471e-8f0f-3c026cc32653.png",
-            "title": "Indoor / Outdoor"
+            "image": "shopify:\/\/shop_images\/outdoor_2c119980-4662-471e-8f0f-3c026cc32653.png",
+            "title": "Indoor \/ Outdoor"
           }
         },
         "73854793-8bdc-422e-990f-b48b95a65734": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/rental.png",
-            "title": "Stage / Rental"
+            "image": "shopify:\/\/shop_images\/rental.png",
+            "title": "Stage \/ Rental"
           }
         }
       },
@@ -68,8 +64,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/iris-gt3-xl-right.png",
-            "image_featured": "shopify://shop_images/gt3-xl.png",
+            "image": "shopify:\/\/shop_images\/iris-gt3-xl-right.png",
+            "image_featured": "shopify:\/\/shop_images\/gt3-xl.png",
             "panel_name": "IRiS® GT3 XL",
             "pixel_pitch": "3.9",
             "module_resolution": "64x128",
@@ -93,13 +89,13 @@
             "contrast": "5000:1",
             "color_depth": "14",
             "refresh_rate": "≥3840",
-            "frame_frequency": "50/60",
+            "frame_frequency": "50\/60",
             "input_voltage": "110~220V AC",
             "working_temp": "'-20℃~+50℃",
             "working_humidity": "10%-90%RH",
             "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°/140°",
-            "ip_rating": "IP65/IP54",
+            "viewing_angle": "140°\/140°",
+            "ip_rating": "IP65\/IP54",
             "curvature": "missing",
             "lifespan": "100000",
             "receiving_card": "A",
@@ -117,8 +113,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/iris-gt3-right.png",
-            "image_featured": "shopify://shop_images/iris-gt3.png",
+            "image": "shopify:\/\/shop_images\/iris-gt3-right.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-gt3.png",
             "panel_name": "IRiS® GT3",
             "pixel_pitch": "3.9",
             "module_resolution": "64x128",
@@ -142,13 +138,13 @@
             "contrast": "5000:1",
             "color_depth": "14",
             "refresh_rate": "≥3840",
-            "frame_frequency": "50/60",
+            "frame_frequency": "50\/60",
             "input_voltage": "110~220V AC",
             "working_temp": "-20℃~+50℃",
             "working_humidity": "10%-90%RH",
             "optimal_viewing_distance": "3.9-39",
-            "viewing_angle": "140°/140°",
-            "ip_rating": "IP65/IP54",
+            "viewing_angle": "140°\/140°",
+            "ip_rating": "IP65\/IP54",
             "curvature": "missing",
             "lifespan": "100000",
             "receiving_card": "missing",
@@ -173,8 +169,9 @@
         "background_color_2": "#303030",
         "spec_color_1": "#131313",
         "spec_color_2": "#181818",
-        "text_color": "#b3b3b3",
-        "large_text_color": "#11c685"
+        "spec_color_data": "",
+        "spec_title_color": "",
+        "accent_color": ""
       }
     },
     "banner-1": {
@@ -184,7 +181,8 @@
           "type": "image",
           "settings": {
             "right_aligned": false,
-            "image": "shopify://shop_images/web-image-1.jpg",
+            "image": "shopify:\/\/shop_images\/web-image-1.jpg",
+            "zoom_image": "",
             "title": "",
             "copy": "",
             "title_color": "#010101",
@@ -195,7 +193,8 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
-            "image": "shopify://shop_images/web-image-2.jpg",
+            "image": "shopify:\/\/shop_images\/web-image-2.jpg",
+            "zoom_image": "",
             "title": "Sedan or Coupé",
             "copy": "Combine 500mm GT3™ & 1m GT3™ XL in the same display for ultimate flexibility.",
             "title_color": "#ffffff",
@@ -206,7 +205,8 @@
           "type": "image",
           "settings": {
             "right_aligned": false,
-            "image": "shopify://shop_images/web-image-3.jpg",
+            "image": "shopify:\/\/shop_images\/web-image-3.jpg",
+            "zoom_image": "",
             "title": "...Like It's on Rails",
             "copy": "Form perfectly linear or curved displays (±10°) with the GT  Series' two-step locking system.",
             "title_color": "#ffffff",
@@ -217,11 +217,12 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
-            "image": "shopify://shop_images/web-image-4.jpg",
+            "image": "shopify:\/\/shop_images\/gtseries-web-banner-3.jpg",
+            "zoom_image": "",
             "title": "Lock Em' Up",
             "copy": "Ingenious one-arm locking paddle makes setup a snap--even while you're driving solo.",
             "title_color": "#ffffff",
-            "copy_color": "#00503a"
+            "copy_color": "#004250"
           }
         }
       },
@@ -231,11 +232,24 @@
         "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632",
         "576c38dc-a1ec-4c67-8713-40c22cf7119b"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "banner-2": {
       "type": "lp-banner",
-      "settings": {}
+      "settings": {
+      }
+    },
+    "otherProds": {
+      "type": "iris-novastar-lineup",
+      "settings": {
+        "collection": "",
+        "background_color": "",
+        "product_title_color": "",
+        "subtitle_color": "",
+        "cta_color": "",
+        "cta_title": ""
+      }
     },
     "form": {
       "type": "iris-lg-form",
