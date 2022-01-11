@@ -11,19 +11,9 @@
 
 <style>
 
-    @media screen and (min-width: 768px) {
-        .iris-icon-item {
-    width: 20%;
-}
+
 
 .iris-icons .flex-container {
-    justify-content: inherit;
-}
-    }
-
-
-
-    .iris-icons .flex-container {
     width: 90%;
     margin: 0 auto;
     padding: 2em 0px;
@@ -51,6 +41,18 @@
     font-weight: normal;
     color: {{ section.settings.text_color }};
 }
+
+@media screen and (min-width: 768px) {
+        .iris-icon-item {
+            width: 20%;
+        }
+
+        .iris-icons .flex-container {
+            flex-wrap: nowrap;
+            justify-content: inherit;
+        }
+    }
+
 </style>
 
 {% schema %}

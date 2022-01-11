@@ -238,6 +238,10 @@
       "type": "lp-banner",
       "settings": {}
     },
+    "small-form": {
+      "type": "dynamic-shopify-form",
+      "settings": {}
+    },
     "otherProds": {
       "type": "iris-novastar-lineup",
       "settings": {
@@ -269,6 +273,7 @@
     "spec-viewer",
     "banner-1",
     "banner-2",
+    "small-form",
     "otherProds",
     "form"
   ]

@@ -7,9 +7,12 @@
             {% endif %}
             <div class="grid-container" style="flex-direction: {% if block.settings.right_aligned %}inherit{% else %}row-reverse{% endif %}">
                 <div class="image-banner-textblock"></div>
-                <div class="image-banner-textblock">
+                <div class="image-banner-textblock" style="text-align: {{ block.settings.text_alignment }};">
                     <h2 style="color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
                     <p style="color: {{ block.settings.copy_color }}">{{ block.settings.copy }}</p>
+                    {% if block.settings.cta != blank %}
+                        <a class="iris-banner-a" style="color: {{block.settings.cta_color}}" href="{{ block.settings.cta_url }}">{{ block.settings.cta }}</a>
+                    {% endif %}
                 </div>
             </div>
             <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
@@ -18,27 +21,6 @@
 </section>
 
 <style>
-
-
-@media screen and (min-width: 1700px) {
-    .image-banner-textblock h2 {
-         font-size: 57px !important;
-    }
-    .image-banner-textblock p {
-         font-size: 25px !important;
-    }
-
-}
-
-@media screen and (min-width: 768px) {
-    .image-banner-textblock h2 {
-        font-size: 48px;
-    }
-
-    .image-banner-textblock P {
-        font-size: 20px;
-    }
-}
 
 .iris-lp-collection .grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -51,6 +33,13 @@ img.zoomvg {
     position: absolute;
     transform: scale(0);
     animation: zoomvg 20s infinite alternate ease-in-out;
+}
+
+a.iris-banner-a {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    display: table;
+    margin-top: 2em;
 }
 
 @keyframes zoomvg {
@@ -85,7 +74,6 @@ img.zoomvg {
     max-width: 400px;
     flex: 1;
     margin: 0 auto;
-    text-align: center;
 }
 
 .image-banner-textblock h2 {
@@ -98,6 +86,27 @@ img.zoomvg {
     line-height: 1.47059;
     font-weight: 400;
     letter-spacing: -.022em;
+}
+
+@media screen and (min-width: 768px) {
+    .image-banner-textblock h2 {
+        font-size: 48px;
+    }
+
+    .image-banner-textblock P {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1700px) {
+    .image-banner-textblock h2 {
+         font-size: 57px !important;
+    }
+    .image-banner-textblock p {
+         font-size: 25px !important;
+    }
+
 }
 
 </style>
@@ -146,6 +155,41 @@ img.zoomvg {
                  "id": "copy" ,
                  "label": "copy"
                 },
+                {
+                    "type": "text",
+                    "id": "cta",
+                    "label": "CTA"
+                },
+                {
+                    "type": "text",
+                    "id": "cta_url",
+                    "label": "CTA Url"
+                },
+                {
+                    "type": "color",
+                    "id": "cta_color",
+                    "label": "CTA Color"
+                },
+                {
+                    "type": "select",
+                    "id": "text_alignment",
+                    "label": "Text alignment",
+                    "options": [
+                      {
+                        "value": "left",
+                        "label": "Left"
+                      },
+                      {
+                        "value": "right",
+                        "label": "Right"
+                      },
+                      {
+                        "value": "center",
+                        "label": "Center"
+                      }
+                    ],
+                    "default": "center"
+                  },
                 {
                     "type": "color",
                     "id": "title_color",
