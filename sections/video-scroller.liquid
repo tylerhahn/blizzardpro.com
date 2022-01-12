@@ -1,0 +1,51 @@
+<div class="video-scroller">
+    <div id="scroller-container-vo">
+        <video autoplay loop mute preload="auto">
+            <source src="{{ section.settings.video_url }}" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+
+<style>
+
+    #scroller-container-vo {
+  width: 100%;
+  height: {{ section.settings.height }}px;
+}
+
+    .video-scroller {
+        position: relative;
+        height: {{ section.settings.height }}px;
+    }
+</style>
+
+
+{% schema %}
+
+{
+    "name": "Video Scroller",
+    "settings": [
+        {
+            "type": "header",
+            "content": "scroller"
+        }, {
+            "type": "text",
+            "id": "video_url",
+            "label": "Video URL (not embed)"
+        }, {
+            "type": "number",
+            "id": "height",
+            "label": "Height",
+            "default": 1080
+        }
+    ],
+    "presets": [
+        {
+            "name": "Video Scroller",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}
