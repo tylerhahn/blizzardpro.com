@@ -1,4 +1,16 @@
+<!-- TODO: Headline/Subheadline -->
 <div class="iris-lp-collection">
+
+    {% if section.settings.headline != blank %}
+        <div class="iris-lp-collection-container">
+            <h2>{{ section.settings.headline }}</h2>
+            {% if section.settings.subheadline != blank %}
+                <p>{{ section.settings.subheadline }}</p>
+            {% endif %}
+        </div>
+
+    {% endif %}
+
     <div class="grid-container">
         {% for product in collections[section.settings.collection].products limit: section.settings.products_shown  %}
             <div class="lp-collection-product">
@@ -16,19 +28,31 @@
 </div>
 
 <style>
-    @media screen and (max-width: 768px) {
-        .iris-lp-collection .grid-container {
+
+.iris-lp-collection {
+    background: {{ section.settings.background_color }};
+}
+
+.iris-lp-collection .grid-container {
             grid-template-columns: repeat(2, 1fr);
-        }
+}
 
-        .lp-collection-product {
-            padding: 31px;
-        }
-    }
+.iris-lp-collection-container {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 4em;
+}
 
-        .iris-lp-collection .grid-container {
-            grid-template-columns: repeat({{section.settings.products_shown}}, 1fr);
-        }
+.iris-lp-collection-container h2 {
+    color: {{ section.settings.product_title_color }};
+    font-size: 2.5em;
+}
+
+.iris-lp-collection-container p {
+    font-size: 1.5em;
+    color: {{ section.settings.subtitle_color }};
+}
+
 
 .lp-collection-product img {
     max-height: 175;
@@ -39,8 +63,7 @@
 .lp-collection-product {
     display: flex;
     flex-wrap: wrap;
-    background: {{ section.settings.background_color }};
-    padding: 70px;
+    padding: 31px;
     align-items: center;
 }
 
@@ -68,21 +91,22 @@
     text-transform: uppercase;
 }
 
-    .lp-collection-product:nth-child(2) {
-  filter: brightness(0.9);
-}
-.lp-collection-product:nth-child(3) {
-  filter: brightness(0.8);
-}
-.lp-collection-product:nth-child(4) {
-  filter: brightness(0.7);
-}
-.lp-collection-product:nth-child(5) {
-  filter: brightness(0.6);
-}
-.lp-collection-product:nth-child(6) {
-  filter: brightness(0.5);
-}
+
+    @media screen and (min-width: 1100px) {
+        .iris-lp-collection .grid-container {
+            grid-template-columns: repeat({{section.settings.products_shown}}, 1fr);
+        }
+
+
+        .lp-collection-product {
+            padding: 30px 70px 70px 70px;
+            border-right: 1px solid rgb(154 154 154 / 9%);
+        }
+    }
+
+
+
+
 
 
 
@@ -102,6 +126,18 @@
          "type": "collection",
          "id": "collection" ,
          "label": "Collection"
+        },
+        {
+         "type": "textarea",
+         "id": "headline" ,
+         "label": "Headline",
+         "default": "Nice Headline"
+        },
+        {
+         "type": "textarea",
+         "id": "subheadline" ,
+         "label": "Subheadline",
+         "default": "This is the subheadline"
         },
         {
          "type": "number",
