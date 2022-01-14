@@ -1,26 +1,48 @@
 <section class="image-banner-container">
     {% for block in section.blocks %}
 
-        <div class="image-banner-lp" style="margin-top: {{ block.settings.margin }}">
-            {% if block.settings.zoom_image != blank %}
-                <img class="zoomvg" src="{{ block.settings.zoom_image }}">
-            {% endif %}
-            <div class="grid-container" style="flex-direction: {% if block.settings.right_aligned %}inherit{% else %}row-reverse{% endif %}">
-                <div class="image-banner-textblock"></div>
-                <div class="image-banner-textblock" style="text-align: {{ block.settings.text_alignment }};">
-                    <h2 style="color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
-                    <p style="color: {{ block.settings.copy_color }}">{{ block.settings.copy }}</p>
-                    {% if block.settings.cta != blank %}
-                        <a class="iris-banner-a" style="color: {{block.settings.cta_color}}" href="{{ block.settings.cta_url }}">{{ block.settings.cta }}</a>
-                    {% endif %}
+        {% if block.settings.banner_type == "video" %}
+
+            <div class="video-scroller" style="height: {{ block.settings.height }}px;">
+                <div id="scroller-container-vo" style="height: {{ block.settings.height }}px;">
+                    <video autoplay="autoplay" loop muted>
+                        <source src="{{ block.settings.video_url }}" type=" video/mp4">
+                    </video>
                 </div>
             </div>
-            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
-        </div>
+
+        {% elsif block.settings.banner_type == "image" %}
+
+            <div class="image-banner-lp" style="margin-top: {{ block.settings.margin }}">
+                <div class="grid-container" style="flex-direction: {% if block.settings.right_aligned %}inherit{% else %}row-reverse{% endif %}">
+                    <div class="image-banner-textblock"></div>
+                    <div class="image-banner-textblock" style="text-align: {{ block.settings.text_alignment }};">
+                        <h2 style="color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
+                        <p style="color: {{ block.settings.copy_color }}">{{ block.settings.copy }}</p>
+                        {% if block.settings.cta != blank %}
+                            <a class="iris-banner-a" style="color: {{block.settings.cta_color}}" href="{{ block.settings.cta_url }}">{{ block.settings.cta }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
+            </div>
+
+        {% endif %}
+
     {% endfor %}
 </section>
 
 <style>
+
+#scroller-container-vo {
+        width: 100%;
+    }
+
+    .video-scroller {
+        position: relative;
+    }
+
+
 
 .iris-lp-collection .grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -29,11 +51,6 @@
 .lp-collection-product {
     padding: 31px;
 }
-img.zoomvg {
-    position: absolute;
-    transform: scale(0);
-    animation: zoomvg 20s infinite alternate ease-in-out;
-}
 
 a.iris-banner-a {
     border-bottom: 1px solid;
@@ -41,16 +58,6 @@ a.iris-banner-a {
     display: table;
     margin-top: 2em;
 }
-
-@keyframes zoomvg {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(15);
-    }
-}
-
     .image-banner-lp{
         position: relative;
         overflow: hidden;
@@ -134,6 +141,22 @@ a.iris-banner-a {
              "default": false
             },
             {
+                "type": "select",
+                "id": "banner_type",
+                "label": "Banner Type",
+                "options": [
+                  {
+                    "value": "image",
+                    "label": "Image"
+                  },
+                  {
+                    "value": "video",
+                    "label": "Video"
+                  }
+                ],
+                "default": "image"
+              },
+            {
              "type": "number",
              "id": "margin" ,
              "label": "Margin"
@@ -142,15 +165,23 @@ a.iris-banner-a {
                     "type": "image_picker",
                     "id": "image",
                     "label": "Image"
-                }, {
-                    "type": "text",
-                    "id": "zoom_image",
-                    "label": "Zoom SVG Url"
-                }, {
+                },
+                {
                     "type": "text",
                     "id": "title",
                     "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "video_url",
+                    "label": "Video URL (not embed)"
                 }, {
+                    "type": "number",
+                    "id": "height",
+                    "label": "Height",
+                    "default": 1080
+                },
+                {
                  "type": "textarea",
                  "id": "copy" ,
                  "label": "copy"
