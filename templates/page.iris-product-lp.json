@@ -174,23 +174,35 @@
         "accent_color": ""
       }
     },
-    "164201876078ccd60f": {
-      "type": "video-scroller",
-      "settings": {
-        "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
-        "height": 1080
-      }
-    },
     "banner-1": {
       "type": "lp-banner",
       "blocks": {
+        "a2e0e816-6ada-43fc-b42f-e52c550c28de": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "video",
+            "title": "",
+            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
+            "height": 1080,
+            "copy": "",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        },
         "b2a05672-cea0-4e29-abf0-aa1efec19b96": {
           "type": "image",
           "settings": {
             "right_aligned": false,
+            "banner_type": "image",
             "image": "shopify:\/\/shop_images\/tour-in-style-1.jpg",
-            "zoom_image": "",
             "title": "",
+            "video_url": "",
+            "height": 1080,
             "copy": "",
             "cta": "",
             "cta_url": "",
@@ -204,9 +216,11 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
+            "banner_type": "image",
             "image": "shopify:\/\/shop_images\/tour-in-style-2.jpg",
-            "zoom_image": "",
             "title": "Sedan or Coupé",
+            "video_url": "",
+            "height": 1080,
             "copy": "Combine 500mm GT3™ & 1m GT3™ XL in the same display for ultimate flexibility.",
             "cta": "",
             "cta_url": "",
@@ -220,10 +234,12 @@
           "type": "image",
           "settings": {
             "right_aligned": false,
+            "banner_type": "image",
             "margin": 30,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-2.jpg",
-            "zoom_image": "",
             "title": "...Like It's on Rails",
+            "video_url": "",
+            "height": 1080,
             "copy": "Form perfectly linear or curved displays (±10°) with the GT  Series' two-step locking system.",
             "cta": "",
             "cta_url": "",
@@ -237,10 +253,12 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
+            "banner_type": "image",
             "margin": 30,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-3.jpg",
-            "zoom_image": "",
             "title": "Lock Em' Up",
+            "video_url": "",
+            "height": 1080,
             "copy": "Ingenious one-arm locking paddle makes setup a snap--even while you're driving solo.",
             "cta": "",
             "cta_url": "",
@@ -252,6 +270,7 @@
         }
       },
       "block_order": [
+        "a2e0e816-6ada-43fc-b42f-e52c550c28de",
         "b2a05672-cea0-4e29-abf0-aa1efec19b96",
         "546058db-7408-404f-8bfe-221e431c5a41",
         "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632",
@@ -277,9 +296,11 @@
           "type": "image",
           "settings": {
             "right_aligned": true,
+            "banner_type": "image",
             "image": "shopify:\/\/shop_images\/warranty-case.jpg",
-            "zoom_image": "",
             "title": "No Fears for 7 Years",
+            "video_url": "",
+            "height": 1080,
             "copy": "7 years or 2,500 shows, whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya.",
             "cta": "Learn More ›",
             "cta_url": "\/pages\/icon-warranty",
@@ -293,9 +314,11 @@
           "type": "image",
           "settings": {
             "right_aligned": false,
+            "banner_type": "image",
             "image": "shopify:\/\/shop_images\/gt-calc.jpg",
-            "zoom_image": "",
             "title": "Big Screens<br> Big Dreams",
+            "video_url": "",
+            "height": 1080,
             "copy": "Start planning your next video wall project today.",
             "cta": "Get Started ›",
             "cta_url": "\/pages\/iris-quote-builder",
@@ -346,7 +369,6 @@
     "slider",
     "icons",
     "spec-viewer",
-    "164201876078ccd60f",
     "banner-1",
     "small-form",
     "banner-2",
