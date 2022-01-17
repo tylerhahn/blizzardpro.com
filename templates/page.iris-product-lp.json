@@ -340,8 +340,8 @@
       "type": "iris-novastar-lineup",
       "settings": {
         "collection": "novastar-led-control-products",
-        "headline": "Nice Headline",
-        "subheadline": "This is the subheadline",
+        "headline": "",
+        "subheadline": "",
         "products_shown": 4,
         "background_color": "#141414",
         "product_title_color": "#ffffff",
