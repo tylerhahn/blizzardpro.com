@@ -19,9 +19,7 @@
                     <div class="image-banner-textblock" style="text-align: {{ block.settings.text_alignment }};">
                         <h2 style="color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
                         <p style="color: {{ block.settings.copy_color }}">{{ block.settings.copy }}</p>
-                        {% if block.settings.cta != blank %}
-                            <a class="iris-banner-a" style="color: {{block.settings.cta_color}}" href="{{ block.settings.cta_url }}">{{ block.settings.cta }}</a>
-                        {% endif %}
+                        <a class="iris-banner-a" style="color: {{block.settings.cta_color}}" href="{{ block.settings.cta_url }}">{{ block.settings.cta }}</a>
                     </div>
                 </div>
                 <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
@@ -56,7 +54,7 @@ a.iris-banner-a {
     border-bottom: 1px solid;
     padding-bottom: 5px;
     display: table;
-    margin-top: 2em;
+    margin-top: 1em;
 }
     .image-banner-lp{
         position: relative;
@@ -79,6 +77,8 @@ a.iris-banner-a {
 
     .image-banner-textblock {
     max-width: 400px;
+    font-size: 0.8em;
+    padding: 1em;
     flex: 1;
     margin: 0 auto;
 }
@@ -95,7 +95,22 @@ a.iris-banner-a {
     letter-spacing: -.022em;
 }
 
+@media screen and (max-width: 768px) {
+    .image-banner-lp {
+        margin: 0 !important;
+}
+
+}
+
 @media screen and (min-width: 768px) {
+    a.iris-banner-a {
+        margin-top: 2em;
+    }
+    .image-banner-textblock {
+        font-size: 1em;
+        padding: 0;
+    }
+
     .image-banner-textblock h2 {
         font-size: 48px;
     }
