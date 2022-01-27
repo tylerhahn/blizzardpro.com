@@ -339,7 +339,7 @@
     "otherProds": {
       "type": "iris-novastar-lineup",
       "settings": {
-        "collection": "novastar-led-control-products",
+        "collection": "novastar-gt-series",
         "headline": "",
         "subheadline": "",
         "products_shown": 4,
