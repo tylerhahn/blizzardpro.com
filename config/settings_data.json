@@ -1812,7 +1812,7 @@
       "iris-icon": {
         "type": "iris-icon",
         "settings": {
-          "section_image": "shopify:\/\/shop_images\/section_image.png",
+          "section_image": "shopify:\/\/shop_images\/icon-header.png",
           "header_title": "The All-Weather ICON",
           "header_sub": "IP65-Rated, Outdoor LED Panels",
           "background_color": "#121212",
