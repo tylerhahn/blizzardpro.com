@@ -1285,8 +1285,8 @@
           "bd96f581-6032-449a-86fc-4d8027151d8a": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/icon-homepage-slider-desktop.png",
-              "image_mobile": "shopify:\/\/shop_images\/icon-homepage-slider-mobile.png",
+              "image": "shopify:\/\/shop_images\/1920x696-web-instock.png",
+              "image_mobile": "shopify:\/\/shop_images\/square-instock.png",
               "video_url": "",
               "img_width": 40,
               "subheadline": "",
