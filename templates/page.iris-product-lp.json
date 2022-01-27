@@ -141,7 +141,7 @@
             "frame_frequency": "50\/60 hz",
             "input_voltage": "110~220V AC",
             "working_temp": "-20° ~+50℃",
-            "working_humidity": "10% -90% RH",
+            "working_humidity": "10% - 90% RH",
             "optimal_viewing_distance": "3.9 - 39.0 m",
             "viewing_angle": "140° \/ 140° h\/v",
             "ip_rating": "IP65 (front) \/ IP54 (rear)",
