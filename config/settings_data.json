@@ -259,8 +259,8 @@
           "84184c44-caff-4484-8e40-6d5a1ae3c4e1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/nova-desktop.png",
-              "image_mobile": "shopify:\/\/shop_images\/nova-mobile.png",
+              "image": "shopify:\/\/shop_images\/1920x628-b.png",
+              "image_mobile": "shopify:\/\/shop_images\/square-basic.png",
               "video_url": "",
               "subheadline": "",
               "subheadline_color": "#ffffff",
@@ -268,7 +268,7 @@
               "paragraph": "",
               "headline_color": "#ffffff",
               "main_cta_title": "",
-              "main_cta_url": "shopify:\/\/pages\/novastar",
+              "main_cta_url": "shopify:\/\/pages\/iris-gt-series",
               "main_cta_background_color": "#282bf6",
               "main_cta_text_color": "#ffffff",
               "sec_cta_title": "",
