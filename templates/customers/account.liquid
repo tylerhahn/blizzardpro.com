@@ -30,14 +30,19 @@
     <div class="accn-info">
         <h2 class="title" style="color: white;">Your Account</h2>
 
-      <div class="acc-bar">
-        <a target="_blank" class="tab1" href="/a/returns">Returns</a>
-      </div>
+<div style="display: flex">
+  <div class="tab-item">
+    <a target="_blank" class="tab1" href="/a/returns">Returns</a>
+  </div>
 
-      <div class="cancel-bar">
-        <a class="tab1" data-lity href="#cancel">Cancel Orders</a>
-      </div>
+  <div class="tab-item">
+    <a target="_blank" class="tab1" href="/pages/registration?e={{customer.email}}">Register Products</a>
+  </div>
 
+  <div  class="tab-item">
+    <a class="tab1" data-lity href="#cancel">Cancel Orders</a>
+  </div>
+</div>
     </div>
 
   <div class="flex-container">
@@ -125,3 +130,15 @@
       <p>Your browser does not support iframes.</p>
     </iframe>
     {% endif %}
+
+    <style>
+      .tab-item{
+        background: #d5d5d5;
+    padding: 0.75em;
+      }
+
+      .tab-item a{
+        color: black;
+        font-weight: bold;
+      }
+    </style>

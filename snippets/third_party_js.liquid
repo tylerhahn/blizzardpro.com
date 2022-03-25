@@ -71,7 +71,6 @@
 {% include 'adblocker' %}
 
 {% if page.title != 'Challenge' %}
-    <script type="module" src="{{ 'GLTFModelViewer.js' | asset_url }}"></script>
     <!-- {{ "shopify-collection-ajax-filter.js" | asset_url | script_tag }} -->
     {{ "slick.js" | asset_url | script_tag }}
 
@@ -138,3 +137,5 @@
     });
     </script>
 {% endif %}
+
+<script defer type="module" src="{{ "index.bundle.js" | asset_url }}"></script>

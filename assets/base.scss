@@ -5363,6 +5363,7 @@ a.btn.btn-outline.checkout-button:hover {
   ul {
     display: flex;
     li {
+      color: black;
       width: 25%;
     }
   }
@@ -11430,17 +11431,6 @@ ul.product-link-list {
     width: 100%;
     text-align: center;
   }
-}
-
-gltf-modelviewer {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-}
-
-gltf-modelviewer canvas {
-  width: 100%;
-  height: 100%;
 }
 
 .three-js {
