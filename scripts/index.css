@@ -165,12 +165,8 @@
 }
 
 .warranty-header {
-  display: flex;
-  justify-content: space-between;
-  width: 275;
   margin: 0 auto;
-  padding-top: 30px;
-  align-items: center;
+  padding: 1em;
   background: #192732;
 }
 
@@ -178,6 +174,7 @@
   font-size: 1.2em;
   color: white;
   cursor: pointer;
+  margin-right: 30px;
 }
 
 .warranty-header-item.active {

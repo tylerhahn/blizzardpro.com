@@ -64,13 +64,17 @@ const WarrantyCenter = () => {
         const date = Date.now();
         const storageRef = storage.ref();
         let fileRef = storageRef.child(
-          `receipts/${date}.${r.type.replace("image/", "")}`
+          `/product_registration_receipts/${date}.${r.type.replace(
+            "image/",
+            ""
+          )}`
         );
         let metadata = { contentType: r.type };
 
         fileRef
           .put(r, metadata)
           .then((storageData) => {
+            console.log("yo");
             storageData.ref.getDownloadURL().then((url) => {
               console.log(url);
               let payload = {
@@ -230,6 +234,7 @@ const WarrantyCenter = () => {
       return false;
     } else return true;
   };
+  console.log(step);
 
   return (
     <ThemeProvider theme={theme}>
@@ -282,20 +287,7 @@ const WarrantyCenter = () => {
                 </Button>
               )}
 
-              {step < 3 ? (
-                <Button
-                  id="dark-bg-button"
-                  type="submit"
-                  onClick={() => setStep(step + 1)}
-                  style={{ width: 150 }}
-                  variant="contained"
-                  color="primary"
-                  disabled={isDisabled()}
-                  className="btn"
-                >
-                  {step === 3 ? "Submit" : "Next"}
-                </Button>
-              ) : (
+              {step === 3 ? (
                 <Button
                   id="dark-bg-button"
                   type="submit"
@@ -307,6 +299,19 @@ const WarrantyCenter = () => {
                   className="btn"
                 >
                   Submit
+                </Button>
+              ) : (
+                <Button
+                  id="dark-bg-button"
+                  type="submit"
+                  onClick={() => setStep(step + 1)}
+                  style={{ width: 150 }}
+                  variant="contained"
+                  color="primary"
+                  disabled={isDisabled()}
+                  className="btn"
+                >
+                  Next
                 </Button>
               )}
             </div>
