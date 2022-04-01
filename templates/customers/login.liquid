@@ -2,69 +2,62 @@
 <section id="blacktop">
 
     <div id="create-customer" id="template">
-        <div id="customer">
-            <div class="reg-head">
-                <h1>Sign In</h1>
-            </div>
+            <div class="account-flex">
+                <div class="reseller-login" id="ecomm-login">
+               <div class="reseller-login-container">
+                <h2>Log In</h2>
 
-            {% form 'customer_login' %}
-                {{ form.errors | default_errors }}
-
-                <div class="clearfix large_form" id="login_email">
-                    <label class="login" for="customer_email">Email Address</label>
-                    <input class="large" id="customer_email" name="customer[email]" size="30" type="email" value=""/>
-                </div>
-
-                {% if form.password_needed %}
-
-                    {% comment %}
-                        Customer Account Login
-                    {% endcomment %}
-
-                    <div class="clearfix large_form" id="login_password">
-                        <label class="login" for="customer_password">Password</label>
-                        <input class="large password" id="customer_password" name="customer[password]" size="16" type="password" value=""/>
-                        <div id="forgot_password">
-                            <a class="forgot-pw" href="#" onclick="showRecoverPasswordForm();return false;">Forgot your password?</a>
-                        </div>
-                    </div>
-
-                {% endif %}
-
-                <div class="action_bottom">
-                    <input class="btn" type="submit" value="Sign In"/>
-                    <a class="btn btn-white" href="/account/register">or Sign up</a>
-                </div>
-            {% endform %}
-        </div>
-
-        {% comment %}
-            Recover Password Form
-        {% endcomment %}
-
-        <div class="center-screen">
-            <div class="clearfix large_form" id="recover-password">
-                <div class="reset_password_header">
-                    <h2 class="title">Reset Password</h2>
-                    <p class="note">We will send you an email to reset your password.</p>
-                </div>
-
-                {% form 'recover_customer_password' %}
+                {% form 'customer_login' %}
                     {{ form.errors | default_errors }}
 
-                    <div class="clearfix large_form" id="recover_email">
-                        <label class="login" for="customer_password">Email</label>
-                        <input class="large password" id="recover-email" name="email" size="16" type="email" value=""/>
+                    <div class="clearfix large_form" id="login_email">
+                        <label class="login" for="customer_email">Email Address</label>
+                        <input class="large" id="customer_email" name="customer[email]" size="30" type="email" value=""/>
                     </div>
+
+                    {% if form.password_needed %}
+
+                        {% comment %}
+                    Customer Account Login
+                {% endcomment %}
+
+                <div class="clearfix large_form" id="login_password">
+                    <label class="login" for="customer_password">Password</label>
+                    <input class="large password" id="customer_password" name="customer[password]" size="16" type="password" value=""/>
+
+                </div>
+
+
+                    {% endif %}
+
                     <div class="action_bottom">
-                        <input class="btn" type="submit" value="Submit"/>
-                        <span class="note">or
-                            <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a>
-                        </span>
+                        <input class="btn" type="submit" value="Sign In"/>
+                        <a class="btn btn-white" href="/account/register">or Sign up</a>
                     </div>
                 {% endform %}
+               </div>
+                </div>
+
+                <div class="reseller-login" id="res-login">
+                    <div class="reseller-login-container">
+                        <h2>Resellers & Reps</h2>
+                        <a class="btn btn-blue" href="https://www.portal.blizzardpro.com/s" style="margin-bottom: 3em;">Login as Reseller/Rep</a>
+
+
+                   <div class="reseller-request">
+                    <h3>Looking for reseller access?</h3>
+                    <p>Enter your business email below and we'll reach to you.</p>
+                    <label for="customer_request_access">Email Address</label>
+                    <input id="request-email" type="email"/>
+                    <input id="requestEmailButton" class="btn"  type="submit" value="Submit Request"/>
+                   </div>
+                    </div>
+
+                </div>
+                <div></div>
             </div>
         </div>
+
 
         {% comment %}
             Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link
@@ -85,6 +78,18 @@
 </section>
 
 <style>
+
+
+.reseller-login-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4em 0;
+}
+
+
     .forgot-pw {
         color: gray;
         font-weight: normal;
@@ -93,6 +98,7 @@
         display: block;
         text-decoration: underline;
     }
+
 </style>
 
 <script type="text/javascript">
@@ -117,6 +123,42 @@
             .style
             .display = "inline-block";
     }
+
+    $('#mymodal').trigger('click');
+
+
+    $('#requestEmailButton').on("click", () => {
+
+
+    const email = $('#request-email').val();
+    const apiUrl = "https://api.blizzard.lighting/update-contact";
+    const data = {
+        email: email,
+        invite_code: "requested"
+    }
+
+    if(email) {
+            $('#requestEmailButton').val("Sending...");
+        }
+
+    let fetchData = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    }
+    fetch(apiUrl, fetchData).then(async res => {
+        let data = await res.text();
+        const json = JSON.parse(data);
+        if(json.message === "Success") {
+            $('#requestEmailButton').addClass("btn-green");
+            $('#requestEmailButton').val("Sent!");
+
+        }
+    })
+    })
 
     if (window.location.hash == "#recover") {
         showRecoverPasswordForm()

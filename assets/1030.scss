@@ -905,6 +905,25 @@
   .row-flex {
     justify-content: center;
   }
+
+  .account-flex {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  #ecomm-login {
+    width: 55%;
+  }
+
+  #res-login {
+    width: 35%;
+  }
+
+  #blacktop #create-customer {
+    padding-top: 7em;
+  }
 } //End bracket
 
 @media only screen and (max-width: 600px) {

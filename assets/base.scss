@@ -5392,29 +5392,65 @@ select {
   input {
     border-radius: 0px;
   }
+
+  .reseller-request {
+    background: #cacaca;
+    padding: 2em;
+    border-radius: 8px;
+    h3 {
+      font-size: 1.4em;
+      font-family: "Source Sans Pro";
+      letter-spacing: 0px;
+      text-transform: capitalize;
+    }
+  }
+  .reseller-login {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 2em;
+  }
+
   #create-customer {
+    width: 90%;
+    padding-top: 2em;
+    margin: 0 auto;
     @include flexbox();
     @include flex-wrap(wrap);
-    height: 80vh;
     @include align-content(center);
     @include justify-content(center);
-    min-height: 700px;
+    .action_bottom {
+      width: 100%;
+    }
     form {
       width: 100%;
-      max-width: 470px;
     }
     .btn-white {
-      border: 2px solid gray;
+      color: black;
+      padding: 1em;
+      border: 2px solid $blue;
     }
     input {
       border-radius: 65px;
       padding: 16px;
       width: 100%;
-      background: white;
+    }
+    .btn.btn-blue {
+      padding: 1em;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      background-color: #d5d7de !important;
+      border: 1px solid gray;
+      color: black;
+    }
+    input[type="submit"] {
+      background-color: $blue;
+      color: white;
     }
 
     label {
-      color: gray !important;
+      color: black !important;
     }
   }
   .errors {
@@ -5431,9 +5467,7 @@ select {
   }
 
   input.btn {
-    color: white;
     transition: 0.5s;
-    background: $blue !important;
     margin: 0;
     border: none;
     padding: 16px 30px;
@@ -9569,13 +9603,20 @@ button.hulkapps_discount_button.btn.btn--primary.button {
   display: none;
   align-content: center;
   justify-content: center;
-  height: 100vh;
+  width: 100%;
   flex-wrap: wrap;
+  margin-top: 1em;
+  background: #cacaca;
+  border-radius: 8px;
+  padding: 2em;
+
   h2 {
-    color: white;
+    color: black;
+    font-size: 1.5em !important;
   }
   p {
     font-size: 18px !important;
+    color: black;
   }
 }
 
@@ -10348,6 +10389,7 @@ button.iubenda-cs-accept-btn.iubenda-cs-btn-primary {
   padding: 10px 25px;
   text-transform: capitalize;
   font-weight: bold;
+  background: $blue;
 }
 
 .iubenda-cs-opt-group-custom {
@@ -11612,4 +11654,22 @@ span.sale-box {
   font-size: 10px;
   color: lightgray;
   font-family: $book;
+}
+
+.tab-item {
+  margin-right: 5px;
+  background: $blue;
+  padding: 0.75em;
+
+  a {
+    color: white;
+    &:hover {
+      color: white !important;
+    }
+  }
+}
+
+input#requestEmailButton.btn-green {
+  background-color: #478447 !important;
+  transition: 0.3s ease-in-out;
 }

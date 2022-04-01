@@ -5503,7 +5503,6 @@ select {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 80vh;
   -webkit-align-content: center;
   -moz-align-content: center;
   -ms-align-content: center;
@@ -5513,7 +5512,6 @@ select {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  min-height: 700px;
 }
 #blacktop #create-customer form {
   width: 100%;
@@ -10570,6 +10568,7 @@ button.iubenda-cs-accept-btn.iubenda-cs-btn-primary {
   padding: 10px 25px;
   text-transform: capitalize;
   font-weight: bold;
+  background: #282bf6;
 }
 
 .iubenda-cs-opt-group-custom {
