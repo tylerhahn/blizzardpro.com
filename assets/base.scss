@@ -9600,15 +9600,17 @@ button.hulkapps_discount_button.btn.btn--primary.button {
 }
 
 #recover-password {
-  display: none;
   align-content: center;
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
   margin-top: 1em;
-  background: #cacaca;
+  background: #ffffff;
   border-radius: 8px;
   padding: 2em;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 6em;
 
   h2 {
     color: black;
