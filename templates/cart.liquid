@@ -84,7 +84,7 @@
                                                                                                                                                   use a name attribute set to 'checkout' and 'update', respectively. That's
                                                                                                                                                   case-sensitive.
                 {% endcomment %}
-                
+
 
                 <div class="column two-thirds flow-opposite right-aligned">
                     <span class="mw-hidden-fees"></span>
@@ -152,7 +152,7 @@
 {% endif %}
 
 <script type="text/javascript">
-    
+
 
     var bespokeCartData = {
         {% for item in cart.items %}
@@ -171,12 +171,13 @@
         {% endfor %}
     };
 
-    console.log(bespokeCartData)
 
     $(document).ready(function () {
 
         $("input[name='updates[]']").on("input", function () {
             $("input[name='update']").trigger("click");
+           console.log($(this))
+
         });
 
         // check inputs on submit

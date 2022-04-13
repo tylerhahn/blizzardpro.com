@@ -53,7 +53,7 @@
         <span class="hulkapps-cart-item-price limoniapps-discountninja-cart-item-product-price" data-limoniapps-discountninja-cart-key="{{ item.key }}" data-key="{{ item.key }}">{{ item.price | money }}</span>
     </td>
     <td>
-        <input type="number" name="updates[]" {% if item.product.metafields.c_f.Preorder_Date %} {% else %} max="{{ item.variant.inventory_quantity }}" {% endif %} id="updates_{{ item.id }}" class="quantity bstock-{{ item.variant.barcode }}" value="{{ item.quantity }}"/>
+        <input type="number" name="updates[]" id="updates_{{ item.id }}" class="quantity bstock-{{ item.variant.barcode }}" value="{{ item.quantity }}"/>
     </td>
     <td>
         <span class="hulkapps-cart-item-line-price limoniapps-discountninja-cart-item-product-price" data-limoniapps-discountninja-cart-key="{{ item.key }}" data-key="{{ item.key }}"></span>
