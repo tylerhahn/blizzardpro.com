@@ -181,7 +181,7 @@
             {% assign vimeoId = video | remove: 'https://vimeo.com/' | split: '/' %}
             {% assign urlType = 'vimeo' %}
         {% else %}
-            {% assign youtubeId = video | remove: 'https://www.youtube.com/watch?v=' | split: '/' %}
+            {% assign youtubeId = video | remove: "<p>" | remove: "</p>" | remove: 'https://www.youtube.com/watch?v=' | split: '/' %}
             {% assign urlType = 'youtube' %}
         {% endif %}
 
