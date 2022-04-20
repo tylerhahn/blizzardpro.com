@@ -392,6 +392,14 @@
               "url": "shopify:\/\/collections\/moving-lights"
             }
           },
+          "88e7c457-11fa-4dbe-bd36-828faa8fcd7f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/motif-fresco-w-red_large_e4ec6dbe-1937-4c9d-8d9d-3cd49ff8a9ca.png",
+              "title": "Outdoor",
+              "url": "shopify:\/\/collections\/outdoor"
+            }
+          },
           "839ca0b8-e000-4d85-9c66-8790eec71456": {
             "type": "image",
             "settings": {
@@ -408,14 +416,6 @@
               "url": "shopify:\/\/collections\/washlights"
             }
           },
-          "88e7c457-11fa-4dbe-bd36-828faa8fcd7f": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/motif-fresco-w-red_large_e4ec6dbe-1937-4c9d-8d9d-3cd49ff8a9ca.png",
-              "title": "Outdoor",
-              "url": "shopify:\/\/collections\/outdoor"
-            }
-          },
           "4f5d51fd-ff54-46cc-a3d1-bc70e3b66611": {
             "type": "image",
             "settings": {
@@ -428,9 +428,9 @@
         "block_order": [
           "17fd2528-1823-4613-ab1e-bedc3410f578",
           "730d95a3-a514-404f-8dd5-760af593b647",
+          "88e7c457-11fa-4dbe-bd36-828faa8fcd7f",
           "839ca0b8-e000-4d85-9c66-8790eec71456",
           "5cf35842-4e01-46c2-8060-068960068f03",
-          "88e7c457-11fa-4dbe-bd36-828faa8fcd7f",
           "4f5d51fd-ff54-46cc-a3d1-bc70e3b66611"
         ],
         "settings": {
