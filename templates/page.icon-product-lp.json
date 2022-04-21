@@ -13,36 +13,29 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/event-icon.png",
-            "title": "Event Production"
+            "image": "shopify:\/\/shop_images\/permanentinstall.png",
+            "title": "Permanent Install"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/touring_3db985f4-3796-4ac5-a6d0-7f38dbe0ecda.png",
-            "title": "Pro Touring"
+            "image": "shopify:\/\/shop_images\/stage-rental.png",
+            "title": "Stage \/ Rental"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/refresh.png",
+            "image": "shopify:\/\/shop_images\/high_refresh.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_2c119980-4662-471e-8f0f-3c026cc32653.png",
+            "image": "shopify:\/\/shop_images\/indooroutdoor_a031c7c4-34b4-41d5-afd3-b3ec81cc5a4d.png",
             "title": "Indoor \/ Outdoor"
-          }
-        },
-        "73854793-8bdc-422e-990f-b48b95a65734": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/rental.png",
-            "title": "Stage \/ Rental"
           }
         }
       },
@@ -50,8 +43,7 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5",
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2",
         "d1587056-26fd-4120-af3c-9c437a7a50dd",
-        "07571cc8-53ed-4241-922a-653cfe605f2a",
-        "73854793-8bdc-422e-990f-b48b95a65734"
+        "07571cc8-53ed-4241-922a-653cfe605f2a"
       ],
       "settings": {
         "section_color": "#161616",
