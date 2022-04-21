@@ -158,11 +158,60 @@
             "CE_Certification": true,
             "RoHS_Certification": true
           }
+        },
+        "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right.png",
+            "panel_name": "IRIS® ICON IP3",
+            "pixel_pitch": "3.9 MM",
+            "module_resolution": "128 x 128",
+            "module_pixel_quantiy": "16,384",
+            "module_dimensions": "250 x 500 mm",
+            "module_pixel_config": "NATIONSTAR ® RGB 1921",
+            "application": "Indoor\/Outdoor",
+            "module_weight": "",
+            "dimensions": "500 x 500 x 80 mm",
+            "resolution": "128 x 128",
+            "pixel_quantity": "16,384",
+            "module_quantity": "2 x 1",
+            "material": "Aluminum Die Cast",
+            "weight": "7.5 kg",
+            "maitenance_type": "Both front and rear",
+            "pixel_density": "65,536 DOTS\/M2",
+            "average_power_consumption": "267 W\/M2",
+            "max_power_consumption": "800 W\/M2",
+            "input_power": "1,000 W\/M2",
+            "brightness": "4,500 nit",
+            "contrast": "5,000:1",
+            "color_depth": "14 bit",
+            "refresh_rate": "≥3,840 HZ",
+            "frame_frequency": "",
+            "input_voltage": "110~220 V AC | 50\/60HZ",
+            "working_temp": "-20 °~+50° C",
+            "working_humidity": "10% - 90% RH",
+            "optimal_viewing_distance": "3.9 - 39.0 m",
+            "viewing_angle": "140° \/ 140° H\/V",
+            "ip_rating": "ip65\/ip53",
+            "curvature": "±9°",
+            "lifespan": "100,000",
+            "receiving_card": "NOVASTAR ® A8S",
+            "grayscale": "22 BIT+ \/ CLEARVIEW",
+            "hdr": "HDR10OPTIMA \/ HLG",
+            "scan_mode": "1\/16",
+            "special_features": "",
+            "warranty": "7 Years*",
+            "FCC_Certification": true,
+            "ETL_Certification": true,
+            "CE_Certification": true,
+            "RoHS_Certification": true
+          }
         }
       },
       "block_order": [
         "5cc96fa1-445d-466d-9665-73c8d674d9ee",
-        "ea4181b2-aedd-4532-a918-d31c9a1be135"
+        "ea4181b2-aedd-4532-a918-d31c9a1be135",
+        "5a78db3b-c5ce-4671-9b94-073aea4ba360"
       ],
       "settings": {
         "background_color_1": "#000000",
