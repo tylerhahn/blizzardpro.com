@@ -312,51 +312,11 @@
             "title_color": "#1bc993",
             "copy_color": "#dad9da"
           }
-        },
-        "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632": {
-          "type": "image",
-          "settings": {
-            "right_aligned": false,
-            "banner_type": "image",
-            "margin": 30,
-            "image": "shopify:\/\/shop_images\/gtseries-web-banner-2.jpg",
-            "title": "...Like It's on Rails",
-            "video_url": "",
-            "height": 1080,
-            "copy": "Form perfectly linear or curved displays (±10°) with the GT  Series' two-step locking system.",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "left",
-            "title_color": "#ffffff",
-            "copy_color": "#201201"
-          }
-        },
-        "576c38dc-a1ec-4c67-8713-40c22cf7119b": {
-          "type": "image",
-          "settings": {
-            "right_aligned": true,
-            "banner_type": "image",
-            "margin": 30,
-            "image": "shopify:\/\/shop_images\/gtseries-web-banner-3.jpg",
-            "title": "Lock Em' Up",
-            "video_url": "",
-            "height": 1080,
-            "copy": "Ingenious one-arm locking paddle makes setup a snap—even while you're driving solo.",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "left",
-            "title_color": "#ffffff",
-            "copy_color": "#004250"
-          }
         }
       },
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
-        "546058db-7408-404f-8bfe-221e431c5a41",
-        "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632",
-        "576c38dc-a1ec-4c67-8713-40c22cf7119b"
+        "546058db-7408-404f-8bfe-221e431c5a41"
       ],
       "settings": {
       }
@@ -364,11 +324,11 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the <br>GT™ Series Cutsheet",
+        "form_text": "Download the <br>ICON Series Cutsheet",
         "background_color": "#000000",
-        "text_color": "#a9dddd",
+        "text_color": "#1bc993",
         "button_color": "#000000",
-        "hs_value": "GT Series"
+        "hs_value": "IRiS ICON"
       }
     },
     "banner-2": {
