@@ -207,12 +207,62 @@
             "CE_Certification": true,
             "RoHS_Certification": true
           }
+        },
+        "0097410e-7a91-44e8-91fd-2627340d5066": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ICON-IP3XL-angled-right.png",
+            "image_featured": "shopify:\/\/shop_images\/icon-ip3xl-rear.png",
+            "panel_name": "IRIS® ICON IP3 XL",
+            "pixel_pitch": "3.9 mm",
+            "module_resolution": "64 x 128",
+            "module_pixel_quantiy": "8,192",
+            "module_dimensions": "250 x 500mm",
+            "module_pixel_config": "NATIONSTAR® RGB 1921",
+            "application": "indoor\/outdoor",
+            "module_weight": "",
+            "dimensions": "500 x 1000 x 80mm",
+            "resolution": "128 x 256",
+            "pixel_quantity": "32,768",
+            "module_quantity": "2 x 2",
+            "material": "Aluminum Die Cast",
+            "weight": "11",
+            "maitenance_type": "Both front and rear",
+            "pixel_density": "65,536 DOTS\/M2",
+            "average_power_consumption": "268 W\/M2",
+            "max_power_consumption": "800 W\/M2",
+            "input_power": "1,000 W\/M2",
+            "brightness": "4,500 NIT",
+            "contrast": "5,000:1",
+            "color_depth": "14 bit",
+            "refresh_rate": "≥3,840 HZ",
+            "frame_frequency": "",
+            "input_voltage": "110~220V AC",
+            "working_temp": "",
+            "working_humidity": "",
+            "optimal_viewing_distance": "",
+            "viewing_angle": "",
+            "ip_rating": "",
+            "curvature": "",
+            "lifespan": "",
+            "receiving_card": "",
+            "grayscale": "",
+            "hdr": "",
+            "scan_mode": "",
+            "special_features": "",
+            "warranty": "7 Years*",
+            "FCC_Certification": false,
+            "ETL_Certification": false,
+            "CE_Certification": false,
+            "RoHS_Certification": false
+          }
         }
       },
       "block_order": [
         "5cc96fa1-445d-466d-9665-73c8d674d9ee",
         "ea4181b2-aedd-4532-a918-d31c9a1be135",
-        "5a78db3b-c5ce-4671-9b94-073aea4ba360"
+        "5a78db3b-c5ce-4671-9b94-073aea4ba360",
+        "0097410e-7a91-44e8-91fd-2627340d5066"
       ],
       "settings": {
         "background_color_1": "#000000",
