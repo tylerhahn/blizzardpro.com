@@ -4,7 +4,8 @@
       "type": "iris-lp-hero",
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/banner-icon-header_1.png",
-        "right_image": "shopify:\/\/shop_images\/banner-icon-text.png"
+        "series_image": "shopify:\/\/shop_images\/icon-text_1.png",
+        "isLeft": true
       }
     },
     "icons": {
@@ -292,11 +293,11 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/banner-section1.png",
-            "title": "FASTER, LIGHTER, STRONGER",
+            "image": "shopify:\/\/shop_images\/section1.png",
+            "title": "Faster, Lighter, Stronger",
             "video_url": "",
             "height": 1080,
-            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb. We also added one-touch retractable metal corner protectors, blackout gaskets & ground support locks all within a frame that’s nearly 20% lighter compared to our IRiS® R3G2 and R2 panels",
+            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
@@ -390,7 +391,7 @@
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
         "form_title": "Test Drive Today",
         "background_color": "#c83923",
-        "background_image": "shopify:\/\/shop_images\/form-bg.jpg",
+        "background_image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor.jpg",
         "input_background": "#fdf8f7",
         "input_border": "#f28c7d",
         "label_color": "#fdbbb2",
