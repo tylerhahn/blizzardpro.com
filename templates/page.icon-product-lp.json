@@ -393,10 +393,10 @@
         "background_color": "#c83923",
         "background_image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor.jpg",
         "input_background": "#fdf8f7",
-        "input_border": "#f28c7d",
-        "label_color": "#fdbbb2",
+        "input_border": "#a9dddd",
+        "label_color": "#ffffff",
         "btn_color": "#ffffff",
-        "btn_background": "#d17a1a"
+        "btn_background": "#1acbd1"
       }
     }
   },
