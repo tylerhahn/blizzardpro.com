@@ -1,7 +1,9 @@
 <div class="iris-lp-hero mw-1920">
-    <div class="iris-series-logo">
-        <img src="{{ section.settings.series_image | img_url: 'master' }}" alt="">
-    </div>
+    {% if section.settings.series_image %}
+        <div class="iris-series-logo">
+            <img src="{{ section.settings.series_image | img_url: 'master' }}" alt="">
+        </div>
+    {% endif %}
     <div class="iris-lp-bg">
         <img src="{{ section.settings.hero_image | img_url: 'master' }}" alt="">
     </div>
@@ -36,10 +38,19 @@
 }
 
 @media screen and (min-width: 768px) {
+  {% if isLeft %}
   .iris-series-logo {
-    left: 7em;
+    left:  7em;
     top: 7em;
   }
+  {% else %}
+  .iris-series-logo {
+    right:  7em;
+    left: inherit;
+    top: 7em;
+  }
+  {% endif %};
+
 }
 
 
@@ -63,6 +74,11 @@
         "type": "image_picker",
         "id": "right_image" ,
         "label": "Right image"
+        },
+        {
+          "type": "checkbox",
+          "id": "isLeft" ,
+          "label": "Is Left"
         }
     ]
 
