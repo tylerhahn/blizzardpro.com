@@ -5,6 +5,7 @@
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/banner-icon-header_1.png",
         "series_image": "shopify:\/\/shop_images\/icon-text_1.png",
+        "centerImage": false,
         "isLeft": false
       }
     },
@@ -293,7 +294,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/section1.png",
+            "image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor_195de1d3-bf49-47ac-97b1-4f3c791620d9.jpg",
             "title": "Faster, Lighter, Stronger",
             "video_url": "",
             "height": 1080,
