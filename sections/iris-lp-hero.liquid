@@ -13,14 +13,15 @@
 
 .iris-series-logo {
   left: 1em;
-  top: 1em;
 }
 
 .iris-series-logo {
   position: absolute;
   width: 40%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
-
 
 .image-container-right img {
   max-height: 980px;
@@ -41,13 +42,11 @@
   {% if section.settings.isLeft %}
   .iris-series-logo {
     left:  7em;
-    top: 7em;
   }
   {% else %}
   .iris-series-logo {
     right:  7em;
     left: inherit;
-    top: 7em;
   }
   {% endif %};
 
@@ -71,14 +70,14 @@
         "label": "Left image"
         },
         {
-        "type": "image_picker",
-        "id": "right_image" ,
-        "label": "Right image"
+          "type": "checkbox",
+          "id": "centerImage" ,
+          "label": "Center Image"
         },
         {
           "type": "checkbox",
           "id": "isLeft" ,
-          "label": "Is Left"
+          "label": "Is Left Aligned"
         }
     ]
 
