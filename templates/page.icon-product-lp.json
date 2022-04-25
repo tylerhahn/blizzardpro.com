@@ -5,7 +5,7 @@
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/banner-icon-header_1.png",
         "series_image": "shopify:\/\/shop_images\/icon-text_1.png",
-        "isLeft": true
+        "isLeft": false
       }
     },
     "icons": {
