@@ -893,7 +893,7 @@
             "type": "text",
             "settings": {
               "question": "What are At Full's system requirements?",
-              "answer": "Android: Android 5+ | \niPhone: iOS 13.0 or later  | \niPad: iPadOS 13.0 or later  | \nMac: Requires macOS 11.0 or later and a Mac with Apple M1 chip."
+              "answer": "Android: Android 9+ | \niPhone: iOS 13.0 or later  | \niPad: iPadOS 13.0 or later  | \nMac: Requires macOS 11.0 or later and a Mac with Apple M1 chip."
             }
           }
         },
