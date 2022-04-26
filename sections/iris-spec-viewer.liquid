@@ -9,8 +9,8 @@
         <div class="side-bar-panels">
             {% for block in section.blocks %}
                 {% if block.settings.image != blank %}
-                    <div class="side-bar-item panel-attr {% if forloop.first %}active{% endif %}" data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}">
-                        <img onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}')" class="panel-image" src="{{block.settings.image | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
+                    <div class="side-bar-item panel-attr {% if forloop.first %}active{% endif %}" data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}">
+                        <img onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}')" class="panel-image" src="{{block.settings.image | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
                         <h4>{{ block.settings.panel_name }}</h4>
                     </div>
                 {% endif %}
@@ -25,7 +25,7 @@
         <div id="active-panel">
             {% for block in section.blocks %}
                 {% if block.settings.image_featured != blank %}
-                    <img data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="featured-panel panel-attr {% if forloop.first %}visible{% endif %}" src="{{block.settings.image_featured | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
+                    <img data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="featured-panel panel-attr {% if forloop.first %}visible{% endif %}" src="{{block.settings.image_featured | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
                 {% endif %}
             {% endfor %}
         </div>
@@ -34,7 +34,7 @@
 
             {% for block in section.blocks %}
 
-                <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
+                <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
 
                     {% for setting in block.settings %}
                         {% capture thecycle %}
@@ -54,7 +54,7 @@
                 <h4>Certifications</h4>
                 <div class="cert-flex">
                     {% for block in section.blocks %}
-                        <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
+                        <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
                             {% for setting in block.settings %}
                                 {% assign certSettings = "fcc certification, etl certification, ce certification, rohs certification" | split: ", " %}
                                 {% assign title = setting | replace: '_', ' ' | downcase %}
