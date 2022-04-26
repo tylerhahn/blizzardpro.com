@@ -888,6 +888,13 @@
               "question": "What happens if I lose access to the internet?",
               "answer": "At Full will keep track of any changes you make to patches and shows while you’re offline. However, to ensure that everything is stored more securely and across all of your devices, it's recommended to use At Full while connected to the internet."
             }
+          },
+          "08e80282-91d9-4d5c-8418-9e75f0e16f91": {
+            "type": "text",
+            "settings": {
+              "question": "What are At Full's system requirements?",
+              "answer": "Android: Android 9+ | \niPhone: iOS 13.0 or later  | \niPad: iPadOS 13.0 or later  | \nMac: Requires macOS 11.0 or later and a Mac with Apple M1 chip."
+            }
           }
         },
         "block_order": [
@@ -900,7 +907,8 @@
           "300ac5f1-1793-4414-bb41-89c0e968cfa7",
           "eb67505f-3778-4a0f-b121-03c1231c0347",
           "4098af7e-b1ee-4399-b02e-a8438615e2f1",
-          "272b1add-aeef-4876-b8f0-869c8f2f49c4"
+          "272b1add-aeef-4876-b8f0-869c8f2f49c4",
+          "08e80282-91d9-4d5c-8418-9e75f0e16f91"
         ],
         "settings": {
           "Title": "FAQs",
