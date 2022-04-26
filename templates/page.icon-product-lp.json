@@ -52,6 +52,71 @@
         "text_color": "#a9dddd"
       }
     },
+    "banner-1": {
+      "type": "lp-banner",
+      "blocks": {
+        "a2e0e816-6ada-43fc-b42f-e52c550c28de": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/banner-ltl.png",
+            "title": "",
+            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
+            "height": 1080,
+            "copy": "",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        },
+        "8c0423bd-928c-4a9e-a349-acdb1b39ea29": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "video",
+            "title": "",
+            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/Website%20Videos%2FICON-ring.mp4?alt=media&token=ebcdbb43-5df1-4652-bdc2-8fadb6860336",
+            "height": 1080,
+            "copy": "",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        },
+        "546058db-7408-404f-8bfe-221e431c5a41": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor_195de1d3-bf49-47ac-97b1-4f3c791620d9.jpg",
+            "title": "Faster, Lighter, Stronger",
+            "video_url": "",
+            "height": 1080,
+            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "left",
+            "title_color": "#1bc993",
+            "copy_color": "#dad9da"
+          }
+        }
+      },
+      "block_order": [
+        "a2e0e816-6ada-43fc-b42f-e52c550c28de",
+        "8c0423bd-928c-4a9e-a349-acdb1b39ea29",
+        "546058db-7408-404f-8bfe-221e431c5a41"
+      ],
+      "settings": {
+      }
+    },
     "spec-viewer": {
       "type": "iris-spec-viewer",
       "blocks": {
@@ -268,71 +333,6 @@
         "accent_color": ""
       }
     },
-    "banner-1": {
-      "type": "lp-banner",
-      "blocks": {
-        "a2e0e816-6ada-43fc-b42f-e52c550c28de": {
-          "type": "image",
-          "settings": {
-            "right_aligned": false,
-            "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/banner-ltl.png",
-            "title": "",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
-            "height": 1080,
-            "copy": "",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "center",
-            "title_color": "#010101",
-            "copy_color": "#ffffff"
-          }
-        },
-        "546058db-7408-404f-8bfe-221e431c5a41": {
-          "type": "image",
-          "settings": {
-            "right_aligned": true,
-            "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor_195de1d3-bf49-47ac-97b1-4f3c791620d9.jpg",
-            "title": "Faster, Lighter, Stronger",
-            "video_url": "",
-            "height": 1080,
-            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb.",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "left",
-            "title_color": "#1bc993",
-            "copy_color": "#dad9da"
-          }
-        },
-        "8c0423bd-928c-4a9e-a349-acdb1b39ea29": {
-          "type": "image",
-          "settings": {
-            "right_aligned": false,
-            "banner_type": "video",
-            "title": "",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/Website%20Videos%2FICON-ring.mp4?alt=media&token=ebcdbb43-5df1-4652-bdc2-8fadb6860336",
-            "height": 1080,
-            "copy": "",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "center",
-            "title_color": "#010101",
-            "copy_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "a2e0e816-6ada-43fc-b42f-e52c550c28de",
-        "546058db-7408-404f-8bfe-221e431c5a41",
-        "8c0423bd-928c-4a9e-a349-acdb1b39ea29"
-      ],
-      "settings": {
-      }
-    },
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
@@ -422,8 +422,8 @@
   "order": [
     "slider",
     "icons",
-    "spec-viewer",
     "banner-1",
+    "spec-viewer",
     "small-form",
     "banner-2",
     "otherProds",
