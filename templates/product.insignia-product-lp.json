@@ -3,10 +3,9 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/banner-icon-header_1.png",
-        "series_image": "shopify:\/\/shop_images\/icon-text_1.png",
+        "hero_image": "shopify:\/\/shop_images\/insignia-website-hero_6f7cc077-cc70-4fc6-89a5-cc8f826c3352.jpg",
         "centerImage": false,
-        "isLeft": true
+        "isLeft": false
       }
     },
     "icons": {
