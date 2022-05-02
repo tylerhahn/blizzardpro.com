@@ -294,7 +294,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/insignia-website.jpg",
+            "image": "shopify:\/\/shop_images\/insignia-website_3a6fcdcc-dd64-4f03-9a5f-93d5320d5ae6.jpg",
             "title": "Faster, Lighter, Stronger",
             "video_url": "",
             "height": 1080,
@@ -303,7 +303,7 @@
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "left",
-            "title_color": "#1bc993",
+            "title_color": "#62cf54",
             "copy_color": "#dad9da"
           }
         }
