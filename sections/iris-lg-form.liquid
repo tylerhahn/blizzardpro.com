@@ -1,8 +1,10 @@
 <a class="contact-iris-container" name="contact-iris"></a>
-<div id="bl-lg-form" style="background-image: url({{section.settings.background_image | img_url: 'master'}}); background-color: {{section.settings.background_color}}">
-
-    <div class="row py-5" style="max-width: 1200px; margin: 0 auto;">
-        <div class="col-lg-6"></div>
+<div id="bl-lg-form" style="background-color: #171a30">
+<div class="bl-lg-form-texture"></div>
+    <div class="row py-5" style="max-width: 1200px; margin: 0 auto; align-items: center;">
+        <div class="col-lg-6">
+            {% include 'animation-floating-iris' %}
+        </div>
         <div class="col-lg-6">
             <h2>{{section.settings.form_title}}</h2>
             <div id="hs-target"></div>
@@ -41,10 +43,6 @@
             "label": "Background Color",
             "default": "#000000"
         }, {
-            "type": "image_picker",
-            "id": "background_image",
-            "label": "Background Image"
-        }, {
             "type": "color",
             "id": "input_background",
             "label": "Input Background",
@@ -82,10 +80,15 @@
 {% endschema %}
 
 <style>
+    .bl-lg-form-texture {
+        background-image: url("{{ 'noisy.png' | asset_url }}");
+    }
     #bl-lg-form {
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 678px;
+        position: relative;
+        box-shadow: inset 1px 16px 20px 0px #0d0f1d;
     }
 
     #bl-lg-form h2 {
