@@ -37,36 +37,6 @@
             "type": "text",
             "id": "form_title",
             "label": "Form Title"
-        }, {
-            "type": "color",
-            "id": "background_color",
-            "label": "Background Color",
-            "default": "#000000"
-        }, {
-            "type": "color",
-            "id": "input_background",
-            "label": "Input Background",
-            "default": "#000000"
-        }, {
-            "type": "color",
-            "id": "input_border",
-            "label": "Input border color",
-            "default": "#000000"
-        }, {
-            "type": "color",
-            "id": "label_color",
-            "label": "Label",
-            "default": "#000000"
-        }, {
-            "type": "color",
-            "id": "btn_color",
-            "label": "Button color",
-            "default": "#000000"
-        }, {
-            "type": "color",
-            "id": "btn_background",
-            "label": "Button background",
-            "default": "#ffffff"
         }
     ],
     "presets": [
@@ -96,10 +66,23 @@
         font-weight: 600;
 
     }
+
+    #bl-lg-form input {background: white;}
+
+    #bl-lg-form label {color: #848485;}
+
+    #bl-lg-form textarea {background: white;}
+
+    #bl-lg-form input.hs-button.primary.large  {color: white; border: none; background: #132e74 !important;}
+
+
+
+
     fieldset {
         max-width: 100% !important;
     }
-    div#hs-target input {
+
+    #hs-target input {
         background: {{section.settings.input_background}};
         border: 1px solid{{section.settings.input_border}};
         margin-bottom: 9px;
