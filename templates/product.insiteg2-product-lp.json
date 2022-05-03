@@ -58,8 +58,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/iris-insite-12.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0000_IRiS-ICON-render-26.png",
-            "panel_name": "IRiS® InSite™ G2",
+            "image_featured": "shopify:\/\/shop_images\/iris-insite-12-rear.png",
+            "panel_name": "IRiS® InSite™ G2 1.2",
             "pixel_pitch": "2.6 MM",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -106,9 +106,9 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0002_IRiS-ICON-render-29-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0001_IRiS-ICON-render-29.png",
-            "panel_name": "IRiS® ICON 2.9",
+            "image": "shopify:\/\/shop_images\/iris-insite-15.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-insite-15-rear.png",
+            "panel_name": "IRiS® InSite™ G2 1.5",
             "pixel_pitch": "2.9 mm",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -155,9 +155,9 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0002_IRiS-ICON-render-ip3.png",
-            "panel_name": "IRIS® ICON IP3",
+            "image": "shopify:\/\/shop_images\/iris-insite-18.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear.png",
+            "panel_name": "IRiS® InSite™ G2 1.8",
             "pixel_pitch": "3.9 MM",
             "module_resolution": "128 x 128",
             "module_pixel_quantiy": "16,384",
@@ -200,62 +200,12 @@
             "CE_Certification": true,
             "RoHS_Certification": true
           }
-        },
-        "0097410e-7a91-44e8-91fd-2627340d5066": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ICON-IP3XL-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/icon-ip3xl-rear.png",
-            "panel_name": "IRIS® ICON IP3 XL",
-            "pixel_pitch": "3.9 mm",
-            "module_resolution": "64 x 128",
-            "module_pixel_quantiy": "8,192",
-            "module_dimensions": "250 x 500mm",
-            "module_pixel_config": "NATIONSTAR® RGB 1921",
-            "application": "indoor\/outdoor",
-            "module_weight": "",
-            "dimensions": "500 x 1000 x 80mm",
-            "resolution": "128 x 256",
-            "pixel_quantity": "32,768",
-            "module_quantity": "2 x 2",
-            "material": "Aluminum Die Cast",
-            "weight": "11",
-            "maitenance_type": "Both front and rear",
-            "pixel_density": "65,536 DOTS\/M2",
-            "average_power_consumption": "268 W\/M2",
-            "max_power_consumption": "800 W\/M2",
-            "input_power": "1,000 W\/M2",
-            "brightness": "4,500 NIT",
-            "contrast": "5,000:1",
-            "color_depth": "14 bit",
-            "refresh_rate": "≥3,840 HZ",
-            "frame_frequency": "",
-            "input_voltage": "110~220V AC",
-            "working_temp": "-10°~+50° C",
-            "working_humidity": "10% - 90% RH",
-            "optimal_viewing_distance": "2.6 - .0 M",
-            "viewing_angle": "140° \/ 140° H\/V",
-            "ip_rating": "IP65\/IP53",
-            "curvature": "±9°",
-            "lifespan": "100,000 HOURS",
-            "receiving_card": "NOVASTAR® A8S",
-            "grayscale": "22 BIT+ \/ CLEARVIEW",
-            "hdr": "HDR10-OPTIMA \/ HLG",
-            "scan_mode": "NOVASTAR® A8S",
-            "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
-            "warranty": "7 Years*",
-            "FCC_Certification": true,
-            "ETL_Certification": true,
-            "CE_Certification": true,
-            "RoHS_Certification": true
-          }
         }
       },
       "block_order": [
         "5cc96fa1-445d-466d-9665-73c8d674d9ee",
         "ea4181b2-aedd-4532-a918-d31c9a1be135",
-        "5a78db3b-c5ce-4671-9b94-073aea4ba360",
-        "0097410e-7a91-44e8-91fd-2627340d5066"
+        "5a78db3b-c5ce-4671-9b94-073aea4ba360"
       ],
       "settings": {
         "background_color_1": "#000000",
