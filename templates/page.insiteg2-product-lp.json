@@ -3,8 +3,9 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/banner-icon-header_1.png",
-        "series_image": "shopify:\/\/shop_images\/icon-text_1.png",
+        "hero_image": "shopify:\/\/shop_images\/IRiS_HeaderImage_InSite.jpg",
+        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSite.png",
+        "centerImage": false,
         "isLeft": true
       }
     },
@@ -14,28 +15,28 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/permanentinstall.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_perma-install_e521ac59-4ab3-4d7d-a045-caf83db65b90.png",
             "title": "Permanent Install"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/stage-rental.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_rental-stage_3a20c790-4441-4279-8b6d-e0dc1eb1b4f0.png",
             "title": "Stage \/ Rental"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/high_refresh.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_refresh-rate_1b656e4b-82a7-4ab9-85d8-ed154a41d7d5.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/indooroutdoor_a031c7c4-34b4-41d5-afd3-b3ec81cc5a4d.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_outdoor_764dcdd8-9075-42d8-a5fb-c23eba23bf3c.png",
             "title": "Indoor \/ Outdoor"
           }
         }
@@ -47,8 +48,8 @@
         "07571cc8-53ed-4241-922a-653cfe605f2a"
       ],
       "settings": {
-        "section_color": "#161616",
-        "text_color": "#a9dddd"
+        "section_color": "#141414",
+        "text_color": "#ffffff"
       }
     },
     "spec-viewer": {
@@ -57,9 +58,9 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0001_IRiS-ICON-render-26-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0000_IRiS-ICON-render-26.png",
-            "panel_name": "IRiS® ICON 2.6",
+            "image": "shopify:\/\/shop_images\/iris-insite-12_bc769589-6992-40a4-b9df-1814001dee81.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-insite-12-rear_04b88394-0bdc-4084-abb7-8718807915db.png",
+            "panel_name": "IRiS® InSite G2 1.2",
             "pixel_pitch": "2.6 MM",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -106,9 +107,9 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0002_IRiS-ICON-render-29-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0001_IRiS-ICON-render-29.png",
-            "panel_name": "IRiS® ICON 2.9",
+            "image": "shopify:\/\/shop_images\/iris-insite-15_b9d878d7-2b38-46cc-a9c1-cc4f9ab3708a.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-insite-15-rear_a2f25568-ab9f-4d3c-afb7-f2169f821209.png",
+            "panel_name": "IRiS® InSite G2 1.5",
             "pixel_pitch": "2.9 mm",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -155,9 +156,9 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0002_IRiS-ICON-render-ip3.png",
-            "panel_name": "IRIS® ICON IP3",
+            "image": "shopify:\/\/shop_images\/iris-insite-18_c802d8b2-49a7-4395-9db0-f361e43d71b3.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear_c30de6e2-2806-4287-a3a9-ba5ca995e682.png",
+            "panel_name": "IRIS® InSite G2 1.8",
             "pixel_pitch": "3.9 MM",
             "module_resolution": "128 x 128",
             "module_pixel_quantiy": "16,384",
@@ -200,62 +201,12 @@
             "CE_Certification": true,
             "RoHS_Certification": true
           }
-        },
-        "0097410e-7a91-44e8-91fd-2627340d5066": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ICON-IP3XL-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/icon-ip3xl-rear.png",
-            "panel_name": "IRIS® ICON IP3 XL",
-            "pixel_pitch": "3.9 mm",
-            "module_resolution": "64 x 128",
-            "module_pixel_quantiy": "8,192",
-            "module_dimensions": "250 x 500mm",
-            "module_pixel_config": "NATIONSTAR® RGB 1921",
-            "application": "indoor\/outdoor",
-            "module_weight": "",
-            "dimensions": "500 x 1000 x 80mm",
-            "resolution": "128 x 256",
-            "pixel_quantity": "32,768",
-            "module_quantity": "2 x 2",
-            "material": "Aluminum Die Cast",
-            "weight": "11",
-            "maitenance_type": "Both front and rear",
-            "pixel_density": "65,536 DOTS\/M2",
-            "average_power_consumption": "268 W\/M2",
-            "max_power_consumption": "800 W\/M2",
-            "input_power": "1,000 W\/M2",
-            "brightness": "4,500 NIT",
-            "contrast": "5,000:1",
-            "color_depth": "14 bit",
-            "refresh_rate": "≥3,840 HZ",
-            "frame_frequency": "",
-            "input_voltage": "110~220V AC",
-            "working_temp": "-10°~+50° C",
-            "working_humidity": "10% - 90% RH",
-            "optimal_viewing_distance": "2.6 - .0 M",
-            "viewing_angle": "140° \/ 140° H\/V",
-            "ip_rating": "IP65\/IP53",
-            "curvature": "±9°",
-            "lifespan": "100,000 HOURS",
-            "receiving_card": "NOVASTAR® A8S",
-            "grayscale": "22 BIT+ \/ CLEARVIEW",
-            "hdr": "HDR10-OPTIMA \/ HLG",
-            "scan_mode": "NOVASTAR® A8S",
-            "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
-            "warranty": "7 Years*",
-            "FCC_Certification": true,
-            "ETL_Certification": true,
-            "CE_Certification": true,
-            "RoHS_Certification": true
-          }
         }
       },
       "block_order": [
         "5cc96fa1-445d-466d-9665-73c8d674d9ee",
         "ea4181b2-aedd-4532-a918-d31c9a1be135",
-        "5a78db3b-c5ce-4671-9b94-073aea4ba360",
-        "0097410e-7a91-44e8-91fd-2627340d5066"
+        "5a78db3b-c5ce-4671-9b94-073aea4ba360"
       ],
       "settings": {
         "background_color_1": "#000000",
@@ -275,7 +226,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/banner-ltl.png",
+            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_7004c5fb-9a99-4f0f-9e20-6d2de980b45d.jpg",
             "title": "",
             "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
             "height": 1080,
@@ -293,17 +244,17 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/section1.png",
-            "title": "Faster, Lighter, Stronger",
+            "image": "shopify:\/\/shop_images\/IRiS_Features_InSite1.jpg",
+            "title": "Feature 1",
             "video_url": "",
             "height": 1080,
-            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb.",
+            "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "left",
-            "title_color": "#1bc993",
-            "copy_color": "#dad9da"
+            "title_color": "#f2c326",
+            "copy_color": "#ffffff"
           }
         }
       },
@@ -317,10 +268,10 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the <br>ICON Series Cutsheet",
-        "background_color": "#000000",
-        "text_color": "#1bc993",
-        "button_color": "#000000",
+        "form_text": "Download the InSite G2™ <br>Series Cutsheet",
+        "background_color": "#141414",
+        "text_color": "#f2c326",
+        "button_color": "#f2c326",
         "hs_value": "IRiS ICON"
       }
     },
@@ -339,9 +290,9 @@
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
             "cta_url": "\/pages\/icon-warranty",
-            "cta_color": "#00d8ff",
+            "cta_color": "#f2c326",
             "text_alignment": "left",
-            "title_color": "#a9dddd",
+            "title_color": "#f2c326",
             "copy_color": "#ffffff"
           }
         },
@@ -350,7 +301,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/gt-calc.jpg",
+            "image": "shopify:\/\/shop_images\/IRiS_Calculator_InSite.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
@@ -360,7 +311,7 @@
             "cta_color": "#ffffff",
             "text_alignment": "left",
             "title_color": "#ffffff",
-            "copy_color": "#ffeeee"
+            "copy_color": "#ffffff"
           }
         }
       },
@@ -381,7 +332,7 @@
         "background_color": "#141414",
         "product_title_color": "#ffffff",
         "subtitle_color": "#9a9a9a",
-        "cta_color": "#a9dddd",
+        "cta_color": "#f2c326",
         "cta_title": ""
       }
     },
@@ -389,14 +340,7 @@
       "type": "iris-lg-form",
       "settings": {
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
-        "form_title": "Want To Learn More?",
-        "background_color": "#c83923",
-        "background_image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor.jpg",
-        "input_background": "#fdf8f7",
-        "input_border": "#a9dddd",
-        "label_color": "#ffffff",
-        "btn_color": "#ffffff",
-        "btn_background": "#1acbd1"
+        "form_title": "Want To Learn More?"
       }
     }
   },
