@@ -209,10 +209,10 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360"
       ],
       "settings": {
-        "background_color_1": "#303030",
-        "background_color_2": "#141414",
+        "background_color_1": "#000000",
+        "background_color_2": "#303030",
         "spec_color_1": "#141414",
-        "spec_color_2": "#303030",
+        "spec_color_2": "#181818",
         "spec_color_data": "",
         "spec_title_color": "",
         "accent_color": ""
