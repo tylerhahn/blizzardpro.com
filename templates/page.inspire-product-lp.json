@@ -213,9 +213,9 @@
         "background_color_2": "#303030",
         "spec_color_1": "#141414",
         "spec_color_2": "#181818",
-        "spec_color_data": "",
-        "spec_title_color": "",
-        "accent_color": ""
+        "spec_color_data": "rgba(0,0,0,0)",
+        "spec_title_color": "rgba(0,0,0,0)",
+        "accent_color": "rgba(0,0,0,0)"
       }
     },
     "banner-1": {
