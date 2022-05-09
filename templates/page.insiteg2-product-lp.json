@@ -268,7 +268,7 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the InSite G2™ <br>Series Cutsheet",
+        "form_text": "Download the InSite G2 <br>Series Cutsheet",
         "background_color": "#141414",
         "text_color": "#f2c326",
         "button_color": "#f2c326",
