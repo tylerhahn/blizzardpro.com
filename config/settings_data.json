@@ -1562,14 +1562,7 @@
         "type": "iris-lg-form",
         "settings": {
           "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
-          "form_title": "Connect with an IRiS Video Expert",
-          "background_color": "#000000",
-          "background_image": "shopify:\/\/shop_images\/iris-form-bg_caee2586-3320-4ed9-8c48-d1bd52e7b944.png",
-          "input_background": "#0b0b0b",
-          "input_border": "#5b5b5b",
-          "label_color": "#c0c0c0",
-          "btn_color": "#ffffff",
-          "btn_background": "#282bf6"
+          "form_title": "Connect with an IRiS Video Expert"
         }
       },
       "iris-calc-dynamic-form": {
