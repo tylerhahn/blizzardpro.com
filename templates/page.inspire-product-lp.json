@@ -58,9 +58,9 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0001_IRiS-ICON-render-26-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0000_IRiS-ICON-render-26.png",
-            "panel_name": "IRiS® ICON 2.6",
+            "image": "shopify:\/\/shop_images\/iris-inspire-12-angled-right.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-inspire-12-rear.png",
+            "panel_name": "IRiS® InSpire 1.2",
             "pixel_pitch": "2.6 MM",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -107,9 +107,9 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0002_IRiS-ICON-render-29-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0001_IRiS-ICON-render-29.png",
-            "panel_name": "IRiS® ICON 2.9",
+            "image": "shopify:\/\/shop_images\/iris-inspire-15-angled-right.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-inspire-15-rear.png",
+            "panel_name": "IRiS® InSpire 1.5",
             "pixel_pitch": "2.9 mm",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -156,9 +156,9 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0002_IRiS-ICON-render-ip3.png",
-            "panel_name": "IRIS® ICON IP3",
+            "image": "shopify:\/\/shop_images\/iris-inspire-18-angled-right.png",
+            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear_5a00ae83-706b-471d-9936-cd9c2e670f76.png",
+            "panel_name": "IRIS® InSpire 1.8",
             "pixel_pitch": "3.9 MM",
             "module_resolution": "128 x 128",
             "module_pixel_quantiy": "16,384",
@@ -201,68 +201,18 @@
             "CE_Certification": true,
             "RoHS_Certification": true
           }
-        },
-        "0097410e-7a91-44e8-91fd-2627340d5066": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ICON-IP3XL-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/icon-ip3xl-rear.png",
-            "panel_name": "IRIS® ICON IP3 XL",
-            "pixel_pitch": "3.9 mm",
-            "module_resolution": "64 x 128",
-            "module_pixel_quantiy": "8,192",
-            "module_dimensions": "250 x 500mm",
-            "module_pixel_config": "NATIONSTAR® RGB 1921",
-            "application": "indoor\/outdoor",
-            "module_weight": "",
-            "dimensions": "500 x 1000 x 80mm",
-            "resolution": "128 x 256",
-            "pixel_quantity": "32,768",
-            "module_quantity": "2 x 2",
-            "material": "Aluminum Die Cast",
-            "weight": "11",
-            "maitenance_type": "Both front and rear",
-            "pixel_density": "65,536 DOTS\/M2",
-            "average_power_consumption": "268 W\/M2",
-            "max_power_consumption": "800 W\/M2",
-            "input_power": "1,000 W\/M2",
-            "brightness": "4,500 NIT",
-            "contrast": "5,000:1",
-            "color_depth": "14 bit",
-            "refresh_rate": "≥3,840 HZ",
-            "frame_frequency": "",
-            "input_voltage": "110~220V AC",
-            "working_temp": "-10°~+50° C",
-            "working_humidity": "10% - 90% RH",
-            "optimal_viewing_distance": "2.6 - .0 M",
-            "viewing_angle": "140° \/ 140° H\/V",
-            "ip_rating": "IP65\/IP53",
-            "curvature": "±9°",
-            "lifespan": "100,000 HOURS",
-            "receiving_card": "NOVASTAR® A8S",
-            "grayscale": "22 BIT+ \/ CLEARVIEW",
-            "hdr": "HDR10-OPTIMA \/ HLG",
-            "scan_mode": "NOVASTAR® A8S",
-            "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
-            "warranty": "7 Years*",
-            "FCC_Certification": true,
-            "ETL_Certification": true,
-            "CE_Certification": true,
-            "RoHS_Certification": true
-          }
         }
       },
       "block_order": [
         "5cc96fa1-445d-466d-9665-73c8d674d9ee",
         "ea4181b2-aedd-4532-a918-d31c9a1be135",
-        "5a78db3b-c5ce-4671-9b94-073aea4ba360",
-        "0097410e-7a91-44e8-91fd-2627340d5066"
+        "5a78db3b-c5ce-4671-9b94-073aea4ba360"
       ],
       "settings": {
-        "background_color_1": "#000000",
-        "background_color_2": "#303030",
-        "spec_color_1": "#131313",
-        "spec_color_2": "#181818",
+        "background_color_1": "#303030",
+        "background_color_2": "#141414",
+        "spec_color_1": "#141414",
+        "spec_color_2": "#303030",
         "spec_color_data": "",
         "spec_title_color": "",
         "accent_color": ""
@@ -276,7 +226,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage.jpg",
+            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_26157b64-6e94-421e-8297-88177b5ccc3a.jpg",
             "title": "",
             "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
             "height": 1080,
@@ -285,7 +235,7 @@
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "center",
-            "title_color": "#010101",
+            "title_color": "#ffffff",
             "copy_color": "#ffffff"
           }
         },
@@ -294,17 +244,17 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/section1.png",
-            "title": "Faster, Lighter, Stronger",
+            "image": "shopify:\/\/shop_images\/IRiS_Features_InSpire1.jpg",
+            "title": "Feature 1",
             "video_url": "",
             "height": 1080,
-            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb.",
+            "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "left",
             "title_color": "#5762ac",
-            "copy_color": "#dad9da"
+            "copy_color": "#ffffff"
           }
         }
       },
@@ -318,7 +268,7 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the <br>ICON Series Cutsheet",
+        "form_text": "Download the InSpire™ <br>Series Cutsheet",
         "background_color": "#141414",
         "text_color": "#5762ac",
         "button_color": "#5762ac",
@@ -361,7 +311,7 @@
             "cta_color": "#ffffff",
             "text_alignment": "left",
             "title_color": "#ffffff",
-            "copy_color": "#ffeeee"
+            "copy_color": "#ffffff"
           }
         }
       },
@@ -382,7 +332,7 @@
         "background_color": "#141414",
         "product_title_color": "#ffffff",
         "subtitle_color": "#9a9a9a",
-        "cta_color": "#141414",
+        "cta_color": "#5762ac",
         "cta_title": ""
       }
     },
