@@ -3,9 +3,10 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/banner-icon-header_1.png",
-        "series_image": "shopify:\/\/shop_images\/icon-text_1.png",
-        "isLeft": true
+        "hero_image": "shopify:\/\/shop_images\/IRiS_HeaderImage_InSignia.jpg",
+        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSignia.png",
+        "centerImage": false,
+        "isLeft": false
       }
     },
     "icons": {
@@ -14,28 +15,28 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/permanentinstall.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_perma-install_10c31951-d81c-4781-88f4-5b8331fc9e25.png",
             "title": "Permanent Install"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/stage-rental.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_rental-stage_3cfbe314-06db-4533-b8be-f8d42958ba14.png",
             "title": "Stage \/ Rental"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/high_refresh.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_refresh-rate_e515e899-ddb2-447b-aea4-a38d264a70ef.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/indooroutdoor_a031c7c4-34b4-41d5-afd3-b3ec81cc5a4d.png",
+            "image": "shopify:\/\/shop_images\/iris-icons-web_outdoor_43737f11-252d-4a6a-a3ab-d4761d951a04.png",
             "title": "Indoor \/ Outdoor"
           }
         }
@@ -47,8 +48,8 @@
         "07571cc8-53ed-4241-922a-653cfe605f2a"
       ],
       "settings": {
-        "section_color": "#161616",
-        "text_color": "#a9dddd"
+        "section_color": "#141414",
+        "text_color": "#ffffff"
       }
     },
     "spec-viewer": {
@@ -57,9 +58,9 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0001_IRiS-ICON-render-26-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0000_IRiS-ICON-render-26.png",
-            "panel_name": "IRiS® ICON 2.6",
+            "image": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "image_featured": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "panel_name": "IRiS® InSignia 2.5",
             "pixel_pitch": "2.6 MM",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -106,9 +107,9 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0002_IRiS-ICON-render-29-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0001_IRiS-ICON-render-29.png",
-            "panel_name": "IRiS® ICON 2.9",
+            "image": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "image_featured": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "panel_name": "IRiS® InSignia 3.1",
             "pixel_pitch": "2.9 mm",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -155,9 +156,9 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/0003s_0002_IRiS-ICON-render-ip3.png",
-            "panel_name": "IRIS® ICON IP3",
+            "image": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "image_featured": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "panel_name": "IRiS® InSignia 4.0",
             "pixel_pitch": "3.9 MM",
             "module_resolution": "128 x 128",
             "module_pixel_quantiy": "16,384",
@@ -204,9 +205,9 @@
         "0097410e-7a91-44e8-91fd-2627340d5066": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ICON-IP3XL-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/icon-ip3xl-rear.png",
-            "panel_name": "IRIS® ICON IP3 XL",
+            "image": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "image_featured": "shopify:\/\/shop_images\/Insignia-vertical.png",
+            "panel_name": "IRiS® InSignia 4.8",
             "pixel_pitch": "3.9 mm",
             "module_resolution": "64 x 128",
             "module_pixel_quantiy": "8,192",
@@ -249,13 +250,113 @@
             "CE_Certification": true,
             "RoHS_Certification": true
           }
+        },
+        "ae2669ec-9fc9-4722-b0cd-d1dcfbfdd9fd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Insignia-1000x1000-angled-right.png",
+            "image_featured": "shopify:\/\/shop_images\/Insignia-1000x1000-rear.png",
+            "panel_name": "IRiS® InSignia 7.8",
+            "pixel_pitch": "",
+            "module_resolution": "",
+            "module_pixel_quantiy": "",
+            "module_dimensions": "",
+            "module_pixel_config": "",
+            "application": "",
+            "module_weight": "",
+            "dimensions": "",
+            "resolution": "",
+            "pixel_quantity": "",
+            "module_quantity": "",
+            "material": "Aluminum Die Cast",
+            "weight": "",
+            "maitenance_type": "Both front and rear",
+            "pixel_density": "",
+            "average_power_consumption": "",
+            "max_power_consumption": "",
+            "input_power": "",
+            "brightness": "",
+            "contrast": "",
+            "color_depth": "",
+            "refresh_rate": "",
+            "frame_frequency": "",
+            "input_voltage": "",
+            "working_temp": "",
+            "working_humidity": "",
+            "optimal_viewing_distance": "",
+            "viewing_angle": "",
+            "ip_rating": "",
+            "curvature": "",
+            "lifespan": "",
+            "receiving_card": "",
+            "grayscale": "",
+            "hdr": "",
+            "scan_mode": "",
+            "special_features": "",
+            "warranty": "7 Years*",
+            "FCC_Certification": false,
+            "ETL_Certification": false,
+            "CE_Certification": false,
+            "RoHS_Certification": false
+          }
+        },
+        "74e351dd-3297-4e49-9151-6ae7c1b706b8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Insignia-1000x1000-angled-right.png",
+            "image_featured": "shopify:\/\/shop_images\/Insignia-1000x1000-rear.png",
+            "panel_name": "IRiS® InSignia 10.0",
+            "pixel_pitch": "",
+            "module_resolution": "",
+            "module_pixel_quantiy": "",
+            "module_dimensions": "",
+            "module_pixel_config": "",
+            "application": "",
+            "module_weight": "",
+            "dimensions": "",
+            "resolution": "",
+            "pixel_quantity": "",
+            "module_quantity": "",
+            "material": "Aluminum Die Cast",
+            "weight": "",
+            "maitenance_type": "Both front and rear",
+            "pixel_density": "",
+            "average_power_consumption": "",
+            "max_power_consumption": "",
+            "input_power": "",
+            "brightness": "",
+            "contrast": "",
+            "color_depth": "",
+            "refresh_rate": "",
+            "frame_frequency": "",
+            "input_voltage": "",
+            "working_temp": "",
+            "working_humidity": "",
+            "optimal_viewing_distance": "",
+            "viewing_angle": "",
+            "ip_rating": "",
+            "curvature": "",
+            "lifespan": "",
+            "receiving_card": "",
+            "grayscale": "",
+            "hdr": "",
+            "scan_mode": "",
+            "special_features": "",
+            "warranty": "7 Years*",
+            "FCC_Certification": false,
+            "ETL_Certification": false,
+            "CE_Certification": false,
+            "RoHS_Certification": false
+          }
         }
       },
       "block_order": [
         "5cc96fa1-445d-466d-9665-73c8d674d9ee",
         "ea4181b2-aedd-4532-a918-d31c9a1be135",
         "5a78db3b-c5ce-4671-9b94-073aea4ba360",
-        "0097410e-7a91-44e8-91fd-2627340d5066"
+        "0097410e-7a91-44e8-91fd-2627340d5066",
+        "ae2669ec-9fc9-4722-b0cd-d1dcfbfdd9fd",
+        "74e351dd-3297-4e49-9151-6ae7c1b706b8"
       ],
       "settings": {
         "background_color_1": "#000000",
@@ -275,7 +376,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/banner-ltl.png",
+            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_InSignia.jpg",
             "title": "",
             "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
             "height": 1080,
@@ -293,16 +394,16 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/section1.png",
-            "title": "Faster, Lighter, Stronger",
+            "image": "shopify:\/\/shop_images\/IRiS_Features_InSignia1.jpg",
+            "title": "Feature 1",
             "video_url": "",
             "height": 1080,
-            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb.",
+            "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "left",
-            "title_color": "#1bc993",
+            "title_color": "#acd037",
             "copy_color": "#dad9da"
           }
         }
@@ -317,10 +418,10 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the <br>ICON Series Cutsheet",
-        "background_color": "#000000",
-        "text_color": "#1bc993",
-        "button_color": "#000000",
+        "form_text": "Download the InSignia <br>Series Cutsheet",
+        "background_color": "#141414",
+        "text_color": "#acd037",
+        "button_color": "#acd037",
         "hs_value": "IRiS ICON"
       }
     },
@@ -339,9 +440,9 @@
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
             "cta_url": "\/pages\/icon-warranty",
-            "cta_color": "#00d8ff",
+            "cta_color": "#acd037",
             "text_alignment": "left",
-            "title_color": "#a9dddd",
+            "title_color": "#acd037",
             "copy_color": "#ffffff"
           }
         },
@@ -350,7 +451,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/gt-calc.jpg",
+            "image": "shopify:\/\/shop_images\/IRiS_Calculator_InSignia.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
@@ -360,7 +461,7 @@
             "cta_color": "#ffffff",
             "text_alignment": "left",
             "title_color": "#ffffff",
-            "copy_color": "#ffeeee"
+            "copy_color": "#ffffff"
           }
         }
       },
@@ -381,7 +482,7 @@
         "background_color": "#141414",
         "product_title_color": "#ffffff",
         "subtitle_color": "#9a9a9a",
-        "cta_color": "#a9dddd",
+        "cta_color": "#acd037",
         "cta_title": ""
       }
     },
@@ -389,14 +490,7 @@
       "type": "iris-lg-form",
       "settings": {
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
-        "form_title": "Want To Learn More?",
-        "background_color": "#c83923",
-        "background_image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor.jpg",
-        "input_background": "#fdf8f7",
-        "input_border": "#a9dddd",
-        "label_color": "#ffffff",
-        "btn_color": "#ffffff",
-        "btn_background": "#1acbd1"
+        "form_title": "Want To Learn More?"
       }
     }
   },
