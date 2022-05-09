@@ -268,7 +268,7 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the InSpire™ <br>Series Cutsheet",
+        "form_text": "Download the InSpire <br>Series Cutsheet",
         "background_color": "#141414",
         "text_color": "#5762ac",
         "button_color": "#5762ac",
