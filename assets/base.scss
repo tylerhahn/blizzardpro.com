@@ -230,6 +230,9 @@ html {
   justify-content: space-around;
   .cert {
     padding: 0.25em;
+    img {
+      max-width: 37px;
+    }
   }
 }
 
