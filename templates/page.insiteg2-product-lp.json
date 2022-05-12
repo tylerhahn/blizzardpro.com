@@ -4,7 +4,7 @@
       "type": "iris-lp-hero",
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/IRiS_HeaderImage_InSite.jpg",
-        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSite.png",
+        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSite_000d9868-0864-4043-96d3-f92a9edf5cf3.png",
         "centerImage": false,
         "isLeft": true
       }
@@ -22,8 +22,8 @@
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-icons-web_rental-stage_3a20c790-4441-4279-8b6d-e0dc1eb1b4f0.png",
-            "title": "Stage \/ Rental"
+            "image": "shopify:\/\/shop_images\/iris-icons-web_small-display.png",
+            "title": "Small Display"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
@@ -36,8 +36,8 @@
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-icons-web_outdoor_764dcdd8-9075-42d8-a5fb-c23eba23bf3c.png",
-            "title": "Indoor \/ Outdoor"
+            "image": "shopify:\/\/shop_images\/iris-icons-web_fine-pixel.png",
+            "title": "Fine Pixel"
           }
         }
       },
@@ -221,13 +221,31 @@
     "banner-1": {
       "type": "lp-banner",
       "blocks": {
+        "c550f780-d3ea-4795-805e-b64a729ea5ef": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/IRiS_Features_InSite2.jpg",
+            "title": "Brighter, <br>Sharper Image",
+            "video_url": "",
+            "height": 1080,
+            "copy": "Rain or shine, the IRiS InSite delivers crisp contrast and high resolution imagery in any light.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "#f2c326",
+            "text_alignment": "left",
+            "title_color": "#f2c326",
+            "copy_color": "#ffffff"
+          }
+        },
         "a2e0e816-6ada-43fc-b42f-e52c550c28de": {
           "type": "image",
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_7004c5fb-9a99-4f0f-9e20-6d2de980b45d.jpg",
-            "title": "",
+            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_InSite.jpg",
+            "title": "Make a Statement",
             "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
             "height": 1080,
             "copy": "",
@@ -235,8 +253,8 @@
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "center",
-            "title_color": "#010101",
-            "copy_color": "#ffffff"
+            "title_color": "rgba(0,0,0,0)",
+            "copy_color": "rgba(0,0,0,0)"
           }
         },
         "546058db-7408-404f-8bfe-221e431c5a41": {
@@ -244,11 +262,11 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_Features_InSite1_38c9048c-3e18-484d-9d10-6bca69945a86.jpg",
-            "title": "Feature 1",
+            "image": "shopify:\/\/shop_images\/IRiS_Features_InSite1_22f55a17-3b64-489b-bab1-09e471649281.jpg",
+            "title": "Easy to Service",
             "video_url": "",
             "height": 1080,
-            "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "copy": "A front-serviceable, magnetic design makes maintenance a breeze and its secure, permanent build keeps installation simple,",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
@@ -259,6 +277,7 @@
         }
       },
       "block_order": [
+        "c550f780-d3ea-4795-805e-b64a729ea5ef",
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
         "546058db-7408-404f-8bfe-221e431c5a41"
       ],
@@ -284,10 +303,10 @@
             "right_aligned": true,
             "banner_type": "image",
             "image": "shopify:\/\/shop_images\/warranty-case.jpg",
-            "title": "No Fears for <br>7 Years™",
+            "title": "Indoor Video <br>Wall System",
             "video_url": "",
             "height": 1080,
-            "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
+            "copy": "The IRiS InSite package comes with the industry’s only “No Fears for 7 Years” warranty and US-based support.",
             "cta": "Learn More ›",
             "cta_url": "\/pages\/icon-warranty",
             "cta_color": "#f2c326",
