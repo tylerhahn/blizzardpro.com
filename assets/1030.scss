@@ -924,6 +924,14 @@
   #blacktop #create-customer {
     padding-top: 7em;
   }
+
+  .archi-spec-box{
+    width: 35%;
+  }
+
+  #product-flex-parent{
+    flex-direction: inherit;
+  }
 } //End bracket
 
 @media only screen and (max-width: 600px) {

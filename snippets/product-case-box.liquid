@@ -1,12 +1,43 @@
+{% assign metafield = product.metafields.f_b %}
+
+{% if metafield.Case_Study_Id != blank and metafield.Case_Study_Id != "0" %}
 <div class="prod-header">
     <h3>CASE STUDIES</h3>
     <span class="arrow"></span>
 </div>
 
-<div class="case-box-spec bg-image" style="background-image: url('{{ metafield.Hero_Section_1_Image }}'">
-    <div class="overlay"></div>
+<div id="case-bg-tar" class="case-box-spec bg-image">
+    <div class="overlay" style="background: rgba(0,0,0,0.65);"></div>
     <div class="case-caption">
-        <p>Motif Metro at Blizzard Lighting</p>
-        <a href="">Read ›</a>
+        <a id="case-title-tar"></a>
+        <a id="case-link-tar" href="">Read ›</a>
     </div>
 </div>
+
+<script>
+
+
+    const caseStudyUrl = `https://api.blizzard.lighting/shopify/post/{{metafield.Case_Study_Id}}`;
+
+    let caseStudyFetchData = {
+        method: "GET",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    }
+    fetch(caseStudyUrl).then(async res => {
+        let data = await res.text();
+
+        if(data) {
+            const json = JSON.parse(data);
+            console.log(json)
+                $('#case-bg-tar').css("backgroundImage", `url(${json.image.src}`);
+                $("#case-title-tar").text(json.title).attr("href", `/blogs/news/${json.handle}`)
+                $("#case-link-tar").attr("href", `/blogs/news/${json.handle}`)
+        }
+    })
+</script>
+
+
+{% endif %}

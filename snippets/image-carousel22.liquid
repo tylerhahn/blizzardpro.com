@@ -1,0 +1,97 @@
+{% assign time = product.images | size | | times: 15 %}
+<div class="wm-infinite-slider" data-slider-clone="2" data-slider-height="40" data-slider-time="{{time}}" id="infinite-slider-2">
+    {% for image in product.images %}
+        {% if image.src != product.featured_image and image.alt != 'hidden' %}
+            <div class="slider-row">
+                <div class="wm-logo-image-wrapper" style="width:40vh">
+                    <a data-lightbox="product-images" href="{{ image.src | product_img_url: 'master' }}">
+                        <img class="wm-logo-slider" src="{{ image.src | product_img_url: 'large' }}" alt="{{ image.alt }}">
+                    </a>
+                </div>
+
+            </div>
+        {% endif %}
+    {% endfor %}
+
+</div>
+<div class="slider"></div>
+
+
+<style>
+ .wm-infinite-slider{
+    display:flex;
+    align-items: center;
+    overflow:hidden;
+    width:100vw;
+    position:relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  .wm-infinite-slider > div{
+    display:block;
+    position:relative;
+  }
+  .wm-infinite-slider > div > .wm-logo-slider{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    object-fit:contain;
+    transform:translate(-50%, -50%);
+}
+img.wm-logo-slider {border-radius: 10px;}
+  </style>
+
+<script>
+
+$(function(){
+    $('.wm-infinite-slider').each(function(i){
+      let index = 1 + i;
+      let sliderHeight = $(this).attr('data-slider-height');
+      let slideTime = $(this).attr('data-slider-time');
+
+      /*Wrap the Gallery*/
+      $(this).find('.wm-logo-slider').each(function(){
+        $(this).wrap('<div class="wm-logo-image-wrapper" style="width:' + sliderHeight + 'vh">');
+      });
+
+      $(this).attr('id', 'infinite-slider-' + index);
+      let imageGroup = $(this).find('div');
+      let numOfSlides = $(imageGroup).length;
+      console.log(numOfSlides);
+      let sliderWidth = numOfSlides * sliderHeight;
+      /*Clone the Gallery*/
+      let sliderClone = $(this).attr('data-slider-clone');
+      let j;
+      for (j = 0; j < sliderClone; j++) {
+        let imageClone = $(imageGroup).clone();
+        $(this).append(imageClone);
+      }
+
+
+      $("<style>")
+        .prop("type", "text/css")
+        .html('\
+#infinite-slider-' + index + '.wm-infinite-slider > div::before{\
+content:"";\
+display:block;\
+width:' + sliderHeight + 'vh\
+} \
+#infinite-slider-' + index + '.wm-infinite-slider > div{ \
+animation: infiniteslider' + index + ' ' + slideTime + 's linear infinite;             \
+}\
+@keyframes infiniteslider' + index + ' {\
+0% {\
+transform:translateX(0vh);\
+}\
+100% {\
+transform:translateX(-' + sliderWidth + 'vh);\
+}\
+}')
+        .appendTo("head");
+    });
+  });
+
+</script>

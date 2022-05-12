@@ -277,6 +277,29 @@ jQuery(function ($) {
     ],
   });
 
+  //Archi slider
+
+  $("#horizontal-drawer-images").slick({
+    arrows: false,
+    centerMode: false,
+    slidesToScroll: 2,
+    slidesToShow: 4,
+    autoplay: false,
+    infinite: true,
+    adaptiveHeight: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerMode: false,
+
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+
   //homepage slider
 
   $(".hm-slider").slick({

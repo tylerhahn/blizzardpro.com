@@ -187,9 +187,11 @@ html {
   bottom: 20px;
   left: 20px;
   color: white;
+  width: 85%;
   p {
-    font-size: 1.6em;
+    font-size: 1.3em;
     line-height: 1;
+    font-weight: bold;
   }
 
   a {
@@ -200,10 +202,14 @@ html {
 }
 
 .archi-spec-box {
-  width: 25%;
+  width: 100%;
   background: #f1f2f3;
   padding: 3em;
   border-radius: 10px;
+}
+
+.center-image {
+  margin: 0 auto;
 }
 
 .case-box-spec {
@@ -220,6 +226,7 @@ html {
 
 .certifications {
   display: flex;
+  max-width: 320px;
   justify-content: space-around;
   .cert {
     padding: 0.25em;
@@ -227,9 +234,12 @@ html {
 }
 
 span.led {
-  flex-grow: 1;
+  width: 33px;
   height: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .ledcolor-R {
@@ -267,9 +277,9 @@ span.led {
 }
 
 .led-colors {
-  height: 30px;
   position: relative;
   display: flex;
+  flex-wrap:wrap;
 }
 
 .stick-exclusive {
@@ -10739,6 +10749,7 @@ h4.heading-space {
     margin: 0;
     width: 100%;
     margin-left: 5%;
+    max-width: 200px;
   }
 
   a.where-to-buy {
@@ -11030,7 +11041,8 @@ h4.heading-space {
 }
 
 #buy-box {
-  max-width: 460px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 #condensed-header {
@@ -11674,4 +11686,27 @@ span.sale-box {
 input#requestEmailButton.btn-green {
   background-color: #478447 !important;
   transition: 0.3s ease-in-out;
+}
+
+#horizontal-drawer-images {
+  .slick-slide {
+    height: auto !important; // ← that must not be ignored
+  }
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+}
+a#case-title-tar {display: block;line-height: 1.2;margin-bottom: 13px;font-weight: normal;}
+
+#product-flex-parent {
+  flex-direction: column-reverse;
+}
+
+.archi-line-item {border-bottom: 1px solid #747474;padding-bottom: 2.5px;margin-bottom: 2.5px;cursor: pointer;}
+
+.archi-line-item:last-child {
+  border-bottom: none;
 }

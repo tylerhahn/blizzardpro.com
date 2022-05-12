@@ -44,17 +44,17 @@
 <div id="product-2021">
 
     <!-- IMAGES AND BUY INFO -->
-    <div class="container-fluid">
+    <div class="container-fluid" >
 
-        <div class="row">
+        <div class="row" >
 
             <div class="col-lg-8" id="product-showcase-images">
-                <div class="row">
+                <div class="row" id="product-flex-parent">
                     <!-- IMAGE CAROUSEL -->
                     {% if isArchi %}
                     {% include 'archi-spec-box' %}
                         {% else %}
-                        <div class="col-lg-3 order-5 order-lg-1" id="side-drawer-images">
+                        <div class="col-lg-5 order-5 order-lg-1" id="side-drawer-images">
                             {% if productImagesCount > 3 %}
                                 {% for image in product.images %}
                                     {% if image.src != product.featured_image and image.alt != 'hidden' %}
@@ -68,13 +68,13 @@
                     {% endif %}
 
                     <!-- FEATURED IMAGE -->
-                    <div class="col-lg-9 order-lg-2 order-1 d-flex align-items-center justify-content-center position-relative">
-                        <div class="center-image d-flex align-items-center">
-                            {% if isArchi %}
+                    <div class="center-image col-lg-7 order-lg-2 order-1 d-flex align-items-center justify-content-center position-relative">
+                        <div class="d-flex align-items-center">
+                            <!-- {% if isArchi %}
                                 <div class="3d-box">
                                     <a href="" class="btn btn-blue">View in 3D ›</a>
                                 </div>
-                            {% endif %}
+                            {% endif %} -->
                             <img id="ProductPhotoImg" src="{{ featured_image | img_url: '2048x' }}" alt="{{ featured_image.alt | escape }}"/>
                             <div class="prod-blob">
                                 <svg version="1.1" viewbox="0 0 310 350" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -162,6 +162,12 @@
         </div>
 
     </div>
+
+    <!-- ARCHI IMAGES -->
+
+    {% if isArchi %}
+        {% include 'image-carousel22' %}
+    {% endif %}
 
     <!-- UPSELL CONTAINER -->
     {% if metafield.Upsell_Products != blank %}
