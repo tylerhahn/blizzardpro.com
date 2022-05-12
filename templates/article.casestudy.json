@@ -1,17 +1,30 @@
 {
   "sections": {
     "main": {
-      "type": "casestudy-body"
+      "type": "casestudy-body",
+      "settings": {
+      }
     },
     "header": {
-      "type": "casestudy-header"
+      "type": "casestudy-header",
+      "settings": {
+      }
     },
     "product": {
-      "type": "casestudy-product"
+      "type": "casestudy-product",
+      "settings": {
+      }
     },
     "sidebar": {
-      "type": "casestudy-sidebar"
+      "type": "casestudy-sidebar",
+      "settings": {
+      }
     }
   },
-  "order": ["header", "main", "product", "sidebar"]
+  "order": [
+    "header",
+    "main",
+    "product",
+    "sidebar"
+  ]
 }
