@@ -5,6 +5,7 @@
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/banner-icon-header_1.png",
         "series_image": "shopify:\/\/shop_images\/icon-text_1.png",
+        "centerImage": false,
         "isLeft": true
       }
     },
@@ -59,7 +60,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0001s_0001_IRiS-ICON-render-26-angled-right.png",
             "image_featured": "shopify:\/\/shop_images\/0003s_0000_IRiS-ICON-render-26.png",
-            "panel_name": "IRiS® ICON 2.6",
+            "panel_name": "IRiS® Inspire 1.5",
             "pixel_pitch": "2.6 MM",
             "module_resolution": "96 x 96",
             "module_pixel_quantiy": "9,216",
@@ -389,14 +390,7 @@
       "type": "iris-lg-form",
       "settings": {
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
-        "form_title": "Want To Learn More?",
-        "background_color": "#c83923",
-        "background_image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor.jpg",
-        "input_background": "#fdf8f7",
-        "input_border": "#a9dddd",
-        "label_color": "#ffffff",
-        "btn_color": "#ffffff",
-        "btn_background": "#1acbd1"
+        "form_title": "Want To Learn More?"
       }
     }
   },
