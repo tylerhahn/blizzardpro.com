@@ -1,9 +1,17 @@
 {
   "sections": {
     "main": {
-      "type": "casestudy-body",
-      "block_order": ["featured_image", "title", "share", "content"]
+      "type": "casestudy-body"
+    },
+    "header": {
+      "type": "casestudy-header"
+    },
+    "product": {
+      "type": "casestudy-product"
+    },
+    "sidebar": {
+      "type": "casestudy-sidebar"
     }
   },
-  "order": ["main"]
+  "order": ["header", "main", "product", "sidebar"]
 }

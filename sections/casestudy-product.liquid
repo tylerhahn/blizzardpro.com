@@ -1,0 +1,76 @@
+{% assign metafield = prod.metafields.f_b %}
+{% assign featured_image = prod.selected_or_first_available_variant.featured_image | default: prod.featured_image %}
+
+<div class="cs-product">
+    <div class="cs-prod-blob"></div>
+    <div class="cs-product-container">
+        <img src="{{ featured_image }}"/>
+        <h2>{{ prod.title }}</h2>
+        <h3>{{ metafield.Product_Subtitle | strip_html }}</h3>
+        <div class="prod-features">
+            {{ metafield.Main_Features }}
+        </div>
+    </div>
+</div>
+
+<style>
+      .cs-product {
+  background: #2FCAD3;
+  position: relative;
+}
+
+.cs-product h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+.cs-product li, h3{
+  color: white;
+  padding: 0;
+}
+
+.cs-product ul {
+  list-style: none;
+  padding: 0 0 0 18px;
+}
+
+.cs-product ul li::before {
+  content: "\2022";
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.cs-product-container {
+  position: relative;
+  padding: 3em;
+}
+.cs-product img {
+  max-width: 100%;
+  margin-bottom: 3em;
+}
+
+.cs-prod-blob {
+  position: absolute;
+
+}
+
+  </style>
+
+
+{% schema %}
+
+
+{
+    "name": "Case Study Product",
+    "settings": [
+        {
+        "type": "product",
+        "id": "prod",
+        "label": "Product"
+        }
+    ]
+}
+
+{% endschema %}
