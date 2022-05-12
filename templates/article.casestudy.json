@@ -1,23 +1,33 @@
 {
   "sections": {
-    "main": {
-      "type": "casestudy-body",
-      "settings": {
-      }
-    },
     "header": {
       "type": "casestudy-header",
       "settings": {
+        "backgroundImage": "shopify:\/\/shop_images\/Mask_Group_1.png"
+      }
+    },
+    "main": {
+      "type": "casestudy-body",
+      "settings": {
+        "body": "<p>Represented by 63 Motif™ Fresco outdoor-rated RGB LED wash fixtures, Blizzard Lighting is proud to have been part of a historic exhibit at Rome’s Colosseum by Lumin-ART Productions. Fixtures were provided by AVL Media Group (Sounds Distribution \/ Intellimix) for use in the conception and installation in Italy in 2018.<br\/>A historical monument which spans the centuries, the Colosseum is one of the main attractions for tourists worldwide, with over six million visitors per year. Under the management of archaeological park director Alfonsina Russo, it has once again become a venue for shows of all kinds.<br\/>Enter Sangue e Arena (Blood and Arena) – a highly-rated production which used VR technology to help recreate the 100-day inaugural games held to celebrate the building of the amphitheatre in AD 80!<br\/>Set up in the Colosseum, Sangue e Arena was an immersive blend of lights, music, storytelling and cinematography that brought to life the gladiatorial duels, staged animal fights, naval battles, gruesome executions of traitors and criminals, and some of the impressive engineering feats of the Roman era.<br\/>A total of 63 Motif™ Fresco outdoor RGB LED wash light fixtures from Blizzard Lighting were used to help retell the history that took place within the walls of one of Italy’s beloved wonders.<\/p>"
       }
     },
     "product": {
       "type": "casestudy-product",
       "settings": {
+        "title": "",
+        "subtitle": "",
+        "copy": "",
+        "url": ""
       }
     },
     "sidebar": {
       "type": "casestudy-sidebar",
       "settings": {
+        "challenge": "",
+        "solution": "",
+        "result": "",
+        "linkDownload": ""
       }
     }
   },
