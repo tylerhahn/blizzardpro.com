@@ -68,7 +68,7 @@
     </div>
 
     <a class="btn btn-blue" target="_blank" href="{{ sectin.settings.linkDownload }}">
-        Download this Case Study
+        Download Case Study
         <svg data-name="Group 30" height="18" id="Group_30" viewbox="0 0 18 18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <clipPath id="clip-path">
@@ -129,9 +129,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .cs-blob {
-    top: 30px;
-}
+
 
 .cs-sidebar-container {
     display: grid;
@@ -152,6 +150,11 @@
 
 
 @media screen and (min-width: 1030px) {
+    .cs--sidebar {
+        width: 28%;
+    }
+    .cs-sidebar a.btn.btn-blue {position: relative;}
+
     .cs-sidebar-container {
     display: block;
 }
@@ -162,14 +165,29 @@
 }
 
 .cs-sidebar {
-    width: 282;
     font-size: 12px;
+    margin-bottom: 10em;
 }
 
 .cs-icon-item {
     border-right: 0;
 }
 
+}
+
+@media screen and (min-width: 1280px) {
+    .cs--sidebar {
+    width: 20%;
+    }
+
+    .cs-sidebar {
+        font-size: 16px;
+        max-width: 330px;
+    }
+
+    .cs--sidebar {
+        font-size: 14px;
+    }
 }
 </style>
 
@@ -178,6 +196,7 @@
 
 {
     "name": "Case Study Sidebar",
+    "class": "cs--sidebar",
     "settings": [
         {
             "type": "textarea",

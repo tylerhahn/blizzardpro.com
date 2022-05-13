@@ -11713,3 +11713,28 @@ a#case-title-tar {display: block;line-height: 1.2;margin-bottom: 13px;font-weigh
 .archi-line-item:last-child {
   border-bottom: none;
 }
+
+div#cs--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cs--header, .cs--body, .cs--product, .cs--sidebar {
+  width: 100%;
+}
+
+.cs--sidebar{
+  order: 2;
+}
+
+.cs--body {
+  order: 3;
+}
+
+.cs--header {
+  order: 1;
+}
+
+.cs--product {
+  order: 4;
+}

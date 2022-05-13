@@ -15,10 +15,22 @@
 
 <style>
       .cs-product {
-  background: #2FCAD3;
+  background: #05051c;
   position: relative;
+
 }
 
+.cs--product {
+  display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+
+.cs-product {
+        font-size: 16px;
+        max-width: 330px;
+    }
 
 .cs-product h2, h3 {
   margin: 0;
@@ -30,7 +42,7 @@
 }
 
 .cs-product-copy p {
-    color: white;
+    color: #bebedb;
 }
 
 .cs-product-text h3 {
@@ -43,6 +55,7 @@
 
 .cs-product-text h2 {
     font-weight: bold;
+    color: #2FCAD3;
 }
 
 
@@ -77,20 +90,22 @@
 
 }
 
-@media screen and (min-width: 1030px) {
+@media screen and (min-width: 1280px) {
+    .cs--product {
+    width: 25%;
+    }
 
-.cs-product {
-    width: 282px;
-    border-top-right-radius: 9em;
-    border-bottom-right-radius: 9em;
-}
-
-.cs-product-container {
+    .cs-product-container {
     display: block;
 }
 
 .cs-product-text {
     width: 100%;
+}
+
+.cs-product {
+    border-top-left-radius: 9em;
+    border-bottom-left-radius: 10em;
 }
 
 .cs-product-container img {
@@ -100,6 +115,7 @@
 
 }
 
+
   </style>
 
 
@@ -108,6 +124,7 @@
 
 {
     "name": "Case Study Product",
+    "class": "cs--product",
     "settings": [
     {
       "type": "image_picker",

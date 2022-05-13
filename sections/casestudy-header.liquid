@@ -21,6 +21,10 @@
   height: 400px;
   margin-bottom: 200px;
   background: black;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+position: relative;
 }
 
 .cs-blob {
@@ -49,10 +53,21 @@
 
 @media screen and (min-width: 768px) {
     .cs-header {
-  margin-bottom: 0;
+        margin-bottom: 0;;
+    }
+
+    .cs-blob {
+        top: 60px;
+    }
+}
+@media screen and (min-width: 1030px) {
+.cs-header{
+    margin-bottom: 4em;
 }
 
-
+    .cs-blob {
+        top: 90px;
+    }
 }
 </style>
 
@@ -62,6 +77,7 @@
 
 {
     "name": "Case Study Header",
+    "class": "cs--header",
     "settings": [
         {
         "type": "image_picker",

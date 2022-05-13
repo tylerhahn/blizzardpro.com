@@ -1,14 +1,65 @@
 <div class="cs-body">
     <div class="cs-container">
-        {{section.settings.body}}
+        {% if section.settings.body_1 != blank %}
+            {{section.settings.body_1}}
+        {% endif %}
+
+        {% if section.settings.image_1 != blank %}
+            <div class="cs-fw-image">
+                <img src="{{section.settings.image_1 | img_url: 'master'}}"/>
+            </div>
+        {% endif %}
+
+        {% if section.settings.body_2 != blank %}
+            {{section.settings.body_2}}
+        {% endif %}
+
+        {% if section.settings.image_2 != blank %}
+            <div class="cs-fw-image">
+                <img src="{{section.settings.image_2 | img_url: 'master'}}"/>
+            </div>
+        {% endif %}
     </div>
 </div>
 
 <style>
+
+.cs-container p {padding: 0;margin: 0;}
+
     .cs-container {
     width: 90%;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 3em 0;
+}
+
+.cs-fw-image {
+    margin: 3em 0; width: 100%;
+}
+
+.cs-fw-image img {
+    width: 100%;
+}
+
+@media screen and (min-width: 1030px) {
+    .cs--body {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .cs--body {
+    width: 55%;
+    margin-top: 2em;
+    }
+
+    .cs-body{
+        font-size: 20px;
+    }
+
+    .cs-container {
+    padding: 0 2em;
+}
+
 }
 
 </style>
@@ -17,11 +68,29 @@
 
 {
     "name": "Case Study Body",
+    "class": "cs--body",
+
     "settings": [
         {
         "type": "richtext",
-        "id": "body",
-        "label": "Body Copy"
+        "id": "body_1",
+        "label": "Body Copy 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image 1"
+        },
+        {
+            "type": "richtext",
+            "id": "body_2",
+            "label": "Body Copy 2"
+        },
+
+        {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image 2"
         }
     ]
 }
