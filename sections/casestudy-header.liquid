@@ -19,6 +19,7 @@
 <style>
 .cs-header {
   height: 400px;
+  margin-bottom: 200px;
   background: black;
 }
 
@@ -30,14 +31,28 @@
 
 .cs-flex {
   display: flex;
-  width: 419px;
+  width: 380px;
   align-items: center;
   justify-content: center;
+}
+
+.cs-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3em 0;
 }
 
 .cs-header h1 {
   position: absolute;
   color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .cs-header {
+  margin-bottom: 0;
+}
+
+
 }
 </style>
 

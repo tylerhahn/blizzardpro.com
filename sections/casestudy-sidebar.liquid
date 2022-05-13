@@ -83,6 +83,95 @@
     </a>
 </div>
 
+<style>
+    .cs-sidebar {
+    padding: 2em;
+    background: #F1F2F3;
+    position: relative;
+    margin-bottom: 3em;
+}
+
+.cs-sidebar-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.cs-sidebar-header svg {
+    margin-right: 10px;
+}
+
+.cs-sidebar-header h3 {
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+.cs-icon-item {
+    border-bottom: 1px solid gray;
+    margin: 30px 0;
+}
+
+.cs-icon-item p {
+    padding-bottom: 1em;
+}
+
+.cs-sidebar a.btn.btn-blue {
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: table;
+    bottom: -20px;
+}
+
+.cs-icon-item:last-child {
+    border-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .cs-blob {
+    top: 30px;
+}
+
+.cs-sidebar-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cs-icon-item {
+    border-right: 1px solid gray;
+    border-bottom: 0;
+    padding: 0 2em;
+}
+
+.cs-icon-item:last-child {
+    border-right: 0;
+}
+
+}
+
+
+@media screen and (min-width: 1030px) {
+    .cs-sidebar-container {
+    display: block;
+}
+
+.cs-icon-item {
+    border-bottom: 1px solid gray;
+    margin: 30px 0;
+}
+
+.cs-sidebar {
+    width: 282;
+    font-size: 12px;
+}
+
+.cs-icon-item {
+    border-right: 0;
+}
+
+}
+</style>
 
 {% schema %}
 

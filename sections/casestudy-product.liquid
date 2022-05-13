@@ -2,12 +2,14 @@
     <div class="cs-prod-blob"></div>
     <div class="cs-product-container">
         <img src="{{ section.settings.image | img_url: 'master' }}"/>
-        <h2>{{ section.settings.title }}</h2>
-        <h3>{{ section.settings.subtitle }}</h3>
-        <div class="cs-product-copy">
-            {{ section.settings.copy }}
+        <div class="cs-product-text">
+            <h2>{{ section.settings.title }}</h2>
+            <h3>{{ section.settings.subtitle }}</h3>
+            <div class="cs-product-copy">
+                {{ section.settings.copy }}
+            </div>
+            <a href="{{ sections.settings.url }}" class="btn btn-blue">Learn More</a>
         </div>
-        <a href="{{ sections.settings.url }}" class="btn btn-blue">Learn More</a>
     </div>
 </div>
 
@@ -16,6 +18,7 @@
   background: #2FCAD3;
   position: relative;
 }
+
 
 .cs-product h2, h3 {
   margin: 0;
@@ -26,19 +29,22 @@
   padding: 0;
 }
 
-.cs-product ul {
-  list-style: none;
-  padding: 0 0 0 18px;
+.cs-product-copy p {
+    color: white;
 }
 
-.cs-product ul li::before {
-  content: "\2022";
-  color: black;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+.cs-product-text h3 {
+    text-transform: inherit;
+    font-weight: normal;
+    padding-bottom: .5em;
+    font-family: Source Sans Pro;
+    font-size: 1.3em;
 }
+
+.cs-product-text h2 {
+    font-weight: bold;
+}
+
 
 .cs-product-container {
   position: relative;
@@ -51,6 +57,46 @@
 
 .cs-prod-blob {
   position: absolute;
+
+}
+
+@media screen and (min-width: 768px) {
+    .cs-product-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cs-product-container img {
+    width: 47%;
+}
+
+.cs-product-text {
+    width: 48%;
+}
+
+}
+
+@media screen and (min-width: 1030px) {
+
+.cs-product {
+    width: 282px;
+    border-top-right-radius: 9em;
+    border-bottom-right-radius: 9em;
+}
+
+.cs-product-container {
+    display: block;
+}
+
+.cs-product-text {
+    width: 100%;
+}
+
+.cs-product-container img {
+    width: 100%;
+}
+
 
 }
 
