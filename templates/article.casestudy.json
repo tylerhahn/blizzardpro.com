@@ -1,27 +1,25 @@
 {
-  "name": "Case Study",
   "wrapper": "#cs--wrapper",
   "sections": {
     "header": {
       "type": "casestudy-header",
       "settings": {
-        "backgroundImage": "shopify://shop_images/Mask_Group_1.png"
+        "backgroundImage": "shopify:\/\/shop_images\/Mask_Group_1.png"
       }
     },
     "main": {
       "type": "casestudy-body",
       "settings": {
-        "body": "<p>Represented by 63 Motif™ Fresco outdoor-rated RGB LED wash fixtures, Blizzard Lighting is proud to have been part of a historic exhibit at Rome’s Colosseum by Lumin-ART Productions. Fixtures were provided by AVL Media Group (Sounds Distribution / Intellimix) for use in the conception and installation in Italy in 2018.<br/>A historical monument which spans the centuries, the Colosseum is one of the main attractions for tourists worldwide, with over six million visitors per year. Under the management of archaeological park director Alfonsina Russo, it has once again become a venue for shows of all kinds.<br/>Enter Sangue e Arena (Blood and Arena) – a highly-rated production which used VR technology to help recreate the 100-day inaugural games held to celebrate the building of the amphitheatre in AD 80!<br/>Set up in the Colosseum, Sangue e Arena was an immersive blend of lights, music, storytelling and cinematography that brought to life the gladiatorial duels, staged animal fights, naval battles, gruesome executions of traitors and criminals, and some of the impressive engineering feats of the Roman era.<br/>A total of 63 Motif™ Fresco outdoor RGB LED wash light fixtures from Blizzard Lighting were used to help retell the history that took place within the walls of one of Italy’s beloved wonders.</p>"
       }
     },
     "product": {
       "type": "casestudy-product",
       "settings": {
-        "image": "shopify://shop_images/Insignia-1000x1000-rear.png",
+        "image": "shopify:\/\/shop_images\/Insignia-1000x1000-rear.png",
         "title": "Motif™ Fresco",
         "subtitle": "Outdoor LED Wash Fixture",
-        "copy": "<p>The Motif Fresco™ is built for architectural lighting applications. Its IP65 rating and water-resistant power cable make it a great choice for an outdoor accent light, while its silent convection cooling and remote-control options make it ideal for theaters and production.</p><p><br/>• Weatherproof IP65 Rated<br/>• 4x 3W Tri-Color LEDs, 28° Beam Angle<br/>• DMX Channels: 3, 5, 7<br/>• Power: AC 100-240VAC, 50/60Hz</p>",
-        "url": "/"
+        "copy": "<p>The Motif Fresco™ is built for architectural lighting applications. Its IP65 rating and water-resistant power cable make it a great choice for an outdoor accent light, while its silent convection cooling and remote-control options make it ideal for theaters and production.<\/p><p><br\/>• Weatherproof IP65 Rated<br\/>• 4x 3W Tri-Color LEDs, 28° Beam Angle<br\/>• DMX Channels: 3, 5, 7<br\/>• Power: AC 100-240VAC, 50\/60Hz<\/p>",
+        "url": "\/"
       }
     },
     "sidebar": {
@@ -30,9 +28,14 @@
         "challenge": "A new production, Sangue e Arena, used VR technology to recreate the inaugural games held in AD 80. Lighting designer Simon Gauthier was tasked with setting the stage.",
         "solution": "Lumin-ART Productions, a world leader in the performing arts sector, used 63 Motif™ Frescos to create a stimulating atmosphere in the father of all modern stadiums.",
         "result": "A digitally and historically outstanding exhibition. Thanks to extensive international collaboration, the team illuminated the past and brought it to life.",
-        "linkDownload": "/"
+        "linkDownload": "\/"
       }
     }
   },
-  "order": ["header", "main", "product", "sidebar"]
+  "order": [
+    "header",
+    "main",
+    "product",
+    "sidebar"
+  ]
 }
