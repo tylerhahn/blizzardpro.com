@@ -1,20 +1,12 @@
 <div class="cs-header" style="background-image: url({{ section.settings.backgroundImage | img_url: 'master' }})">
-    <div class="cs-blob">
-        <div class="cs-flex">
-            <h1>{{ article.title }}</h1>
-            <svg data-name="Group 8" height="409" id="Group_8" viewbox="0 0 419 409" width="419" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <clipPath id="clip-path">
-                        <rect data-name="Rectangle 12" fill="#2928ff" height="409" id="Rectangle_12" width="419"/>
-                    </clipPath>
-                </defs>
-                <g clip-path="url(#clip-path)" data-name="Group 7" id="Group_7">
-                    <path d="M88.764.624,349.8,33.215A79.045,79.045,0,0,1,419,111.687V297.779A79.045,79.045,0,0,1,350.918,376.1l-230.41,32.132a79,79,0,0,1-89.287-68.727L.6,88.692C-5.639,37.6,37.756-5.744,88.764.624" data-name="Path 3" fill="#2928ff" id="Path_3" transform="translate(0 0)"/>
-                </g>
-            </svg>
+    {% if section.settings.title_svg %}
+        <div class="cs-blob">
+            {{ section.settings.title_svg }}
         </div>
-    </div>
+    {% endif %}
+
 </div>
+
 
 <style>
 .cs-header {
@@ -27,9 +19,21 @@
 position: relative;
 }
 
+.st3 {
+    font-weight: bold;
+    font-family: 'Source Sans Pro';
+}
+
+.st6 {
+    font-weight: 300;
+    font-family: 'Source Sans Pro';
+}
+
+
 .cs-blob {
   position: relative;
   top: 180px;
+  max-width: 420px;
   transform: scale(0.9);
 }
 
@@ -83,9 +87,14 @@ width: 75%;
     "class": "cs--header",
     "settings": [
         {
-        "type": "image_picker",
-        "id": "backgroundImage",
-        "label": "Background Image"
+            "type": "image_picker",
+            "id": "backgroundImage",
+            "label": "Background Image"
+        },
+        {
+            "type": "html",
+            "id": "title_svg",
+            "label": "Title SVG"
         }
     ]
 }

@@ -1,5 +1,8 @@
 <div class="cs-body">
     <div class="cs-container">
+        {% if section.settings.body_1_title != blank %}
+            <h3>{{ body_1_title }}</h3>
+        {% endif %}
         {% if section.settings.body_1 != blank %}
             {{section.settings.body_1 | newline_to_br}}
         {% endif %}
@@ -8,6 +11,10 @@
             <div class="cs-fw-image">
                 <img src="{{section.settings.image_1 | img_url: 'master'}}"/>
             </div>
+        {% endif %}
+
+        {% if section.settings.body_2_title != blank %}
+            <h3>{{ body_2_title }}</h3>
         {% endif %}
 
         {% if section.settings.body_2 != blank %}
@@ -20,6 +27,10 @@
             </div>
         {% endif %}
 
+        {% if section.settings.body_3_title != blank %}
+            <h3>{{ body_3_title }}</h3>
+        {% endif %}
+
         {% if section.settings.body_3 != blank %}
             {{section.settings.body_3 | newline_to_br}}
         {% endif %}
@@ -28,6 +39,13 @@
 </div>
 
 <style>
+
+.cs-body h3 {
+    text-transform: inherit;
+    color: blue;
+    padding-bottom: .5em;
+}
+
 
 .cs-container p {padding: 0;margin: 0; padding-bottom: 1em;}
 
@@ -77,6 +95,11 @@
 
     "settings": [
         {
+            "type": "textarea",
+            "id": "body_1_title",
+            "label": "Body Title 1"
+        },
+        {
         "type": "richtext",
         "id": "body_1",
         "label": "Body Copy 1"
@@ -87,6 +110,11 @@
             "label": "Image 1"
         },
         {
+            "type": "textarea",
+            "id": "body_2_title",
+            "label": "Body Title 2"
+        },
+        {
             "type": "richtext",
             "id": "body_2",
             "label": "Body Copy 2"
@@ -95,6 +123,11 @@
             "type": "image_picker",
             "id": "image_2",
             "label": "Image 2"
+        },
+        {
+            "type": "textarea",
+            "id": "body_3_title",
+            "label": "Body Title 3"
         },
         {
             "type": "richtext",
