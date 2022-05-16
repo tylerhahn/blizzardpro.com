@@ -19,6 +19,11 @@
                 <img src="{{section.settings.image_2 | img_url: 'master'}}"/>
             </div>
         {% endif %}
+
+        {% if section.settings.body_3 != blank %}
+            {{section.settings.body_3 | newline_to_br}}
+        {% endif %}
+
     </div>
 </div>
 
@@ -86,12 +91,16 @@
             "id": "body_2",
             "label": "Body Copy 2"
         },
-
         {
             "type": "image_picker",
             "id": "image_2",
             "label": "Image 2"
-        }
+        },
+        {
+            "type": "richtext",
+            "id": "body_3",
+            "label": "Body Copy 3"
+        },
     ]
 }
 
