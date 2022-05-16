@@ -1,7 +1,7 @@
 <div class="cs-body">
     <div class="cs-container">
         {% if section.settings.body_1 != blank %}
-            {{section.settings.body_1}}
+            {{section.settings.body_1 | newline_to_br}}
         {% endif %}
 
         {% if section.settings.image_1 != blank %}
@@ -11,7 +11,7 @@
         {% endif %}
 
         {% if section.settings.body_2 != blank %}
-            {{section.settings.body_2}}
+            {{section.settings.body_2 | newline_to_br}}
         {% endif %}
 
         {% if section.settings.image_2 != blank %}
