@@ -1,7 +1,7 @@
 <div class="cs-body">
     <div class="cs-container">
         {% if section.settings.body_1_title != blank %}
-            <h3>{{ body_1_title }}</h3>
+            <h3>{{ section.settings.body_1_title }}</h3>
         {% endif %}
         {% if section.settings.body_1 != blank %}
             {{section.settings.body_1 | newline_to_br}}
@@ -14,7 +14,7 @@
         {% endif %}
 
         {% if section.settings.body_2_title != blank %}
-            <h3>{{ body_2_title }}</h3>
+            <h3>{{ section.settings.body_2_title }}</h3>
         {% endif %}
 
         {% if section.settings.body_2 != blank %}
@@ -28,7 +28,7 @@
         {% endif %}
 
         {% if section.settings.body_3_title != blank %}
-            <h3>{{ body_3_title }}</h3>
+            <h3>{{ section.settings.body_3_title }}</h3>
         {% endif %}
 
         {% if section.settings.body_3 != blank %}
