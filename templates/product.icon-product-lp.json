@@ -150,7 +150,7 @@
             "refresh_rate": "≥3,840 hz",
             "frame_frequency": "50\/60 HZ",
             "input_voltage": "110~220V AC",
-            "working_temp": "10° ~+40℃",
+            "working_temp": "-10° ~+40℃",
             "working_humidity": "10% - 90% RH",
             "optimal_viewing_distance": "2.6 - 26.0 m",
             "viewing_angle": "140° \/ 140° h\/v",
