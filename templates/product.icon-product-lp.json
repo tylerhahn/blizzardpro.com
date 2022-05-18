@@ -148,7 +148,7 @@
             "contrast": "5,000:1",
             "color_depth": "14 BIT",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50\/60",
+            "frame_frequency": "50\/60 HZ",
             "input_voltage": "110~220V AC",
             "working_temp": "10° ~+40℃",
             "working_humidity": "10% - 90% RH",
