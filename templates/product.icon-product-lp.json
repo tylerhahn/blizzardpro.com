@@ -134,7 +134,7 @@
             "application": "Indoor",
             "module_weight": "",
             "dimensions": "500 x 500 x 72 MM",
-            "resolution": "192 x 192",
+            "resolution": "168 x 168",
             "pixel_quantity": "36,864",
             "module_quantity": "2 x 2",
             "material": "Aluminum Die Cast",
