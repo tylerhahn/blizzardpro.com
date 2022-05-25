@@ -5,6 +5,7 @@
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/gt-series-a.png",
         "series_image": "shopify:\/\/shop_images\/gtseries-header.png",
+        "centerImage": false,
         "isLeft": true
       }
     },
@@ -68,14 +69,14 @@
             "image": "shopify:\/\/shop_images\/iris-gt3-xl-right.png",
             "image_featured": "shopify:\/\/shop_images\/gt3-xl.png",
             "panel_name": "IRiS® GT3 XL",
-            "pixel_pitch": "3.9 MM",
+            "pixel_pitch": "3.91 MM",
             "module_resolution": "64 x 128",
             "module_pixel_quantiy": "8,192",
             "module_dimensions": "250 x 500 mm",
             "module_pixel_config": "SMD 1921 3-in-1",
             "application": "Outdoor",
             "module_weight": "1.3 KG",
-            "dimensions": "500 x 1000 x 80 MM",
+            "dimensions": "500 x 1000 x 80.6 MM",
             "resolution": "128 x 256",
             "pixel_quantity": "32,768",
             "module_quantity": "2 x 2",
@@ -355,14 +356,7 @@
       "type": "iris-lg-form",
       "settings": {
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
-        "form_title": "Test Drive Today",
-        "background_color": "#c83923",
-        "background_image": "shopify:\/\/shop_images\/form-bg.jpg",
-        "input_background": "#fdf8f7",
-        "input_border": "#f28c7d",
-        "label_color": "#fdbbb2",
-        "btn_color": "#ffffff",
-        "btn_background": "#d17a1a"
+        "form_title": "Test Drive Today"
       }
     }
   },
