@@ -118,7 +118,7 @@
             "image": "shopify:\/\/shop_images\/iris-gt3-right.png",
             "image_featured": "shopify:\/\/shop_images\/gt3-rear.png",
             "panel_name": "IRiS® GT3",
-            "pixel_pitch": "3.9 mm",
+            "pixel_pitch": "3.91 mm",
             "module_resolution": "64 x 128",
             "module_pixel_quantiy": "8,192",
             "module_dimensions": "250 x 500 mm",
