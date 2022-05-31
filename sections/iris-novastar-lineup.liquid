@@ -25,11 +25,15 @@
             </div>
         {% endfor %}
     </div>
+    {% if section.settings.cta_url != blank %}
+        <a href="{{ section.settings.cta_url }}" class="btn btn-blue" style="display: table; margin: 0 auto">{{ section.settings.cta_title }}</a>
+    {% endif %}
 </div>
 
 <style>
 
 .iris-lp-collection {
+    padding-bottom: 5em;
     background: {{ section.settings.background_color }};
 }
 
@@ -125,13 +129,13 @@
          "type": "textarea",
          "id": "headline" ,
          "label": "Headline",
-         "default": "Nice Headline"
+         "default": "Powered by NovaStar"
         },
         {
          "type": "textarea",
          "id": "subheadline" ,
          "label": "Subheadline",
-         "default": "This is the subheadline"
+         "default": "Check out these complimentary NovaStar products"
         },
         {
          "type": "number",
@@ -156,12 +160,17 @@
         {
          "type": "color",
          "id": "cta_color" ,
-         "label": "Cta color"
+         "label": "CTA color"
         },
         {
          "type": "text",
          "id": "cta_title" ,
-         "label": "Cta title"
+         "label": "CTA title"
+        },
+        {
+            "type": "text",
+            "id": "cta_url" ,
+            "label": "CTA url"
         }
     ],
     "presets": [
