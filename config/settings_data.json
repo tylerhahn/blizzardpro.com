@@ -216,6 +216,26 @@
       "161280708581d6b51f": {
         "type": "slider",
         "blocks": {
+          "b0489af9-4025-41f7-8171-81e86337adf8": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BackOnTour_HomepageHeader_Desktop.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/BackOnTour_HomepageHeader_Mobile.jpg",
+              "video_url": "",
+              "subheadline": "",
+              "subheadline_color": "#ffffff",
+              "headline": "",
+              "paragraph": "",
+              "headline_color": "rgba(0,0,0,0)",
+              "main_cta_title": "",
+              "main_cta_url": "shopify:\/\/collections\/tour-22",
+              "main_cta_background_color": "rgba(0,0,0,0)",
+              "main_cta_text_color": "rgba(0,0,0,0)",
+              "sec_cta_title": "Learn More",
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
+            }
+          },
           "04c03c26-ab8d-4dc7-95b6-9f0ff128e567": {
             "type": "image",
             "settings": {
@@ -255,32 +275,12 @@
               "sec_cta_text_color": "#ffffff",
               "sec_cta_url": ""
             }
-          },
-          "b0489af9-4025-41f7-8171-81e86337adf8": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/icon-v2-desktop.png",
-              "image_mobile": "shopify:\/\/shop_images\/icon-v2-mobile.png",
-              "video_url": "",
-              "subheadline": "",
-              "subheadline_color": "#ffffff",
-              "headline": "",
-              "paragraph": "",
-              "headline_color": "rgba(0,0,0,0)",
-              "main_cta_title": "",
-              "main_cta_url": "shopify:\/\/pages\/iris",
-              "main_cta_background_color": "rgba(0,0,0,0)",
-              "main_cta_text_color": "rgba(0,0,0,0)",
-              "sec_cta_title": "Learn More",
-              "sec_cta_text_color": "#ffffff",
-              "sec_cta_url": ""
-            }
           }
         },
         "block_order": [
+          "b0489af9-4025-41f7-8171-81e86337adf8",
           "04c03c26-ab8d-4dc7-95b6-9f0ff128e567",
-          "84184c44-caff-4484-8e40-6d5a1ae3c4e1",
-          "b0489af9-4025-41f7-8171-81e86337adf8"
+          "84184c44-caff-4484-8e40-6d5a1ae3c4e1"
         ],
         "settings": {
         }
