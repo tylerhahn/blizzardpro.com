@@ -70,7 +70,7 @@
             "module_weight": "",
             "dimensions": "600 x 337.5 x 49",
             "resolution": "480 x 270",
-            "pixel_quantity": "129,000",
+            "pixel_quantity": "129,600",
             "module_quantity": "2 x 2",
             "material": "Aluminum Die Cast",
             "weight": "4.9",
@@ -333,7 +333,8 @@
         "product_title_color": "#ffffff",
         "subtitle_color": "#9a9a9a",
         "cta_color": "#a9dddd",
-        "cta_title": ""
+        "cta_title": "",
+        "cta_url": ""
       }
     },
     "form": {
