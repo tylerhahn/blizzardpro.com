@@ -1837,24 +1837,24 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/design.png",
-              "title": "FASTER, LIGHTER, STRONGER",
-              "paragraph": "Designed to be more efficient & user-friendly, ICON panels are in perfect locking position out of the case, and lock together with a single flick of the thumb. They include one-touch retractable metal corner protectors, blackout gaskets & ground support locks all within a frame that’s nearly 20% lighter than our IRiS® IP3 panel."
+              "title": "Environment",
+              "paragraph": "Certain video panels are rated to\nbe installed indoors, outdoors, or\nboth. Different panels are built for\ndifferent needs."
             }
           },
           "5c15e5d8-8abf-438c-b77a-b7bf2dc8d0fb": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/truck.png",
-              "title": "READY TO HIT THE ROAD",
-              "paragraph": "On the road or parked in a studio, ICON's ATA-spec roto-molded cases are better than ever. Self-aligning magnetic casters make stacking cases for transport a breeze (and saves your fingers!), while available ground-stack and flush-mount hardware build immersive experiences to keep your audience coming back for more!"
+              "title": "Pixel Pitch",
+              "paragraph": "The pixel pitch (PP) of a panel\ndefines how close you can get to\nthe video panel without a loss of\nresolution. The lower the number,\nthe closer you can get without any\nloss of quality."
             }
           },
           "0a192d00-9e05-4e91-a3ea-cb578c17ee8e": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/warranty.png",
-              "title": "NO FEARS FOR 7 YEARS™",
-              "paragraph": "ICON LED video products are backed by the industry’s only seven-year limited warranty, with coverage designed to keep panels in the field, not in a repair shop. Plus, as NovaStar's #1 U.S. distributor, Blizzard Lighting provides local service & support for processors & controllers under NovaStar's three-year warranty."
+              "title": "Refresh Rate",
+              "paragraph": "The refresh rate affects how\nquickly your video panel responds\nto changes. A high refresh rate\nis essential to highly visual\npresentations, where a still image\ndoes not need as high refresh."
             }
           }
         },
@@ -1870,12 +1870,12 @@
       "iris-simple-collection": {
         "type": "iris-simple-collection",
         "settings": {
-          "header_title": "More IRiS LED Video Panels",
-          "header_sub": "Build a Free Quote Today!",
+          "header_title": "IRiS Accessories",
+          "header_sub": "Shop cases, fly bars, and more",
           "background_color": "#fcfcfc",
-          "limit": 3,
+          "limit": 4,
           "h_gutter": 3,
-          "collection": "iris-video-wall-series"
+          "collection": "current-iris-accessories"
         }
       },
       "series-blocks": {
