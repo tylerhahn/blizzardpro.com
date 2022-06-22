@@ -1885,11 +1885,12 @@
             "type": "image",
             "settings": {
               "logo": "shopify:\/\/shop_images\/logo-icon.png",
-              "icon_1": "shopify:\/\/shop_images\/icons-inspire-perma.png",
+              "icon_1": "shopify:\/\/shop_images\/icons-icon-perma.png",
               "icon_text_1": "Permanent Install",
               "icon_2": "shopify:\/\/shop_images\/icons-icon-stage.png",
-              "icon_text_2": "Stage \/",
+              "icon_text_2": "Rental \/ Stage",
               "icon_text_3": "",
+              "panel_image": "shopify:\/\/shop_images\/icon-brochure-cover.png",
               "cta_title": "Learn More ›",
               "cta_url": ""
             }
