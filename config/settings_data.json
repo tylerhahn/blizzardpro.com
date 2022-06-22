@@ -1828,7 +1828,7 @@
           "75292788-d80b-4ed8-95cf-45a95e010cc3": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/chip.png",
+              "image": "shopify:\/\/shop_images\/icons-install.png",
               "title": "INSTALLATION",
               "paragraph": "Whether you’re building a\npermanent, 24\/7 install, or taking\nyour panels on the road, we have\noptions that cover a variety of use\ncases."
             }
@@ -1836,7 +1836,7 @@
           "92b6fb1d-8a89-48a2-93d4-d8a9a92941cd": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/design.png",
+              "image": "shopify:\/\/shop_images\/icons-env.png",
               "title": "Environment",
               "paragraph": "Certain video panels are rated to\nbe installed indoors, outdoors, or\nboth. Different panels are built for\ndifferent needs."
             }
@@ -1844,7 +1844,7 @@
           "5c15e5d8-8abf-438c-b77a-b7bf2dc8d0fb": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/truck.png",
+              "image": "shopify:\/\/shop_images\/icons-pp.png",
               "title": "Pixel Pitch",
               "paragraph": "The pixel pitch (PP) of a panel\ndefines how close you can get to\nthe video panel without a loss of\nresolution. The lower the number,\nthe closer you can get without any\nloss of quality."
             }
@@ -1852,7 +1852,7 @@
           "0a192d00-9e05-4e91-a3ea-cb578c17ee8e": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/warranty.png",
+              "image": "shopify:\/\/shop_images\/icons-rr.png",
               "title": "Refresh Rate",
               "paragraph": "The refresh rate affects how\nquickly your video panel responds\nto changes. A high refresh rate\nis essential to highly visual\npresentations, where a still image\ndoes not need as high refresh."
             }
