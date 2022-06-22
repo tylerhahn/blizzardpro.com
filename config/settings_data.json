@@ -1880,6 +1880,24 @@
       },
       "series-blocks": {
         "type": "series-blocks",
+        "blocks": {
+          "fba70495-1ce1-4368-9e58-8f73a6e6919a": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/logo-icon.png",
+              "icon_1": "shopify:\/\/shop_images\/icons-inspire-perma.png",
+              "icon_text_1": "Permanent Install",
+              "icon_2": "shopify:\/\/shop_images\/icons-icon-stage.png",
+              "icon_text_2": "Stage \/",
+              "icon_text_3": "",
+              "cta_title": "Learn More ›",
+              "cta_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "fba70495-1ce1-4368-9e58-8f73a6e6919a"
+        ],
         "settings": {
           "headline": "",
           "subheadline": ""
