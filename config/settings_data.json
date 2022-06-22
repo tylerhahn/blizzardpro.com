@@ -1293,8 +1293,8 @@
           "bd96f581-6032-449a-86fc-4d8027151d8a": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/1920x696-web-instock.png",
-              "image_mobile": "shopify:\/\/shop_images\/square-instock.png",
+              "image": "shopify:\/\/shop_images\/iris_header_web.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/iris_header_mobile.jpg",
               "video_url": "",
               "img_width": 40,
               "subheadline": "",
@@ -1303,7 +1303,7 @@
               "paragraph": "",
               "headline_color": "#ffffff",
               "main_cta_title": "",
-              "main_cta_url": "shopify:\/\/pages\/iris-gt-series",
+              "main_cta_url": "",
               "main_cta_background_color": "#282bf6",
               "main_cta_text_color": "#ffffff",
               "sec_cta_title": "Learn More",
@@ -1876,6 +1876,13 @@
           "limit": 3,
           "h_gutter": 3,
           "collection": "iris-video-wall-series"
+        }
+      },
+      "series-blocks": {
+        "type": "series-blocks",
+        "settings": {
+          "headline": "",
+          "subheadline": ""
         }
       }
     },
