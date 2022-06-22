@@ -1334,11 +1334,11 @@
           "9f8ece03-c256-42ad-8954-db2b814ffd00": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/APPROVED-MVIMG_20190705_223506_1-3-768x486.png",
+              "image": "shopify:\/\/shop_images\/IRiS_22_-_2.png",
               "video_url": "",
-              "headline": "No Fears for 7 Years™",
-              "cta_title": "Learn More ›",
-              "cta_url": "\/blogs\/news\/introducing-iris-icon-led-video-wall-products"
+              "headline": "Which led video display is right for you?",
+              "cta_title": "Take the quiz ›",
+              "cta_url": "https:\/\/iris-suggest.netlify.app\/"
             }
           },
           "37b6dcbb-6600-4545-94ab-7a6c11a97d11": {
