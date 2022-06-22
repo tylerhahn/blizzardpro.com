@@ -1936,17 +1936,32 @@
               "cta_title": "Learn More ›",
               "cta_url": ""
             }
+          },
+          "eefee9e8-c2f9-4b6c-b9db-7806a1f632b2": {
+            "type": "image",
+            "settings": {
+              "logo": "shopify:\/\/shop_images\/logo-inspire.png",
+              "icon_1": "shopify:\/\/shop_images\/icons-inspire-perma.png",
+              "icon_text_1": "Permanent Install",
+              "icon_2": "shopify:\/\/shop_images\/icons-inspire-fine.png",
+              "icon_text_2": "Fine Pixel",
+              "icon_text_3": "",
+              "panel_image": "shopify:\/\/shop_images\/inspire-brochure-cover.png",
+              "cta_title": "Learn More ›",
+              "cta_url": ""
+            }
           }
         },
         "block_order": [
           "fba70495-1ce1-4368-9e58-8f73a6e6919a",
           "fb0724b8-0d70-4420-a3e8-af259434164d",
           "2e7d32c3-4409-4cb9-88e7-f2578752a15d",
-          "cf1971e5-f100-4252-8db1-b8d6d6f64b68"
+          "cf1971e5-f100-4252-8db1-b8d6d6f64b68",
+          "eefee9e8-c2f9-4b6c-b9db-7806a1f632b2"
         ],
         "settings": {
-          "headline": "",
-          "subheadline": ""
+          "headline": "Browse the IRiS Lineup",
+          "subheadline": "Find the perfect LED video wall for your next project"
         }
       }
     },
