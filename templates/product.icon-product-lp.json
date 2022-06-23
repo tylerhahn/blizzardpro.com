@@ -123,7 +123,7 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0001_IRiS-ICON-render-26-angled-right.png",
+            "image": "shopify:\/\/shop_images\/icon_26_dual.png",
             "image_featured": "shopify:\/\/shop_images\/0003s_0000_IRiS-ICON-render-26.png",
             "panel_name": "IRiS® ICON™ 2.6",
             "pixel_pitch": "2.6 MM",
@@ -172,7 +172,7 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0002_IRiS-ICON-render-29-angled-right.png",
+            "image": "shopify:\/\/shop_images\/icon_29_dual.png",
             "image_featured": "shopify:\/\/shop_images\/0003s_0001_IRiS-ICON-render-29.png",
             "panel_name": "IRiS® ICON™ 2.9",
             "pixel_pitch": "2.9 mm",
@@ -221,7 +221,7 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right.png",
+            "image": "shopify:\/\/shop_images\/icon_ip3_dual.png",
             "image_featured": "shopify:\/\/shop_images\/0003s_0002_IRiS-ICON-render-ip3.png",
             "panel_name": "IRIS® ICON™ IP3",
             "pixel_pitch": "3.9 MM",
@@ -270,7 +270,7 @@
         "0097410e-7a91-44e8-91fd-2627340d5066": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ICON-IP3XL-angled-right.png",
+            "image": "shopify:\/\/shop_images\/icon-ip3xl-dual.png",
             "image_featured": "shopify:\/\/shop_images\/icon-ip3xl-rear.png",
             "panel_name": "IRIS® ICON™ IP3 XL",
             "pixel_pitch": "3.9 mm",
