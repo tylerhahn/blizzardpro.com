@@ -3,8 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/inspire_header.jpg",
-        "series_image": "shopify:\/\/shop_images\/inspire_logo.png",
+        "hero_image": "shopify:\/\/shop_images\/IRiS_HeaderImage_InSpire_13355831-f6d1-498d-83b5-49b3a363dc84.jpg",
+        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSpire.png",
         "centerImage": false,
         "isLeft": true
       }
@@ -218,7 +218,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_26157b64-6e94-421e-8297-88177b5ccc3a.jpg",
+            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_InSpire.jpg",
             "title": "",
             "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
             "height": 1080,
