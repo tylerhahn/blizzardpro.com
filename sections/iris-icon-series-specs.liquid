@@ -1,86 +1,93 @@
-<div id="warranty-info" class="contact-iris-container"></div>
-<div class="bl-icon-usps" style="background: #121212">
-   <div class="row">
-    {% for block in section.blocks %}
-    <div class="col-sm-6">
-      <div class="col-title">
-        <img src="{{ block.settings.image | img_url: 'master' }}" />
-        <h3>{{block.settings.title}}</h3>
-      </div>
-      {% include 'iris-icon-linework' %}
+<div class="contact-iris-container" id="warranty-info"></div>
+<div class="bl-icon-usps" style="background: #060709">
+    <div class="row">
+        {% for block in section.blocks %}
+            <div class="col-sm-6">
+                <div class="col-title">
+                    <img src="{{ block.settings.image | img_url: 'master' }}"/>
+                    <h3>{{block.settings.title}}</h3>
+                </div>
+                {% include 'iris-icon-linework' %}
 
-      <p>{{block.settings.paragraph}}</p>
+                <p>{{block.settings.paragraph}}</p>
+            </div>
+        {% endfor %}
     </div>
-  {% endfor %}
-   </div>
 
-  </div>
+</div>
 
-  {% schema %}
-  {
+{% schema %}
+
+{
     "name": "Collection Lineup",
     "settings": [
-    {
-        "type": "header",
-        "content": "Series Specs"
-    }
-    ],
-
-    "blocks" : [
-      {
-        "type": "image",
-        "name": "Series Specs",
-        "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-      },
-      {
-        "type": "textarea",
-        "id": "title",
-        "label": "Title"
-    },
-      {
-        "type": "textarea",
-        "id": "paragraph",
-        "label": "Copy"
-    }
-        ]
-      }
+            "type": "header",
+            "content": "Series Specs"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Series Specs",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }, {
+                    "type": "textarea",
+                    "id": "title",
+                    "label": "Title"
+                }, {
+                    "type": "textarea",
+                    "id": "paragraph",
+                    "label": "Copy"
+                }
+            ]
+        }
     ]
-  }
+}
+
 {% endschema %}
 
 <style>
-.col-title {
-    display: flex;
-    align-items: center;
-    color: 1bc993;
-}
+    .col-title {
+        display: flex;
+        align-items: center;
+        color: 1bc993;
+    }
 
-.col-title img {
-    max-height: 40px;
-    margin-right: 20px;
-}
+    .col-title img {
+        max-height: 40px;
+        margin-right: 20px;
+    }
 
-.bl-icon-usps .col-sm-6 {
-  padding: 3em 1.5em;
-}
+    .bl-icon-usps .col-sm-6 {
+        padding: 3em 1.5em;
+    }
 
-.bl-icon-usps p {
-    color: dad9da;
-}
+    .bl-icon-usps p {
+        font-size: 1.1em;
+        color: dad9da;
+    }
+    .bl-icon-usps h3 {
+        margin: 0;
+    }
 
-.bl-icon-usps {
-    padding: 2em 0;
-}
+    .bl-icon-usps {
+        padding: 2em 0;
+    }
 
-.bl-icon-usps .row {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-}
+    .bl-icon-usps .row {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+    }
 
-.icon-linework svg {display: block;width: 60%; margin-bottom: 30px}
+    .icon-linework svg {
+        display: block;
+        width: 60%;
+        margin-bottom: 30px
+    }
 </style>
