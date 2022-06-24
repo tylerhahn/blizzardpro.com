@@ -391,15 +391,15 @@
             "right_aligned": true,
             "banner_type": "image",
             "image": "shopify:\/\/shop_images\/warranty-case.jpg",
-            "title": "No Fears for <br>7 Years™",
+            "title": "No Fears for 7 Years™",
             "video_url": "",
             "height": 1080,
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
             "cta_url": "\/pages\/icon-warranty",
-            "cta_color": "#00d8ff",
+            "cta_color": "#1bc993",
             "text_alignment": "left",
-            "title_color": "#a9dddd",
+            "title_color": "#1bc993",
             "copy_color": "#ffffff"
           }
         },
