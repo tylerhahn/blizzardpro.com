@@ -394,7 +394,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_Features_InSignia1.jpg",
+            "image": "shopify:\/\/shop_images\/insignia-section-1.jpg",
             "title": "Meticulous Design",
             "video_url": "",
             "height": 1080,
@@ -406,11 +406,49 @@
             "title_color": "#acd037",
             "copy_color": "#dad9da"
           }
+        },
+        "4dd985dd-58a3-47bb-80f0-1792fae84f22": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/insignia-section-3.jpg",
+            "title": "Versatile Digital Signage",
+            "video_url": "",
+            "height": 1080,
+            "copy": "The InSignia™ series meets the needs of any commercial display with easy-to-install, custom-sized LED panels ready for indoor or IP65-rated outdoor use.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "#acd037",
+            "text_alignment": "left",
+            "title_color": "#acd037",
+            "copy_color": "#ffffff"
+          }
+        },
+        "bf87374c-b293-4dff-b7bc-bc9dabea4630": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/insignia-section-2_4447a336-988f-49e3-af99-6362b2089057.jpg",
+            "title": "High-Res, Super Bright",
+            "video_url": "",
+            "height": 1080,
+            "copy": "Choose from a high resolution, 1.9mm fine pixel display to a 10.0mm pixel pitch panel with 7,000 nit brightness for an outstanding LED display.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "left",
+            "title_color": "#acd037",
+            "copy_color": "#ffffff"
+          }
         }
       },
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
-        "546058db-7408-404f-8bfe-221e431c5a41"
+        "546058db-7408-404f-8bfe-221e431c5a41",
+        "4dd985dd-58a3-47bb-80f0-1792fae84f22",
+        "bf87374c-b293-4dff-b7bc-bc9dabea4630"
       ],
       "settings": {
       }
