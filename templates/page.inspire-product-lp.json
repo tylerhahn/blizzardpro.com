@@ -248,11 +248,30 @@
             "title_color": "#5762ac",
             "copy_color": "#ffffff"
           }
+        },
+        "2133fe71-5a66-4eb6-a203-3913dcdb98d9": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/inspire_section_0.jpg",
+            "title": "Permanent <br>LED Screens for Worship",
+            "video_url": "",
+            "height": 1080,
+            "copy": "With easy flush wall-mounting, 100% front-service design & our upgraded 7-year limited warranty, IRiS® InSpire™ is perfect for fixed installation at places of worship.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "left",
+            "title_color": "#7456e0",
+            "copy_color": "#ffffff"
+          }
         }
       },
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
-        "546058db-7408-404f-8bfe-221e431c5a41"
+        "546058db-7408-404f-8bfe-221e431c5a41",
+        "2133fe71-5a66-4eb6-a203-3913dcdb98d9"
       ],
       "settings": {
       }
