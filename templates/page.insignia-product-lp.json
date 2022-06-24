@@ -371,24 +371,6 @@
     "banner-1": {
       "type": "lp-banner",
       "blocks": {
-        "a2e0e816-6ada-43fc-b42f-e52c550c28de": {
-          "type": "image",
-          "settings": {
-            "right_aligned": false,
-            "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_InSignia.jpg",
-            "title": "",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
-            "height": 1080,
-            "copy": "",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "center",
-            "title_color": "#010101",
-            "copy_color": "#ffffff"
-          }
-        },
         "546058db-7408-404f-8bfe-221e431c5a41": {
           "type": "image",
           "settings": {
@@ -445,7 +427,6 @@
         }
       },
       "block_order": [
-        "a2e0e816-6ada-43fc-b42f-e52c550c28de",
         "546058db-7408-404f-8bfe-221e431c5a41",
         "4dd985dd-58a3-47bb-80f0-1792fae84f22",
         "bf87374c-b293-4dff-b7bc-bc9dabea4630"
