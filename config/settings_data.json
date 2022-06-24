@@ -1338,7 +1338,8 @@
               "video_url": "",
               "headline": "Which led video display is right for you?",
               "cta_title": "Take the quiz ›",
-              "cta_url": "https:\/\/iris-suggest.netlify.app\/"
+              "cta_url": "https:\/\/iris-suggest.netlify.app\/",
+              "new_window": true
             }
           },
           "37b6dcbb-6600-4545-94ab-7a6c11a97d11": {
@@ -1348,7 +1349,8 @@
               "video_url": "",
               "headline": "Online Quote Tool",
               "cta_title": "Build Quote ›",
-              "cta_url": "\/pages\/iris-quote-builder"
+              "cta_url": "\/pages\/iris-quote-builder",
+              "new_window": true
             }
           },
           "5c3c53e3-7122-4446-9658-3c8d0d476481": {
@@ -1358,7 +1360,8 @@
               "video_url": "",
               "headline": "NovaStar™ Compatible",
               "cta_title": "Shop NovaStar ›",
-              "cta_url": "\/novastar"
+              "cta_url": "\/novastar",
+              "new_window": true
             }
           }
         },
@@ -1376,7 +1379,7 @@
       "iris-fullwidth-scroller": {
         "type": "iris-fullwidth-scroller",
         "settings": {
-          "image": "shopify:\/\/shop_images\/Blizzard_at_Summerfest_IRiS_IP3_LED_video_panels_D1-M2684.jpg",
+          "image": "shopify:\/\/shop_images\/APPROVED-MVIMG_20190705_223506_1_a3fb0507-eb04-477e-b8c5-41f70b4a0a45.jpg",
           "video_url": "",
           "headline": "IRiS® Video at the World's Largest Music Festival®",
           "subheadline": "Nearly 900 outdoor-rated, ETL-listed IRiS IP3 video panels were used to upgrade the grounds.",
@@ -1962,6 +1965,21 @@
         "settings": {
           "headline": "Browse the IRiS Lineup",
           "subheadline": "Find the perfect LED video wall for your next project"
+        }
+      },
+      "iris-lp-banner": {
+        "type": "iris-lp-banner",
+        "settings": {
+        }
+      },
+      "iris-simple-collection-2": {
+        "type": "iris-simple-collection-2",
+        "settings": {
+          "header_title": "",
+          "header_sub": "",
+          "background_color": "",
+          "h_gutter": 3,
+          "collection": ""
         }
       }
     },
