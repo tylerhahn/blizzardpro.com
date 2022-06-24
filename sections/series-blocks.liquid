@@ -61,7 +61,7 @@
     }
     #series-blocks {
         padding: 4em 2em;
-        background-color: #101216;
+        background-color: #0c0b12;
     }
     #series-blocks .container {
         display: flex;
@@ -75,9 +75,13 @@
         align-items: center;
         justify-content: center;
     }
+
+    .series-panel img {
+        height: 100%;
+    }
     .series-block {
-        border-color: #1e2129;
-        border-bottom: 2px solid;
+        border-color: #2f3032 !important;
+        border-bottom: 2px dotted;
         padding-bottom: 4em;
         width: 100%;
     }
@@ -91,7 +95,7 @@
     }
 
     .series-logos img {
-        max-height: 100px;
+        max-height: 90px;
     }
 
     .series-icons {
@@ -102,7 +106,7 @@
     }
 
     .series-icons img{
-        height: 75;
+        height: 60px;
     }
 
     .series-icons h4 {
@@ -119,6 +123,11 @@
         color: rgb(152, 152, 152);
         border-color: white;
     }
+
+    .series-block:last-child {
+            border-bottom: 0;
+    }
+
     @media screen and (min-width: 768px) {
         .series-block {
             width: 42%;
@@ -134,7 +143,7 @@
             margin-top: 4em;
             padding: 0 2em;
             border-bottom: 0;
-            border-right: 2px solid #1e2129;
+            border-right: 2px dotted #2f3032;
         }
 
         .series-block:last-child, .series-block:nth-child(3) {

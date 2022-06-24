@@ -158,7 +158,7 @@
 
 
 #iris-spec {
-   background: linear-gradient(90deg, {{ section.settings.background_color_1 }}, {{ section.settings.background_color_2 }});
+   background: #0b0b0b;
    padding: 2em 2em 7em 2em;
 }
 
@@ -249,7 +249,8 @@
     .side-bar-panels {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
       margin-top: 2em;
    }
 
@@ -282,8 +283,13 @@
 
 }
 
-
+.spec-sheet {
+   margin-top:4em;
+}
 @media screen and (min-width: 768px) {
+   .spec-sheet {
+   margin-top:0;
+   }
 
    ul.block-specs.visible {column-count: 2; width: 100%;}
 

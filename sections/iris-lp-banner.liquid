@@ -1,0 +1,275 @@
+<section class="image-banner-container">
+    {% for block in section.blocks %}
+
+        {% if block.settings.banner_type == "video" %}
+
+            <div class="video-scroller" style="height: {{ block.settings.height }}px;">
+                <div id="scroller-container-vo" style="height: {{ block.settings.height }}px;">
+                    <video autoplay="autoplay" loop muted>
+                        <source src="{{ block.settings.video_url }}" type=" video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        {% elsif block.settings.banner_type == "image" %}
+
+            <div class="image-banner-lp" style="margin-top: {{ block.settings.margin }}">
+                <div class="grid-container" style="flex-direction: {% if block.settings.right_aligned %}inherit{% else %}row-reverse{% endif %}">
+                    <div class="image-banner-textblock"></div>
+                    <div class="image-banner-textblock" style="text-align: {{ block.settings.text_alignment }};">
+                        {% if block.settings.title_icon != blank %}
+                            <img style="width: 75px" src="{{ block.settings.title_icon | img_url: 'master' }}"/>
+                        {% endif %}
+                        <h2 style="color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
+                        <p style="color: {{ block.settings.copy_color }}">{{ block.settings.copy }}</p>
+                        <a class="iris-banner-a" style="color: {{block.settings.cta_color}}" href="{{ block.settings.cta_url }}">{{ block.settings.cta }}</a>
+                    </div>
+                </div>
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}">
+            </div>
+
+        {% endif %}
+
+    {% endfor %}
+</section>
+
+<style>
+
+    .image-banner-title {
+        display: flex;
+        align-items: center;
+    }
+
+#scroller-container-vo {
+        width: 100%;
+    }
+
+    .video-scroller {
+        position: relative;
+    }
+
+
+
+.iris-lp-collection .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.lp-collection-product {
+    padding: 31px;
+}
+
+a.iris-banner-a {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    display: table;
+    margin-top: 1em;
+}
+    .image-banner-lp{
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .image-banner-lp img{
+        width: 100%;
+    }
+
+    .image-banner-lp .grid-container {
+        display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    }
+
+    .image-banner-textblock {
+    max-width: 400px;
+    font-size: 0.8em;
+    padding: 1em;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.image-banner-textblock h2 {
+    font-weight: 900;
+    font-size: 17px;
+    letter-spacing: -.003em;
+}
+
+.image-banner-textblock p {
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+}
+
+@media screen and (max-width: 768px) {
+    .image-banner-lp {
+        margin: 0 !important;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+    a.iris-banner-a {
+        margin-top: 2em;
+    }
+    .image-banner-textblock {
+        font-size: 1em;
+        padding: 0;
+    }
+
+    .image-banner-textblock h2 {
+        font-size: 48px;
+    }
+
+    .image-banner-textblock P {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (min-width: 1700px) {
+    .image-banner-textblock h2 {
+         font-size: 57px !important;
+    }
+    .image-banner-textblock p {
+         font-size: 25px !important;
+    }
+
+}
+
+</style>
+
+{% schema %}
+
+{
+    "name": "Banner",
+    "max_blocks": 10,
+    "settings": [
+        {
+            "type": "header",
+            "content": "banners"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Banner",
+            "settings": [
+            {
+             "type": "checkbox",
+             "id": "right_aligned" ,
+             "label": "Align Right",
+             "default": false
+            },
+            {
+                "type": "select",
+                "id": "banner_type",
+                "label": "Banner Type",
+                "options": [
+                  {
+                    "value": "image",
+                    "label": "Image"
+                  },
+                  {
+                    "value": "video",
+                    "label": "Video"
+                  }
+                ],
+                "default": "image"
+              },
+            {
+             "type": "number",
+             "id": "margin" ,
+             "label": "Margin"
+            },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "title_icon",
+                    "label": "Title Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "video_url",
+                    "label": "Video URL (not embed)"
+                }, {
+                    "type": "number",
+                    "id": "height",
+                    "label": "Height",
+                    "default": 1080
+                },
+                {
+                 "type": "textarea",
+                 "id": "copy" ,
+                 "label": "copy"
+                },
+                {
+                    "type": "text",
+                    "id": "cta",
+                    "label": "CTA"
+                },
+                {
+                    "type": "text",
+                    "id": "cta_url",
+                    "label": "CTA Url"
+                },
+                {
+                    "type": "color",
+                    "id": "cta_color",
+                    "label": "CTA Color"
+                },
+                {
+                    "type": "select",
+                    "id": "text_alignment",
+                    "label": "Text alignment",
+                    "options": [
+                      {
+                        "value": "left",
+                        "label": "Left"
+                      },
+                      {
+                        "value": "right",
+                        "label": "Right"
+                      },
+                      {
+                        "value": "center",
+                        "label": "Center"
+                      }
+                    ],
+                    "default": "center"
+                  },
+                {
+                    "type": "color",
+                    "id": "title_color",
+                    "label": "Title Color",
+                    "default": "#010101"
+                }, {
+                    "type": "color",
+                    "id": "copy_color",
+                    "label": "Copy Color",
+                    "default": "#ffffff"
+                }
+
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Icons",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}
