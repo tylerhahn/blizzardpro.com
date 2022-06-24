@@ -1,5 +1,4 @@
-
-<div id="bl-pl-simple" style="overflow-x: hidden; background-color: {{ section.settings.background_color }}" class="bl-pl-simple-{{section.id}} container-fluid">
+<div id="bl-pl-simple" style="overflow: hidden; scro background-color: {{ section.settings.background_color }}" class="bl-pl-simple-{{section.id}} container-fluid">
     <div class="bl-pl-simple-header">
       <h2 class="bl-h2">{{section.settings.header_title}}</h2>
       <p class="bl-icon-sub pb-3">{{section.settings.header_sub}}</p>
@@ -10,8 +9,10 @@
                 <div class="bl-icon-img-container">
                     <img onclick="javascript:location.href='{{product.url}}'" class="p-3" src="{{product.featured_image | img_url: 'master' }}" alt="{{product.title}}">
                   </div>
+               <div class="bl-text-box-iris">
                 <h3 class="text-center"><a href="{{product.url}}">{{product.title}}</a></h3>
                 <h4 class="text-center;">{{  product.metafields.f_b.Category_Subtitle | strip_html }}</h4>
+               </div>
                 <a href="{{product.url}}" class="btn btn-blue">Learn More</a>
                <!-- <div class="bl-icon-spec-list">
                 {{ product.metafields.f_b.General_Specs }}
@@ -23,39 +24,34 @@
 
 
       {% schema %}
-      {
-        "name": "Collection Lineup",
-        "settings": [
-          {
+
+{
+    "name": "Collection Lineup",
+    "settings": [
+        {
             "type": "header",
             "content": "Collection Lineup"
-          },
-          {
+        }, {
             "type": "image_picker",
             "id": "section_image",
             "label": "Image Header"
-          },
-          {
+        }, {
             "type": "text",
             "id": "header_title",
             "label": "Section Title"
-          },
-          {
+        }, {
             "type": "text",
             "id": "header_sub",
             "label": "Section Subheadline"
-          },
-          {
+        }, {
             "type": "color",
             "id": "background_color",
             "label": "Background Color"
-          },
-          {
+        }, {
             "type": "number",
             "id": "limit",
             "label": "Product Limit"
-          },
-          {
+        }, {
             "type": "range",
             "id": "h_gutter",
             "min": 0,
@@ -63,22 +59,21 @@
             "step": 1,
             "label": "Horizontal Gutter",
             "default": 3
-        },
-        {
+        }, {
             "type": "collection",
             "id": "collection",
             "label": "Collection"
-          }
-        ],
-
-        "presets": [
-          {
+        }
+    ],
+    "presets": [
+        {
             "name": "Collection Lineup",
             "category": "Image"
-          }
-        ]
-      }
-    {% endschema %}
+        }
+    ]
+}
+
+{% endschema %}
 
     <style>
     .radiant-circle {
@@ -163,11 +158,20 @@
         color: #3e3e3e;
         }
         .bl-icon-img-container {
-        display: flex;
-        align-items: center;
+          display: flex;
+          align-items: center;
+          height: 200px;
     }
 
-        .bl-pl-simple-box img {max-height: 320px;display: flex;margin: 0 auto;}
+    .bl-pl-simple-box img {
+      height: 100%;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .bl-text-box-iris{
+      height: 120px;
+    }
     </style>
 
     <script>
