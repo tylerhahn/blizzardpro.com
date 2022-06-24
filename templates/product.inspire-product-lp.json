@@ -109,7 +109,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0001s_0002_IRiS-ICON-render-29-angled-right.png",
             "image_featured": "shopify:\/\/shop_images\/0003s_0001_IRiS-ICON-render-29.png",
-            "panel_name": "IRiS® InSpire 1.5",
+            "panel_name": "InSpire 1.5",
             "pixel_pitch": "1.56 mm",
             "module_resolution": "192 x 108",
             "module_pixel_quantiy": "20,736",
@@ -158,7 +158,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right.png",
             "image_featured": "shopify:\/\/shop_images\/0003s_0002_IRiS-ICON-render-ip3.png",
-            "panel_name": "IRIS® InSpire .8",
+            "panel_name": "InSpire .8",
             "pixel_pitch": "1.875 MM",
             "module_resolution": "160 x 90",
             "module_pixel_quantiy": "14,400",
