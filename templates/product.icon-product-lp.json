@@ -408,17 +408,17 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/gt-calc.jpg",
+            "image": "shopify:\/\/shop_images\/IRiS_Calculator_ICON_90aa06f6-a2b8-4cb5-9fc7-58bca976b869.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
             "cta_url": "\/pages\/iris-quote-builder",
-            "cta_color": "#ffffff",
+            "cta_color": "#010101",
             "text_alignment": "left",
-            "title_color": "#ffffff",
-            "copy_color": "#ffeeee"
+            "title_color": "#010101",
+            "copy_color": "#010101"
           }
         }
       },
