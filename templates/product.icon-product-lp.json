@@ -73,29 +73,12 @@
             "copy_color": "#ffffff"
           }
         },
-        "8c0423bd-928c-4a9e-a349-acdb1b39ea29": {
-          "type": "image",
-          "settings": {
-            "right_aligned": false,
-            "banner_type": "video",
-            "title": "",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/Website%20Videos%2FICON-ring.mp4?alt=media&token=ebcdbb43-5df1-4652-bdc2-8fadb6860336",
-            "height": 1080,
-            "copy": "",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "center",
-            "title_color": "#010101",
-            "copy_color": "#ffffff"
-          }
-        },
         "546058db-7408-404f-8bfe-221e431c5a41": {
           "type": "image",
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS-ICON-pg1-outdoor_195de1d3-bf49-47ac-97b1-4f3c791620d9.jpg",
+            "image": "shopify:\/\/shop_images\/icon-lp-blown.jpg",
             "title": "Adaptive HDR Technology",
             "video_url": "",
             "height": 1080,
@@ -108,12 +91,30 @@
             "copy_color": "#dad9da"
           }
         },
+        "8c0423bd-928c-4a9e-a349-acdb1b39ea29": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "video",
+            "image": "shopify:\/\/shop_images\/icon-locks.jpg",
+            "title": "",
+            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/Website%20Videos%2FICON-ring.mp4?alt=media&token=ebcdbb43-5df1-4652-bdc2-8fadb6860336",
+            "height": 1080,
+            "copy": "",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        },
         "d549eeab-2513-4fe8-8e83-bb07912bd5f5": {
           "type": "image",
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/icon-rain.jpg",
+            "image": "shopify:\/\/shop_images\/icon-rain_48f4be62-8e01-4982-bb35-1a72c1feebbe.jpg",
             "title": "The All-Weather ICON",
             "video_url": "",
             "height": 1080,
@@ -125,13 +126,32 @@
             "title_color": "#1bc993",
             "copy_color": "#ffffff"
           }
+        },
+        "68ed438a-2952-43ea-8f6a-518fdb707a84": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/icon-locks.jpg",
+            "title": "Faster, Lighter, Stronger",
+            "video_url": "",
+            "height": 1080,
+            "copy": "Quick-thumb locks make any setup a breeze, along with blackout gaskets, retractable corner protectors & ground support locks – all designed in panels as light as 6.6 kg (14.5 lbs).",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "left",
+            "title_color": "#1bc993",
+            "copy_color": "#ffffff"
+          }
         }
       },
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
-        "8c0423bd-928c-4a9e-a349-acdb1b39ea29",
         "546058db-7408-404f-8bfe-221e431c5a41",
-        "d549eeab-2513-4fe8-8e83-bb07912bd5f5"
+        "8c0423bd-928c-4a9e-a349-acdb1b39ea29",
+        "d549eeab-2513-4fe8-8e83-bb07912bd5f5",
+        "68ed438a-2952-43ea-8f6a-518fdb707a84"
       ],
       "settings": {
       }
