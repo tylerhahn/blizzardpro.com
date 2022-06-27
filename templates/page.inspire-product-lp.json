@@ -338,9 +338,9 @@
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
             "cta_url": "\/pages\/iris-quote-builder",
-            "cta_color": "#ffffff",
+            "cta_color": "#141414",
             "text_alignment": "left",
-            "title_color": "#ffffff",
+            "title_color": "#141414",
             "copy_color": "#ffffff"
           }
         }
