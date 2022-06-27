@@ -229,7 +229,7 @@
             "cta_color": "",
             "text_alignment": "left",
             "title_color": "#ffffff",
-            "copy_color": "#ffd8d8"
+            "copy_color": "#141414"
           }
         },
         "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632": {
@@ -248,7 +248,7 @@
             "cta_color": "",
             "text_alignment": "left",
             "title_color": "#ffffff",
-            "copy_color": "#201201"
+            "copy_color": "#141414"
           }
         },
         "576c38dc-a1ec-4c67-8713-40c22cf7119b": {
@@ -284,10 +284,10 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the <br>GT™ Series Cutsheet",
+        "form_text": "Download the GT™ Series Cutsheet",
         "background_color": "#000000",
         "text_color": "#a9dddd",
-        "button_color": "#000000",
+        "button_color": "#d2371b",
         "hs_value": "GT Series"
       }
     },
@@ -300,13 +300,13 @@
             "right_aligned": true,
             "banner_type": "image",
             "image": "shopify:\/\/shop_images\/warranty-case.jpg",
-            "title": "No Fears for <br>7 Years™",
+            "title": "No Fears for 7 Years™",
             "video_url": "",
             "height": 1080,
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
             "cta_url": "\/pages\/icon-warranty",
-            "cta_color": "#00d8ff",
+            "cta_color": "#a9dddd",
             "text_alignment": "left",
             "title_color": "#a9dddd",
             "copy_color": "#ffffff"
@@ -317,17 +317,17 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/gt-calc.jpg",
+            "image": "shopify:\/\/shop_images\/IRiS_Calculator_GT.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
             "cta_url": "\/pages\/iris-quote-builder",
-            "cta_color": "#ffffff",
+            "cta_color": "#141414",
             "text_alignment": "left",
-            "title_color": "#ffffff",
-            "copy_color": "#ffeeee"
+            "title_color": "#141414",
+            "copy_color": "#ffffff"
           }
         }
       },
