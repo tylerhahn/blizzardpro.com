@@ -237,7 +237,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "margin": 30,
+            "margin": 0,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-2.jpg",
             "title": "...Like It's on Rails",
             "video_url": "",
@@ -256,7 +256,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "margin": 30,
+            "margin": 0,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-3.jpg",
             "title": "Lock Em' Up",
             "video_url": "",
