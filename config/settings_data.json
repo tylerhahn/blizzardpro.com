@@ -1514,7 +1514,7 @@
         "settings": {
           "background_color": "",
           "tier_title": "IRiS LED Video",
-          "tier_image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right_4fbef9ee-6fc3-44fe-b342-d7ad72c7f87f.png",
+          "tier_image": "shopify:\/\/shop_images\/0001s_0000_IRiS-ICON-render-ip3-angled-right1.png",
           "bg": "#0c0d68",
           "tier_price": "",
           "tier_suffix": "",
@@ -1829,46 +1829,6 @@
       },
       "iris-icon-series-specs": {
         "type": "iris-icon-series-specs",
-        "blocks": {
-          "75292788-d80b-4ed8-95cf-45a95e010cc3": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/icons-install.png",
-              "title": "INSTALLATION",
-              "paragraph": "Whether you’re building a\npermanent, 24\/7 install, or taking\nyour panels on the road, we have\noptions that cover a variety of use\ncases."
-            }
-          },
-          "92b6fb1d-8a89-48a2-93d4-d8a9a92941cd": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/icons-env.png",
-              "title": "Environment",
-              "paragraph": "Certain video panels are rated to\nbe installed indoors, outdoors, or\nboth. Different panels are built for\ndifferent needs."
-            }
-          },
-          "5c15e5d8-8abf-438c-b77a-b7bf2dc8d0fb": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/icons-pp.png",
-              "title": "Pixel Pitch",
-              "paragraph": "The pixel pitch (PP) of a panel\ndefines how close you can get to\nthe video panel without a loss of\nresolution. The lower the number,\nthe closer you can get without any\nloss of quality."
-            }
-          },
-          "0a192d00-9e05-4e91-a3ea-cb578c17ee8e": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/icons-rr.png",
-              "title": "Refresh Rate",
-              "paragraph": "The refresh rate affects how\nquickly your video panel responds\nto changes. A high refresh rate\nis essential to highly visual\npresentations, where a still image\ndoes not need as high refresh."
-            }
-          }
-        },
-        "block_order": [
-          "75292788-d80b-4ed8-95cf-45a95e010cc3",
-          "92b6fb1d-8a89-48a2-93d4-d8a9a92941cd",
-          "5c15e5d8-8abf-438c-b77a-b7bf2dc8d0fb",
-          "0a192d00-9e05-4e91-a3ea-cb578c17ee8e"
-        ],
         "settings": {
         }
       },
@@ -1954,6 +1914,16 @@
               "cta_title": "Learn More ›",
               "cta_url": ""
             }
+          },
+          "090d2a45-f152-47b3-8a44-4a6443f9aa64": {
+            "type": "image",
+            "settings": {
+              "icon_text_1": "",
+              "icon_text_2": "",
+              "icon_text_3": "",
+              "cta_title": "Learn More ›",
+              "cta_url": ""
+            }
           }
         },
         "block_order": [
@@ -1961,7 +1931,8 @@
           "fb0724b8-0d70-4420-a3e8-af259434164d",
           "2e7d32c3-4409-4cb9-88e7-f2578752a15d",
           "cf1971e5-f100-4252-8db1-b8d6d6f64b68",
-          "eefee9e8-c2f9-4b6c-b9db-7806a1f632b2"
+          "eefee9e8-c2f9-4b6c-b9db-7806a1f632b2",
+          "090d2a45-f152-47b3-8a44-4a6443f9aa64"
         ],
         "settings": {
           "headline": "Browse the IRiS Lineup",
@@ -1970,6 +1941,90 @@
       },
       "iris-lp-banner": {
         "type": "iris-lp-banner",
+        "blocks": {
+          "01291b96-f6a4-490f-a0f2-7a481b1eae55": {
+            "type": "image",
+            "settings": {
+              "right_aligned": true,
+              "banner_type": "image",
+              "image": "shopify:\/\/shop_images\/1_dfa26d86-7c67-4d03-8679-ff39d4b1339a.jpg",
+              "title_icon": "shopify:\/\/shop_images\/IRiS_LP_Icons_installation.png",
+              "title": "Installation",
+              "video_url": "",
+              "height": 1080,
+              "copy": "Whether you’re building a permanent, 24\/7 install, or taking your panels on the road, we have options that cover a variety of use cases.",
+              "cta": "",
+              "cta_url": "",
+              "cta_color": "",
+              "text_alignment": "left",
+              "title_color": "#00c1de",
+              "copy_color": "#ffffff"
+            }
+          },
+          "78443b51-d131-423c-b3d6-7bd0f3f071d3": {
+            "type": "image",
+            "settings": {
+              "right_aligned": false,
+              "banner_type": "image",
+              "image": "shopify:\/\/shop_images\/2_9b705214-c0a2-4ce7-9e0c-97520afd5aa5.jpg",
+              "title_icon": "shopify:\/\/shop_images\/IRiS_LP_Icons_environment_717fbf6d-51b1-47ae-9404-6867d7a1165f.png",
+              "title": "Environment",
+              "video_url": "",
+              "height": 1080,
+              "copy": "Certain video panels are rated to be installed indoors, outdoors, or both. Different panels are built for different needs.",
+              "cta": "",
+              "cta_url": "",
+              "cta_color": "",
+              "text_alignment": "left",
+              "title_color": "#00c1de",
+              "copy_color": "#ffffff"
+            }
+          },
+          "1b2e555f-61fb-4ce4-ae67-8bce9713a01f": {
+            "type": "image",
+            "settings": {
+              "right_aligned": true,
+              "banner_type": "image",
+              "image": "shopify:\/\/shop_images\/3.jpg",
+              "title_icon": "shopify:\/\/shop_images\/IRiS_LP_Icons_pixel-pitch.png",
+              "title": "Pixel Pitch",
+              "video_url": "",
+              "height": 1080,
+              "copy": "The pixel pitch (PP) of a panel defines how close you can get to the video panel without a loss of resolution. The lower the number, the closer you can get without any loss of quality.",
+              "cta": "",
+              "cta_url": "",
+              "cta_color": "",
+              "text_alignment": "left",
+              "title_color": "#00c1de",
+              "copy_color": "#ffffff"
+            }
+          },
+          "88d648d7-78f8-4135-a486-508106d73288": {
+            "type": "image",
+            "settings": {
+              "right_aligned": false,
+              "banner_type": "image",
+              "image": "shopify:\/\/shop_images\/4.jpg",
+              "title_icon": "shopify:\/\/shop_images\/IRiS_LP_Icons_refresh-rate.png",
+              "title": "Refresh Rate",
+              "video_url": "",
+              "height": 1080,
+              "copy": "The refresh rate affects how quickly your video panel responds to changes. A high refresh rate is essential to highly visual presentations, where a still image does not need as high refresh.",
+              "cta": "",
+              "cta_url": "",
+              "cta_color": "",
+              "text_alignment": "left",
+              "title_color": "#00c1de",
+              "copy_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "01291b96-f6a4-490f-a0f2-7a481b1eae55",
+          "78443b51-d131-423c-b3d6-7bd0f3f071d3",
+          "1b2e555f-61fb-4ce4-ae67-8bce9713a01f",
+          "88d648d7-78f8-4135-a486-508106d73288"
+        ],
         "settings": {
         }
       },
