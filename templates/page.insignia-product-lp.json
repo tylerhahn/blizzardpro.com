@@ -3,8 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/IRiS_HeaderImage_InSignia.jpg",
-        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSignia_b4db4f2c-7e55-4638-b693-affd2538bfc1.png",
+        "hero_image": "shopify:\/\/shop_images\/InSignia_HeroBanner.jpg",
+        "series_image": "shopify:\/\/shop_images\/InSignia_HeaderLogo.png",
         "centerImage": false,
         "isLeft": false
       }
@@ -371,6 +371,24 @@
     "banner-1": {
       "type": "lp-banner",
       "blocks": {
+        "6e6c5c4d-22a1-4032-9f8d-04cd6fc0141a": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/InSignia_SeriesTagline.jpg",
+            "title": "",
+            "video_url": "",
+            "height": 1080,
+            "copy": "",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "center",
+            "title_color": "#010101",
+            "copy_color": "#ffffff"
+          }
+        },
         "546058db-7408-404f-8bfe-221e431c5a41": {
           "type": "image",
           "settings": {
@@ -427,6 +445,7 @@
         }
       },
       "block_order": [
+        "6e6c5c4d-22a1-4032-9f8d-04cd6fc0141a",
         "546058db-7408-404f-8bfe-221e431c5a41",
         "4dd985dd-58a3-47bb-80f0-1792fae84f22",
         "bf87374c-b293-4dff-b7bc-bc9dabea4630"
@@ -477,9 +496,9 @@
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
             "cta_url": "\/pages\/iris-quote-builder",
-            "cta_color": "#ffffff",
+            "cta_color": "#141414",
             "text_alignment": "left",
-            "title_color": "#ffffff",
+            "title_color": "#141414",
             "copy_color": "#ffffff"
           }
         }
