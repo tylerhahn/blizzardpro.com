@@ -3,8 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/IRiS_HeaderImage_InSite.jpg",
-        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSite_b1e1f463-a195-4aa4-bdaa-556bb0f39ab5.png",
+        "hero_image": "shopify:\/\/shop_images\/InSiteG2_HeroBanner.jpg",
+        "series_image": "shopify:\/\/shop_images\/InSiteG2_HeaderLogo.png",
         "centerImage": false,
         "isLeft": true
       }
@@ -226,9 +226,9 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_InSite.jpg",
-            "title": "Make a Statement",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
+            "image": "shopify:\/\/shop_images\/InSiteG2_SeriesTagline.jpg",
+            "title": "",
+            "video_url": "",
             "height": 1080,
             "copy": "",
             "cta": "",
@@ -237,24 +237,6 @@
             "text_alignment": "center",
             "title_color": "rgba(0,0,0,0)",
             "copy_color": "rgba(0,0,0,0)"
-          }
-        },
-        "0a937ed6-b076-4d16-b784-b2ffca742001": {
-          "type": "image",
-          "settings": {
-            "right_aligned": false,
-            "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_Features_InSite2.jpg",
-            "title": "True 16:9 HD Video Quality",
-            "video_url": "",
-            "height": 1080,
-            "copy": "InSite™ G2 is an upgraded selection of fine pixel display panels, offering exceptional color reproduction and gamut in true 16:9 aspect ratio HD video quality.",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "",
-            "text_alignment": "left",
-            "title_color": "#f2c326",
-            "copy_color": "#ffffff"
           }
         },
         "c550f780-d3ea-4795-805e-b64a729ea5ef": {
@@ -270,6 +252,24 @@
             "cta": "",
             "cta_url": "",
             "cta_color": "#f2c326",
+            "text_alignment": "left",
+            "title_color": "#f2c326",
+            "copy_color": "#ffffff"
+          }
+        },
+        "0a937ed6-b076-4d16-b784-b2ffca742001": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/IRiS_Features_InSite2.jpg",
+            "title": "True 16:9 HD Video Quality",
+            "video_url": "",
+            "height": 1080,
+            "copy": "InSite™ G2 is an upgraded selection of fine pixel display panels, offering exceptional color reproduction and gamut in true 16:9 aspect ratio HD video quality.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
             "text_alignment": "left",
             "title_color": "#f2c326",
             "copy_color": "#ffffff"
@@ -296,8 +296,8 @@
       },
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
-        "0a937ed6-b076-4d16-b784-b2ffca742001",
         "c550f780-d3ea-4795-805e-b64a729ea5ef",
+        "0a937ed6-b076-4d16-b784-b2ffca742001",
         "546058db-7408-404f-8bfe-221e431c5a41"
       ],
       "settings": {
@@ -346,9 +346,9 @@
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
             "cta_url": "\/pages\/iris-quote-builder",
-            "cta_color": "#ffffff",
+            "cta_color": "#141414",
             "text_alignment": "left",
-            "title_color": "#ffffff",
+            "title_color": "#141414",
             "copy_color": "#ffffff"
           }
         }
