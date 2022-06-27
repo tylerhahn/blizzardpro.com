@@ -3,10 +3,10 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/inspire_header.jpg",
-        "series_image": "shopify:\/\/shop_images\/IRiS_HeaderLogos_InSpire.png",
+        "hero_image": "shopify:\/\/shop_images\/InSpire_HeroBanner_1be65ae4-0017-4152-8474-9e89f5a0dc5c.jpg",
+        "series_image": "shopify:\/\/shop_images\/InSpire_HeaderLogo.png",
         "centerImage": false,
-        "isLeft": true
+        "isLeft": false
       }
     },
     "icons": {
@@ -218,9 +218,9 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_HeadlineImage_InSpire.jpg",
+            "image": "shopify:\/\/shop_images\/InSpire_SeriesTagline.jpg",
             "title": "",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
+            "video_url": "",
             "height": 1080,
             "copy": "",
             "cta": "",
@@ -236,11 +236,11 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_Features_InSpire1.jpg",
-            "title": "Feature 1",
+            "image": "shopify:\/\/shop_images\/InSpire_FeatureBanner1.jpg",
+            "title": "Permanent LED Screens for Worship",
             "video_url": "",
             "height": 1080,
-            "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "copy": "With easy flush wall-mounting, 100% front-service design & our upgraded 7-year limited warranty, IRiS® InSpire™ is perfect for fixed installation at places of worship.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
@@ -254,11 +254,29 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/inspire_section_0.jpg",
-            "title": "Permanent <br>LED Screens for Worship",
+            "image": "shopify:\/\/shop_images\/InSpire_FeatureBanner2.jpg",
+            "title": "Radiate Your Words, Not Costs",
             "video_url": "",
             "height": 1080,
-            "copy": "With easy flush wall-mounting, 100% front-service design & our upgraded 7-year limited warranty, IRiS® InSpire™ is perfect for fixed installation at places of worship.",
+            "copy": "InSpire panels feature a high refresh rate, crisp contrast, and deliver more brightness with less heat – consuming less power for more cost savings vs. traditional video projectors.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "left",
+            "title_color": "#5762ac",
+            "copy_color": "#ffffff"
+          }
+        },
+        "60fe85cf-72f2-4b0d-a33f-07c7c26db56f": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/InSpire_FeatureBanner3.jpg",
+            "title": "Smooth View, in the Front or Back Row",
+            "video_url": "",
+            "height": 1080,
+            "copy": "True 16:9 aspect ratio HD video quality & precisely matched SMD LEDs offer exceptional color reproduction and gamut to reach everyone in your venue.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
@@ -271,7 +289,8 @@
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
         "546058db-7408-404f-8bfe-221e431c5a41",
-        "2133fe71-5a66-4eb6-a203-3913dcdb98d9"
+        "2133fe71-5a66-4eb6-a203-3913dcdb98d9",
+        "60fe85cf-72f2-4b0d-a33f-07c7c26db56f"
       ],
       "settings": {
       }
