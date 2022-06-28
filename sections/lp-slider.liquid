@@ -7,9 +7,9 @@
     <div class="container-fluid py-1 max" id="bl-hm-b1">
         <h2 class="bl-h2 text-left pb-3 max">{{section.settings.header_title}}</h2>
 
-        <div class="row">
+        <div class="row" style="width: 100%">
             {% for block in section.blocks %}
-                <div class="col-sm mx-{{section.settings.h_gutter}}" style="height: {{section.settings.box_height}}rem;background-size: cover; background-position:center;
+                <div class="col-md mx-{{section.settings.h_gutter}}" style="position: relative; height: {{section.settings.box_height}}rem;background-size: cover; background-position:center;
                                                                                                                                                                                                                                                                                                                                                                                                                                       {% if block.settings.video_url == blank %} background-image: url('{{ block.settings.image | img_url: 'master'}}'){% else %}background-color: black{% endif %}">
 
                     {% if block.settings.video_url != blank %}

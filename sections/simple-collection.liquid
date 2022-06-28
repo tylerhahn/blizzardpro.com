@@ -5,7 +5,7 @@
     </div>
         <div class="row">
             {% for product in collections[section.settings.collection].products limit: section.settings.limit  %}
-            <div class="bl-{{section.id}} bl-pl-simple-box col-sm mx-{{section.settings.h_gutter}}">
+            <div class="bl-{{section.id}} bl-pl-simple-box col-lg mx-{{section.settings.h_gutter}}">
             <div class="bl-icon-img-container">
                     <img onclick="javascript:location.href='{{product.url}}'" class="p-3" src="{{product.featured_image | img_url: 'master' }}" alt="{{product.title}}">
                   </div>
@@ -169,7 +169,7 @@
     }
 
     .bl-text-box-iris{
-      height: 120px;
+      height: 150px;
     }
     </style>
 

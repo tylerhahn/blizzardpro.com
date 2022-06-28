@@ -20,7 +20,7 @@
                         {{ product.title }}
                     </h3>
                     <h5>{{ product.metafields.f_b.Category_Subtitle | strip_html }}</h5>
-                    <a href="{{ product.url }}">View ></a>
+                    <a href="{{ product.url }}">View ›</a>
                 </div>
             </div>
         {% endfor %}
@@ -91,8 +91,8 @@
 .lp-collection-textbox a {
     color: {{ section.settings.cta_color }};
     border-bottom: 1px solid;
-    font-family: 'din-condensed';
     text-transform: uppercase;
+    font-size: 18px;
 }
 
 
