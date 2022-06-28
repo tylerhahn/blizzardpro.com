@@ -1,6 +1,7 @@
 <div id="lp-hero">
     <div class="lp-hero-top-image">
-        <img alt="" src="">
+        <img class="lp-hero-desktop" alt="{{ section.settings.alt_text }}" src="{{ section.settings.banner | img_url: 'master' }}">
+        <img class="lp-hero-mobile" alt="{{ section.settings.alt_text }}" src="{{ section.settings.banner_mobile | img_url: 'master' }}">
     </div>
 
     <div class="container-fluid py-1 max" id="bl-hm-b1">
@@ -9,7 +10,7 @@
         <div class="row">
             {% for block in section.blocks %}
                 <div class="col-sm mx-{{section.settings.h_gutter}}" style="height: {{section.settings.box_height}}rem;background-size: cover; background-position:center;
-                                                                                                                                      {% if block.settings.video_url == blank %} background-image: url('{{ block.settings.image | img_url: 'master'}}'){% else %}background-color: black{% endif %}">
+                                                                                                                                                                                                                                                                                                                                                                                                                                      {% if block.settings.video_url == blank %} background-image: url('{{ block.settings.image | img_url: 'master'}}'){% else %}background-color: black{% endif %}">
 
                     {% if block.settings.video_url != blank %}
                         {% if block.settings.video_url.type == 'youtube' %}
@@ -38,7 +39,51 @@
 </div>
 
 <style>
+    .lp-hero-desktop {
+        display: none;
+        visibility: hidden;
+    }
+
+    .lp-hero-mobile {
+        display: block;
+        visibility: visible;
+    }
+    .col-sm {
+        position: relative;
+    }
+    .box-caption {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        color: white;
+        max-width: 300px;
+        width: 80%;
+
+    }
+
+    .box-caption h3 {
+        text-shadow: 1px 0 7px black;
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 1.8em;
+        font-family: "Source Sans Pro";
+        letter-spacing: 0;
+        text-transform: inherit;
+        font-weight: 600;
+    }
+
+    .box-caption .btn {
+        margin: 0;
+
+        background: white;
+        color: black;
+    }
+    .col-sm {
+        background-size: cover;
+    }
+
     #lp-hero {
+        padding: 4em 0;
         background-color: {{ section.settings.background_color }} ;
     }
 
@@ -46,6 +91,18 @@
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
+    }
+    @media screen and (min-width: 768px) {
+        .lp-hero-desktop {
+            display: block;
+            visibility: visible;
+        }
+
+        .lp-hero-mobile {
+            display: none;
+            visibility: hidden;
+        }
+
     }
 </style>
 
@@ -60,9 +117,38 @@
                 "label": "Background Color"
             },
             {
-            "type": "image_picker",
-            "id": "banner" ,
-            "label": "Banner"
+                "type": "image_picker",
+                "id": "banner" ,
+                "label": "Banner (desktop)"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_mobile" ,
+                "label": "Banner (mobile)"
+            },
+            {
+                "type": "text",
+                "id": "alt_text" ,
+                "label": "Alt Text"
+            },
+            {
+                "type": "range",
+                "id": "box_height",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "rem",
+                "label": "Box Height",
+                "default": 1
+            },
+            {
+                "type": "range",
+                "id": "h_gutter",
+                "min": 0,
+                "max": 5,
+                "step": 1,
+                "label": "Horizontal Gutter",
+                "default": 3
             }
         ],
         "blocks": [

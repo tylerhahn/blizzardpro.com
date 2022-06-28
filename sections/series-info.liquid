@@ -1,0 +1,124 @@
+<div id="series-info">
+    <div class="series-info-container">
+
+        <div class="series-info-row">
+
+            <div class="series-info-text-block">
+                <img src="{{ section.settings.text_block_icon_1 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_1 }}">
+                <h2>{{ section.settings.text_block_title_1 }}</h2>
+                <p>{{ section.settings.text_block_paragraph_1 }}</p>
+            </div>
+
+            <div class="series-info-text-block">
+                <img src="{{ section.settings.text_block_icon_2 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_2 }}">
+                <h2>{{ section.settings.text_block_title_2 }}</h2>
+                <p>{{ section.settings.text_block_paragraph_2 }}</p>
+            </div>
+
+        </div>
+
+        <div class="series-info-hero">
+            <img src="{{ section.settings.banner | img_url: 'master' }}" alt="{{ section.settings.banner_alt_text }}">
+        </div>
+
+        <div class="series-info-row">
+
+
+            <div class="series-info-text-block">
+                <img src="{{ section.settings.text_block_icon_3 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_3 }}">
+                <h2>{{ section.settings.text_block_title_3 }}</h2>
+                <p>{{ section.settings.text_block_paragraph_3 }}</p>
+            </div>
+
+
+            <div class="series-info-text-block">
+                <img src="{{ section.settings.text_block_icon_4 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_4 }}">
+                <h2>{{ section.settings.text_block_title_4 }}</h2>
+                <p>{{ section.settings.text_block_paragraph_4 }}</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+    #series-info {
+        background-color: {{ section.settings.background_color }};
+        padding: 4em 0;
+    }
+    .series-info-row {
+        display: flex;
+    }
+</style>
+
+{% schema %}
+
+{
+    "name": "Series Info",
+    "settings": [
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color"
+        }, {
+            "type": "image_picker",
+            "id": "text_block_icon_1",
+            "label": "Text Block 1 Icon"
+        }, {
+            "type": "text",
+            "id": "text_block_title_1",
+            "label": "Text Block 1 Title"
+        }, {
+            "type": "textarea",
+            "id": "text_block_paragraph_1",
+            "label": "Text Block 1 Paragraph"
+        }, {
+            "type": "image_picker",
+            "id": "text_block_icon_2",
+            "label": "Text Block 2 Icon"
+        }, {
+            "type": "text",
+            "id": "text_block_title_2",
+            "label": "Text Block 2 Title"
+        }, {
+            "type": "textarea",
+            "id": "text_block_paragraph_2",
+            "label": "Text Block 2 Paragraph"
+        }, {
+            "type": "image_picker",
+            "id": "banner",
+            "label": "Banner Image"
+        }, {
+            "type": "text",
+            "id": "banner_alt_text",
+            "label": "Banner Alt Text"
+        }, {
+            "type": "image_picker",
+            "id": "text_block_icon_3",
+            "label": "Text Block 3 Icon"
+        }, {
+            "type": "text",
+            "id": "text_block_title_3",
+            "label": "Text Block 3 Title"
+        }, {
+            "type": "textarea",
+            "id": "text_block_paragraph_3",
+            "label": "Text Block 3 Paragraph"
+        }, {
+            "type": "image_picker",
+            "id": "text_block_icon_4",
+            "label": "Text Block 1 Icon"
+        }, {
+            "type": "text",
+            "id": "text_block_title_4",
+            "label": "Text Block 4 Title"
+        }, {
+            "type": "textarea",
+            "id": "text_block_paragraph_4",
+            "label": "Text Block 4 Paragraph"
+        }
+    ]
+}
+
+{% endschema %}

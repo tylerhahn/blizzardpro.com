@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "slider": {
+      "type": "lp-slider"
+    },
+    "three-col": {
+      "type": "lp-col"
+    },
+    "series-blocks": {
+      "type": "lp-blocks"
+    },
+    "fullwidth-scroller": {
+      "type": "fw-scroller"
+    },
+    "simple-collection": {
+      "type": "simple-collection"
+    },
+    "compare": {
+      "type": "compare-prods"
+    },
+    "iris-form": {
+      "type": "iris-lg-form"
+    }
+  },
+
+  "order": [
+    "slider",
+    "three-col",
+    "series-blocks",
+    "fullwidth-scroller",
+    "simple-collection",
+    "compare",
+    "iris-form"
+  ]
+}
