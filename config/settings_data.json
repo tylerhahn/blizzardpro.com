@@ -1336,8 +1336,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/IRiS_22_-_2.png",
               "video_url": "",
-              "headline": "Which led video display is right for you?",
-              "cta_title": "Take the quiz ›",
+              "headline": "Which LED video display is right for you?",
+              "cta_title": "Take the Quiz ›",
               "cta_url": "https:\/\/iris-suggest.netlify.app\/",
               "new_window": true
             }
