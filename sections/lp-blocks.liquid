@@ -1,0 +1,278 @@
+<div id="series-blocks">
+    <div class="series-header">
+        <h2>{{ section.settings.headline }}</h2>
+        <p>{{ section.settings.subheadline }}</p>
+        {% if section.settings.cta_title != blank %}
+            <a target="_blank" href="{{ section.settings.cta_url }}" class="btn btn-otl">{{ section.settings.cta_title }}</a>
+        {% endif %}
+    </div>
+    <div class="container">
+        {% for block in section.blocks %}
+            <div class="series-block">
+                {% if block.settings.logo != blank %}
+                    <div class="series-logos">
+                        <img src="{{ block.settings.logo | img_url: 'master'}}" alt="">
+                    </div>
+                {% endif %}
+                <div class="series-icons">
+                    {% if block.settings.icon_1 != blank %}
+                        <div class="series-icon-block">
+                            <img src="{{ block.settings.icon_1 | img_url: 'master'}}" alt="">
+                            <h4>{{ block.settings.icon_text_1 }}</h4>
+                        </div>
+                    {% endif %}
+                    {% if block.settings.icon_2 != blank %}
+                        <div class="series-icon-block">
+                            <img src="{{ block.settings.icon_2 | img_url: 'master'}}" alt="">
+                            <h4>{{ block.settings.icon_text_2 }}</h4>
+                        </div>
+                    {% endif %}
+                    {% if block.settings.icon_3 != blank %}
+                        <div class="series-icon-block">
+                            <img src="{{ block.settings.icon_3 | img_url: 'master'}}" alt="">
+                            <h4>{{ block.settings.icon_text_3 }}</h4>
+                        </div>
+                    {% endif %}
+                </div>
+                {% if block.settings.panel_image != blank %}
+                    <div class="series-panel">
+                        <img src="{{ block.settings.panel_image | img_url: 'master'}}" alt="">
+                    </div>
+                {% endif %}
+
+                <!-- <a href="{{ block.settings.cta_url }}" class="btn btn-otl">{{ block.settings.cta_title }}</a> -->
+
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+
+    .series-header a {
+        margin-top: 0 !important;
+    }
+    .series-header {
+        text-align: center;
+    }
+
+    .series-header h2 {
+        color: {{ section.settings.headline_color }};
+        font-weight: bold;
+        font-size: 3em;
+    }
+    .series-header p {
+        color: {{ section.settings.subheadline_color }};
+        font-size: 1.4em;
+        padding-bottom: 1em;
+    }
+    #series-blocks {
+        padding: 4em 2em;
+        background-color: {{ section.settings.background_color}};
+    }
+    #series-blocks .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .series-panel {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .series-panel img {
+        height: 100%;
+    }
+    .series-block {
+        border-color: #2f3032 !important;
+        border-bottom: 2px dotted;
+        padding-bottom: 4em;
+        width: 100%;
+    }
+    .series-logos {
+        margin: 0 auto;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4em;
+    }
+
+    .series-logos img {
+        max-height: 90px;
+    }
+
+    .series-icons {
+        padding: 3em 0;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .series-icons img{
+        height: 60px;
+    }
+
+    .series-icons h4 {
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-size: 1em;
+        padding-top: 1em;
+    }
+
+    #series-blocks a {
+        margin: 0 auto;
+        display: table;
+        margin-top: 4em;
+        color: rgb(152, 152, 152);
+        border-color: white;
+    }
+
+    .series-block:last-child {
+            border-bottom: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        .series-block {
+            width: 42%;
+        }
+    }
+
+    @media screen and (min-width: 1256px) {
+        #series-blocks .container {
+            justify-content: center;
+        }
+        .series-block {
+            width: 32%;
+            margin-top: 4em;
+            padding: 0 2em;
+            border-bottom: 0;
+            border-right: 2px dotted #2f3032;
+        }
+
+        .series-block:last-child, .series-block:nth-child(3) {
+            border-right: 0;
+        }
+
+        .series-panel {
+            max-height: 400px;
+        }
+    }
+</style>
+{% schema %}
+{
+  "name": "Series Boxes",
+  "max_blocks": 100,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Boxes"
+    },
+    {
+     "type": "color",
+     "id": "background_color" ,
+     "label": "Background Color"
+    },
+    {
+      "type": "textarea",
+      "id": "headline",
+      "label": "Headline"
+    },
+    {
+     "type": "color",
+     "id": "headline_color" ,
+     "label": "Headline Color"
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "Sub Headline"
+    },
+    {
+        "type": "color",
+        "id": "subheadline_color" ,
+        "label": "Sub Headline Color"
+    },
+    {
+     "type": "text",
+     "id": "cta_title" ,
+     "label": "Cta Title"
+    },
+    {
+     "type": "textarea",
+     "id": "cta_url" ,
+     "label": "Cta Url"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Box",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon_1",
+            "label": "Icon 1"
+        },
+        {
+            "type": "text",
+            "id": "icon_text_1",
+            "label": "Icon 1 Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon_2",
+            "label": "Icon 2"
+        },
+        {
+            "type": "text",
+            "id": "icon_text_2",
+            "label": "Icon 2 Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon_3",
+            "label": "Icon 3"
+        },
+        {
+            "type": "text",
+            "id": "icon_text_3",
+            "label": "Icon 3 Text"
+        },
+        {
+            "type": "image_picker",
+            "id": "panel_image",
+            "label": "Panel Image"
+        },
+        {
+          "type": "text",
+          "id": "cta_title",
+          "label": "Main CTA Title",
+          "default": "Learn More ›"
+        },
+        {
+          "type": "page",
+          "id": "cta_url",
+          "label": "Main CTA URL"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Col Blocks",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

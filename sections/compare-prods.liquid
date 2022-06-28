@@ -1,0 +1,258 @@
+<section class="pricing py-5">
+    <div class="container">
+        <div class="row" style="max-width: 1300px;margin: 0 auto;">
+            <div class="card">
+                <div class="card-flex-container">
+                    <div class="card-image-body">
+                        <img src="{{ section.settings.tier_image_1 | img_url: 'master'}}" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="">{{section.settings.tier_title_1}}</h5>
+
+                        <ul class="fa-ul">
+                            {% for block in section.blocks %}
+                                {% if block.settings.first == true %}
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-{% if block.settings.feature_enabled == true %}check{% else %}times{% endif %}"></i>
+                                        </span>
+                                        {{block.settings.feature_title}}
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-flex-container">
+                    <div class="card-image-body">
+                        <img src="{{ section.settings.tier_image_2 | img_url: 'master' }}" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="">{{section.settings.tier_title_2}}</h5>
+
+                        <ul class="fa-ul">
+                            {% for block in section.blocks %}
+                                {% if block.settings.first == false %}
+                                    <li>
+                                        <span class="fa-li">
+                                            <i class="fas fa-{% if block.settings.feature_enabled == true %}check{% else %}times{% endif %}"></i>
+                                        </span>
+                                        {{block.settings.feature_title}}
+                                    </li>
+                                {% endif %}
+
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+
+{
+    "name": "Pricing Box",
+    "class": "col",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Compare Table"
+        }, {
+            "id": "background_color",
+            "type": "color",
+            "label": "Section Background Color"
+        }, {
+            "id": "tier_title_1",
+            "type": "text",
+            "label": "Tier Title"
+        }, {
+            "type": "image_picker",
+            "id": "tier_icon_1",
+            "label": "Tier Icon"
+        }, {
+            "type": "image_picker",
+            "id": "tier_image_1",
+            "label": "Tier Image"
+        }, {
+            "id": "tier_title_2",
+            "type": "text",
+            "label": "Tier Title"
+        }, {
+            "type": "image_picker",
+            "id": "tier_icon_2",
+            "label": "Tier Icon"
+        }, {
+            "type": "image_picker",
+            "id": "tier_image_2",
+            "label": "Tier Image"
+        }, {
+            "type": "color",
+            "id": "bg",
+            "label": "Tier Color"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Feature",
+            "settings": [
+                {
+                    "id": "feature_title",
+                    "type": "textarea",
+                    "label": "Feature Title"
+                }, {
+                    "type": "checkbox",
+                    "id": "feature_enabled",
+                    "label": "Make this an active feature",
+                    "default": true
+                }, {
+                    "type": "checkbox",
+                    "id": "first",
+                    "label": "This feature belongs to column 1",
+                    "default": false
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Pricing Table",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}
+
+<style>
+
+    .card-flex-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-image-body img {
+        width: 200px;
+        mix-blend-mode: screen;
+        opacity: .5;
+    }
+
+
+    .card-body-flex {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+
+    .card-body-flex img {
+        width: 60px;
+        margin-right: 20px;
+    }
+
+    section.pricing h5 {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #42c3d2
+    }
+
+
+    section.pricing {
+        background: #1d1934;
+        background: {{section.settings.background_color}};
+    }
+
+    .pricing .card {
+        border: none;
+        border-radius: 1rem;
+        transition: all 0.2s;
+        box-shadow: none;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .pricing i.fas.fa-check {
+        color: #30aafe;
+    }
+
+    .pricing i.fas.fa-times {
+        color: #ff6868;
+    }
+
+    .pricing hr {
+        margin: 0 0 1.5em;
+    }
+
+    .pricing .card-title {
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .pricing .btn {
+        width: 100%;
+        border: none;
+        color: white;
+    }
+
+    .pricing .card-price {
+        font-size: 4rem;
+        margin: 0.7em 0 0;
+        font-family: "Source Sans Pro";
+        font-weight: bold;
+        letter-spacing: -4px;
+    }
+
+    .pricing .card-price .period {
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0;
+    }
+
+
+    .pricing i {
+        position: relative;
+        top: 5px;
+    }
+
+    .pricing ul {
+        margin-left: 27px;
+    }
+    .pricing ul li {
+        margin-bottom: 1rem;
+        font-size: 0.8em;
+
+        color: white;
+        text-align: left;
+        font-family: "Source Sans Pro";
+    }
+    .pricing .text-muted {
+        opacity: 0.7;
+    }
+
+    .pricing {
+        margin: 0;
+    }
+
+
+    span.dollar {
+        font-size: 0.5em;
+        top: -0.75em;
+        position: relative;
+    }
+
+    @media screen and (min-width: 810px) {
+        .pricing .card {
+            width: 50%;
+        }
+    }
+</style>

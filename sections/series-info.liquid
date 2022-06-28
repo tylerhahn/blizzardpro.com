@@ -1,15 +1,15 @@
 <div id="series-info">
     <div class="series-info-container">
 
-        <div class="series-info-row">
+        <div class="series-info-row sib-1">
 
-            <div class="series-info-text-block">
+            <div class="series-info-text-block sib-1">
                 <img src="{{ section.settings.text_block_icon_1 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_1 }}">
                 <h2>{{ section.settings.text_block_title_1 }}</h2>
                 <p>{{ section.settings.text_block_paragraph_1 }}</p>
             </div>
 
-            <div class="series-info-text-block">
+            <div class="series-info-text-block sib-2">
                 <img src="{{ section.settings.text_block_icon_2 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_2 }}">
                 <h2>{{ section.settings.text_block_title_2 }}</h2>
                 <p>{{ section.settings.text_block_paragraph_2 }}</p>
@@ -17,21 +17,21 @@
 
         </div>
 
-        <div class="series-info-hero">
-            <img src="{{ section.settings.banner | img_url: 'master' }}" alt="{{ section.settings.banner_alt_text }}">
+        <div class="series-info-hero sib-2">
+            <img class="sib-hero-desktop" src="{{ section.settings.banner | img_url: 'master' }}" alt="{{ section.settings.banner_alt_text }}">
+            <img class="sib-hero-mobile" src="{{ section.settings.banner_mobile | img_url: 'master' }}" alt="{{ section.settings.banner_alt_text }}">
         </div>
 
-        <div class="series-info-row">
+        <div class="series-info-row sib-3">
 
-
-            <div class="series-info-text-block">
+            <div class="series-info-text-block sib-3">
                 <img src="{{ section.settings.text_block_icon_3 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_3 }}">
                 <h2>{{ section.settings.text_block_title_3 }}</h2>
                 <p>{{ section.settings.text_block_paragraph_3 }}</p>
             </div>
 
 
-            <div class="series-info-text-block">
+            <div class="series-info-text-block sib-4">
                 <img src="{{ section.settings.text_block_icon_4 | img_url: 'master' }}" alt="{{ section.settings.text_block_title_4 }}">
                 <h2>{{ section.settings.text_block_title_4 }}</h2>
                 <p>{{ section.settings.text_block_paragraph_4 }}</p>
@@ -43,13 +43,120 @@
 </div>
 
 <style>
+    .sib-1 {
+        order: 2
+    }
+    .sib-2 {
+        order: 1
+    }
+    .sib-3 {
+        order: 3
+    }
+
+    .sib-hero-desktop {
+        display: none;
+        visibility: hidden;
+    }
+
+    .sib-hero-mobile {
+        display: block;
+        visibility: visible;
+    }
+
+    .series-info-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .series-info-text-block h2 {
+        color: #01c2de;
+        font-weight: bold;
+    }
+    .series-info-text-block p {
+        font-size: 18px;
+        color: #d9d5ef;
+    }
+    .series-info-text-block img {
+        width: 70px;
+    }
+    .series-info-text-block {
+        margin: 2em 0;
+    }
+    .series-info-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+
     #series-info {
         background-color: {{ section.settings.background_color }};
         padding: 4em 0;
     }
+
     .series-info-row {
         display: flex;
+        flex-wrap: wrap;
     }
+
+    @media screen and (min-width: 768px) {
+        .series-info-row {
+            justify-content: space-between;
+            width: 100%;
+        }
+        .series-info-text-block {
+            width: 48%;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .sib-hero-mobile {
+            display: none;
+            visibility: hidden;
+        }
+
+        .sib-hero-desktop {
+            display: block;
+            visibility: visible;
+        }
+        .series-info-text-block {
+            margin: 0;
+        }
+        .sib-1 {
+            order: 1;
+        }
+        .sib-2{
+            order: 2;
+        }
+
+        .sib-3{
+            order: 3;
+        }
+
+        .series-info-text-block {
+            width: 300px;
+        }
+
+    }
+    @media screen and (min-width: 1024px) {
+
+        .series-info-text-block {
+            width: 400px;
+        }
+
+        .series-info-text-block h2 {
+            color: #01c2de;
+            font-weight: bold;
+            font-size: 2.6em;
+         }
+
+        .series-info-text-block p {
+            font-size: 22px;
+            color: #d9d5ef;
+        }
+
+    }
+
 </style>
 
 {% schema %}
@@ -88,7 +195,11 @@
         }, {
             "type": "image_picker",
             "id": "banner",
-            "label": "Banner Image"
+            "label": "Banner Image (desktop)"
+        }, {
+            "type": "image_picker",
+            "id": "banner_mobile",
+            "label": "Banner Image (mobile)"
         }, {
             "type": "text",
             "id": "banner_alt_text",

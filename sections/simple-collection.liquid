@@ -1,0 +1,200 @@
+<div id="bl-pl-simple" style="overflow: hidden; scro background-color: {{ section.settings.background_color }}" class="bl-pl-simple-{{section.id}} container-fluid">
+    <div class="bl-pl-simple-header">
+      <h2 class="bl-h2">{{section.settings.header_title}}</h2>
+      <p class="bl-icon-sub pb-3">{{section.settings.header_sub}}</p>
+    </div>
+        <div class="row">
+            {% for product in collections[section.settings.collection].products limit: section.settings.limit  %}
+            <div class="bl-{{section.id}} bl-pl-simple-box col-sm mx-{{section.settings.h_gutter}}">
+            <div class="bl-icon-img-container">
+                    <img onclick="javascript:location.href='{{product.url}}'" class="p-3" src="{{product.featured_image | img_url: 'master' }}" alt="{{product.title}}">
+                  </div>
+               <div class="bl-text-box-iris">
+                <h3 class="text-center"><a href="{{product.url}}">{{product.title}}</a></h3>
+                <h4 class="text-center;">{{  product.metafields.f_b.Category_Subtitle | strip_html }}</h4>
+               </div>
+                <a href="{{product.url}}" class="btn btn-blue">Learn More</a>
+               <!-- <div class="bl-icon-spec-list">
+                {{ product.metafields.f_b.General_Specs }}
+               </div> -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+      {% schema %}
+
+{
+    "name": "Collection Lineup",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Collection Lineup"
+        }, {
+            "type": "image_picker",
+            "id": "section_image",
+            "label": "Image Header"
+        }, {
+            "type": "text",
+            "id": "header_title",
+            "label": "Section Title"
+        }, {
+            "type": "text",
+            "id": "header_sub",
+            "label": "Section Subheadline"
+        }, {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color"
+        }, {
+            "type": "number",
+            "id": "limit",
+            "label": "Product Limit"
+        }, {
+            "type": "range",
+            "id": "h_gutter",
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "label": "Horizontal Gutter",
+            "default": 3
+        }, {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Lineup",
+            "category": "Image"
+        }
+    ]
+}
+
+{% endschema %}
+
+    <style>
+    .radiant-circle {
+        width: 68%;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: .7;
+    }
+    .bl-icon-spec-list {
+        text-align: center;
+        color: white;
+        max-width: 310px;
+        margin: 0 auto;
+        margin-top: 3em;
+    }
+
+    #bl-pl-simple .row{
+      max-width: 1200px;
+    margin: 0 auto;
+    }
+
+
+    .bl-icon-spec-list p {
+        border-bottom: 1px solid rgba(255,255,255,.25);
+    }
+
+    h3.text-center.pb-1 sup {
+        font-size: .4em;
+        top: -15px;
+        opacity: .4;
+    }
+
+      #bl-pl-simple {
+        padding: 2em 0;
+      }
+      .bl-pl-simple-header {
+        text-align: center;
+      }
+    .bl-pl-simple-header img {
+      width: 90%;
+        max-width: 380px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #bl-pl-simple h2.bl-h2 {
+        color: #222;
+        font-weight: bold;
+        font-size: 3em;
+    }
+
+    h3.text-center.pb-1 a {
+      color: #222
+    }
+
+    p.bl-icon-sub.pb-3 {
+        font-size: 21px;
+        color: gray;
+        margin-bottom: 30px;
+    }
+
+        .bl-pl-simple-box a{
+            color: #222;
+        }
+
+        .bl-pl-simple-box .btn-blue {
+          margin: 0 auto;
+        display: table;
+        margin-bottom: 1em;
+        color: white;
+        }
+
+        .bl-pl-simple-box h4{
+            font-weight: 500;
+            font-family: "Source Sans Pro", sans-serif;
+            text-align: center;
+        padding-bottom: 6px;
+        color: #3e3e3e;
+        }
+        .bl-icon-img-container {
+          display: flex;
+          align-items: center;
+          height: 200px;
+    }
+
+    .bl-pl-simple-box img {
+      height: 100%;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .bl-text-box-iris{
+      height: 120px;
+    }
+    </style>
+
+    <script>
+
+
+
+
+        gsap.set(".bl-{{section.id}}", {
+        y: 100,
+        opacity: 0
+        })
+        gsap.to(".bl-{{section.id}}", {
+        y: 0,
+        opacity: 1,
+        stagger: {
+        amount: 1.5,
+        ease: "power3.out"
+      },
+      scrollTrigger: {
+        trigger: ".bl-pl-simple-{{section.id}}",
+        start: "top 100%",
+        end: "+=300",
+        scrub: 1,
+        duration: 2.5, ease: "power3.out",
+      }
+    });
+    </script>
