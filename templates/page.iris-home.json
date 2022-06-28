@@ -105,9 +105,9 @@
           "type": "image",
           "settings": {
             "logo": "shopify:\/\/shop_images\/logo-insignia.png",
-            "icon_1": "shopify:\/\/shop_images\/icons-insignia-small-display.png",
+            "icon_1": "shopify:\/\/shop_images\/InSignia_Web_Iconography_small-display.png",
             "icon_text_1": "Small Displays",
-            "icon_2": "shopify:\/\/shop_images\/icons-insignia-digital-signare.png",
+            "icon_2": "shopify:\/\/shop_images\/InSignia_Web_Iconography_digital-signage.png",
             "icon_text_2": "Digital Signage",
             "icon_text_3": "",
             "panel_image": "shopify:\/\/shop_images\/Insignia-brochure-cover.png",
