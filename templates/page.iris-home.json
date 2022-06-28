@@ -6,33 +6,33 @@
         "9fca8cd2-ad9d-4589-bb0b-d3b6ae34c2c3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/IRiS_22_-_2.webp",
+            "image": "shopify:\/\/shop_images\/IRiS_22_-_2.webp",
             "video_url": "",
             "headline": "Which LED video display is right for you?",
             "cta_title": "Take the Quiz ›",
-            "cta_url": "https://iris-suggest.netlify.app/",
+            "cta_url": "https:\/\/iris-suggest.netlify.app\/",
             "new_window": true
           }
         },
         "a5e28975-c983-4c1c-9a49-7c4e2fd5ffdd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/quotebuilder_4ff25479-8cf5-4a7d-95f4-f92209122dcb.webp",
+            "image": "shopify:\/\/shop_images\/quotebuilder_4ff25479-8cf5-4a7d-95f4-f92209122dcb.webp",
             "video_url": "",
             "headline": "Online Quote Tool",
             "cta_title": "Build Quote ›",
-            "cta_url": "https://www.blizzardpro.com/pages/iris-quote-builder",
+            "cta_url": "https:\/\/www.blizzardpro.com\/pages\/iris-quote-builder",
             "new_window": false
           }
         },
         "184219be-e822-4b58-9217-677c4c7ee12b": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/worship_65953caf-3df4-4b11-b8a2-68265f33d926.jpg",
+            "image": "shopify:\/\/shop_images\/worship_65953caf-3df4-4b11-b8a2-68265f33d926.jpg",
             "video_url": "",
             "headline": "NovaStar™ Compatible",
             "cta_title": "Shop NovaStar ›",
-            "cta_url": "https://www.blizzardpro.com/novastar",
+            "cta_url": "https:\/\/www.blizzardpro.com\/novastar",
             "new_window": false
           }
         }
@@ -44,8 +44,8 @@
       ],
       "settings": {
         "background_color": "#1d1932",
-        "banner": "shopify://shop_images/iris_lp_desktop.png",
-        "banner_mobile": "shopify://shop_images/iris_lp_mobile.png",
+        "banner": "shopify:\/\/shop_images\/iris_lp_desktop.png",
+        "banner_mobile": "shopify:\/\/shop_images\/iris_lp_mobile.png",
         "alt_text": "IRiS Led Video Panels",
         "box_height": 23,
         "h_gutter": 3
@@ -53,7 +53,8 @@
     },
     "three-col": {
       "type": "lp-col",
-      "settings": {}
+      "settings": {
+      }
     },
     "series-blocks": {
       "type": "lp-blocks",
@@ -61,13 +62,13 @@
         "8935e14a-9443-48fd-a70e-11ecbfc9cd42": {
           "type": "image",
           "settings": {
-            "logo": "shopify://shop_images/logo-icon.png",
-            "icon_1": "shopify://shop_images/ICON_Web_Iconography_outdoor.png",
-            "icon_text_1": "Indoor / Outdoor",
-            "icon_2": "shopify://shop_images/ICON_Web_Iconography_rental-stage.png",
-            "icon_text_2": "Rental / Stage",
+            "logo": "shopify:\/\/shop_images\/logo-icon.png",
+            "icon_1": "shopify:\/\/shop_images\/ICON_Web_Iconography_outdoor.png",
+            "icon_text_1": "Indoor \/ Outdoor",
+            "icon_2": "shopify:\/\/shop_images\/ICON_Web_Iconography_rental-stage.png",
+            "icon_text_2": "Rental \/ Stage",
             "icon_text_3": "",
-            "panel_image": "shopify://shop_images/icon-brochure-cover_a3c439a5-351d-4bde-b494-eb5bd62d0038.png",
+            "panel_image": "shopify:\/\/shop_images\/icon-brochure-cover_a3c439a5-351d-4bde-b494-eb5bd62d0038.png",
             "cta_title": "Learn More ›",
             "cta_url": "iris-icon"
           }
@@ -75,13 +76,13 @@
         "dd357c50-e303-47a8-9579-5b3cf5993f69": {
           "type": "image",
           "settings": {
-            "logo": "shopify://shop_images/logo-gt.png",
-            "icon_1": "shopify://shop_images/GT3_Web_Iconography_touring.png",
+            "logo": "shopify:\/\/shop_images\/logo-gt.png",
+            "icon_1": "shopify:\/\/shop_images\/GT3_Web_Iconography_touring.png",
             "icon_text_1": "Pro Touring",
-            "icon_2": "shopify://shop_images/GT3_Web_Iconography_rental-stage.png",
-            "icon_text_2": "Rental / Stage",
+            "icon_2": "shopify:\/\/shop_images\/GT3_Web_Iconography_rental-stage.png",
+            "icon_text_2": "Rental \/ Stage",
             "icon_text_3": "",
-            "panel_image": "shopify://shop_images/gt-brochure-cover_9db51686-4075-4835-a974-eb3709cfa2e5.png",
+            "panel_image": "shopify:\/\/shop_images\/gt-brochure-cover_9db51686-4075-4835-a974-eb3709cfa2e5.png",
             "cta_title": "Learn More ›",
             "cta_url": "iris-gt-series"
           }
@@ -89,13 +90,13 @@
         "a48bfaca-c1bb-4418-9fea-6d6b2ea2d747": {
           "type": "image",
           "settings": {
-            "logo": "shopify://shop_images/logo-insite.png",
-            "icon_1": "shopify://shop_images/iris-icons-web_rental-stage_3a20c790-4441-4279-8b6d-e0dc1eb1b4f0.png",
-            "icon_text_1": "Rental / Stage",
-            "icon_2": "shopify://shop_images/iris-icons-web_perma-install_e521ac59-4ab3-4d7d-a045-caf83db65b90.png",
+            "logo": "shopify:\/\/shop_images\/logo-insite.png",
+            "icon_1": "shopify:\/\/shop_images\/iris-icons-web_rental-stage_3a20c790-4441-4279-8b6d-e0dc1eb1b4f0.png",
+            "icon_text_1": "Rental \/ Stage",
+            "icon_2": "shopify:\/\/shop_images\/iris-icons-web_perma-install_e521ac59-4ab3-4d7d-a045-caf83db65b90.png",
             "icon_text_2": "Permanent Intall",
             "icon_text_3": "",
-            "panel_image": "shopify://shop_images/insite-brochure-cover.png",
+            "panel_image": "shopify:\/\/shop_images\/insite-brochure-cover.png",
             "cta_title": "Learn More ›",
             "cta_url": ""
           }
@@ -103,13 +104,13 @@
         "38b39431-96ef-4c34-9377-297c06c78f96": {
           "type": "image",
           "settings": {
-            "logo": "shopify://shop_images/logo-insignia.png",
-            "icon_1": "shopify://shop_images/icons-insignia-small-display.png",
+            "logo": "shopify:\/\/shop_images\/logo-insignia.png",
+            "icon_1": "shopify:\/\/shop_images\/icons-insignia-small-display.png",
             "icon_text_1": "Small Displays",
-            "icon_2": "shopify://shop_images/icons-insignia-digital-signare.png",
+            "icon_2": "shopify:\/\/shop_images\/icons-insignia-digital-signare.png",
             "icon_text_2": "Digital Signage",
             "icon_text_3": "",
-            "panel_image": "shopify://shop_images/Insignia-brochure-cover.png",
+            "panel_image": "shopify:\/\/shop_images\/Insignia-brochure-cover.png",
             "cta_title": "Learn More ›",
             "cta_url": ""
           }
@@ -117,13 +118,13 @@
         "87615af1-1376-4f0a-bdb3-da6dfc837df9": {
           "type": "image",
           "settings": {
-            "logo": "shopify://shop_images/logo-inspire.png",
-            "icon_1": "shopify://shop_images/iris-icons-web_rental-stage.png",
-            "icon_text_1": "Rental / Stage",
-            "icon_2": "shopify://shop_images/iris-icons-web_perma-install.png",
+            "logo": "shopify:\/\/shop_images\/logo-inspire.png",
+            "icon_1": "shopify:\/\/shop_images\/iris-icons-web_rental-stage.png",
+            "icon_text_1": "Rental \/ Stage",
+            "icon_2": "shopify:\/\/shop_images\/iris-icons-web_perma-install.png",
             "icon_text_2": "Permanent Install",
             "icon_text_3": "",
-            "panel_image": "shopify://shop_images/inspire-brochure-cover.png",
+            "panel_image": "shopify:\/\/shop_images\/inspire-brochure-cover.png",
             "cta_title": "Learn More ›",
             "cta_url": ""
           }
@@ -142,27 +143,27 @@
         "headline_color": "#ffffff",
         "subheadline": "Find the perfect LED video wall for your next project",
         "subheadline_color": "#bfbdce",
-        "cta_title": "Download IRiS Media Kit",
-        "cta_url": "https://google.com"
+        "cta_title": "",
+        "cta_url": "https:\/\/google.com"
       }
     },
     "series-info": {
       "type": "series-info",
       "settings": {
         "background_color": "#1d1932",
-        "text_block_icon_1": "shopify://shop_images/IRiS_LP_Icons_installation.png",
+        "text_block_icon_1": "shopify:\/\/shop_images\/IRiS_LP_Icons_installation.png",
         "text_block_title_1": "Installation",
-        "text_block_paragraph_1": "Whether you’re building a permanent, 24/7 install, or taking your panels on the road, we have options that cover a variety of use cases.",
-        "text_block_icon_2": "shopify://shop_images/IRiS_LP_Icons_environment_717fbf6d-51b1-47ae-9404-6867d7a1165f.png",
+        "text_block_paragraph_1": "Whether you’re building a permanent, 24\/7 install, or taking your panels on the road, we have options that cover a variety of use cases.",
+        "text_block_icon_2": "shopify:\/\/shop_images\/IRiS_LP_Icons_environment_717fbf6d-51b1-47ae-9404-6867d7a1165f.png",
         "text_block_title_2": "Environment",
         "text_block_paragraph_2": "Certain video panels are rated to be installed indoors, outdoors, or both. Different panels are built for different needs.",
-        "banner": "shopify://shop_images/iris_lp_icon_banner_desktop_3844852f-1fd5-4843-b0f6-ec66e18db404.png",
-        "banner_mobile": "shopify://shop_images/iris_lp_icon_banner_mobile.png",
+        "banner": "shopify:\/\/shop_images\/iris_lp_icon_banner_desktop_3844852f-1fd5-4843-b0f6-ec66e18db404.png",
+        "banner_mobile": "shopify:\/\/shop_images\/iris_lp_icon_banner_mobile.png",
         "banner_alt_text": "Pick the perfect video wall for you",
-        "text_block_icon_3": "shopify://shop_images/IRiS_LP_Icons_pixel-pitch.png",
+        "text_block_icon_3": "shopify:\/\/shop_images\/IRiS_LP_Icons_pixel-pitch.png",
         "text_block_title_3": "Pixel Pitch",
         "text_block_paragraph_3": "The pixel pitch (PP) of a panel defines how close you can get to the video panel without a loss of resolution. The lower the number, the closer you can get without any loss of quality.",
-        "text_block_icon_4": "shopify://shop_images/IRiS_LP_Icons_refresh-rate.png",
+        "text_block_icon_4": "shopify:\/\/shop_images\/IRiS_LP_Icons_refresh-rate.png",
         "text_block_title_4": "Refresh Rate",
         "text_block_paragraph_4": "The refresh rate affects how quickly your video panel responds to changes. A high refresh rate is essential to highly visual presentations, where a still image does not need as high refresh."
       }
@@ -170,18 +171,18 @@
     "fullwidth-scroller": {
       "type": "fw-scroller",
       "settings": {
-        "image": "shopify://shop_images/APPROVED-MVIMG_20190705_223506_1_a3fb0507-eb04-477e-b8c5-41f70b4a0a45.jpg",
+        "image": "shopify:\/\/shop_images\/APPROVED-MVIMG_20190705_223506_1_a3fb0507-eb04-477e-b8c5-41f70b4a0a45.jpg",
         "video_url": "",
         "headline": "IRiS® Video at the World's Largest Music Festival®",
         "subheadline": "Nearly 900 outdoor-rated, ETL-listed IRiS IP3 video panels were used to upgrade the grounds.",
         "cta_title": "Read More ›",
-        "cta_url": "https://www.blizzardpro.com/blogs/news/plsn-blizzard-at-summerfest-irisvideo"
+        "cta_url": "https:\/\/www.blizzardpro.com\/blogs\/news\/plsn-blizzard-at-summerfest-irisvideo"
       }
     },
     "165644206302c445a4": {
       "type": "nova-dynamic-shopify-form",
       "settings": {
-        "form_text": "<span>Sign up</span> to receive the latest Blizzard Lighting + IRiS Video news",
+        "form_text": "<span>Sign up<\/span> to receive the latest Blizzard Lighting + IRiS Video news",
         "background_color": "#0c0b11",
         "text_color": "#bfbdce",
         "button_color": "#282bf6",
@@ -262,20 +263,20 @@
       "settings": {
         "background_color": "",
         "tier_title_1": "Projection",
-        "tier_image_1": "shopify://shop_images/projector.png",
+        "tier_image_1": "shopify:\/\/shop_images\/projector.png",
         "tier_title_2": "IRiS LED Video",
-        "tier_image_2": "shopify://shop_images/panel.png",
+        "tier_image_2": "shopify:\/\/shop_images\/panel.png",
         "bg": ""
       }
     },
     "165644161622b23f89": {
       "type": "fw-scroller",
       "settings": {
-        "video_url": "https://vimeo.com/566216645/0507c77aea",
+        "video_url": "https:\/\/vimeo.com\/566216645\/0507c77aea",
         "headline": "All-in-One Integration",
         "subheadline": "The industry's first ever, all-in-one video splicing processors are here.",
         "cta_title": "Watch Now ›",
-        "cta_url": "https://www.youtube.com/watch?v=LHBh-nxPeI8"
+        "cta_url": "https:\/\/www.youtube.com\/watch?v=LHBh-nxPeI8"
       }
     },
     "165644186193e30f2d": {
