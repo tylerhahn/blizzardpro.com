@@ -239,10 +239,10 @@
             "banner_type": "image",
             "margin": 0,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-2.jpg",
-            "title": "...Like It's on Rails",
+            "title": "Any Tour, Any Stage",
             "video_url": "",
             "height": 1080,
-            "copy": "Form perfectly linear or curved displays (±10°) with the GT  Series' two-step locking system.",
+            "copy": "Form perfectly linear or curved displays (±10°) with the GT Series' two-step locking system – panel mechanics that work with you, not against you.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
@@ -258,16 +258,16 @@
             "banner_type": "image",
             "margin": 0,
             "image": "shopify:\/\/shop_images\/gtseries-web-banner-3.jpg",
-            "title": "Lock Em' Up",
+            "title": "The Ultimate Pit Crew",
             "video_url": "",
             "height": 1080,
-            "copy": "Ingenious one-arm locking paddle makes setup a snap—even while you're driving solo.",
+            "copy": "Production-ready touring carts capable of holding (24x) GT3 or (12x) XL panels, plus ingenious one-arm locking paddles, make setup a snap–even while you're driving solo.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "left",
             "title_color": "#ffffff",
-            "copy_color": "#004250"
+            "copy_color": "#141414"
           }
         }
       },
