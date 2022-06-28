@@ -162,10 +162,10 @@
         "banner_alt_text": "Pick the perfect video wall for you",
         "text_block_icon_3": "shopify:\/\/shop_images\/IRiS_LP_Icons_pixel-pitch.png",
         "text_block_title_3": "Pixel Pitch",
-        "text_block_paragraph_3": "The pixel pitch (PP) of a panel defines how close you can get to the video panel without a loss of resolution. The lower the number, the closer you can get without any loss of quality.",
+        "text_block_paragraph_3": "The pixel pitch (PP) of a panel defines how close you can get to the video panel without a loss of resolution. The lower the number, the closer you can get without any loss in quality.",
         "text_block_icon_4": "shopify:\/\/shop_images\/IRiS_LP_Icons_refresh-rate.png",
         "text_block_title_4": "Refresh Rate",
-        "text_block_paragraph_4": "The refresh rate affects how quickly your video panel responds to changes. A high refresh rate is essential to highly visual presentations, where a still image does not need as high refresh."
+        "text_block_paragraph_4": "The refresh rate affects how quickly your video panel responds to changes. A high refresh rate is essential to highly visual presentations, where a still image does not need as high of a refresh rate."
       }
     },
     "fullwidth-scroller": {
