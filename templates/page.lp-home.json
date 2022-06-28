@@ -1,28 +1,41 @@
 {
   "sections": {
     "slider": {
-      "type": "lp-slider"
+      "type": "lp-slider",
+      "settings": {
+      }
     },
     "three-col": {
-      "type": "lp-col"
+      "type": "lp-col",
+      "settings": {
+      }
     },
     "series-blocks": {
-      "type": "lp-blocks"
+      "type": "lp-blocks",
+      "settings": {
+      }
     },
     "fullwidth-scroller": {
-      "type": "fw-scroller"
+      "type": "fw-scroller",
+      "settings": {
+      }
     },
     "simple-collection": {
-      "type": "simple-collection"
+      "type": "simple-collection",
+      "settings": {
+      }
     },
     "compare": {
-      "type": "compare-prods"
+      "type": "compare-prods",
+      "settings": {
+      }
     },
     "iris-form": {
-      "type": "iris-lg-form"
+      "type": "iris-lg-form",
+      "settings": {
+      }
     }
   },
-
   "order": [
     "slider",
     "three-col",
