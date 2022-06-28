@@ -1,0 +1,109 @@
+<div id="lp-hero">
+    <div class="lp-hero-top-image">
+        <img alt="" src="">
+    </div>
+
+    <div class="container-fluid py-1 max" id="bl-hm-b1">
+        <h2 class="bl-h2 text-left pb-3 max">{{section.settings.header_title}}</h2>
+
+        <div class="row">
+            {% for block in section.blocks %}
+                <div class="col-sm mx-{{section.settings.h_gutter}}" style="height: {{section.settings.box_height}}rem;background-size: cover; background-position:center;
+                                                                                                                                      {% if block.settings.video_url == blank %} background-image: url('{{ block.settings.image | img_url: 'master'}}'){% else %}background-color: black{% endif %}">
+
+                    {% if block.settings.video_url != blank %}
+                        {% if block.settings.video_url.type == 'youtube' %}
+                            <div class="video-background">
+                                <div class="video-foreground">
+                                    <iframe allowfullscreen frameborder="0" src="https://www.youtube.com/embed/{{block.settings.video_url.id}}?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1"></iframe>
+                                </div>
+                            </div>
+                        {% elsif block.settings.video_url.type == 'vimeo' %}
+                            <div class="vimeo-wrapper">
+                                <iframe allowfullscreen frameborder="0" mozallowfullscreen src="https://player.vimeo.com/video/{{block.settings.video_url.id}}?background=1&autoplay=1&loop=1&byline=0&title=0" webkitallowfullscreen></iframe>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                    <div class="box-caption">
+                        <h3>{{block.settings.headline}}</h3>
+                        {% if block.settings.cta_url != blank %}
+                            <a {% if block.settings.new_window == true %} target="_blank" {% endif %} href={{block.settings.cta_url }} class="btn btn-white">{{ block.settings.cta_title }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+    #lp-hero {
+        background-color: {{ section.settings.background_color }} ;
+    }
+
+    .lp-hero-top-image {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+</style>
+
+{% schema %}
+{
+        "name": "LP Hero",
+        "max_blocks": 10,
+        "settings": [
+            {
+                "type": "color",
+                "id": "background_color" ,
+                "label": "Background Color"
+            },
+            {
+            "type": "image_picker",
+            "id": "banner" ,
+            "label": "Banner"
+            }
+        ],
+        "blocks": [
+        {
+            "type": "image",
+            "name": "Box",
+            "settings": [
+
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }, {
+                    "id": "video_url",
+                    "type": "video_url",
+                    "label": "Video URL",
+                    "accept": [
+                        "youtube",
+                        "vimeo"
+                    ]
+                }, {
+                    "type": "text",
+                    "id": "headline",
+                    "label": "Headline"
+                }, {
+                    "type": "text",
+                    "id": "cta_title",
+                    "label": "Main CTA Title",
+                    "default": "Shop ›"
+                }, {
+                    "type": "text",
+                    "id": "cta_url",
+                    "label": "Main CTA URL"
+                }, {
+                    "type": "checkbox",
+                    "id": "new_window",
+                    "label": "Open link in new window",
+                    "default": true
+                }
+            ]
+        }
+        ]
+    }
+{% endschema %}
