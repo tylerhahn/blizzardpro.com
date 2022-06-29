@@ -239,24 +239,6 @@
             "copy_color": "rgba(0,0,0,0)"
           }
         },
-        "c550f780-d3ea-4795-805e-b64a729ea5ef": {
-          "type": "image",
-          "settings": {
-            "right_aligned": true,
-            "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/insite-lp-1_alt.jpg",
-            "title": "Advanced HDR \/ HLG Technology",
-            "video_url": "",
-            "height": 1080,
-            "copy": "InSite G2 is designed for unparalleled video processing via NovaStar™ A8s receiving cards, which feature HDR10 & HLG support, automatic module calibration, and image rotation.",
-            "cta": "",
-            "cta_url": "",
-            "cta_color": "#f2c326",
-            "text_alignment": "left",
-            "title_color": "#f2c326",
-            "copy_color": "#ffffff"
-          }
-        },
         "0a937ed6-b076-4d16-b784-b2ffca742001": {
           "type": "image",
           "settings": {
@@ -270,6 +252,24 @@
             "cta": "",
             "cta_url": "",
             "cta_color": "",
+            "text_alignment": "left",
+            "title_color": "#f2c326",
+            "copy_color": "#ffffff"
+          }
+        },
+        "c550f780-d3ea-4795-805e-b64a729ea5ef": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "banner_type": "image",
+            "image": "shopify:\/\/shop_images\/insite-lp-1_alt.jpg",
+            "title": "Advanced HDR \/ HLG Technology",
+            "video_url": "",
+            "height": 1080,
+            "copy": "InSite G2 is designed for unparalleled video processing via NovaStar™ A8s receiving cards, which feature HDR10 & HLG support, automatic module calibration, and image rotation.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "#f2c326",
             "text_alignment": "left",
             "title_color": "#f2c326",
             "copy_color": "#ffffff"
@@ -296,8 +296,8 @@
       },
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
-        "c550f780-d3ea-4795-805e-b64a729ea5ef",
         "0a937ed6-b076-4d16-b784-b2ffca742001",
+        "c550f780-d3ea-4795-805e-b64a729ea5ef",
         "546058db-7408-404f-8bfe-221e431c5a41"
       ],
       "settings": {
