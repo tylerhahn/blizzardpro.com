@@ -284,20 +284,20 @@
             "working_temp": "",
             "working_humidity": "",
             "optimal_viewing_distance": "",
-            "viewing_angle": "",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "140° \/ 140° h\/v",
+            "ip_rating": "IP65 (front) \/ IP54 (rear)",
             "curvature": "",
-            "lifespan": "",
+            "lifespan": "100,000 hours",
             "receiving_card": "",
-            "grayscale": "",
+            "grayscale": "14 bit",
             "hdr": "",
             "scan_mode": "",
             "special_features": "",
             "warranty": "7 Years*",
-            "FCC_Certification": false,
-            "ETL_Certification": false,
-            "CE_Certification": false,
-            "RoHS_Certification": false
+            "FCC_Certification": true,
+            "ETL_Certification": true,
+            "CE_Certification": true,
+            "RoHS_Certification": true
           }
         },
         "74e351dd-3297-4e49-9151-6ae7c1b706b8": {
