@@ -418,7 +418,7 @@
             "cta_color": "#141414",
             "text_alignment": "left",
             "title_color": "#141414",
-            "copy_color": "#ffffff"
+            "copy_color": "#000000"
           }
         }
       },
