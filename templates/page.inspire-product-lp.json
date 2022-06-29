@@ -29,15 +29,23 @@
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-icons-web_outdoor.png",
-            "title": "Indoor \/ Outdoor"
+            "image": "shopify:\/\/shop_images\/InSpire_Web_Iconography_fine-pixel.png",
+            "title": "Fine Pixel"
+          }
+        },
+        "b980ce56-140d-4f0b-982a-04bdcc50178e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/InSpire_Web_Iconography_worship_70594c63-aa21-4494-b3a4-d3dd133c5e25.png",
+            "title": "Worship use"
           }
         }
       },
       "block_order": [
         "0416040e-48b8-45c4-aec1-80af1b3aebd5",
         "d1587056-26fd-4120-af3c-9c437a7a50dd",
-        "07571cc8-53ed-4241-922a-653cfe605f2a"
+        "07571cc8-53ed-4241-922a-653cfe605f2a",
+        "b980ce56-140d-4f0b-982a-04bdcc50178e"
       ],
       "settings": {
         "section_color": "#141414",
