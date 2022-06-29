@@ -203,11 +203,11 @@
       "settings": {
         "background_color_1": "#000000",
         "background_color_2": "#303030",
-        "spec_color_1": "#141414",
+        "spec_color_1": "#131313",
         "spec_color_2": "#181818",
-        "spec_color_data": "rgba(0,0,0,0)",
-        "spec_title_color": "rgba(0,0,0,0)",
-        "accent_color": "rgba(0,0,0,0)"
+        "spec_color_data": "#b3b3b3",
+        "spec_title_color": "#b3b3b3",
+        "accent_color": "#ffffff"
       }
     },
     "banner-1": {
