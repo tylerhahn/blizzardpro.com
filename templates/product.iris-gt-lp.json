@@ -3,8 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify://shop_images/gt-series-a.png",
-        "series_image": "shopify://shop_images/gtseries-header.png",
+        "hero_image": "shopify:\/\/shop_images\/gt-series-a.png",
+        "series_image": "shopify:\/\/shop_images\/gtseries-header.png",
         "centerImage": false,
         "isLeft": true
       }
@@ -15,36 +15,36 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/GT3_Web_Iconography_event.png",
+            "image": "shopify:\/\/shop_images\/GT3_Web_Iconography_event.png",
             "title": "Event Production"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/GT3_Web_Iconography_touring.png",
+            "image": "shopify:\/\/shop_images\/GT3_Web_Iconography_touring.png",
             "title": "Pro Touring"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/GT3_Web_Iconography_refresh-rate.png",
+            "image": "shopify:\/\/shop_images\/GT3_Web_Iconography_refresh-rate.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/GT3_Web_Iconography_outdoor.png",
-            "title": "Indoor / Outdoor"
+            "image": "shopify:\/\/shop_images\/GT3_Web_Iconography_outdoor.png",
+            "title": "Indoor \/ Outdoor"
           }
         },
         "73854793-8bdc-422e-990f-b48b95a65734": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/GT3_Web_Iconography_rental-stage.png",
-            "title": "Stage / Rental"
+            "image": "shopify:\/\/shop_images\/GT3_Web_Iconography_rental-stage.png",
+            "title": "Stage \/ Rental"
           }
         }
       },
@@ -66,8 +66,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/gt3xl-product0030.png",
-            "image_featured": "shopify://shop_images/gt3-xl.png",
+            "image": "shopify:\/\/shop_images\/gt3xl-product0030.png",
+            "image_featured": "shopify:\/\/shop_images\/gt3-xl.png",
             "panel_name": "GT3 XL",
             "pixel_pitch": "3.91 MM",
             "module_resolution": "64 x 128",
@@ -83,27 +83,27 @@
             "material": "Aluminum Die Cast",
             "weight": "14.9 kg",
             "maitenance_type": "Front or Back",
-            "pixel_density": "65,536 Dots/m2",
-            "average_power_consumption": "267 w/m2",
-            "max_power_consumption": "800 w/m2",
-            "input_power": "1,000 w/m2",
+            "pixel_density": "65,536 Dots\/m2",
+            "average_power_consumption": "267 w\/m2",
+            "max_power_consumption": "800 w\/m2",
+            "input_power": "1,000 w\/m2",
             "brightness": "4,500 NIT",
             "contrast": "5,000:1",
             "color_depth": "14 BIT",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50/60 hz",
+            "frame_frequency": "50\/60 hz",
             "input_voltage": "110~220V AC",
             "working_temp": "-20° ~+50℃",
             "working_humidity": "10% - 90% RH",
             "optimal_viewing_distance": "3.9 - 39.0 m",
-            "viewing_angle": "140° / 140° h/v",
-            "ip_rating": "IP65 (front) / IP54 (rear)",
+            "viewing_angle": "140° \/ 140° h\/v",
+            "ip_rating": "IP65 (front) \/ IP54 (rear)",
             "curvature": "±10°",
             "lifespan": "100,000 Hours",
             "receiving_card": "Novastar® A8S",
-            "grayscale": "22 bit+ / Clearview",
-            "hdr": "HDR10-optima / HLG",
-            "scan_mode": "1/16",
+            "grayscale": "22 bit+ \/ Clearview",
+            "hdr": "HDR10-optima \/ HLG",
+            "scan_mode": "1\/16",
             "special_features": "Two-Step Locking, Tour Cart",
             "warranty": "7 Years*",
             "FCC_Certification": true,
@@ -115,8 +115,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/gt3-product.png",
-            "image_featured": "shopify://shop_images/gt3-rear.png",
+            "image": "shopify:\/\/shop_images\/gt3-product.png",
+            "image_featured": "shopify:\/\/shop_images\/gt3-rear.png",
             "panel_name": "GT3",
             "pixel_pitch": "3.91 mm",
             "module_resolution": "64 x 128",
@@ -133,26 +133,26 @@
             "weight": "9.3 kg",
             "maitenance_type": "Front or Back",
             "pixel_density": "65,536",
-            "average_power_consumption": "267 w/m2",
-            "max_power_consumption": "800 w/m2",
-            "input_power": "1,000 w/m2",
+            "average_power_consumption": "267 w\/m2",
+            "max_power_consumption": "800 w\/m2",
+            "input_power": "1,000 w\/m2",
             "brightness": "4,500 nit",
             "contrast": "5,000:1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50/60 hz",
+            "frame_frequency": "50\/60 hz",
             "input_voltage": "110~220V AC",
             "working_temp": "-20° ~+50℃",
             "working_humidity": "10% - 90% RH",
             "optimal_viewing_distance": "3.9 - 39.0 m",
-            "viewing_angle": "140° / 140° h/v",
-            "ip_rating": "IP65 (front) / IP54 (rear)",
+            "viewing_angle": "140° \/ 140° h\/v",
+            "ip_rating": "IP65 (front) \/ IP54 (rear)",
             "curvature": "±10°",
             "lifespan": "100,000 hours",
             "receiving_card": "Novastar® A8S",
-            "grayscale": "22 bit+ / Clearview",
-            "hdr": "HDR10-optima / HLG",
-            "scan_mode": "1/16",
+            "grayscale": "22 bit+ \/ Clearview",
+            "hdr": "HDR10-optima \/ HLG",
+            "scan_mode": "1\/16",
             "special_features": "Two-Step Locking, Tour Cart",
             "warranty": "7 Years*",
             "FCC_Certification": true,
@@ -185,7 +185,7 @@
             "right_aligned": false,
             "banner_type": "video",
             "title": "",
-            "video_url": "https://firebasestorage.googleapis.com/v0/b/dealerportal-2fb18.appspot.com/o/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
+            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
             "height": 1080,
             "copy": "",
             "cta": "",
@@ -201,7 +201,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify://shop_images/tour-in-style-1.jpg",
+            "image": "shopify:\/\/shop_images\/tour-in-style-1.jpg",
             "title": "",
             "video_url": "",
             "height": 1080,
@@ -219,7 +219,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify://shop_images/tour-in-style-2.jpg",
+            "image": "shopify:\/\/shop_images\/tour-in-style-2.jpg",
             "title": "Sedan or Coupé",
             "video_url": "",
             "height": 1080,
@@ -238,7 +238,7 @@
             "right_aligned": false,
             "banner_type": "image",
             "margin": 0,
-            "image": "shopify://shop_images/gtseries-web-banner-2.jpg",
+            "image": "shopify:\/\/shop_images\/gtseries-web-banner-2.jpg",
             "title": "Any Tour, Any Stage",
             "video_url": "",
             "height": 1080,
@@ -257,7 +257,7 @@
             "right_aligned": true,
             "banner_type": "image",
             "margin": 0,
-            "image": "shopify://shop_images/gtseries-web-banner-3.jpg",
+            "image": "shopify:\/\/shop_images\/gtseries-web-banner-3.jpg",
             "title": "The Ultimate Pit Crew",
             "video_url": "",
             "height": 1080,
@@ -278,7 +278,8 @@
         "7f7c16a0-e0f9-4d7a-b799-5fda6da3d632",
         "576c38dc-a1ec-4c67-8713-40c22cf7119b"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "small-form": {
       "type": "dynamic-shopify-form",
@@ -298,13 +299,13 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify://shop_images/iris-warranty-studio_407c5015-4f45-4b7d-8b78-611ce50e775d.jpg",
+            "image": "shopify:\/\/shop_images\/iris-warranty-studio_407c5015-4f45-4b7d-8b78-611ce50e775d.jpg",
             "title": "No Fears for <br>7 Years™",
             "video_url": "",
             "height": 1080,
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
-            "cta_url": "/pages/icon-warranty",
+            "cta_url": "\/pages\/icon-warranty",
             "cta_color": "#a9dddd",
             "text_alignment": "left",
             "title_color": "#a9dddd",
@@ -316,13 +317,13 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify://shop_images/IRiS_Calculator_GT.jpg",
+            "image": "shopify:\/\/shop_images\/IRiS_Calculator_GT.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
-            "cta_url": "/pages/iris-quote-builder",
+            "cta_url": "\/pages\/iris-quote-builder",
             "cta_color": "#141414",
             "text_alignment": "left",
             "title_color": "#141414",
@@ -334,7 +335,8 @@
         "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6",
         "34d51cb8-20d7-4650-8ea8-c2406d031382"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "otherProds": {
       "type": "iris-novastar-lineup",
