@@ -61,7 +61,7 @@
             "image": "shopify:\/\/shop_images\/Insignia-vertical.png",
             "image_featured": "shopify:\/\/shop_images\/Insignia-vertical.png",
             "panel_name": "InSignia™ Panorama 2.5",
-            "pixel_pitch": "2.5",
+            "pixel_pitch": "2.5 mm",
             "module_resolution": "120 x 120",
             "module_pixel_quantiy": "14,400",
             "module_dimensions": "300 x 300 mm",
