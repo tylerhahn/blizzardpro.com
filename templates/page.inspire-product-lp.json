@@ -3,8 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/InSpire_HeroBanner_1be65ae4-0017-4152-8474-9e89f5a0dc5c.jpg",
-        "series_image": "shopify:\/\/shop_images\/InSpire_HeaderLogo.png",
+        "hero_image": "shopify://shop_images/InSpire_HeroBanner_1be65ae4-0017-4152-8474-9e89f5a0dc5c.jpg",
+        "series_image": "shopify://shop_images/InSpire_HeaderLogo.png",
         "centerImage": false,
         "isLeft": false
       }
@@ -15,28 +15,28 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-icons-web_perma-install.png",
+            "image": "shopify://shop_images/iris-icons-web_perma-install.png",
             "title": "Permanent Install"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-icons-web_refresh-rate.png",
+            "image": "shopify://shop_images/iris-icons-web_refresh-rate.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/InSpire_Web_Iconography_fine-pixel.png",
+            "image": "shopify://shop_images/InSpire_Web_Iconography_fine-pixel.png",
             "title": "Fine Pixel"
           }
         },
         "b980ce56-140d-4f0b-982a-04bdcc50178e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/InSpire_Web_Iconography_worship_70594c63-aa21-4494-b3a4-d3dd133c5e25.png",
+            "image": "shopify://shop_images/InSpire_Web_Iconography_worship_70594c63-aa21-4494-b3a4-d3dd133c5e25.png",
             "title": "Worship use"
           }
         }
@@ -58,8 +58,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-inspire-12-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-12-rear.png",
+            "image": "shopify://shop_images/iris-inspire-12-angled-right.png",
+            "image_featured": "shopify://shop_images/iris-inspire-12-rear.png",
             "panel_name": "InSpire™ 1.2",
             "pixel_pitch": "1.25 MM",
             "module_resolution": "240 x 135",
@@ -75,27 +75,27 @@
             "material": "Aluminum Die Cast",
             "weight": "4.9 KG",
             "maitenance_type": "Front",
-            "pixel_density": "640,000 Dots\/m2",
-            "average_power_consumption": "233 w\/m2",
-            "max_power_consumption": "700 w\/m2",
+            "pixel_density": "640,000 Dots/m2",
+            "average_power_consumption": "233 w/m2",
+            "max_power_consumption": "700 w/m2",
             "input_power": "",
             "brightness": "600 nit",
             "contrast": "5,000:1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50\/60 HZ",
+            "frame_frequency": "50/60 HZ",
             "input_voltage": "100~240V AC",
             "working_temp": "-10° ~+40° C",
             "working_humidity": "10% - 80% RH",
             "optimal_viewing_distance": "1.2 - 12.0 m",
-            "viewing_angle": "160° H \/ 160° V",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "160° H / 160° V",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "",
             "lifespan": "100,000 Hours",
             "receiving_card": "NovaStar™ A8S",
             "grayscale": "14 bit",
-            "hdr": "HDR10-Optima \/ HLG",
-            "scan_mode": "1\/60",
+            "hdr": "HDR10-Optima / HLG",
+            "scan_mode": "1/60",
             "special_features": "",
             "warranty": "7 Years",
             "FCC_Certification": true,
@@ -107,8 +107,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-inspire-15-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-15-rear.png",
+            "image": "shopify://shop_images/iris-inspire-15-angled-right.png",
+            "image_featured": "shopify://shop_images/iris-inspire-15-rear.png",
             "panel_name": "InSpire™ 1.5",
             "pixel_pitch": "1.56 mm",
             "module_resolution": "192 x 108",
@@ -125,26 +125,26 @@
             "weight": "4.9 KG",
             "maitenance_type": "Front",
             "pixel_density": "409,600",
-            "average_power_consumption": "167 w\/m2",
-            "max_power_consumption": "500 w\/m2",
-            "input_power": "650 w\/m2",
+            "average_power_consumption": "167 w/m2",
+            "max_power_consumption": "500 w/m2",
+            "input_power": "650 w/m2",
             "brightness": "600 nit",
             "contrast": "5,000 : 1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50\/60 HZ",
+            "frame_frequency": "50/60 HZ",
             "input_voltage": "100~220V AC",
             "working_temp": "-10° ~+40℃",
             "working_humidity": "10% - 80% RH",
             "optimal_viewing_distance": "1.5 - 15.0 m",
-            "viewing_angle": "160° \/ 160° h\/v",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "160° / 160° h/v",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "±6°",
             "lifespan": "100,000 hours",
             "receiving_card": "NovaStar™ A8S",
-            "grayscale": "22 bit+ \/ Clearview",
-            "hdr": "HDR10-optima \/ HLG",
-            "scan_mode": "1\/54",
+            "grayscale": "22 bit+ / Clearview",
+            "hdr": "HDR10-optima / HLG",
+            "scan_mode": "1/54",
             "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
             "warranty": "7 Years",
             "FCC_Certification": true,
@@ -156,8 +156,8 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-inspire-18-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear_5a00ae83-706b-471d-9936-cd9c2e670f76.png",
+            "image": "shopify://shop_images/iris-inspire-18-angled-right.png",
+            "image_featured": "shopify://shop_images/iris-inspire-18-rear_5a00ae83-706b-471d-9936-cd9c2e670f76.png",
             "panel_name": "InSpire™ 1.8",
             "pixel_pitch": "1.875 MM",
             "module_resolution": "160 x 90",
@@ -173,27 +173,27 @@
             "material": "Aluminum Die Cast",
             "weight": "4.9 kg",
             "maitenance_type": "Front",
-            "pixel_density": "284.444 DOTS\/M2",
-            "average_power_consumption": "147 W\/M2",
-            "max_power_consumption": "440 W\/M2",
-            "input_power": "1,000 W\/M2",
+            "pixel_density": "284.444 DOTS/M2",
+            "average_power_consumption": "147 W/M2",
+            "max_power_consumption": "440 W/M2",
+            "input_power": "1,000 W/M2",
             "brightness": "600 nit",
             "contrast": "5,000 : 1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 HZ",
-            "frame_frequency": "50\/60 HZ",
-            "input_voltage": "100~220 V AC | 50\/60HZ",
+            "frame_frequency": "50/60 HZ",
+            "input_voltage": "100~220 V AC | 50/60HZ",
             "working_temp": "-10 °~+40° C",
             "working_humidity": "10% - 80% RH",
             "optimal_viewing_distance": "1.8 - 18.0 m",
-            "viewing_angle": "160° \/ 160° H\/V",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "160° / 160° H/V",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "±9°",
             "lifespan": "100,000 hours",
             "receiving_card": "Novatar™A8s",
             "grayscale": "14 BIT",
-            "hdr": "HDR10OPTIMA \/ HLG",
-            "scan_mode": "1\/45",
+            "hdr": "HDR10OPTIMA / HLG",
+            "scan_mode": "1/45",
             "special_features": "",
             "warranty": "7 Years",
             "FCC_Certification": true,
@@ -226,7 +226,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/InSpire_SeriesTagline.jpg",
+            "image": "shopify://shop_images/InSpire_SeriesTagline.jpg",
             "title": "",
             "video_url": "",
             "height": 1080,
@@ -244,7 +244,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/InSpire_FeatureBanner1.jpg",
+            "image": "shopify://shop_images/InSpire_FeatureBanner1.jpg",
             "title": "Permanent LED Screens for Worship",
             "video_url": "",
             "height": 1080,
@@ -262,7 +262,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/InSpire_FeatureBanner2.jpg",
+            "image": "shopify://shop_images/InSpire_FeatureBanner2.jpg",
             "title": "Radiate Your Words, Not Costs",
             "video_url": "",
             "height": 1080,
@@ -280,7 +280,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/InSpire_FeatureBanner3.jpg",
+            "image": "shopify://shop_images/InSpire_FeatureBanner3.jpg",
             "title": "Smooth View, in the Front or Back Row",
             "video_url": "",
             "height": 1080,
@@ -300,8 +300,7 @@
         "2133fe71-5a66-4eb6-a203-3913dcdb98d9",
         "60fe85cf-72f2-4b0d-a33f-07c7c26db56f"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "small-form": {
       "type": "dynamic-shopify-form",
@@ -321,13 +320,13 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/warranty-case.jpg",
+            "image": "shopify://shop_images/iris-warranty-studio_407c5015-4f45-4b7d-8b78-611ce50e775d.jpg",
             "title": "No Fears for <br>7 Years™",
             "video_url": "",
             "height": 1080,
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
-            "cta_url": "\/pages\/icon-warranty",
+            "cta_url": "/pages/icon-warranty",
             "cta_color": "#5762ac",
             "text_alignment": "left",
             "title_color": "#5762ac",
@@ -339,13 +338,13 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/IRiS_Calculator_InSpire_fa299b9e-52cb-4599-be3b-69daae68243c.jpg",
+            "image": "shopify://shop_images/IRiS_Calculator_InSpire_fa299b9e-52cb-4599-be3b-69daae68243c.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
-            "cta_url": "\/pages\/iris-quote-builder",
+            "cta_url": "/pages/iris-quote-builder",
             "cta_color": "#141414",
             "text_alignment": "left",
             "title_color": "#141414",
@@ -357,8 +356,7 @@
         "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6",
         "34d51cb8-20d7-4650-8ea8-c2406d031382"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "otherProds": {
       "type": "iris-novastar-lineup",
