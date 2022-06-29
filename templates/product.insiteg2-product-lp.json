@@ -3,7 +3,8 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/insite-website-hero.jpg",
+        "hero_image": "shopify://shop_images/InSiteG2_HeroBanner.jpg",
+        "series_image": "shopify://shop_images/InSiteG2_HeaderLogo.png",
         "centerImage": false,
         "isLeft": true
       }
@@ -14,29 +15,29 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/permanentinstall.png",
+            "image": "shopify://shop_images/iris-icons-web_perma-install_e521ac59-4ab3-4d7d-a045-caf83db65b90.png",
             "title": "Permanent Install"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/stage-rental.png",
-            "title": "Stage \/ Rental"
+            "image": "shopify://shop_images/InSite_Web_Iconography_corporate.png",
+            "title": "Corporate Use"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/high_refresh.png",
+            "image": "shopify://shop_images/iris-icons-web_refresh-rate_1b656e4b-82a7-4ab9-85d8-ed154a41d7d5.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/indooroutdoor_a031c7c4-34b4-41d5-afd3-b3ec81cc5a4d.png",
-            "title": "Indoor \/ Outdoor"
+            "image": "shopify://shop_images/iris-icons-web_fine-pixel.png",
+            "title": "Fine Pixel"
           }
         }
       },
@@ -47,8 +48,8 @@
         "07571cc8-53ed-4241-922a-653cfe605f2a"
       ],
       "settings": {
-        "section_color": "#161616",
-        "text_color": "#a9dddd"
+        "section_color": "#141414",
+        "text_color": "#ffffff"
       }
     },
     "spec-viewer": {
@@ -57,45 +58,45 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-12.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-insite-12-rear.png",
+            "image": "shopify://shop_images/iris-insite-12_bc769589-6992-40a4-b9df-1814001dee81.png",
+            "image_featured": "shopify://shop_images/iris-insite-12-rear_04b88394-0bdc-4084-abb7-8718807915db.png",
             "panel_name": "InSite™ G2 1.2",
-            "pixel_pitch": "1.25 MM",
+            "pixel_pitch": "1.2 mm",
             "module_resolution": "240 x 135",
             "module_pixel_quantiy": "32,400",
             "module_dimensions": "300 x 168.75 mm",
-            "module_pixel_config": "NATIONSTAR SMD ® 1010 LEDs",
-            "application": "Indoor, Fine Pixel",
+            "module_pixel_config": "NATIONSTAR ® 1010 RGB",
+            "application": "Indoor",
             "module_weight": "",
-            "dimensions": "600 x 337.5 x 49 MM",
-            "resolution": "490 x 270",
+            "dimensions": "600 x 337.5 x 49 mm",
+            "resolution": "480 x 270",
             "pixel_quantity": "129,600",
             "module_quantity": "2 x 2",
             "material": "Aluminum Die Cast",
-            "weight": "4.9",
-            "maitenance_type": "Front",
-            "pixel_density": "640,000 Dots\/m2",
-            "average_power_consumption": "233 w\/m2",
-            "max_power_consumption": "700 w\/m2",
-            "input_power": "650 w\/m2",
-            "brightness": "600 NIT",
+            "weight": "4.9 kg",
+            "maitenance_type": "Front or Back",
+            "pixel_density": "640,000 Dots/m2",
+            "average_power_consumption": "223 w/m2",
+            "max_power_consumption": "700 w/m2",
+            "input_power": "",
+            "brightness": "600 nit",
             "contrast": "5,000:1",
             "color_depth": "14 BIT",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50\/60 HZ",
-            "input_voltage": "100~240V AC",
+            "frame_frequency": "50/60 hz",
+            "input_voltage": "110~220V AC",
             "working_temp": "10° ~+40℃",
-            "working_humidity": "10% - 80% RH",
-            "optimal_viewing_distance": "1.2 - 12.m",
-            "viewing_angle": "160° \/ 160° h\/v",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
-            "curvature": "±6°",
+            "working_humidity": "10% - 90% RH",
+            "optimal_viewing_distance": "1.25 - 12.5 m",
+            "viewing_angle": "160° / 160° h/v",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
+            "curvature": "",
             "lifespan": "100,000 Hours",
             "receiving_card": "Novastar® A8S",
-            "grayscale": "22 bit+ \/ Clearview",
-            "hdr": "HDR10-optima \/ HLG",
-            "scan_mode": "1\/60",
-            "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
+            "grayscale": "14 bit",
+            "hdr": "HDR10-optima / HLG",
+            "scan_mode": "1/60",
+            "special_features": "",
             "warranty": "7 Years*",
             "FCC_Certification": true,
             "ETL_Certification": true,
@@ -106,14 +107,14 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-15.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-insite-15-rear.png",
+            "image": "shopify://shop_images/iris-insite-15_b9d878d7-2b38-46cc-a9c1-cc4f9ab3708a.png",
+            "image_featured": "shopify://shop_images/iris-insite-15-rear_a2f25568-ab9f-4d3c-afb7-f2169f821209.png",
             "panel_name": "InSite™ G2 1.5",
-            "pixel_pitch": "1.56 mm",
+            "pixel_pitch": "1.5 mm",
             "module_resolution": "192 x 108",
             "module_pixel_quantiy": "20,736",
             "module_dimensions": "300 x 168.75 mm",
-            "module_pixel_config": "NATIONSTAR SMD ® 1212 LEDs",
+            "module_pixel_config": "NationStar SMD® 1212 LEDS",
             "application": "Indoor, Fine Pixel",
             "module_weight": "",
             "dimensions": "600 x 337.5 x 49 mm",
@@ -121,31 +122,31 @@
             "pixel_quantity": "82,944",
             "module_quantity": "2 x 2",
             "material": "Aluminum Die Cast",
-            "weight": "4.9",
+            "weight": "4.9 KG",
             "maitenance_type": "Front",
             "pixel_density": "409,600",
-            "average_power_consumption": "167 w\/m2",
-            "max_power_consumption": "500 w\/m2",
-            "input_power": "650 w\/m2",
+            "average_power_consumption": "167 w/m2",
+            "max_power_consumption": "500 w/m2",
+            "input_power": "650 w/m2",
             "brightness": "600 nit",
-            "contrast": "5,000:1",
+            "contrast": "5,000 : 1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50\/60 HZ",
-            "input_voltage": "100~240V AC",
+            "frame_frequency": "50/60 HZ",
+            "input_voltage": "100~220V AC",
             "working_temp": "-10° ~+40℃",
             "working_humidity": "10% - 80% RH",
             "optimal_viewing_distance": "1.5 - 15.0 m",
-            "viewing_angle": "160° \/ 160° h\/v",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "160° / 160° h/v",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "±6°",
             "lifespan": "100,000 hours",
-            "receiving_card": "Novastar® A8S",
-            "grayscale": "22 bit+ \/ Clearview",
-            "hdr": "HDR10-optima \/ HLG",
-            "scan_mode": "1\/54",
+            "receiving_card": "NovaStar™ A8S",
+            "grayscale": "22 bit+ / Clearview",
+            "hdr": "HDR10-optima / HLG",
+            "scan_mode": "1/54",
             "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
-            "warranty": "7 Years*",
+            "warranty": "7 Years",
             "FCC_Certification": true,
             "ETL_Certification": true,
             "CE_Certification": true,
@@ -155,46 +156,46 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-18.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear.png",
+            "image": "shopify://shop_images/iris-insite-18_c802d8b2-49a7-4395-9db0-f361e43d71b3.png",
+            "image_featured": "shopify://shop_images/iris-inspire-18-rear_c30de6e2-2806-4287-a3a9-ba5ca995e682.png",
             "panel_name": "InSite™ G2 1.8",
-            "pixel_pitch": "1.875 MM",
+            "pixel_pitch": "1.8 MM",
             "module_resolution": "160 x 90",
             "module_pixel_quantiy": "14,400",
-            "module_dimensions": "250 x 500 mm",
-            "module_pixel_config": "NATIONSTAR ® RGB 1921",
+            "module_dimensions": "300 x 168.75 mm",
+            "module_pixel_config": "NationStar SMD® 1515 LEDs",
             "application": "Indoor, Fine Pixel",
             "module_weight": "",
             "dimensions": "600 x 337.5 x 49 mm",
-            "resolution": "320 x 128",
+            "resolution": "320 x 180",
             "pixel_quantity": "57,600",
             "module_quantity": "2 x 2",
             "material": "Aluminum Die Cast",
-            "weight": "4.9",
+            "weight": "4.9 kg",
             "maitenance_type": "Front",
-            "pixel_density": "284, 444 DOTS\/M2",
-            "average_power_consumption": "147 W\/M2",
-            "max_power_consumption": "440 W\/M2",
-            "input_power": "1,000 W\/M2",
+            "pixel_density": "284.444 DOTS/M2",
+            "average_power_consumption": "147 W/M2",
+            "max_power_consumption": "440 W/M2",
+            "input_power": "1,000 W/M2",
             "brightness": "600 nit",
-            "contrast": "5,000:1",
+            "contrast": "5,000 : 1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 HZ",
-            "frame_frequency": "50\/60 HZ",
-            "input_voltage": "100~240 V AC",
+            "frame_frequency": "50/60 HZ",
+            "input_voltage": "100~220 V AC | 50/60HZ",
             "working_temp": "-10 °~+40° C",
             "working_humidity": "10% - 80% RH",
-            "optimal_viewing_distance": "1.8- 18.0 m",
-            "viewing_angle": "160° \/ 160° H\/V",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "optimal_viewing_distance": "1.8 - 18.0 m",
+            "viewing_angle": "160° / 160° H/V",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "±9°",
             "lifespan": "100,000 hours",
-            "receiving_card": "NOVASTAR ® A8S",
-            "grayscale": "22 BIT+ \/ CLEARVIEW",
-            "hdr": "HDR10-Optima & HLG",
-            "scan_mode": "1\/45",
+            "receiving_card": "Novatar™A8s",
+            "grayscale": "14 BIT",
+            "hdr": "HDR10OPTIMA / HLG",
+            "scan_mode": "1/45",
             "special_features": "",
-            "warranty": "7 Years*",
+            "warranty": "7 Years",
             "FCC_Certification": true,
             "ETL_Certification": true,
             "CE_Certification": true,
@@ -225,52 +226,89 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/banner-ltl.png",
+            "image": "shopify://shop_images/InSiteG2_SeriesTagline.jpg",
             "title": "",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
+            "video_url": "",
             "height": 1080,
             "copy": "",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "center",
-            "title_color": "#010101",
+            "title_color": "rgba(0,0,0,0)",
+            "copy_color": "rgba(0,0,0,0)"
+          }
+        },
+        "0a937ed6-b076-4d16-b784-b2ffca742001": {
+          "type": "image",
+          "settings": {
+            "right_aligned": false,
+            "banner_type": "image",
+            "image": "shopify://shop_images/IRiS_Features_InSite2.jpg",
+            "title": "True 16:9 HD Video Quality",
+            "video_url": "",
+            "height": 1080,
+            "copy": "InSite™ G2 is an upgraded selection of fine pixel display panels, offering exceptional color reproduction and gamut in true 16:9 aspect ratio HD video quality.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "",
+            "text_alignment": "left",
+            "title_color": "#f2c326",
+            "copy_color": "#ffffff"
+          }
+        },
+        "c550f780-d3ea-4795-805e-b64a729ea5ef": {
+          "type": "image",
+          "settings": {
+            "right_aligned": true,
+            "banner_type": "image",
+            "image": "shopify://shop_images/insite-lp-1_alt.jpg",
+            "title": "Advanced HDR / HLG Technology",
+            "video_url": "",
+            "height": 1080,
+            "copy": "InSite G2 is designed for unparalleled video processing via NovaStar™ A8s receiving cards, which feature HDR10 & HLG support, automatic module calibration, and image rotation.",
+            "cta": "",
+            "cta_url": "",
+            "cta_color": "#f2c326",
+            "text_alignment": "left",
+            "title_color": "#f2c326",
             "copy_color": "#ffffff"
           }
         },
         "546058db-7408-404f-8bfe-221e431c5a41": {
           "type": "image",
           "settings": {
-            "right_aligned": true,
+            "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/section1.png",
-            "title": "Faster, Lighter, Stronger",
+            "image": "shopify://shop_images/insite-lp-2.jpg",
+            "title": "Lightweight Frame, Easy Maintenance",
             "video_url": "",
             "height": 1080,
-            "copy": "IRiS® ICON™ panels are in perfect locking position as soon as you take them out of the case, and lock together with a single flick of the thumb.",
+            "copy": "Built in an extremely light & thin frame for fixed installations, panel modules are 100% front-serviceable, allowing for quick & easy install and maintenance – and include a 7-year limited warranty.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
             "text_alignment": "left",
-            "title_color": "#1bc993",
-            "copy_color": "#dad9da"
+            "title_color": "#f2c326",
+            "copy_color": "#ffffff"
           }
         }
       },
       "block_order": [
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
+        "0a937ed6-b076-4d16-b784-b2ffca742001",
+        "c550f780-d3ea-4795-805e-b64a729ea5ef",
         "546058db-7408-404f-8bfe-221e431c5a41"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
         "form_text": "Sign up to receive the latest Blizzard Lighting + IRiS Video news",
-        "background_color": "#000000",
-        "text_color": "#1bc993",
-        "button_color": "#000000",
+        "background_color": "#141414",
+        "text_color": "#f2c326",
+        "button_color": "#f2c326",
         "hs_value": "IRiS"
       }
     },
@@ -282,16 +320,16 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/iris-warranty-studio_407c5015-4f45-4b7d-8b78-611ce50e775d.jpg",
+            "image": "shopify://shop_images/iris-warranty-studio_407c5015-4f45-4b7d-8b78-611ce50e775d.jpg",
             "title": "No Fears for <br>7 Years™",
             "video_url": "",
             "height": 1080,
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
-            "cta_url": "\/pages\/icon-warranty",
-            "cta_color": "#00d8ff",
+            "cta_url": "/pages/icon-warranty",
+            "cta_color": "#f2c326",
             "text_alignment": "left",
-            "title_color": "#a9dddd",
+            "title_color": "#f2c326",
             "copy_color": "#ffffff"
           }
         },
@@ -300,17 +338,17 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/gt-calc.jpg",
+            "image": "shopify://shop_images/IRiS_Calculator_InSite.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
-            "cta_url": "\/pages\/iris-quote-builder",
-            "cta_color": "#ffffff",
+            "cta_url": "/pages/iris-quote-builder",
+            "cta_color": "#141414",
             "text_alignment": "left",
-            "title_color": "#ffffff",
-            "copy_color": "#ffeeee"
+            "title_color": "#141414",
+            "copy_color": "#ffffff"
           }
         }
       },
@@ -318,20 +356,19 @@
         "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6",
         "34d51cb8-20d7-4650-8ea8-c2406d031382"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "otherProds": {
       "type": "iris-novastar-lineup",
       "settings": {
         "collection": "novastar-gt-series",
-        "headline": "",
-        "subheadline": "",
+        "headline": "Add NovaStar™ Control",
+        "subheadline": "Choose LED display solutions for any video application",
         "products_shown": 4,
         "background_color": "#141414",
         "product_title_color": "#ffffff",
         "subtitle_color": "#9a9a9a",
-        "cta_color": "#a9dddd",
+        "cta_color": "#f2c326",
         "cta_title": "",
         "cta_url": ""
       }
