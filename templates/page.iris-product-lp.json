@@ -283,11 +283,11 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the GT™ Series Cutsheet",
+        "form_text": "Sign up to receive the latest Blizzard Lighting + IRiS Video news",
         "background_color": "#000000",
         "text_color": "#a9dddd",
         "button_color": "#d2371b",
-        "hs_value": "GT Series"
+        "hs_value": "IRiS"
       }
     },
     "banner-2": {

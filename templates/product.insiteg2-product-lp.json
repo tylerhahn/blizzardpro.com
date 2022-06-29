@@ -3,7 +3,7 @@
     "slider": {
       "type": "iris-lp-hero",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/insite-website-hero.jpg",
+        "hero_image": "shopify://shop_images/insite-website-hero.jpg",
         "centerImage": false,
         "isLeft": true
       }
@@ -14,29 +14,29 @@
         "0416040e-48b8-45c4-aec1-80af1b3aebd5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/permanentinstall.png",
+            "image": "shopify://shop_images/permanentinstall.png",
             "title": "Permanent Install"
           }
         },
         "42ab91ad-d4b9-4a90-95e1-31661cf684a2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/stage-rental.png",
-            "title": "Stage \/ Rental"
+            "image": "shopify://shop_images/stage-rental.png",
+            "title": "Stage / Rental"
           }
         },
         "d1587056-26fd-4120-af3c-9c437a7a50dd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/high_refresh.png",
+            "image": "shopify://shop_images/high_refresh.png",
             "title": "High Refresh Rate"
           }
         },
         "07571cc8-53ed-4241-922a-653cfe605f2a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/indooroutdoor_a031c7c4-34b4-41d5-afd3-b3ec81cc5a4d.png",
-            "title": "Indoor \/ Outdoor"
+            "image": "shopify://shop_images/indooroutdoor_a031c7c4-34b4-41d5-afd3-b3ec81cc5a4d.png",
+            "title": "Indoor / Outdoor"
           }
         }
       },
@@ -57,8 +57,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-12.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-insite-12-rear.png",
+            "image": "shopify://shop_images/iris-insite-12.png",
+            "image_featured": "shopify://shop_images/iris-insite-12-rear.png",
             "panel_name": "InSite™ G2 1.2",
             "pixel_pitch": "1.25 MM",
             "module_resolution": "240 x 135",
@@ -74,27 +74,27 @@
             "material": "Aluminum Die Cast",
             "weight": "4.9",
             "maitenance_type": "Front",
-            "pixel_density": "640,000 Dots\/m2",
-            "average_power_consumption": "233 w\/m2",
-            "max_power_consumption": "700 w\/m2",
-            "input_power": "650 w\/m2",
+            "pixel_density": "640,000 Dots/m2",
+            "average_power_consumption": "233 w/m2",
+            "max_power_consumption": "700 w/m2",
+            "input_power": "650 w/m2",
             "brightness": "600 NIT",
             "contrast": "5,000:1",
             "color_depth": "14 BIT",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50\/60 HZ",
+            "frame_frequency": "50/60 HZ",
             "input_voltage": "100~240V AC",
             "working_temp": "10° ~+40℃",
             "working_humidity": "10% - 80% RH",
             "optimal_viewing_distance": "1.2 - 12.m",
-            "viewing_angle": "160° \/ 160° h\/v",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "160° / 160° h/v",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "±6°",
             "lifespan": "100,000 Hours",
             "receiving_card": "Novastar® A8S",
-            "grayscale": "22 bit+ \/ Clearview",
-            "hdr": "HDR10-optima \/ HLG",
-            "scan_mode": "1\/60",
+            "grayscale": "22 bit+ / Clearview",
+            "hdr": "HDR10-optima / HLG",
+            "scan_mode": "1/60",
             "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
             "warranty": "7 Years*",
             "FCC_Certification": true,
@@ -106,8 +106,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-15.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-insite-15-rear.png",
+            "image": "shopify://shop_images/iris-insite-15.png",
+            "image_featured": "shopify://shop_images/iris-insite-15-rear.png",
             "panel_name": "InSite™ G2 1.5",
             "pixel_pitch": "1.56 mm",
             "module_resolution": "192 x 108",
@@ -124,26 +124,26 @@
             "weight": "4.9",
             "maitenance_type": "Front",
             "pixel_density": "409,600",
-            "average_power_consumption": "167 w\/m2",
-            "max_power_consumption": "500 w\/m2",
-            "input_power": "650 w\/m2",
+            "average_power_consumption": "167 w/m2",
+            "max_power_consumption": "500 w/m2",
+            "input_power": "650 w/m2",
             "brightness": "600 nit",
             "contrast": "5,000:1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 hz",
-            "frame_frequency": "50\/60 HZ",
+            "frame_frequency": "50/60 HZ",
             "input_voltage": "100~240V AC",
             "working_temp": "-10° ~+40℃",
             "working_humidity": "10% - 80% RH",
             "optimal_viewing_distance": "1.5 - 15.0 m",
-            "viewing_angle": "160° \/ 160° h\/v",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "160° / 160° h/v",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "±6°",
             "lifespan": "100,000 hours",
             "receiving_card": "Novastar® A8S",
-            "grayscale": "22 bit+ \/ Clearview",
-            "hdr": "HDR10-optima \/ HLG",
-            "scan_mode": "1\/54",
+            "grayscale": "22 bit+ / Clearview",
+            "hdr": "HDR10-optima / HLG",
+            "scan_mode": "1/54",
             "special_features": "CORNER PROTECTORS, GROUND SUPPORT LOCKS BLACKOUT GASKETS, QUICK THUMB LOCKING",
             "warranty": "7 Years*",
             "FCC_Certification": true,
@@ -155,8 +155,8 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-18.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear.png",
+            "image": "shopify://shop_images/iris-insite-18.png",
+            "image_featured": "shopify://shop_images/iris-inspire-18-rear.png",
             "panel_name": "InSite™ G2 1.8",
             "pixel_pitch": "1.875 MM",
             "module_resolution": "160 x 90",
@@ -172,27 +172,27 @@
             "material": "Aluminum Die Cast",
             "weight": "4.9",
             "maitenance_type": "Front",
-            "pixel_density": "284, 444 DOTS\/M2",
-            "average_power_consumption": "147 W\/M2",
-            "max_power_consumption": "440 W\/M2",
-            "input_power": "1,000 W\/M2",
+            "pixel_density": "284, 444 DOTS/M2",
+            "average_power_consumption": "147 W/M2",
+            "max_power_consumption": "440 W/M2",
+            "input_power": "1,000 W/M2",
             "brightness": "600 nit",
             "contrast": "5,000:1",
             "color_depth": "14 bit",
             "refresh_rate": "≥3,840 HZ",
-            "frame_frequency": "50\/60 HZ",
+            "frame_frequency": "50/60 HZ",
             "input_voltage": "100~240 V AC",
             "working_temp": "-10 °~+40° C",
             "working_humidity": "10% - 80% RH",
             "optimal_viewing_distance": "1.8- 18.0 m",
-            "viewing_angle": "160° \/ 160° H\/V",
-            "ip_rating": "IP40 (front) \/ IP21 (rear)",
+            "viewing_angle": "160° / 160° H/V",
+            "ip_rating": "IP40 (front) / IP21 (rear)",
             "curvature": "±9°",
             "lifespan": "100,000 hours",
             "receiving_card": "NOVASTAR ® A8S",
-            "grayscale": "22 BIT+ \/ CLEARVIEW",
+            "grayscale": "22 BIT+ / CLEARVIEW",
             "hdr": "HDR10-Optima & HLG",
-            "scan_mode": "1\/45",
+            "scan_mode": "1/45",
             "special_features": "",
             "warranty": "7 Years*",
             "FCC_Certification": true,
@@ -225,9 +225,9 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/banner-ltl.png",
+            "image": "shopify://shop_images/banner-ltl.png",
             "title": "",
-            "video_url": "https:\/\/firebasestorage.googleapis.com\/v0\/b\/dealerportal-2fb18.appspot.com\/o\/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
+            "video_url": "https://firebasestorage.googleapis.com/v0/b/dealerportal-2fb18.appspot.com/o/gt-anim-3.mp4?alt=media&token=670a5304-ac58-4e58-a271-5d02bc46ef7c",
             "height": 1080,
             "copy": "",
             "cta": "",
@@ -243,7 +243,7 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/section1.png",
+            "image": "shopify://shop_images/section1.png",
             "title": "Faster, Lighter, Stronger",
             "video_url": "",
             "height": 1080,
@@ -261,17 +261,16 @@
         "a2e0e816-6ada-43fc-b42f-e52c550c28de",
         "546058db-7408-404f-8bfe-221e431c5a41"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the <br>ICON Series Cutsheet",
+        "form_text": "Sign up to receive the latest Blizzard Lighting + IRiS Video news",
         "background_color": "#000000",
         "text_color": "#1bc993",
         "button_color": "#000000",
-        "hs_value": "IRiS ICON"
+        "hs_value": "IRiS"
       }
     },
     "banner-2": {
@@ -282,13 +281,13 @@
           "settings": {
             "right_aligned": true,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/warranty-case.jpg",
+            "image": "shopify://shop_images/warranty-case.jpg",
             "title": "No Fears for <br>7 Years™",
             "video_url": "",
             "height": 1080,
             "copy": "Panels built to last with a warranty to back 'em up for 7 years or 2,500 shows – whichever comes first. Oh, and if you can do 2,500 shows in 7 years, we tip our cap to ya!",
             "cta": "Learn More ›",
-            "cta_url": "\/pages\/icon-warranty",
+            "cta_url": "/pages/icon-warranty",
             "cta_color": "#00d8ff",
             "text_alignment": "left",
             "title_color": "#a9dddd",
@@ -300,13 +299,13 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/gt-calc.jpg",
+            "image": "shopify://shop_images/gt-calc.jpg",
             "title": "Plan Your Next Video Project",
             "video_url": "",
             "height": 1080,
             "copy": "Use our online quote building tool to start planning your next video wall project.",
             "cta": "Get Started ›",
-            "cta_url": "\/pages\/iris-quote-builder",
+            "cta_url": "/pages/iris-quote-builder",
             "cta_color": "#ffffff",
             "text_alignment": "left",
             "title_color": "#ffffff",
@@ -318,8 +317,7 @@
         "2ce1ea51-a38a-44c3-af33-e9e89c8f91f6",
         "34d51cb8-20d7-4650-8ea8-c2406d031382"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "otherProds": {
       "type": "iris-novastar-lineup",

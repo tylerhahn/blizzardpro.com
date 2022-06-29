@@ -374,11 +374,11 @@
     "small-form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Download the ICON Series Cutsheet",
+        "form_text": "Sign up to receive the latest Blizzard Lighting + IRiS Video news",
         "background_color": "#141414",
         "text_color": "#05ffad",
         "button_color": "#05ffad",
-        "hs_value": "IRiS ICON"
+        "hs_value": "IRiS"
       }
     },
     "banner-2": {
