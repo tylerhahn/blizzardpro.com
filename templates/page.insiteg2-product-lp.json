@@ -248,7 +248,7 @@
             "title": "True 16:9 HD Video Quality",
             "video_url": "",
             "height": 1080,
-            "copy": "InSite™ G2 is an upgraded selection of fine pixel display panels, offering exceptional color reproduction and gamut in true 16:9 aspect ratio HD video quality.",
+            "copy": "InSite G2 is an upgraded selection of fine pixel display panels, offering exceptional color reproduction and gamut in true 16:9 aspect ratio HD video quality.",
             "cta": "",
             "cta_url": "",
             "cta_color": "",
@@ -379,7 +379,7 @@
       "type": "iris-lg-form",
       "settings": {
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
-        "form_title": "Want To Learn More?"
+        "form_title": "Connect with an IRiS Video Expert"
       }
     }
   },
