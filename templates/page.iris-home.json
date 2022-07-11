@@ -153,19 +153,19 @@
         "background_color": "#1d1932",
         "text_block_icon_1": "shopify:\/\/shop_images\/IRiS_LP_Icons_installation.png",
         "text_block_title_1": "Installation",
-        "text_block_paragraph_1": "Whether you’re building a permanent, 24\/7 install, or taking your panels on the road, we have options that cover a variety of use cases.",
+        "text_block_paragraph_1": "Whether you’re building a permanent, 24\/7 stage, or taking your panels on the road, we have options to fit any display application.",
         "text_block_icon_2": "shopify:\/\/shop_images\/IRiS_LP_Icons_environment_717fbf6d-51b1-47ae-9404-6867d7a1165f.png",
         "text_block_title_2": "Environment",
-        "text_block_paragraph_2": "Certain video panels are rated to be installed indoors, outdoors, or both. Different panels are built for different needs.",
+        "text_block_paragraph_2": "Certain video panels are rated to be installed indoors only, with others having both an indoor & outdoor use rating. Different panels are built for different needs.",
         "banner": "shopify:\/\/shop_images\/iris_lp_icon_banner_desktop_3844852f-1fd5-4843-b0f6-ec66e18db404.png",
         "banner_mobile": "shopify:\/\/shop_images\/iris_lp_icon_banner_mobile.png",
-        "banner_alt_text": "Pick the perfect video wall for you",
+        "banner_alt_text": "Pick the perfect IRiS LED video wall for you",
         "text_block_icon_3": "shopify:\/\/shop_images\/IRiS_LP_Icons_pixel-pitch.png",
         "text_block_title_3": "Pixel Pitch",
-        "text_block_paragraph_3": "The pixel pitch (PP) of a panel defines how close you can get to the video panel without a loss of resolution. The lower the number, the closer you can get without any loss in quality.",
+        "text_block_paragraph_3": "The pixel pitch (PP) of a video panel determines the viewing distance from the display without a loss of resolution. The lower the PP number, the closer a viewer can be without a loss in quality.",
         "text_block_icon_4": "shopify:\/\/shop_images\/IRiS_LP_Icons_refresh-rate.png",
         "text_block_title_4": "Refresh Rate",
-        "text_block_paragraph_4": "The refresh rate affects how quickly your video panel responds to changes. A high refresh rate is essential to highly visual presentations, where a still image does not need as high of a refresh rate."
+        "text_block_paragraph_4": "The refresh rate (Hz) affects how quickly your video panel responds to display changes. A higher refresh rate is essential to extremely visual presentations, whereas ones with still images can perform at a lower rate."
       }
     },
     "fullwidth-scroller": {
