@@ -376,7 +376,7 @@
           "settings": {
             "right_aligned": false,
             "banner_type": "image",
-            "image": "shopify:\/\/shop_images\/InSignia_SeriesTagline.jpg",
+            "image": "shopify:\/\/shop_images\/InSignia_SeriesTagline2_dfb2550b-949c-43f1-a443-add879e0ffa4.jpg",
             "title": "",
             "video_url": "",
             "height": 1080,
@@ -416,7 +416,7 @@
             "title": "Versatile Digital Signage",
             "video_url": "",
             "height": 1080,
-            "copy": "The InSignia™ series meets the needs of any commercial display with easy-to-install, custom-sized LED panels ready for indoor or IP65-rated outdoor use.",
+            "copy": "The InSignia series meets the needs of any commercial display with easy-to-install, custom-sized LED panels ready for indoor or IP65-rated outdoor use.",
             "cta": "",
             "cta_url": "",
             "cta_color": "#acd037",
@@ -529,7 +529,7 @@
       "type": "iris-lg-form",
       "settings": {
         "form_id": "cfc2216a-54df-46f3-a47e-a18b6ba87274",
-        "form_title": "Want To Learn More?"
+        "form_title": "Connect with an IRiS Video Expert"
       }
     }
   },
