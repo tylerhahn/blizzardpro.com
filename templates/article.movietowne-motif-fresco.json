@@ -24,11 +24,11 @@
     "product": {
       "type": "casestudy-product",
       "settings": {
-        "image": "shopify:\/\/shop_images\/IMG_5072_UV_-cutout_cropped.png",
-        "title": "Colorise™ Exa",
-        "subtitle": "Fanless, Silent LED Wash Fixture",
-        "copy": "<p>Colorise EXA fixtures run a totally silent operation with convection cooling, making them ideal for “sound sensitive” environments. The EXA features 12x 15W 6-in-1 RGBAW+UV LEDs plus a 25-degree beam angle. The ETL-listed fixture also includes a built-in W-DMX®️ compatible receiver for ultimate connectivity capabilities.<\/p><p><br\/>• 12x 15W 6-in-1 RGBAW+UV LEDs<br\/>• Silent Operation, ETL-listed<br\/>• Available in Black or White Housing<br\/>• 25° Beam Angle<\/p>",
-        "url": "https:\/\/www.blizzardpro.com\/products\/colorise-exa"
+        "image": "shopify:\/\/shop_images\/Motif-Fresco---Red.png",
+        "title": "Motif™ Fresco",
+        "subtitle": "Indoor\/Outdoor LED Wash Fixture",
+        "copy": "<p>The Motif Fresco is built for architectural lighting applications. Its IP65 rating + water-resistant power cable make it a great choice for an outdoor accent light, while its silent, convection cooling and IR remote-control option make it ideal for theaters & production.<\/p><p>• Weatherproof, IP65-Rated<br\/>• 28° Beam Angle<br\/>• Color Mixing via 14x 3W RGB LEDs<br\/>• Available in Black or White Housing<\/p>",
+        "url": "https:\/\/www.blizzardpro.com\/products\/motif-fresco"
       }
     },
     "sidebar": {
