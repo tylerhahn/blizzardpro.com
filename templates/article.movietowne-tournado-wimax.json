@@ -24,11 +24,11 @@
     "product": {
       "type": "casestudy-product",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Motif-Vignette-P2-Blue.png",
-        "title": "Motif™ Vignette",
-        "subtitle": "Indoor\/Outdoor Linear LED Wash Fixture",
-        "copy": "<p>The Motif Vignette offers an 18x 10W RGB+WW LED light source, which when compared to fixtures with RGBW LEDs, the warm white can increase CRI & better emulate the warmth of traditional tungsten filament fixtures. Its IP65 rating makes it a great outdoor option, while its natural, convection cooling make it perfect for sound sensitive, indoor environments.<\/p><p>• 18x 10W 4-in-1 RGB+WW LEDs<br\/>• Available in Black or White Housing<br\/>• Weatherproof, IP65-Rated<br\/>• 39.8” x 2.7” x 4” Versatile Size (LWH)<\/p>",
-        "url": "https:\/\/www.blizzardpro.com\/products\/motif-sketch"
+        "image": "shopify:\/\/shop_images\/TOURnado-WIMAX-Qzoom-Lens-In---Blue.png",
+        "title": "TOURNado™ WiMAX QZoom",
+        "subtitle": "Outdoor LED PAR with Zoom",
+        "copy": "<p>The QZoom leads the TOURnado WiMAX series of IP65-rated fixtures with 12x 15W RGBW 4-in-1 LEDs plus a built-in W-DMX®️ compatible receiver for ultimate connectivity capabilities. It features an 8°-50° zoomable beam angle precise enough for any sort of uplighting or wash effect needed, and runs a fanless, silent operation.<\/p><p>• Color Mixing via 12x 15W 4-in-1 RGBW LEDs<br\/>• Built-in W-DMX®️ compatible receiver<br\/>• 8°-50° Zoomable Beam Angle<br\/>• ETL-listed, IP65-rated for Outdoor Use<\/p>",
+        "url": "https:\/\/www.blizzardpro.com\/collections\/all\/products\/tournado-wimax-qzoom"
       }
     },
     "sidebar": {
@@ -37,7 +37,7 @@
         "challenge": "Create a vibrant, mythical world for cinema-goers & mall patrons alike at the newest MovieTowne venue in Guyana, a “homecoming project” for its founder.",
         "solution": "Michael Pereira of Streamline Systems chose 150+ Blizzard fixtures for a combination of LED wash, effect & moving lights to bring the entire venue’s concept to life.",
         "result": "Vivid colors & artifacts now greet \nvisitors beyond their imagination, offering a one-of-a-kind shopping, dining & entertainment experience.",
-        "linkDownload": "https:\/\/cdn.shopify.com\/s\/files\/1\/1741\/5055\/files\/MovieTowne_CaseStudy_MotifVignette.pdf?v=1657635403"
+        "linkDownload": "https:\/\/cdn.shopify.com\/s\/files\/1\/1741\/5055\/files\/MovieTowne_CaseStudy_TournadoWimaxQZoom.pdf?v=1657635929"
       }
     }
   },
