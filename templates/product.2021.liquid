@@ -148,7 +148,7 @@
             {% else %}
                 <div class="tag-box d-flex flex-wrap align-items-center">
                     {% for tag in product.tags %}
-                        {% unless tag == 'en route' %}
+                        {% unless tag == 'en route' or tag == 'discontinued' %}
                             <div class="tag-bubble p-2 m-2">
                                 <a href="/collections/{{tag | handleize}}">{{tag}}</a>
                             </div>
