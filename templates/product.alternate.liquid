@@ -105,12 +105,12 @@
 
 
 					{% if product.title contains 'Eclipse' %}
- 			  <div class="btn btn-blue"><a  href="#modal-one">Register</a></div> {% elsif product.title contains 'Lucid' %}
-              <div class="btn btn-blue"><a href="#modal-one">Register</a></div>{% elsif product.tags contains 'discontinued'%}
+ 			  <div class="btn btn-blue"><a  href="#modal-one">*Register</a></div> {% elsif product.title contains 'Lucid' %}
+              <div class="btn btn-blue"><a href="#modal-one">*Register</a></div>{% elsif product.tags contains 'discontinued'%}
               			<a class="prod-info" style="color: #e43232;font-weight: 900;text-transform: uppercase;letter-spacing: 1px;">Discontinued</a>
              {% else %}
 
-              <div class="btn btn-blue"><a href="#modal-one">Register</a></div> {% endif %}
+              <div class="btn btn-blue"><a href="#modal-one">*Register</a></div> {% endif %}
 
 			</div>
 
@@ -166,7 +166,7 @@
 {% if product.tags contains 'discontinued'%}
 
               {% else %}
-				<a class="btn btn-outline gray" href="#modal-one">Register</a>
+				<a class="btn btn-outline gray" href="#modal-one">*Register</a>
               {% endif %}
 
 				<a class="btn btn-outline gray" href="{{ product.metafields.c_f.Youtube_URL }}" data-lity>Play Video <span class="fa">&#xf144;</span></a>
@@ -200,7 +200,7 @@
 
           {% else %}
 
-			<a class="btn btn-outline gray" href="#modal-one">Register</a> {% endif %}
+			<a class="btn btn-outline gray" href="#modal-one">*Register</a> {% endif %}
 
 
       </div>
