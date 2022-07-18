@@ -291,9 +291,13 @@
 
     <!-- Anchor: Specs -->
     <a class="anchor-offset" id="specs" style="margin-top: 100px"></a>
-
+    {{ metafield.Full_Width_Image | img_url: 'master' }}
+    {% if metafield.Full_Width_Image != blank %}
+        <img style="width: 100%; margin: 0 auto; max-width: 1920px;" src="{{ metafield.Full_Width_Image | img_url: 'master' }}" alt="">
+    {% endif %}
 
     <!-- PRODUCT SUMMARY + SPECS -->
+    {% if metafield.Product_Summary != blank %}
     <div id="summary-2021">
         <section class="container py-5" id="spec-summary">
             <div class="row">
@@ -319,6 +323,8 @@
             </div>
         </section>
     </div>
+    {% endif %}
+
 
     <!-- Q&A -->
 
