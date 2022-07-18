@@ -9676,6 +9676,7 @@ span.hulkapps-cart-original-total {
 .algolia-discontinued {
   font-size: 16px;
   padding-bottom: 17px;
+
   color: gray;
   text-transform: uppercase;
   letter-spacing: 0px;
@@ -11740,4 +11741,14 @@ div#cs--wrapper {
 
 .cs--product {
   order: 4;
+}
+.plain-section-text li {
+  color: #555 !important;
+  text-align: left;
+  margin-left:  1em;
+  list-style-type: disc !important;
+}
+
+.visibility-hidden {
+  visibility: hidden;
 }

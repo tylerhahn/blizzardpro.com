@@ -53,7 +53,7 @@
                     {% if isArchi %}
                     {% include 'archi-spec-box' %}
                         {% else %}
-                        <div class="col-lg-3 order-5 order-lg-1" id="side-drawer-images">
+                        <div class="col-lg-3 order-5 order-lg-1 {% if metafield.Hide_Carousel == 'true' %}visibility-hidden{% endif %}" id="side-drawer-images">
                             {% if productImagesCount > 3 %}
                                 {% for image in product.images %}
                                     {% if image.src != product.featured_image and image.alt != 'hidden' %}
@@ -129,6 +129,10 @@
 
                 {% else %}
                     <div class="pricing-box mt-3">
+                        {% if variant.requires_shipping %}
+                            {% else %}
+                                <p>Note: This is a digital product.</p>
+                        {% endif %}
                         {% include 'add-to-cart-dropdown' %}
                     </div>
                 {% endif %}
@@ -236,9 +240,22 @@
 
         {% endif %}
 
+        {% if metafield.Full_Width_Image != blank %}
+         <img style="width: 100%; margin: 0 auto; max-width: 1920px;" src="{{ metafield.Full_Width_Image }}" alt="">
+        {% endif %}
+
       {% if metafield.Basic_Product != 'true' %}
         <!-- PRODUCT SPECIFIC OVERRIDES -->
         {% include '2021-product-specific-overrides' %}
+        {% elsif metafield.Section_1_Description %}
+        <div class="plain-section-text" style="padding: 4em 0; max-width: 960px; margin: 0 auto; font-size: 1.3em;">
+            <h3>{{ metafield.Section_1_Header }}</h3>
+            <p >
+                {{ metafield.Section_1_Description }}
+            </p>
+        </div>
+
+
       {% endif %}
 
         <!-- HERO SECTION 2 -->
@@ -291,10 +308,7 @@
 
     <!-- Anchor: Specs -->
     <a class="anchor-offset" id="specs" style="margin-top: 100px"></a>
-    {{ metafield.Full_Width_Image | img_url: 'master' }}
-    {% if metafield.Full_Width_Image != blank %}
-        <img style="width: 100%; margin: 0 auto; max-width: 1920px;" src="{{ metafield.Full_Width_Image | img_url: 'master' }}" alt="">
-    {% endif %}
+
 
     <!-- PRODUCT SUMMARY + SPECS -->
     {% if metafield.Product_Summary != blank %}
