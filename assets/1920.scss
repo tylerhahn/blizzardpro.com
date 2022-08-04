@@ -1,10 +1,19 @@
 @media only screen and (min-width: 1920px) {
+
   .bl-slider {
     max-width: 1920px;
+  }
+
+  .bl-caption {
+    h2 {
+      font-size: 6em;
+      max-width: 600px;;
+    }
   }
 
   .hero-s-caption {
     font-size: 29px;
     max-width: 530px;
   }
+
 } //End bracket

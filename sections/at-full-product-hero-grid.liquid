@@ -41,136 +41,113 @@
 </div>
 
 
-
-
 {% schema %}
-{
-  "name": "Product Hero Grid",
-  "settings": [
-  {
-    "type": "range",
-    "id": "height",
-    "min": 0,
-    "max": 100,
-    "step": 5,
-    "label": "Box Height",
-    "default": 50
-},
-    {
-      "type": "header",
-      "content": "Product"
-    },
-    {
-        "type": "image_picker",
-        "id": "product_image",
-        "label": "Product Image"
-      },
-      {
-        "type": "color",
-        "id": "product_color",
-        "label": "Background Color"
-      },
-      {
-        "type": "text",
-        "id": "product_title",
-        "label": "Product Title"
-      },
-      {
-        "type": "textarea",
-        "id": "product_paragraph",
-        "label": "Product Paragraph"
-      },
-      {
-        "type": "text",
-        "id": "product_url_title",
-        "label": "CTA Title",
-        "default": "Shop ›"
-      },
-      {
-        "type": "url",
-        "id": "product_url",
-        "label": "CTA Url"
-      },
-      {
-        "type": "header",
-        "content": "Box 1"
-      },
-      {
-        "type": "image_picker",
-        "id": "box_1_image",
-        "label": "Box Image"
-      },
-      {
-        "type": "textarea",
-        "id": "box_1_paragraph",
-        "label": "Box Text"
-      },
 
-      {
-        "type": "header",
-        "content": "Box 2"
-      },
-      {
-        "type": "image_picker",
-        "id": "box_2_image",
-        "label": "Box Image"
-      },
-      {
-        "type": "textarea",
-        "id": "box_2_paragraph",
-        "label": "Box Text"
-      },
-      {
-        "type": "color",
-        "id": "box_2_color",
-        "label": "Box Color"
-      },
-      {
-        "type": "header",
-        "content": "Box 3"
-      },
-      {
-        "type": "image_picker",
-        "id": "box_3_image",
-        "label": "Box Image"
-      },
-      {
-        "type": "textarea",
-        "id": "box_3_paragraph",
-        "label": "Box Text"
-      },
-      {
-        "type": "color",
-        "id": "box_3_color",
-        "label": "Box Color"
-      },
-      {
-        "type": "header",
-        "content": "Box 4"
-      },
-      {
-        "type": "image_picker",
-        "id": "box_4_image",
-        "label": "Box Image"
-      },
-      {
-        "type": "textarea",
-        "id": "box_4_paragraph",
-        "label": "Box Text"
-      },
-      {
-        "type": "color",
-        "id": "box_4_color",
-        "label": "Box Color"
-      }
-  ],
-  "presets": [
-  {
+{
     "name": "Product Hero Grid",
-    "category": "Image"
-  }
-]
+    "settings": [
+        {
+            "type": "range",
+            "id": "height",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "label": "Box Height",
+            "default": 50
+        }, {
+            "type": "header",
+            "content": "Product"
+        }, {
+            "type": "image_picker",
+            "id": "product_image",
+            "label": "Product Image"
+        }, {
+            "type": "color",
+            "id": "product_color",
+            "label": "Background Color"
+        }, {
+            "type": "text",
+            "id": "product_title",
+            "label": "Product Title"
+        }, {
+            "type": "textarea",
+            "id": "product_paragraph",
+            "label": "Product Paragraph"
+        }, {
+            "type": "text",
+            "id": "product_url_title",
+            "label": "CTA Title",
+            "default": "Shop ›"
+        }, {
+            "type": "url",
+            "id": "product_url",
+            "label": "CTA Url"
+        }, {
+            "type": "header",
+            "content": "Box 1"
+        }, {
+            "type": "image_picker",
+            "id": "box_1_image",
+            "label": "Box Image"
+        }, {
+            "type": "textarea",
+            "id": "box_1_paragraph",
+            "label": "Box Text"
+        }, {
+            "type": "header",
+            "content": "Box 2"
+        }, {
+            "type": "image_picker",
+            "id": "box_2_image",
+            "label": "Box Image"
+        }, {
+            "type": "textarea",
+            "id": "box_2_paragraph",
+            "label": "Box Text"
+        }, {
+            "type": "color",
+            "id": "box_2_color",
+            "label": "Box Color"
+        }, {
+            "type": "header",
+            "content": "Box 3"
+        }, {
+            "type": "image_picker",
+            "id": "box_3_image",
+            "label": "Box Image"
+        }, {
+            "type": "textarea",
+            "id": "box_3_paragraph",
+            "label": "Box Text"
+        }, {
+            "type": "color",
+            "id": "box_3_color",
+            "label": "Box Color"
+        }, {
+            "type": "header",
+            "content": "Box 4"
+        }, {
+            "type": "image_picker",
+            "id": "box_4_image",
+            "label": "Box Image"
+        }, {
+            "type": "textarea",
+            "id": "box_4_paragraph",
+            "label": "Box Text"
+        }, {
+            "type": "color",
+            "id": "box_4_color",
+            "label": "Box Color"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Hero Grid",
+            "category": "Image"
+        }
+    ]
 }
+
 {% endschema %}
 
 <style>
@@ -203,12 +180,13 @@
 
 .bl-h-g h2 {
     color: white;
-    font-size: 1.6em;
-    font-weight: 500;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .bl-h-g h3 {
     color: white;
-    font-family: 'Source Sans Pro'
+    font-family: 'Source Sans Pro';
+    font-weight: normal;
 }
 </style>
