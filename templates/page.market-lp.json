@@ -1,0 +1,34 @@
+{
+  "sections": {
+    "slider": {
+      "type": "slider"
+    },
+    "lineup": {
+      "type": "product-lineup-auto"
+    },
+    "columns": {
+      "type": "three-col"
+    },
+    "fullHero": {
+      "type": "fullwidth-scroller"
+    },
+    "productHero": {
+      "type": "product-hero-grid"
+    },
+    "form": {
+      "type": "dynamic-shopify-form"
+    },
+    "centerHero": {
+      "type": "center-image-hero"
+    }
+  },
+  "order": [
+    "slider",
+    "lineup",
+    "columns",
+    "fullHero",
+    "productHero",
+    "form",
+    "centerHero"
+  ]
+}
