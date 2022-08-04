@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "slider": {
+      "type": "slider",
+      "settings": {
+      }
+    },
+    "lineup": {
+      "type": "product-lineup-auto",
+      "settings": {
+      }
+    },
+    "columns": {
+      "type": "three-col",
+      "settings": {
+      }
+    },
+    "fullHero": {
+      "type": "fullwidth-scroller",
+      "settings": {
+      }
+    },
+    "productHero": {
+      "type": "product-hero-grid",
+      "settings": {
+      }
+    },
+    "form": {
+      "type": "dynamic-shopify-form",
+      "settings": {
+      }
+    },
+    "centerHero": {
+      "type": "center-image-hero",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "lineup",
+    "columns",
+    "fullHero",
+    "productHero",
+    "form",
+    "centerHero"
+  ]
+}
