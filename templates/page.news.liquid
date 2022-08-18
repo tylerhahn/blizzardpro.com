@@ -1,5 +1,16 @@
-<div class="news-hero">
-    {% if settings.news-hero-desktop %}
+<div class="news-hero" style="background-image: url({{ 'blizz_pattern_bg.jpg' | asset_url }})">
+    <div class="container">
+        <h1>Explore</h1>
+        <div class="news-nav">
+            <ul>
+                <li data-handle="all" class="active">All</li>
+                <li data-handle="news">News</li>
+                <li data-handle="case-study">Case Studies</li>
+                <li data-handle="inspiration">Inspiration</li>
+            </ul>
+        </div>
+    </div>
+    <!-- {% if settings.news-hero-desktop %}
         <img class="desktop" src="{{ settings.news-hero-desktop | img_url: 'master' }}" alt="Blizzard News"/>
     {% endif %}
     {% if settings.news-hero-mobile %}
@@ -14,95 +25,127 @@
         {% if settings.news-headline %}
             <h2>{{ settings.news-headline }}</h2>
         {% endif %}
-    </div>
+    </div> -->
 
 </div>
 
-<div class="news-grid">
 
-    {% assign blog_handle = 'news' %}
 
-    {% unless blogs[blog_handle].empty? or blogs[blog_handle].articles.size == 0 %}
+    <div class="news-grid">
 
-        <div class="flex-container" >
 
-            {% for article in blogs[blog_handle].articles limit: 1000 %}
-                <div class="news-item">
-                    <div class="category">
+        {% assign blog_handle = 'news' %}
+
+        {% unless blogs[blog_handle].empty? or blogs[blog_handle].articles.size == 0 %}
+
+            <div class="flex-container">
+
+
+    {% assign blog_handles = "news,case-study,inspiration" | split: "," %}
+    {% for handle in blog_handles %}
+        {% for article in blogs[handle].articles %}
+        <div data-blog="{{handle}}" class="news-item blog-{{handle}}">
+            <a href="{{ article.url }}">
+                {% if article.image %}
+                    <div class="news-image" style="background-image: url('{{ article.image | img_url: '1024x1024' }}')"></div>
+                {% else %}
+                    <div class="default-post"><img src="{{ 'flake.svg' | asset_url }}"/></div>
+                {% endif %}
+            </a>
+
+            {% assign article_has_image = false %}
+            {% assign content = article.excerpt_or_content %}
+
+            <div class="meta-box">
+
+                <div class="container">
+                    <h4>
                         {% for tag in article.tags %}
                             {% if forloop.last == true %}
                                 {{ tag }}
                             {% endif %}
                         {% endfor %}
+                    </h4>
+                    <h2>{{ article.title | link_to: article.url }}</h2>
+
+                    <div class="tags">
+                        {% for tag in article.tags %}
+                            {% if forloop.last != true %}
+                                <div class="tag">#
+                                    {{ tag }}</div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
-
-                    <a href="{{ article.url }}">
-                        {% if article.image %}
-                            <div class="news-image" style="background-image: url('{{ article.image | img_url: '1024x1024' }}')"></div>
-                        {% else %}
-                            <div class="default-post"><img src="{{ 'flake.svg' | asset_url }}"/></div>
-                        {% endif %}
-                    </a>
-
-                    {% assign article_has_image = false %}
-                    {% assign content = article.excerpt_or_content %}
-
-                    <div class="meta-box">
-
-                        <div class="container">
-                            <h4>{{ article.published_at | date: "%b %d, %Y" }}</h4>
-                            <h2>{{ article.title | link_to: article.url }}</h2>
-
-                            <div class="tags">
-                                {% for tag in article.tags %}
-                                    {% if forloop.last != true %}
-                                        <div class="tag">#
-                                            {{ tag }}</div>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <section id="footer-cta">
-        <div class="container">
-            <h3>Inspiration straight to your inbox</h3>
-            <h2>See what our fixtures are doing out in the wild.</h2>
-
-            <!-- Begin MailChimp Signup Form -->
-            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-            <style type="text/css">
-
-#mc_embed_signup {
-    clear: left;
-    font: 14px;
-    width: 100%;
-}
-/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-
-</style>
-            <div id="mc_embed_signup">
-                <form action="//blizzardlighting.us14.list-manage.com/subscribe/post?u=f2f0065007046cef56cc9beaa&amp;id=11e96b700f" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate target="_blank">
-                    <div id="mc_embed_signup_scroll">
-                        <input
-                        class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required type="email" value="">
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;"><input name="b_f2f0065007046cef56cc9beaa_11e96b700f" tabindex="-1" type="text" value=""></div>
-                        <div class="clear"><input class="btn btn-solidwhite" class="button" name="subscribe" type="submit" value="Subscribe"></div>
-                    </div>
-                </form>
             </div>
 
-            <!--End mc_embed_signup-->
-
         </div>
-        <img class="stick-to-bottom" src="{{ 'footer-cta-fixtures.png' | asset_url }}">
-    </section>
+        {% endfor %}
+    {% endfor %}
 
-{% endunless %}</div>
+            </div>
+        </div>
+
+        <section id="footer-cta">
+            <div class="container">
+                <h3>Inspiration straight to your inbox</h3>
+                <h2>See what our fixtures are doing out in the wild.</h2>
+
+                <!-- Begin MailChimp Signup Form -->
+                <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+
+                    #mc_embed_signup {
+                        clear: left;
+                        font: 14px;
+                        width: 100%;
+                    }
+                    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                </style>
+                <div id="mc_embed_signup">
+                    <form action="//blizzardlighting.us14.list-manage.com/subscribe/post?u=f2f0065007046cef56cc9beaa&amp;id=11e96b700f" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required type="email" value="">
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;"><input name="b_f2f0065007046cef56cc9beaa_11e96b700f" tabindex="-1" type="text" value=""></div>
+                            <div class="clear"><input class="btn btn-solidwhite" class="button" name="subscribe" type="submit" value="Subscribe"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <!--End mc_embed_signup-->
+
+            </div>
+            <img class="stick-to-bottom" src="{{ 'footer-cta-fixtures.png' | asset_url }}">
+        </section>
+
+    {% endunless %}
+</div>
+
+<script>
+
+    function filterPosts(handle) {
+
+        $('.news-item').each(function() {
+            console.log($(this).attr("data-blog"))
+            console.log(handle)
+            if(handle === "all") {
+                $(this).fadeIn('fast');
+            }
+            else if($(this).attr("data-blog") === handle) {
+                $(this).fadeIn("fast")
+            } else {
+                $(this).fadeOut("fast");
+            }
+        })
+
+    }
+
+    $('.news-nav li').on("click", function(e) {
+        $('.news-nav li').removeClass("active");
+        $(this).addClass("active");
+
+        filterPosts($(this).attr("data-handle"))
+    })
+</script>
