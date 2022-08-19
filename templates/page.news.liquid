@@ -44,42 +44,90 @@
     {% assign blog_handles = "news,case-study,inspiration" | split: "," %}
     {% for handle in blog_handles %}
         {% for article in blogs[handle].articles %}
-        <div data-blog="{{handle}}" class="news-item blog-{{handle}}">
-            <a href="{{ article.url }}">
-                {% if article.image %}
-                    <div class="news-image" style="background-image: url('{{ article.image | img_url: '1024x1024' }}')"></div>
-                {% else %}
-                    <div class="default-post"><img src="{{ 'flake.svg' | asset_url }}"/></div>
-                {% endif %}
-            </a>
+                {% if handle == 'case-study' %}
+                    {% if article.tags contains 'Featured' %}
 
-            {% assign article_has_image = false %}
-            {% assign content = article.excerpt_or_content %}
+                <div data-blog="{{handle}}" class="news-item blog-{{handle}}">
+                    <a href="{{ article.url }}">
+                        {% if article.image %}
+                            <div class="news-image" style="background-image: url('{{ article.image | img_url: '1024x1024' }}')"></div>
+                        {% else %}
+                            <div class="default-post"><img src="{{ 'flake.svg' | asset_url }}"/></div>
+                        {% endif %}
+                    </a>
 
-            <div class="meta-box">
+                    {% assign article_has_image = false %}
+                    {% assign content = article.excerpt_or_content %}
 
-                <div class="container">
-                    <h4>
-                        {% for tag in article.tags %}
-                            {% if forloop.last == true %}
-                                {{ tag }}
-                            {% endif %}
-                        {% endfor %}
-                    </h4>
-                    <h2>{{ article.title | link_to: article.url }}</h2>
+                    <div class="meta-box">
 
-                    <div class="tags">
-                        {% for tag in article.tags %}
-                            {% if forloop.last != true %}
-                                <div class="tag">#
-                                    {{ tag }}</div>
-                            {% endif %}
-                        {% endfor %}
+                        <div class="container">
+                            <h4>
+                                {% for tag in article.tags %}
+                                    {% if forloop.last == true %}
+                                        {{ tag }}
+                                    {% endif %}
+                                {% endfor %}
+                            </h4>
+                            <h2>{{ article.title | link_to: article.url }}</h2>
+
+                            <div class="tags">
+                                {% for tag in article.tags %}
+                                    {% if forloop.last != true %}
+                                        <div class="tag">#
+                                            {{ tag }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-        </div>
+                </div>
+                    {% endif %}
+
+                {% else %}
+
+                <div data-blog="{{handle}}" class="news-item blog-{{handle}}">
+                    <a href="{{ article.url }}">
+                        {% if article.image %}
+                            <div class="news-image" style="background-image: url('{{ article.image | img_url: '1024x1024' }}')"></div>
+                        {% else %}
+                            <div class="default-post"><img src="{{ 'flake.svg' | asset_url }}"/></div>
+                        {% endif %}
+                    </a>
+
+                    {% assign article_has_image = false %}
+                    {% assign content = article.excerpt_or_content %}
+
+                    <div class="meta-box">
+
+                        <div class="container">
+                            <h4>
+                                {% for tag in article.tags %}
+                                    {% if forloop.last == true %}
+                                        {{ tag }}
+                                    {% endif %}
+                                {% endfor %}
+                            </h4>
+                            <h2>{{ article.title | link_to: article.url }}</h2>
+
+                            <div class="tags">
+                                {% for tag in article.tags %}
+                                    {% if forloop.last != true %}
+                                        <div class="tag">#
+                                            {{ tag }}</div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {% endif %}
+
+
+
         {% endfor %}
     {% endfor %}
 
