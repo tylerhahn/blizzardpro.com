@@ -153,19 +153,19 @@
         "background_color": "#1d1932",
         "text_block_icon_1": "shopify:\/\/shop_images\/IRiS_LP_Icons_installation.png",
         "text_block_title_1": "Installation",
-        "text_block_paragraph_1": "Whether you’re building a permanent, 24\/7 stage, or taking your panels on the road for mobile use, IRiS provides options for any application.",
+        "text_block_paragraph_1": "3 common types: FLOWN\/HUNG (rigged to overhead truss or above support structure); WALL MOUNTED (using brackets or frames for a fixed display);  GROUND STACKED (with a support base + truss for various configurations).",
         "text_block_icon_2": "shopify:\/\/shop_images\/IRiS_LP_Icons_environment_717fbf6d-51b1-47ae-9404-6867d7a1165f.png",
         "text_block_title_2": "Environment",
-        "text_block_paragraph_2": "Certain video panels are rated for indoor use only, with others having both an indoor & outdoor use rating. Different panels are built for different needs.",
+        "text_block_paragraph_2": "Certain video panels are recommended for indoor use only, while others with an IP65-rating are suitable for both indoor & outdoor use. Choose a panel built for your specific needs.",
         "banner": "shopify:\/\/shop_images\/iris_lp_icon_banner_desktop_3844852f-1fd5-4843-b0f6-ec66e18db404.png",
         "banner_mobile": "shopify:\/\/shop_images\/iris_lp_icon_banner_mobile.png",
         "banner_alt_text": "Pick the perfect IRiS LED video wall for you",
         "text_block_icon_3": "shopify:\/\/shop_images\/IRiS_LP_Icons_pixel-pitch.png",
-        "text_block_title_3": "Pixel Pitch",
-        "text_block_paragraph_3": "The pixel pitch (PP) of a video panel determines optimal viewing distance from the display to maximize its resolution. The lower the PP number, the closer a viewer can be without a loss in quality.",
+        "text_block_title_3": "View",
+        "text_block_paragraph_3": "How close will your audience be to the video panels? Determine the minimum viewing distance, which maximizes the display’s resolution, by using the pixel pitch: 3.9mm ~ 13 ft.",
         "text_block_icon_4": "shopify:\/\/shop_images\/IRiS_LP_Icons_refresh-rate.png",
-        "text_block_title_4": "Refresh Rate",
-        "text_block_paragraph_4": "The refresh rate (Hz) affects how quickly a video panel responds to display changes. A higher refresh rate is essential to extremely visual presentations, whereas ones with still images can perform at a lower rate."
+        "text_block_title_4": "Application",
+        "text_block_paragraph_4": "Whether you’re installing a permanent LED display, or taking panels on the road to build a mobile stage, IRiS video provides options for any application."
       }
     },
     "fullwidth-scroller": {
