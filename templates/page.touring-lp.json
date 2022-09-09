@@ -54,7 +54,7 @@
         "a7637eba-14c1-452f-89b4-15384f6769c8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MystACL1112.png",
+            "image": "shopify:\/\/shop_images\/MystACL1112_c3a3ba92-338c-4185-86ef-d02a1bd884d3.png",
             "video_url": "",
             "headline": "MystACL™ Z",
             "cta_title": "Learn More ›",
@@ -113,10 +113,11 @@
     "centerHero": {
       "type": "center-image-hero",
       "settings": {
-        "title": "",
-        "paragraph": "",
-        "cta_title": "",
-        "cta_url": ""
+        "image": "shopify:\/\/shop_images\/850_7973.jpg",
+        "title": "Any Tour, Any Stage",
+        "paragraph": "IP65-Rated IRiS GT™ Series Pro Touring LED Video Panels",
+        "cta_title": "Learn More ›",
+        "cta_url": "shopify:\/\/pages\/iris-gt-series"
       }
     }
   },
