@@ -538,6 +538,7 @@
               "image": "shopify:\/\/shop_images\/rockchurch_a53174d1-36d4-4ce9-adc6-bf7b8197a092.jpg",
               "video_url": "",
               "headline": "IRiS® InSpire™ LED Screens for Worship",
+              "subheadline": "",
               "cta_title": "Learn More ›",
               "cta_url": "https:\/\/www.blizzardpro.com\/pages\/iris-inspire"
             }
@@ -548,6 +549,7 @@
               "image": "shopify:\/\/shop_images\/71082874_2676611155722304_3094231157437366272_n.jpg",
               "video_url": "",
               "headline": "Sacred Heart Upgrades for Advent Season",
+              "subheadline": "",
               "cta_title": "See How ›",
               "cta_url": "shopify:\/\/blogs\/news\/hotbox-exas-bring-light-warmth-to-the-advent-season"
             }
@@ -588,7 +590,7 @@
           "header_title": "Perfect for Worship",
           "h_gutter": 1,
           "collection": "featured-house-of-worship-products",
-          "box_color": "#ffffff"
+          "box_color": "#f1f1f1"
         }
       },
       "product-hero-grid": {
