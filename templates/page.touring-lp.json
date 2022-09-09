@@ -25,24 +25,35 @@
             "cta_title": "Learn More ›",
             "cta_url": ""
           }
+        },
+        "a7637eba-14c1-452f-89b4-15384f6769c8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MystACL1112.png",
+            "video_url": "",
+            "headline": "MystACL™ Z",
+            "cta_title": "Learn More ›",
+            "cta_url": ""
+          }
         }
       },
       "block_order": [
-        "d0cff813-4878-48f2-971b-fa4e89c5398b"
+        "d0cff813-4878-48f2-971b-fa4e89c5398b",
+        "a7637eba-14c1-452f-89b4-15384f6769c8"
       ],
       "settings": {
         "header_title": "",
         "h_gutter": 3,
-        "box_height": 1
+        "box_height": 32
       }
     },
     "fullHero": {
       "type": "fullwidth-scroller",
       "settings": {
-        "video_url": "",
-        "headline": "",
-        "subheadline": "",
-        "cta_title": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=A_Z6KEkKwzw",
+        "headline": "Lux Capacitor™",
+        "subheadline": "WW Retro Blinder + RGB Background Effects for a Vintage Feel on LED Power",
+        "cta_title": "Learn More ›",
         "cta_url": ""
       }
     },
