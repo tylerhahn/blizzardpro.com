@@ -56,6 +56,16 @@
       "settings": {
       }
     },
+    "1662735852dbcd77f6": {
+      "type": "fw-scroller",
+      "settings": {
+        "video_url": "https:\/\/vimeo.com\/748067787",
+        "headline": "",
+        "subheadline": "",
+        "cta_title": "",
+        "cta_url": ""
+      }
+    },
     "series-blocks": {
       "type": "lp-blocks",
       "blocks": {
@@ -305,6 +315,7 @@
   "order": [
     "slider",
     "three-col",
+    "1662735852dbcd77f6",
     "series-blocks",
     "series-info",
     "fullwidth-scroller",

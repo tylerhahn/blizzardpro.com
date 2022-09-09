@@ -2,37 +2,122 @@
   "sections": {
     "slider": {
       "type": "slider",
+      "blocks": {
+        "2b92bde5-589a-4b43-9915-6e721a6247b4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MystACL1112.png",
+            "video_url": "",
+            "subheadline": "",
+            "subheadline_color": "#ffffff",
+            "headline": "Headlines",
+            "paragraph": "test",
+            "headline_color": "#ffffff",
+            "main_cta_title": "",
+            "main_cta_url": "",
+            "main_cta_background_color": "#282bf6",
+            "main_cta_text_color": "#ffffff",
+            "sec_cta_title": "Learn More",
+            "sec_cta_text_color": "#ffffff",
+            "sec_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "2b92bde5-589a-4b43-9915-6e721a6247b4"
+      ],
       "settings": {
       }
     },
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
+        "header_title": "Tour-Ready Fixtures",
+        "h_gutter": 3,
+        "collection": "featured-touring-products",
+        "box_color": "#ffffff"
       }
     },
     "columns": {
       "type": "three-col",
+      "blocks": {
+        "d0cff813-4878-48f2-971b-fa4e89c5398b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rayz_final0661.jpg",
+            "video_url": "",
+            "headline": "Stiletto™ Ray-Z",
+            "cta_title": "Learn More ›",
+            "cta_url": "shopify:\/\/products\/stiletto-ray-z"
+          }
+        },
+        "a7637eba-14c1-452f-89b4-15384f6769c8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MystACL1112_c3a3ba92-338c-4185-86ef-d02a1bd884d3.png",
+            "video_url": "",
+            "headline": "MystACL™ Z",
+            "cta_title": "Learn More ›",
+            "cta_url": "shopify:\/\/products\/mystacl-z"
+          }
+        }
+      },
+      "block_order": [
+        "d0cff813-4878-48f2-971b-fa4e89c5398b",
+        "a7637eba-14c1-452f-89b4-15384f6769c8"
+      ],
       "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 32
       }
     },
     "fullHero": {
       "type": "fullwidth-scroller",
       "settings": {
+        "video_url": "https:\/\/vimeo.com\/748037534",
+        "headline": "Lux Capacitor™",
+        "subheadline": "WW Retro Blinder + RGB Background Effects for a Vintage Feel on LED Power",
+        "cta_title": "Learn More ›",
+        "cta_url": "https:\/\/www.blizzardpro.com\/products\/stiletto-ray-z"
       }
     },
     "productHero": {
       "type": "product-hero-grid",
       "settings": {
+        "height": 50,
+        "product_color": "",
+        "product_title": "",
+        "product_paragraph": "",
+        "product_url_title": "Shop ›",
+        "product_url": "",
+        "box_1_paragraph": "",
+        "box_2_paragraph": "",
+        "box_2_color": "",
+        "box_3_paragraph": "",
+        "box_3_color": "",
+        "box_4_paragraph": "",
+        "box_4_color": ""
       }
     },
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
+        "form_text": "Get in touch with our dedicated <span>worship pros<\/span>",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "button_color": "#282bf6",
+        "hs_value": "Touring LP"
       }
     },
     "centerHero": {
       "type": "center-image-hero",
       "settings": {
+        "image": "shopify:\/\/shop_images\/850_7973.jpg",
+        "title": "Any Tour, Any Stage",
+        "paragraph": "IP65-Rated IRiS GT™ Series Pro Touring LED Video Panels",
+        "cta_title": "Learn More ›",
+        "cta_url": "shopify:\/\/pages\/iris-gt-series"
       }
     }
   },
