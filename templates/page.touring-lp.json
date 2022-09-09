@@ -8,31 +8,79 @@
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "collection": "",
+        "box_color": "#ffffff"
       }
     },
     "columns": {
       "type": "three-col",
+      "blocks": {
+        "d0cff813-4878-48f2-971b-fa4e89c5398b": {
+          "type": "image",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=a7I7YRYW8sk",
+            "headline": "Stiletto Ray-Z",
+            "cta_title": "Learn More ›",
+            "cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "d0cff813-4878-48f2-971b-fa4e89c5398b"
+      ],
       "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 1
       }
     },
     "fullHero": {
       "type": "fullwidth-scroller",
       "settings": {
+        "video_url": "",
+        "headline": "",
+        "subheadline": "",
+        "cta_title": "",
+        "cta_url": ""
       }
     },
     "productHero": {
       "type": "product-hero-grid",
       "settings": {
+        "height": 50,
+        "product_color": "",
+        "product_title": "",
+        "product_paragraph": "",
+        "product_url_title": "Shop ›",
+        "product_url": "",
+        "box_1_paragraph": "",
+        "box_2_paragraph": "",
+        "box_2_color": "",
+        "box_3_paragraph": "",
+        "box_3_color": "",
+        "box_4_paragraph": "",
+        "box_4_color": ""
       }
     },
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
+        "form_text": "",
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "hs_value": ""
       }
     },
     "centerHero": {
       "type": "center-image-hero",
       "settings": {
+        "title": "",
+        "paragraph": "",
+        "cta_title": "",
+        "cta_url": ""
       }
     }
   },
