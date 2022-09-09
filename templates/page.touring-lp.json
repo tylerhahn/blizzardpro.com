@@ -8,8 +8,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/First-Look-9122_alt.jpg",
             "video_url": "",
-            "subheadline": "",
-            "subheadline_color": "#ffffff",
+            "subheadline": "NEW",
+            "subheadline_color": "#ff4888",
             "headline": "Hype™ 150",
             "paragraph": "Some paragraph text tbd",
             "headline_color": "#ffffff",
