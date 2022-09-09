@@ -2,6 +2,30 @@
   "sections": {
     "slider": {
       "type": "slider",
+      "blocks": {
+        "2b92bde5-589a-4b43-9915-6e721a6247b4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MystACL1112.png",
+            "video_url": "",
+            "subheadline": "",
+            "subheadline_color": "#ffffff",
+            "headline": "Headlines",
+            "paragraph": "test",
+            "headline_color": "#ffffff",
+            "main_cta_title": "",
+            "main_cta_url": "",
+            "main_cta_background_color": "#282bf6",
+            "main_cta_text_color": "#ffffff",
+            "sec_cta_title": "Learn More",
+            "sec_cta_text_color": "#ffffff",
+            "sec_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "2b92bde5-589a-4b43-9915-6e721a6247b4"
+      ],
       "settings": {
       }
     },
