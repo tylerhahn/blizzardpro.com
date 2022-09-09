@@ -8,31 +8,93 @@
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
+        "header_title": "Next-level Theatrical Products",
+        "h_gutter": 3,
+        "collection": "featured-theatrical-products",
+        "box_color": "#f1f1f1"
       }
     },
     "columns": {
       "type": "three-col",
+      "blocks": {
+        "ec97df0d-b6ba-400b-9471-cf1ea578959b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_0595_f9cb6ded-f51d-4866-92f1-c9b3239f486a.jpg",
+            "video_url": "",
+            "headline": "Oberon™ Profile NZ",
+            "subheadline": "1x 200W WW LED, 95 CRI (Narrow)",
+            "cta_title": "Shop ›",
+            "cta_url": "shopify:\/\/products\/oberon-profile-nz"
+          }
+        },
+        "16927d38-603d-4f27-bcc9-590f93537915": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20210316_160709.jpg",
+            "video_url": "",
+            "headline": "UVonix™ Blackstar",
+            "subheadline": "12x 10W 365nm UV LEDs",
+            "cta_title": "Shop ›",
+            "cta_url": "shopify:\/\/products\/uvonix-blackstar"
+          }
+        }
+      },
+      "block_order": [
+        "ec97df0d-b6ba-400b-9471-cf1ea578959b",
+        "16927d38-603d-4f27-bcc9-590f93537915"
+      ],
       "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 29
       }
     },
     "fullHero": {
       "type": "fullwidth-scroller",
       "settings": {
+        "video_url": "",
+        "headline": "",
+        "subheadline": "",
+        "cta_title": "",
+        "cta_url": ""
       }
     },
     "productHero": {
       "type": "product-hero-grid",
       "settings": {
+        "height": 50,
+        "product_color": "",
+        "product_title": "",
+        "product_paragraph": "",
+        "product_url_title": "Shop ›",
+        "product_url": "",
+        "box_1_paragraph": "",
+        "box_2_paragraph": "",
+        "box_2_color": "",
+        "box_3_paragraph": "",
+        "box_3_color": "",
+        "box_4_paragraph": "",
+        "box_4_color": ""
       }
     },
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
+        "form_text": "",
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "hs_value": ""
       }
     },
     "centerHero": {
       "type": "center-image-hero",
       "settings": {
+        "title": "",
+        "paragraph": "",
+        "cta_title": "",
+        "cta_url": ""
       }
     }
   },
