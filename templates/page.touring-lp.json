@@ -35,7 +35,7 @@
         "header_title": "Tour-Ready Fixtures",
         "h_gutter": 3,
         "collection": "featured-touring-products",
-        "box_color": "#ffffff"
+        "box_color": "#f1f1f1"
       }
     },
     "columns": {
@@ -47,6 +47,7 @@
             "image": "shopify:\/\/shop_images\/rayz_final0661.jpg",
             "video_url": "",
             "headline": "Stiletto™ Ray-Z",
+            "subheadline": "7x 40W RGBW LED Wash\/Beam FX",
             "cta_title": "Learn More ›",
             "cta_url": "shopify:\/\/products\/stiletto-ray-z"
           }
@@ -57,6 +58,7 @@
             "image": "shopify:\/\/shop_images\/MystACL1112_c3a3ba92-338c-4185-86ef-d02a1bd884d3.png",
             "video_url": "",
             "headline": "MystACL™ Z",
+            "subheadline": "10x 30W 4-in-1 RGBW LEDs",
             "cta_title": "Learn More ›",
             "cta_url": "shopify:\/\/products\/mystacl-z"
           }
