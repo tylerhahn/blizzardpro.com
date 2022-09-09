@@ -22,6 +22,9 @@
 
                 <div class="box-caption">
                     <h3>{{block.settings.headline}}</h3>
+                    {% if block.settings.subheadline != blank %}
+                        <p>{{ block.settings.subheadline }} </p>
+                    {% endif %}
                     {% if block.settings.cta_url != blank %}
                         <a {% if block.settings.new_window == true %} target="_blank" {% endif %} href={{block.settings.cta_url }} class="btn btn-white">{{ block.settings.cta_title }}</a>
                     {% endif %}
@@ -84,6 +87,11 @@
                     "type": "text",
                     "id": "headline",
                     "label": "Headline"
+                },
+                {
+                    "type": "textarea",
+                    "id": "subheadline",
+                    "label": "Sub Headline"
                 }, {
                     "type": "text",
                     "id": "cta_title",

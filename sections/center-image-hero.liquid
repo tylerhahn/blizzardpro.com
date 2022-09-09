@@ -4,6 +4,11 @@
         <div class="px-5 m-auto text-center">
             <h2>{{section.settings.title}}</h2>
             <p>{{section.settings.paragraph}}</p>
+            {% if section.settings.cta_url != blank %}
+                <a class="btn btn-white" href="{{ section.settings.cta_url }}">
+                    {{ section.settings.cta_title }}
+                </a>
+            {% endif %}
         </div>
     </div>
     <img class="w-100" src="{{ section.settings.image | img_url: 'master'}}" alt="{{section.settings.title}}">
