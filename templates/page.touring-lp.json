@@ -32,9 +32,9 @@
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
-        "header_title": "",
+        "header_title": "Tour-Ready Fixtures",
         "h_gutter": 3,
-        "collection": "",
+        "collection": "featured-touring-products",
         "box_color": "#ffffff"
       }
     },
