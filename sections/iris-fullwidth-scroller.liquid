@@ -24,7 +24,9 @@
       <a href="{{section.settings.cta_url}}" class="btn btn-white">{{section.settings.cta_title}}</a>
     {% endif %}
   </div>
+  {% if section.settings.cta_url != blank %}
   <div class="overlay"></div>
+{% endif %}
 <div class="bl-{{section.id}} bl-scroll-border"></div>
 </div>
 
