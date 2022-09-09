@@ -81,11 +81,11 @@
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "",
+        "form_text": "Get in touch with our dedicated <span> theatrical pros<\/span>",
         "background_color": "#000000",
-        "text_color": "#000000",
-        "button_color": "#000000",
-        "hs_value": ""
+        "text_color": "#ffffff",
+        "button_color": "#282bf6",
+        "hs_value": "Theatrical LP"
       }
     },
     "centerHero": {
