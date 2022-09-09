@@ -19,7 +19,9 @@
         {% if section.settings.subheadline != blank %}
         <p>{{section.settings.subheadline}}</p>
         {% endif %}
-        <a href="{{section.settings.cta_url}}" class="btn btn-white">{{section.settings.cta_title}}</a>
+        {% if section.settings.cta_url != blank %}
+            <a href="{{section.settings.cta_url}}" class="btn btn-white">{{section.settings.cta_title}}</a>
+        {% endif %}
     </div>
     <div class="overlay"></div>
     <div class="bl-{{section.id}} bl-scroll-border"></div>

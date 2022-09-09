@@ -20,7 +20,11 @@
   <div class="bl-{{section.id}} bl-scroll-caption">
     <h2>{{section.settings.headline}}</h2>
     <p>{{section.settings.subheadline}}</p>
-    <a href="{{section.settings.cta_url}}" class="btn btn-white">{{section.settings.cta_title}}</a>
+    {% if section.settings.cta_url != blank %}
+      {% if section.settings.cta_url != blank %}
+      <a href="{{section.settings.cta_url}}" class="btn btn-white">{{section.settings.cta_title}}</a>
+    {% endif %}
+    {% endif %}
   </div>
   <div class="overlay"></div>
 <div class="bl-{{section.id}} bl-scroll-border"></div>
@@ -54,7 +58,7 @@ scrollTrigger: {
 
 gsap.to(".bl-{{section.id}}.bl-scroll-border", {
   css: {
-    borderWidth: 0 
+    borderWidth: 0
   },
 
   scrollTrigger: {
@@ -123,7 +127,7 @@ gsap.to(".bl-{{section.id}}.bl-scroll-border", {
 
 
   .bl-scroll-border {
-    top: 0; 
+    top: 0;
     left: 0;
     display: block;
     border: 5em solid #fff;
