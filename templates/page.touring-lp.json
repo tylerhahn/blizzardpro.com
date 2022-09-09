@@ -44,8 +44,9 @@
         "d0cff813-4878-48f2-971b-fa4e89c5398b": {
           "type": "image",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=a7I7YRYW8sk",
-            "headline": "Stiletto Ray-Z",
+            "image": "shopify:\/\/shop_images\/rayz_final0661.jpg",
+            "video_url": "",
+            "headline": "Stiletto™ Ray-Z",
             "cta_title": "Learn More ›",
             "cta_url": ""
           }
@@ -78,7 +79,7 @@
         "headline": "Lux Capacitor™",
         "subheadline": "WW Retro Blinder + RGB Background Effects for a Vintage Feel on LED Power",
         "cta_title": "Learn More ›",
-        "cta_url": ""
+        "cta_url": "https:\/\/www.blizzardpro.com\/products\/stiletto-ray-z"
       }
     },
     "productHero": {
