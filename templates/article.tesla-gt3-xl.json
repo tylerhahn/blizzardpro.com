@@ -39,12 +39,23 @@
         "result": "The panels have weathered 80 mph winds and rowdy, rockin’ shows, and still deliver a great contrast ratio that makes venues say “Hey, your wall is better than ours!”",
         "linkDownload": "https:\/\/cdn.shopify.com\/s\/files\/1\/1741\/5055\/files\/TeslaBand_CaseStudy_v3_WEB.pdf?v=1661269079"
       }
+    },
+    "16630160355ae3fde7": {
+      "type": "nova-dynamic-shopify-form",
+      "settings": {
+        "form_text": "",
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "hs_value": ""
+      }
     }
   },
   "order": [
     "header",
     "main",
     "product",
-    "sidebar"
+    "sidebar",
+    "16630160355ae3fde7"
   ]
 }

@@ -2,6 +2,30 @@
   "sections": {
     "slider": {
       "type": "slider",
+      "blocks": {
+        "25560d35-0356-40f5-a715-2e8040883314": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/verismo_banner.jpg",
+            "video_url": "",
+            "subheadline": "NEW",
+            "subheadline_color": "#ffffff",
+            "headline": "Verismo Series",
+            "paragraph": "The new generation of ellipsoidals",
+            "headline_color": "#ffffff",
+            "main_cta_title": "",
+            "main_cta_url": "",
+            "main_cta_background_color": "#282bf6",
+            "main_cta_text_color": "#ffffff",
+            "sec_cta_title": "Learn More",
+            "sec_cta_text_color": "#ffffff",
+            "sec_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "25560d35-0356-40f5-a715-2e8040883314"
+      ],
       "settings": {
       }
     },
