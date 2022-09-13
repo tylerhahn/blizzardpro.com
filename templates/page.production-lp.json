@@ -85,24 +85,6 @@
         "cta_url": "google.com"
       }
     },
-    "productHero": {
-      "type": "product-hero-grid",
-      "settings": {
-        "height": 50,
-        "product_color": "",
-        "product_title": "",
-        "product_paragraph": "",
-        "product_url_title": "Shop ›",
-        "product_url": "",
-        "box_1_paragraph": "",
-        "box_2_paragraph": "",
-        "box_2_color": "",
-        "box_3_paragraph": "",
-        "box_3_color": "",
-        "box_4_paragraph": "",
-        "box_4_color": ""
-      }
-    },
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
@@ -111,6 +93,44 @@
         "text_color": "#ffffff",
         "button_color": "#282bf6",
         "hs_value": "Production LP"
+      }
+    },
+    "1663093865d064fcef": {
+      "type": "iris-col",
+      "blocks": {
+        "d543d936-a954-441e-9d85-3ee5e61a062c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/soc_2.png",
+            "video_url": "",
+            "headline": "SoC-It™",
+            "subheadline": "Wi-Fi based sACN\/Art-Net to DMX Control",
+            "cta_title": "Shop ›",
+            "cta_url": "\/collections\/all\/products\/soc-it",
+            "new_window": true
+          }
+        },
+        "4f26342c-cb49-4157-aa13-0d5c0acbdcea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spotman_socit.png",
+            "video_url": "",
+            "headline": "Dream it. Build it. Control it.",
+            "subheadline": "",
+            "cta_title": "Shop ›",
+            "cta_url": "",
+            "new_window": true
+          }
+        }
+      },
+      "block_order": [
+        "d543d936-a954-441e-9d85-3ee5e61a062c",
+        "4f26342c-cb49-4157-aa13-0d5c0acbdcea"
+      ],
+      "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 29
       }
     },
     "centerHero": {
@@ -129,8 +149,8 @@
     "lineup",
     "columns",
     "fullHero",
-    "productHero",
     "form",
+    "1663093865d064fcef",
     "centerHero"
   ]
 }
