@@ -116,10 +116,11 @@
     "centerHero": {
       "type": "center-image-hero",
       "settings": {
-        "title": "",
-        "paragraph": "",
-        "cta_title": "",
-        "cta_url": ""
+        "image": "shopify:\/\/shop_images\/at-full-slider.png",
+        "title": "Mobile DMX Control",
+        "paragraph": "The At Full™ app puts capabilities of a lighting console right in the palm of your hand.",
+        "cta_title": "Learn More ›",
+        "cta_url": "shopify:\/\/pages\/at-full"
       }
     }
   },
