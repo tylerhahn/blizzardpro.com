@@ -33,10 +33,10 @@
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
-        "header_title": "",
+        "header_title": "Production-Ready Fixtures",
         "h_gutter": 3,
-        "collection": "",
-        "box_color": "#ffffff"
+        "collection": "featured-production-products",
+        "box_color": "#f1f1f1"
       }
     },
     "columns": {
