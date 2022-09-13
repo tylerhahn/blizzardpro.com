@@ -2,37 +2,95 @@
   "sections": {
     "slider": {
       "type": "slider",
+      "blocks": {
+        "043599a9-80f3-46c6-b413-dd9ec6d83ada": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/supercell_banner.png",
+            "video_url": "",
+            "subheadline": "StormChaser Supercell",
+            "subheadline_color": "#6500ff",
+            "headline": "Pixel Mapping FX",
+            "paragraph": "224x Super-Bright 5050RGB\/0.2W LED Wash + Pixel Effects",
+            "headline_color": "#ffffff",
+            "main_cta_title": "",
+            "main_cta_url": "",
+            "main_cta_background_color": "#282bf6",
+            "main_cta_text_color": "#ffffff",
+            "sec_cta_title": "Learn More",
+            "sec_cta_text_color": "#ffffff",
+            "sec_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "043599a9-80f3-46c6-b413-dd9ec6d83ada"
+      ],
       "settings": {
       }
     },
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "collection": "",
+        "box_color": "#ffffff"
       }
     },
     "columns": {
       "type": "three-col",
       "settings": {
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 1
       }
     },
     "fullHero": {
       "type": "fullwidth-scroller",
       "settings": {
+        "video_url": "",
+        "headline": "",
+        "subheadline": "",
+        "cta_title": "",
+        "cta_url": ""
       }
     },
     "productHero": {
       "type": "product-hero-grid",
       "settings": {
+        "height": 50,
+        "product_color": "",
+        "product_title": "",
+        "product_paragraph": "",
+        "product_url_title": "Shop ›",
+        "product_url": "",
+        "box_1_paragraph": "",
+        "box_2_paragraph": "",
+        "box_2_color": "",
+        "box_3_paragraph": "",
+        "box_3_color": "",
+        "box_4_paragraph": "",
+        "box_4_color": ""
       }
     },
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
+        "form_text": "",
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "hs_value": ""
       }
     },
     "centerHero": {
       "type": "center-image-hero",
       "settings": {
+        "title": "",
+        "paragraph": "",
+        "cta_title": "",
+        "cta_url": ""
       }
     }
   },
