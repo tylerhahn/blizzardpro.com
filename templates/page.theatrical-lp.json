@@ -85,22 +85,42 @@
         "cta_url": "https:\/\/www.blizzardpro.com\/products\/aria-profile-rgbw"
       }
     },
-    "productHero": {
-      "type": "product-hero-grid",
+    "16630943986b90bbf1": {
+      "type": "iris-col",
+      "blocks": {
+        "056b2792-eba4-416f-8dc2-83755e8e07cf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_5228.png",
+            "video_url": "",
+            "headline": "HotBox™ EXA",
+            "subheadline": "RGBAW+UV color mixing",
+            "cta_title": "Shop ›",
+            "cta_url": "\/products\/hotbox-exa",
+            "new_window": true
+          }
+        },
+        "27efdea8-592e-4c16-8429-812b20ddfa00": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/overture_hotbox_dee61647-0dfc-4bca-a62d-574e4e5ef318.png",
+            "video_url": "",
+            "headline": "",
+            "subheadline": "",
+            "cta_title": "Shop ›",
+            "cta_url": "",
+            "new_window": true
+          }
+        }
+      },
+      "block_order": [
+        "056b2792-eba4-416f-8dc2-83755e8e07cf",
+        "27efdea8-592e-4c16-8429-812b20ddfa00"
+      ],
       "settings": {
-        "height": 50,
-        "product_color": "",
-        "product_title": "",
-        "product_paragraph": "",
-        "product_url_title": "Shop ›",
-        "product_url": "",
-        "box_1_paragraph": "",
-        "box_2_paragraph": "",
-        "box_2_color": "",
-        "box_3_paragraph": "",
-        "box_3_color": "",
-        "box_4_paragraph": "",
-        "box_4_color": ""
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 29
       }
     },
     "form": {
@@ -129,7 +149,7 @@
     "lineup",
     "columns",
     "fullHero",
-    "productHero",
+    "16630943986b90bbf1",
     "form",
     "centerHero"
   ]
