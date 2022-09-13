@@ -56,11 +56,12 @@
         "b32f5def-d0da-4d64-be1d-603840a7a753": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/hemisphere-preview.png",
             "video_url": "",
             "headline": "HEMISPHERE™",
-            "subheadline": "",
+            "subheadline": "Great for xyz",
             "cta_title": "Shop ›",
-            "cta_url": ""
+            "cta_url": "shopify:\/\/products\/hemisphere"
           }
         }
       },
