@@ -7,6 +7,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/verismo_banner.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/verismo_mobile.jpg",
             "video_url": "",
             "subheadline": "NEW",
             "subheadline_color": "#3687b5",
