@@ -9,7 +9,7 @@
             "image": "shopify:\/\/shop_images\/supercell_banner.png",
             "image_mobile": "shopify:\/\/shop_images\/supercell_banner_m.png",
             "video_url": "",
-            "subheadline": "StormChaser Supercell",
+            "subheadline": "StormChaser™ Supercell",
             "subheadline_color": "#6500ff",
             "headline": "Pixel Mapping FX",
             "paragraph": "224x Super-Bright LED Wash + Pixel FX",
@@ -50,10 +50,10 @@
     "fullHero": {
       "type": "fullwidth-scroller",
       "settings": {
-        "video_url": "",
-        "headline": "",
-        "subheadline": "",
-        "cta_title": "",
+        "video_url": "https:\/\/vimeo.com\/734128583",
+        "headline": "Hype™ 150",
+        "subheadline": "150 times more powerful than the Hype 1",
+        "cta_title": "Learn More ›",
         "cta_url": ""
       }
     },
