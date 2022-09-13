@@ -78,10 +78,10 @@
     "fullHero": {
       "type": "fullwidth-scroller",
       "settings": {
-        "video_url": "",
-        "headline": "",
-        "subheadline": "",
-        "cta_title": "",
+        "video_url": "https:\/\/vimeo.com\/749162320",
+        "headline": "Aria™ Profile",
+        "subheadline": "Versatile WW + RGBA Ellipsoidals",
+        "cta_title": "Learn More ›",
         "cta_url": ""
       }
     },
