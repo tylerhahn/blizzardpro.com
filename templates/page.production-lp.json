@@ -41,10 +41,37 @@
     },
     "columns": {
       "type": "three-col",
+      "blocks": {
+        "2537f852-4281-4c95-908b-71600a7c4717": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/spotman_banner.png",
+            "video_url": "",
+            "headline": "SPOTMAN",
+            "subheadline": "30W Mini Moving Head",
+            "cta_title": "Shop ›",
+            "cta_url": "shopify:\/\/products\/spotman"
+          }
+        },
+        "b32f5def-d0da-4d64-be1d-603840a7a753": {
+          "type": "image",
+          "settings": {
+            "video_url": "",
+            "headline": "HEMISPHERE™",
+            "subheadline": "",
+            "cta_title": "Shop ›",
+            "cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "2537f852-4281-4c95-908b-71600a7c4717",
+        "b32f5def-d0da-4d64-be1d-603840a7a753"
+      ],
       "settings": {
         "header_title": "",
         "h_gutter": 3,
-        "box_height": 1
+        "box_height": 29
       }
     },
     "fullHero": {
