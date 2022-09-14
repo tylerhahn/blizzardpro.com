@@ -294,6 +294,7 @@
               "image": "shopify:\/\/shop_images\/enigma-m4-square-layout.png",
               "video_url": "",
               "headline": "Enigma™ M4",
+              "subheadline": "",
               "cta_title": "Learn More ›",
               "cta_url": "shopify:\/\/products\/enigma-m4"
             }
@@ -304,6 +305,7 @@
               "image": "shopify:\/\/shop_images\/mixtape-allboxes-light.jpg",
               "video_url": "",
               "headline": "Mixtape™ Series",
+              "subheadline": "",
               "cta_title": "Shop Now ›",
               "cta_url": "shopify:\/\/collections\/mixtape-series"
             }
@@ -314,6 +316,7 @@
               "image": "shopify:\/\/shop_images\/PXL_20201006_133844922.NIGHT-_1.jpg",
               "video_url": "",
               "headline": "Wireless DMX Control with SoC-It™ + At Full™",
+              "subheadline": "",
               "cta_title": "Learn More ›",
               "cta_url": "shopify:\/\/pages\/at-full"
             }
@@ -338,6 +341,7 @@
             "settings": {
               "video_url": "https:\/\/vimeo.com\/510779622\/1d2f1fde04",
               "headline": "IRiS® LED Video Walls",
+              "subheadline": "",
               "cta_title": "Learn More ›",
               "cta_url": "\/pages\/iris"
             }
@@ -348,6 +352,7 @@
               "image": "shopify:\/\/shop_images\/rockchurch4_d56b143c-e6cb-424e-a2eb-9eb758536adc.jpg",
               "video_url": "",
               "headline": "Light Your Space: House of Worship",
+              "subheadline": "",
               "cta_title": "See More ›",
               "cta_url": "shopify:\/\/pages\/worship"
             }
@@ -600,7 +605,7 @@
           "product_image": "shopify:\/\/shop_images\/G-Mix---Main.png",
           "product_color": "#171428",
           "product_title": "G-Max™ 200",
-          "product_paragraph": "CMY LED Spot Moving Head",
+          "product_paragraph": "LED Spot Moving Head",
           "product_url_title": "Shop Now ›",
           "product_url": "https:\/\/www.blizzardpro.com\/products\/g-max-200",
           "box_1_image": "shopify:\/\/shop_images\/G-Max_200_-_Action01.jpg",
