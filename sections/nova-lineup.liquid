@@ -1,4 +1,4 @@
-<div class="bl-pl-{{ section.id }} container-fluid max" id="bl-pl" style="overflow-x: hidden; background-color: #141414;">
+<div class="bl-pl-{{ section.id }} container-fluid max" id="bl-pl" style="margin-top: 3em; overflow-x: hidden; background-color: #141414;">
 
     <h2 class="bl-h2 text-center" style="color: #F1F1F1; padding: 2em 0 1em 0">{{ section.settings.header_title }}</h2>
     <div class="row">
@@ -13,7 +13,7 @@
                     <h4 class="text-center pb-1">{{ block.settings.title }}</h4>
                 {% endif %}
                 {% if block.settings.paragraph != blank %}
-                    <p class="text-center pb-1">{{ block.settings.paragraph }}</p>
+                    <p class="text-center pb-1; color: #F1F1F1">{{ block.settings.paragraph }}</p>
                 {% endif %}
             </div>
         {% endfor %}
