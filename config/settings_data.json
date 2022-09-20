@@ -1706,7 +1706,7 @@
           "b7a92a07-fe4b-4338-ab24-53f49f47e1c6": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/shipping.png",
+              "image": "shopify:\/\/shop_images\/novastar_icons-01.png",
               "title": "Local Inventory",
               "paragraph": "",
               "url": ""
@@ -1715,7 +1715,7 @@
           "653a088e-83ee-4e9d-98af-af590175882c": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/us.png",
+              "image": "shopify:\/\/shop_images\/novastar_icons-02.png",
               "title": "U.S. Based Support",
               "paragraph": "",
               "url": ""
@@ -1724,7 +1724,7 @@
           "e087c8fa-837a-4a6e-a209-be04a795eae9": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/3yr.png",
+              "image": "shopify:\/\/shop_images\/novastar_icons-03.png",
               "title": "3-Year Warranty",
               "paragraph": "",
               "url": ""
@@ -1738,9 +1738,9 @@
         ],
         "settings": {
           "header_title": "",
-          "h_gutter": 0,
+          "h_gutter": 2,
           "max_width": "500",
-          "box_color": "#ffffff"
+          "box_color": "#141414"
         }
       },
       "nova-fullwidth-scroller": {
