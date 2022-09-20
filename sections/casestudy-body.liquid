@@ -14,6 +14,10 @@
             </div>
         {% endif %}
 
+        {% if section.settings.video_1 != blank %}
+        {{ section.settings.video_1 }}
+        {% endif %}
+
         {% if section.settings.form %}
         <div class="bl-dynamic-form" style="background-color: {{section.settings.background_color}}">
             <div class="row mx-5 my-0 py-5 mx-80">
@@ -37,6 +41,10 @@
             <div class="cs-fw-image">
                 <img src="{{section.settings.image_2 | img_url: 'master'}}"/>
             </div>
+        {% endif %}
+
+        {% if section.settings.video_2 != blank %}
+            {{ section.settings.video_2 }}
         {% endif %}
 
 
@@ -206,6 +214,11 @@ input#email-2d69787c-6bed-419b-8678-86c51dd1e234 {
             "label": "Image 1"
         },
         {
+            "type": "text",
+            "id": "video_1",
+            "label": "Video 1"
+        },
+        {
             "type": "checkbox",
             "id": "form",
             "label": "Include DSF Form"
@@ -249,6 +262,11 @@ input#email-2d69787c-6bed-419b-8678-86c51dd1e234 {
             "type": "image_picker",
             "id": "image_2",
             "label": "Image 2"
+        },
+        {
+            "type": "text",
+            "id": "video_2",
+            "label": "Video 2"
         },
         {
             "type": "textarea",
