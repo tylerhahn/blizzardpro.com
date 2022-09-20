@@ -1,5 +1,6 @@
-<div class="bl-pl-{{ section.id }} container-fluid max" id="bl-pl" style="overflow-x: hidden;">
-    <h2 class="bl-h2 text-center">{{ section.settings.header_title }}</h2>
+<div class="bl-pl-{{ section.id }} container-fluid max" id="bl-pl" style="overflow-x: hidden; background-color: #141414;">
+
+    <h2 class="bl-h2 text-center" style="color: #F1F1F1; padding: 2em 0 1em 0">{{ section.settings.header_title }}</h2>
     <div class="row">
         {% for block in section.blocks %}
             <div class="bl-{{ section.id }} bl-pl-box col-sm mx-{{
