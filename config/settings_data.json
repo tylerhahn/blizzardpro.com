@@ -1595,23 +1595,24 @@
           "0dc879af-e95a-42db-8e53-b5aa42aaaf5f": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/nova-desktop.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/Untitled-1_c921ceb5-b9f1-4b63-bd80-a7c05d1b65f1.jpg",
+              "image": "shopify:\/\/shop_images\/novastar_homepage_desktop.png",
+              "image_mobile": "shopify:\/\/shop_images\/novastar_homepage_mobile.png",
               "video_url": "",
               "logo": "shopify:\/\/shop_images\/novastar-white.png",
-              "img_width": 45,
+              "img_width": 75,
               "subheadline": "",
               "subheadline_color": "#ffffff",
-              "headline": "NEW! H Series",
-              "paragraph": "Flagship Video Splicing Processors",
+              "headline": "LED Display Control",
+              "paragraph": "Solutions for Any Application",
               "headline_color": "#ffffff",
-              "main_cta_title": "Learn More ›",
+              "main_cta_title": "",
               "main_cta_url": "https:\/\/www.blizzardpro.com\/collections\/novastar-led-control-products?pf_t_type=Splicing+Processors",
               "main_cta_background_color": "#282bf6",
               "main_cta_text_color": "#ffffff",
               "sec_cta_title": "",
               "sec_cta_background_color": "#282bf6",
-              "sec_cta_text_color": "#ffffff"
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
             }
           }
         },
@@ -1707,7 +1708,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/shipping.png",
               "title": "Local Inventory",
-              "paragraph": ""
+              "paragraph": "",
+              "url": ""
             }
           },
           "653a088e-83ee-4e9d-98af-af590175882c": {
@@ -1715,7 +1717,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/us.png",
               "title": "U.S. Based Support",
-              "paragraph": ""
+              "paragraph": "",
+              "url": ""
             }
           },
           "e087c8fa-837a-4a6e-a209-be04a795eae9": {
@@ -1723,7 +1726,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/3yr.png",
               "title": "3-Year Warranty",
-              "paragraph": ""
+              "paragraph": "",
+              "url": ""
             }
           }
         },
