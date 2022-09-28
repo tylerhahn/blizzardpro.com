@@ -10,7 +10,7 @@
                     <img {% if section.settings.max_width != blank %} style="max-width: {{section.settings.max_width}}px" {% endif %} class="p-3" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title }}"/>
                 </div>
                 {% if block.settings.title != blank %}
-                    <h4 class="text-center pb-1; color: #F1F1F1">{{ block.settings.title }}</h4>
+                    <h4 class="text-center pb-1" style="color: #F1F1F1">{{ block.settings.title }}</h4>
                 {% endif %}
                 {% if block.settings.paragraph != blank %}
                     <p class="text-center pb-1; color: #F1F1F1">{{ block.settings.paragraph }}</p>
