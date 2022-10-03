@@ -293,32 +293,32 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/denoise_enigma-b.jpg",
               "video_url": "",
-              "headline": "Enigma™ M4",
+              "headline": "Enigma™ M4 <br>Lighting Console",
               "subheadline": "",
-              "cta_title": "Learn More ›",
+              "cta_title": "Check it Out ›",
               "cta_url": "shopify:\/\/products\/enigma-m4"
             }
           },
           "6afaee47-ae0f-410b-b92d-781c92da3b05": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/mixtape-allboxes-light.jpg",
+              "image": "shopify:\/\/shop_images\/denoise_Toughstick_RGBAW_Rental_side_view.jpg",
               "video_url": "",
-              "headline": "Mixtape™ Series",
+              "headline": "Architectural<br>Lighting",
               "subheadline": "",
-              "cta_title": "Shop Now ›",
-              "cta_url": "shopify:\/\/collections\/mixtape-series"
+              "cta_title": "Browse Architectural  ›",
+              "cta_url": "shopify:\/\/collections\/architectural"
             }
           },
           "caf75462-5a4b-4e3d-9eaf-748fc6d95036": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/PXL_20201006_133844922.NIGHT-_1.jpg",
+              "image": "shopify:\/\/shop_images\/Screenshot_2022-10-03_094633.png",
               "video_url": "",
-              "headline": "Wireless DMX Control with SoC-It™ + At Full™",
+              "headline": "NovaStar™ LED Control Display",
               "subheadline": "",
               "cta_title": "Learn More ›",
-              "cta_url": "shopify:\/\/pages\/at-full"
+              "cta_url": "shopify:\/\/pages\/novastar"
             }
           }
         },
