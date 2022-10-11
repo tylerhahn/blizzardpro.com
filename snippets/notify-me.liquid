@@ -35,7 +35,7 @@
               {% if product.type == 'LED Video' %}
               <p>LED video panels & accessories are typically built into a custom order. Enter your email to learn more or click <em>Expert Connect</em> for immediate assistance.</p>
                 {% unless product.tags contains 'accessories' %}{% endunless %}
-                {% elsif product.type == 'NovaStar' %}
+                {% elsif product.type == 'NovaStar' and product.tags contains 'h-series' %}
                 <p>H Series processors are custom built. To get started, complete your checkout today or enter your email for more information / to request a demo.</p>
               {% elsif product.metafields.f_b.High_End == 'true' %}
                 <p>This product is available per special order. To get started, enter your email below for more information & to request a demo.</p>
