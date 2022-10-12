@@ -27,7 +27,7 @@
 {% if total == "0" %}
   {% if product.tags contains 'discontinued' %}
 
-  {% else %}
+  {% elsif product.type != 'NovaStar' %}
   <div class="notify-me">
     <div class="notify-me-email">
         <div class="notify-me-container">
@@ -39,7 +39,7 @@
                 <p>H Series processors are custom built. To get started, complete your checkout today or enter your email for more information / to request a demo.</p>
               {% elsif product.metafields.f_b.High_End == 'true' %}
                 <p>This product is available per special order. To get started, enter your email below for more information & to request a demo.</p>
-              {% elsif product.type != 'NovaStar' %}
+              {% else %}
                 <p>This product is on backorder. You can place an order now to reserve it, enter an email to be notified when it's available, or <a href="/a/wheretobuy">buy from an authorized reseller</a>.</p>
               {% endif %}
 
