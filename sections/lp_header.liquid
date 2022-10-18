@@ -1,0 +1,22 @@
+<div class="lp_video_container">
+    <h1>{{section.settings.headline}}</h1>
+    <p>{{section.settings.subeadline}}</p>
+</div>
+
+{% schema %}
+{
+    "name": "LP Header",
+    "settings": [
+        {
+            "type": "text",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+            "type": "text",
+            "id": "subheadline",
+            "label": "Subheadline"
+        }
+    ]
+}
+{% endschema %}

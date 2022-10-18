@@ -1,0 +1,18 @@
+{
+  "name": "Video LP",
+  "sections": {
+    "video": {
+      "type": "vimeo",
+      "settings": {}
+    },
+    "form": {
+      "type": "dynamic-shopify-form",
+      "settings": {}
+    },
+    "header": {
+      "type": "lp_header",
+      "settings": {}
+    }
+  },
+  "order": ["video", "header", "form"]
+}
