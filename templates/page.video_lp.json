@@ -1,18 +1,32 @@
 {
-  "name": "Video LP",
   "sections": {
     "video": {
       "type": "vimeo",
-      "settings": {}
-    },
-    "form": {
-      "type": "dynamic-shopify-form",
-      "settings": {}
+      "settings": {
+        "vimeo_id": ""
+      }
     },
     "header": {
       "type": "lp_header",
-      "settings": {}
+      "settings": {
+        "headline": "ELEVATE TO THE NEW STANDARD INTHEATRICALLIGHTING",
+        "subheadline": "Introducing Verismo™ LED Fresnel and Profile, featuring advanced customization potential and powerful “True Tone” light output."
+      }
+    },
+    "form": {
+      "type": "dynamic-shopify-form",
+      "settings": {
+        "form_text": "",
+        "background_color": "#000000",
+        "text_color": "#000000",
+        "button_color": "#000000",
+        "hs_value": ""
+      }
     }
   },
-  "order": ["video", "header", "form"]
+  "order": [
+    "video",
+    "header",
+    "form"
+  ]
 }
