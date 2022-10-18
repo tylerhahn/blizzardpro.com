@@ -3,8 +3,11 @@
     "header": {
       "type": "lp_header",
       "settings": {
-        "headline": "ELEVATE TO THE NEW STANDARD INTHEATRICALLIGHTING",
-        "subheadline": "Introducing Verismo™ LED Fresnel and Profile, featuring advanced customization potential and powerful “True Tone” light output."
+        "headline": "ELEVATE TO THE NEW STANDARD IN THEATRICAL LIGHTING",
+        "headline_color": "#f2f2f2",
+        "subheadline": "Introducing Verismo™ LED Fresnel and Profile, featuring advanced customization potential and powerful “True Tone” light output.",
+        "subheadline_color": "#cecece",
+        "page_color": "#191919"
       }
     },
     "video": {
