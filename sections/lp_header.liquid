@@ -1,7 +1,36 @@
 <div class="lp_video_container">
     <h1>{{section.settings.headline}}</h1>
-    <p>{{section.settings.subeadline}}</p>
+    <p>{{section.settings.subheadline}}</p>
 </div>
+
+<style>
+    div#main {
+        background-color: {{ section.settings.page_color }};
+    }
+    .vimeo_video {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+
+    .lp_video_container {
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        text-align: center;
+        padding-top: 4em;
+    }
+
+    .lp_video_container h1 {
+        color: {{ section.settings.headline_color }}
+    }
+    .lp_video_container p {
+        color: {{ section.settings.subheadline_color }}
+    }
+
+</style>
 
 {% schema %}
 {
@@ -13,9 +42,24 @@
             "label": "Headline"
         },
         {
+            "type": "color",
+            "id": "headline_color",
+            "label": "Headline Color"
+        },
+        {
             "type": "text",
             "id": "subheadline",
             "label": "Subheadline"
+        },
+        {
+            "type": "color",
+            "id": "subheadline_color",
+            "label": "Subheadline Color"
+        },
+        {
+            "type": "color",
+            "id": "page_color",
+            "label": "Page Color"
         }
     ]
 }
