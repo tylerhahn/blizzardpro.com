@@ -1,11 +1,5 @@
 {
   "sections": {
-    "video": {
-      "type": "vimeo",
-      "settings": {
-        "vimeo_id": ""
-      }
-    },
     "header": {
       "type": "lp_header",
       "settings": {
@@ -13,20 +7,26 @@
         "subheadline": "Introducing Verismo™ LED Fresnel and Profile, featuring advanced customization potential and powerful “True Tone” light output."
       }
     },
+    "video": {
+      "type": "vimeo",
+      "settings": {
+        "vimeo_id": "754387850"
+      }
+    },
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "",
+        "form_text": "Be the first to get updates on the Verismo™ Series",
         "background_color": "#000000",
-        "text_color": "#000000",
-        "button_color": "#000000",
-        "hs_value": ""
+        "text_color": "#b7b7b7",
+        "button_color": "#282bf6",
+        "hs_value": "Verismo"
       }
     }
   },
   "order": [
-    "video",
     "header",
+    "video",
     "form"
   ]
 }
