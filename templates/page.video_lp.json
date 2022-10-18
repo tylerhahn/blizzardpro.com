@@ -4,7 +4,7 @@
       "type": "lp_header",
       "settings": {
         "headline": "Elevate to the New Standard of Theatrical Lighting",
-        "headline_color": "#efefef",
+        "headline_color": "#ededed",
         "subheadline": "Introducing Verismo™ LED Fresnel and Profile, featuring advanced customization potential and powerful “True Tone” light output.",
         "subheadline_color": "#cecece",
         "page_color": "#191919"
@@ -20,7 +20,7 @@
       "type": "dynamic-shopify-form",
       "settings": {
         "form_text": "Be the first to get updates on the Verismo™ Series",
-        "background_color": "#161616",
+        "background_color": "#111111",
         "text_color": "#b7b7b7",
         "button_color": "#282bf6",
         "hs_value": "Verismo"
