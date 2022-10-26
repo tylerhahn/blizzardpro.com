@@ -14,25 +14,25 @@
                     {{ form.errors | default_errors }}
                     <input id="fname" name="confirm" type="text" value=""/>
                     <div class="clearfix large_form">
-                        <label class="login" for="first_name">First Name</label>
-                        <input class="large fnamer" id="first_name" name="customer[first_name]" size="30" type="text" value=""/>
+                        <label style="color: white" class="login" for="first_name">First Name</label>
+                        <input placeholder="First Name" class="large fnamer" id="first_name" name="customer[first_name]" size="30" type="text" value=""/>
                     </div>
                     <div class="clearfix large_form">
-                        <label class="login" for="last_name" id="lname-reg">Last Name</label>
-                        <input class="large" id="last_name" name="customer[last_name]" size="30" type="text" value=""/>
+                        <label style="color: white" class="login" for="last_name" id="lname-reg">Last Name</label>
+                        <input placeholder="Last Name" class="large" id="last_name" name="customer[last_name]" size="30" type="text" value=""/>
                     </div>
                     <div class="clearfix large_form">
-                        <label class="login" for="email">Email Address</label>
-                        <input class="large" id="email" name="customer[email]" size="30" type="email" value=""/>
+                        <label style="color: white" class="login" for="email">Email Address</label>
+                        <input placeholder="Email" class="large" id="email" name="customer[email]" size="30" type="email" value=""/>
                     </div>
                     <div class="clearfix large_form">
-                        <label class="login" for="password">Password</label>
-                        <input class="large password" id="password" name="customer[password]" size="30" type="password" value=""/>
+                        <label style="color: white" class="login" for="password">Password</label>
+                        <input placeholder="Password" class="large password" id="password" name="customer[password]" size="30" type="password" value=""/>
                     </div>
                     <input id="customer_tags" name="customer[tags]" type="hidden" value="Illuminati"/>
                     <div class="action_bottom">
-                        <input class="btn btn-blue" data-callback="onSubmit" id="create-btn" type="submit" value="Create New Account"/>
-                        <a class="btn btn-white" href="/account/login">or Log into Existing Account</a>
+                        <input placeholder="" class="btn btn-blue" data-callback="onSubmit" id="create-btn" type="submit" value="Create New Account"/>
+                        <a class="btn btn-white" style="background: white" href="/account/login">or Log into Existing Account</a>
                     </div>
                     <input name="return_to" type="hidden" value="/search?q=like%20new%20refurb&created-account"/>
                 {% endform %}
