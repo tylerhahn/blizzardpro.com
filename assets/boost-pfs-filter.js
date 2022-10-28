@@ -1093,7 +1093,7 @@ var boostPFSFilterConfig = {
     if (activeSwapImage) {
       html +=
         'data-img-flip-src="' +
-        Utils.optimizeImage(images[1]["src"], rangeWidths[2] + "x") +
+        Utils.optimizeImage(images[1]["src"], rangeWidths[1] + "x") +
         '" ' +
         'data-img-flip-srcset="' +
         flipImageSrcSet +
