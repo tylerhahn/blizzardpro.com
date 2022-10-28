@@ -2065,7 +2065,7 @@
           "show_details_when_hovering": false,
           "show_vendor": true,
           "show_price": true,
-          "active_image_swap": false,
+          "active_image_swap": true,
           "show_sorting": true,
           "show_product_review": false,
           "product_item_label_position": "top_left",
