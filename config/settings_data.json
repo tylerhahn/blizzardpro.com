@@ -2053,7 +2053,7 @@
         "type": "collection-template-boost-pfs-filter",
         "settings": {
           "switch_layout_filter": "switch_layout_filter_vertical",
-          "show_collection_image": false,
+          "show_collection_image": true,
           "show_collection_des": true,
           "collection_image_text_color": "",
           "products_per_page": 24,
