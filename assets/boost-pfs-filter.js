@@ -1070,7 +1070,7 @@ var boostPFSFilterConfig = {
       '<a href="{{itemUrl}}" class="boost-pfs-filter-product-item-image-link" ';
     html += 'style="padding-top:' + paddingTop + '%;">';
     html +=
-      '<img class="boost-pfs-filter-product-item-main-image lazyload "' +
+      '<img class="boost-pfs-filter-product-item-main-image  "' +
       'data-srcset="' +
       dataSrcSet +
       '" ' +
