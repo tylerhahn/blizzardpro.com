@@ -1075,7 +1075,7 @@ var boostPFSFilterConfig = {
       dataSrcSet +
       '" ' +
       'data-src="' +
-      Utils.getFeaturedImage(images, rangeWidths[2] + "x") +
+      Utils.getFeaturedImage(images, rangeWidths[2] + "") +
       '" ' +
       'data-widths="[' +
       dataWidths +
