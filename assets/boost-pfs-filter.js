@@ -1975,7 +1975,7 @@ var boostPFSFilterConfig = {
     if (!Utils.isMobile()) {
       if (
         boostPFSThemeConfig.custom.hasOwnProperty("active_image_swap") &&
-        boostPFSThemeConfig.custom.active_image_swap == true
+        boostPFSThemeConfig.custom.active_image_swap == false
       ) {
         var dataSrcSetFlipImg = "",
           dataSrcFlipImg = "",
