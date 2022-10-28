@@ -200,7 +200,7 @@
             <div class="boost-pfs-filter-product-item-image" data-boost-image-loading-animation>
                 <a href="{{- product_url -}}" class="boost-pfs-filter-product-item-image-link lazyload" style="padding-top: {{- padding_top -}}%;">
                     <div class="boost-pfs-image-container">
-                        
+                        <img class="boost-pfs-filter-product-item-main-image lazyload Image--lazyLoad" data-src="{{- preview_image | img_url: 'master' -}}" src="{{- img_default_src -}}" alt="{{- product.title | escape -}}" {{- data_img_flip -}}/>
                     </div>
 
                 </a>
