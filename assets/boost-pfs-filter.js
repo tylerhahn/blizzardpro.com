@@ -2009,9 +2009,7 @@ var boostPFSFilterConfig = {
               'data-widths="[' +
               dataWidths +
               ']" ' +
-              'data-sizes="' +
-              dataSizes +
-              '" ' +
+
               'src="' +
               boostPFSImgDefaultSrc +
               '" ' +
