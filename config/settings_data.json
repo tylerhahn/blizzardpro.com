@@ -2093,7 +2093,7 @@
           "product_item_des_font_size": 14,
           "display_item_swatch": true,
           "swatch_color_display_type": "swatch_color_display_type_image_product",
-          "swatch_color_event_change_image": "hover",
+          "swatch_color_event_change_image": "none",
           "swatches_color_shape": "circle",
           "equal_height": "false",
           "ratio_width_height_other": "",
