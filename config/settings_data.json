@@ -2091,7 +2091,7 @@
           "product_item_des_color": "#3a3a3a",
           "product_item_des_font": "poppins_n4",
           "product_item_des_font_size": 14,
-          "display_item_swatch": true,
+          "display_item_swatch": false,
           "swatch_color_display_type": "swatch_color_display_type_image_product",
           "swatch_color_event_change_image": "hover",
           "swatches_color_shape": "circle",
