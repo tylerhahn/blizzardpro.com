@@ -346,7 +346,7 @@ if (typeof lazySizes !== "function") {
                 z(function () {
                   var b = a.complete && a.naturalWidth > 1;
                   (p && !b) ||
-                    (b && s(a, "ls-is-cached"),
+                    (b && s(a, ""),
                     W(o),
                     (a._lazyCache = !0),
                     k(function () {
