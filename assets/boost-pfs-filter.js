@@ -1977,7 +1977,7 @@ var boostPFSFilterConfig = {
         boostPFSThemeConfig.custom.hasOwnProperty("active_image_swap") &&
         boostPFSThemeConfig.custom.active_image_swap == true
       ) {
-        var dataSrcSetFlipImg = "",
+        var dataSrcSetFlipImg = "false",
           dataSrcFlipImg = "",
           flipImageAlt = "",
           dataSizes = "auto",
