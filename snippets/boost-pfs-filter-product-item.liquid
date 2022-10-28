@@ -95,7 +95,7 @@
 {%- comment -%} Swap Image {%- endcomment -%}
 {%- assign active_image_swap_class = ' ' -%}
 {%- if active_image_swap and product.images[1] -%}
-    {%- assign active_image_swap = false -%}
+    {%- assign active_image_swap = true -%}
     {%- assign active_image_swap_class = ' has-bc-swap-image' -%}
 {%- endif -%}
 
