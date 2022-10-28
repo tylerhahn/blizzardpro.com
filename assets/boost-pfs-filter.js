@@ -1045,7 +1045,7 @@ var boostPFSFilterConfig = {
       !Utils.isMobile() &&
       images.length > 1 &&
       boostPFSThemeConfig.custom.hasOwnProperty("active_image_swap") &&
-      boostPFSThemeConfig.custom.active_image_swap == true;
+      boostPFSThemeConfig.custom.active_image_swap == false;
 
     for (var i = 0; i < rangeWidths.length; i++) {
       dataSrcSet +=
