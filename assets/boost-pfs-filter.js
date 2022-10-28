@@ -1075,7 +1075,7 @@ var boostPFSFilterConfig = {
       dataSrcSet +
       '" ' +
       'data-src="' +
-      Utils.getFeaturedImage(images, rangeWidths[2] + "") +
+      Utils.getFeaturedImage(images, rangeWidths[2] + "x") +
       '" ' +
       'data-widths="[' +
       dataWidths +
@@ -1970,63 +1970,6 @@ var boostPFSFilterConfig = {
     }
   }
 
-  // Swap Image
-  function swapImage(data) {
-    if (!Utils.isMobile()) {
-      if (
-        boostPFSThemeConfig.custom.hasOwnProperty("active_image_swap") &&
-        boostPFSThemeConfig.custom.active_image_swap == true
-      ) {
-        var dataSrcSetFlipImg = "",
-          dataSrcFlipImg = "",
-          flipImageAlt = "",
-          dataSizes = "auto",
-          dataWidths = "",
-          html = "";
-
-        jQ(".boost-pfs-filter-product-item").each(function () {
-          var productItemSelector = jQ(this);
-          var imgSelector = productItemSelector.find(
-            ".boost-pfs-filter-product-item-main-image"
-          );
-
-          if (
-            typeof imgSelector.data("img-flip-src") != "undefined" &&
-            imgSelector.data("img-flip-src") != ""
-          ) {
-            dataSrcFlipImg = imgSelector.data("img-flip-src");
-            dataSrcSetFlipImg = imgSelector.data("img-flip-srcset");
-            flipImageAlt = imgSelector.attr("alt");
-            dataWidths = imgSelector.data("widths");
-            html = "";
-            '<img class="boost-pfs-filter-product-item-flip-image lazyload Image--lazyLoad"' +
-              'data-srcset="' +
-              dataSrcSetFlipImg +
-              '" ' +
-              'data-src="' +
-              dataSrcFlipImg +
-              '" ' +
-              'data-widths="[' +
-              dataWidths +
-              ']" ' +
-              'data-sizes="' +
-              dataSizes +
-              '" ' +
-              'src="' +
-              boostPFSImgDefaultSrc +
-              '" ' +
-              'alt="' +
-              flipImageAlt +
-              '" />';
-
-            productItemSelector
-              .find(".boost-pfs-filter-product-item-image-link")
-              .prepend(html);
-          }
-        });
-      }
-    }
-  }
 
   // Build Placeholder for the first load
   function boostRemoveImageLoadingAnimation($selector) {
