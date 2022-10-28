@@ -1980,7 +1980,7 @@ var boostPFSFilterConfig = {
         var dataSrcSetFlipImg = "",
           dataSrcFlipImg = "",
           flipImageAlt = "",
-          dataSizes = "",
+          dataSizes = "auto",
           dataWidths = "",
           html = "";
 
