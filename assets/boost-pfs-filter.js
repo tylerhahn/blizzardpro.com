@@ -1095,7 +1095,7 @@ var boostPFSFilterConfig = {
         'data-img-flip-src="' +
         Utils.optimizeImage(images[1]["src"], rangeWidths[2] + "x") +
         '" ' +
-
+        'data-img-flip-srcset="' +
         flipImageSrcSet +
         '" ';
     }
