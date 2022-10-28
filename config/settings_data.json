@@ -2061,7 +2061,7 @@
           "products_per_row_mobile": 2,
           "product_item_type": "grid",
           "product_item_layout": "no-border",
-          "text_alignment": "left",
+          "text_alignment": "center",
           "show_details_when_hovering": false,
           "show_vendor": true,
           "show_price": true,
