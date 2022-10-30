@@ -328,7 +328,7 @@ if (typeof lazySizes !== "function") {
             _ = A(function (a, b, c, e, f) {
               var g, h, j, l, o, p;
               (o = v(a, "lazybeforeunveil", b)).defaultPrevented ||
-                (e && (c ? s(a, d.autosizesClass) : a.setAttribute("siztes", e)),
+                (e && (c ? s(a, d.autosizesClass) : a.setAttribute("sizes", e)),
                 (h = a[i](d.srcsetAttr)),
                 (g = a[i](d.srcAttr)),
                 f && ((j = a.parentNode), (l = j && n.test(j.nodeName || ""))),
