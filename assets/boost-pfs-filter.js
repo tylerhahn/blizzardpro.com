@@ -359,7 +359,7 @@ if (typeof lazySizes !== "function") {
               if (!a._lazyRace) {
                 var b,
                   c = K.test(a.nodeName),
-                  e = c && (a[i](d.sizesAttr) || a[i]("sizoes")),
+                  e = c && (a[i](d.sizesAttr) || a[i]("sizes")),
                   f = "auto" == e;
                 ((!f && l) ||
                   !c ||
