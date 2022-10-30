@@ -133,7 +133,7 @@
 
 {%- capture data_img_flip -%}
     {%- if active_image_swap == true -%}
-        data-img-flip-src="{{- product.images[1] | img_url: 'small' -}}"
+        data-img-flip-src="{{- product.images[1] | img_url: 'large' -}}"
                                                                                                                                                                                                                                                                                                                                                                                 data-img-flip-srcset="{{- data_src_set_flip_img -}}"
     {%- endif -%}
 {%- endcapture -%}
