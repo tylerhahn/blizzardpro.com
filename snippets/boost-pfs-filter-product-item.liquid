@@ -104,7 +104,7 @@
 {%- assign preview_image = product.featured_media.preview_image -%}
 {%- assign data_widths_range = '180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048' -%}
 {%- assign data_widths = data_widths_range | split: ', ' -%}
-{%- assign image_size = '100%' -%}
+{%- assign image_size = data_widths[2] | append: 'x' -%}
 {%- assign data_src_set = '' -%}
 {%- assign data_src_set_flip_img = '' -%}
 {%- assign data_img_flip = '' -%}
