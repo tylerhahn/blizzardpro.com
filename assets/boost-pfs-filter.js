@@ -433,7 +433,7 @@ if (typeof lazySizes !== "function") {
               if (
                 ((a._lazysizesWidth = d),
                 (d += "px"),
-                a.setAttribute("sizoes", d),
+                /*a.setAttribute("sizoes", d),*/
                 n.test(b.nodeName || ""))
               )
                 for (
