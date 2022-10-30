@@ -99,7 +99,7 @@
     {%- assign active_image_swap_class = ' has-bc-swap-image' -%}
 {%- endif -%}
 
-{%- comment -%} Product Image {%- endcomment -%}
+{%- comment -%} Product Image 
 {%- assign img_default_src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' -%}
 {%- assign preview_image = product.featured_media.preview_image -%}
 {%- assign data_widths_range = '180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048' -%}
@@ -136,7 +136,7 @@
         data-img-flip-src="{{- product.images[1] | img_url: 'large' -}}"
                                                                                                                                                                                                                                                                                                                                                                                 data-img-flip-srcset="{{- data_src_set_flip_img -}}"
     {%- endif -%}
-{%- endcapture -%}
+{%- endcapture -%}{%- endcomment -%}
 
 
 {%- capture data_image_width_height -%}
