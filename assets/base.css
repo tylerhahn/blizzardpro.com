@@ -11797,3 +11797,8 @@ span.sale-box {
   color: lightgray;
   font-family: "Source Sans Pro", sans-serif;
 }
+
+.boost-pfs-filter-product-item-image img {
+
+  height: 300px !important;
+}
