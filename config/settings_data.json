@@ -216,26 +216,6 @@
       "161280708581d6b51f": {
         "type": "slider",
         "blocks": {
-          "04c03c26-ab8d-4dc7-95b6-9f0ff128e567": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/CFX_Web_desktop_10.25-26.2022.png",
-              "image_mobile": "shopify:\/\/shop_images\/CFX_Web_mobile_10.25-26.2022.png",
-              "video_url": "",
-              "subheadline": "",
-              "subheadline_color": "#ffffff",
-              "headline": "",
-              "paragraph": "",
-              "headline_color": "#ffffff",
-              "main_cta_title": "",
-              "main_cta_url": "\/pages\/at-full",
-              "main_cta_background_color": "#282bf6",
-              "main_cta_text_color": "#ffffff",
-              "sec_cta_title": "",
-              "sec_cta_text_color": "#ffffff",
-              "sec_cta_url": ""
-            }
-          },
           "b0489af9-4025-41f7-8171-81e86337adf8": {
             "type": "image",
             "settings": {
@@ -278,7 +258,6 @@
           }
         },
         "block_order": [
-          "04c03c26-ab8d-4dc7-95b6-9f0ff128e567",
           "b0489af9-4025-41f7-8171-81e86337adf8",
           "84184c44-caff-4484-8e40-6d5a1ae3c4e1"
         ],
