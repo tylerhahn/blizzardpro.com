@@ -19,7 +19,7 @@
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Be the first to get updates on the Verismo™ Series",
+        "form_text": "Get Verismo updates or schedule a demo",
         "background_color": "#111111",
         "text_color": "#b7b7b7",
         "button_color": "#282bf6",
