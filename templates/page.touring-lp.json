@@ -84,22 +84,39 @@
         "cta_url": "https:\/\/www.blizzardpro.com\/products\/stiletto-ray-z"
       }
     },
-    "productHero": {
-      "type": "product-hero-grid",
+    "1ffa5358-80d2-41ca-a3b9-e32557bf411c": {
+      "type": "at-full-col-2",
+      "blocks": {
+        "52085571-ff0f-4c6a-a071-2593d358f8a2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tkey600_insA2730.png",
+            "seo_description": "",
+            "video_url": "",
+            "headline": "",
+            "cta_title": "Shop ›",
+            "cta_url": ""
+          }
+        },
+        "f751a296-549e-4083-a0bd-244d79ecb97e": {
+          "type": "image",
+          "settings": {
+            "seo_description": "",
+            "video_url": "",
+            "headline": "",
+            "cta_title": "Shop ›",
+            "cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "52085571-ff0f-4c6a-a071-2593d358f8a2",
+        "f751a296-549e-4083-a0bd-244d79ecb97e"
+      ],
       "settings": {
-        "height": 50,
-        "product_color": "",
-        "product_title": "",
-        "product_paragraph": "",
-        "product_url_title": "Shop ›",
-        "product_url": "",
-        "box_1_paragraph": "",
-        "box_2_paragraph": "",
-        "box_2_color": "",
-        "box_3_paragraph": "",
-        "box_3_color": "",
-        "box_4_paragraph": "",
-        "box_4_color": ""
+        "header_title": "",
+        "h_gutter": 3,
+        "box_height": 35
       }
     },
     "form": {
@@ -128,7 +145,7 @@
     "lineup",
     "columns",
     "fullHero",
-    "productHero",
+    "1ffa5358-80d2-41ca-a3b9-e32557bf411c",
     "form",
     "centerHero"
   ]
