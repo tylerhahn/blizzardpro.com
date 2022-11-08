@@ -84,45 +84,48 @@
         "cta_url": "https:\/\/www.blizzardpro.com\/products\/stiletto-ray-z"
       }
     },
-    "1ffa5358-80d2-41ca-a3b9-e32557bf411c": {
-      "type": "at-full-col-2",
+    "727bfa44-dfcf-41dc-a2ca-004aba54b713": {
+      "type": "iris-col",
       "blocks": {
-        "52085571-ff0f-4c6a-a071-2593d358f8a2": {
+        "37a656ff-f7d9-46d7-ba46-1114c6d2ec95": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Verismo_Frsenel_RGBALC0005.png",
+            "video_url": "",
+            "headline": "Torrent™ Keyframe 600",
+            "subheadline": "LED Profile Spot Powerhouse",
+            "cta_title": "Learn More ›",
+            "cta_url": "\/products\/torrent-keyframe-600",
+            "new_window": true
+          }
+        },
+        "3c387bfc-e8cb-4207-b52c-863fbc327578": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/tkey600_insA2730.png",
-            "seo_description": "",
             "video_url": "",
             "headline": "",
+            "subheadline": "",
             "cta_title": "Shop ›",
-            "cta_url": ""
-          }
-        },
-        "f751a296-549e-4083-a0bd-244d79ecb97e": {
-          "type": "image",
-          "settings": {
-            "seo_description": "",
-            "video_url": "",
-            "headline": "",
-            "cta_title": "Shop ›",
-            "cta_url": ""
+            "cta_url": "",
+            "new_window": true
           }
         }
       },
       "block_order": [
-        "52085571-ff0f-4c6a-a071-2593d358f8a2",
-        "f751a296-549e-4083-a0bd-244d79ecb97e"
+        "37a656ff-f7d9-46d7-ba46-1114c6d2ec95",
+        "3c387bfc-e8cb-4207-b52c-863fbc327578"
       ],
       "settings": {
         "header_title": "",
         "h_gutter": 3,
-        "box_height": 35
+        "box_height": 32
       }
     },
     "form": {
       "type": "dynamic-shopify-form",
       "settings": {
-        "form_text": "Get in touch with our dedicated <span>worship pros<\/span>",
+        "form_text": "Get in touch with our dedicated <span>touring<\/span> pros",
         "background_color": "#000000",
         "text_color": "#ffffff",
         "button_color": "#282bf6",
@@ -145,7 +148,7 @@
     "lineup",
     "columns",
     "fullHero",
-    "1ffa5358-80d2-41ca-a3b9-e32557bf411c",
+    "727bfa44-dfcf-41dc-a2ca-004aba54b713",
     "form",
     "centerHero"
   ]
