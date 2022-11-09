@@ -33,7 +33,7 @@
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
-        "header_title": "Production-Ready Fixtures",
+        "header_title": "Punchy, Production-Ready Fixtures",
         "h_gutter": 3,
         "collection": "featured-production-products",
         "box_color": "#f1f1f1"
@@ -138,7 +138,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/at-full-slider.png",
         "title": "Mobile DMX Control",
-        "paragraph": "The At Full™ app puts capabilities of a lighting console right in the palm of your hand.",
+        "paragraph": "The At Full™ app puts the capabilities of a lighting console right in the palm of your hand.",
         "cta_title": "Learn More ›",
         "cta_url": "shopify:\/\/pages\/at-full"
       }
