@@ -47,7 +47,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/spotman_banner.png",
             "video_url": "",
-            "headline": "SPOTMAN",
+            "headline": "SPOTMAN™",
             "subheadline": "30W Mini Moving Head",
             "cta_title": "Shop ›",
             "cta_url": "shopify:\/\/products\/spotman"
@@ -79,7 +79,7 @@
       "type": "fullwidth-scroller",
       "settings": {
         "video_url": "https:\/\/vimeo.com\/734128583",
-        "headline": "Hype™ 150",
+        "headline": "HYPE™ 150",
         "subheadline": "The compact, but mighty mover for <br>on-the-go shows.",
         "cta_title": "Learn More ›",
         "cta_url": "google.com"
