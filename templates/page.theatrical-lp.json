@@ -11,8 +11,8 @@
             "video_url": "",
             "subheadline": "NEW",
             "subheadline_color": "#3687b5",
-            "headline": "Verismo Series",
-            "paragraph": "The new generation of ellipsoidals",
+            "headline": "Verismo™ Series",
+            "paragraph": "Elevate to the new standard in theatrical lighting",
             "headline_color": "#ffffff",
             "main_cta_title": "",
             "main_cta_url": "",
@@ -33,7 +33,7 @@
     "lineup": {
       "type": "product-lineup-auto",
       "settings": {
-        "header_title": "Next-level Theatrical Products",
+        "header_title": "Next-level Lighting, Designed for the Stage",
         "h_gutter": 3,
         "collection": "featured-theatrical-products",
         "box_color": "#f1f1f1"
@@ -80,7 +80,7 @@
       "settings": {
         "video_url": "https:\/\/vimeo.com\/749162320",
         "headline": "Aria™ Profile",
-        "subheadline": "Versatile WW + RGBA Ellipsoidals",
+        "subheadline": "Versatile WW + RGBW Ellipsoidal",
         "cta_title": "Learn More ›",
         "cta_url": "https:\/\/www.blizzardpro.com\/products\/aria-profile-rgbw"
       }
@@ -137,8 +137,8 @@
       "type": "center-image-hero",
       "settings": {
         "image": "shopify:\/\/shop_images\/render0677.jpg",
-        "title": "IRiS InSite G2",
-        "paragraph": "Permanent install LED Video Panels",
+        "title": "IRiS® InSite™ G2",
+        "paragraph": "Fine Pixel LED Video Wall System",
         "cta_title": "Learn More ›",
         "cta_url": "shopify:\/\/pages\/iris-insite-g2"
       }
