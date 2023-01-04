@@ -58,8 +58,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-12_bc769589-6992-40a4-b9df-1814001dee81.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-insite-12-rear_04b88394-0bdc-4084-abb7-8718807915db.png",
+            "image": "shopify:\/\/shop_images\/IRiS_InSite_12_0002.png",
+            "image_featured": "shopify:\/\/shop_images\/IRiS_InSite_12_0001.png",
             "panel_name": "InSite™ G2 1.2",
             "pixel_pitch": "1.2 mm",
             "module_resolution": "240 x 135",
@@ -107,8 +107,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-15_b9d878d7-2b38-46cc-a9c1-cc4f9ab3708a.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-insite-15-rear_a2f25568-ab9f-4d3c-afb7-f2169f821209.png",
+            "image": "shopify:\/\/shop_images\/IRiS_InSite_15_0002.png",
+            "image_featured": "shopify:\/\/shop_images\/IRiS_InSite_15_0001.png",
             "panel_name": "InSite™ G2 1.5",
             "pixel_pitch": "1.5 mm",
             "module_resolution": "192 x 108",
@@ -156,8 +156,8 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-insite-18_c802d8b2-49a7-4395-9db0-f361e43d71b3.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear_c30de6e2-2806-4287-a3a9-ba5ca995e682.png",
+            "image": "shopify:\/\/shop_images\/IRiS_InSite_18_0002.png",
+            "image_featured": "shopify:\/\/shop_images\/IRiS_InSite_18_0001.png",
             "panel_name": "InSite™ G2 1.8",
             "pixel_pitch": "1.8 MM",
             "module_resolution": "160 x 90",
