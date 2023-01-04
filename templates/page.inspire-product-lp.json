@@ -58,8 +58,8 @@
         "5cc96fa1-445d-466d-9665-73c8d674d9ee": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-inspire-12-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-12-rear.png",
+            "image": "shopify:\/\/shop_images\/IRiS_InSpire_12_ang_r.png",
+            "image_featured": "shopify:\/\/shop_images\/IRiS_InSpire_12_Rear_padded.png",
             "panel_name": "InSpire™ 1.2",
             "pixel_pitch": "1.25 MM",
             "module_resolution": "240 x 135",
@@ -107,8 +107,8 @@
         "ea4181b2-aedd-4532-a918-d31c9a1be135": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-inspire-15-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-15-rear.png",
+            "image": "shopify:\/\/shop_images\/IRiS_InSpire_15_ang_r.png",
+            "image_featured": "shopify:\/\/shop_images\/IRiS_InSpire_15_Rear_padded.png",
             "panel_name": "InSpire™ 1.5",
             "pixel_pitch": "1.56 mm",
             "module_resolution": "192 x 108",
@@ -156,8 +156,8 @@
         "5a78db3b-c5ce-4671-9b94-073aea4ba360": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iris-inspire-18-angled-right.png",
-            "image_featured": "shopify:\/\/shop_images\/iris-inspire-18-rear_5a00ae83-706b-471d-9936-cd9c2e670f76.png",
+            "image": "shopify:\/\/shop_images\/IRiS_InSpire_18_ang_r.png",
+            "image_featured": "shopify:\/\/shop_images\/IRiS_InSpire_18_Rear_padded.png",
             "panel_name": "InSpire™ 1.8",
             "pixel_pitch": "1.875 MM",
             "module_resolution": "160 x 90",
