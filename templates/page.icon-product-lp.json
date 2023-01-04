@@ -432,7 +432,7 @@
     "otherProds": {
       "type": "iris-novastar-lineup",
       "settings": {
-        "collection": "novastar-gt-series",
+        "collection": "icon-series-1",
         "headline": "Add NovaStar™ Control",
         "subheadline": "Choose LED display solutions for any video application",
         "products_shown": 4,
