@@ -275,12 +275,33 @@
               "sec_cta_text_color": "#ffffff",
               "sec_cta_url": ""
             }
+          },
+          "40cf09e8-d55f-459d-844b-b1371f6fd8c3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NodeB_Banner_Desktop.png",
+              "image_mobile": "shopify:\/\/shop_images\/NodeB_Banner_Mobile.png",
+              "video_url": "",
+              "subheadline": "",
+              "subheadline_color": "#ffffff",
+              "headline": "",
+              "paragraph": "",
+              "headline_color": "#ffffff",
+              "main_cta_title": "",
+              "main_cta_url": "https:\/\/www.lp.blizzardpro.com\/node-b",
+              "main_cta_background_color": "#282bf6",
+              "main_cta_text_color": "#ffffff",
+              "sec_cta_title": "Learn More",
+              "sec_cta_text_color": "#ffffff",
+              "sec_cta_url": ""
+            }
           }
         },
         "block_order": [
           "85ab1220-6030-4a38-9b07-6d363d7eadd8",
           "b0489af9-4025-41f7-8171-81e86337adf8",
-          "84184c44-caff-4484-8e40-6d5a1ae3c4e1"
+          "84184c44-caff-4484-8e40-6d5a1ae3c4e1",
+          "40cf09e8-d55f-459d-844b-b1371f6fd8c3"
         ],
         "settings": {
         }
