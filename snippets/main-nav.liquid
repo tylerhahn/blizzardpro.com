@@ -34,17 +34,8 @@
             </li>
 
             <li class="top-level-nav">
-                <a href="#">Where to Buy
-                    <i class="fas fa-caret-down"></i>
+                <a href="/pages/where-to-buy">Where to Buy
                 </a>
-
-                <ul class="product-link-list">
-                    {% for link in linklists.where-to-buy.links %}
-                        <li>
-                            <a href="{{ link.url }}">{{ link.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
             </li>
             {%- comment -%} <li class="highlighted-item top-level-nav">
                 <a href="#">Warehouse Deals
