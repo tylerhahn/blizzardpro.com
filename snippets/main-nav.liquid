@@ -15,7 +15,20 @@
             </li>
 
             <li class="top-level-nav">
-                <a href="#">Video Walls
+                <a href="#">Markets
+                    <i class="fas fa-caret-down"></i>
+                </a>
+                <ul class="product-link-list">
+                    {% for link in linklists.markets.links %}
+                        <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+
+            <li class="top-level-nav">
+                <a href="#">Video Wall
                     <i class="fas fa-caret-down"></i>
                 </a>
 
