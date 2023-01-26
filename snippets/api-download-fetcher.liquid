@@ -1,17 +1,16 @@
 <script>
-    function handleDownload(photo) {
+    function handleDownload(url, name) {
         const xhr = new XMLHttpRequest();
-        var filename = /[^/]*$/.exec(photo)[0];
         xhr.responseType = "blob";
         xhr.onload = function () {
             const a = document.createElement("a");
             a.href = window.URL.createObjectURL(xhr.response);
-            a.download = filename; // Name the file anything you'd like.
+            a.download = name; // Name the file anything you'd like.
             a.style.display = "none";
             document.body.appendChild(a);
             a.click();
         };
-        xhr.open("GET", photo);
+        xhr.open("GET", url);
         xhr.send();
     }
 
@@ -36,15 +35,15 @@
             const fileName = path.name;
 
             //For bottom downloads
-            const el = `<div  class="downloadable-item"><p onclick="handleDownload('${path.url}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
-            const item = `<div class="line-item">${el} <div class="" style="margin: 0"><div style="margin-top: 0" class="btn btn-blue" onclick="handleDownload('${path.url}')"><i class="far fa-file-pdf" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
+            const el = `<div  class="downloadable-item"><p onclick="handleDownload('${path.url}', '${path.name}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
+            const item = `<div class="line-item">${el} <div class="" style="margin: 0"><div style="margin-top: 0" class="btn btn-blue" onclick="handleDownload('${path.url}', '${path.name}')"><i class="far fa-file-pdf" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
 
             $("#downloads-list").append(item);
 
             //For Archi Downloads
 
-            const archiEl = `<div  class="downloadable-item"><p onclick="handleDownload('${path.url}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
-            const archiItem = `<div class="archi-line-item">${archiEl} <div class="" style="margin: 0"><div style="margin-top: 0" onclick="handleDownload('${path.url}')"><i class="fa-solid fa-arrow-down-to-dotted-line" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
+            const archiEl = `<div  class="downloadable-item"><p onclick="handleDownload('${path.url}', '${path.name}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
+            const archiItem = `<div class="archi-line-item">${archiEl} <div class="" style="margin: 0"><div style="margin-top: 0" onclick="handleDownload('${path.url}', '${path.name}')"><i class="fa-solid fa-arrow-down-to-dotted-line" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
 
             $("#archi-dls").append(archiItem);
             $("#archi-resource-header").removeClass("hidden");
