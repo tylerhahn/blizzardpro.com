@@ -15,15 +15,10 @@
         xhr.send();
     }
 
-    const apiUrl = "https://api.blizzard.lighting/products/media";
-    const data = {
-        name: "{{ product.metafields.f_b.Fishbowl_Num | downcase | replace: "-", " " | replace: '(black)', " " | replace: 'white', " "  }}",
-        type: "downloads"
-    }
+    const apiUrl = "https://api.blizzard.lighting/product-media/{{ product.handle }}";
 
     let fetchData = {
-        method: "POST",
-        body: JSON.stringify(data),
+        method: "GET",
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
@@ -32,25 +27,24 @@
     fetch(apiUrl, fetchData).then(async res => {
         let data = await res.text();
         const json = JSON.parse(data);
-        const filePaths = json.paths;
         if(json.length < 1) {
             const errMsg = `This product currently has no downloads`;
             $('#downloads-list').append(errMsg);
         }
         $('#support-resources .loading').fadeOut('fast');
-        filePaths.map(path => {
-            const fileName = /[^/]*$/.exec(path)[0];
+        json.map(path => {
+            const fileName = path.name;
 
             //For bottom downloads
-            const el = `<div  class="downloadable-item"><p onclick="handleDownload('${path}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
-            const item = `<div class="line-item">${el} <div class="" style="margin: 0"><div style="margin-top: 0" class="btn btn-blue" onclick="handleDownload('${path}')"><i class="far fa-file-pdf" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
+            const el = `<div  class="downloadable-item"><p onclick="handleDownload('${path.url}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
+            const item = `<div class="line-item">${el} <div class="" style="margin: 0"><div style="margin-top: 0" class="btn btn-blue" onclick="handleDownload('${path.url}')"><i class="far fa-file-pdf" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
 
             $("#downloads-list").append(item);
 
             //For Archi Downloads
 
-            const archiEl = `<div  class="downloadable-item"><p onclick="handleDownload('${path}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
-            const archiItem = `<div class="archi-line-item">${archiEl} <div class="" style="margin: 0"><div style="margin-top: 0" onclick="handleDownload('${path}')"><i class="fa-solid fa-arrow-down-to-dotted-line" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
+            const archiEl = `<div  class="downloadable-item"><p onclick="handleDownload('${path.url}')" style="margin: 0" class="fw-bold">${fileName}</p></div>`;
+            const archiItem = `<div class="archi-line-item">${archiEl} <div class="" style="margin: 0"><div style="margin-top: 0" onclick="handleDownload('${path.url}')"><i class="fa-solid fa-arrow-down-to-dotted-line" aria-hidden="true" style="padding-right: 10px;"></i>Download</div></div></div>`;
 
             $("#archi-dls").append(archiItem);
             $("#archi-resource-header").removeClass("hidden");
