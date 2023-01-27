@@ -28,6 +28,11 @@
                     (+{{ prod.price_max | money | remove: '.00' }})
                 </option>
             {% endfor %}
+            {% if product.title contains "node:b" ||  product.title contains 'Verismo' %}
+                <option data-id="{{prod.selected_or_first_available_variant.id}}" data-price={{prod.price_max | money_without_currency | remove: ',' |}} value="No lens">
+                    No lens
+                </option>
+            {% endif %}
         </select>
     {% endif %}
 
@@ -102,7 +107,7 @@
 
         <div class="cart-group">
             {% include 'qty-select' %}
-            <a class="btn btn-blue main-cta">
+            <a id="__main-cta" class="btn btn-blue main-cta">
                 {{ 'products.product.add_to_cart' | t }}
             </a>
         </div>
@@ -150,6 +155,12 @@ var selectCallback = function(variant, selector) {
 
     let selected = [];
     let currentTotal = 0;
+
+    {% if product.title contains 'node:b' %}
+        $('#__main-cta').text("Select a lens option");
+        $('#__main-cta').prop("disabled",true);
+    {% endif %}
+
     function changeMultiSelect(option, checked) {
         const bundlePrice = $("#total-bundle-price");
         const visiblePrice = $(".bundle-price")
@@ -201,11 +212,9 @@ var selectCallback = function(variant, selector) {
                 }
             })
         } else if(variantId) {
-            console.log('ho')
             const qty = $("input.in-num").val();
             addItemToCart(variantId, qty, true)
         } else {
-            console.log('yo')
             const qty = $("input.in-num").val();
             addItemToCart({{ product.selected_or_first_available_variant.id }}, qty, true)
         }
