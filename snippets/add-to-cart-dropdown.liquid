@@ -156,13 +156,21 @@ var selectCallback = function(variant, selector) {
     let selected = [];
     let currentTotal = 0;
 
-    {% if product.title contains 'node:b' %}
-    console.log(selected);
+    function checkLensOptions() {
         if(selected.length === 0) {
             $('#__main-cta').text("Select a lens option");
             $('#__main-cta').addClass("no-lens");
+        } else {
+            $('#__main-cta').text("Add to Cart");
+            $('#__main-cta').removeClass("no-lens");
         }
+    }
+
+    {% if product.title contains 'node:b' %}
+        checkLensOptions();
     {% endif %}
+
+
 
 
     function changeMultiSelect(option, checked) {
@@ -187,6 +195,8 @@ var selectCallback = function(variant, selector) {
             const removedItemArr = selected.filter(e => e !== option.val());
             selected = removedItemArr;
         }
+
+        checkLensOptions();
     }
 
     function addItemToCart(id, qty, redirect) {
