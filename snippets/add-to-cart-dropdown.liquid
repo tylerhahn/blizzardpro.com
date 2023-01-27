@@ -1,9 +1,16 @@
 {% assign bundle = product.metafields.f_b.Bundled_Products %}
 {% assign dropdownTitle = product.metafields.f_b.Dropdown_Title %}
 {% assign originalPrice = product.selected_or_first_available_variant.price | money_without_currency | remove: ',' %}
+{% assign isLensDependant = product.title contains "node:b" ||  product.title contains 'Verismo'  %}
 
 {% if bundle != blank %}
     <div class="bundle-container">
+        {% if isLensDependant === true %}
+            <div class="lens_warning">
+                <i class="fa-duotone fa-circle-info"></i>
+                Lens are sold seperately for this fixture. Please select an option below before checkout.
+            </div>
+        {% endif %}
         <div class="bundle-price"></div>
         <div><input value="{{ originalPrice }}" class="hidden" id="total-bundle-price"/><p class="hidden">
                 Bundle Price
@@ -28,7 +35,7 @@
                     (+{{ prod.price_max | money | remove: '.00' }})
                 </option>
             {% endfor %}
-            {% if product.title contains "node:b" ||  product.title contains 'Verismo' %}
+            {% if isLensDependant === true %}
                 <option data-id="{{prod.selected_or_first_available_variant.id}}" data-price={{prod.price_max | money_without_currency | remove: ',' |}} value="No lens">
                     No lens
                 </option>
@@ -166,7 +173,7 @@ var selectCallback = function(variant, selector) {
         }
     }
 
-    {% if product.title contains 'node:b' %}
+    {% if isLensDependant === true %}
         checkLensOptions();
     {% endif %}
 
