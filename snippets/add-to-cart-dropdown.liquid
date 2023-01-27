@@ -157,9 +157,12 @@ var selectCallback = function(variant, selector) {
     let currentTotal = 0;
 
     {% if product.title contains 'node:b' %}
-        $('#__main-cta').text("Select a lens option");
-        $('#__main-cta').prop("disabled",true);
+        if(selected.length < 0) {
+            $('#__main-cta').text("Select a lens option");
+            $('#__main-cta').addClass("no-lens");
+        }
     {% endif %}
+
 
     function changeMultiSelect(option, checked) {
         const bundlePrice = $("#total-bundle-price");
