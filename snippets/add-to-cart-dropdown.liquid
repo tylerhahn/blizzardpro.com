@@ -157,6 +157,7 @@ var selectCallback = function(variant, selector) {
     let currentTotal = 0;
 
     {% if product.title contains 'node:b' %}
+    console.log(selected);
         if(selected.length < 0) {
             $('#__main-cta').text("Select a lens option");
             $('#__main-cta').addClass("no-lens");
