@@ -181,6 +181,37 @@
     <a class="anchor-offset" id="in-action"></a>
 
     <!-- VIDEO SECTION -->
+    {% if metafield.Youtube_URL %}
+
+        {% assign video = metafield.Youtube_URL  %}
+        {% assign urlType = 'vimeo' %}
+
+        {% if video contains 'vimeo' %}
+            {% assign vimeoId = video | remove: 'https://vimeo.com/' | split: '/' %}
+            {% assign urlType = 'vimeo' %}
+        {% else %}
+            {% assign youtubeId = video | remove: "<p>" | remove: "</p>" | remove: 'https://www.youtube.com/watch?v=' | split: '/' %}
+            {% assign urlType = 'youtube' %}
+        {% endif %}
+
+        <section id="hero-video">
+            <div class="videoWrapper">
+                {% if metafield.Video_Hero_Copy %}
+                    <div class="bl-scroll-caption">
+                        {{ metafield.Video_Hero_Copy }}
+                    </div>
+                {% endif %}
+                {% if urlType == 'youtube' %}
+                    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0" src="https://www.youtube.com/embed/{{ youtubeId }}?autoplay=1&mute=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                {% elsif urlType == 'vimeo' %}
+                    <iframe allowfullscreen frameborder="0" mozallowfullscreen src="https://player.vimeo.com/video/{{ vimeoId[0] }}?background=1&autoplay=1&loop=1&byline=0&title=0" webkitallowfullscreen></iframe>
+                {% endif %}
+            </div>
+        </section>
+    {% endif %}
+
+
+    <!-- VIDEO SECTION -->
     {% if metafield.Video_Url %}
 
         {% assign video = metafield.Video_Url  %}
