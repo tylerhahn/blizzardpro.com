@@ -47,22 +47,8 @@
                                 </p>
                             </div>
                         </div>
-                        {% if prod.tags contains 'dc-for-sale' and prod.variants.first.inventory_quantity > 0 %}
-                            <form action="/cart/add" method="post">
-                                <input name="return_to" type="hidden" value="back"/>
-                                <input type="hidden" name="id" value="{{ prod.variants.first.id }}"/>
-                                <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
-                                <input class="btn btn-otl" value="Add to Cart {{prod.variants.first.price | money }}"/>
-                            </form>
-                        {% else %}
-                            <div class="btn btn-otl ajax-add" data-id="{{prod.variants.first.id}}">Add to Cart -
-                                {{prod.variants.first.price | money }}
-                            </div>
-                        {% endif %}
+                        <a href="{{prod.url}}?variant={{prod.variants.first.id}}" class="btn">Learn More</a>
 
-                        {% if prod.tags contains 'discontinued' %}
-                            <a href="{{prod.url}}?variant={{prod.variants.first.id}}" class="btn">Learn More</a>
-                        {% endif %}
                     </div>
 
                 </div>

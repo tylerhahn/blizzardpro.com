@@ -30,28 +30,8 @@
     </div>
   </div>
 
-  <p class="ais-hit--price">
-    <strong>{{variant.price | money }}</strong>
-  </p>
-  {% if product.tags contains 'dc-for-sale' and variant.inventory_quantity > 0 %}
-  <form method="post" action="/cart/add">
-    <input type="hidden" name="id" value="{{ prodId }}" />
-    <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
-    <input type="submit" class="btn btn-blue" value="Add to Cart" />
-  </form>
-  {% endif %}
-
-  {% if product.tags contains 'discontinued' %}
-    <a href="{{product.url}}?variant={{variant.id}}" class="btn">Learn More</a>
-  {% elsif variant.available %}
-  <form method="post" action="/cart/add">
-    <input type="hidden" name="id" value="{{ prodId }}" />
-    <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
-    <input type="submit" class="btn btn-blue" value="Add to Cart" />
-  </form>
-  {% else %}
   <a href="{{product.url}}?variant={{variant.id}}" class="btn">Learn More</a>
-  {% endif %}
+
 </div>
 
   </div>
