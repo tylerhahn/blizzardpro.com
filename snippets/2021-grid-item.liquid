@@ -36,25 +36,8 @@
             <div class="price-decimal">.{{removeDecimal[1]}}</div>
         </div>
 
-        {% if product.tags contains 'dc-for-sale' and variant.inventory_quantity > 0 %}
-            <form action="/cart/add" method="post">
-                <input type="hidden" name="id" value="{{ prodId }}"/>
-                <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
-                <input class="btn btn-blue" type="submit" value="Add to Cart"/>
-            </form>
-        {% endif %}
+        <a href="{{product.url}}?variant={{variant.id}}" class="btn">Learn More</a>
 
-        {% if product.tags contains 'discontinued' %}
-            <a href="{{product.url}}?variant={{variant.id}}" class="btn">Learn More</a>
-        {% elsif variant.available %}
-            <form action="/cart/add" method="post">
-                <input type="hidden" name="id" value="{{ prodId }}"/>
-                <input id="quantity" min="1" name="quantity" type="hidden" value="1"/>
-                <input class="btn btn-blue" type="submit" value="Add to Cart"/>
-            </form>
-        {% else %}
-            <a href="{{product.url}}?variant={{variant.id}}" class="btn">Learn More</a>
-        {% endif %}
     </div>
 
 </div>
