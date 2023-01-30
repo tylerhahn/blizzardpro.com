@@ -11797,3 +11797,9 @@ span.sale-box {
   color: lightgray;
   font-family: "Source Sans Pro", sans-serif;
 }
+
+
+#specifications bold {
+    color: white;
+    font-weight: bold;
+}
