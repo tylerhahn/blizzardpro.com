@@ -35,7 +35,7 @@
                 </option>
             {% endfor %}
             {% if product.tags contains "engine" %}
-                <option data-id="{{prod.selected_or_first_available_variant.id}}" data-price={{prod.price_max | money_without_currency | remove: ',' |}} value="No lens">
+                <option data-id="{{prod.selected_or_first_available_variant.id}}" data-price="0" value="No lens">
                     No lens
                 </option>
             {% endif %}
@@ -175,29 +175,60 @@ var selectCallback = function(variant, selector) {
 
 
     function changeMultiSelect(option, checked) {
-        const bundlePrice = $("#total-bundle-price");
-        const visiblePrice = $(".bundle-price")
+        let bundlePrice = $("#total-bundle-price").val();
+        const visiblePrice = $(".bundle-price");
+        const optionValue = option.val();
+        let tp = {{ originalPrice }};
+        //Price of option selected
         const addonPrice = Number(option.attr("data-price"));
 
+
+
+        //Checking box
         if (checked) {
+
+            // Add to selected object
             selected.push(option);
-            $(".bundle-container p").removeClass("hidden")
-            currentTotal = Number(bundlePrice.val()) + addonPrice;
-            bundlePrice.val(currentTotal);
+
+            //Show bundle price text
+            $(".bundle-container p").removeClass("hidden");
+
+            const np = calcBundle(tp);
+
+            //Update visible price
             visiblePrice.text(`$${
-                new Intl.NumberFormat().format(currentTotal.toFixed(2))
+                new Intl.NumberFormat().format(np.toFixed(2))
             }`);
+
         } else {
-            currentTotal = Number(bundlePrice.val()) - addonPrice;
-            visiblePrice.text(`$${
-                new Intl.NumberFormat().format(currentTotal.toFixed(2))
-            }`);
-            bundlePrice.val(currentTotal);
-            const removedItemArr = selected.filter(e => e !== option.val());
+            //Subtract price from total
+
+
+
+            //Remove from selected array
+            const removedItemArr = selected.filter(e => e.val() !== optionValue);
             selected = removedItemArr;
+
+            const np = calcBundle(tp);
+
+            //Update visible price
+            visiblePrice.text(`$${
+                new Intl.NumberFormat().format(np.toFixed(2))
+            }`);
+
         }
 
         checkLensOptions();
+    }
+
+    function calcBundle(price) {
+        let p = price; //always base product
+
+        selected.map(o => {
+            p += parseFloat(o.attr("data-price"));
+        })
+
+        return p
     }
 
     function addItemToCart(id, qty, redirect) {
