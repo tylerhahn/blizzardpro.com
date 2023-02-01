@@ -27,6 +27,7 @@
 
 <script>
   function adjustQty(qty,) {
+
     $('.num-in span').click(function () {
       var $input = $(this).parents('.rounded-qty').find('input.in-num');
       var count = parseFloat($input.val()) - 1;
@@ -236,7 +237,7 @@
 
           {% unless product.available %}
           {% else %}
-  
+
           <div class="cart-group">
             <a class="btn btn-blue bundle-add">
               Add to cart
@@ -269,18 +270,18 @@
   <div class="bundle-contents">
     <h2>Bundle Contents</h2>
     <div class="bundle-grid {{product.handle}}">
-      
+
       {% for product in collections[product.handle].products %}
       {% include 'bundle-item' %}
       {% endfor %}
-      
+
 
     </div>
   </div>
 
   <div class="more-info-product">
 
-    
+
     {% if product.metafields.c_f.Youtube_URL %}
     <div class="v-container">
       <div class="vimeo">
@@ -290,7 +291,7 @@
     </div>
     {% endif %}
 
-    
+
   </div>
 
 
@@ -400,7 +401,7 @@ product.selected_or_first_available_variant.featured_image | default:
 
     </ul>
     {% endif %}
-    
+
   </div>
   {% endif %}
 
@@ -409,7 +410,7 @@ product.selected_or_first_available_variant.featured_image | default:
   {% assign cImg = product.images.size | minus: 3 %}
   {% assign dImg = product.images.size | minus: 4 %}
   {% assign eImg = product.images.size | minus: 5 %}
-  
+
 
 
 
@@ -453,6 +454,3 @@ jQuery(function() {
 
 
       </script>
-
-
-

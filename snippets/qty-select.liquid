@@ -13,10 +13,15 @@
         var count = $input.val();
         var newVal = 0;
 
+
+
         if ($(this).hasClass("minus")) {
             if (count > 1) {
                 newVal = parseFloat(count) - 1;
+            } else {
+                return;
             }
+
         } else {
             newVal = parseFloat(count) + 1;
         }
