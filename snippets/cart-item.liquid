@@ -13,7 +13,9 @@
             <a href="{{ collection_url }}{{ item.url }}">
                 {{ item.title }}
             </a>
-            <div class="fine">*Engine only. Please make sure you have added a lens to your cart.</div>
+            {% if item.product.tags contains "engine" %}
+                <div class="fine">*Engine only. Please make sure you have added a lens to your cart.</div>
+            {% endif %}
         </h2>
 
         {% comment %}
