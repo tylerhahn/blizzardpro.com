@@ -6,19 +6,19 @@
         "043599a9-80f3-46c6-b413-dd9ec6d83ada": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/supercell_banner.png",
-            "image_mobile": "shopify:\/\/shop_images\/supercell_banner_m.png",
+            "image": "shopify:\/\/shop_images\/infinipix_dj.png",
+            "image_mobile": "shopify:\/\/shop_images\/infinpix_dj_mobile.png",
             "video_url": "",
-            "subheadline": "StormChaser™ Supercell",
+            "subheadline": "",
             "subheadline_color": "#282bf6",
-            "headline": "Pixel Mapping FX",
-            "paragraph": "224x Super-Bright LED Wash + Pixel FX",
+            "headline": "",
+            "paragraph": "",
             "headline_color": "#ffffff",
-            "main_cta_title": "Learn More ›",
-            "main_cta_url": "shopify:\/\/products\/supercell",
+            "main_cta_title": "",
+            "main_cta_url": "https:\/\/lp.blizzardpro.com\/infinipix",
             "main_cta_background_color": "#282bf6",
             "main_cta_text_color": "#ffffff",
-            "sec_cta_title": "Learn More",
+            "sec_cta_title": "",
             "sec_cta_text_color": "#ffffff",
             "sec_cta_url": ""
           }
