@@ -106,10 +106,21 @@
 
         <!-- This handles discontinued not for sale -->
     {% elsif product.tags contains 'discontinued' %}
+
         <div class="discontinued">
             <h4>Discontinued</h4>
         </div>
-        {% else%}
+
+    {% elsif product.metafields.c_f.Preorder_Date != blank %}
+
+        <div class="cart-group">
+            {% include 'qty-select' %}
+            <a id="__main-cta" class="btn btn-blue main-cta">
+                Preorder
+            </a>
+        </div>
+
+    {% else%}
 
         <div class="cart-group">
             {% include 'qty-select' %}
