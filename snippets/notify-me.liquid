@@ -27,7 +27,7 @@
 {% if total == "0" %}
   {% if product.tags contains 'discontinued' %}
 
-  {% elsif product.type != 'NovaStar' %}
+  {% elsif product.type != 'NovaStar' and product.metafields.c_f.Ship_Date_Estimate == blank %}
   <div class="notify-me">
     <div class="notify-me-email">
         <div class="notify-me-container">
