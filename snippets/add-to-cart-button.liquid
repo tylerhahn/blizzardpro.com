@@ -19,7 +19,7 @@
 
                 <a class="btn btn-blue main-cta" >
                     <!-- Show preorder info -->
-                    {% if product.metafields.c_f.Preorder_Date %}
+                    {% if product.metafields.c_f.Preorder_Date != blank %}
                        Preorder Now ›
                     {% else %}
                         <!-- Basic a -->
