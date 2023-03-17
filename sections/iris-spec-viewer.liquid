@@ -1,626 +1,592 @@
 <div class="mw-1920" id="iris-spec">
 
-    <div class="panel-viewer">
-        <div class="panel-headline">
-            Explore the Series
-        </div>
-
-        <!-- Sidebar -->
-        <div class="side-bar-panels">
-            {% for block in section.blocks %}
-                {% if block.settings.image != blank %}
-                    <div class="side-bar-item panel-attr {% if forloop.first %}active{% endif %}" data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}">
-                        <img onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}')" class="panel-image" src="{{block.settings.image | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
-                        <h4>{{ block.settings.panel_name }}</h4>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-
-
+  <div class="panel-viewer">
+    <div class="panel-headline">
+      Explore the Series
     </div>
 
-    <div class="flex-container">
-
-        <div id="active-panel">
-            {% for block in section.blocks %}
-                {% if block.settings.image_featured != blank %}
-                    <img data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="featured-panel panel-attr {% if forloop.first %}visible{% endif %}" src="{{block.settings.image_featured | img_url: 'master'}}" alt="{{block.settings.panel_name}}">
-                {% endif %}
-            {% endfor %}
-        </div>
-
-        <div class="spec-sheet">
-
-            {% for block in section.blocks %}
-
-                <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
-
-                    {% for setting in block.settings %}
-                        {% capture thecycle %}
-                            {% cycle 'odd', 'even' %}
-                        {% endcapture %}
-                        {% assign id = block.settings[setting] %}
-                        {% assign ignoredFields = "image, FCC Certification, ETL Certification, CE Certification, image featured, RoHS Certification" | split:", " %}
-                        {% assign title = setting | replace: '_', ' '  %}
-                        {% unless ignoredFields contains title %}
-                            {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
-                        {% endunless %}
-                    {% endfor %}
-                </ul>
-            {% endfor %}
-
-            <div class="iris-certifications">
-                <h4>Certifications</h4>
-                <div class="cert-flex">
-                    {% for block in section.blocks %}
-                        <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
-                            {% for setting in block.settings %}
-                                {% assign certSettings = "fcc certification, etl certification, ce certification, rohs certification" | split: ", " %}
-                                {% assign title = setting | replace: '_', ' ' | downcase %}
-
-                                {% if certSettings contains title %}
-                                    {% assign imgName = title | replace: ' certification', '' %}
-                                    {% assign imgUrl = imgName | downcase | append: '.svg' %}
-                                    <img src="{{imgUrl | asset_url }} '" alt="">
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
+    <!-- Sidebar -->
+    <div class="side-bar-panels">
+      {% for block in section.blocks %}
+        {% if block.settings.image != blank %}
+          <div class="side-bar-item panel-attr {% if forloop.first %}active{% endif %}" data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}">
+            <img
+              onclick="showHideSpecs('{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}')"
+              class="panel-image"
+              src="{{block.settings.image | img_url: 'master'}}"
+              alt="{{block.settings.panel_name}}">
+            <h4>{{ block.settings.panel_name }}</h4>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
+
+
+  </div>
+
+  <div class="flex-container">
+
+    <div id="active-panel">
+      {% for block in section.blocks %}
+        {% if block.settings.image_featured != blank %}
+          <img
+            data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}"
+            class="featured-panel panel-attr {% if forloop.first %}visible{% endif %}"
+            src="{{block.settings.image_featured | img_url: 'master'}}"
+            alt="{{block.settings.panel_name}}">
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="spec-sheet">
+
+      {% for block in section.blocks %}
+
+        <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
+
+          {% for setting in block.settings %}
+            {% capture thecycle %}
+              {% cycle 'odd', 'even' %}
+            {% endcapture %}
+            {% assign id = block.settings[setting] %}
+            {% assign ignoredFields = "image, FCC Certification, ETL Certification, CE Certification, image featured, RoHS Certification" | split: ", " %}
+            {% assign title = setting | replace: '_', ' ' %}
+            {% unless ignoredFields contains title %}
+              {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
+
+      <div class="iris-certifications">
+        <h4>Certifications</h4>
+        <div class="cert-flex">
+          FCC, ETL, CE, RoHS
+          {% comment %} {% for block in section.blocks %}
+            <ul data-panel="{{ block.settings.panel_name | remove: '®' | remove: '™' | replace: ' ', '-' | replace: '.', '-' | downcase}}" class="block-specs panel-attr {% if forloop.first %}visible{% endif %}">
+            {% for setting in block.settings %}
+            {% assign certSettings = "fcc certification, etl certification, ce certification, rohs certification" | split: ", " %}
+            {% assign title = setting | replace: '_', ' ' | downcase %}
+
+            {% if certSettings contains title %}
+            {% assign imgName = title | replace: ' certification', '' %}
+            {% assign imgUrl = imgName | downcase | append: '.svg' %}
+            <img src="{{imgUrl | asset_url }} '" alt="">
+            {% endif %}
+            {% endfor %}
+            </ul>
+          {% endfor %} {% endcomment %}
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <script>
-    function showHideSpecs(id) {
+  function showHideSpecs(id) {
 
 
-      const specBlocks = document.querySelectorAll('.panel-attr');
-      Array.from(specBlocks).forEach((element, index) => {
-         $(element).removeClass('visible');
-         $(element).removeClass("active");
-      });
+    const specBlocks = document.querySelectorAll('.panel-attr');
+    Array.from(specBlocks).forEach((element, index) => {
+      $(element).removeClass('visible');
+      $(element).removeClass("active");
+    });
 
-   $(`.side-bar-item[data-panel=${id}]`).addClass('active');
+    $(`.side-bar-item[data-panel=${id}]`).addClass('active');
 
     $(`ul[data-panel=${id}]`).addClass('visible');
     $(`img[data-panel=${id}]`).addClass('visible');
 
     $(`div[data-panel=${id}]`).addClass('visible');
-    }
+  }
 </script>
 
 <style>
 
 
-.block-specs h2 {
-   width: 100%;
+  .block-specs h2 {
+    width: 100%;
     font-weight: 600;
     font-size: 2.6em;
     padding-bottom: 20px;
-}
+  }
 
-.iris-certifications img {
-   width: 40px;
-   margin-right: 2em;
-}
+  .iris-certifications img {
+    width: 40px;
+    margin-right: 2em;
+  }
 
-.iris-certifications h4{
-   margin-top: 20px;
-   text-transform:  uppercase;
-   letter-spacing: 1.2px;
-}
+  .iris-certifications h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
 
 
-.side-bar-item {
+  .side-bar-item {
     text-align: center;
     cursor: zoom-in;
-   transition: 0.2s ease-in-out;
-   margin-left: 1em;
-   max-width: 160px;
-}
+    transition: 0.2s ease-in-out;
+    margin-left: 1em;
+    max-width: 160px;
+  }
 
-.side-bar-item:first-child {
-   margin-left: 0px;
-}
+  .side-bar-item:first-child {
+    margin-left: 0;
+  }
 
-.side-bar-item.active{
-   border-color: {{ section.settings.accent_color }};
-   color: white;
-   border-bottom: 1px solid;
-}
+  .side-bar-item.active {
+    border-color: {{ section.settings.accent_color }}
+    ;
+    color: white;
+    border-bottom: 1px solid;
+  }
 
-.side-bar-item img {
-   opacity: 0.6;
-}
+  .side-bar-item img {
+    opacity: 0.6;
+  }
 
-.side-bar-item.active img{
-   opacity: 1;
-}
+  .side-bar-item.active img {
+    opacity: 1;
+  }
 
-.side-bar-item:hover{
+  .side-bar-item:hover {
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
-}
+  }
 
-.bg-text {
-    color: {{ section.settings.large_text_color }};
+  .bg-text {
+    color: {{ section.settings.large_text_color }}
+    ;
     font-size: 17em;
     position: absolute;
     z-index: 0;
     line-height: 0.8;
     font-weight: bold;
     font-family: 'din-condensed';
-}
+  }
 
 
-#iris-spec {
-   background: #0b0b0b;
-   padding: 2em 2em 7em 2em;
-}
+  #iris-spec {
+    background: #0b0b0b;
+    padding: 2em 2em 7em;
+  }
 
-.spec-sheet {
-   flex: 2;
-}
+  .spec-sheet {
+    flex: 2;
+  }
 
-.panel-viewer {
-   text-align: center;
-   margin: 0 auto;
-   margin-bottom: 1em;
-   max-width: 1200px;
-   width: 95%;
-   padding: 4em 0;
-}
+  .panel-viewer {
+    text-align: center;
+    margin: 0 auto 1em;
+    max-width: 1200px;
+    width: 95%;
+    padding: 4em 0;
+  }
 
-.panel-headline {
-   font-size: 4em;
-   line-height: 1.2;
-   color: gainsboro;
-}
+  .panel-headline {
+    font-size: 4em;
+    line-height: 1.2;
+    color: gainsboro;
+  }
 
-.panel-headline::before {
+  .panel-headline::before {
     content: "";
     height: 2px;
     background: gray;
     width: 80px;
     display: block;
     margin: 0 auto;
-}
+  }
 
 
-#active-panel {
-   position: relative;
-}
-
-#active-panel img {
-   max-width: 60vh;
-   width: 100%;
-   margin: 0 auto;
-   padding: 0 3em;
+  #active-panel {
     position: relative;
-}
+  }
 
-.bg-text {
-   transition: .5s ease-in-out;
-   opacity: 0;
-   width: 60%;
+  #active-panel img {
+    max-width: 60vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3em;
+    position: relative;
+  }
+
+  .bg-text {
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    width: 60%;
     right: 0;
     text-align: right;
     display: flex;
     align-items: center;
     height: 100%;
-}
-    .featured-panel, .block-specs{
-      height: 0;
-      width: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: .5s ease-in-out;
-    }
+  }
+  .featured-panel,
+  .block-specs {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
 
 
-    .featured-panel.visible, ul.block-specs.visible {
-       height: auto;
-       width: auto;
-      animation: fadeIn 0.5s ease-in-out;
-       display: block;
-       transition: .5s ease-in-out;
-      opacity: 1;
-    }
+  .featured-panel.visible,
+  ul.block-specs.visible {
+    height: auto;
+    width: auto;
+    animation: fadeIn 0.5s ease-in-out;
+    display: block;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+  }
 
-    .bg-text.visible {
+  .bg-text.visible {
 
     opacity: 1;
-}
+  }
 
 
-    ul.block-specs.visible {
-      column-count: 1;
+  ul.block-specs.visible {
+    column-count: 1;
 
-    }
+  }
 
-    .panel-image {
-        height: 200px;
-    }
+  .panel-image {
+    height: 200px;
+  }
 
-    .side-bar-panels {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 2em;
-   }
+  .side-bar-panels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
 
-.side-bar-panels img {
+  .side-bar-panels img {
     margin: 0 auto;
-}
+  }
 
-    .spec {
+  .spec {
     display: flex;
     justify-content: space-between;
     min-width: 300px;
-    padding: .5em;
+    padding: 0.5em;
     text-transform: uppercase;
     font-family: din-condensed, sans-serif;
-}
+  }
 
-.spec.odd {
-    background: {{ section.settings.spec_color_1}};
-}
+  .spec.odd {
+    background: {{ section.settings.spec_color_1}}
+    ;
+  }
 
-.spec.even {
-    background: {{ section.settings.spec_color_2}};
-}
+  .spec.even {
+    background: {{ section.settings.spec_color_2}}
+    ;
+  }
 
-#iris-spec .flex-container {
-   max-width: 1790px;
+  #iris-spec .flex-container {
+    max-width: 1790px;
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
 
-}
+  }
 
-.spec-sheet {
-   margin-top:4em;
-}
-@media screen and (min-width: 768px) {
-   .spec-sheet {
-   margin-top:0;
-   }
+  .spec-sheet {
+    margin-top: 4em;
+  }
+  @media screen and (min-width: 768px) {
+    .spec-sheet {
+      margin-top: 0;
+    }
 
-   ul.block-specs.visible {column-count: 2; width: 100%;}
+    ul.block-specs.visible {
+      column-count: 2;
+      width: 100%;
+    }
 
-   #active-panel {
+    #active-panel {
       flex: 1;
-   }
+    }
 
-}
+  }
 
-@media screen and (min-width: 1260px) {
-   .spec-sheet{
+  @media screen and (min-width: 1260px) {
+    .spec-sheet {
       flex: 1;
-   }
-}
+    }
+  }
 
-@media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1500px) {
 
-   .side-bar-panels {
+    .side-bar-panels {
       margin-bottom: 2em;
       margin-top: 2em;
-   }
+    }
 
-}
-
-
+  }
 </style>
 
 {% schema %}
-{
-    "name":"Panels",
-    "max_blocks":10,
-    "settings":[
-       {
-          "type":"header",
-          "content":"Boxes"
-       },
-       {
-        "type":"color",
-        "id":"background_color_1",
-        "label":"Background Color 1",
+  {
+    "name": "Panels",
+    "max_blocks": 10,
+    "settings": [
+      {
+        "type": "header",
+        "content": "Boxes"
+      },
+      {
+        "type": "color",
+        "id": "background_color_1",
+        "label": "Background Color 1",
         "default": "#000000"
-     },
-       {
-        "type":"color",
-        "id":"background_color_2",
-        "label":"Background Color 2",
+      },
+      {
+        "type": "color",
+        "id": "background_color_2",
+        "label": "Background Color 2",
         "default": "#2c2c2c"
-     },
-{
- "type": "color",
- "id": "spec_color_1" ,
- "label": "Spec Background color 1"
-},
-{
- "type": "color",
- "id": "spec_color_2" ,
- "label": "Spec Background color 2"
-},
-
-{
- "type": "color",
- "id": "spec_color_data" ,
- "label": "Spec color"
-},
-{
- "type": "color",
- "id": "spec_title_color" ,
- "label": "Spec title color"
-},
-{
- "type": "color",
- "id": "accent_color" ,
- "label": "Accent color"
-}
+      },
+      {
+        "type": "color",
+        "id": "spec_color_1",
+        "label": "Spec Background color 1"
+      }, {
+        "type": "color",
+        "id": "spec_color_2",
+        "label": "Spec Background color 2"
+      }, {
+        "type": "color",
+        "id": "spec_color_data",
+        "label": "Spec color"
+      }, {
+        "type": "color",
+        "id": "spec_title_color",
+        "label": "Spec title color"
+      }, {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent color"
+      }
     ],
-    "blocks":[
-       {
-          "type":"image",
-          "name":"Panel",
-          "settings":[
-             {
-                "type":"image_picker",
-                "id":"image",
-                "label":"Panel Image"
-             },
-             {
-               "type":"image_picker",
-               "id":"image_featured",
-               "label":"Featured Image"
-            },
-             {
-                "id":"panel_name",
-                "type":"text",
-                "label":"Panel Name"
-             },
-             {
-                "type":"header",
-                "content":"Module Parameters"
-             },
-             {
-                "type":"text",
-                "id":"pixel_pitch",
-                "label":"Pixel pitch (mm)"
-             },
-             {
-                "type":"text",
-                "id":"module_resolution",
-                "label":"Module resolution"
-             },
-             {
-                "type":"text",
-                "id":"module_pixel_quantiy",
-                "label":"Module pixel quantiy"
-             },
-             {
-                "type":"text",
-                "id":"module_dimensions",
-                "label":"Module dimensions (mm)"
-             },
-             {
-                "type":"text",
-                "id":"module_pixel_config",
-                "label":"Module pixel config"
-             },
-             {
-                "type":"text",
-                "id":"application",
-                "label":"Application"
-             },
-             {
-                "type":"text",
-                "id":"module_weight",
-                "label":"Module Weight (kg)"
-             },
-             {
-                "type":"header",
-                "content":"Cabinet Parameters"
-             },
-             {
-                "type":"text",
-                "id":"dimensions",
-                "label":"Dimensions"
-             },
-             {
-                "type":"text",
-                "id":"resolution",
-                "label":"Resolution"
-             },
-             {
-                "type":"text",
-                "id":"pixel_quantity",
-                "label":"Pixel quantity"
-             },
-             {
-                "type":"text",
-                "id":"module_quantity",
-                "label":"Module quantity"
-             },
-             {
-                "type":"text",
-                "id":"material",
-                "label":"Material",
-                "default":"Aluminum Die Cast"
-             },
-             {
-                "type":"text",
-                "id":"weight",
-                "label":"Weight (kg)"
-             },
-             {
-                "type":"text",
-                "id":"maitenance_type",
-                "label":"Maitenance type",
-                "default":"Both front and rear"
-             },
-             {
-                "type":"header",
-                "content":"Screen Parameters"
-             },
-             {
-                "type":"text",
-                "id":"pixel_density",
-                "label":"Pixel density (Dots/m2)"
-             },
-             {
-                "type":"text",
-                "id":"average_power_consumption",
-                "label":"Average power consumption (w/m2)"
-             },
-             {
-                "type":"text",
-                "id":"max_power_consumption",
-                "label":"Max power consumption (w/m2)"
-             },
-             {
-                "type":"text",
-                "id":"input_power",
-                "label":"Input power (w/m2)"
-             },
-             {
-                "type":"text",
-                "id":"brightness",
-                "label":"Brightness (nit)"
-             },
-             {
-                "type":"text",
-                "id":"contrast",
-                "label":"Contrast"
-             },
-             {
-                "type":"text",
-                "id":"color_depth",
-                "label":"Color depth (bit)"
-             },
-             {
-                "type":"text",
-                "id":"refresh_rate",
-                "label":"Refresh rate (hz)"
-             },
-             {
-                "type":"text",
-                "id":"frame_frequency",
-                "label":"Frame frequency (hz)"
-             },
-             {
-                "type":"text",
-                "id":"input_voltage",
-                "label":"Input voltage"
-             },
-             {
-                "type":"text",
-                "id":"working_temp",
-                "label":"Working temp (℃)"
-             },
-             {
-                "type":"text",
-                "id":"working_humidity",
-                "label":"Working humidity"
-             },
-             {
-                "type":"text",
-                "id":"optimal_viewing_distance",
-                "label":"Optimal viewing distance (m)"
-             },
-             {
-                "type":"text",
-                "id":"viewing_angle",
-                "label":"Viewing angle (H/V)"
-             },
-             {
-                "type":"text",
-                "id":"ip_rating",
-                "label":"Ip rating"
-             },
-             {
-                "type":"text",
-                "id":"curvature",
-                "label":"Curvature"
-             },
-             {
-                "type":"text",
-                "id":"lifespan",
-                "label":"Lifespan (H)"
-             },
-             {
-                "type":"text",
-                "id":"receiving_card",
-                "label":"Receiving card"
-             },
-             {
-                "type":"text",
-                "id":"grayscale",
-                "label":"Grayscale"
-             },
-             {
-                "type":"text",
-                "id":"hdr",
-                "label":"Hdr"
-             },
-             {
-                "type":"text",
-                "id":"scan_mode",
-                "label":"Scan mode"
-             },
-             {
-                "type":"text",
-                "id":"special_features",
-                "label":"Special features"
-             },
-             {
-                "type":"text",
-                "id":"warranty",
-                "label":"Warranty",
-                "default":"7 Years*"
-             },
-             {
-                "type":"header",
-                "content":"Certifications"
-             },
-             {
-                "type":"checkbox",
-                "id":"FCC_Certification",
-                "label":"FCC Certification",
-                "default":false
-             },
-             {
-                "type":"checkbox",
-                "id":"ETL_Certification",
-                "label":"ETL Certification",
-                "default":false
-             },
-             {
-                "type":"checkbox",
-                "id":"CE_Certification",
-                "label":"CE Certification",
-                "default":false
-             },
-             {
-                "type":"checkbox",
-                "id":"RoHS_Certification",
-                "label":"RoHS Certification",
-                "default":false
-             }
-          ]
-       }
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Panel",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Panel Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_featured",
+            "label": "Featured Image"
+          },
+          {
+            "id": "panel_name",
+            "type": "text",
+            "label": "Panel Name"
+          },
+          {
+            "type": "header",
+            "content": "Module Parameters"
+          }, {
+            "type": "text",
+            "id": "pixel_pitch",
+            "label": "Pixel pitch (mm)"
+          }, {
+            "type": "text",
+            "id": "module_resolution",
+            "label": "Module resolution"
+          }, {
+            "type": "text",
+            "id": "module_pixel_quantiy",
+            "label": "Module pixel quantiy"
+          }, {
+            "type": "text",
+            "id": "module_dimensions",
+            "label": "Module dimensions (mm)"
+          }, {
+            "type": "text",
+            "id": "module_pixel_config",
+            "label": "Module pixel config"
+          }, {
+            "type": "text",
+            "id": "application",
+            "label": "Application"
+          }, {
+            "type": "text",
+            "id": "module_weight",
+            "label": "Module Weight (kg)"
+          }, {
+            "type": "header",
+            "content": "Cabinet Parameters"
+          }, {
+            "type": "text",
+            "id": "dimensions",
+            "label": "Dimensions"
+          }, {
+            "type": "text",
+            "id": "resolution",
+            "label": "Resolution"
+          }, {
+            "type": "text",
+            "id": "pixel_quantity",
+            "label": "Pixel quantity"
+          }, {
+            "type": "text",
+            "id": "module_quantity",
+            "label": "Module quantity"
+          }, {
+            "type": "text",
+            "id": "material",
+            "label": "Material",
+            "default": "Aluminum Die Cast"
+          }, {
+            "type": "text",
+            "id": "weight",
+            "label": "Weight (kg)"
+          }, {
+            "type": "text",
+            "id": "maitenance_type",
+            "label": "Maitenance type",
+            "default": "Both front and rear"
+          }, {
+            "type": "header",
+            "content": "Screen Parameters"
+          }, {
+            "type": "text",
+            "id": "pixel_density",
+            "label": "Pixel density (Dots/m2)"
+          }, {
+            "type": "text",
+            "id": "average_power_consumption",
+            "label": "Average power consumption (w/m2)"
+          }, {
+            "type": "text",
+            "id": "max_power_consumption",
+            "label": "Max power consumption (w/m2)"
+          }, {
+            "type": "text",
+            "id": "input_power",
+            "label": "Input power (w/m2)"
+          }, {
+            "type": "text",
+            "id": "brightness",
+            "label": "Brightness (nit)"
+          }, {
+            "type": "text",
+            "id": "contrast",
+            "label": "Contrast"
+          }, {
+            "type": "text",
+            "id": "color_depth",
+            "label": "Color depth (bit)"
+          }, {
+            "type": "text",
+            "id": "refresh_rate",
+            "label": "Refresh rate (hz)"
+          }, {
+            "type": "text",
+            "id": "frame_frequency",
+            "label": "Frame frequency (hz)"
+          }, {
+            "type": "text",
+            "id": "input_voltage",
+            "label": "Input voltage"
+          }, {
+            "type": "text",
+            "id": "working_temp",
+            "label": "Working temp (℃)"
+          }, {
+            "type": "text",
+            "id": "working_humidity",
+            "label": "Working humidity"
+          }, {
+            "type": "text",
+            "id": "optimal_viewing_distance",
+            "label": "Optimal viewing distance (m)"
+          }, {
+            "type": "text",
+            "id": "viewing_angle",
+            "label": "Viewing angle (H/V)"
+          }, {
+            "type": "text",
+            "id": "ip_rating",
+            "label": "Ip rating"
+          }, {
+            "type": "text",
+            "id": "curvature",
+            "label": "Curvature"
+          }, {
+            "type": "text",
+            "id": "lifespan",
+            "label": "Lifespan (H)"
+          }, {
+            "type": "text",
+            "id": "receiving_card",
+            "label": "Receiving card"
+          }, {
+            "type": "text",
+            "id": "grayscale",
+            "label": "Grayscale"
+          }, {
+            "type": "text",
+            "id": "hdr",
+            "label": "Hdr"
+          }, {
+            "type": "text",
+            "id": "scan_mode",
+            "label": "Scan mode"
+          }, {
+            "type": "text",
+            "id": "special_features",
+            "label": "Special features"
+          }, {
+            "type": "text",
+            "id": "warranty",
+            "label": "Warranty",
+            "default": "7 Years*"
+          }, {
+            "type": "header",
+            "content": "Certifications"
+          }, {
+            "type": "checkbox",
+            "id": "FCC_Certification",
+            "label": "FCC Certification",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "ETL_Certification",
+            "label": "ETL Certification",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "CE_Certification",
+            "label": "CE Certification",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "RoHS_Certification",
+            "label": "RoHS Certification",
+            "default": false
+          }
+        ]
+      }
     ],
-    "presets":[
-       {
-          "name":"Col Blocks",
-          "category":"Image"
-       }
+    "presets": [
+      {
+        "name": "Col Blocks",
+        "category": "Image"
+      }
     ]
- }
+  }
 {% endschema %}
