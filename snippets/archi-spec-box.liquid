@@ -3,63 +3,50 @@
 
 <div class="archi-spec-box">
 
-    {% if metafield.LED_Type != blank %}
-        <div class="archi-item">
-            <h3 class="prod-header">LED Type</h3>
+  {% if metafield.LED_Type != blank %}
+    <div class="archi-item">
+      <h3 class="prod-header">LED Type</h3>
 
-            <div class="led-colors">
-                {{ ledType }}
-            </div>
-        </div>
-    {% endif %}
-
-
-    {% if metafield.Certifications != blank %}
-        <div class="archi-item">
-            <h3 class="prod-header">Certifications</h3>
-            <div class="certifications">
-                {% for cert in certs  %}
-                    {% if cert == 'ETL' %}
-                        <span class="cert"><img src="{{ 'etl.png' | asset_url }}"/></span>
-                    {% endif %}
-                    {% if cert == 'RoHS' %}
-                        <span class="cert"><img src="{{ 'rohs.png' | asset_url }}"/></span>
-                    {% endif %}
-                    {% if cert == 'IP65' %}
-                        <span class="cert"><img src="{{ 'ip65.png' | asset_url }}"/></span>
-                    {% endif %}
-                    {% if cert == 'CE' %}
-                        <span class="cert"><img src="{{ 'ce.png' | asset_url }}"/></span>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
-
-    <div class="arch-warranty"></div>
-
-    {% if product.metafields.f_b.Optical %}
-        <div class="archi-item">
-            <h3 class="prod-header">Optical</h3>
-            <p>{{ product.metafields.f_b.Optical }}</p>
-        </div>
-    {% endif %}
-
-    <div class="archi-item hidden" id="archi-resource-header">
-        <h3 class="prod-header">Resources</h3>
-        <div id="archi-dls"></div>
+      <div class="led-colors">
+        {{ ledType }}
+      </div>
     </div>
+  {% endif %}
+
+
+  {% if metafield.Certifications != blank %}
+    <div class="archi-item">
+      <h3 class="prod-header">Certifications</h3>
+      <div class="certifications">
+        {{ metafield.Certifications }}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="arch-warranty"></div>
+
+  {% if product.metafields.f_b.Optical %}
+    <div class="archi-item">
+      <h3 class="prod-header">Optical</h3>
+      <p>{{ product.metafields.f_b.Optical }}</p>
+    </div>
+  {% endif %}
+
+  <div class="archi-item hidden" id="archi-resource-header">
+    <h3 class="prod-header">Resources</h3>
+    <div id="archi-dls"></div>
+  </div>
 
 </div>
 
 <script>
 
 
-    $("#warranty-info p").each(function () {
-        const paragraph = $(this).text();
-        if (paragraph.includes("2-year")) {
-            {% assign has2YearWarranty = true %}
-    }
+  $("#warranty-info p").each(function() {
+    const paragraph = $(this).text();
+    if (paragraph.includes("2-year")) {
+      {% assign has2YearWarranty = true %}
+  }
 })
 
 let colors = "{{ metafield.LED_Type }}";
@@ -67,12 +54,12 @@ let ledColors = colors.split("");
 const darkColors = ["R", "G", "B", "V"]
 
 ledColors.map(color => {
-    const el = `<span class="led ledcolor-${color}" style="color: ${
-        darkColors.includes(color)
-            ? "white"
-            : "black"
-        }">${color}</span>`;
-    $(".led-colors").append(el)
+  const el = `<span class="led ledcolor-${color}" style="color: ${
+    darkColors.includes(color)
+      ? "white"
+      : "black"
+    }">${color}</span>`;
+  $(".led-colors").append(el)
 });
 
 
