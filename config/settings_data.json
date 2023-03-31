@@ -2175,7 +2175,15 @@
       "16129090531d6b527d",
       "1612993271c9d6340a",
       "1613098917f981ef2e"
-    ]
+    ],
+    "blocks": {
+      "10384935893930344104": {
+        "type": "shopify:\/\/apps\/seoant-broken-link-redirect\/blocks\/brokenlink-404\/cc7b1996-e567-42d0-8862-356092041863",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Slate": {
