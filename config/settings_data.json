@@ -218,7 +218,6 @@
         "blocks": {
           "813b15e4-6db3-4a81-bfc6-5f4bee4e997c": {
             "type": "image",
-            "disabled": true,
             "settings": {
               "image": "shopify:\/\/shop_images\/BO_WebBanner_Desktop.png",
               "image_mobile": "shopify:\/\/shop_images\/BO_WebBanner_Mobile.png",
