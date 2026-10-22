@@ -41,7 +41,7 @@
   var baseUrl = 'https://api.blizzardpro.com/',
       upc =  '{{variant.barcode}}',
       locationType = '{{collection.title}}',
-      url = baseUrl + 'bstock-item?locationType=' + locationType + '&locationId={{locationId%}}' + '&upc=' + upc;
+      url = baseUrl + 'bstock-item?locationType=' + locationType + '&locationId={{ locationId }}' + '&upc=' + upc;
 
 
       fetch(url)
@@ -59,3 +59,13 @@
 
 
 </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{locationId%}}"
+  to: "{{ locationId }}"
+  position: 1624..1640
+{% endcomment %}

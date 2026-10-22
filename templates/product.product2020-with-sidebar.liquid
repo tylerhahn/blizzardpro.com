@@ -218,7 +218,7 @@
             >{% endif %}</h3>
       </div>
 
-      {% assign showInventory == false %}
+      {% assign showInventory = nil %}
       {% for variant in product.variants %}
       {% if variant.title == 'Refurbished' or variant.title == 'Like New' %}
       	{% if variant.inventory_quantity > 0 %}
@@ -698,12 +698,12 @@ product.selected_or_first_available_variant.featured_image | default:
       </div>
       {% endif %}
 
-      {% if product.metafields.c_f.Rigging_&_Application %}
+      {% if product.metafields.c_f.Rigging_._Application %}
       <div class="spec-item">
         <img class="lazy" data-original="{{ 'spec-icon-22.svg
         ' | asset_url }}">
         <h4>Rigging & Application</h4>
-        <p>{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}<p>
+        <p>{{ product.metafields.c_f.Rigging_._Application | newline_to_br }}<p>
       </div>
       {% endif %}
 
@@ -1103,3 +1103,19 @@ http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-prod
   }
 
 </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign showInventory == false %}"
+  to: "{% assign showInventory = nil %}"
+  position: 8797..8829
+- from: "{% if product.metafields.c_f.Rigging_&_Application %}"
+  to: "{% if product.metafields.c_f.Rigging_._Application %}"
+  position: 24297..24350
+- from: "{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}"
+  to: "{{ product.metafields.c_f.Rigging_._Application | newline_to_br }}"
+  position: 24520..24586
+{% endcomment %}

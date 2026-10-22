@@ -33,7 +33,7 @@
                     {% assign id = block.settings[setting] %}
                     {% assign title = setting | replace: '_', ' '  %}
                     {% if title != 'image' %}
-                        {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
+                        {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: section.settings.spec_title_color, specColor: nil %}
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -490,4 +490,16 @@
        }
     ]
  }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id,
+    titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data
+    }} %}"
+  to: "{% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id,
+    titleColor: section.settings.spec_title_color, specColor: nil %}"
+  position: 2020..2159
+{%- endcomment -%}

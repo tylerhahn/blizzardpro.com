@@ -120,13 +120,13 @@
                 </div>
             {% endif %}
 
-            {% if product.metafields.f_b.Rigging_&_Application %}
+            {% if product.metafields.f_b.Rigging_._Application %}
                 <div class="col-12 col-sm-4 col-lg-3 mb-5 spec-item">
                     <div class="d-flex">
                         <img src="{{ 'spec-icon-22.svg ' | asset_url }}">
                     </div>
                     <h4>Rigging</h4>
-                    <p>{{ product.metafields.f_b.Rigging_&_Application }}</p>
+                    <p>{{ product.metafields.f_b.Rigging_._Application }}</p>
                     <p></p>
                 </div>
             {% endif %}
@@ -199,7 +199,7 @@
 
                     {% endif %}
 
-                    {% if forloop.first and variant.title == 'Default Title' or variant.title == 'New' and currentVariantDimensions != firstColorDimensions  %}
+                    {% if forloop.first and variant.title == 'Default Title' or variant.title == 'New' and currentVariantDimensions != firstColorDimensions %}
 
 
                         <p></p>
@@ -223,7 +223,7 @@
 
                         <p>{{ variant.weight | weight_with_unit | append: 's' }}</p>
 
-                        {% elsif variant.metafields.f_b.width != blank currentVariantDimensions != firstColorDimensions %}
+                        {% elsif variant.metafields.f_b.width != blank %}
 
                         <p></p>
                         <p class="variant-title">{{variant.title}}</p>
@@ -247,4 +247,25 @@
 
     </section>
 
-</div>
+</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% if product.metafields.f_b.Rigging_&_Application %}"
+  to: "{% if product.metafields.f_b.Rigging_._Application %}"
+  position: 4623..4676
+- from: "{{ product.metafields.f_b.Rigging_&_Application }}"
+  to: "{{ product.metafields.f_b.Rigging_._Application }}"
+  position: 4949..4999
+- from: "{% if forloop.first and variant.title == 'Default Title' or variant.title
+    == 'New' and currentVariantDimensions != firstColorDimensions  %}"
+  to: "{% if forloop.first and variant.title == 'Default Title' or variant.title ==
+    'New' and currentVariantDimensions != firstColorDimensions %}"
+  position: 8042..8180
+- from: "{% elsif variant.metafields.f_b.width != blank currentVariantDimensions !=
+    firstColorDimensions %}"
+  to: "{% elsif variant.metafields.f_b.width != blank %}"
+  position: 9245..9294
+{%- endcomment -%}

@@ -6,7 +6,7 @@
 {% assign newprice_compare = 0 %}
 {% assign prodId = product.variants.first.id %}
 
-{% assign showInventory == false %}
+{% assign showInventory = nil %}
 {% for variant in product.variants %}
 {% if variant.title == 'Refurbished' or variant.title == 'Like New' %}
 {% if variant.inventory_quantity > 0 %}
@@ -123,3 +123,13 @@
   </div>
 
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign showInventory == false %}"
+  to: "{% assign showInventory = nil %}"
+  position: 238..270
+{% endcomment %}

@@ -1,7 +1,7 @@
 {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
 {% assign default_variant = product.selected_or_first_available_variant %}
 {% assign metafield = product.metafields.f_b %}
-{% assign isArchi = product.metafields.f_b.Architectural === 'true' %}
+{% assign isArchi = product.metafields.f_b.Architectural %}
 {% assign productTitleSize = product.title | size %}
 {% assign productImagesCount = product.images | size  %}
 
@@ -357,4 +357,13 @@
             cHeader.removeClass("sticky-is-active");
         }
     });
-</script>
+</script>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign isArchi = product.metafields.f_b.Architectural === 'true' %}"
+  to: "{% assign isArchi = product.metafields.f_b.Architectural %}"
+  position: 246..305
+{%- endcomment -%}
