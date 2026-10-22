@@ -29,7 +29,7 @@
             {% for b in bundle %}
                 {% assign lowercaseTitle = b | downcase | handleize %}
                 {% assign prod = all_products[ b.handle ] %}
-                <option data-id="{{prod.selected_or_first_available_variant.id}}" data-price={{prod.price_max | money_without_currency | remove: ',' |}} value="{{b.handle}}">
+                <option data-id="{{prod.selected_or_first_available_variant.id}}" data-price={{ prod.price_max | money_without_currency | remove: ',' }} value="{{b.handle}}">
                     {{ prod.metafields.f_b.Product_Subtitle }}
                     (+{{ prod.price_max | money | remove: '.00' }})
                 </option>
@@ -296,4 +296,13 @@ var selectCallback = function(variant, selector) {
   user-select: none;
 }
 
-</style>
+</style>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{prod.price_max | money_without_currency | remove: ',' |}}"
+  to: "{{ prod.price_max | money_without_currency | remove: ',' }}"
+  position: 1328..1387
+{%- endcomment -%}

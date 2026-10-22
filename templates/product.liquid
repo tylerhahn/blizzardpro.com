@@ -142,7 +142,7 @@
 
         </div>
 
-        {% assign showInventory == false %}
+        {% assign showInventory = nil %}
         {% for variant in product.variants %}
         {% if variant.title == 'Refurbished' or variant.title == 'Like New' %}
         {% if variant.inventory_quantity > 0 %}
@@ -511,4 +511,13 @@ product.selected_or_first_available_variant.featured_image | default:
 
       </script>
 
-<div class="aiod-bundle-discount-wrap" ></div>
+<div class="aiod-bundle-discount-wrap" ></div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign showInventory == false %}"
+  to: "{% assign showInventory = nil %}"
+  position: 6285..6317
+{%- endcomment -%}

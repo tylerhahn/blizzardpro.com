@@ -20,7 +20,7 @@
     {% endif %}
   {% else %}
        Fast, Free Shipping on Orders $99+
-  {% unless product.title | downcase contains 'case' %}{% endunless %}
+  {% unless product.title %}{% endunless %}
   {% endif %}
 </div>
 
@@ -77,4 +77,13 @@ $('input[name="dynamic_shopify_form_referrer"]').val('{{product.title}}').change
 
 
 
-{% endif %}
+{% endif %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% unless product.title | downcase contains 'case' %}"
+  to: "{% unless product.title %}"
+  position: 748..774
+{%- endcomment -%}

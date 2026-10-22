@@ -178,7 +178,7 @@
           {% endfor %}
 
 
-          {% if page.url contains == 'variant' %}
+          {% if page.url contains nil %}
           <h3 class="price" id="ProductPrice">{{ current_variant.price | money }}</h3>
           <!-- {% if compareAtPrice %}
 
@@ -194,7 +194,7 @@
 
         </div>
 
-        {% assign showInventory == false %}
+        {% assign showInventory = nil %}
         {% for variant in product.variants %}
         {% if variant.title == 'Refurbished' or variant.title == 'Like New' %}
         {% if variant.inventory_quantity > 0 %}
@@ -454,3 +454,16 @@ jQuery(function() {
 
 
       </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% if page.url contains == 'variant' %}"
+  to: "{% if page.url contains nil %}"
+  position: 7091..7121
+- from: "{% assign showInventory == false %}"
+  to: "{% assign showInventory = nil %}"
+  position: 7544..7576
+{% endcomment %}

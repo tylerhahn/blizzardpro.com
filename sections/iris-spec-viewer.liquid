@@ -52,7 +52,7 @@
             {% assign ignoredFields = "image, FCC Certification, ETL Certification, CE Certification, image featured, RoHS Certification" | split: ", " %}
             {% assign title = setting | replace: '_', ' ' %}
             {% unless ignoredFields contains title %}
-              {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data }} %}
+              {% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id, titleColor: section.settings.spec_title_color, specColor: nil %}
             {% endunless %}
           {% endfor %}
         </ul>
@@ -590,4 +590,16 @@
       }
     ]
   }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id,
+    titleColor: {{section.settings.spec_title_color }}, specColor: {{ section.settings.spec_color_data
+    }} %}"
+  to: "{% render 'iris-product-spec', title: title, cycleClass: thecycle, id: id,
+    titleColor: section.settings.spec_title_color, specColor: nil %}"
+  position: 2274..2413
+{%- endcomment -%}

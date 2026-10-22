@@ -1,4 +1,4 @@
-{% assign time = product.images | size | | times: 15 %}
+{% assign time = product.images | size | times: 15 %}
 <div class="wm-infinite-slider" data-slider-clone="2" data-slider-height="40" data-slider-time="{{time}}" id="infinite-slider-2">
     {% for image in product.images %}
         {% if image.src != product.featured_image and image.alt != 'hidden' %}
@@ -98,3 +98,13 @@ transform:translateX(-' + sliderWidth + 'vh);\
   });
 
 </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign time = product.images | size | | times: 15 %}"
+  to: "{% assign time = product.images | size | times: 15 %}"
+  position: 0..53
+{% endcomment %}

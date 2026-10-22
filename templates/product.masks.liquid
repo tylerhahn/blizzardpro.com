@@ -652,12 +652,12 @@ commitment.
         </div>
         {% endif %}
 
-        {% if product.metafields.c_f.Rigging_&_Application %}
+        {% if product.metafields.c_f.Rigging_._Application %}
         <div class="spec-item">
           <img class="lazy" data-original="{{ 'spec-icon-22.svg
         ' | asset_url }}">
           <h4>Rigging & Application</h4>
-          <p>{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}<p>
+          <p>{{ product.metafields.c_f.Rigging_._Application | newline_to_br }}<p>
         </div>
         {% endif %}
 
@@ -1012,3 +1012,16 @@ commitment.
 
 
   </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% if product.metafields.c_f.Rigging_&_Application %}"
+  to: "{% if product.metafields.c_f.Rigging_._Application %}"
+  position: 20650..20703
+- from: "{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}"
+  to: "{{ product.metafields.c_f.Rigging_._Application | newline_to_br }}"
+  position: 20881..20947
+{% endcomment %}

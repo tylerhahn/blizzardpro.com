@@ -54,7 +54,7 @@
 
 
 
-		{% if product.tags contains 'photometric' or product.tags contains 'testing results' or contains 'novastar cat' or product.tags contains 'cutting' or product.tags contains 'remote' or product.tags contains 'colors and gobos' or product.tags contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains 'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'rev a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags contains 'rev d' or product.tags contains 'rev e' %}
+		{% if product.tags contains 'photometric' or product.tags contains 'testing results' or renamed_variable_contains or product.tags contains 'cutting' or product.tags contains 'remote' or product.tags contains 'colors and gobos' or product.tags contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains 'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'rev a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags contains 'rev d' or product.tags contains 'rev e' %}
 
 		<div><a data-scroll href="#downloader">Downloads</a></div>
 
@@ -582,12 +582,12 @@
         </div>
       {% endif %}
 
-                              {% if product.metafields.c_f.Rigging_&_Application %}
+                              {% if product.metafields.c_f.Rigging_._Application %}
       <div class="spec-item">
         <img class="lazy" data-original="{{ 'spec-icon-22.svg
         ' | asset_url }}">
         <h4>Rigging & Application</h4>
-        <p>{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}<p>
+        <p>{{ product.metafields.c_f.Rigging_._Application | newline_to_br }}<p>
         </div>
       {% endif %}
 
@@ -911,3 +911,31 @@ $('.welp' ).wrap ("<a id='fix'></a>");
   }
 
 </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% if product.tags contains 'photometric' or product.tags contains 'testing
+    results' or contains 'novastar cat' or product.tags contains 'cutting' or product.tags
+    contains 'remote' or product.tags contains 'colors and gobos' or product.tags
+    contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains
+    'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'rev
+    a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags
+    contains 'rev d' or product.tags contains 'rev e' %}"
+  to: "{% if product.tags contains 'photometric' or product.tags contains 'testing
+    results' or renamed_variable_contains or product.tags contains 'cutting' or product.tags
+    contains 'remote' or product.tags contains 'colors and gobos' or product.tags
+    contains 'acc_info' or product.tags contains 'datasheet' or product.tags contains
+    'amp_cutsheet' or product.tags contains 'cutsheet' or product.tags contains 'rev
+    a' or product.tags contains 'rev b' or product.tags contains 'rev c' or product.tags
+    contains 'rev d' or product.tags contains 'rev e' %}"
+  position: 1002..1545
+- from: "{% if product.metafields.c_f.Rigging_&_Application %}"
+  to: "{% if product.metafields.c_f.Rigging_._Application %}"
+  position: 18269..18322
+- from: "{{ product.metafields.c_f.Rigging_&_Application | newline_to_br }}"
+  to: "{{ product.metafields.c_f.Rigging_._Application | newline_to_br }}"
+  position: 18492..18558
+{% endcomment %}
